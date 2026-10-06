@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "collected_at_utc": "2026-10-06T15:16:59.668142+00:00",
+  "os": {
+    "name": "Microsoft Windows 11 Pro for Workstations",
+    "version": "10.0.26300",
+    "build": "26300"
+  },
+  "cpu": [
+    {
+      "name": "Intel(R) Core(TM) Ultra 9 285H",
+      "cores": 16,
+      "logical_processors": 16,
+      "max_clock_mhz": 3700
+    }
+  ],
+  "memory": {
+    "total_bytes": 136963248128,
+    "available_bytes": 55126925312,
+    "commit_limit_bytes": 145553182720,
+    "committed_bytes": 136123899904
+  },
+  "gpus": [
+    {
+      "name": "Parsec Virtual Display Adapter",
+      "driver_version": "0.45.0.0",
+      "status": "OK"
+    },
+    {
+      "name": "Microsoft Remote Display Adapter",
+      "driver_version": "10.0.26100.9278",
+      "status": "OK"
+    },
+    {
+      "name": "Intel(R) Arc(TM) 140T GPU (64GB)",
+      "driver_version": "32.0.101.8860",
+      "status": "OK"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "driver_version": "610.88",
+      "status": "OK",
+      "vram_total_bytes": 51527024640,
+      "vram_used_bytes": 47065333760,
+      "vram_free_bytes": 3925868544,
+      "utilization_percent": 0,
+      "source": "nvidia-smi",
+      "compute_processes": [
+        {
+          "pid": 4,
+          "path": null
+        },
+        {
+          "pid": 4448,
+          "path": "C:\\WINDOWS\\system32\\ApplicationFrameHost.exe"
+        },
+        {
+          "pid": 5696,
+          "path": "%USERPROFILE%\\Documents\\ChatGPT\\Strata\\engine\\strata.exe"
+        },
+        {
+          "pid": 6140,
+          "path": null
+        },
+        {
+          "pid": 9508,
+          "path": null
+        },
+        {
+          "pid": 11940,
+          "path": "C:\\WINDOWS\\Explorer.EXE"
+        },
+        {
+          "pid": 20484,
+          "path": null
+        },
+        {
+          "pid": 22000,
+          "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+        }
+      ]
+    }
+  ],
+  "accelerators": [
+    {
+      "name": "Intel(R) AI Boost",
+      "class": "ComputeAccelerator",
+      "status": "OK",
+      "driver_version": "32.0.100.2267"
+    }
+  ],
+  "storage": [
+    {
+      "root": "C:\\",
+      "label": "Windows",
+      "filesystem": "NTFS",
+      "total_bytes": 126838894592,
+      "free_bytes": 18585149440,
+      "physical_disks": [
+        {
+          "disk_number": 0,
+          "model": "SAMSUNG MZVLW128HEGR-00000",
+          "bus_type": "NVMe",
+          "partition_number": 4,
+          "partition_bytes": 126838898688
+        }
+      ]
+    },
+    {
+      "root": null,
+      "label": "Recovery",
+      "filesystem": "NTFS",
+      "total_bytes": 1073737728,
+      "free_bytes": 118870016,
+      "physical_disks": [
+        {
+          "disk_number": 0,
+          "model": "SAMSUNG MZVLW128HEGR-00000",
+          "bus_type": "NVMe",
+          "partition_number": 3,
+          "partition_bytes": 1073741824
+        }
+      ]
+    },
+    {
+      "root": "E:\\",
+      "label": "Micron-512GB",
+      "filesystem": "NTFS",
+      "total_bytes": 512093057024,
+      "free_bytes": 192475901952,
+      "physical_disks": [
+        {
+          "disk_number": 1,
+          "model": "Micron_2450_MTFDKBA512TFK",
+          "bus_type": "NVMe",
+          "partition_number": 2,
+          "partition_bytes": 512093061120
+        }
+      ]
+    },
+    {
+      "root": "F:\\",
+      "label": "San",
+      "filesystem": "exFAT",
+      "total_bytes": 1920366280704,
+      "free_bytes": 340976992256,
+      "physical_disks": [
+        {
+          "disk_number": 3,
+          "model": "Realtek RTL9201",
+          "bus_type": "USB",
+          "partition_number": 1,
+          "partition_bytes": 1920382009344
+        }
+      ]
+    },
+    {
+      "root": "D:\\",
+      "label": "E2M2",
+      "filesystem": "NTFS",
+      "total_bytes": 61848154112,
+      "free_bytes": 5102174208,
+      "physical_disks": [
+        {
+          "disk_number": 2,
+          "model": "E2M2 64GB",
+          "bus_type": "NVMe",
+          "partition_number": 2,
+          "partition_bytes": 61848158208
+        }
+      ]
+    }
+  ],
+  "toolchain": {
+    "commands": [
+      {
+        "name": "git",
+        "path": "%USERPROFILE%\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe"
+      },
+      {
+        "name": "python",
+        "path": "C:\\Python314\\python.exe"
+      },
+      {
+        "name": "python3",
+        "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\python3.exe"
+      }
+    ],
+    "installed_roots": []
+  },
+  "errors": []
+}

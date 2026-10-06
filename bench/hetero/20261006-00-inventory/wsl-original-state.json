@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-10-06T15:22:37.3874871Z",
+  "authorization": "User allowed temporary WSL and ComfyUI shutdown in annotation 1",
+  "wsl_distro": "Ubuntu-24.04",
+  "wsl_was_running": true,
+  "comfyui": {
+    "ActiveState": "active",
+    "SubState": "running",
+    "MainPID": 229,
+    "UnitFileState": "enabled"
+  },
+  "wsl_boot_id": "d471e7d7-9cad-43e3-9261-d979f0f76fe4",
+  "other_chat": "01a10fd4-a020-7370-8d07-9433ef55b45b",
+  "windows_strata_action": "preserve; GPU experiments wait for other chat"
+}

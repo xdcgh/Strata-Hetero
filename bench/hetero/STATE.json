@@ -16,6 +16,16 @@
     "Arc prefill helper may cross over only at large batches"
   ],
   "rollback_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+  "pushed_plan_checkpoint_sha": "be9ecba3491309a8fe67721ab313477e4e96d836",
+  "coordination": {
+    "other_chat": "01a10fd4-a020-7370-8d07-9433ef55b45b",
+    "gpu_policy": "preserve the other chat's historical benchmark; do not run concurrent GPU experiments",
+    "wsl_comfyui_shutdown_authorized": true,
+    "comfyui_original_state": "enabled and active",
+    "comfyui_temporary_state": "disabled and inactive; WSL shut down",
+    "restoration_required": true,
+    "restoration_document": "docs/HETERO_ROLLBACK.md"
+  },
   "next_experiment": "Validate inventory and benchmark harness; establish isolated build/runtime and admitted current-upstream baseline",
   "completion_status": "active; no optimization speedup measured"
 }

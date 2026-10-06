@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "evidence_type": "historical_reference_only",
+  "source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
+  "engine_version": "0.1.39",
+  "artifacts": [
+    {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-local-rtx4090d-ud-q4-k-xl\\README.md",
+      "bytes": 24849,
+      "sha256": "e781336360b71981c65ae3fc0fec2f3be04436f2716bf36a734f0f601c8ce7b4"
+    },
+    {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-local-rtx4090d-ud-q4-k-xl\\system_manifest.json",
+      "bytes": 2756,
+      "sha256": "d807a94237c35cfe245391d028848169b0e5a728913a5e55647284a59e8b0a01"
+    },
+    {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-local-rtx4090d-ud-q4-k-xl\\model-source-verified.json",
+      "bytes": 1985,
+      "sha256": "b41db99bd0c333170820531f3735e97c38aeaa0ae283f13e93bba81e59723418"
+    },
+    {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-local-rtx4090d-ud-q4-k-xl\\mtp-source-verified.json",
+      "bytes": 6138,
+      "sha256": "14870f02572942c067591e7019b4cc5b61538d13dbd46a9391b414ba8be9a5f5"
+    },
+    {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-local-rtx4090d-ud-q4-k-xl\\runtime-config-mtp-on.json",
+      "bytes": 1117,
+      "sha256": "90d006c7673078807636e310062ee13622819d3b3a51252495c1c629dfdf4c6a"
+    },
+    {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-local-rtx4090d-ud-q4-k-xl\\runtime-config-lan-redacted.json",
+      "bytes": 1235,
+      "sha256": "ff94d134f7eb8973ab3974ed3dd0a2214554a6dc6b976b59a0990b5ed4bc2817"
+    },
+    {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-qwen38-capacity-performance\\README.md",
+      "bytes": 12635,
+      "sha256": "4b0f3b9a3dff440fde22571d83b6a62991eed230b7dc0ad6df096a85cb313f02"
+    }
+  ],
+  "large_model_rehashed_this_run": false
+}

@@ -1,0 +1,74 @@
+{
+  "release_label": "13.3.1",
+  "release_date": "2026-06-29",
+  "architecture": "windows-x86_64",
+  "source": "https://developer.download.nvidia.com/compute/cuda/redist/redistrib_13.3.1.json",
+  "components": [
+    {
+      "component": "cuda_nvcc",
+      "manifest_component": "cuda_nvcc",
+      "version": "13.3.73",
+      "relative_path": "cuda_nvcc/windows-x86_64/cuda_nvcc-windows-x86_64-13.3.73-archive.zip",
+      "size_bytes": 31777777,
+      "sha256": "270214eaee58e49f8fca52a910a46afbfab227858e70897cba8afae10826280b"
+    },
+    {
+      "component": "cuda_crt",
+      "manifest_component": "cuda_crt",
+      "version": "13.3.73",
+      "relative_path": "cuda_crt/windows-x86_64/cuda_crt-windows-x86_64-13.3.73-archive.zip",
+      "size_bytes": 163110,
+      "sha256": "9227ec7c80db10b7cb0d4ee71ed62ec7ae36e67890216413ab6f9afa35d577f0"
+    },
+    {
+      "component": "cuda_nvvm",
+      "manifest_component": "libnvvm",
+      "version": "13.3.73",
+      "relative_path": "libnvvm/windows-x86_64/libnvvm-windows-x86_64-13.3.73-archive.zip",
+      "size_bytes": 58380918,
+      "sha256": "ca8f11d5173ac16a166be8fafefbf9676542a097de1fce61b3f17696dffc1f27"
+    },
+    {
+      "component": "cuda_cudart",
+      "manifest_component": "cuda_cudart",
+      "version": "13.3.29",
+      "relative_path": "cuda_cudart/windows-x86_64/cuda_cudart-windows-x86_64-13.3.29-archive.zip",
+      "size_bytes": 2589792,
+      "sha256": "1feb7dd266813ffe8dbc24e115183a5ac35a4795c8d34aca0df85ab616b64d9c"
+    },
+    {
+      "component": "cuda_cccl",
+      "manifest_component": "cccl",
+      "version": "13.3.3.4.1",
+      "relative_path": "cccl/windows-x86_64/cccl-windows-x86_64-13.3.3.4.1-archive.zip",
+      "size_bytes": 3544904,
+      "sha256": "48fab83097a636c4119da28bd3c9c9af9327e34c1efed17a14449cc2956ca6d1"
+    },
+    {
+      "component": "libcublas",
+      "manifest_component": "libcublas",
+      "version": "13.6.0.2",
+      "relative_path": "libcublas/windows-x86_64/libcublas-windows-x86_64-13.6.0.2-archive.zip",
+      "size_bytes": 393706755,
+      "sha256": "62e9fa30560c8f0a28e0cdcf9d6fc1fed347bcfab8847239b9ae1fdc1d86408a"
+    },
+    {
+      "component": "cuda_nvrtc",
+      "manifest_component": "cuda_nvrtc",
+      "version": "13.3.33",
+      "relative_path": "cuda_nvrtc/windows-x86_64/cuda_nvrtc-windows-x86_64-13.3.33-archive.zip",
+      "size_bytes": 312126196,
+      "sha256": "8519f678588610bf380ccaac130729aa1a624c407183e7ad9c319c19ecc63d2f"
+    }
+  ],
+  "total_size_bytes": 802289452,
+  "total_size_mib": 765.123,
+  "compiler_support": {
+    "nvidia_cuda_windows_guide": "https://docs.nvidia.com/cuda/archive/13.3.1/cuda-installation-guide-microsoft-windows/index.html",
+    "nvidia_guide_supports": "MSVC Version 195x, Visual Studio 2026 18.x, native x86_64",
+    "microsoft_msvc_versioning": "https://learn.microsoft.com/en-us/cpp/overview/compiler-versions?view=msvc-170",
+    "installed_toolset": "14.51.36231",
+    "installed_msc_ver": 1951,
+    "assessment": "Supported by the CUDA 13.3 Windows compiler table (195x), with Microsoft mapping toolset 14.51 to _MSC_VER 1951."
+  }
+}

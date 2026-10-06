@@ -18,6 +18,8 @@ Source: `C:\Users\DC\Documents\ChatGPT\Strata\bench\results\2026-10-06-local-rtx
 
 Those rows are historical observations. The report's 65.5%-72.4% draft acceptance is aggregate, not a pure MTP rate. Pelican with reasoning disabled generated HTML; reasoning-enabled runs exhausted their budgets before an answer. A successful smoke, verified download and a performance sample are separate claims. The capacity/performance directory contains a separate later investigation and must not be silently combined with this matrix.
 
+The later historical capacity report records a 523,572-token non-repeated natural-text prompt that retrieved all three keys (523.95 prefill tok/s, 26 generated tokens, 36.1 decode tok/s) and a 1,046,977-token prompt that produced 128 `!` tokens (532.26 prefill tok/s). Both are single samples. A subsequent 1M clean restart also failed short probes in that investigation. Capacity/prefill executed, but 1M retrieval and stable generation did not pass; the cause remains unresolved. Another chat is still running that historical investigation. These observations are preserved as historical failure shields, not as current-upstream or Hetero validation.
+
 ## Run contract
 
 Store `hardware_manifest.json`, `storage_profile.json`, `baseline.json`, `results.json`, `results.csv`, `resource/`, `logs/`, `comparison.md` and `DECISIONS.md` under `bench/hetero/<run>/`. When an item is not measured, record its status and reason, not a zero value. Keep raw model outputs and engine/client times. Timed-out, truncated, cache-contaminated or admission-failed samples stay in the evidence and are excluded from accepted speedups.

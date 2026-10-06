@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-10-06T15:28:19.8028444Z",
+  "authorization": "User annotation 1: temporarily close WSL and ComfyUI",
+  "reason": "Ubuntu and ComfyUI observed running again after shutdown; prevent automatic service startup during authorized GPU experiments",
+  "unit": "comfyui.service",
+  "original_unit_file_state": "enabled",
+  "temporary_unit_file_state": "disabled",
+  "restore_commands": [
+    "wsl -d Ubuntu-24.04 -u root -- systemctl enable --now comfyui.service"
+  ],
+  "other_chat_windows_strata": "preserved"
+}
