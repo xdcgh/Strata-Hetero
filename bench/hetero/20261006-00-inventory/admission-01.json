@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-06T15:25:20.664314+00:00",
+  "observer_only": true,
+  "is_model_test": false,
+  "raw": {
+    "observed_at_utc": "2026-10-06T15:25:20.664314+00:00",
+    "errors": [],
+    "windows_memory": {
+      "total_bytes": 136963248128,
+      "available_bytes": 87772901376,
+      "commit_limit_bytes": 145553182720,
+      "available_commit_bytes": 64732008448
+    },
+    "risky_windows_processes": [
+      {
+        "pid": 25212,
+        "name": "python.exe",
+        "path": "%USERPROFILE%\\Documents\\ChatGPT\\Strata\\.venv\\Scripts\\python.exe"
+      },
+      {
+        "pid": 24464,
+        "name": "python.exe",
+        "path": "C:\\Python314\\python.exe"
+      },
+      {
+        "pid": 19000,
+        "name": "strata.exe",
+        "path": "%USERPROFILE%\\Documents\\ChatGPT\\Strata\\engine\\strata.exe"
+      },
+      {
+        "pid": 26676,
+        "name": "python.exe",
+        "path": "%USERPROFILE%\\Documents\\ChatGPT\\Strata\\.venv\\Scripts\\python.exe"
+      },
+      {
+        "pid": 2648,
+        "name": "python.exe",
+        "path": "C:\\Python314\\python.exe"
+      },
+      {
+        "pid": 11408,
+        "name": "python.exe",
+        "path": "C:\\Python314\\python.exe"
+      }
+    ],
+    "nvidia": {
+      "gpus": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "vram_total_mib": 49140,
+          "vram_free_mib": 4288,
+          "vram_used_mib": 44341,
+          "utilization_percent": 8.0,
+          "driver_version": "610.88"
+        }
+      ],
+      "compute_pids": [
+        4,
+        4448,
+        6140,
+        9508,
+        11940,
+        19000,
+        20484,
+        22000
+      ],
+      "process_telemetry_unknown": false,
+      "raw_gpu_csv": "NVIDIA GeForce RTX 4090 D, 49140, 4288, 44341, 8, 610.88\n",
+      "raw_process_csv": "9508\n11940\n22000\n4448\n6140\n20484\n4\n19000\n",
+      "processes": [
+        {
+          "pid": 4,
+          "name": "System",
+          "path": null
+        },
+        {
+          "pid": 9508,
+          "name": "dwm.exe",
+          "path": null
+        },
+        {
+          "pid": 11940,
+          "name": "explorer.exe",
+          "path": "C:\\WINDOWS\\Explorer.EXE"
+        },
+        {
+          "pid": 22000,
+          "name": "msedge.exe",
+          "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+        },
+        {
+          "pid": 4448,
+          "name": "ApplicationFrameHost.exe",
+          "path": "C:\\WINDOWS\\system32\\ApplicationFrameHost.exe"
+        },
+        {
+          "pid": 20484,
+          "name": "LogonUI.exe",
+          "path": null
+        },
+        {
+          "pid": 6140,
+          "name": "dwm.exe",
+          "path": null
+        },
+        {
+          "pid": 19000,
+          "name": "strata.exe",
+          "path": "%USERPROFILE%\\Documents\\ChatGPT\\Strata\\engine\\strata.exe"
+        }
+      ],
+      "telemetry_error": null
+    },
+    "wsl": {
+      "available": true,
+      "running_list_raw": [
+        "Ubuntu-24.04"
+      ],
+      "ubuntu_running": [
+        {
+          "name": "Ubuntu-24.04",
+          "active_state": "active",
+          "sub_state": "running",
+          "main_pid": 243,
+          "comfy_active": true,
+          "dxg_exists": true,
+          "fuser_rc": 0,
+          "dxg_users": null,
+          "raw_probe": "ACTIVE=active\nSUB=running\nMAIN=243\nSYSTEMCTL_RC=0,0,0\nDXG_EXISTS=1\nFUSER_RC=0\nFUSER_ERROR=/dev/dxg:              243\nDXG_PIDS=\n"
+        }
+      ]
+    }
+  },
+  "chosen_gates": {
+    "required_vram_mib": 46000,
+    "minimum_available_ram_gib": 12.0,
+    "check_wsl_current": true,
+    "ram": {
+      "pass": true,
+      "available_gib": 81.745,
+      "reason": null
+    },
+    "vram": {
+      "pass": false,
+      "selected_gpu": "NVIDIA GeForce RTX 4090 D",
+      "available_mib": 4288,
+      "reason": "free VRAM below requirement"
+    },
+    "gpu_processes": {
+      "pass": false,
+      "blocked": [
+        {
+          "pid": 9508,
+          "reason": "process identity unknown"
+        },
+        {
+          "pid": 20484,
+          "reason": "process identity unknown"
+        },
+        {
+          "pid": 6140,
+          "reason": "process identity unknown"
+        },
+        {
+          "pid": 19000,
+          "reason": "Strata/Python/ComfyUI process present"
+        }
+      ],
+      "reason": "GPU process admission blocked"
+    },
+    "windows_processes": {
+      "pass": false,
+      "found": [
+        {
+          "pid": 25212,
+          "name": "python.exe",
+          "path": "%USERPROFILE%\\Documents\\ChatGPT\\Strata\\.venv\\Scripts\\python.exe"
+        },
+        {
+          "pid": 24464,
+          "name": "python.exe",
+          "path": "C:\\Python314\\python.exe"
+        },
+        {
+          "pid": 19000,
+          "name": "strata.exe",
+          "path": "%USERPROFILE%\\Documents\\ChatGPT\\Strata\\engine\\strata.exe"
+        },
+        {
+          "pid": 26676,
+          "name": "python.exe",
+          "path": "%USERPROFILE%\\Documents\\ChatGPT\\Strata\\.venv\\Scripts\\python.exe"
+        },
+        {
+          "pid": 2648,
+          "name": "python.exe",
+          "path": "C:\\Python314\\python.exe"
+        },
+        {
+          "pid": 11408,
+          "name": "python.exe",
+          "path": "C:\\Python314\\python.exe"
+        }
+      ],
+      "reason": "Strata/Python/ComfyUI process present"
+    },
+    "wsl": {
+      "pass": false,
+      "blocked": [
+        {
+          "distro": "Ubuntu-24.04",
+          "reason": "ComfyUI service active in WSL"
+        },
+        {
+          "distro": "Ubuntu-24.04",
+          "reason": "WSL /dev/dxg users unknown"
+        }
+      ],
+      "reason": "running WSL GPU/ComfyUI state blocks admission"
+    }
+  },
+  "status": "blocked",
+  "pass": false,
+  "reasons": [
+    "free VRAM below requirement",
+    "GPU process admission blocked",
+    "Strata/Python/ComfyUI process present",
+    "running WSL GPU/ComfyUI state blocks admission"
+  ]
+}
