@@ -1,0 +1,7 @@
+{
+  "status": "ready",
+  "reused": true,
+  "sdk_root": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+  "nvcc_path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+  "file_count": 2183
+}
