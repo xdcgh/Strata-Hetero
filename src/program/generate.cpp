@@ -370,6 +370,7 @@ struct Options {
     std::string embd_gguf;
     /// Plan v0.3 P2: how the n-gram table is read. Direct (default) = unbuffered SSD reads, table never in RAM.
     std::string ple_io = "direct";
+    uint64_t ple_ram_reserve_gib = 12;
     int64_t ple_row_cache = 1 << 20;   ///< bounded row cache (rows of 90 B); 0 disables
     int ple_inflight = 256;   // the prompt path reads a chunk's rows at once: 64 left the SSD half idle (32K: 303 -> 189 ms)
     double ple_delay_us = 0;           ///< fault injection: every row read completes no earlier than this
@@ -651,7 +652,9 @@ void usage() {
                  "  --no-ple             explicit diagnostic ablation of the PLE layer\n"
                  "  --ple-io direct|mmap|ram  n-gram table reads (plan v0.3 P2). direct (default): unbuffered SSD\n"
                  "                       reads, the table never enters RAM or the file cache; mmap: A/B arm;\n"
-                 "                       ram: mmap with the whole table locked in RAM at start (Linux/macOS)\n"
+                 "                       ram: mmap with the whole table locked in RAM at start; Windows requires\n"
+                 "                       a complete lock and --ple-ram-reserve-gib headroom (default 12)\n"
+                 "  --ple-ram-reserve-gib N Windows PLE RAM headroom, in GiB (4..1024, default 12)\n"
                  "  --ple-row-cache N    bounded cache of fetched rows, 90 B each (default 1048576; 0 = off)\n"
                  "  --ple-inflight N     outstanding SSD reads (default 256)\n"
                  "  --ple-delay-us U     fault injection: each row read completes no earlier than U us\n"
@@ -1586,6 +1589,15 @@ int main(int argc, char** argv) {
         else if (a == "--ple-gguf") o.ple_gguf = next("--ple-gguf");
         else if (a == "--no-ple") o.no_ple = true;
         else if (a == "--ple-io") o.ple_io = next("--ple-io");
+        else if (a == "--ple-ram-reserve-gib") {
+            const std::string value = next("--ple-ram-reserve-gib");
+            const auto parsed = std::from_chars(value.data(), value.data() + value.size(), o.ple_ram_reserve_gib);
+            if (parsed.ec != std::errc{} || parsed.ptr != value.data() + value.size() ||
+                o.ple_ram_reserve_gib < 4 || o.ple_ram_reserve_gib > 1024) {
+                std::fprintf(stderr, "strata generate: --ple-ram-reserve-gib must be an integer in 4..1024\n");
+                return 2;
+            }
+        }
         else if (a == "--ple-row-cache") o.ple_row_cache = std::atoll(next("--ple-row-cache"));
         else if (a == "--ple-inflight") o.ple_inflight = std::atoi(next("--ple-inflight"));
         else if (a == "--ple-delay-us") o.ple_delay_us = std::atof(next("--ple-delay-us"));
@@ -2058,12 +2070,6 @@ int main(int argc, char** argv) {
         std::fprintf(stderr, "strata generate: invalid --ple-io/--ple-row-cache/--ple-inflight/--ple-delay-us\n");
         return 2;
     }
-#if defined(_WIN32)
-    if (o.ple_io == "ram") {
-        std::fprintf(stderr, "strata generate: --ple-io ram is not available on Windows (no mlock); use --ple-io mmap\n");
-        return 2;
-    }
-#endif
     if (o.kv == "q4") o.kv = "q4_0";
     if (o.kv != "fp16" && o.kv != "int8" && o.kv != "q4_0" && o.kv != "k8v4") {
         std::fprintf(stderr, "strata generate: --kv must be fp16, int8, q4_0 or k8v4\n");
@@ -2725,6 +2731,7 @@ int main(int argc, char** argv) {
         strata::kernels::PleIoOptions pio;
         pio.mode = o.ple_io == "mmap" || o.ple_io == "ram" ? strata::kernels::PleIo::Mmap : strata::kernels::PleIo::Direct;
         pio.lock = o.ple_io == "ram";
+        pio.ram_reserve_bytes = o.ple_ram_reserve_gib << 30;
         const auto tpl = Clock::now();
         pio.max_inflight = (uint32_t) o.ple_inflight;
         pio.cache_rows = (uint64_t) o.ple_row_cache;
@@ -2757,8 +2764,9 @@ int main(int argc, char** argv) {
         }
 #endif
         if (pio.lock)
-            std::fprintf(stderr, "strata generate: PLE table %s (--ple-io ram) in %.1f s\n",
+            std::fprintf(stderr, "strata generate: PLE table %s (--ple-io ram), %llu locked table bytes, in %.1f s\n",
                          ple_table.locked() ? "locked in RAM" : "loaded (not locked)",
+                         (unsigned long long) ple_table.locked_bytes(),
                          std::chrono::duration<double>(Clock::now() - tpl).count());
         if (pio.keepalive_ms > 0)
             std::fprintf(stderr, "strata generate: the SSD is kept awake while rows are read: one page of the table after "

@@ -1,0 +1,7 @@
+# PLE RAM implementation decisions
+
+- 2026-10-07: Develop the Windows RAM prototype on `codex/20-memory-tier`, based on preparation checkpoint `4d330a5`. The unmodified upstream source is isolated in an E-drive detached worktree at `82f46a8` for its separate build. Another chat's historical model remains untouched.
+- 2026-10-07: Reuse the existing working-set lock helper and map original quantized table bytes. Require a full Windows table lock; partial success is not RAM-mode acceptance. Keep direct mode as the default until model experiments pass.
+- 2026-10-07: Check physical-memory headroom before warmup and after locking. Warm pages may already be counted in the process working set, so the post-warmup check does not charge the table a second time. The guard cannot reserve RAM against future allocations.
+- 2026-10-07: Native Windows host build and two CTest targets passed; the row fixture includes actual fully locked mappings across supported formats, impossible-reserve refusal, close/reopen state and byte-identical gathers. This is host-path validation, not full model quality or performance acceptance.
+- 2026-10-07: Do not run GPU or storage load experiments while the other chat's model uses the device. Background baseline compilation is limited to one task at Idle priority. WSL observations can still find external restarts; the observer does not launch a distro and a fresh quiescence check remains necessary before inference.

@@ -156,18 +156,28 @@ void format_round_trip(const std::string& dir, const k::PleFormatInfo& f, uint32
     for (uint32_t i = 0; i < rows; ++i) want[i] = rng() % rows;
     want[0] = 0;
     want[1] = rows - 1;
-    for (k::PleIo mode : {k::PleIo::Direct, k::PleIo::Mmap}) {
-        const char* name = mode == k::PleIo::Direct ? "direct" : "mmap";
+    std::vector<k::PleIoOptions> arms(2);
+    arms[0].mode = k::PleIo::Direct;
+    arms[1].mode = k::PleIo::Mmap;
+#if defined(_WIN32)
+    k::PleIoOptions ram;
+    ram.mode = k::PleIo::Mmap;
+    ram.lock = true;
+    arms.push_back(ram);
+#endif
+    for (auto io : arms) {
+        const char* name = io.lock ? "ram-locked" : io.mode == k::PleIo::Direct ? "direct" : "mmap";
         k::PleTable t;
         std::string err;
-        k::PleIoOptions io;
-        io.mode = mode;
         io.max_inflight = 8;
         io.cache_rows = 0;
         CHECK(t.open(path, err, io), "%s: open in %s mode: %s", f.name, name, err.c_str());
         if (g_fail) break;
         CHECK(std::strcmp(t.format(), f.name) == 0, "%s: format() says \"%s\"", f.name, t.format());
         CHECK(t.rows() == rows, "%s: rows %llu, not %u", f.name, (unsigned long long) t.rows(), rows);
+        CHECK(t.locked() == io.lock, "%s: %s: lock outcome was misreported", f.name, name);
+        CHECK(t.locked_bytes() == (io.lock ? (uint64_t) rows * f.row_bytes : 0),
+              "%s: %s: incorrect locked byte count", f.name, name);
         std::vector<uint8_t> raw(f.row_bytes);
         float got[k::PLE_HEAD_DIM], ref[k::PLE_HEAD_DIM];
         for (uint32_t r : want) {
@@ -189,8 +199,35 @@ void format_round_trip(const std::string& dir, const k::PleFormatInfo& f, uint32
             f.dequant(raw.data(), f.needs_scale ? 0.75f : 1.0f, ref);
             CHECK(std::memcmp(tok + (size_t) h * k::PLE_HEAD_DIM, ref, sizeof ref) == 0, "%s: %s: gather head %d differs", f.name, name, h);
         }
+        t.close();
+        CHECK(!t.locked() && t.locked_bytes() == 0 && !t.is_open(), "%s: %s: close retained lock state", f.name, name);
     }
     std::filesystem::remove(path);
+}
+
+void ram_budget_refusal_leaves_no_mapping(const std::string& dir) {
+#if defined(_WIN32)
+    const auto& format = k::ple_formats()[0];
+    const std::string path = write_format_table(dir, format, 32);
+    CHECK(!path.empty(), "RAM budget fixture was not written");
+    if (path.empty()) return;
+    k::PleIoOptions io;
+    io.mode = k::PleIo::Mmap;
+    io.lock = true;
+    io.ram_reserve_bytes = ~uint64_t{0};
+    k::PleTable table;
+    std::string err;
+    CHECK(!table.open(path, err, io), "RAM mode accepted an impossible physical-memory reserve");
+    CHECK(err.find("reserve") != std::string::npos, "RAM reserve refusal did not identify the constraint");
+    CHECK(!table.is_open() && !table.locked() && table.locked_bytes() == 0,
+          "RAM reserve refusal left table state live");
+    io.lock = false;
+    CHECK(table.open(path, err, io), "could not reopen a pageable table after RAM refusal: %s", err.c_str());
+    table.close();
+    std::filesystem::remove(path);
+#else
+    (void) dir;
+#endif
 }
 
 /// A table whose header does not match the file is refused with a message, never read past its end (#865): one row
@@ -456,6 +493,7 @@ int main(int argc, char** argv) {
         // ng::ROW_BYTES (90, IQ4_NL, production default) and 110 (#296, OrcaRouter's Q5_0 PLE rows) through the
         // same generic row_bytes path -- see the comment on selftest().
         all_formats_round_trip(dir);               // every format of k::ple_formats(), both readers, vs its dequantizer
+        ram_budget_refusal_leaves_no_mapping(dir);
         if (g_fail != 0) return 1;
         const int r90 = selftest(dir, ng::ROW_BYTES);
         const int r110 = selftest(dir, 110);

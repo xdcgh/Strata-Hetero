@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-06T17:31:06.356192+00:00",
+  "source_base_sha": "4d330a55e640b2b3b6f71b26c3bdb2bca6b4bfc6",
+  "phase": "1 prototype",
+  "branch": "codex/20-memory-tier",
+  "build_path": "E:\\Strata-Hetero-data\\build\\host-ram-01",
+  "ctest": {
+    "targets": 2,
+    "passed": 2,
+    "elapsed_seconds": 17.73
+  },
+  "coverage": [
+    "Windows direct/mmap/locked PLE rows and 16-head gather",
+    "complete table lock bytes",
+    "close clears state",
+    "impossible RAM reserve refused and pageable reopen succeeds",
+    "existing memory lock/cache-capacity check"
+  ],
+  "artifacts": [
+    {
+      "path": "include/strata/kernels/ngram.hpp",
+      "bytes": 16575,
+      "sha256": "d0fe470c2cbdfe97257efa547036b32e9123b302defa9e895000c16df10e9902"
+    },
+    {
+      "path": "src/kernels/ngram.cpp",
+      "bytes": 32920,
+      "sha256": "b96e4e8cb3bfcca26696309c76e3dae7289860987b643d26b8b204f722190ab1"
+    },
+    {
+      "path": "src/ngram/ple_reader_test.cpp",
+      "bytes": 27913,
+      "sha256": "e58b095f3c55af80e84229c4efc4eda46b1984adb8ebaa1b131d34e031caca0a"
+    },
+    {
+      "path": "src/program/generate.cpp",
+      "bytes": 747471,
+      "sha256": "30f81038bab550e98cb4218640a92a5c569384f42539a7028680b44eaa74def7"
+    },
+    {
+      "path": "bench/hetero/20261007-01-ple-ram/host-build-01.log",
+      "bytes": 162417,
+      "sha256": "d22deb1b51f64ed2a72ba480792eab8e43f717e7f0a3fe72146ec7f7d3337fcc"
+    }
+  ],
+  "cuda_engine_build_verified": false,
+  "full_model_correctness_verified": false,
+  "real_table_residency_verified": false,
+  "speedup_measured": false,
+  "default_enabled": false
+}

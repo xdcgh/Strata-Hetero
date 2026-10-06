@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "run": "cuda-upstream-02",
+  "status": "success",
+  "exit_code": 0,
+  "started_utc": "2026-10-06T17:25:56.959096Z",
+  "finished_utc": "2026-10-06T17:32:34.4713043Z",
+  "duration_seconds": 398.0,
+  "execution": {
+    "priority": "Idle",
+    "jobs": 1,
+    "gpu_executed": false,
+    "target": "strata",
+    "tests_built": false,
+    "tests_run": false,
+    "system_path_registry_driver_or_installer_changed": false
+  },
+  "source": {
+    "path": "E:\\Strata-Hetero-data\\source\\upstream-82f46a8",
+    "sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+    "clean": true
+  },
+  "ggml": {
+    "remote": "https://github.com/ggml-org/llama.cpp.git",
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "sha": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "clean": true
+  },
+  "toolchain": {
+    "cmake": {
+      "path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+      "version": "4.4.3"
+    },
+    "ninja": {
+      "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+      "version": "1.13.2.git.kitware.jobserver-pipe-1"
+    },
+    "msvc": {
+      "cl_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+      "vcvars64": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+      "version": "19.51.36260.0"
+    },
+    "nvcc": {
+      "path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+      "version": "13.3.73",
+      "sdk_release": "13.3.1"
+    },
+    "sdk_root": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+    "process_local_dll_search_paths": [
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin",
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64",
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\nvvm\\bin"
+    ]
+  },
+  "cmake": {
+    "generator": "Ninja",
+    "build_type": "Release",
+    "target": "strata",
+    "parallel_jobs": 1,
+    "options": {
+      "STRATA_ENABLE_CUDA": "ON",
+      "CMAKE_CUDA_ARCHITECTURES": "89",
+      "STRATA_BUILD_TESTS": "OFF",
+      "STRATA_NATIVE_EXPERTS": "ON",
+      "STRATA_PORTABLE": "ON",
+      "STRATA_GGML_DIR": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+      "CMAKE_CUDA_COMPILER": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+      "CUDAToolkit_ROOT": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+      "CMAKE_BUILD_TYPE": "Release",
+      "CMAKE_MAKE_PROGRAM": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe"
+    },
+    "effective_flags": {
+      "CMAKE_CXX_FLAGS": "/DWIN32 /D_WINDOWS /EHsc",
+      "CMAKE_CXX_FLAGS_RELEASE": "/O2 /Ob2 /DNDEBUG",
+      "CMAKE_CUDA_FLAGS": "-D_WINDOWS -Xcompiler=\" /EHsc\"",
+      "CMAKE_CUDA_FLAGS_RELEASE": "-Xcompiler=\"-O2 -Ob2\" -DNDEBUG"
+    }
+  },
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream-02\\strata.exe",
+    "size_bytes": 46546432,
+    "sha256": "737e212a38a0abb46ab6f347ec14d6b3d9630988120911e1342fb89d2672885d",
+    "direct_imports": [
+      "cublas64_13.dll",
+      "KERNEL32.dll",
+      "ADVAPI32.dll"
+    ],
+    "cuda_dependency_locations": [
+      {
+        "name": "cublas64_13.dll",
+        "path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64\\cublas64_13.dll",
+        "dependency": "direct import"
+      },
+      {
+        "name": "cublasLt64_13.dll",
+        "path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64\\cublasLt64_13.dll",
+        "dependency": "imported by cublas64_13.dll"
+      }
+    ],
+    "available_cuda_runtime_dlls": [
+      "cudart64_13.dll",
+      "nvrtc64_130_0.dll"
+    ]
+  },
+  "host": {
+    "cpu_name": "Intel(R) Core(TM) Ultra 9 285H",
+    "physical_cores": 16.0,
+    "logical_processors": 16.0,
+    "ram_total_bytes": 136963248128,
+    "ram_free_after_build_bytes": 62708047872,
+    "ram_min_free_during_build_bytes": null,
+    "ram_min_unavailable_reason": "The supplied helper recorded no periodic RAM samples; a minimum cannot be reconstructed."
+  },
+  "warnings": {
+    "msvc_c4819": 5010,
+    "nvcc_177d": 16,
+    "msvc_c4211": 201,
+    "fatal_error_markers": 0,
+    "summary": "Build exited successfully; warnings were non-fatal."
+  },
+  "configure_notes": [
+    "CMake reported it did not find Python with numpy, so IQ parity fixtures/tests were not registered. STRATA_BUILD_TESTS=OFF and the request built only the strata target."
+  ],
+  "logs": {
+    "build_log": "E:\\Strata-Hetero-data\\build\\cuda-upstream-02\\build.log",
+    "process_record": "E:\\Strata-Hetero-data\\build\\cuda-upstream-02\\process.json",
+    "helper": "E:\\Strata-Hetero-data\\build\\cuda-upstream-02\\helper.ps1",
+    "exit_code_file": "E:\\Strata-Hetero-data\\build\\cuda-upstream-02\\exit-code.txt"
+  },
+  "failure_reason": null
+}

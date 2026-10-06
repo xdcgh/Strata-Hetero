@@ -6,6 +6,7 @@
 #include "strata/artifact/dequant.hpp"
 #include "strata/kernels/f16_bits.hpp"
 #include "strata/ngram/ple_reader.hpp"
+#include "strata/platform/memory.hpp"
 
 #include <cerrno>
 #include <cmath>
@@ -211,6 +212,7 @@ struct PleTable::Impl {
     strata::ngram::PleReader::Ticket ticket;
     bool pending = false;
     bool locked = false;
+    uint64_t locked_bytes = 0;
     uint32_t rows[PLE_N_HEADS] = {};
     uint8_t raw[PLE_N_HEADS * PLE_ROW_BYTES_MAX] = {};
     static constexpr size_t kMaxPrefetch = 16;
@@ -327,7 +329,72 @@ bool PleTable::open(const std::string& gguf_path, std::string& err, const PleIoO
         impl_->n_rows = n_rows;
     }
     if (io.mode == PleIo::Mmap && io.lock && impl_->data != nullptr) {
-#if !defined(_WIN32)
+#if defined(_WIN32)
+        MEMORYSTATUSEX memory{};
+        memory.dwLength = sizeof memory;
+        if (!GlobalMemoryStatusEx(&memory)) {
+            err = "PLE RAM mode: available physical memory cannot be determined";
+            close();
+            return false;
+        }
+        if (need > memory.ullAvailPhys || io.ram_reserve_bytes > memory.ullAvailPhys - need) {
+            err = "PLE RAM mode needs " + std::to_string(need) + " table bytes plus " +
+                  std::to_string(io.ram_reserve_bytes) + " reserve bytes; available " +
+                  std::to_string(memory.ullAvailPhys);
+            close();
+            return false;
+        }
+        // Warm bounded pieces concurrently before locking. A file mapping keeps the original quantized bytes;
+        // it does not allocate another table copy or charge CUDA's shared-memory mapping budget.
+        constexpr uint64_t piece = 64ull << 20;
+        constexpr uint64_t page = 4096;
+        const uint64_t pieces = (need + piece - 1) / piece;
+        std::atomic<uint64_t> next{0};
+        auto touch = [&] {
+            for (uint64_t i; (i = next.fetch_add(1)) < pieces;) {
+                const uint64_t offset = i * piece;
+                const uint64_t bytes = std::min(piece, need - offset);
+                WIN32_MEMORY_RANGE_ENTRY range{(PVOID) (impl_->data + offset), (SIZE_T) bytes};
+                (void) PrefetchVirtualMemory(GetCurrentProcess(), 1, &range, 0);
+                volatile uint8_t sink = 0;
+                for (uint64_t p = 0; p < bytes; p += page)
+                    sink = sink + *(const volatile uint8_t*) (impl_->data + offset + p);
+                (void) sink;
+            }
+        };
+        const unsigned count = std::max(1u, std::min(4u, std::thread::hardware_concurrency()));
+        std::vector<std::thread> workers;
+        try {
+            for (unsigned i = 0; i < count; ++i) workers.emplace_back(touch);
+        } catch (const std::exception& e) {
+            for (auto& worker : workers) worker.join();
+            err = std::string("PLE RAM warmup workers: ") + e.what();
+            close();
+            return false;
+        }
+        for (auto& worker : workers) worker.join();
+        // Refresh the point-in-time guard after I/O: other processes can allocate while pages are read.
+        // Warm pages can already be in this process's working set. Do not subtract the table a second time.
+        if (!GlobalMemoryStatusEx(&memory) || memory.ullAvailPhys < io.ram_reserve_bytes) {
+            err = "PLE RAM mode: physical-memory reserve changed during table warmup";
+            close();
+            return false;
+        }
+        const auto lock = strata::platform::lock_resident((void*) impl_->data, need);
+        impl_->locked_bytes = lock.locked_bytes;
+        if (!lock.ok || lock.locked_bytes != need) {
+            err = "PLE RAM mode could not lock the complete table (" + lock.note +
+                  "); use --ple-io direct or mmap for a pageable table";
+            close();
+            return false;
+        }
+        if (!GlobalMemoryStatusEx(&memory) || memory.ullAvailPhys < io.ram_reserve_bytes) {
+            err = "PLE RAM mode: remaining physical-memory reserve is below the requested floor after locking";
+            close();
+            return false;
+        }
+        impl_->locked = true;
+#else
         const uint64_t page = 4096;
         const uintptr_t a0 = (uintptr_t) impl_->data & ~(uintptr_t) (page - 1);
         const uintptr_t a1 = (uintptr_t) impl_->data + (uintptr_t) need;
@@ -353,6 +420,7 @@ bool PleTable::open(const std::string& gguf_path, std::string& err, const PleIoO
         }
         if (mlock((const void*) a0, a1 - a0) == 0) {
             impl_->locked = true;
+            impl_->locked_bytes = need;
         } else {
             std::fprintf(stderr, "strata: PLE table mlock failed (%s; raise `ulimit -l`): its pages stay faulted in "
                                  "but may be reclaimed\n", std::strerror(errno));
@@ -399,6 +467,11 @@ void PleTable::close() {
     wait_prefetches();
     impl_->reader.close();
     impl_->pending = false;
+#if defined(_WIN32)
+    if (impl_->data != nullptr && impl_->locked_bytes != 0)
+        strata::platform::unlock_resident((void*) impl_->data, impl_->locked_bytes);
+#endif
+    impl_->locked_bytes = 0;
     impl_->locked = false;   // the unmap below releases the lock
     impl_->mode = PleIo::Mmap;
     delete impl_->file;
@@ -413,6 +486,7 @@ void PleTable::close() {
 
 bool PleTable::is_open() const { return impl_->data != nullptr || impl_->reader.is_open(); }
 bool PleTable::locked() const { return impl_->locked; }
+uint64_t PleTable::locked_bytes() const { return impl_->locked_bytes; }
 const char* PleTable::format() const { return impl_->fmt->name; }
 PleIo PleTable::mode() const { return impl_->mode; }
 uint64_t PleTable::rows() const { return impl_->n_rows; }

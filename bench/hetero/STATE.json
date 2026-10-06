@@ -1,31 +1,33 @@
 {
   "schema_version": 1,
-  "phase": "0: dataflow and baseline preparation",
-  "branch": "codex/00-upstream-baseline",
+  "phase": "0 baseline preparation; 1 Windows PLE RAM prototype host-verified",
+  "branch": "codex/20-memory-tier",
   "upstream_base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
   "validated": [
     "Independent checkout created; historical working tree unchanged",
     "Origin and upstream configured; fork main matches fetched upstream base",
     "Windows PLE RAM mode rejected in base source",
-    "Windows hardware identity and physical E/F device map inspected"
+    "Windows hardware identity and physical E/F device map inspected",
+    "Native Windows CUDA-free host tests passed 2/2 for PLE RAM prototype",
+    "Inventory/admission/SSE/SDK fixture suites passed; SDK archives and files hash verified"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
     "E NVMe improves PLE misses and startup compared with F USB SSD",
     "Arc prefill helper may cross over only at large batches"
   ],
-  "rollback_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+  "rollback_sha": "4d330a55e640b2b3b6f71b26c3bdb2bca6b4bfc6",
   "pushed_plan_checkpoint_sha": "be9ecba3491309a8fe67721ab313477e4e96d836",
   "coordination": {
     "other_chat": "01a10fd4-a020-7370-8d07-9433ef55b45b",
     "gpu_policy": "preserve the other chat's historical benchmark; do not run concurrent GPU experiments",
     "wsl_comfyui_shutdown_authorized": true,
     "comfyui_original_state": "enabled and active",
-    "comfyui_temporary_state": "disabled and inactive; WSL shut down",
+    "comfyui_temporary_state": "disabled/inactive at last explicit shutdown; external WSL restarts have been observed",
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md"
   },
-  "next_experiment": "Validate inventory and benchmark harness; establish isolated build/runtime and admitted current-upstream baseline",
-  "completion_status": "active; no optimization speedup measured"
+  "next_experiment": "Finish isolated upstream CUDA build, compile prototype engine; await other chat GPU release before real-table/model A/B",
+  "completion_status": "active; model baseline/quality/performance and later phases remain unverified"
 }
