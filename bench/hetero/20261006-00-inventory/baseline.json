@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "historical": {
+    "status": "imported_reference_only",
+    "source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
+    "engine": "0.1.39",
+    "manifest": "historical-manifest.json",
+    "natural_1m_quality": "failed_in_observed_samples_root_cause_unresolved"
+  },
+  "upstream": {
+    "source_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+    "status": "model_benchmark_pending"
+  },
+  "hetero": {
+    "status": "model_benchmark_pending"
+  }
+}

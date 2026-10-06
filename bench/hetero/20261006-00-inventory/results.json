@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-06T15:50:01.379265+00:00",
+  "evidence_kind": "pre_model_validation",
+  "base_source_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+  "validation": [
+    {
+      "component": "hardware_inventory",
+      "evidence_kind": "pure_fixtures",
+      "tests": 6,
+      "status": "passed"
+    },
+    {
+      "component": "gpu_admission",
+      "evidence_kind": "pure_fixtures",
+      "tests": 11,
+      "status": "passed"
+    },
+    {
+      "component": "sse_benchmark_client",
+      "evidence_kind": "pure_fixtures",
+      "tests": 14,
+      "status": "passed"
+    },
+    {
+      "component": "upstream_host_paths",
+      "evidence_kind": "native_windows_ctest",
+      "tests": 2,
+      "status": "passed"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "tools/hetero_inventory.py",
+      "bytes": 17075,
+      "sha256": "00fc0bb93658c7f5c278eecf9bde9cb0014fba3f0915f92d46abec106b7ec1a6"
+    },
+    {
+      "path": "tools/hetero_admission.py",
+      "bytes": 17322,
+      "sha256": "f089118a5fe75b9dd1234d6c74e10b641f475da45f82a9eecb458cbc2eb0c185"
+    },
+    {
+      "path": "tools/hetero_bench.py",
+      "bytes": 25519,
+      "sha256": "130a32c2fc1c458e3aba0dfd6754d6ef22c96dd7f7931c377c1bbd0e8110213f"
+    },
+    {
+      "path": "tools/hetero_host/CMakeLists.txt",
+      "bytes": 1670,
+      "sha256": "9b9da1e854d1502f5a5ade1b3479275ee15b8e5af1d7bc6ebc4fe9f0fb1412bf"
+    },
+    {
+      "path": "bench/hetero/20261006-00-inventory/host-build-01.log",
+      "bytes": 162324,
+      "sha256": "5495ba1b4375d8110ce6c8f1d75a62e175774b6d6bc104f0de3095bc7d25ff73"
+    },
+    {
+      "path": "bench/hetero/20261006-00-inventory/bench-tests-01.log",
+      "bytes": 1078,
+      "sha256": "ff750f23802d82f5958e3abb1b39c2d22dfe133f13aac676695b81db6433e860"
+    }
+  ],
+  "model_test_executed": false,
+  "performance_speedup_measured": false,
+  "gpu_status": "occupied by another active historical benchmark chat",
+  "large_model_rehash_this_run": false
+}

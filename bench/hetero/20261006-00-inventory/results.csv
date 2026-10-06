@@ -1,0 +1,5 @@
+component,evidence_kind,tests,status
+hardware_inventory,pure_fixtures,6,passed
+gpu_admission,pure_fixtures,11,passed
+sse_benchmark_client,pure_fixtures,14,passed
+upstream_host_paths,native_windows_ctest,2,passed
