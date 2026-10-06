@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-06T15:58:24.634355+00:00",
+  "cuda_root": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+  "cuda_ready": true,
+  "cuda_manifest_sha256": "1f4fad3f964f49c17d9cb0c6b865db79554a67d57e9d957c69e1786fb0d9d2b2",
+  "sdk_receipt_sha256": "eb89df5322fbb46187b0ae7021b032532f56b8e3e1e4e5fe2f268a24ab8cc92a",
+  "file_count": 2183,
+  "total_file_bytes": 2035279857,
+  "nvcc": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+  "nvcc_version": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Tue_Jun__9_14:30:19_Pacific_Daylight_Time_2026\nCuda compilation tools, release 13.3, V13.3.73\nBuild cuda_13.3.r13.3/compiler.38244171_0\n",
+  "msvc_toolset": "14.51.36231",
+  "vcvars64": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+  "venv": "E:\\Strata-Hetero-data\\venv",
+  "system_driver_or_registry_modified": false,
+  "gpu_execution_verified": false,
+  "cuda_engine_compile_status": "pending"
+}

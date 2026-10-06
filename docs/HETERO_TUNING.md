@@ -24,6 +24,12 @@ ctest --test-dir <new-build> --output-on-failure
 
 This builds the existing PLE reader and working-set memory check without CUDA. The optional `STRATA_SOURCE_ROOT` points at a specific reference tree. The fixture directory is under the build directory. A reader/lock fixture pass is not model correctness or performance acceptance.
 
+## Isolated native CUDA SDK
+
+`tools/hetero_prepare_cuda.py --manifest <pinned-manifest> --root <new-sdk-root> --validate-only` validates the manifest and target without downloads or writes. Execution verifies each NVIDIA Windows component's exact byte count and SHA-256 before extraction. Reuse requires a matching receipt and fresh per-file hashes. Failed partials and staging folders remain; different SDK files never overwrite each other. Root-level component license/version metadata stays under `component-metadata/<component>/`.
+
+For this host, the verified SDK is `E:\Strata-Hetero-data\toolchains\cuda-13.3.1`, with seven archives, 2,183 extracted files and nvcc 13.3.73. It uses existing VS 2026 MSVC 14.51. Driver, registry and global PATH were not changed. NVIDIA's [CUDA 13.3 Windows compiler table](https://docs.nvidia.com/cuda/archive/13.3.1/cuda-installation-guide-microsoft-windows/index.html) supports MSVC 195x. A compile or inference pass must still be recorded separately.
+
 ## Repeated API measurements
 
 After admitting and starting an isolated loopback server, validate the client without a request:
