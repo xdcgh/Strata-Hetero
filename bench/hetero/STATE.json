@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "phase": "0: dataflow and baseline preparation",
+  "branch": "codex/00-upstream-baseline",
+  "upstream_base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+  "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
+  "validated": [
+    "Independent checkout created; historical working tree unchanged",
+    "Origin and upstream configured; fork main matches fetched upstream base",
+    "Windows PLE RAM mode rejected in base source",
+    "Windows hardware identity and physical E/F device map inspected"
+  ],
+  "hypotheses": [
+    "PLE table plus resident expert complement fits safe RAM budget",
+    "E NVMe improves PLE misses and startup compared with F USB SSD",
+    "Arc prefill helper may cross over only at large batches"
+  ],
+  "rollback_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+  "next_experiment": "Validate inventory and benchmark harness; establish isolated build/runtime and admitted current-upstream baseline",
+  "completion_status": "active; no optimization speedup measured"
+}
