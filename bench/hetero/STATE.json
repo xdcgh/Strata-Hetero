@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "phase": "0 model baseline pending; 1 RAM prototype built; 2 storage profiler fixture-verified; CPU topology preparation",
-  "branch": "codex/10-storage",
+  "branch": "codex/30-cpu-scheduler",
   "upstream_base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
   "validated": [
@@ -14,7 +14,8 @@
     "Unmodified upstream and RAM prototype CUDA binaries built with matching SM89/MSVC/SDK/ggml controls",
     "Eleven compiled reserve CLI cases passed without visible GPUs; four unlaunched 32K arms prepared",
     "Prefill ordinary GPU cache hits use existing VRAM weights; budgeted loan backups are disabled in base source",
-    "Native Release storage profiler fixture target passed; no actual E/F throughput measured"
+    "Native Release storage profiler fixture target passed; no actual E/F throughput measured",
+    "Read-only Windows CPU Set topology collected; eleven parser/allowed-set fixtures passed; numeric OS classes only"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -33,8 +34,10 @@
     "comfyui_temporary_state": "disabled/inactive at last explicit shutdown; external WSL restarts have been observed",
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
-    "old_strata_pause_approval": "requested asynchronously; pending explicit user response"
+    "old_strata_pause_approval": "requested asynchronously; pending explicit user response",
+    "gpu_state_at_quota_resume": "no current Strata GPU process; other chat actively preparing IQ4_XS inference after quota reset",
+    "decision_required": "which chat has exclusive GPU priority; pause requested conditionally by quota-resume message when user decision is needed"
   },
-  "next_experiment": "Review/verify storage-profiler fixtures; perform admitted upstream/PLE RAM 32K quality and timing when the other chat is finished and old-service coordination is approved",
-  "completion_status": "active; model baseline/quality/performance and later phases remain unverified"
+  "next_experiment": "Obtain GPU priority coordination, then fresh quiescence/admission and prepared 32K upstream vs PLE RAM quality arms",
+  "completion_status": "incomplete; waiting for GPU priority decision after requested checkpoint"
 }

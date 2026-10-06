@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-06T22:23:17.986648+00:00",
+  "pure_fixture_tests": 11,
+  "passed": 11,
+  "logical_cpu_count": 16,
+  "efficiency_classes": {
+    "1": 6,
+    "0": 10
+  },
+  "p_e_lp_hardware_classification": "not proven; numeric OS classes only",
+  "performance_test_executed": false,
+  "affinity_modified": false,
+  "changes_reviewed": [
+    "SchedulingClass decoded as BYTE union member",
+    "Linux logical CPU 0 retained as a valid candidate identity"
+  ],
+  "artifacts": [
+    {
+      "path": "tools/hetero_cpu_topology.py",
+      "sha256": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66"
+    },
+    {
+      "path": "tools/test_hetero_cpu_topology.py",
+      "sha256": "f3986a9e12225177f39905ee76202b291722cf22d8baadc2c8f1286ce5ff5fe0"
+    }
+  ]
+}
