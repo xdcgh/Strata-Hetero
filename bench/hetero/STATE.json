@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "phase": "0 model baseline pending; 1 PLE RAM full build/host/CLI verified; storage profiler preparation",
-  "branch": "codex/20-memory-tier",
+  "phase": "0 model baseline pending; 1 RAM prototype built; 2 storage profiler fixture-verified; CPU topology preparation",
+  "branch": "codex/10-storage",
   "upstream_base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
   "validated": [
@@ -13,7 +13,8 @@
     "Inventory/admission/SSE/SDK fixture suites passed; SDK archives and files hash verified",
     "Unmodified upstream and RAM prototype CUDA binaries built with matching SM89/MSVC/SDK/ggml controls",
     "Eleven compiled reserve CLI cases passed without visible GPUs; four unlaunched 32K arms prepared",
-    "Prefill ordinary GPU cache hits use existing VRAM weights; budgeted loan backups are disabled in base source"
+    "Prefill ordinary GPU cache hits use existing VRAM weights; budgeted loan backups are disabled in base source",
+    "Native Release storage profiler fixture target passed; no actual E/F throughput measured"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -22,7 +23,7 @@
     "Budgeted prefill loans and file-tier working-set estimate may cause avoidable physical reads; measure loan size and physical device counters first",
     "Repeated exclamation token may be consistent with non-finite logits or no valid argmax candidate; actual runtime logits must be checked before inferring cause"
   ],
-  "rollback_sha": "4d330a55e640b2b3b6f71b26c3bdb2bca6b4bfc6",
+  "rollback_sha": "de8722991b4961ddb810f73c7c8f48ae106eef02",
   "pushed_plan_checkpoint_sha": "be9ecba3491309a8fe67721ab313477e4e96d836",
   "coordination": {
     "other_chat": "01a10fd4-a020-7370-8d07-9433ef55b45b",

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-06T18:47:43.217621+00:00",
+  "evidence_kind": "storage_profiler_fixture_only",
+  "build_type": "Release",
+  "ctest_targets": 1,
+  "ctest_passed": 1,
+  "real_device_profile_executed": false,
+  "model_test_executed": false,
+  "physical_device_performance_claimed": false,
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\host-storage-release-02\\strata-storage-profile.exe",
+    "bytes": 98304,
+    "sha256": "cbbafeb0097ebe15db252da4b85308a344bea462f86e33399b61aaf8f741cd48"
+  },
+  "artifacts": [
+    {
+      "path": "src/hetero/storage_profile.cpp",
+      "bytes": 27550,
+      "sha256": "fa5793bffccd86c3db59e9dd9761a66b43799b5f70ce74e7fda475a26e2d84a9"
+    },
+    {
+      "path": "src/hetero/storage_profile_test.cpp",
+      "bytes": 13073,
+      "sha256": "bf93f5289cc2852e9adee65f5ced70fb47eaf6427a4577563cd7035d82347d11"
+    },
+    {
+      "path": "tools/hetero_host/CMakeLists.txt",
+      "bytes": 2175,
+      "sha256": "9c39626836dc9449700f081985fef247de6186d89c533715be5d0b9acd08b494"
+    },
+    {
+      "path": "bench/hetero/20261007-02-storage-fixtures/build-release-review-03.log",
+      "bytes": 183748,
+      "sha256": "8c20dacf0131e2790ffbae09ec9ba25c59a2c3a1f8dc377b55209f02d397062a"
+    }
+  ],
+  "earlier_attempts": [
+    {
+      "build": "host-storage-01",
+      "actual_build_type": "Debug",
+      "fixture_passed": true,
+      "worker_release_label_corrected": true
+    },
+    {
+      "log": "build-review-02.log",
+      "status": "failed",
+      "reason": "new shell lacked vcvars INCLUDE environment",
+      "source_error": false
+    }
+  ],
+  "coverage": [
+    "last block content/alignment/EOF",
+    "QD bound and seed replay",
+    "submit-inclusive latency",
+    "latency reservoir bounded and sampling independent of offset sequence",
+    "impossible size and numeric overflow rejection",
+    "failed phases have null performance",
+    "hard timeout pending buffer lifetime",
+    "validate-only no reader/output",
+    "exclusive output and own-fixture cleanup"
+  ]
+}

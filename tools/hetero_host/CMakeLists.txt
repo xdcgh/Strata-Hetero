@@ -27,9 +27,15 @@ add_executable(strata-ple-reader "${STRATA_SOURCE_ROOT}/src/ngram/ple_reader_tes
 target_link_libraries(strata-ple-reader PRIVATE strata_hetero_host)
 add_executable(strata-memory-check "${STRATA_SOURCE_ROOT}/src/platform/memory_test.cpp")
 target_link_libraries(strata-memory-check PRIVATE strata_hetero_host)
+add_executable(strata-storage-profile "${STRATA_SOURCE_ROOT}/src/hetero/storage_profile.cpp")
+target_link_libraries(strata-storage-profile PRIVATE strata_hetero_host)
+add_executable(strata-storage-profile-test "${STRATA_SOURCE_ROOT}/src/hetero/storage_profile_test.cpp")
+target_link_libraries(strata-storage-profile-test PRIVATE strata_hetero_host)
 
 enable_testing()
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/fixtures")
 add_test(NAME ple_reader_cpu COMMAND strata-ple-reader --selftest
     --dir "${CMAKE_CURRENT_BINARY_DIR}/fixtures")
 add_test(NAME resident_memory_cpu COMMAND strata-memory-check)
+add_test(NAME storage_profile_fixture_cpu COMMAND strata-storage-profile-test
+    --dir "${CMAKE_CURRENT_BINARY_DIR}/fixtures/storage_profile_new_testdir")
