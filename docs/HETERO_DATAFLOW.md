@@ -17,6 +17,8 @@ flowchart TD
   G --> P
   P --> L[Remaining hybrid layers: attention or DeltaNet]
   L --> R[Router and shared expert]
+  R --> Z[Existing GPU cache hit: use resident VRAM weights]
+  Z --> X
   R --> S[Chunk expert staging from resident RAM or model files]
   S --> X[NVIDIA grouped expert matrix products]
   X --> Y[Weighted reduction and residual]
@@ -28,6 +30,8 @@ flowchart TD
 ```
 
 The `L -> R -> ... -> L` edge means the next layer, bounded by the 48-layer loop. Prompt expert execution primarily uses the GPU's batch path and temporarily borrows expert-cache VRAM for buffers; it is not the same split as decode. A router produces expert/token groups. The prefill stager reads groups into a bounded buffer ring, copies to device, dequantizes or uses native MMQ/fused kernels, multiplies and reduces. Keep file read, staging wait, PCIe copy, dequantization and expert GEMM timings separate.
+
+Ordinary GPU cache hits use the existing cache slot directly during prefill. Only missed or temporarily borrowed slots need another weight source. In the budgeted complement path, borrowed cache-tail experts have no extra RAM backup by default; after the prompt they are refilled through the file tier. A mapped file-tier call can still hit the OS cache, so logical file bytes do not by themselves prove physical SSD reads. The post-allocation file-cache estimate uses actual complement bytes, not the requested budget. Whether its estimate of the file working set is still too conservative for GPU-held, unborrowed experts is a candidate for measurement, not a verified bottleneck.
 
 The PLE gather works a chunk ahead with two host buffers. A miss in direct mode reads aligned file pages; repeated rows can be served by the bounded row cache. It dequantizes the exact IQ4_NL/Q5_0/FP8 bytes selected by the table's metadata. The layer's key/value projection, gate, convolution and normalized history remain on NVIDIA. Changing the table's location must not change row bytes, row indices or history.
 

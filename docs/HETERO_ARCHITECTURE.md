@@ -21,7 +21,7 @@ flowchart TD
 
 No new backend is enabled merely because a PnP device exists. An unavailable runtime, compilation failure, failed correctness check or slow helper produces an explicit unavailable/disabled route with an ordinary CPU/CUDA fallback. Keep that distinct from a measured performance regression.
 
-The first memory change will reuse `platform::lock_resident` for a Windows PLE mapping and report partial locking accurately. A successful table warmup is not proof of residency. The process's existing expert arena and shared-memory budget remain part of memory admission. A new RAM mode must fail or report fallback clearly when it cannot meet its requested guarantees.
+The first memory prototype reuses `platform::lock_resident` for a Windows PLE mapping and requires a complete lock. Host byte/gather fixtures, the full CUDA build and CLI parsing have passed; model experiments remain pending. A successful table warmup is not proof of residency. The process's existing expert arena and shared-memory budget remain part of memory admission. A RAM mode must fail or report fallback clearly when it cannot meet its requested guarantees.
 
 Storage placement uses physical-device identities and measured access patterns. Startup parallelism has bounded in-flight buffers and RAM/commit limits, with error propagation and cancellation. A copy is not active until its bytes have been verified. The original model remains intact.
 

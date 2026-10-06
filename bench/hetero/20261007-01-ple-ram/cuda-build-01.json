@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "run": "cuda-ple-ram-01",
+  "status": "success",
+  "exit_code": 0,
+  "duration_seconds": 435.52,
+  "execution": {
+    "helper_pid": 16176,
+    "helper_process_start_observed_utc": "2026-10-07T01:42:27.4703919+08:00",
+    "helper_script_start_utc": "2026-10-06T17:42:27.7481096Z",
+    "command_pid": 11404,
+    "command_start_utc": "2026-10-06T17:42:28.4677859Z",
+    "priority": "Idle",
+    "jobs": 1,
+    "target": "strata",
+    "gpu_executed": false,
+    "engine_executed": false,
+    "tests_built": false,
+    "tests_run": false
+  },
+  "source": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+    "branch_at_start": "codex/20-memory-tier",
+    "head_at_configure": "4d330a55e640b2b3b6f71b26c3bdb2bca6b4bfc6",
+    "head_at_receipt": "f42160ebc305ba17ae57220cf408fe1052589cc2",
+    "head_transition": "main committed the same four compile-input bytes as f42160e during the build",
+    "compile_input_hash_snapshot_path": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\source-hashes-at-start.json",
+    "compile_input_hashes": [
+      {
+        "path": "include/strata/kernels/ngram.hpp",
+        "sha256_at_configure": "d0fe470c2cbdfe97257efa547036b32e9123b302defa9e895000c16df10e9902",
+        "sha256_at_receipt": "d0fe470c2cbdfe97257efa547036b32e9123b302defa9e895000c16df10e9902",
+        "matches": true
+      },
+      {
+        "path": "src/kernels/ngram.cpp",
+        "sha256_at_configure": "b96e4e8cb3bfcca26696309c76e3dae7289860987b643d26b8b204f722190ab1",
+        "sha256_at_receipt": "b96e4e8cb3bfcca26696309c76e3dae7289860987b643d26b8b204f722190ab1",
+        "matches": true
+      },
+      {
+        "path": "src/ngram/ple_reader_test.cpp",
+        "sha256_at_configure": "e58b095f3c55af80e84229c4efc4eda46b1984adb8ebaa1b131d34e031caca0a",
+        "sha256_at_receipt": "e58b095f3c55af80e84229c4efc4eda46b1984adb8ebaa1b131d34e031caca0a",
+        "matches": true
+      },
+      {
+        "path": "src/program/generate.cpp",
+        "sha256_at_configure": "30f81038bab550e98cb4218640a92a5c569384f42539a7028680b44eaa74def7",
+        "sha256_at_receipt": "30f81038bab550e98cb4218640a92a5c569384f42539a7028680b44eaa74def7",
+        "matches": true
+      }
+    ],
+    "tracked_compile_input_status": [],
+    "ggml_path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "ggml_sha": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "ggml_clean": true
+  },
+  "toolchain": {
+    "cmake_version": "4.4.3",
+    "cmake_path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "ninja_version": "1.13.2.git.kitware.jobserver-pipe-1",
+    "ninja_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "msvc_version": "19.51.36260.0",
+    "cl_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "vcvars64_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+    "nvcc_version": "13.3.73",
+    "nvcc_path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+    "sdk_root": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+    "process_local_dll_paths": [
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin",
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64",
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\nvvm\\bin"
+    ]
+  },
+  "cmake": {
+    "generator": "Ninja",
+    "build_directory": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01",
+    "build_type": "Release",
+    "target": "strata",
+    "parallel_jobs": 1,
+    "options": {
+      "STRATA_ENABLE_CUDA": "ON",
+      "CMAKE_CUDA_ARCHITECTURES": "89",
+      "STRATA_BUILD_TESTS": "OFF",
+      "STRATA_NATIVE_EXPERTS": "ON",
+      "STRATA_PORTABLE": "ON",
+      "STRATA_GGML_DIR": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+      "CMAKE_CUDA_COMPILER": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+      "CUDAToolkit_ROOT": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+      "CMAKE_BUILD_TYPE": "Release",
+      "CMAKE_MAKE_PROGRAM": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe"
+    },
+    "effective_flags": {
+      "CMAKE_CXX_FLAGS": "/DWIN32 /D_WINDOWS /EHsc",
+      "CMAKE_CXX_FLAGS_RELEASE": "/O2 /Ob2 /DNDEBUG",
+      "CMAKE_CUDA_FLAGS": "-D_WINDOWS -Xcompiler=\" /EHsc\"",
+      "CMAKE_CUDA_FLAGS_RELEASE": "-Xcompiler=\"-O2 -Ob2\" -DNDEBUG"
+    }
+  },
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\strata.exe",
+    "size_bytes": 46549504,
+    "sha256": "963609ef0718325b015373d77867c1ec1b0629948bc67cb82d6149e2dbb60d33",
+    "direct_imports": [
+      "cublas64_13.dll",
+      "KERNEL32.dll",
+      "ADVAPI32.dll"
+    ],
+    "cuda_dependency_locations": [
+      {
+        "name": "cublas64_13.dll",
+        "path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64\\cublas64_13.dll",
+        "dependency": "direct import"
+      },
+      {
+        "name": "cublasLt64_13.dll",
+        "path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64\\cublasLt64_13.dll",
+        "dependency": "imported by cublas64_13.dll"
+      }
+    ]
+  },
+  "host": {
+    "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+    "physical_cores": 16,
+    "logical_processors": 16,
+    "ram_total_bytes": 136963248128,
+    "ram_min_available_sampled_bytes": 36853211136,
+    "ram_free_after_bytes": 68630515712,
+    "commit_max_sampled_bytes": 119474663424,
+    "commit_limit_bytes": 145553182720,
+    "sample_interval_seconds": 5,
+    "sample_count": 81,
+    "helper_cpu_seconds": 1.719
+  },
+  "warnings": {
+    "msvc_c4819": 5010,
+    "nvcc_177d": 16,
+    "msvc_c4211": 201,
+    "msvc_c4244": 6,
+    "msvc_c4100": 1,
+    "fatal_markers": 0
+  },
+  "configure_notes": [
+    "CMake reported Python with numpy was unavailable; IQ parity fixtures/tests were not registered. The requested build disabled tests and built only strata."
+  ],
+  "logs": {
+    "configure": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\configure.log",
+    "build": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\build.log",
+    "resource_samples": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\resources.json",
+    "process_identity": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\process.json",
+    "exit_code": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\exit-code.txt",
+    "source_hash_snapshot": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\source-hashes-at-start.json"
+  },
+  "failure_reason": null
+}

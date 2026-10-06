@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "0 baseline preparation; 1 Windows PLE RAM prototype host-verified",
+  "phase": "0 model baseline pending; 1 PLE RAM full build/host/CLI verified; storage profiler preparation",
   "branch": "codex/20-memory-tier",
   "upstream_base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -10,12 +10,17 @@
     "Windows PLE RAM mode rejected in base source",
     "Windows hardware identity and physical E/F device map inspected",
     "Native Windows CUDA-free host tests passed 2/2 for PLE RAM prototype",
-    "Inventory/admission/SSE/SDK fixture suites passed; SDK archives and files hash verified"
+    "Inventory/admission/SSE/SDK fixture suites passed; SDK archives and files hash verified",
+    "Unmodified upstream and RAM prototype CUDA binaries built with matching SM89/MSVC/SDK/ggml controls",
+    "Eleven compiled reserve CLI cases passed without visible GPUs; four unlaunched 32K arms prepared",
+    "Prefill ordinary GPU cache hits use existing VRAM weights; budgeted loan backups are disabled in base source"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
     "E NVMe improves PLE misses and startup compared with F USB SSD",
-    "Arc prefill helper may cross over only at large batches"
+    "Arc prefill helper may cross over only at large batches",
+    "Budgeted prefill loans and file-tier working-set estimate may cause avoidable physical reads; measure loan size and physical device counters first",
+    "Repeated exclamation token may be consistent with non-finite logits or no valid argmax candidate; actual runtime logits must be checked before inferring cause"
   ],
   "rollback_sha": "4d330a55e640b2b3b6f71b26c3bdb2bca6b4bfc6",
   "pushed_plan_checkpoint_sha": "be9ecba3491309a8fe67721ab313477e4e96d836",
@@ -26,8 +31,9 @@
     "comfyui_original_state": "enabled and active",
     "comfyui_temporary_state": "disabled/inactive at last explicit shutdown; external WSL restarts have been observed",
     "restoration_required": true,
-    "restoration_document": "docs/HETERO_ROLLBACK.md"
+    "restoration_document": "docs/HETERO_ROLLBACK.md",
+    "old_strata_pause_approval": "requested asynchronously; pending explicit user response"
   },
-  "next_experiment": "Finish isolated upstream CUDA build, compile prototype engine; await other chat GPU release before real-table/model A/B",
+  "next_experiment": "Review/verify storage-profiler fixtures; perform admitted upstream/PLE RAM 32K quality and timing when the other chat is finished and old-service coordination is approved",
   "completion_status": "active; model baseline/quality/performance and later phases remain unverified"
 }

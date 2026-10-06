@@ -24,7 +24,7 @@ For the documented IQ4_NL table, 320,001,536 rows × 90 bytes is 28,800,138,240 
 
 On 2026-10-07 the native Windows host build and CTest passed 2/2 targets. The PLE fixture now compares direct, ordinary mapped and fully locked mapped rows against each format's own dequantizer, including first/last rows, random rows and the sixteen-head gather. It checks complete locked bytes, cleared state on close, impossible-reserve refusal and reopening after refusal. The working-set memory check also passed. These tests run without CUDA or a model.
 
-The full CUDA engine build, parser execution, real-table residency, greedy/logits quality, memory-pressure behavior and performance are still pending. No new speedup or accepted model configuration is claimed by those host fixture passes.
+The full CUDA engine build also passed, with the same SM89/compiler/SDK/ggml settings as the unmodified upstream build. Eleven compiled CLI checks passed with GPU visibility disabled, including valid bounds and refusal of negative, malformed and overflowing reserve values. Real-table residency, greedy/logits quality, model memory-pressure behavior and performance are still pending. No new speedup or accepted model configuration is claimed by those build/fixture passes.
 
 ## Measurement matrix
 

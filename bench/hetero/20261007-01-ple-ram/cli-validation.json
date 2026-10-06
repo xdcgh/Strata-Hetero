@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-06T17:59:40.105362+00:00",
+  "binary": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\strata.exe",
+  "binary_sha256": "963609ef0718325b015373d77867c1ec1b0629948bc67cb82d6149e2dbb60d33",
+  "cuda_visible_devices": "",
+  "model_loaded": false,
+  "model_inference_test": false,
+  "tests_passed": 11,
+  "cases": [
+    {
+      "args": [
+        "--ple-io",
+        "ram",
+        "--ple-ram-reserve-gib",
+        "12",
+        "--help"
+      ],
+      "expected": 0,
+      "exit_code": 0,
+      "log": "cli-00.log",
+      "log_sha256": "88ccf5d4732dd75a636dd57434b216e401ab69fdec480dd15b275685c30b455f"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "4",
+        "--help"
+      ],
+      "expected": 0,
+      "exit_code": 0,
+      "log": "cli-01.log",
+      "log_sha256": "88ccf5d4732dd75a636dd57434b216e401ab69fdec480dd15b275685c30b455f"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "1024",
+        "--help"
+      ],
+      "expected": 0,
+      "exit_code": 0,
+      "log": "cli-02.log",
+      "log_sha256": "88ccf5d4732dd75a636dd57434b216e401ab69fdec480dd15b275685c30b455f"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "-1",
+        "--help"
+      ],
+      "expected": 2,
+      "exit_code": 2,
+      "log": "cli-03.log",
+      "log_sha256": "5d62974667b0925084ffa05ab951d4bf31a65ff078181ba716b2e086e3b260a7"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "0",
+        "--help"
+      ],
+      "expected": 2,
+      "exit_code": 2,
+      "log": "cli-04.log",
+      "log_sha256": "5d62974667b0925084ffa05ab951d4bf31a65ff078181ba716b2e086e3b260a7"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "3",
+        "--help"
+      ],
+      "expected": 2,
+      "exit_code": 2,
+      "log": "cli-05.log",
+      "log_sha256": "5d62974667b0925084ffa05ab951d4bf31a65ff078181ba716b2e086e3b260a7"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "1025",
+        "--help"
+      ],
+      "expected": 2,
+      "exit_code": 2,
+      "log": "cli-06.log",
+      "log_sha256": "5d62974667b0925084ffa05ab951d4bf31a65ff078181ba716b2e086e3b260a7"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "nan",
+        "--help"
+      ],
+      "expected": 2,
+      "exit_code": 2,
+      "log": "cli-07.log",
+      "log_sha256": "5d62974667b0925084ffa05ab951d4bf31a65ff078181ba716b2e086e3b260a7"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "12oops",
+        "--help"
+      ],
+      "expected": 2,
+      "exit_code": 2,
+      "log": "cli-08.log",
+      "log_sha256": "5d62974667b0925084ffa05ab951d4bf31a65ff078181ba716b2e086e3b260a7"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "12.0",
+        "--help"
+      ],
+      "expected": 2,
+      "exit_code": 2,
+      "log": "cli-09.log",
+      "log_sha256": "5d62974667b0925084ffa05ab951d4bf31a65ff078181ba716b2e086e3b260a7"
+    },
+    {
+      "args": [
+        "--ple-ram-reserve-gib",
+        "18446744073709551616",
+        "--help"
+      ],
+      "expected": 2,
+      "exit_code": 2,
+      "log": "cli-10.log",
+      "log_sha256": "5d62974667b0925084ffa05ab951d4bf31a65ff078181ba716b2e086e3b260a7"
+    }
+  ]
+}
