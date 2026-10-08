@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-10-07T23:32:45.852932+00:00",
+  "authorization": "User stated the other chat has completed and this chat can start; temporary old Strata release/restore coordination accepted",
+  "restore_required": true,
+  "old_config_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\strata-unsloth-ud-q4_k_xl.json",
+  "old_config_sha256": "78cb48b91f2e2f73746682a14dfbc502477ad04e976260b90dedba5ec90a9190",
+  "old_cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata",
+  "old_python": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\.venv\\Scripts\\python.exe",
+  "old_port": 8080,
+  "old_host": "0.0.0.0",
+  "api_key_configured": true,
+  "identities": [
+    {
+      "ProcessId": 15708,
+      "ParentProcessId": 28448,
+      "Name": "python.exe",
+      "ExecutablePath": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\.venv\\Scripts\\python.exe",
+      "CreationDate": "/Date(1791339013044)/"
+    },
+    {
+      "ProcessId": 15048,
+      "ParentProcessId": 15708,
+      "Name": "python.exe",
+      "ExecutablePath": "C:\\Python314\\python.exe",
+      "CreationDate": "/Date(1791339013085)/"
+    },
+    {
+      "ProcessId": 11372,
+      "ParentProcessId": 15048,
+      "Name": "strata.exe",
+      "ExecutablePath": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\engine\\strata.exe",
+      "CreationDate": "/Date(1791339014963)/"
+    }
+  ],
+  "restore_argv": [
+    "-m",
+    "serve.server",
+    "--engine",
+    "strata",
+    "--config",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\strata-unsloth-ud-q4_k_xl.json",
+    "--port",
+    "8080"
+  ]
+}

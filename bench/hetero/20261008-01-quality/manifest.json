@@ -1,0 +1,423 @@
+{
+  "schema": "strata-hetero-quality-prompts-v1",
+  "created_utc": "2026-10-07T23:45:33.500237+00:00",
+  "tokenizer": {
+    "module": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\strata_tokenizer.py",
+    "implementation_source": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\strata_tokenizer.py",
+      "bytes": 17611,
+      "sha256": "cccf8d5e59c1d585e30ddf8b4d05b968e9b76145261016e4a124d56dba845150"
+    },
+    "assets": [
+      {
+        "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\tokenizer.json",
+        "bytes": 554,
+        "sha256": "87be2ac47d8bc7393b7435df6ccd276740019a393941a2585d5edce59f450c54"
+      },
+      {
+        "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\vocab.json",
+        "bytes": 5737005,
+        "sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4"
+      },
+      {
+        "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\merges.txt",
+        "bytes": 3600844,
+        "sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9"
+      },
+      {
+        "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\token_type.json",
+        "bytes": 744960,
+        "sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b"
+      },
+      {
+        "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+        "bytes": 9993,
+        "sha256": "12827f24b742ea4e80cdc12dbcf9622227056b9f797252a3149263d4f9aaadce"
+      }
+    ],
+    "pre": "qwen35",
+    "vocab_size": 248320,
+    "count_method": "tools/strata_tokenizer.py Tokenizer.encode; exact local count, no server count"
+  },
+  "chat_count_method": {
+    "template": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+    "render_settings": {
+      "messages": "single user message",
+      "add_generation_prompt": true,
+      "enable_thinking": false,
+      "reasoning_effort": "none"
+    },
+    "description": "Tokenizer count after rendering the pack's chat_template.jinja, including chat tokens; compare with later live API count."
+  },
+  "generation_request_defaults": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42,
+    "reasoning_effort": "none",
+    "note": "intended later API-run settings; not exercised during preparation"
+  },
+  "context": 32768,
+  "max_output_tokens_long": 1024,
+  "marker_generation": {
+    "seed": 42,
+    "algorithm": "random.Random(seed) 40-bit uppercase key plus 9-digit decimal value; reroll if present in source corpus",
+    "records": [
+      {
+        "name": "archive_key_a",
+        "key": "ARCHIVE-1CA3B1799D",
+        "value": "126855092",
+        "marker": "Checkpoint key ARCHIVE-1CA3B1799D has value 126855092."
+      },
+      {
+        "name": "archive_key_b",
+        "key": "ARCHIVE-46BDD640FB",
+        "value": "362950628",
+        "marker": "Checkpoint key ARCHIVE-46BDD640FB has value 362950628."
+      },
+      {
+        "name": "archive_key_c",
+        "key": "ARCHIVE-23392456DE",
+        "value": "890779946",
+        "marker": "Checkpoint key ARCHIVE-23392456DE has value 890779946."
+      }
+    ]
+  },
+  "corpus_provenance": {
+    "corpus_id": "gutenberg-natural-en-3books-v1",
+    "historical_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-qwen38-capacity-performance\\raw\\natural_corpus",
+    "natural_corpus": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-qwen38-capacity-performance\\raw\\natural_corpus\\natural-corpus.txt",
+      "bytes": 5215150,
+      "sha256": "0c1b60e19bf00534a85cd443d8d97cf2025baf9cc8e356056454d7ddd548c5fa"
+    },
+    "source_manifest": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\results\\2026-10-06-qwen38-capacity-performance\\raw\\natural_corpus\\source-manifest.json",
+      "bytes": 1764,
+      "sha256": "15a03be786fbabb84e455fcb40769ca85189e9802272b2c9a1e02b33a7a255a0"
+    },
+    "normalization": "Project Gutenberg start/end boilerplate removed; paragraph whitespace normalized; exact duplicate paragraphs removed; each source included once; no corpus looping",
+    "source_titles_and_urls": [
+      {
+        "title": "Moby-Dick; or, The Whale",
+        "url": "https://www.gutenberg.org/ebooks/2701",
+        "filename": "moby-dick-2701.txt",
+        "bytes": 1276267,
+        "sha256": "907420db6c4b68c70e2988cd2ad9c8cf79138667a01b63376d18dd17fef1a18b"
+      },
+      {
+        "title": "Pride and Prejudice",
+        "url": "https://www.gutenberg.org/ebooks/1342",
+        "filename": "pride-and-prejudice-1342.txt",
+        "bytes": 772386,
+        "sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75"
+      },
+      {
+        "title": "War and Peace",
+        "url": "https://www.gutenberg.org/ebooks/2600",
+        "filename": "war-and-peace-2600.txt",
+        "bytes": 3359610,
+        "sha256": "2d5bb2ad5f422765e714617e21fa31bbaf8958aa79682c86fca6660fcc5d1b2b"
+      }
+    ],
+    "source_file_downloads_performed": false
+  },
+  "prompts": [
+    {
+      "id": "smoke_arithmetic",
+      "file": "prompts/smoke_arithmetic.prompt.txt",
+      "kind": "smoke",
+      "bytes": 48,
+      "sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+      "body_tokens_local": 15,
+      "chat_prompt_tokens_local": 27,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 128,
+      "quality": {
+        "kind": "exact_text",
+        "expected": "4"
+      }
+    },
+    {
+      "id": "smoke_unicode",
+      "file": "prompts/smoke_unicode.prompt.txt",
+      "kind": "smoke",
+      "bytes": 82,
+      "sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+      "body_tokens_local": 20,
+      "chat_prompt_tokens_local": 32,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 128,
+      "quality": {
+        "kind": "exact_text",
+        "expected": "你好，世界！🌏 é"
+      }
+    },
+    {
+      "id": "smoke_json_arithmetic",
+      "file": "prompts/smoke_json_arithmetic.prompt.txt",
+      "kind": "smoke",
+      "bytes": 143,
+      "sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+      "body_tokens_local": 38,
+      "chat_prompt_tokens_local": 50,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 128,
+      "quality": {
+        "kind": "json_arithmetic",
+        "expected_result": 156,
+        "expected_expression": "12*13"
+      }
+    },
+    {
+      "id": "smoke_python_function",
+      "file": "prompts/smoke_python_function.prompt.txt",
+      "kind": "smoke",
+      "bytes": 126,
+      "sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+      "body_tokens_local": 27,
+      "chat_prompt_tokens_local": 39,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 128,
+      "quality": {
+        "kind": "python_ast",
+        "function": "add_two",
+        "arguments": [
+          "x"
+        ],
+        "return_expression": {
+          "left_name": "x",
+          "operator": "Add",
+          "right_constant": 2
+        }
+      }
+    },
+    {
+      "id": "smoke_three_key_retrieval",
+      "file": "prompts/smoke_three_key_retrieval.prompt.txt",
+      "kind": "smoke",
+      "bytes": 265,
+      "sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+      "body_tokens_local": 102,
+      "chat_prompt_tokens_local": 114,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 128,
+      "quality": {
+        "kind": "json_retrieval",
+        "expected": {
+          "ARCHIVE-1CA3B1799D": "126855092",
+          "ARCHIVE-46BDD640FB": "362950628",
+          "ARCHIVE-23392456DE": "890779946"
+        }
+      }
+    },
+    {
+      "id": "long_1k",
+      "file": "prompts/long_1k.prompt.txt",
+      "kind": "long_natural_text",
+      "target_body_tokens": 1024,
+      "target_deviation_tokens": 0,
+      "bytes": 2838,
+      "sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+      "body_tokens_local": 1024,
+      "chat_prompt_tokens_local": 1036,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 1024,
+      "configured_context": 32768,
+      "remaining_context_tokens_after_output_budget": 30708,
+      "selected_paragraphs_from_natural_prefix": 80,
+      "corpus_repetition": "none; each selected source paragraph appears once",
+      "needle_positions": [
+        {
+          "name": "archive_key_a",
+          "key": "ARCHIVE-1CA3B1799D",
+          "value": "126855092",
+          "target_relative_depth": 0.1,
+          "token_position_body_prefix": 107,
+          "actual_relative_depth_in_body": 0.104492
+        },
+        {
+          "name": "archive_key_b",
+          "key": "ARCHIVE-46BDD640FB",
+          "value": "362950628",
+          "target_relative_depth": 0.5,
+          "token_position_body_prefix": 548,
+          "actual_relative_depth_in_body": 0.535156
+        },
+        {
+          "name": "archive_key_c",
+          "key": "ARCHIVE-23392456DE",
+          "value": "890779946",
+          "target_relative_depth": 0.9,
+          "token_position_body_prefix": 921,
+          "actual_relative_depth_in_body": 0.899414
+        }
+      ],
+      "quality": {
+        "kind": "json_retrieval",
+        "expected": {
+          "ARCHIVE-1CA3B1799D": "126855092",
+          "ARCHIVE-46BDD640FB": "362950628",
+          "ARCHIVE-23392456DE": "890779946"
+        }
+      }
+    },
+    {
+      "id": "long_4k",
+      "file": "prompts/long_4k.prompt.txt",
+      "kind": "long_natural_text",
+      "target_body_tokens": 4096,
+      "target_deviation_tokens": 1,
+      "bytes": 14249,
+      "sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+      "body_tokens_local": 4097,
+      "chat_prompt_tokens_local": 4109,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 1024,
+      "configured_context": 32768,
+      "remaining_context_tokens_after_output_budget": 27635,
+      "selected_paragraphs_from_natural_prefix": 184,
+      "corpus_repetition": "none; each selected source paragraph appears once",
+      "needle_positions": [
+        {
+          "name": "archive_key_a",
+          "key": "ARCHIVE-1CA3B1799D",
+          "value": "126855092",
+          "target_relative_depth": 0.1,
+          "token_position_body_prefix": 427,
+          "actual_relative_depth_in_body": 0.104223
+        },
+        {
+          "name": "archive_key_b",
+          "key": "ARCHIVE-46BDD640FB",
+          "value": "362950628",
+          "target_relative_depth": 0.5,
+          "token_position_body_prefix": 2133,
+          "actual_relative_depth_in_body": 0.520625
+        },
+        {
+          "name": "archive_key_c",
+          "key": "ARCHIVE-23392456DE",
+          "value": "890779946",
+          "target_relative_depth": 0.9,
+          "token_position_body_prefix": 3842,
+          "actual_relative_depth_in_body": 0.937759
+        }
+      ],
+      "quality": {
+        "kind": "json_retrieval",
+        "expected": {
+          "ARCHIVE-1CA3B1799D": "126855092",
+          "ARCHIVE-46BDD640FB": "362950628",
+          "ARCHIVE-23392456DE": "890779946"
+        }
+      }
+    },
+    {
+      "id": "long_16k",
+      "file": "prompts/long_16k.prompt.txt",
+      "kind": "long_natural_text",
+      "target_body_tokens": 16384,
+      "target_deviation_tokens": 0,
+      "bytes": 66202,
+      "sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+      "body_tokens_local": 16384,
+      "chat_prompt_tokens_local": 16396,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 1024,
+      "configured_context": 32768,
+      "remaining_context_tokens_after_output_budget": 15348,
+      "selected_paragraphs_from_natural_prefix": 309,
+      "corpus_repetition": "none; each selected source paragraph appears once",
+      "needle_positions": [
+        {
+          "name": "archive_key_a",
+          "key": "ARCHIVE-1CA3B1799D",
+          "value": "126855092",
+          "target_relative_depth": 0.1,
+          "token_position_body_prefix": 1643,
+          "actual_relative_depth_in_body": 0.100281
+        },
+        {
+          "name": "archive_key_b",
+          "key": "ARCHIVE-46BDD640FB",
+          "value": "362950628",
+          "target_relative_depth": 0.5,
+          "token_position_body_prefix": 7959,
+          "actual_relative_depth_in_body": 0.485779
+        },
+        {
+          "name": "archive_key_c",
+          "key": "ARCHIVE-23392456DE",
+          "value": "890779946",
+          "target_relative_depth": 0.9,
+          "token_position_body_prefix": 14981,
+          "actual_relative_depth_in_body": 0.914368
+        }
+      ],
+      "quality": {
+        "kind": "json_retrieval",
+        "expected": {
+          "ARCHIVE-1CA3B1799D": "126855092",
+          "ARCHIVE-46BDD640FB": "362950628",
+          "ARCHIVE-23392456DE": "890779946"
+        }
+      }
+    },
+    {
+      "id": "long_30k7",
+      "file": "prompts/long_30k7.prompt.txt",
+      "kind": "long_natural_text",
+      "target_body_tokens": 30700,
+      "target_deviation_tokens": 0,
+      "bytes": 127193,
+      "sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+      "body_tokens_local": 30700,
+      "chat_prompt_tokens_local": 30712,
+      "chat_wrapper_delta_local": 12,
+      "max_output_tokens": 1024,
+      "configured_context": 32768,
+      "remaining_context_tokens_after_output_budget": 1032,
+      "selected_paragraphs_from_natural_prefix": 404,
+      "corpus_repetition": "none; each selected source paragraph appears once",
+      "needle_positions": [
+        {
+          "name": "archive_key_a",
+          "key": "ARCHIVE-1CA3B1799D",
+          "value": "126855092",
+          "target_relative_depth": 0.1,
+          "token_position_body_prefix": 3105,
+          "actual_relative_depth_in_body": 0.10114
+        },
+        {
+          "name": "archive_key_b",
+          "key": "ARCHIVE-46BDD640FB",
+          "value": "362950628",
+          "target_relative_depth": 0.5,
+          "token_position_body_prefix": 15495,
+          "actual_relative_depth_in_body": 0.504723
+        },
+        {
+          "name": "archive_key_c",
+          "key": "ARCHIVE-23392456DE",
+          "value": "890779946",
+          "target_relative_depth": 0.9,
+          "token_position_body_prefix": 27877,
+          "actual_relative_depth_in_body": 0.908046
+        }
+      ],
+      "quality": {
+        "kind": "json_retrieval",
+        "expected": {
+          "ARCHIVE-1CA3B1799D": "126855092",
+          "ARCHIVE-46BDD640FB": "362950628",
+          "ARCHIVE-23392456DE": "890779946"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Local tokenizer counts are not server-reported API counts; main should validate live counts later.",
+    "Canonical re-encoding of a response cannot recover actual emitted token IDs.",
+    "No model responses, quality results, or performance results are included in this preparation manifest."
+  ]
+}

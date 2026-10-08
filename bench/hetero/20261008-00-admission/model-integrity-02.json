@@ -1,0 +1,676 @@
+{
+  "schema_version": 1,
+  "run_id": "run-20261008-02-model-hash",
+  "started_utc": "2026-10-07T23:38:18.997383+00:00",
+  "status": "pass",
+  "scope": {
+    "model_dir": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL",
+    "pack_dir": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+    "mtp_dir": "F:\\Strata-data\\mtp\\rt",
+    "documentation": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\docs\\UNSLOTH_Q4.md",
+    "single_threaded": true,
+    "chunk_bytes": 8388608,
+    "progress_interval_bytes": 536870912
+  },
+  "claims": {
+    "model_weight_integrity": true,
+    "runtime_identity_hashes_collected": true,
+    "build_receipts_and_binaries_verified": true,
+    "conversion_correctness_revalidated": false
+  },
+  "documentation": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\docs\\UNSLOTH_Q4.md",
+    "formal_table_line_numbers": [
+      54,
+      55,
+      56,
+      57
+    ],
+    "documented_total_bytes": 111334654784,
+    "shards": [
+      {
+        "name": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "size_bytes": 10946624,
+        "sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082"
+      },
+      {
+        "name": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "size_bytes": 49859583136,
+        "sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9"
+      },
+      {
+        "name": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+        "size_bytes": 49376141504,
+        "sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3"
+      },
+      {
+        "name": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+        "size_bytes": 12087983520,
+        "sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a"
+      }
+    ]
+  },
+  "model_shards": [
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "size_bytes": 10946624,
+      "sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+      "before": {
+        "size_bytes": 10946624,
+        "mtime_ns": 1791267636000000000,
+        "ctime_ns": 1791267635050000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292856832
+        }
+      },
+      "after": {
+        "size_bytes": 10946624,
+        "mtime_ns": 1791267636000000000,
+        "ctime_ns": 1791267635050000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292856832
+        }
+      },
+      "unchanged_during_read": true,
+      "read_seconds": 0.008,
+      "expected_size_bytes": 10946624,
+      "expected_sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+      "matches_expected": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "size_bytes": 49859583136,
+      "sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+      "before": {
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791268992000000000,
+        "ctime_ns": 1791267636110000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857216
+        }
+      },
+      "after": {
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791268992000000000,
+        "ctime_ns": 1791267636110000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857216
+        }
+      },
+      "unchanged_during_read": true,
+      "read_seconds": 122.484,
+      "expected_size_bytes": 49859583136,
+      "expected_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+      "matches_expected": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "size_bytes": 49376141504,
+      "sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3",
+      "before": {
+        "size_bytes": 49376141504,
+        "mtime_ns": 1791270330000000000,
+        "ctime_ns": 1791269021380000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857600
+        }
+      },
+      "after": {
+        "size_bytes": 49376141504,
+        "mtime_ns": 1791270330000000000,
+        "ctime_ns": 1791269021380000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857600
+        }
+      },
+      "unchanged_during_read": true,
+      "read_seconds": 122.511,
+      "expected_size_bytes": 49376141504,
+      "expected_sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3",
+      "matches_expected": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "size_bytes": 12087983520,
+      "sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a",
+      "before": {
+        "size_bytes": 12087983520,
+        "mtime_ns": 1791270664000000000,
+        "ctime_ns": 1791270360920000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857984
+        }
+      },
+      "after": {
+        "size_bytes": 12087983520,
+        "mtime_ns": 1791270664000000000,
+        "ctime_ns": 1791270360920000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857984
+        }
+      },
+      "unchanged_during_read": true,
+      "read_seconds": 30.214,
+      "expected_size_bytes": 12087983520,
+      "expected_sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a",
+      "matches_expected": true
+    }
+  ],
+  "runtime_identity": {
+    "pack": {
+      "root": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+      "file_count": 10,
+      "total_bytes": 1496075582,
+      "files": [
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\compat-bf16.json",
+          "size_bytes": 22055,
+          "sha256": "25478177bdf65784e7f16e96f5c18911fe44dd317c8a29198aeaf227074c4a18",
+          "before": {
+            "size_bytes": 22055,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271316980000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979712
+            }
+          },
+          "after": {
+            "size_bytes": 22055,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271316980000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979712
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.004,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\conversions.json",
+          "size_bytes": 172496,
+          "sha256": "09f5568fe921c6c6dcb0af632452a5eea654dac369036d27d3813aaef45e00d1",
+          "before": {
+            "size_bytes": 172496,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271316980000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979584
+            }
+          },
+          "after": {
+            "size_bytes": 172496,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271316980000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979584
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.004,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\dense.bin",
+          "size_bytes": 1485688320,
+          "sha256": "f53174059b262ed342b82e143af62056081948ef5e5f1903a1a70eeb73fa4a23",
+          "before": {
+            "size_bytes": 1485688320,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271289730000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979392
+            }
+          },
+          "after": {
+            "size_bytes": 1485688320,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271289730000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979392
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 3.698,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\index.txt",
+          "size_bytes": 93560,
+          "sha256": "cfc07e91c4d9b8e8c999fd1f70fa364e584748e70fa377b30e0fc85426f52711",
+          "before": {
+            "size_bytes": 93560,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271316980000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979488
+            }
+          },
+          "after": {
+            "size_bytes": 93560,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271316980000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979488
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.009,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\native_experts.txt",
+          "size_bytes": 5795,
+          "sha256": "5ed2c4a55910616db1efe16f0c989e9bec80cc8b9e95bf1c42f886aadfffd2d6",
+          "before": {
+            "size_bytes": 5795,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317710000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979936
+            }
+          },
+          "after": {
+            "size_bytes": 5795,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317710000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 248241979936
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.004,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+          "size_bytes": 9993,
+          "sha256": "12827f24b742ea4e80cdc12dbcf9622227056b9f797252a3149263d4f9aaadce",
+          "before": {
+            "size_bytes": 9993,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317680000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729909120
+            }
+          },
+          "after": {
+            "size_bytes": 9993,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317680000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729909120
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.003,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\merges.txt",
+          "size_bytes": 3600844,
+          "sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9",
+          "before": {
+            "size_bytes": 3600844,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317550000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729908832
+            }
+          },
+          "after": {
+            "size_bytes": 3600844,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317550000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729908832
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.005,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\token_type.json",
+          "size_bytes": 744960,
+          "sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b",
+          "before": {
+            "size_bytes": 744960,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317560000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729908928
+            }
+          },
+          "after": {
+            "size_bytes": 744960,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317560000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729908928
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.004,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\tokenizer.json",
+          "size_bytes": 554,
+          "sha256": "87be2ac47d8bc7393b7435df6ccd276740019a393941a2585d5edce59f450c54",
+          "before": {
+            "size_bytes": 554,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317560000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729909024
+            }
+          },
+          "after": {
+            "size_bytes": 554,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317560000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729909024
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.003,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\vocab.json",
+          "size_bytes": 5737005,
+          "sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4",
+          "before": {
+            "size_bytes": 5737005,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317460000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729908736
+            }
+          },
+          "after": {
+            "size_bytes": 5737005,
+            "mtime_ns": 1791271318000000000,
+            "ctime_ns": 1791271317460000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 249729908736
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.006,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        }
+      ]
+    },
+    "mtp_runtime": {
+      "root": "F:\\Strata-data\\mtp\\rt",
+      "file_count": 4,
+      "total_bytes": 824314948,
+      "files": [
+        {
+          "path": "F:\\Strata-data\\mtp\\rt\\dense.bin",
+          "size_bytes": 116099072,
+          "sha256": "c724dc0b0822ada5d2977bf5bde821605feabaa64ea2e0045b67ca656329070a",
+          "before": {
+            "size_bytes": 116099072,
+            "mtime_ns": 1791271756000000000,
+            "ctime_ns": 1791271753450000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 250632732768
+            }
+          },
+          "after": {
+            "size_bytes": 116099072,
+            "mtime_ns": 1791271756000000000,
+            "ctime_ns": 1791271753450000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 250632732768
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.301,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\mtp\\rt\\dense.txt",
+          "size_bytes": 1880,
+          "sha256": "8773c81ebb0986e37fe94a8a9933e87be48b1fabc6889a0106bcdab179d1c2ac",
+          "before": {
+            "size_bytes": 1880,
+            "mtime_ns": 1791271756000000000,
+            "ctime_ns": 1791271754910000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 250632732864
+            }
+          },
+          "after": {
+            "size_bytes": 1880,
+            "mtime_ns": 1791271756000000000,
+            "ctime_ns": 1791271754910000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 250632732864
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.009,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\mtp\\rt\\draft_vocab.bin",
+          "size_bytes": 425196,
+          "sha256": "b1e1d3a7a9e4bf862dcd5923ce661fb59bbd07907e594df5cf86a62ac235cb91",
+          "before": {
+            "size_bytes": 425196,
+            "mtime_ns": 1791271756000000000,
+            "ctime_ns": 1791271755020000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 250632732960
+            }
+          },
+          "after": {
+            "size_bytes": 425196,
+            "mtime_ns": 1791271756000000000,
+            "ctime_ns": 1791271755020000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 250632732960
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 0.01,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        },
+        {
+          "path": "F:\\Strata-data\\mtp\\rt\\experts.bin",
+          "size_bytes": 707788800,
+          "sha256": "09398406be61f1f54c93861f449e48b8df0bfccbc9ec9b2b7636775a6ea9244f",
+          "before": {
+            "size_bytes": 707788800,
+            "mtime_ns": 1791271754000000000,
+            "ctime_ns": 1791271752530000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 250632732672
+            }
+          },
+          "after": {
+            "size_bytes": 707788800,
+            "mtime_ns": 1791271754000000000,
+            "ctime_ns": 1791271752530000000,
+            "file_id": {
+              "volume": 2894736058,
+              "index": 250632732672
+            }
+          },
+          "unchanged_during_read": true,
+          "read_seconds": 1.776,
+          "expected_size_bytes": null,
+          "expected_sha256": null,
+          "matches_expected": null
+        }
+      ]
+    }
+  },
+  "builds": [
+    {
+      "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261006-00-inventory\\cuda-build-02.json",
+      "run": "cuda-upstream-02",
+      "receipt_status": "success",
+      "source_path": "E:\\Strata-Hetero-data\\source\\upstream-82f46a8",
+      "source_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+      "binary": {
+        "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream-02\\strata.exe",
+        "size_bytes": 46546432,
+        "sha256": "737e212a38a0abb46ab6f347ec14d6b3d9630988120911e1342fb89d2672885d",
+        "before": {
+          "size_bytes": 46546432,
+          "mtime_ns": 1791307954347629600,
+          "ctime_ns": 1791307953860072800,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883589510
+          }
+        },
+        "after": {
+          "size_bytes": 46546432,
+          "mtime_ns": 1791307954347629600,
+          "ctime_ns": 1791307953860072800,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883589510
+          }
+        },
+        "unchanged_during_read": true,
+        "read_seconds": 0.038,
+        "expected_size_bytes": 46546432,
+        "expected_sha256": "737e212a38a0abb46ab6f347ec14d6b3d9630988120911e1342fb89d2672885d",
+        "matches_expected": true
+      },
+      "source_head_current": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+      "source_head_matches_receipt": true
+    },
+    {
+      "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261007-01-ple-ram\\cuda-build-01.json",
+      "run": "cuda-ple-ram-01",
+      "receipt_status": "success",
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+      "source_sha": "f42160ebc305ba17ae57220cf408fe1052589cc2",
+      "binary": {
+        "path": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\strata.exe",
+        "size_bytes": 46549504,
+        "sha256": "963609ef0718325b015373d77867c1ec1b0629948bc67cb82d6149e2dbb60d33",
+        "before": {
+          "size_bytes": 46549504,
+          "mtime_ns": 1791308978233161000,
+          "ctime_ns": 1791308977573733700,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883589971
+          }
+        },
+        "after": {
+          "size_bytes": 46549504,
+          "mtime_ns": 1791308978233161000,
+          "ctime_ns": 1791308977573733700,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883589971
+          }
+        },
+        "unchanged_during_read": true,
+        "read_seconds": 0.038,
+        "expected_size_bytes": 46549504,
+        "expected_sha256": "963609ef0718325b015373d77867c1ec1b0629948bc67cb82d6149e2dbb60d33",
+        "matches_expected": true
+      },
+      "compile_input_hashes_current": [
+        {
+          "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\ngram.hpp",
+          "expected_sha256": "d0fe470c2cbdfe97257efa547036b32e9123b302defa9e895000c16df10e9902",
+          "current_sha256": "d0fe470c2cbdfe97257efa547036b32e9123b302defa9e895000c16df10e9902",
+          "matches": true
+        },
+        {
+          "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\ngram.cpp",
+          "expected_sha256": "b96e4e8cb3bfcca26696309c76e3dae7289860987b643d26b8b204f722190ab1",
+          "current_sha256": "b96e4e8cb3bfcca26696309c76e3dae7289860987b643d26b8b204f722190ab1",
+          "matches": true
+        },
+        {
+          "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\ngram\\ple_reader_test.cpp",
+          "expected_sha256": "e58b095f3c55af80e84229c4efc4eda46b1984adb8ebaa1b131d34e031caca0a",
+          "current_sha256": "e58b095f3c55af80e84229c4efc4eda46b1984adb8ebaa1b131d34e031caca0a",
+          "matches": true
+        },
+        {
+          "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\program\\generate.cpp",
+          "expected_sha256": "30f81038bab550e98cb4218640a92a5c569384f42539a7028680b44eaa74def7",
+          "current_sha256": "30f81038bab550e98cb4218640a92a5c569384f42539a7028680b44eaa74def7",
+          "matches": true
+        }
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-07T23:43:00.217945+00:00"
+}
