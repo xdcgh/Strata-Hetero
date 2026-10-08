@@ -26,6 +26,8 @@ Run `bench/hetero/20261008-02-upstream-quality` uses the frozen upstream C++ sou
 
 This verifies those task outputs, not logits or emitted-token agreement: the initial client retained text and usage but did not capture the actual generated token IDs. The full-table RAM startup in `20261008-03-ram-quality` was stopped before inference because system commit headroom fell below 4 GiB. Its smaller expert complement also prevents a controlled timing comparison with this upstream run. Both records remain available; no speedup is accepted from them.
 
+Quality runs can now set `hetero_capture_token_ids: true` in the server config. OpenAI SSE's final chunk then records the integer IDs actually yielded by the engine, including emitted stop/EOS tokens and excluding server-inserted wrap/forced-opening tokens. Heartbeats are excluded. This captures accepted output observed by the server, not speculative proposals that were discarded. The option defaults off and applies only to streamed OpenAI requests. Quality arms use it in both runs; performance acceptance uses a separately declared configuration. It does not capture logits.
+
 ## Run contract
 
 Store `hardware_manifest.json`, `storage_profile.json`, `baseline.json`, `results.json`, `results.csv`, `resource/`, `logs/`, `comparison.md` and `DECISIONS.md` under `bench/hetero/<run>/`. When an item is not measured, record its status and reason, not a zero value. Keep raw model outputs and engine/client times. Timed-out, truncated, cache-contaminated or admission-failed samples stay in the evidence and are excluded from accepted speedups.

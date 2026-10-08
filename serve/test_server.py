@@ -3967,5 +3967,101 @@ class ClaudeCodeBillingStamp(unittest.TestCase):
         self.assertEqual(ids[1][:len(first) - 8], first[:len(first) - 8])   # all but the generation header
 
 
+class HeteroTokenCapture(unittest.TestCase):
+    class Tokenizer(ByteTokenizer):
+        def encode(self, text, parse_special=False, plain=()):
+            # An intentional merge proves that decoded/re-encoded text cannot recover the engine token sequence.
+            if text == "AB":
+                return [700]
+            return super().encode(text, parse_special=parse_special, plain=plain)
+
+    class Engine:
+        max_context = CTX
+
+        def __init__(self, segments):
+            self.segments = segments
+            self.calls = 0
+            self.closed_segments = []
+
+        def generate(self, ids, max_new, sampling, cancel, embeddings=None):
+            index = min(self.calls, len(self.segments) - 1)
+            self.calls += 1
+            try:
+                for token in self.segments[index]:
+                    yield token
+            finally:
+                self.closed_segments.append(index)
+
+    def chunks(self, *, enabled, stream=True, thinking=False, segments=None, reasoning_budget=0):
+        from serve.server import openai_chunks
+        tok = self.Tokenizer()
+        engine = self.Engine(segments or [[None, 65, 66, 257]])
+        svc = Service(engine, tok, ChatTemplate(ROOT / "serve/chat_template.jinja"))
+        svc.hetero_capture_token_ids = enabled
+        svc.reasoning_budget_tokens = reasoning_budget
+        chunks = list(openai_chunks(svc, {"stream": stream}, [1], thinking, None, 128,
+                                    threading.Event()))
+        return tok, engine, chunks
+
+    def test_default_off_emits_no_diagnostics(self):
+        tok, engine, chunks = self.chunks(enabled=False)
+        self.assertEqual(engine.calls, 1)
+        self.assertTrue(any(c is None for c in chunks))      # the engine heartbeat remains an SSE keep-alive
+        self.assertTrue(all("strata_diagnostics" not in c for c in chunks if c is not None))
+        self.assertEqual(chunks[-1]["choices"][0]["finish_reason"], "stop")
+        self.assertEqual(tok.encode(tok.decode([65, 66]), parse_special=True), [700])
+
+    def test_opt_in_reports_exact_engine_ids_on_final_stream_chunk(self):
+        tok, engine, chunks = self.chunks(enabled=True)
+        self.assertEqual(engine.calls, 1)
+        self.assertTrue(any(c is None for c in chunks))
+        self.assertTrue(all("strata_diagnostics" not in c for c in chunks[:-1] if c is not None))
+        final = chunks[-1]
+        diag = final["strata_diagnostics"]
+        self.assertEqual(final["choices"][0]["finish_reason"], "stop")
+        self.assertEqual(diag["actual_generated_token_ids"], [65, 66, 257])
+        self.assertEqual(tok.encode(tok.decode([65, 66]), parse_special=True), [700])
+        self.assertTrue(diag["include_stop"])
+        self.assertIn("engine.generate", diag["source"])
+        self.assertEqual(engine.closed_segments, [0])       # closing the capture wrapper closes the engine iterator
+
+    def test_opt_in_does_not_add_diagnostics_to_nonstream_or_other_run_callers(self):
+        tok, engine, chunks = self.chunks(enabled=True, stream=False)
+        self.assertEqual(engine.calls, 1)
+        self.assertTrue(all("strata_diagnostics" not in c for c in chunks if c is not None))
+        svc = Service(self.Engine([[65, 257]]), tok, ChatTemplate(ROOT / "serve/chat_template.jinja"))
+        svc.hetero_capture_token_ids = True
+        done = [x for kind, x in svc.run([1], False, None, 16, {}, threading.Event()) if kind == "done"]
+        self.assertEqual(len(done), 1)
+        self.assertNotIn("strata_diagnostics", done[0])   # non-OpenAI callers use the default-off run path
+
+    def test_token_ids_accumulate_across_engine_segments_and_exclude_server_wrap(self):
+        _tok, engine, chunks = self.chunks(
+            enabled=True, thinking=True, reasoning_budget=1, segments=[[65], [None, 66, 257]])
+        self.assertEqual(engine.calls, 2)                  # reasoning budget caused a second engine segment
+        diag = chunks[-1]["strata_diagnostics"]
+        self.assertEqual(diag["actual_generated_token_ids"], [65, 66, 257])
+        self.assertTrue(any(c is None for c in chunks))    # heartbeat in the second segment is not an ID
+
+    def test_token_ids_accumulate_across_reasoning_recovery(self):
+        from serve.server import HIGH_EFFORT, openai_chunks
+        tok = self.Tokenizer()
+        phrase = "alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu "
+        first = tok.encode(phrase * 200)
+        engine = self.Engine([first, [65, 257]])
+        svc = Service(engine, tok, ChatTemplate(ROOT / "serve/chat_template.jinja"))
+        svc.hetero_capture_token_ids = True
+        svc.reasoning_loop_recovery = "recover"
+        prompt = (f"<|im_start|>system\n{HIGH_EFFORT}<|im_end|>\n"
+                  "<|im_start|>user\nrepeat check<|im_end|>\n<|im_start|>assistant\n<think>")
+        ids = tok.encode(prompt, parse_special=True)
+        chunks = list(openai_chunks(svc, {"stream": True}, ids, True, None, 20000, threading.Event()))
+        self.assertEqual(engine.calls, 2)                  # repeated reasoning triggered recovery segment
+        actual = chunks[-1]["strata_diagnostics"]["actual_generated_token_ids"]
+        self.assertGreater(len(actual), 512)
+        self.assertEqual(actual[-2:], [65, 257])
+        self.assertEqual(actual[:-2], first[:len(actual) - 2])   # recovery stops the first engine segment early
+
+
 if __name__ == "__main__":
     unittest.main()
