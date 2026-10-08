@@ -2,7 +2,7 @@
 bench/prompts/** -text
 # Hetero receipts contain byte hashes of configs, prompts and raw model outputs.
 # Keep their original bytes on Windows and on other checkouts.
-bench/hetero/** -text
+bench/hetero/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 # launchers keep their platform line endings wherever the repository is cloned
 *.sh text eol=lf

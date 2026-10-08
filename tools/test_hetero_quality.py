@@ -87,6 +87,20 @@ class HeteroQualityTests(unittest.TestCase):
         self.assertIsInstance(reencoded["canonical_visible_text_reencoded_tokens"], int)
         self.assertIsNone(reencoded["actual_emitted_token_ids"])
 
+    def test_python_rejects_coroutines_overrides_and_signature_side_effects(self):
+        p = {"id": "code", "quality": {"kind": "python_ast", "function": "add_two", "arguments": ["x"],
+                                           "return_expression": {"left_name": "x", "operator": "Add", "right_constant": 2}}}
+        cases = [
+            "async def add_two(x):\n    return x + 2\n",
+            "def add_two(x):\n    return x + 2\nadd_two = None\n",
+            "@alter\ndef add_two(x):\n    return x + 2\n",
+            "def add_two(x=external_call()):\n    return x + 2\n",
+            "def add_two(x, *, extra):\n    return x + 2\n",
+        ]
+        for candidate in cases:
+            with self.subTest(candidate=candidate):
+                self.assertNotEqual(quality.evaluate_text(p, candidate)["quality_status"], "pass")
+
     def test_collect_hetero_bench_artifacts_maps_prompt_and_separates_failed_runs(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

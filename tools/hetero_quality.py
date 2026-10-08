@@ -360,12 +360,16 @@ def _eval_python_ast(text: str, expected: dict[str, Any]) -> dict[str, Any]:
         tree = ast.parse(candidate, mode="exec")
     except (SyntaxError, ValueError) as e:
         return {"status": "invalid_python_syntax", "detail": str(e)}
-    funcs = [n for n in tree.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))
+    funcs = [n for n in tree.body if isinstance(n, ast.FunctionDef)
              and n.name == expected.get("function")]
     if len(funcs) != 1:
         return {"status": "expected_function_missing_or_duplicated", "function": expected.get("function")}
+    if len(tree.body) != 1:
+        return {"status": "unexpected_module_statements", "execution": "not_run"}
     args = [a.arg for a in funcs[0].args.args]
-    if args != expected.get("arguments", []):
+    signature = funcs[0].args
+    if (args != expected.get("arguments", []) or signature.posonlyargs or signature.kwonlyargs
+            or signature.vararg is not None or signature.kwarg is not None or signature.defaults):
         return {"status": "function_signature_mismatch", "arguments": args}
     if funcs[0].decorator_list or len(funcs[0].body) != 1 or not isinstance(funcs[0].body[0], ast.Return):
         return {"status": "function_body_mismatch", "execution": "not_run"}
