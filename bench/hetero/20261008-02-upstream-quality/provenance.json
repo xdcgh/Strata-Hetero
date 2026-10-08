@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-10-08T03:11:46.624579+00:00",
+  "engine_cpp": {
+    "source_root": "E:\\Strata-Hetero-data\\source\\upstream-82f46a8",
+    "sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+    "clean": true,
+    "build_receipt": "../20261006-00-inventory/cuda-build-02.json",
+    "binary_sha256": "737e212a38a0abb46ab6f347ec14d6b3d9630988120911e1342fb89d2672885d"
+  },
+  "server_python": {
+    "checkout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+    "checkout_sha": "90bca9e2457f943500bd7292c9f142d67e23aaa4",
+    "runtime_code_equal_to_frozen_base": true,
+    "files": [
+      {
+        "path": "serve\\chat_golden.json",
+        "normalized_lf_sha256": "b9006c519218fcb7e5e38ba603905029f79c5c53431b3c9049466a4b0f3bd96f",
+        "match": true
+      },
+      {
+        "path": "serve\\chat_template.jinja",
+        "normalized_lf_sha256": "12827f24b742ea4e80cdc12dbcf9622227056b9f797252a3149263d4f9aaadce",
+        "match": true
+      },
+      {
+        "path": "serve\\frontend.py",
+        "normalized_lf_sha256": "2c9dca1d85e67953c29f3279714e1323f73242e18ee004b66cfa3061441aeb5e",
+        "match": true
+      },
+      {
+        "path": "serve\\mcp.py",
+        "normalized_lf_sha256": "659c8e3c7db7d51c939870f843b2350f3efcf2ce8f1ff4b4372db4631e39b77f",
+        "match": true
+      },
+      {
+        "path": "serve\\mcp_fake_server.py",
+        "normalized_lf_sha256": "ecc6afa3b44461e120d6901822a1b0db96bddf59324fefe8faa8f2cad48b7157",
+        "match": true
+      },
+      {
+        "path": "serve\\responses.py",
+        "normalized_lf_sha256": "a5922b576f94b155e821c98c2da5f118b4342ef1144511f7fe26e9891e0caef9",
+        "match": true
+      },
+      {
+        "path": "serve\\runconfig.py",
+        "normalized_lf_sha256": "08c5ee5af5b599d11c25778725613948b8f6b8b74432aa6b645845e6d145bf31",
+        "match": true
+      },
+      {
+        "path": "serve\\server.py",
+        "normalized_lf_sha256": "cfed32b2be52ffde372aebb8a4ab889234a9f4fb3aa4ad17dfdb6f54b833773b",
+        "match": true
+      },
+      {
+        "path": "serve\\structured.py",
+        "normalized_lf_sha256": "c4797c9bccf969d7f8d3a31782c958cc50254dc8ffc018164861030b30458214",
+        "match": true
+      },
+      {
+        "path": "serve\\telemetry.py",
+        "normalized_lf_sha256": "cc0d0aa9f6a31b1c6e51969ec3c15a4bbee62309bc620e8b02fbc1e3fe04ff1f",
+        "match": true
+      },
+      {
+        "path": "serve\\test_control_cancel.py",
+        "normalized_lf_sha256": "bf685446e4aee36483a7e530eaa1b51f751ecaf62fec280832d76692a551cc51",
+        "match": true
+      },
+      {
+        "path": "serve\\test_detok.py",
+        "normalized_lf_sha256": "45ac9f0125d6ddb626b948ca8cc2a1443fc7e3dd0b057915e5b3b77fec52064a",
+        "match": true
+      },
+      {
+        "path": "serve\\test_fatal_recovery.py",
+        "normalized_lf_sha256": "8796f18e9027226a830f85b6fccb4e76c9a2cfb840574cc29c848d57f1cfb06e",
+        "match": true
+      },
+      {
+        "path": "serve\\test_frontend.py",
+        "normalized_lf_sha256": "dbf03c28309004da86d376f9818b45effda8a2e244e3a6455105a4a84cae35a5",
+        "match": true
+      },
+      {
+        "path": "serve\\test_lifecycle.py",
+        "normalized_lf_sha256": "6652d32df39c5a0fd67a0df74e6bf333afd414795b72a779613adc88039fa778",
+        "match": true
+      },
+      {
+        "path": "serve\\test_mcp.py",
+        "normalized_lf_sha256": "4f77c5773c49098228795a79ed2faaa1f543ae6a8581c80f08dd5199a4c27d86",
+        "match": true
+      },
+      {
+        "path": "serve\\test_monitor.py",
+        "normalized_lf_sha256": "c5d8af4b3e1877afd0a8b044688dfc7f58531cbe7081647a924edced2649eb5f",
+        "match": true
+      },
+      {
+        "path": "serve\\test_parallel.py",
+        "normalized_lf_sha256": "3b04f16d705725c396304d924494778143cb10ad53b487d3f7f9d86e1fdf3cf2",
+        "match": true
+      },
+      {
+        "path": "serve\\test_reasoning_loop_recovery.py",
+        "normalized_lf_sha256": "a04d608756e245aebed3072fdae6206e9679c68add0ce921d024be675dcce859",
+        "match": true
+      },
+      {
+        "path": "serve\\test_reasoning_rescue.py",
+        "normalized_lf_sha256": "d91252b93945465bce47bd3602d0c7a4fed36639d7cb5cc08b3153ac535a1d03",
+        "match": true
+      },
+      {
+        "path": "serve\\test_reasoning_tools.py",
+        "normalized_lf_sha256": "da7e9fa1c95542e14fcd12d7cee9ef07c3e31905da4e1d07146fe89248927e08",
+        "match": true
+      },
+      {
+        "path": "serve\\test_responses.py",
+        "normalized_lf_sha256": "28f59fe4e7a4feac7537dfcf885606436286d7573c94df3bf1e71be310239f6e",
+        "match": true
+      },
+      {
+        "path": "serve\\test_restart_waiters.py",
+        "normalized_lf_sha256": "ffea5ebd71ba1d4d23d1c348bf57e96c33580618c266e04e4e315e1817277b98",
+        "match": true
+      },
+      {
+        "path": "serve\\test_runconfig.py",
+        "normalized_lf_sha256": "efa3712dd39d3367d156da606d2155cd2b1a6ec6894dc17b9210a11dde761650",
+        "match": true
+      },
+      {
+        "path": "serve\\test_security.py",
+        "normalized_lf_sha256": "50a1497a3757d220f663112f2c4d1f2a1d6e5731a3b5a5237a0c3652421c673b",
+        "match": true
+      },
+      {
+        "path": "serve\\test_server.py",
+        "normalized_lf_sha256": "cbd34e44318f9168e57f0b15d345d1e9ab907dde2b1bacf9bc9d54fa00134f79",
+        "match": true
+      },
+      {
+        "path": "serve\\test_slots.py",
+        "normalized_lf_sha256": "8f4e1b3e734341611fa70330be54007ecaadff05e763570e77a3496cffbcbe12",
+        "match": true
+      },
+      {
+        "path": "serve\\test_structured.py",
+        "normalized_lf_sha256": "6361f10e7237ffaa9cafaec114650ff23c0480fa09335914ec061ceb03a2ec01",
+        "match": true
+      },
+      {
+        "path": "serve\\test_vram.py",
+        "normalized_lf_sha256": "40967f4970ff017ae43d58bb08c1df795fb71f3cecaea89ab4cb375c5f537ac6",
+        "match": true
+      },
+      {
+        "path": "serve\\test_winjob.py",
+        "normalized_lf_sha256": "069d5e28845b44ee1f1b34c63de6cd68b6d722609726f72a270f51ed7f7ee1a6",
+        "match": true
+      },
+      {
+        "path": "serve\\winjob.py",
+        "normalized_lf_sha256": "8fff65cf850e108b84ab06c3fb44a68b947b0f4834ce5880139ada5dfb11a749",
+        "match": true
+      },
+      {
+        "path": "serve\\__init__.py",
+        "normalized_lf_sha256": "7195d862b09ee0c290b6c28d5c1b6e7c5819212328ecbea7cd1422b4a5d4a3d6",
+        "match": true
+      },
+      {
+        "path": "serve\\fixtures\\rcall_specimens.json",
+        "normalized_lf_sha256": "0100d9d7a6ce543302e5cacd6b7e11a37376900b42bf06bbb4a1d3dff22891ed",
+        "match": true
+      },
+      {
+        "path": "tools/strata_tokenizer.py",
+        "normalized_lf_sha256": "0a1d68e33f8563f2f3791d00e2ad33147eac6cb4b53460026e102c3554524703",
+        "match": true
+      },
+      {
+        "path": "tools/_paths.py",
+        "normalized_lf_sha256": "31b0f4d27d66b32793074ad1ff00a7a9b5938dc63dca3ffe79a8de5df7b37d27",
+        "match": true
+      }
+    ]
+  },
+  "identity_scope_note": "identity.source.sha identifies engine C++ build input; current tools/feature branch is a separate server Python checkout; runtime Python code is content-identical"
+}

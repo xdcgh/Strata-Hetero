@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "0 model baseline pending; 1 RAM prototype built; 2 storage profiler fixture-verified; CPU topology preparation",
+  "phase": "0 upstream quality passed bounded tasks; 1 RAM startup commit gate failed, matched 20 GiB retry next",
   "branch": "codex/30-cpu-scheduler",
   "upstream_base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -15,7 +15,11 @@
     "Eleven compiled reserve CLI cases passed without visible GPUs; four unlaunched 32K arms prepared",
     "Prefill ordinary GPU cache hits use existing VRAM weights; budgeted loan backups are disabled in base source",
     "Native Release storage profiler fixture target passed; no actual E/F throughput measured",
-    "Read-only Windows CPU Set topology collected; eleven parser/allowed-set fixtures passed; numeric OS classes only"
+    "Read-only Windows CPU Set topology collected; eleven parser/allowed-set fixtures passed; numeric OS classes only",
+    "Four model shard SHA/size checks passed on 2026-10-08; no format conversion claim",
+    "Upstream 0.1.40 32K quality: nine tasks times three formal requests passed; emitted IDs/logits not yet captured",
+    "Windows full PLE table 28,800,138,240 bytes locked; ready startup failed 4 GiB commit floor before inference; safely unloaded",
+    "PSAPI system commit sampler validated live; physical RAM and system commit checked separately"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -28,16 +32,17 @@
   "pushed_plan_checkpoint_sha": "be9ecba3491309a8fe67721ab313477e4e96d836",
   "coordination": {
     "other_chat": "01a10fd4-a020-7370-8d07-9433ef55b45b",
-    "gpu_policy": "preserve the other chat's historical benchmark; do not run concurrent GPU experiments",
+    "gpu_policy": "Other chat completed; user authorised this chat GPU experiments; old service held for restoration",
     "wsl_comfyui_shutdown_authorized": true,
     "comfyui_original_state": "enabled and active",
     "comfyui_temporary_state": "disabled/inactive at last explicit shutdown; external WSL restarts have been observed",
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
-    "old_strata_pause_approval": "requested asynchronously; pending explicit user response",
-    "gpu_state_at_quota_resume": "no current Strata GPU process; other chat actively preparing IQ4_XS inference after quota reset",
-    "decision_required": "which chat has exclusive GPU priority; pause requested conditionally by quota-resume message when user decision is needed"
+    "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
+    "gpu_state_at_quota_resume": "Own upstream quality complete; RAM03 unloaded after commit floor failure; no model now running",
+    "decision_required": null,
+    "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Obtain GPU priority coordination, then fresh quiescence/admission and prepared 32K upstream vs PLE RAM quality arms",
-  "completion_status": "incomplete; waiting for GPU priority decision after requested checkpoint"
+  "next_experiment": "Same 20 GiB expert budget upstream vs RAM 32K quality with physical 12 GiB and system commit 4 GiB floors",
+  "completion_status": "active; all objective phases preserved"
 }

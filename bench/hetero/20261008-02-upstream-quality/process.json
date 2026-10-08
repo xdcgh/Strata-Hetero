@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "launcher_pid": 21644,
+  "start_utc": "2026-10-08T03:03:18.2817222Z",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-u",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py",
+    "--engine",
+    "strata",
+    "--config",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-02-upstream-quality\\config.json",
+    "--port",
+    "8081"
+  ],
+  "config": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-02-upstream-quality\\config.json",
+  "run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-02-upstream-quality",
+  "admission": "admission-03.json",
+  "role": "owned upstream quality model",
+  "model_inference_started": false
+}

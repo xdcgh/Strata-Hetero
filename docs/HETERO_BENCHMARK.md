@@ -20,6 +20,12 @@ Those rows are historical observations. The report's 65.5%-72.4% draft acceptanc
 
 The later historical capacity report records a 523,572-token non-repeated natural-text prompt that retrieved all three keys (523.95 prefill tok/s, 26 generated tokens, 36.1 decode tok/s) and a 1,046,977-token prompt that produced 128 `!` tokens (532.26 prefill tok/s). Both are single samples. A subsequent 1M clean restart also failed short probes in that investigation. Capacity/prefill executed, but 1M retrieval and stable generation did not pass; the cause remains unresolved. Another chat is still running that historical investigation. These observations are preserved as historical failure shields, not as current-upstream or Hetero validation.
 
+## Current upstream quality check on 2026-10-08
+
+Run `bench/hetero/20261008-02-upstream-quality` uses the frozen upstream C++ source `82f46a8`, engine 0.1.40, the freshly verified four-shard UD-Q4_K_XL model, 32K context and deterministic placement controls. Five short tasks and four natural-text retrieval tasks each ran one warmup and three formal requests. All 27 formal requests passed their bounded task checks and finished normally. The four live natural prompt lengths were 1,036, 4,109, 16,396 and 30,712 tokens; all requests reported zero reused prompt tokens. Each task's three visible outputs were byte-identical.
+
+This verifies those task outputs, not logits or emitted-token agreement: the initial client retained text and usage but did not capture the actual generated token IDs. The full-table RAM startup in `20261008-03-ram-quality` was stopped before inference because system commit headroom fell below 4 GiB. Its smaller expert complement also prevents a controlled timing comparison with this upstream run. Both records remain available; no speedup is accepted from them.
+
 ## Run contract
 
 Store `hardware_manifest.json`, `storage_profile.json`, `baseline.json`, `results.json`, `results.csv`, `resource/`, `logs/`, `comparison.md` and `DECISIONS.md` under `bench/hetero/<run>/`. When an item is not measured, record its status and reason, not a zero value. Keep raw model outputs and engine/client times. Timed-out, truncated, cache-contaminated or admission-failed samples stay in the evidence and are excluded from accepted speedups.

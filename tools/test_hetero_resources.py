@@ -10,11 +10,13 @@ from unittest.mock import Mock
 from hetero_resources import (
     RAM_RESERVE_BYTES,
     ResourceSampler,
+    compose_windows_memory,
     main,
     memory_snapshot,
     parse_nvidia_base,
     parse_nvidia_optional,
     run_sampling,
+    windows_memory_global,
 )
 
 
@@ -124,6 +126,78 @@ class ResourceSamplerTests(unittest.TestCase):
         self.assertEqual(got["pagefile_used_bytes"], 7)
         self.assertEqual(errors[0]["section"], "memory_global")
 
+    def test_systemwide_commit_uses_psapi_not_gms_pagefile_comparison(self):
+        gib = 1024**3
+        memory = compose_windows_memory(
+            {"physical_total_bytes": 64*gib, "physical_available_bytes": 40*gib,
+             "pagefile_total_bytes": 135*gib, "pagefile_available_bytes": 1*gib},
+            {"commit_total_pages": 127*gib//4096, "commit_limit_pages": 135*gib//4096,
+             "page_size_bytes": 4096, "commit_used_bytes": 127*gib, "commit_limit_bytes": 135*gib})
+        self.assertEqual(memory["gms_pagefile_avail_bytes_unclassified"], 1*gib)
+        self.assertEqual(memory["commit_available_bytes"], 8*gib)
+        self.assertEqual(memory["sources"]["system_commit"], "PSAPI GetPerformanceInfo")
+        now = FakeTime()
+        sampler = ResourceSampler(None, psutil_module=FakePsutil(), nvidia_runner=FakeRunner(),
+                                  memory_global=lambda: memory, monotonic=now.monotonic,
+                                  utc_now=now.utc_now, nvidia_path="smi")
+        sample = sampler.sample()
+        self.assertEqual(sample["commit_gate"]["status"], "pass")
+        self.assertEqual(sample["commit_gate"]["source"], "PSAPI GetPerformanceInfo")
+
+        memory["commit_available_bytes"] = 3*gib
+        low_sampler = ResourceSampler(None, psutil_module=FakePsutil(), nvidia_runner=FakeRunner(),
+                                      memory_global=lambda: memory, monotonic=now.monotonic,
+                                      utc_now=now.utc_now, nvidia_path="smi")
+        self.assertEqual(low_sampler.sample()["commit_gate"]["status"], "block")
+
+    def test_windows_memory_api_wrapper_calls_both_native_apis_and_preserves_legacy_nulls(self):
+        class NativeFunction:
+            def __init__(self, fn): self.fn = fn
+            def __call__(self, *args): return self.fn(*args)
+        class Kernel32:
+            def __init__(self):
+                self.called = False
+                self.GlobalMemoryStatusEx = NativeFunction(self._global_memory)
+            def _global_memory(self, pointer):
+                self.called = True
+                value = pointer._obj
+                value.ullTotalPhys = 64 * 1024**3
+                value.ullAvailPhys = 40 * 1024**3
+                value.ullTotalPageFile = 135 * 1024**3
+                value.ullAvailPageFile = 1 * 1024**3
+                return 1
+        class Psapi:
+            def __init__(self):
+                self.called = False
+                self.GetPerformanceInfo = NativeFunction(self._performance)
+            def _performance(self, pointer, cb):
+                self.called = True
+                value = pointer._obj
+                self.asserted_cb = cb == value.cb
+                value.CommitTotal = (127 * 1024**3) // 4096
+                value.CommitLimit = (135 * 1024**3) // 4096
+                value.PageSize = 4096
+                return 1
+        kernel, psapi = Kernel32(), Psapi()
+        def loader(name): return kernel if name == "kernel32" else psapi
+        got = windows_memory_global(loader)
+        self.assertTrue(kernel.called and psapi.called and psapi.asserted_cb)
+        self.assertEqual(got["physical_available_bytes"], 40 * 1024**3)
+        self.assertEqual(got["commit_available_bytes"], 8 * 1024**3)
+        self.assertEqual(got["gms_pagefile_avail_bytes_unclassified"], 1 * 1024**3)
+        self.assertIsNone(got["pagefile_total_bytes"])
+        self.assertIsNone(got["pagefile_used_bytes"])
+
+    def test_memory_snapshot_does_not_mutate_reused_injected_dict(self):
+        shared = {"source": "fixture", "physical_total_bytes": 64, "physical_available_bytes": 32,
+                  "physical_used_bytes": 32, "commit_limit_bytes": None, "commit_available_bytes": None,
+                  "commit_used_bytes": None, "errors": [{"section": "commit", "error": "unavailable"}]}
+        _, errors1 = memory_snapshot(lambda: shared, None)
+        _, errors2 = memory_snapshot(lambda: shared, None)
+        self.assertEqual(len(errors1), 1)
+        self.assertEqual(len(errors2), 1)
+        self.assertIn("errors", shared)
+
     def test_sample_contains_pid_tree_disk_labels_memory_gate_and_timestamps(self):
         now = FakeTime()
         runner = FakeRunner()
@@ -159,6 +233,8 @@ class ResourceSamplerTests(unittest.TestCase):
                                   monotonic=now.monotonic, utc_now=now.utc_now, nvidia_path="smi")
         sample = sampler.sample()
         self.assertEqual(sample["ram_gate"]["status"], "block")
+        self.assertEqual(sample["commit_gate"]["status"], "unknown")
+        self.assertIn("system_commit_telemetry_unknown", sample["alerts"])
         self.assertIn("available_ram_below_12_gib", sample["alerts"])
         self.assertIn("nvidia_telemetry_unknown", sample["alerts"])
         self.assertFalse(sample["nvidia"]["telemetry_known"])

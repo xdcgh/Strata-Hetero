@@ -1,0 +1,2 @@
+{"time_utc":"2026-10-07T23:37:35.279315+00:00","elapsed_seconds":0.001,"stage":"start","model_shards":4,"model_total_bytes":111334654784}
+{"time_utc":"2026-10-07T23:37:35.311360+00:00","elapsed_seconds":0.033,"stage":"verification-failed","error_type":"VerifyFailure","message":"file changed between stat and open: F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf"}

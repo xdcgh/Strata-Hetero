@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-08T03:33:56.369847+00:00",
+  "status": "startup_ready_commit_headroom_gate_failed_before_quality",
+  "ple_locked_table_bytes": 28800138240,
+  "expert_ram_gib_logged": 27.89,
+  "memory": {
+    "source": "GlobalMemoryStatusEx",
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 47129792512,
+    "physical_used_bytes": 89833455616,
+    "commit_limit_bytes": 145553182720,
+    "commit_available_bytes": 1093545984,
+    "commit_used_bytes": 144459636736,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "commit_gate": {
+    "minimum_available_gib": 4,
+    "observed_available_gib": 1.0184440612792969,
+    "source_scope": "GlobalMemoryStatusEx current-process commit availability; systemwide check separately pending"
+  },
+  "processes": [
+    {
+      "pid": 29752,
+      "parent_pid": 28728,
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "start_utc": "2026-10-08T03:25:20.915882+00:00",
+      "memory_info": {
+        "rss": 4923392,
+        "vms": 888832,
+        "num_page_faults": 1329,
+        "peak_wset": 4964352,
+        "wset": 4923392,
+        "peak_paged_pool": 65704,
+        "paged_pool": 57408,
+        "peak_nonpaged_pool": 18040,
+        "nonpaged_pool": 4496,
+        "pagefile": 888832,
+        "peak_pagefile": 966656,
+        "private": 888832
+      }
+    },
+    {
+      "pid": 32276,
+      "parent_pid": 29752,
+      "exe": "C:\\Windows\\System32\\conhost.exe",
+      "start_utc": "2026-10-08T03:25:20.922996+00:00",
+      "memory_info": {
+        "rss": 11800576,
+        "vms": 2633728,
+        "num_page_faults": 3085,
+        "peak_wset": 11845632,
+        "wset": 11800576,
+        "peak_paged_pool": 204048,
+        "paged_pool": 190416,
+        "peak_nonpaged_pool": 12240,
+        "nonpaged_pool": 11288,
+        "pagefile": 2633728,
+        "peak_pagefile": 2912256,
+        "private": 2633728
+      }
+    },
+    {
+      "pid": 23468,
+      "parent_pid": 29752,
+      "exe": "C:\\Python314\\python.exe",
+      "start_utc": "2026-10-08T03:25:20.951444+00:00",
+      "memory_info": {
+        "rss": 217202688,
+        "vms": 200908800,
+        "num_page_faults": 82264,
+        "peak_wset": 217284608,
+        "wset": 217202688,
+        "peak_paged_pool": 294336,
+        "paged_pool": 286272,
+        "peak_nonpaged_pool": 42936,
+        "nonpaged_pool": 37544,
+        "pagefile": 200908800,
+        "peak_pagefile": 201089024,
+        "private": 200908800
+      }
+    },
+    {
+      "pid": 35032,
+      "parent_pid": 23468,
+      "exe": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\strata.exe",
+      "start_utc": "2026-10-08T03:25:21.612974+00:00",
+      "memory_info": {
+        "rss": 60754722816,
+        "vms": 81232842752,
+        "num_page_faults": 24418712,
+        "peak_wset": 60761423872,
+        "wset": 60754722816,
+        "peak_paged_pool": 316750672,
+        "paged_pool": 316740400,
+        "peak_nonpaged_pool": 417240,
+        "nonpaged_pool": 241688,
+        "pagefile": 81232842752,
+        "peak_pagefile": 81295327232,
+        "private": 81232842752
+      }
+    }
+  ],
+  "quality_requests_sent": 0,
+  "speedup_claim": false
+}

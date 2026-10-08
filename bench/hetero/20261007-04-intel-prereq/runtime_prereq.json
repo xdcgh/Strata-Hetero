@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "researched_at": "2026-10-08",
+  "repository": {
+    "path": "C:/Users/DC/Documents/ChatGPT/Strata-Hetero",
+    "head": "e5872d3697cf5124c353ec39aa61ae2e7c569ebf"
+  },
+  "scope": {
+    "read_only": true,
+    "packages_installed": false,
+    "gpu_or_npu_compute_run": false,
+    "wsl_used": false,
+    "model_downloaded": false,
+    "hardware_versions_reprobed": false
+  },
+  "host_context": {
+    "python": {
+      "version": "3.14.8",
+      "executable": "E:/Strata-Hetero-data/venv/Scripts/python.exe",
+      "version_checked_read_only": true
+    },
+    "processor": "Intel Core Ultra 9 285H (existing local build evidence)",
+    "arc_gpu": {
+      "name": "Intel Arc 140T",
+      "driver_version": "32.0.101.8860",
+      "version_source": "user-provided, not reprobed"
+    },
+    "npu": {
+      "name": "Intel AI Boost",
+      "driver_version": "32.0.100.2267",
+      "version_source": "user-provided, not reprobed"
+    }
+  },
+  "openvino_runtime": {
+    "latest_pypi_version_at_research": "2026.4.1",
+    "requires_python": ">=3.10",
+    "release_upload_utc": "2026-10-01T09:59:32.323544Z",
+    "windows_cp314_wheel": {
+      "filename": "openvino-2026.4.1-22982-cp314-cp314-win_amd64.whl",
+      "size_bytes": 84966232,
+      "sha256": "96d5ecb8cca4d61a3eee754c9e477702509cf782eb45596c653a00ddb2176d96",
+      "url": "https://files.pythonhosted.org/packages/56/bc/5ebb236e5c10155d7693ea282308b9dbfe4142c5f3350a77203ab859684b/openvino-2026.4.1-22982-cp314-cp314-win_amd64.whl"
+    },
+    "pypi_metadata_url": "https://pypi.org/pypi/openvino/json",
+    "distribution_note": "OpenVINO's official selector lists the PIP channel as including the NPU plugin Python API. No wheel was downloaded or installed.",
+    "windows_python_support": "OpenVINO 2026 system requirements list Python 3.10-3.14 for Windows."
+  },
+  "device_support": {
+    "arc_gpu": {
+      "finding": "OpenVINO 2026 system requirements list Intel Arc GPU Series on Windows 10/11 x64. The GPU driver is separate; docs do not give one universal numeric driver floor. Integrated Intel GPU is enumerated GPU.0 when present.",
+      "system_requirements_url": "https://docs.openvino.ai/2026/about-openvino/release-notes-openvino/system-requirements.html",
+      "gpu_device_url": "https://docs.openvino.ai/2026/openvino-workflow/running-inference/inference-devices-and-modes/gpu-device.html"
+    },
+    "npu": {
+      "windows_os": "Windows 11 x64, 22H2 or later",
+      "driver_requirement_static": "An NPU driver is required. The current OpenVINO device guide does not state a universal minimum driver version for static-shape inference.",
+      "supported_internal_primitive_types": [
+        "F32",
+        "F16",
+        "U8"
+      ],
+      "quantized_model_types": [
+        "INT8",
+        "mixed FP16-INT8"
+      ],
+      "hardware_compute_precision": "FP16",
+      "bf16": "BF16 is not listed in the NPU plugin's supported inference primitive types; do not assume BF16 execution. Convert/test as F16/F32 or supported quantization.",
+      "shape_support": "Static input/output shapes are the general supported path. Dynamic shapes are preview-only, bounded, require Compiler-In-Plugin, and are limited to NPU40XX/Lunar Lake.",
+      "dynamic_shape_windows_driver_minimum": "32.0.100.4621",
+      "dynamic_shape_scope": "The 4621 requirement applies only to the bounded dynamic-shape preview, which the guide says is limited to vision models and validated on super-resolution examples. It is not a general static-inference minimum.",
+      "operation_support": "There is no universal per-op static whitelist for this device in the current guide. Query Core.query_model(model, NPU) and compile the specific model/shape. NPU is supported by AUTO; HETERO support is partial.",
+      "device_url": "https://docs.openvino.ai/2026/openvino-workflow/running-inference/inference-devices-and-modes/npu-device.html",
+      "supported_devices_url": "https://docs.openvino.ai/2026/documentation/compatibility-and-support/supported-devices.html"
+    }
+  },
+  "driver_assessment": {
+    "provided_npu_driver_32_0_100_2267": "Below the dynamic-shape preview threshold, but that threshold is not a static-model requirement. The docs do not establish that this version fails all static inference on Core Ultra 9 285H. Its compatibility with OpenVINO 2026.4.1 on this host remains unverified; do not label it incompatible solely from 4621.",
+    "compiler_fallback": "Default PREFER_PLUGIN uses the integrated compiler only if platform and driver compatibility conditions hold; otherwise OpenVINO falls back to Compiler-In-Driver. The documented driver v2565 boundary is specifically for Meteor Lake NPU 3720 and cannot be generalized to 285H/Arrow Lake.",
+    "latest_intel_npu_driver_reference": {
+      "version": "32.0.100.5540",
+      "release_date": "2026-08-28",
+      "documented_openvino": "2026.3.1.0",
+      "supported_product": "Intel Core Ultra 9 Processor 285H is listed.",
+      "product_page_url": "https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html",
+      "release_notes_url": "https://downloadmirror.intel.com/927127/NPU_Win_Release_Notes_v32.0.100.5540.pdf",
+      "meaning": "This is a current positive compatibility reference, not an installation request. It does not define a minimum version for static inference."
+    }
+  },
+  "generic_npu_vision_reference": {
+    "model": "resnet-50",
+    "format": "ONNX",
+    "precision": "FP16",
+    "npu_result": "passed",
+    "matrix_version": "OpenVINO 2026.2",
+    "limitation": "This supports feasibility for a common static vision model, not the Qwen3.8 ViT or this host's exact device/driver.",
+    "url": "https://docs.openvino.ai/2026/documentation/compatibility-and-support/supported-models.html"
+  },
+  "onnx_conversion": {
+    "documented_flow": [
+      "Export or obtain an ONNX model.",
+      "Use openvino.convert_model(onnx_path) or ovc; save XML/BIN with openvino.save_model.",
+      "OpenVINO can read ONNX directly; conversion is recommended when model load latency matters.",
+      "Query NPU operation support and compile the concrete static model shape."
+    ],
+    "url": "https://docs.openvino.ai/2026/openvino-workflow/model-preparation/convert-model-onnx.html",
+    "gguf_note": "The local Qwen mmproj is GGUF, and GGUF is not among the documented direct OpenVINO model-conversion inputs. A source-framework export or ONNX version is needed; this is inferred from the documented input formats."
+  },
+  "strata_vision": {
+    "original_encoder": {
+      "filename": "mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+      "size_bytes": 907543008,
+      "sha256_lfs": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+      "source_repo": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+      "setup_pinned_revision": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",
+      "file_added_commit": "1c04b8102ca5346f1faf4d9914503e378d713021",
+      "huggingface_metadata_url": "https://huggingface.co/api/models/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/tree/ed59f92082b1e93c0e96d60a8b11aab089b52f09?recursive=true&expand=true",
+      "docs_description": "About 0.9 GB; 27-layer ViT plus language-model projector.",
+      "optional_q8_encoder": "Docs report a 590 MiB Q8_0 mmproj and give llama-quantize mmproj-Qwen3.8-Flash-Next-BF16.gguf mmproj-Qwen3.8-Flash-Next-Q8_0.gguf Q8_0."
+    },
+    "unsloth_ud_q4_setup": {
+      "finding": "The unsloth family declares the original mmproj path/repository, but sets vision=false. setup.py resolves this to vision=none and warns/off when GPU/CPU vision is requested. The Q4 docs say the encoder is not wired to this file yet.",
+      "setup_source_lines": [
+        "setup.py:187-219",
+        "setup.py:4528-4533",
+        "setup.py:4707-4715",
+        "setup.py:4838-4917"
+      ],
+      "model_docs_lines": [
+        "docs/UNSLOTH_Q4.md:28-30"
+      ]
+    },
+    "current_helper": {
+      "engine": "tools/vision/strata_vision.cpp uses llama.cpp mtmd with a GGUF mmproj and the text GGUF opened vocabulary-only.",
+      "flags": [
+        "--mmproj",
+        "--model",
+        "--gpu",
+        "--threads",
+        "--max-tokens",
+        "--min-tokens",
+        "--flash-attn"
+      ],
+      "setup_modes": [
+        "--vision gpu",
+        "--vision cpu",
+        "--vision yes",
+        "--vision no"
+      ],
+      "gpu_cpu_selection": "A boolean use_gpu selects mtmd GPU use; CPU mode hides CUDA before llama_backend_init. No NPU selector exists.",
+      "server_protocol": "serve/server.py starts the helper with mmproj/model paths, sends ENC <image> <output>, and consumes an SVE1 header (token count, 2D grid, embedding width) plus float32 embeddings.",
+      "code_refs": [
+        "tools/vision/strata_vision.cpp:7-13",
+        "tools/vision/strata_vision.cpp:56-90",
+        "tools/vision/strata_vision.cpp:117-143",
+        "tools/vision/strata_vision.cpp:156-212",
+        "tools/vision/CMakeLists.txt:41-44",
+        "serve/server.py:1594-1620",
+        "serve/server.py:1742"
+      ]
+    },
+    "smallest_integration_seam": "A standalone OpenVINO Python worker can sit behind the server's existing Vision subprocess boundary, but must preserve READY/ENC/OK and SVE1 output shape/2D positions. It requires source/ONNX weights for the ViT+projector, matching image preprocessing/crops, static NPU shapes, and model-specific query_model plus embedding parity. This is a research candidate, not implemented or tested."
+  },
+  "sources": [
+    {
+      "title": "OpenVINO NPU Device",
+      "url": "https://docs.openvino.ai/2026/openvino-workflow/running-inference/inference-devices-and-modes/npu-device.html",
+      "version": "2026 documentation",
+      "retrieved": "2026-10-08"
+    },
+    {
+      "title": "OpenVINO GPU Device",
+      "url": "https://docs.openvino.ai/2026/openvino-workflow/running-inference/inference-devices-and-modes/gpu-device.html",
+      "version": "2026 documentation",
+      "retrieved": "2026-10-08"
+    },
+    {
+      "title": "OpenVINO System Requirements",
+      "url": "https://docs.openvino.ai/2026/about-openvino/release-notes-openvino/system-requirements.html",
+      "version": "2026 documentation",
+      "retrieved": "2026-10-08"
+    },
+    {
+      "title": "OpenVINO Download Selector",
+      "url": "https://docs.openvino.ai/2026/_static/selector-tool/selector-30c413f.html",
+      "version": "2026.4.1",
+      "retrieved": "2026-10-08"
+    },
+    {
+      "title": "PyPI openvino JSON metadata",
+      "url": "https://pypi.org/pypi/openvino/json",
+      "version": "2026.4.1",
+      "retrieved": "2026-10-08"
+    },
+    {
+      "title": "Intel NPU Driver for Windows",
+      "url": "https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html",
+      "version": "32.0.100.5540",
+      "date": "2026-08-28"
+    },
+    {
+      "title": "Intel NPU Driver 5540 Release Notes",
+      "url": "https://downloadmirror.intel.com/927127/NPU_Win_Release_Notes_v32.0.100.5540.pdf",
+      "version": "32.0.100.5540",
+      "date": "2026-08-28"
+    },
+    {
+      "title": "OpenVINO verified models",
+      "url": "https://docs.openvino.ai/2026/documentation/compatibility-and-support/supported-models.html",
+      "version": "2026.2 model entries",
+      "retrieved": "2026-10-08"
+    },
+    {
+      "title": "OpenVINO ONNX conversion",
+      "url": "https://docs.openvino.ai/nightly/openvino-workflow/model-preparation/convert-model-onnx.html",
+      "version": "nightly docs",
+      "retrieved": "2026-10-08"
+    },
+    {
+      "title": "Pinned Hugging Face mmproj metadata",
+      "url": "https://huggingface.co/api/models/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/tree/ed59f92082b1e93c0e96d60a8b11aab089b52f09?recursive=true&expand=true",
+      "revision": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",
+      "retrieved": "2026-10-08"
+    },
+    {
+      "title": "OpenVINO Core query_model API",
+      "url": "https://docs.openvino.ai/2026/api/c_cpp_api/classov_1_1_core.html",
+      "version": "2026 docs",
+      "use": "device-specific operation support query for a concrete model"
+    }
+  ],
+  "assessment": "OpenVINO 2026.4.1 has a matching CPython 3.14 Windows x64 wheel, and OpenVINO documentation covers both Intel Arc GPUs and Windows NPU inference. The NPU static-shape driver floor is not specified as a universal version; 32.0.100.4621 is only a bounded dynamic-shape preview threshold for NPU40XX/Lunar Lake. For Core Ultra 9 285H with supplied 2267 driver, static compatibility with OpenVINO 2026.4.1 remains unverified; the official latest 5540 package is the current documented positive pairing. The existing Strata UD-Q4_K_XL setup currently disables vision, and its GGUF mmproj is not a direct OpenVINO conversion input."
+}

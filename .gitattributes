@@ -1,5 +1,8 @@
 # Frozen prompts are hashed byte for byte (manifest sha256): never convert their line endings.
 bench/prompts/** -text
+# Hetero receipts contain byte hashes of configs, prompts and raw model outputs.
+# Keep their original bytes on Windows and on other checkouts.
+bench/hetero/** -text
 
 # launchers keep their platform line endings wherever the repository is cloned
 *.sh text eol=lf

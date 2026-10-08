@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-10-08T03:12:29.365132+00:00",
+  "classification": "preflight_identity_scope_misread_corrected_before_quality_requests",
+  "initial_rejection": {
+    "reason": "compared identity.source.sha (engine C++ build source) with current Python server checkout HEAD",
+    "was_model_quality_failure": false,
+    "quality_requests_sent_before_resolution": 0
+  },
+  "engine_cpp_source": {
+    "expected_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+    "frozen_worktree": "E:\\Strata-Hetero-data\\source\\upstream-82f46a8",
+    "git_head": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+    "tracked_worktree_status": "clean",
+    "cmake_source": "E:/Strata-Hetero-data/source/upstream-82f46a8",
+    "build_receipt": "../20261006-00-inventory/cuda-build-02.json",
+    "binary_sha256": "737e212a38a0abb46ab6f347ec14d6b3d9630988120911e1342fb89d2672885d"
+  },
+  "python_server_checkout": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+    "git_head": "90bca9e2457f943500bd7292c9f142d67e23aaa4",
+    "tracked_bridge_file_count": 46,
+    "missing_files": 0,
+    "raw_byte_hash_differences": 0,
+    "git_blob_differences": 0,
+    "provenance": "provenance.json"
+  },
+  "runtime_health": {
+    "loaded": true,
+    "context": 32768,
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "engine": "0.1.40",
+    "api_key_required": false,
+    "loopback": "http://127.0.0.1:8081"
+  },
+  "config_sha256": "89baa630a278fdb932a6c1668374b5117190f79c14d9564270a9fee6b36734e6",
+  "resource_gate": {
+    "sample_utc": "2026-10-08T03:12:15.459Z",
+    "ram_gate": "pass",
+    "available_gib": 61.262,
+    "minimum_gib": 12
+  },
+  "result": "identity scope verified; quality arm may proceed sequentially"
+}

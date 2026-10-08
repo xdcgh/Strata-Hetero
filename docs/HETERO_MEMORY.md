@@ -24,7 +24,11 @@ For the documented IQ4_NL table, 320,001,536 rows × 90 bytes is 28,800,138,240 
 
 On 2026-10-07 the native Windows host build and CTest passed 2/2 targets. The PLE fixture now compares direct, ordinary mapped and fully locked mapped rows against each format's own dequantizer, including first/last rows, random rows and the sixteen-head gather. It checks complete locked bytes, cleared state on close, impossible-reserve refusal and reopening after refusal. The working-set memory check also passed. These tests run without CUDA or a model.
 
-The full CUDA engine build also passed, with the same SM89/compiler/SDK/ggml settings as the unmodified upstream build. Eleven compiled CLI checks passed with GPU visibility disabled, including valid bounds and refusal of negative, malformed and overflowing reserve values. Real-table residency, greedy/logits quality, model memory-pressure behavior and performance are still pending. No new speedup or accepted model configuration is claimed by those build/fixture passes.
+The full CUDA engine build also passed, with the same SM89/compiler/SDK/ggml settings as the unmodified upstream build. Eleven compiled CLI checks passed with GPU visibility disabled, including valid bounds and refusal of negative, malformed and overflowing reserve values.
+
+On 2026-10-08 the real Q4 PLE table was fully locked: 28,800,138,240 bytes, 63.3 seconds for the reported PLE initialization. The server reached ready with 43.6 GiB of physical RAM available, but only about 1.0-1.2 GiB of system commit capacity remained. The expert complement was clamped from its requested 71 GiB budget to 27.89 GiB; the upstream reference held 36.05 GiB. This startup passed the physical floor but failed the new 4 GiB commit floor. No quality request was sent, and the owned model was unloaded. This is a memory-pressure result, not a performance comparison. See `bench/hetero/20261008-03-ram-quality/DECISIONS.md`.
+
+The sampler now measures system commit with PSAPI `GetPerformanceInfo`; `GlobalMemoryStatusEx` pagefile fields are kept only as a process-scoped diagnostic. A separate live cross-check found those two readings equal on this host. The next controlled comparison uses the same 20 GiB expert budget in both arms and retains the 12 GiB physical and 4 GiB commit floors. Logits parity and model performance acceptance remain pending.
 
 ## Measurement matrix
 

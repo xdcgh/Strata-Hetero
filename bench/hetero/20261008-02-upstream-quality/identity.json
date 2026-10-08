@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "source": {
+    "sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253"
+  },
+  "config": {
+    "sha256": "89baa630a278fdb932a6c1668374b5117190f79c14d9564270a9fee6b36734e6",
+    "scope": "quality",
+    "prompt_cache": 0,
+    "deterministic_placement": true
+  },
+  "model": {
+    "id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "native_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "integrity_status": "complete four-shard size/SHA verification passed 2026-10-08; same files at launch",
+    "historical_manifest": "../20261006-00-inventory/historical-manifest.json",
+    "integrity_manifest": "../20261008-00-admission/model-integrity-02.json"
+  },
+  "engine": {
+    "version": "0.1.40",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream-02\\strata.exe",
+    "sha256": "737e212a38a0abb46ab6f347ec14d6b3d9630988120911e1342fb89d2672885d"
+  },
+  "acceptance_status": "prepared_not_launched"
+}

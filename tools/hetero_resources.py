@@ -15,6 +15,7 @@ import shutil
 import subprocess
 import sys
 import time
+from ctypes import wintypes
 from pathlib import Path
 from typing import Any, Callable
 
@@ -24,6 +25,7 @@ except ImportError:  # pragma: no cover - host-dependent fallback
     psutil = None
 
 RAM_RESERVE_BYTES = 12 * 1024**3
+COMMIT_RESERVE_BYTES = 4 * 1024**3
 DEFAULT_INTERVAL_SECONDS = 1.0
 DEFAULT_MAX_SECONDS = 3600
 MAX_ALLOWED_SECONDS = 86400
@@ -120,31 +122,89 @@ def _scrub_executable(path: str | None) -> str | None:
     return path
 
 
-def windows_memory_global() -> dict[str, Any]:
+def compose_windows_memory(gms: dict[str, int] | None, performance: dict[str, int] | None) -> dict[str, Any]:
+    errors: list[dict[str, str]] = []
+    if gms is None: errors.append(_error("GlobalMemoryStatusEx", "physical memory unavailable"))
+    if performance is None: errors.append(_error("GetPerformanceInfo", "system commit counters unavailable"))
+    physical_total = gms.get("physical_total_bytes") if gms else None
+    physical_available = gms.get("physical_available_bytes") if gms else None
+    commit_used = performance.get("commit_used_bytes") if performance else None
+    commit_limit = performance.get("commit_limit_bytes") if performance else None
+    commit_available = commit_limit - commit_used if commit_limit is not None and commit_used is not None else None
+    return {"source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+            "sources": {"physical": "GlobalMemoryStatusEx", "system_commit": "PSAPI GetPerformanceInfo",
+                        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"},
+            "physical_total_bytes": physical_total, "physical_available_bytes": physical_available,
+            "physical_used_bytes": physical_total - physical_available if physical_total is not None and physical_available is not None else None,
+            "commit_limit_bytes": commit_limit, "commit_used_bytes": commit_used,
+            "commit_available_bytes": commit_available,
+            "commit_total_pages": performance.get("commit_total_pages") if performance else None,
+            "commit_limit_pages": performance.get("commit_limit_pages") if performance else None,
+            "commit_page_size_bytes": performance.get("page_size_bytes") if performance else None,
+            "gms_pagefile_total_bytes": gms.get("pagefile_total_bytes") if gms else None,
+            "gms_pagefile_avail_bytes_unclassified": gms.get("pagefile_available_bytes") if gms else None,
+            "pagefile_total_bytes": None, "pagefile_used_bytes": None,
+            "errors": errors}
+
+
+def windows_memory_global(winapi_loader: Callable[[str], Any] | None = None) -> dict[str, Any]:
     class MEMORYSTATUSEX(ctypes.Structure):
         _fields_ = [("dwLength", ctypes.c_ulong), ("dwMemoryLoad", ctypes.c_ulong),
                     ("ullTotalPhys", ctypes.c_ulonglong), ("ullAvailPhys", ctypes.c_ulonglong),
                     ("ullTotalPageFile", ctypes.c_ulonglong), ("ullAvailPageFile", ctypes.c_ulonglong),
                     ("ullTotalVirtual", ctypes.c_ulonglong), ("ullAvailVirtual", ctypes.c_ulonglong),
                     ("ullAvailExtendedVirtual", ctypes.c_ulonglong)]
-    status = MEMORYSTATUSEX()
-    status.dwLength = ctypes.sizeof(status)
-    if not ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(status)):
-        raise OSError("GlobalMemoryStatusEx failed")
-    return {"source": "GlobalMemoryStatusEx", "physical_total_bytes": int(status.ullTotalPhys),
-            "physical_available_bytes": int(status.ullAvailPhys),
-            "physical_used_bytes": int(status.ullTotalPhys - status.ullAvailPhys),
-            "commit_limit_bytes": int(status.ullTotalPageFile),
-            "commit_available_bytes": int(status.ullAvailPageFile),
-            "commit_used_bytes": int(status.ullTotalPageFile - status.ullAvailPageFile),
-            "pagefile_total_bytes": None, "pagefile_used_bytes": None}
+    if winapi_loader is None:
+        kernel32 = ctypes.windll.kernel32
+        psapi = ctypes.WinDLL("psapi", use_last_error=True)
+    else:
+        kernel32 = winapi_loader("kernel32")
+        psapi = winapi_loader("psapi")
+    gms = None
+    try:
+        status = MEMORYSTATUSEX()
+        status.dwLength = ctypes.sizeof(status)
+        if not kernel32.GlobalMemoryStatusEx(ctypes.byref(status)):
+            raise OSError("GlobalMemoryStatusEx failed")
+        gms = {"physical_total_bytes": int(status.ullTotalPhys), "physical_available_bytes": int(status.ullAvailPhys),
+               "pagefile_total_bytes": int(status.ullTotalPageFile),
+               "pagefile_available_bytes": int(status.ullAvailPageFile)}
+    except Exception:
+        pass
+
+    class PERFORMANCE_INFORMATION(ctypes.Structure):
+        _fields_ = [("cb", wintypes.DWORD), ("CommitTotal", ctypes.c_size_t),
+                    ("CommitLimit", ctypes.c_size_t), ("CommitPeak", ctypes.c_size_t),
+                    ("PhysicalTotal", ctypes.c_size_t), ("PhysicalAvailable", ctypes.c_size_t),
+                    ("SystemCache", ctypes.c_size_t), ("KernelTotal", ctypes.c_size_t),
+                    ("KernelPaged", ctypes.c_size_t), ("KernelNonpaged", ctypes.c_size_t),
+                    ("PageSize", ctypes.c_size_t), ("HandleCount", wintypes.DWORD),
+                    ("ProcessCount", wintypes.DWORD), ("ThreadCount", wintypes.DWORD)]
+    performance = None
+    try:
+        info = PERFORMANCE_INFORMATION()
+        info.cb = ctypes.sizeof(info)
+        psapi.GetPerformanceInfo.argtypes = [ctypes.POINTER(PERFORMANCE_INFORMATION), wintypes.DWORD]
+        psapi.GetPerformanceInfo.restype = wintypes.BOOL
+        if not psapi.GetPerformanceInfo(ctypes.byref(info), info.cb):
+            raise OSError("GetPerformanceInfo failed")
+        performance = {"commit_total_pages": int(info.CommitTotal), "commit_limit_pages": int(info.CommitLimit),
+                       "page_size_bytes": int(info.PageSize),
+                       "commit_used_bytes": int(info.CommitTotal * info.PageSize),
+                       "commit_limit_bytes": int(info.CommitLimit * info.PageSize)}
+    except Exception:
+        pass
+    return compose_windows_memory(gms, performance)
 
 
 def memory_snapshot(global_memory: Callable[[], dict[str, Any]] = windows_memory_global,
                     psutil_module: Any = psutil) -> tuple[dict[str, Any], list[dict[str, str]]]:
     errors: list[dict[str, str]] = []
     try:
-        return global_memory(), errors
+        result = dict(global_memory())
+        errors.extend(result.get("errors", []))
+        result.pop("errors", None)
+        return result, errors
     except Exception as exc:
         errors.append(_error("memory_global", exc))
     if psutil_module is None:
@@ -199,12 +259,14 @@ def _nvidia_commands(runner: Callable[..., Any], executable: str) -> tuple[list[
 
 class ResourceSampler:
     def __init__(self, owner_pid: int | None, *, psutil_module: Any = psutil,
+                 minimum_commit_bytes: int = COMMIT_RESERVE_BYTES,
                  nvidia_runner: Callable[..., Any] = subprocess.run,
                  memory_global: Callable[[], dict[str, Any]] = windows_memory_global,
                  monotonic: Callable[[], float] = time.monotonic,
                  utc_now: Callable[[], dt.datetime] = lambda: dt.datetime.now(dt.timezone.utc),
                  nvidia_path: str | None = None):
         self.owner_pid = owner_pid
+        self.minimum_commit_bytes = int(minimum_commit_bytes)
         self.psutil_module = psutil_module
         self.nvidia_runner = nvidia_runner
         self.memory_global = memory_global
@@ -288,6 +350,15 @@ class ResourceSampler:
             available_gib = float(available) / 1024**3
             ram_gate = {"status": "pass" if available >= RAM_RESERVE_BYTES else "block",
                         "available_gib": round(available_gib, 3), "required_gib": 12}
+        commit_available = memory.get("commit_available_bytes")
+        commit_source = memory.get("sources", {}).get("system_commit", memory.get("source"))
+        if commit_available is None:
+            commit_gate = {"status": "unknown", "available_gib": None,
+                           "required_gib": self.minimum_commit_bytes / 1024**3, "source": commit_source}
+        else:
+            commit_gate = {"status": "pass" if commit_available >= self.minimum_commit_bytes else "block",
+                           "available_gib": round(float(commit_available) / 1024**3, 3),
+                           "required_gib": self.minimum_commit_bytes / 1024**3, "source": commit_source}
 
         process_tree, process_errors = self._process_tree()
         errors.extend(process_errors)
@@ -322,6 +393,8 @@ class ResourceSampler:
         alerts: list[str] = []
         if ram_gate["status"] == "block": alerts.append("available_ram_below_12_gib")
         if ram_gate["status"] == "unknown": alerts.append("available_ram_unknown")
+        if commit_gate["status"] == "block": alerts.append("system_commit_available_below_reserve")
+        if commit_gate["status"] == "unknown": alerts.append("system_commit_telemetry_unknown")
         if not nvidia["telemetry_known"]: alerts.append("nvidia_telemetry_unknown")
         if process_tree is None and self.owner_pid is not None: alerts.append("owner_process_tree_unknown")
         ended = self.monotonic()
@@ -330,7 +403,7 @@ class ResourceSampler:
         return {"schema_version": 1, "record_type": "resource_sample", "observed_at_utc": utc,
                 "monotonic_seconds": started, "sample_gap_seconds": gap,
                 "sampler_elapsed_seconds": max(0.0, ended - started), "owner_pid": self.owner_pid,
-                "cpu": cpu, "memory": memory, "ram_gate": ram_gate,
+                "cpu": cpu, "memory": memory, "ram_gate": ram_gate, "commit_gate": commit_gate,
                 "owner_process_tree": process_tree, "disk_io": disks, "nvidia": nvidia,
                 "alerts": alerts, "errors": errors}
 
@@ -372,19 +445,22 @@ def _check_output(path: Path) -> str | None:
     return None
 
 
-def main(argv: list[str] | None = None, *, sampler_factory: Callable[[int | None], ResourceSampler] | None = None) -> int:
+def main(argv: list[str] | None = None, *, sampler_factory: Callable[..., ResourceSampler] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True)
     parser.add_argument("--pid", type=int)
     parser.add_argument("--interval", type=float, default=DEFAULT_INTERVAL_SECONDS)
     parser.add_argument("--stop-file")
     parser.add_argument("--max-seconds", type=int, default=DEFAULT_MAX_SECONDS)
+    parser.add_argument("--minimum-commit-gib", type=float, default=4.0)
     parser.add_argument("--validate-only", action="store_true")
     args = parser.parse_args(argv)
     if args.pid is not None and args.pid <= 0: parser.error("--pid must be positive")
     if not math.isfinite(args.interval) or args.interval <= 0: parser.error("--interval must be finite and positive")
     if args.max_seconds <= 0 or args.max_seconds > MAX_ALLOWED_SECONDS:
         parser.error(f"--max-seconds must be 1..{MAX_ALLOWED_SECONDS}")
+    if not math.isfinite(args.minimum_commit_gib) or args.minimum_commit_gib < 0 or args.minimum_commit_gib > 256:
+        parser.error("--minimum-commit-gib must be finite and 0..256")
     output = Path(args.output)
     error = _check_output(output)
     if error: print(error, file=sys.stderr); return 2
@@ -398,7 +474,9 @@ def main(argv: list[str] | None = None, *, sampler_factory: Callable[[int | None
     except OSError as exc:
         print(f"cannot create output ({type(exc).__name__})", file=sys.stderr); return 2
     with stream:
-        sampler = (sampler_factory or (lambda pid: ResourceSampler(pid)))(args.pid)
+        factory = sampler_factory or (lambda pid, commit_gib: ResourceSampler(
+            pid, minimum_commit_bytes=int(commit_gib * 1024**3)))
+        sampler = factory(args.pid, args.minimum_commit_gib)
         reason = run_sampling(stream, sampler, interval_seconds=args.interval, max_seconds=args.max_seconds,
                               stop_file=args.stop_file)
     print(json.dumps({"status": "stopped", "reason": reason, "output_written": True}, allow_nan=False))
