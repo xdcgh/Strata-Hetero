@@ -1,0 +1,757 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "started_utc": "2026-10-08T12:02:23.303527+00:00",
+  "device_requested": "NPU",
+  "precision_requested": "f16",
+  "precision_experiment": true,
+  "weights_identity": {
+    "schema_version": 1,
+    "model": "SYNTHETIC NOT MODEL - seeded NPU runtime fixture; no real expert weights",
+    "shard": "SYNTHETIC NOT MODEL - generated for 20261008-13 NPU runtime acceptance only",
+    "layer": 0,
+    "expert": 0,
+    "weights_sha256": {
+      "gate": "bdbafd97f85d6d986379210f778184ea9aa1ff54027bce8524b6c666faee4e09",
+      "up": "cb02560cfbf39ad3d0ce44f9a363d8e70be18ebae30b17ff645dd74d5c699db3",
+      "down": "854205f081b554c4a48f2d84038b50f3bd302e172a3a7a74a4ef234987b248ef"
+    }
+  },
+  "weights_header_info": {
+    "path": "E:\\Strata-Hetero-data\\probes\\20261008-13-npu-synthetic\\synthetic_expert.npz",
+    "size_bytes": 2274,
+    "mtime_ns": 1791460615895587900,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 562949953520712
+    },
+    "tensors": {
+      "gate": {
+        "shape": [
+          8,
+          16
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 640,
+        "tensor_payload_bytes": 512,
+        "sha256_expected": "bdbafd97f85d6d986379210f778184ea9aa1ff54027bce8524b6c666faee4e09"
+      },
+      "up": {
+        "shape": [
+          8,
+          16
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 640,
+        "tensor_payload_bytes": 512,
+        "sha256_expected": "cb02560cfbf39ad3d0ce44f9a363d8e70be18ebae30b17ff645dd74d5c699db3"
+      },
+      "down": {
+        "shape": [
+          16,
+          8
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 640,
+        "tensor_payload_bytes": 512,
+        "sha256_expected": "854205f081b554c4a48f2d84038b50f3bd302e172a3a7a74a4ef234987b248ef"
+      }
+    },
+    "hidden": 16,
+    "intermediate": 8,
+    "tensor_payload_bytes": 1536,
+    "max_tensor_payload_bytes": 536870912,
+    "payload_hashes_verified": false,
+    "tensor_arrays_materialized": false
+  },
+  "rows": [
+    {
+      "rows": 1,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.500665,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        74.75940001313575
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        1.7816000035963953,
+        1.1620000004768372,
+        1.3764000032097101
+      ],
+      "latency_median_ms": 1.3764000032097101,
+      "latency_p95_ms": 1.7410800035577267,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 3.1465788197238e-08,
+          "relative_rmse": 0.0052021686006004245,
+          "max_row_norm_relative_error": 6.67970185160864e-05,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 3.1465788197238e-08,
+          "relative_rmse": 0.0052021686006004245,
+          "max_row_norm_relative_error": 6.67970185160864e-05,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 3.1465788197238e-08,
+          "relative_rmse": 0.0052021686006004245,
+          "max_row_norm_relative_error": 6.67970185160864e-05,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    },
+    {
+      "rows": 2,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.079448,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        2.008500014198944
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        1.4609000063501298,
+        1.3651999761350453,
+        0.7022999925538898
+      ],
+      "latency_median_ms": 1.3651999761350453,
+      "latency_p95_ms": 1.4513300033286214,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.2287985100556398e-06,
+          "relative_rmse": 0.3750936036296131,
+          "max_row_norm_relative_error": 0.24760686856818717,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.2287985100556398e-06,
+          "relative_rmse": 0.3750936036296131,
+          "max_row_norm_relative_error": 0.24760686856818717,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.2287985100556398e-06,
+          "relative_rmse": 0.3750936036296131,
+          "max_row_norm_relative_error": 0.24760686856818717,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    },
+    {
+      "rows": 4,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.085438,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        2.1635000011883676
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        0.7910999993328005,
+        1.4025999989826232,
+        0.6407999899238348
+      ],
+      "latency_median_ms": 0.7910999993328005,
+      "latency_p95_ms": 1.341449999017641,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.6747180779930204e-06,
+          "relative_rmse": 0.3938818453142431,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.6747180779930204e-06,
+          "relative_rmse": 0.3938818453142431,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.6747180779930204e-06,
+          "relative_rmse": 0.3938818453142431,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    },
+    {
+      "rows": 8,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.086959,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        2.346099994610995
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        0.8118999830912799,
+        1.4285999932326376,
+        0.6839999987278134
+      ],
+      "latency_median_ms": 0.8118999830912799,
+      "latency_p95_ms": 1.3669299922185019,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.4981164895289112e-06,
+          "relative_rmse": 0.37456361091658213,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.4981164895289112e-06,
+          "relative_rmse": 0.37456361091658213,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.4981164895289112e-06,
+          "relative_rmse": 0.37456361091658213,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    },
+    {
+      "rows": 16,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.08205,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        2.2029999818187207
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        0.7759000000078231,
+        0.6660999788437039,
+        0.7405000214930624
+      ],
+      "latency_median_ms": 0.7405000214930624,
+      "latency_p95_ms": 0.772360002156347,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.6942660749919014e-06,
+          "relative_rmse": 0.5127623077999257,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.6942660749919014e-06,
+          "relative_rmse": 0.5127623077999257,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.6942660749919014e-06,
+          "relative_rmse": 0.5127623077999257,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    },
+    {
+      "rows": 32,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.089765,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        2.3301000182982534
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        0.9308999869972467,
+        1.5505999908782542,
+        0.7846000080462545
+      ],
+      "latency_median_ms": 0.9308999869972467,
+      "latency_p95_ms": 1.4886299904901534,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.9676099327625707e-06,
+          "relative_rmse": 0.4147178292728658,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.9676099327625707e-06,
+          "relative_rmse": 0.4147178292728658,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.9676099327625707e-06,
+          "relative_rmse": 0.4147178292728658,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    },
+    {
+      "rows": 64,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.083826,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        2.343300002394244
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        0.7840000034775585,
+        1.4754000003449619,
+        1.4026999997440726
+      ],
+      "latency_median_ms": 1.4026999997440726,
+      "latency_p95_ms": 1.468130000284873,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.8600818495760905e-06,
+          "relative_rmse": 0.4567472979482414,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.8600818495760905e-06,
+          "relative_rmse": 0.4567472979482414,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.8600818495760905e-06,
+          "relative_rmse": 0.4567472979482414,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    },
+    {
+      "rows": 128,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.085593,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        2.335900004254654
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        0.7367999933194369,
+        1.4125999878160655,
+        0.7350000087171793
+      ],
+      "latency_median_ms": 0.7367999933194369,
+      "latency_p95_ms": 1.3450199883664027,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.0898780803690897e-06,
+          "relative_rmse": 0.4220543643182538,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.0898780803690897e-06,
+          "relative_rmse": 0.4220543643182538,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.0898780803690897e-06,
+          "relative_rmse": 0.4220543643182538,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    },
+    {
+      "rows": 256,
+      "status": "complete",
+      "input_finite": true,
+      "compile_seconds": 0.091078,
+      "execution_devices": [
+        "NPU"
+      ],
+      "reported_inference_precision": null,
+      "precision_policy_status": "unknown",
+      "precision_policy_matches": false,
+      "precision_policy_reason": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision.",
+      "warmup_wall_ms": [
+        2.3080999962985516
+      ],
+      "repeat_wall_ms_includes_input_copy_and_output_retrieval": [
+        0.8512999920640141,
+        1.4070000033825636,
+        0.689799984684214
+      ],
+      "latency_median_ms": 0.8512999920640141,
+      "latency_p95_ms": 1.3514300022507086,
+      "quality_by_repeat": [
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.555982518970268e-06,
+          "relative_rmse": 0.4449177906636398,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.555982518970268e-06,
+          "relative_rmse": 0.4449177906636398,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        },
+        {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.555982518970268e-06,
+          "relative_rmse": 0.4449177906636398,
+          "max_row_norm_relative_error": 1.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false
+        }
+      ],
+      "quality_pass": false,
+      "precision_policy_scope": "reported property only; does not prove per-operation precision",
+      "crossover_eligible": false
+    }
+  ],
+  "crossover_eligible": false,
+  "precision_policy_scope": "Reported OpenVINO inference_precision property only; not proof of actual per-operation precision.",
+  "native_cpu_comparison_note": "This NumPy/OpenVINO F32 FFN is not Strata's native quantized CPU kernel; do not claim a native CPU or model-level speedup from these timings.",
+  "device_full_name": "Intel(R) AI Boost",
+  "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "device_supported_property_names": [
+    "AVAILABLE_DEVICES",
+    "CACHE_DIR",
+    "CACHE_ENCRYPTION_CALLBACKS",
+    "COMPATIBILITY_CHECK",
+    "COMPILATION_NUM_THREADS",
+    "DEVICE_ARCHITECTURE",
+    "DEVICE_GOPS",
+    "DEVICE_ID",
+    "DEVICE_PCI_INFO",
+    "DEVICE_TYPE",
+    "DEVICE_UUID",
+    "EXECUTION_DEVICES",
+    "FULL_DEVICE_NAME",
+    "LOG_LEVEL",
+    "MODEL_PRIORITY",
+    "MODEL_PTR",
+    "NPU_BYPASS_UMD_CACHING",
+    "NPU_COMPILATION_MODE_PARAMS",
+    "NPU_COMPILER_TYPE",
+    "NPU_COMPILER_VERSION",
+    "NPU_DEFER_WEIGHTS_LOAD",
+    "NPU_DEVICE_ALLOC_MEM_SIZE",
+    "NPU_DEVICE_TOTAL_MEM_SIZE",
+    "NPU_DRIVER_VERSION",
+    "NPU_MAX_TILES",
+    "NPU_PLATFORM",
+    "NUM_STREAMS",
+    "OPTIMAL_NUMBER_OF_INFER_REQUESTS",
+    "OPTIMIZATION_CAPABILITIES",
+    "PERFORMANCE_HINT",
+    "PERFORMANCE_HINT_NUM_REQUESTS",
+    "PERF_COUNT",
+    "RANGE_FOR_ASYNC_INFER_REQUESTS",
+    "RANGE_FOR_STREAMS",
+    "SUPPORTED_PROPERTIES",
+    "WEIGHTS_PATH"
+  ],
+  "seed": 17,
+  "row_counts": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "warmups_per_shape": 1,
+  "repeats_per_shape": 3,
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "weights_loaded_and_hash_verified": true,
+  "weight_tensor_sha256": {
+    "gate": "bdbafd97f85d6d986379210f778184ea9aa1ff54027bce8524b6c666faee4e09",
+    "up": "cb02560cfbf39ad3d0ce44f9a363d8e70be18ebae30b17ff645dd74d5c699db3",
+    "down": "854205f081b554c4a48f2d84038b50f3bd302e172a3a7a74a4ef234987b248ef"
+  },
+  "compile_property_policy": {
+    "requested": {
+      "INFERENCE_PRECISION_HINT": "f16",
+      "EXECUTION_MODE_HINT": "ACCURACY"
+    },
+    "submitted": {},
+    "omitted": {
+      "EXECUTION_MODE_HINT": "Omitted: the prior NPU attempt was rejected with NOT_FOUND for this option, and the device's SUPPORTED_PROPERTIES did not advertise it.",
+      "INFERENCE_PRECISION_HINT": "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy remains unknown. The F16 model/input dtype does not prove per-operation precision."
+    }
+  },
+  "compile_properties_note": "Submitted only device-advertised properties, except EXECUTION_MODE_HINT is explicitly omitted for NPU because the prior attempt was rejected. An omitted inference precision hint leaves policy unknown; F16 model/input dtype does not prove per-operation precision.",
+  "crossover_eligible_all_rows": false,
+  "finished_utc": "2026-10-08T12:02:25.007851+00:00"
+}

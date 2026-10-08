@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "started_utc": "2026-10-08T11:57:03.441712+00:00",
+  "device_requested": "NPU",
+  "precision_requested": "f16",
+  "precision_experiment": true,
+  "weights_identity": {
+    "schema_version": 1,
+    "model": "SYNTHETIC NOT MODEL - seeded NPU runtime fixture; no real expert weights",
+    "shard": "SYNTHETIC NOT MODEL - generated for 20261008-13 NPU runtime acceptance only",
+    "layer": 0,
+    "expert": 0,
+    "weights_sha256": {
+      "gate": "bdbafd97f85d6d986379210f778184ea9aa1ff54027bce8524b6c666faee4e09",
+      "up": "cb02560cfbf39ad3d0ce44f9a363d8e70be18ebae30b17ff645dd74d5c699db3",
+      "down": "854205f081b554c4a48f2d84038b50f3bd302e172a3a7a74a4ef234987b248ef"
+    }
+  },
+  "weights_header_info": {
+    "path": "E:\\Strata-Hetero-data\\probes\\20261008-13-npu-synthetic\\synthetic_expert.npz",
+    "size_bytes": 2274,
+    "mtime_ns": 1791460615895587900,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 562949953520712
+    },
+    "tensors": {
+      "gate": {
+        "shape": [
+          8,
+          16
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 640,
+        "tensor_payload_bytes": 512,
+        "sha256_expected": "bdbafd97f85d6d986379210f778184ea9aa1ff54027bce8524b6c666faee4e09"
+      },
+      "up": {
+        "shape": [
+          8,
+          16
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 640,
+        "tensor_payload_bytes": 512,
+        "sha256_expected": "cb02560cfbf39ad3d0ce44f9a363d8e70be18ebae30b17ff645dd74d5c699db3"
+      },
+      "down": {
+        "shape": [
+          16,
+          8
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 640,
+        "tensor_payload_bytes": 512,
+        "sha256_expected": "854205f081b554c4a48f2d84038b50f3bd302e172a3a7a74a4ef234987b248ef"
+      }
+    },
+    "hidden": 16,
+    "intermediate": 8,
+    "tensor_payload_bytes": 1536,
+    "max_tensor_payload_bytes": 536870912,
+    "payload_hashes_verified": false,
+    "tensor_arrays_materialized": false
+  },
+  "rows": [
+    {
+      "rows": 1,
+      "status": "compiling",
+      "input_finite": true
+    }
+  ],
+  "crossover_eligible": false,
+  "precision_policy_scope": "Reported OpenVINO inference_precision property only; not proof of actual per-operation precision.",
+  "native_cpu_comparison_note": "This NumPy/OpenVINO F32 FFN is not Strata's native quantized CPU kernel; do not claim a native CPU or model-level speedup from these timings.",
+  "device_full_name": "Intel(R) AI Boost",
+  "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "seed": 17,
+  "row_counts": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "warmups_per_shape": 1,
+  "repeats_per_shape": 3,
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "weights_loaded_and_hash_verified": true,
+  "weight_tensor_sha256": {
+    "gate": "bdbafd97f85d6d986379210f778184ea9aa1ff54027bce8524b6c666faee4e09",
+    "up": "cb02560cfbf39ad3d0ce44f9a363d8e70be18ebae30b17ff645dd74d5c699db3",
+    "down": "854205f081b554c4a48f2d84038b50f3bd302e172a3a7a74a4ef234987b248ef"
+  },
+  "compile_properties_requested": {
+    "INFERENCE_PRECISION_HINT": "f16",
+    "EXECUTION_MODE_HINT": "ACCURACY",
+    "notes": "OpenVINO documents inference_precision as a hint; the reported property is recorded per shape and does not prove per-operation precision."
+  },
+  "failure": {
+    "type": "RuntimeError",
+    "message": "Exception from src\\inference\\src\\cpp\\core.cpp:120:\nException from src\\inference\\src\\dev\\plugin.cpp:54:\nException from src\\plugins\\intel_npu\\src\\common\\src\\filtered_config.cpp:37:\n[ NOT_FOUND ] Option 'EXECUTION_MODE_HINT' is not supported for current configuration\n\n\n"
+  },
+  "finished_utc": "2026-10-08T11:57:03.840693+00:00"
+}

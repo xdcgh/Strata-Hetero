@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "phase": "1 full PLE RAM no-debug quality failed; instrumented 1K passed; latest-upstream integration next",
-  "branch": "codex/30-cpu-scheduler",
-  "upstream_base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+  "phase": "0.1.40.4 source integration host and Python regression passed; matched CUDA builds and model baseline next",
+  "branch": "codex/09-upstream-0-1-40-4",
+  "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
   "validated": [
     "Independent checkout created; historical working tree unchanged",
@@ -24,7 +24,10 @@
     "Full PLE RAM20 buffered: five short tasks/15formal passed matching IDs; natural1K warmup+three formal produced ID0 bang loops; longer lengths stopped",
     "Independent short request after RAM failure returned4; diagnostic with DBG_NAN enabled passed full1K with matched IDs and zero nonfinite counts; root cause unproven",
     "Historical Windows output newline translation was independently explained from SSE; future writer now preserves exact UTF8 bytes",
-    "OpenVINO2026.4.1 isolated binary dependencies verified and installed; XPU FFN harness/parser fixtures prepared, no helper model performance yet"
+    "OpenVINO2026.4.1 isolated binary dependencies verified and installed; XPU FFN harness/parser fixtures prepared, no helper model performance yet",
+    "Merged upstream0.1.40.4 conflicts resolved; upstream Windows VirtualLock reused, strict complete-lock/reserve/locked-byte checks retained",
+    "Merged native Release host CTest3/3 and 13 Python modules415 tests passed (one script invocation corrected to module invocation; initial failure retained)",
+    "OpenVINO device enumeration confirms GPU.0 Arc140T and NPU AI Boost3720; synthetic NPU9static shapes compiled/inferred withoutfallback but numerical quality gate failed, precisionpolicy unknown"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -49,7 +52,8 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Preserve/push failures; integrate fetched upstream0.1.40.4 without losing strict RAM guarantees, build matched latest binaries, then isolate no-debug RAM/mmap and request history effects",
-  "completion_status": "active; all objective phases preserved",
-  "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2"
+  "next_experiment": "Build frozen clean latest upstream and integrated Hetero with matched SM89/MSVC/CUDA/ggml controls; no-debug quality first, then isolate RAM/mmap and request-order effects; actual Arc/model-vision and disk measurements still pending",
+  "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
+  "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+  "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253"
 }

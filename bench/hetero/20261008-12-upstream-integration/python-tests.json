@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-08T11:58:42.785339+00:00",
+  "branch": "codex/09-upstream-0-1-40-4",
+  "commit": "7623202a8cb54a0387b5d38b5812316303f9c256",
+  "python_executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "python_version": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "scope": "mechanical Python regression; no model/service start or hardware probes; test-local mock HTTP/socket fixtures only",
+  "suite_count": 13,
+  "test_count_total": 415,
+  "all_exit_zero": false,
+  "all_summaries_ok": false,
+  "elapsed_seconds_total": 100.789,
+  "suites": [
+    {
+      "suite": "serve.test_server",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "-v",
+        "serve.test_server"
+      ],
+      "started_utc": "2026-10-08T11:57:02.163945+00:00",
+      "ended_utc": "2026-10-08T11:58:23.901306+00:00",
+      "elapsed_seconds": 81.736,
+      "exit_code": 0,
+      "tests_reported": 267,
+      "unittest_duration_seconds": 81.308,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\01-serve_test_server.log"
+    },
+    {
+      "suite": "serve.test_mcp",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "-v",
+        "serve.test_mcp"
+      ],
+      "started_utc": "2026-10-08T11:58:23.901896+00:00",
+      "ended_utc": "2026-10-08T11:58:39.424922+00:00",
+      "elapsed_seconds": 15.523,
+      "exit_code": 0,
+      "tests_reported": 25,
+      "unittest_duration_seconds": 15.299,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\02-serve_test_mcp.log"
+    },
+    {
+      "suite": "serve.test_reasoning_loop_recovery",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "-v",
+        "serve.test_reasoning_loop_recovery"
+      ],
+      "started_utc": "2026-10-08T11:58:39.427400+00:00",
+      "ended_utc": "2026-10-08T11:58:40.302621+00:00",
+      "elapsed_seconds": 0.875,
+      "exit_code": 0,
+      "tests_reported": 16,
+      "unittest_duration_seconds": 0.69,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\03-serve_test_reasoning_loop_recovery.log"
+    },
+    {
+      "suite": "serve.test_control_cancel",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "-v",
+        "serve.test_control_cancel"
+      ],
+      "started_utc": "2026-10-08T11:58:40.302716+00:00",
+      "ended_utc": "2026-10-08T11:58:40.493591+00:00",
+      "elapsed_seconds": 0.191,
+      "exit_code": 0,
+      "tests_reported": 2,
+      "unittest_duration_seconds": 0.0,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\04-serve_test_control_cancel.log"
+    },
+    {
+      "suite": "test_hetero_admission",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_admission.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-08T11:58:40.493667+00:00",
+      "ended_utc": "2026-10-08T11:58:40.745650+00:00",
+      "elapsed_seconds": 0.252,
+      "exit_code": 0,
+      "tests_reported": 11,
+      "unittest_duration_seconds": 0.011,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\05-test_hetero_admission.log"
+    },
+    {
+      "suite": "test_hetero_bench",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_bench.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-08T11:58:40.745717+00:00",
+      "ended_utc": "2026-10-08T11:58:41.036437+00:00",
+      "elapsed_seconds": 0.291,
+      "exit_code": 0,
+      "tests_reported": 15,
+      "unittest_duration_seconds": 0.043,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\06-test_hetero_bench.log"
+    },
+    {
+      "suite": "test_hetero_compare_quality",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_compare_quality.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-08T11:58:41.036519+00:00",
+      "ended_utc": "2026-10-08T11:58:41.220966+00:00",
+      "elapsed_seconds": 0.184,
+      "exit_code": 0,
+      "tests_reported": 15,
+      "unittest_duration_seconds": 0.067,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\07-test_hetero_compare_quality.log"
+    },
+    {
+      "suite": "test_hetero_cpu_topology",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_cpu_topology.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-08T11:58:41.221036+00:00",
+      "ended_utc": "2026-10-08T11:58:41.477748+00:00",
+      "elapsed_seconds": 0.257,
+      "exit_code": 0,
+      "tests_reported": 11,
+      "unittest_duration_seconds": 0.021,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\08-test_hetero_cpu_topology.log"
+    },
+    {
+      "suite": "test_hetero_inventory",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_inventory.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-08T11:58:41.477810+00:00",
+      "ended_utc": "2026-10-08T11:58:41.713833+00:00",
+      "elapsed_seconds": 0.236,
+      "exit_code": 0,
+      "tests_reported": 6,
+      "unittest_duration_seconds": 0.007,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\09-test_hetero_inventory.log"
+    },
+    {
+      "suite": "test_hetero_prepare_cuda",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_prepare_cuda.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-08T11:58:41.713914+00:00",
+      "ended_utc": "2026-10-08T11:58:42.116468+00:00",
+      "elapsed_seconds": 0.403,
+      "exit_code": 0,
+      "tests_reported": 13,
+      "unittest_duration_seconds": 0.156,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\10-test_hetero_prepare_cuda.log"
+    },
+    {
+      "suite": "test_hetero_quality",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_quality.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-08T11:58:42.116535+00:00",
+      "ended_utc": "2026-10-08T11:58:42.252211+00:00",
+      "elapsed_seconds": 0.136,
+      "exit_code": 0,
+      "tests_reported": 9,
+      "unittest_duration_seconds": 0.014,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\11-test_hetero_quality.log"
+    },
+    {
+      "suite": "test_hetero_resources",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_resources.py",
+        "-v"
+      ],
+      "started_utc": "2026-10-08T11:58:42.252290+00:00",
+      "ended_utc": "2026-10-08T11:58:42.507351+00:00",
+      "elapsed_seconds": 0.255,
+      "exit_code": 0,
+      "tests_reported": 11,
+      "unittest_duration_seconds": 0.007,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\12-test_hetero_resources.log"
+    },
+    {
+      "suite": "test_hetero_xpu_worker",
+      "command": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "-v",
+        "tools.test_hetero_xpu_worker"
+      ],
+      "started_utc": "2026-10-08T11:59:09.790395+00:00",
+      "ended_utc": "2026-10-08T11:59:10.174261+00:00",
+      "elapsed_seconds": 0.384,
+      "exit_code": 0,
+      "tests_reported": 14,
+      "unittest_duration_seconds": 0.107,
+      "unittest_summary": "OK",
+      "failure_summary": null,
+      "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\14-test_hetero_xpu_worker-module.log",
+      "initial_attempt": {
+        "invocation": "direct script path",
+        "command": [
+          "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_xpu_worker.py",
+          "-v"
+        ],
+        "exit_code": 1,
+        "tests_reported": null,
+        "summary": "unparsed",
+        "failure_summary": "Module import failed: ModuleNotFoundError: No module named tools; unittest tests did not start. Corrected by invoking as a package module.",
+        "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\13-test_hetero_xpu_worker.log"
+      },
+      "corrected_attempt": {
+        "invocation": "python -m unittest -v tools.test_hetero_xpu_worker",
+        "command": [
+          "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+          "-m",
+          "unittest",
+          "-v",
+          "tools.test_hetero_xpu_worker"
+        ],
+        "started_utc": "2026-10-08T11:59:09.790395+00:00",
+        "ended_utc": "2026-10-08T11:59:10.174261+00:00",
+        "elapsed_seconds": 0.384,
+        "exit_code": 0,
+        "tests_reported": 14,
+        "unittest_duration_seconds": 0.107,
+        "unittest_summary": "OK",
+        "failure_summary": null,
+        "log": "E:\\Strata-Hetero-data\\logs\\upstream-merge-20261008-01\\14-test_hetero_xpu_worker-module.log"
+      }
+    }
+  ],
+  "all_required_suites_pass": true,
+  "all_invocations_exit_zero": false,
+  "invocation_attempt_count": 14,
+  "corrected_invocation_count": 1,
+  "initial_invocation_packaging_error_count": 1,
+  "overall_status": "all_required_test_modules_passed_after_correct_module_invocation; initial xpu-worker direct-path invocation did not collect tests"
+}

@@ -344,43 +344,10 @@ bool PleTable::open(const std::string& gguf_path, std::string& err, const PleIoO
             close();
             return false;
         }
-        // Warm bounded pieces concurrently before locking. A file mapping keeps the original quantized bytes;
-        // it does not allocate another table copy or charge CUDA's shared-memory mapping budget.
-        constexpr uint64_t piece = 64ull << 20;
-        constexpr uint64_t page = 4096;
-        const uint64_t pieces = (need + piece - 1) / piece;
-        std::atomic<uint64_t> next{0};
-        auto touch = [&] {
-            for (uint64_t i; (i = next.fetch_add(1)) < pieces;) {
-                const uint64_t offset = i * piece;
-                const uint64_t bytes = std::min(piece, need - offset);
-                WIN32_MEMORY_RANGE_ENTRY range{(PVOID) (impl_->data + offset), (SIZE_T) bytes};
-                (void) PrefetchVirtualMemory(GetCurrentProcess(), 1, &range, 0);
-                volatile uint8_t sink = 0;
-                for (uint64_t p = 0; p < bytes; p += page)
-                    sink = sink + *(const volatile uint8_t*) (impl_->data + offset + p);
-                (void) sink;
-            }
-        };
-        const unsigned count = std::max(1u, std::min(4u, std::thread::hardware_concurrency()));
-        std::vector<std::thread> workers;
-        try {
-            for (unsigned i = 0; i < count; ++i) workers.emplace_back(touch);
-        } catch (const std::exception& e) {
-            for (auto& worker : workers) worker.join();
-            err = std::string("PLE RAM warmup workers: ") + e.what();
-            close();
-            return false;
-        }
-        for (auto& worker : workers) worker.join();
-        // Refresh the point-in-time guard after I/O: other processes can allocate while pages are read.
-        // Warm pages can already be in this process's working set. Do not subtract the table a second time.
-        if (!GlobalMemoryStatusEx(&memory) || memory.ullAvailPhys < io.ram_reserve_bytes) {
-            err = "PLE RAM mode: physical-memory reserve changed during table warmup";
-            close();
-            return false;
-        }
-        const auto lock = strata::platform::lock_resident((void*) impl_->data, need);
+        // Upstream #61d5efa: VirtualLock faults the original mapped pages into RAM. Hetero adds a
+        // complete-lock/reserve requirement; an incomplete lock cannot be reported as full residency.
+        const strata::platform::LockResult lock =
+            strata::platform::lock_resident((void*) impl_->data, need);
         impl_->locked_bytes = lock.locked_bytes;
         if (!lock.ok || lock.locked_bytes != need) {
             err = "PLE RAM mode could not lock the complete table (" + lock.note +

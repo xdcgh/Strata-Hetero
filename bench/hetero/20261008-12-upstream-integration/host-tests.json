@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "observed_started_utc": "2026-10-08T19:55:59.8234501+08:00",
+  "observed_finished_utc": "2026-10-08T19:56:33.3512642+08:00",
+  "source_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "branch": "codex/09-upstream-0-1-40-4",
+  "commit": "7623202",
+  "build_dir": "E:\\Strata-Hetero-data\\build\\host-upstream-merge-03",
+  "configuration": "Release",
+  "generator": "Ninja",
+  "tools": {
+    "cmake_version": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+    "cmake_exit": 0,
+    "ninja_version": "1.13.2.git.kitware.jobserver-pipe-1",
+    "ninja_exit": 0,
+    "compiler": "MSVC via VS18 vcvars64.bat",
+    "ctest_version": "ctest version 4.4.3",
+    "cmake_path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "ninja_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "ctest_path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "vcvars64": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+    "compiler_version": "MSVC 19.51.36260.0"
+  },
+  "configure": {
+    "arguments": [
+      "-S",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_host",
+      "-B",
+      "E:\\Strata-Hetero-data\\build\\host-upstream-merge-03",
+      "-G",
+      "Ninja",
+      "-DCMAKE_MAKE_PROGRAM=E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DSTRATA_SOURCE_ROOT=C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero"
+    ],
+    "exit_code": 0,
+    "duration_ms": 4716.142,
+    "log": "configure.log"
+  },
+  "build": {
+    "arguments": [
+      "--build",
+      "E:\\Strata-Hetero-data\\build\\host-upstream-merge-03",
+      "--config",
+      "Release",
+      "--parallel",
+      "1"
+    ],
+    "exit_code": 0,
+    "duration_ms": 12294.317,
+    "log": "build.log"
+  },
+  "ctest": {
+    "arguments": [
+      "--test-dir",
+      "E:\\Strata-Hetero-data\\build\\host-upstream-merge-03",
+      "--output-on-failure",
+      "--parallel",
+      "1"
+    ],
+    "exit_code": 0,
+    "duration_ms": 16464.248,
+    "log": "ctest.log",
+    "tests": [
+      "ple_reader_cpu",
+      "resident_memory_cpu",
+      "storage_profile_fixture_cpu"
+    ]
+  },
+  "status": "pass"
+}

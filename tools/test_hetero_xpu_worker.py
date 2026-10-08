@@ -163,6 +163,28 @@ class HeteroXpuWorkerTests(unittest.TestCase):
         self.assertFalse(worker.device_full_name_matches("NPU", "Intel(R) Core(TM) Ultra CPU"))
         self.assertFalse(worker.device_full_name_matches("GPU.0", "NVIDIA GeForce RTX"))
 
+    def test_npu_compile_policy_omits_unadvertised_hints_and_keeps_precision_unknown(self):
+        policy = worker.compile_property_policy("NPU", "f16", set())
+        self.assertEqual(policy["requested"], {
+            "INFERENCE_PRECISION_HINT": "f16", "EXECUTION_MODE_HINT": "ACCURACY"})
+        self.assertEqual(policy["submitted"], {})
+        self.assertIn("NOT_FOUND", policy["omitted"]["EXECUTION_MODE_HINT"])
+        self.assertIn("SUPPORTED_PROPERTIES", policy["omitted"]["INFERENCE_PRECISION_HINT"])
+        self.assertFalse(worker.assess_precision_policy(None, "f16")["precision_policy_matches"])
+
+    def test_npu_submits_only_advertised_precision_hint(self):
+        policy = worker.compile_property_policy("NPU", "f16", {"INFERENCE_PRECISION_HINT"})
+        self.assertEqual(policy["submitted"], {"INFERENCE_PRECISION_HINT": "f16"})
+        self.assertIn("EXECUTION_MODE_HINT", policy["omitted"])
+
+    def test_cpu_and_gpu_still_require_both_compile_hints(self):
+        expected = {"INFERENCE_PRECISION_HINT": "f32", "EXECUTION_MODE_HINT": "ACCURACY"}
+        for device in ("CPU", "GPU.0"):
+            self.assertEqual(worker.compile_property_policy(device, "f32", set(expected)),
+                             {"requested": expected, "submitted": expected, "omitted": {}})
+            with self.assertRaisesRegex(worker.WorkerError, "required compile properties"):
+                worker.compile_property_policy(device, "f32", {"INFERENCE_PRECISION_HINT"})
+
     def test_precision_policy_unknown_and_mismatch_are_not_verified(self):
         self.assertEqual(worker.assess_precision_policy(None, "f32"),
                          {"precision_policy_status": "unknown", "precision_policy_matches": False})

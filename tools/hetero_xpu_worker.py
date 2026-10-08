@@ -147,6 +147,32 @@ def device_full_name_matches(requested_device: str, full_name: str) -> bool:
     return bool(label.strip())
 
 
+def compile_property_policy(device: str, precision: str,
+                            supported_property_names: set[str]) -> dict[str, Any]:
+    """Return requested/submitted/omitted compile hints from advertised device properties."""
+    requested = {"INFERENCE_PRECISION_HINT": precision, "EXECUTION_MODE_HINT": "ACCURACY"}
+    omitted: dict[str, str] = {}
+    submitted: dict[str, Any] = {}
+    if device == "NPU":
+        omitted["EXECUTION_MODE_HINT"] = (
+            "Omitted: the prior NPU attempt was rejected with NOT_FOUND for this option, and the device's "
+            "SUPPORTED_PROPERTIES did not advertise it."
+        )
+        if "INFERENCE_PRECISION_HINT" in supported_property_names:
+            submitted["INFERENCE_PRECISION_HINT"] = precision
+        else:
+            omitted["INFERENCE_PRECISION_HINT"] = (
+                "Omitted: NPU SUPPORTED_PROPERTIES did not advertise INFERENCE_PRECISION_HINT; reported policy "
+                "remains unknown. The F16 model/input dtype does not prove per-operation precision."
+            )
+    else:
+        missing = {name for name in requested if name not in supported_property_names}
+        if missing:
+            raise WorkerError(f"{device} does not advertise required compile properties: {sorted(missing)}")
+        submitted.update(requested)
+    return {"requested": requested, "submitted": submitted, "omitted": omitted}
+
+
 def load_verified_weights(weights_path: Path, identity: dict[str, Any],
                           header_info: dict[str, Any]) -> dict[str, np.ndarray]:
     before = weights_path.stat()
@@ -268,6 +294,12 @@ def run_bench(args: argparse.Namespace, validated: dict[str, Any]) -> dict[str, 
                 raise WorkerError(f"{args.device} resolved to an unexpected device: {full_name}")
             record["device_full_name"] = full_name
             record["openvino_version"] = ov.__version__
+            supported_properties_raw = core.get_property(args.device, properties.supported_properties)
+            if isinstance(supported_properties_raw, dict):
+                supported_property_names = {str(name) for name in supported_properties_raw}
+            else:
+                supported_property_names = {str(name) for name in supported_properties_raw}
+            record["device_supported_property_names"] = sorted(supported_property_names)
             record["seed"] = args.seed
             record["row_counts"] = list(ROW_COUNTS)
             record["warmups_per_shape"] = args.warmups
@@ -288,15 +320,23 @@ def run_bench(args: argparse.Namespace, validated: dict[str, Any]) -> dict[str, 
 
             hint = properties.hint
             requested_type = ov.Type.f32 if args.precision == "f32" else ov.Type.f16
-            compile_properties = {
-                hint.inference_precision: requested_type,
-                hint.execution_mode: hint.ExecutionMode.ACCURACY,
+            policy = compile_property_policy(args.device, args.precision, supported_property_names)
+            compile_property_keys = {
+                "INFERENCE_PRECISION_HINT": hint.inference_precision,
+                "EXECUTION_MODE_HINT": hint.execution_mode,
             }
-            record["compile_properties_requested"] = {
-                "INFERENCE_PRECISION_HINT": args.precision,
-                "EXECUTION_MODE_HINT": "ACCURACY",
-                "notes": "OpenVINO documents inference_precision as a hint; the reported property is recorded per shape and does not prove per-operation precision."
-            }
+            compile_properties = {}
+            for name, value in policy["submitted"].items():
+                compile_properties[compile_property_keys[name]] = (
+                    requested_type if name == "INFERENCE_PRECISION_HINT" else hint.ExecutionMode.ACCURACY
+                )
+            record["compile_property_policy"] = policy
+            record["compile_properties_note"] = (
+                "Submitted only device-advertised properties, except EXECUTION_MODE_HINT is explicitly omitted "
+                "for NPU because the prior attempt was rejected. An omitted inference precision hint leaves policy "
+                "unknown; F16 model/input dtype does not prove per-operation precision."
+            )
+            _atomic_update(receipt, record)
             for rows in ROW_COUNTS:
                 row_result: dict[str, Any] = {"rows": rows, "status": "compiling"}
                 record["rows"].append(row_result)
@@ -319,14 +359,21 @@ def run_bench(args: argparse.Namespace, validated: dict[str, Any]) -> dict[str, 
                     raise WorkerError(f"explicit device {args.device} compiled on {actual_device_names}; "
                                       "AUTO/HETERO/fallback execution is refused")
                 row_result["execution_devices"] = actual_device_names
-                try:
-                    actual_precision = compiled.get_property(hint.inference_precision)
-                    row_result["reported_inference_precision"] = str(actual_precision)
-                    row_result.update(assess_precision_policy(actual_precision, requested_type))
-                except Exception as exc:
+                if "INFERENCE_PRECISION_HINT" not in policy["submitted"]:
                     row_result["reported_inference_precision"] = None
-                    row_result.update(assess_precision_policy(None, requested_type, str(exc)))
-                    row_result["precision_query_error"] = f"{type(exc).__name__}: {exc}"
+                    row_result.update(assess_precision_policy(None, requested_type))
+                    row_result["precision_policy_reason"] = policy["omitted"].get(
+                        "INFERENCE_PRECISION_HINT", "No precision hint was submitted; policy is unknown."
+                    )
+                else:
+                    try:
+                        actual_precision = compiled.get_property(hint.inference_precision)
+                        row_result["reported_inference_precision"] = str(actual_precision)
+                        row_result.update(assess_precision_policy(actual_precision, requested_type))
+                    except Exception as exc:
+                        row_result["reported_inference_precision"] = None
+                        row_result.update(assess_precision_policy(None, requested_type, str(exc)))
+                        row_result["precision_query_error"] = f"{type(exc).__name__}: {exc}"
 
                 request = compiled.create_infer_request()
                 input_port, output_port = compiled.input(0), compiled.output(0)
