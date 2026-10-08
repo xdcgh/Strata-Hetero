@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "0 upstream quality passed bounded tasks; 1 RAM startup commit gate failed, matched 20 GiB retry next",
+  "phase": "1 full PLE RAM no-debug quality failed; instrumented 1K passed; latest-upstream integration next",
   "branch": "codex/30-cpu-scheduler",
   "upstream_base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -19,14 +19,20 @@
     "Four model shard SHA/size checks passed on 2026-10-08; no format conversion claim",
     "Upstream 0.1.40 32K quality: nine tasks times three formal requests passed; emitted IDs/logits not yet captured",
     "Windows full PLE table 28,800,138,240 bytes locked; ready startup failed 4 GiB commit floor before inference; safely unloaded",
-    "PSAPI system commit sampler validated live; physical RAM and system commit checked separately"
+    "PSAPI system commit sampler validated live; physical RAM and system commit checked separately",
+    "Matched upstream20 quality passed all27 formal requests with captured actual IDs; strict offline self-check passed",
+    "Full PLE RAM20 buffered: five short tasks/15formal passed matching IDs; natural1K warmup+three formal produced ID0 bang loops; longer lengths stopped",
+    "Independent short request after RAM failure returned4; diagnostic with DBG_NAN enabled passed full1K with matched IDs and zero nonfinite counts; root cause unproven",
+    "Historical Windows output newline translation was independently explained from SSE; future writer now preserves exact UTF8 bytes",
+    "OpenVINO2026.4.1 isolated binary dependencies verified and installed; XPU FFN harness/parser fixtures prepared, no helper model performance yet"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
     "E NVMe improves PLE misses and startup compared with F USB SSD",
     "Arc prefill helper may cross over only at large batches",
     "Budgeted prefill loans and file-tier working-set estimate may cause avoidable physical reads; measure loan size and physical device counters first",
-    "Repeated exclamation token may be consistent with non-finite logits or no valid argmax candidate; actual runtime logits must be checked before inferring cause"
+    "Repeated exclamation token may be consistent with non-finite logits or no valid argmax candidate; actual runtime logits must be checked before inferring cause",
+    "Debug synchronization or different request history may affect mapped-PLE batched-prefill behavior; require matched controls before attributing cause"
   ],
   "rollback_sha": "de8722991b4961ddb810f73c7c8f48ae106eef02",
   "pushed_plan_checkpoint_sha": "be9ecba3491309a8fe67721ab313477e4e96d836",
@@ -39,10 +45,11 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "Own upstream quality complete; RAM03 unloaded after commit floor failure; no model now running",
+    "gpu_state_at_quota_resume": "Diagnostic10 safely unloaded and owned processes stopped; device discovery read-only in progress",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Same 20 GiB expert budget upstream vs RAM 32K quality with physical 12 GiB and system commit 4 GiB floors",
-  "completion_status": "active; all objective phases preserved"
+  "next_experiment": "Preserve/push failures; integrate fetched upstream0.1.40.4 without losing strict RAM guarantees, build matched latest binaries, then isolate no-debug RAM/mmap and request history effects",
+  "completion_status": "active; all objective phases preserved",
+  "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2"
 }

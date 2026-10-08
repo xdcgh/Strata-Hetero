@@ -1,0 +1,10 @@
+data: {"id": "chatcmpl-7479b8db8fea4fdf9f2476da", "object": "chat.completion.chunk", "created": 1791457705, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"role": "assistant", "content": ""}, "finish_reason": null}]}
+
+: keep-alive
+
+data: {"id": "chatcmpl-7479b8db8fea4fdf9f2476da", "object": "chat.completion.chunk", "created": 1791457705, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "4"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-7479b8db8fea4fdf9f2476da", "object": "chat.completion.chunk", "created": 1791457705, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 25, "completion_tokens": 2, "total_tokens": 27, "prompt_tokens_details": {"cached_tokens": 0}}, "timings": {"cache_n": 0, "prompt_n": 25, "prompt_ms": 562.1, "prompt_per_token_ms": 22.484, "prompt_per_second": 44.5, "predicted_n": 2, "predicted_ms": 138.4, "predicted_per_token_ms": 69.2, "predicted_per_second": 14.5, "draft_n": 3, "draft_n_accepted": 2}, "strata_diagnostics": {"actual_generated_token_ids": [19, 248046], "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs", "include_stop": true}}
+
+data: [DONE]
+

@@ -1,0 +1,57 @@
+{
+  "run_id": "diag10-long1k",
+  "request_count": 1,
+  "warmup_count": 0,
+  "started_utc": "2026-10-08T11:22:41.410210+00:00",
+  "ended_utc": "2026-10-08T11:23:18.206463+00:00",
+  "request_start_monotonic_ns": 192462163545000,
+  "request_end_monotonic_ns": 192498959379400,
+  "client_e2e_s": 36.798062799993204,
+  "endpoint": "http://127.0.0.1:8081/v1/chat/completions",
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+  "prompt_file": "bench\\hetero\\20261008-01-quality\\prompts\\long_1k.prompt.txt",
+  "status": "truncated_by_length",
+  "finish_reason": "length",
+  "usage": {
+    "prompt_tokens": 1036,
+    "completion_tokens": 8,
+    "total_tokens": 1044,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 1036,
+    "prompt_ms": 36531.0,
+    "prompt_per_token_ms": 35.262,
+    "prompt_per_second": 28.4,
+    "predicted_n": 8,
+    "predicted_ms": 238.6,
+    "predicted_per_token_ms": 29.825,
+    "predicted_per_second": 33.5,
+    "draft_n": 6,
+    "draft_n_accepted": 6
+  },
+  "first_generated_s_includes_reasoning": 36.59012340000481,
+  "first_visible_content_s": 36.59012340000481,
+  "visible_text_sha256": "885e52bd413c014377c854a28dd948a754314372628da4d722238e87ff5feeaa",
+  "visible_text_chars": 14,
+  "reasoning_chars": 0,
+  "strata_diagnostics_event_count": 1,
+  "actual_generated_token_ids": [
+    90,
+    198,
+    220,
+    328,
+    10473,
+    6334,
+    12,
+    16
+  ],
+  "actual_id_count": 8,
+  "actual_id_count_matches_usage": true,
+  "actual_id_sha256": "b36f8c9fb2bdd3328c2271e26a45aa2a3a9829623b04d2e0d0119ec57d2b1b57",
+  "api_error": null,
+  "client_error": null
+}

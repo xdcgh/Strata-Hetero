@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-08T11:25:22.873778+00:00",
+  "classification": "three-sequential-diagnostic-streams-plus-one-full-cap-long-context-probe; not a performance benchmark",
+  "request_count": 4,
+  "warmup_count": 0,
+  "strict_order": [
+    "short arithmetic before",
+    "full 1K natural prompt with max_tokens=8",
+    "short arithmetic after"
+  ],
+  "engine_identity": {
+    "version": "0.1.40",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\strata.exe",
+    "sha256": "963609ef0718325b015373d77867c1ec1b0629948bc67cb82d6149e2dbb60d33"
+  },
+  "debug_scan": {
+    "env": "STRATA_DBG_NAN=1",
+    "scanner_source": "src/prefill/prefill.cpp:3302; bad() increments c only when !std::isfinite(v), and the log prints c followed by the words non-finite",
+    "files_scanned": [
+      "logs/engine.log",
+      "logs/server.stdout.log",
+      "logs/server.stderr.log"
+    ],
+    "records": [
+      {
+        "path": "logs/engine.log",
+        "line_number": 55,
+        "record": "strata dbg: prompt end: last residual row 0 non-finite (max |x| 4.88); PLE history 0 non-finite (max |x| 13); GDN state 0 0 non-finite (max |x| 1.87)",
+        "associated_request": "diag10-long1k-cap8",
+        "following_prompt_summary": "strata serve: prompt 1036 tokens = 0 reused + 1036 read in 36531 ms (28.4 tok/s), 8 generated in 239 ms (33.5 tok/s), drafts accepted 6 of 6, 0 checkpoints"
+      },
+      {
+        "path": "logs/engine.log",
+        "line_number": 64,
+        "record": "strata dbg: prompt end: last residual row 0 non-finite (max |x| 4.88); PLE history 0 non-finite (max |x| 13); GDN state 0 0 non-finite (max |x| 1.87)",
+        "associated_request": "diag10-long1k-cap128",
+        "following_prompt_summary": "strata serve: prompt 1036 tokens = 0 reused + 1036 read in 7811 ms (132.6 tok/s), 84 generated in 3650 ms (23.0 tok/s), drafts accepted 63 of 72, 0 checkpoints"
+      }
+    ],
+    "record_count": 2,
+    "reported_nonfinite_counts": {
+      "last_residual_row_0": 0,
+      "ple_history_row_0": 0,
+      "gdn_state_0_0": 0
+    },
+    "first_nonfinite_not_observed": true,
+    "finite_max_abs_values": {
+      "last_residual_row_0": 4.88,
+      "ple_history_row_0": 13.0,
+      "gdn_state_0_0": 1.87
+    },
+    "position_scope": "prompt-end scan after input count 1036; no transformer-layer index or finer token position is logged",
+    "interpretation": "Both debug records print zero non-finite counts; no NaN/non-finite state was observed by this scan. Max |x| values refer to finite elements. This does not prove or disprove the cause of the earlier ! degeneration."
+  },
+  "long_request_interpretation": {
+    "finish_reason": "length",
+    "retrieval_result": "not assessed; the 8-token cap stopped inside the first JSON key",
+    "bang_loop_observed_in_the_8_token_probe": false,
+    "debug_scan_nonfinite_count": 0,
+    "prior_long_output_causality": "not established"
+  },
+  "observer_effect": {
+    "debug_enabled": true,
+    "paired_debug_off_diagnostic": false,
+    "effect_on_runtime_or_model_behavior": "unmeasured; the additional cap128 result passed with debug enabled"
+  },
+  "post_failure_short_probe": {
+    "task": "smoke_arithmetic",
+    "exact_expected_output": "4",
+    "exact_match": true,
+    "classification": "pass"
+  },
+  "resources": {
+    "sampler": "resource/samples.jsonl",
+    "commit_source": "PSAPI GetPerformanceInfo via sampler",
+    "commit_gate_gib": 4,
+    "disk_scope": "system-wide only"
+  },
+  "probes": [
+    {
+      "run_id": "diag10-arithmetic-before",
+      "started_utc": "2026-10-08T11:22:12.397913+00:00",
+      "ended_utc": "2026-10-08T11:22:18.818663+00:00",
+      "prompt_file": "bench/hetero/20261008-01-quality/prompts/smoke_arithmetic.prompt.txt",
+      "prompt_tokens": 27,
+      "max_tokens": 8,
+      "status": "completed",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 27,
+        "completion_tokens": 2,
+        "total_tokens": 29,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 4251.3,
+        "prompt_per_token_ms": 157.456,
+        "prompt_per_second": 6.4,
+        "predicted_n": 2,
+        "predicted_ms": 2147.7,
+        "predicted_per_token_ms": 1073.85,
+        "predicted_per_second": 0.9,
+        "draft_n": 3,
+        "draft_n_accepted": 3
+      },
+      "visible_output_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "visible_text": "4",
+      "actual_generated_token_ids": [
+        19,
+        248046
+      ],
+      "actual_id_count": 2,
+      "actual_id_count_matches_usage": true,
+      "actual_id_sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+      "strata_diagnostics_event_count": 1,
+      "response_sse_path": "bench\\hetero\\20261008-10-ram20-diagnostic\\requests\\diag10-arithmetic-before\\response.sse.txt",
+      "response_events_path": "bench\\hetero\\20261008-10-ram20-diagnostic\\requests\\diag10-arithmetic-before\\response.events.json",
+      "resource_window": {
+        "sample_count": 7,
+        "sample_first_utc": "2026-10-08T11:22:12.435Z",
+        "sample_last_utc": "2026-10-08T11:22:18.435Z",
+        "all_ram_gates_pass": true,
+        "minimum_commit_gib": 8.276409149169922,
+        "commit_gate_threshold_gib": 4.0,
+        "all_commit_gates_pass": true,
+        "alerts": 0,
+        "errors": 0
+      },
+      "quality": {
+        "task": "smoke_arithmetic",
+        "exact_expected_output": "4",
+        "exact_match": true,
+        "classification": "pass"
+      }
+    },
+    {
+      "run_id": "diag10-long1k",
+      "started_utc": "2026-10-08T11:22:41.410210+00:00",
+      "ended_utc": "2026-10-08T11:23:18.206463+00:00",
+      "prompt_file": "bench/hetero/20261008-01-quality/prompts/long_1k.prompt.txt",
+      "prompt_tokens": 1036,
+      "max_tokens": 8,
+      "status": "truncated_by_length",
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 1036,
+        "completion_tokens": 8,
+        "total_tokens": 1044,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 1036,
+        "prompt_ms": 36531.0,
+        "prompt_per_token_ms": 35.262,
+        "prompt_per_second": 28.4,
+        "predicted_n": 8,
+        "predicted_ms": 238.6,
+        "predicted_per_token_ms": 29.825,
+        "predicted_per_second": 33.5,
+        "draft_n": 6,
+        "draft_n_accepted": 6
+      },
+      "visible_output_sha256": "885e52bd413c014377c854a28dd948a754314372628da4d722238e87ff5feeaa",
+      "visible_text": "{\n  \"ARCHIVE-1",
+      "actual_generated_token_ids": [
+        90,
+        198,
+        220,
+        328,
+        10473,
+        6334,
+        12,
+        16
+      ],
+      "actual_id_count": 8,
+      "actual_id_count_matches_usage": true,
+      "actual_id_sha256": "b36f8c9fb2bdd3328c2271e26a45aa2a3a9829623b04d2e0d0119ec57d2b1b57",
+      "strata_diagnostics_event_count": 1,
+      "response_sse_path": "bench\\hetero\\20261008-10-ram20-diagnostic\\requests\\diag10-long1k\\response.sse.txt",
+      "response_events_path": "bench\\hetero\\20261008-10-ram20-diagnostic\\requests\\diag10-long1k\\response.events.json",
+      "resource_window": {
+        "sample_count": 37,
+        "sample_first_utc": "2026-10-08T11:22:41.435Z",
+        "sample_last_utc": "2026-10-08T11:23:17.435Z",
+        "all_ram_gates_pass": true,
+        "minimum_commit_gib": 7.801898956298828,
+        "commit_gate_threshold_gib": 4.0,
+        "all_commit_gates_pass": true,
+        "alerts": 0,
+        "errors": 0
+      },
+      "quality": {
+        "task": "long_1k_three_key_retrieval",
+        "classification": "not_assessed_output_cap",
+        "retrieval_assessed": false,
+        "finish_reason": "length",
+        "visible_prefix": "{\n  \"ARCHIVE-1",
+        "visible_content_is_only_bang_loop": false,
+        "note": "The 8-token cap ended mid-JSON after a key prefix; this does not measure full retrieval or reproduce the ! loop."
+      }
+    },
+    {
+      "run_id": "diag10-arithmetic-after",
+      "started_utc": "2026-10-08T11:24:36.231174+00:00",
+      "ended_utc": "2026-10-08T11:24:37.050167+00:00",
+      "prompt_file": "bench/hetero/20261008-01-quality/prompts/smoke_arithmetic.prompt.txt",
+      "prompt_tokens": 27,
+      "max_tokens": 8,
+      "status": "completed",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 27,
+        "completion_tokens": 2,
+        "total_tokens": 29,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 622.3,
+        "prompt_per_token_ms": 23.048,
+        "prompt_per_second": 43.4,
+        "predicted_n": 2,
+        "predicted_ms": 183.5,
+        "predicted_per_token_ms": 91.75,
+        "predicted_per_second": 10.9,
+        "draft_n": 3,
+        "draft_n_accepted": 3
+      },
+      "visible_output_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "visible_text": "4",
+      "actual_generated_token_ids": [
+        19,
+        248046
+      ],
+      "actual_id_count": 2,
+      "actual_id_count_matches_usage": true,
+      "actual_id_sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+      "strata_diagnostics_event_count": 1,
+      "response_sse_path": "bench\\hetero\\20261008-10-ram20-diagnostic\\requests\\diag10-arithmetic-after\\response.sse.txt",
+      "response_events_path": "bench\\hetero\\20261008-10-ram20-diagnostic\\requests\\diag10-arithmetic-after\\response.events.json",
+      "resource_window": {
+        "sample_count": 1,
+        "sample_first_utc": "2026-10-08T11:24:36.437Z",
+        "sample_last_utc": "2026-10-08T11:24:36.437Z",
+        "all_ram_gates_pass": true,
+        "minimum_commit_gib": 8.032157897949219,
+        "commit_gate_threshold_gib": 4.0,
+        "all_commit_gates_pass": true,
+        "alerts": 0,
+        "errors": 0
+      },
+      "quality": {
+        "task": "smoke_arithmetic",
+        "exact_expected_output": "4",
+        "exact_match": true,
+        "classification": "pass"
+      }
+    }
+  ],
+  "initial_long_request": {
+    "request_id": "diag10-long1k",
+    "max_output_tokens": 8,
+    "finish_reason": "length",
+    "usage_completion_tokens": 8,
+    "visible_text": "{\n \"ARCHIVE-1",
+    "visible_text_sha256": "885e52bd413c014377c854a28dd948a754314372628da4d722238e87ff5feeaa",
+    "actual_id_count": 8,
+    "actual_id_count_matches_usage": true,
+    "classification": "output-cap stop; partial JSON; retrieval not assessed; no ! loop in this short prefix"
+  },
+  "original_three_request_sequence": [
+    "diag10-arithmetic-before",
+    "diag10-long1k",
+    "diag10-arithmetic-after"
+  ],
+  "additional_request": "diag10-long1k-cap128",
+  "additional_full_cap128_request": {
+    "request_id": "diag10-long1k-cap128",
+    "max_output_tokens": 128,
+    "status": "completed",
+    "finish_reason": "stop",
+    "usage_prompt_tokens": 1036,
+    "usage_completion_tokens": 84,
+    "quality_status": "pass",
+    "retrieval_status": "all_exact",
+    "exact_values_found": {
+      "ARCHIVE-1CA3B1799D": true,
+      "ARCHIVE-46BDD640FB": true,
+      "ARCHIVE-23392456DE": true
+    },
+    "actual_id_count": 84,
+    "actual_id_count_matches_usage": true,
+    "actual_id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+    "actual_ids_equal_upstream20_formal0": true,
+    "response_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+    "resource_window_file": "requests/diag10-long1k-cap128/resource-window.json",
+    "note": "This diagnostic cap=128 returned a complete correct JSON retrieval. Its actual ID sequence is compared against upstream20 formal-0 in the verification below.",
+    "actual_generated_token_ids": [
+      90,
+      198,
+      220,
+      328,
+      10473,
+      6334,
+      12,
+      16,
+      4887,
+      18,
+      33,
+      16,
+      22,
+      24,
+      24,
+      35,
+      763,
+      328,
+      16,
+      17,
+      21,
+      23,
+      20,
+      20,
+      15,
+      24,
+      17,
+      487,
+      198,
+      220,
+      328,
+      10473,
+      6334,
+      12,
+      19,
+      21,
+      33,
+      3967,
+      21,
+      19,
+      15,
+      15731,
+      763,
+      328,
+      18,
+      21,
+      17,
+      24,
+      20,
+      15,
+      21,
+      17,
+      23,
+      487,
+      198,
+      220,
+      328,
+      10473,
+      6334,
+      12,
+      17,
+      18,
+      18,
+      24,
+      17,
+      19,
+      20,
+      21,
+      1113,
+      763,
+      328,
+      23,
+      24,
+      15,
+      22,
+      22,
+      24,
+      24,
+      19,
+      21,
+      1,
+      198,
+      92,
+      248046
+    ],
+    "actual_id_count_equal_upstream20_formal0": true,
+    "response_text_equal_upstream20_formal0": true,
+    "completion_tokens_equal_upstream20_formal0": true,
+    "upstream20_actual_id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+  }
+}

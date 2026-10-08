@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "tool": "hetero-compare-quality",
+  "offline_only": true,
+  "status": "incomplete",
+  "accepted": false,
+  "errors": [
+    "comparison failed: EvidenceError: run selector '05' on manifest date matched 0 directories"
+  ]
+}

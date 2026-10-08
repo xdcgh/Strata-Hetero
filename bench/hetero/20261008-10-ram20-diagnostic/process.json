@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "launcher_pid": 30004,
+  "start_utc": "2026-10-08T11:15:18.2819961Z",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-u",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py",
+    "--engine",
+    "strata",
+    "--config",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-10-ram20-diagnostic\\config.json",
+    "--port",
+    "8081"
+  ],
+  "config": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-10-ram20-diagnostic\\config.json",
+  "run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-10-ram20-diagnostic",
+  "role": "owned RAM20 NaN diagnostic"
+}

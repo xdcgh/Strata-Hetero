@@ -1,0 +1,50 @@
+{
+  "run_id": "diag10-arithmetic-before",
+  "request_count": 1,
+  "warmup_count": 0,
+  "started_utc": "2026-10-08T11:22:12.397913+00:00",
+  "ended_utc": "2026-10-08T11:22:18.818663+00:00",
+  "request_start_monotonic_ns": 192433151565900,
+  "request_end_monotonic_ns": 192439572234000,
+  "client_e2e_s": 6.422632000001613,
+  "endpoint": "http://127.0.0.1:8081/v1/chat/completions",
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+  "status": "completed",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 27,
+    "completion_tokens": 2,
+    "total_tokens": 29,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 27,
+    "prompt_ms": 4251.3,
+    "prompt_per_token_ms": 157.456,
+    "prompt_per_second": 6.4,
+    "predicted_n": 2,
+    "predicted_ms": 2147.7,
+    "predicted_per_token_ms": 1073.85,
+    "predicted_per_second": 0.9,
+    "draft_n": 3,
+    "draft_n_accepted": 3
+  },
+  "first_generated_s_includes_reasoning": 4.383526500023436,
+  "first_visible_content_s": 4.383526500023436,
+  "visible_text_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+  "visible_text_chars": 1,
+  "reasoning_chars": 0,
+  "strata_diagnostics_event_count": 1,
+  "actual_generated_token_ids": [
+    19,
+    248046
+  ],
+  "actual_id_count": 2,
+  "actual_id_count_matches_usage": true,
+  "actual_id_sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+  "api_error": null,
+  "client_error": null
+}

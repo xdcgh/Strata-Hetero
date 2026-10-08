@@ -246,10 +246,11 @@ def request_once(base: str, prompt: str, a: argparse.Namespace, run_dir: Path, l
     stem = f"{label}-{index:04d}"
     content = record.pop("content", "")
     reasoning = record.pop("reasoning", "")
-    (run_dir / f"{stem}.text.txt").write_text(content, encoding="utf-8")
-    (run_dir / f"{stem}.reasoning.txt").write_text(reasoning, encoding="utf-8")
+    (run_dir / f"{stem}.text.txt").write_bytes(content.encode("utf-8"))
+    (run_dir / f"{stem}.reasoning.txt").write_bytes(reasoning.encode("utf-8"))
     record["content_sha256"] = hashlib.sha256(content.encode("utf-8")).hexdigest()
     record["reasoning_sha256"] = hashlib.sha256(reasoning.encode("utf-8")).hexdigest()
+    record["output_artifact_encoding"] = "utf-8 bytes without newline translation"
     record["content_chars"] = len(content)
     record["reasoning_chars"] = len(reasoning)
     raw_events = record.pop("events", [])
@@ -409,6 +410,9 @@ def main(argv: list[str] | None = None) -> int:
                 "identity": identity, "identity_verification": "provided_unverified" if identity_supplied else "unverified",
                 "live_identity": live, "identity_comparison": identity_check,
                 "acceptance_status": "not_accepted_pending_quality"}
+    metadata["artifact_writer"] = {"client_os_name": os.name,
+                                   "text_encoding": "utf-8 bytes without newline translation",
+                                   "content_sha256_scope": "exact stored model-output bytes"}
     (run_dir / "metadata.json").write_text(json.dumps(metadata, indent=2, ensure_ascii=False), encoding="utf-8")
     if identity_check["status"] == "mismatch":
         receipt = {"status": "identity_mismatch_preflight_failed", "benchmark_started": False,

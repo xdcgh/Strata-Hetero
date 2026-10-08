@@ -1,0 +1,10 @@
+{
+  "prompt_id": "smoke_arithmetic",
+  "run_status": "completed",
+  "response_bytes_utf8": 1,
+  "canonical_visible_text_reencoded_tokens": null,
+  "actual_emitted_token_ids": null,
+  "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+  "quality_status": "pass",
+  "exact_match": true
+}

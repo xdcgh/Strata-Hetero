@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "audit": {
+    "base_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+    "upstream_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+    "local_head_sha": "1cd62b0089ab5777c318d9e28e7fefbe92410d83",
+    "method": "read-only git log/show/grep inspection; no build, model, OpenVINO Core, device query, or benchmark",
+    "result_scope": "source and commit facts only; findings do not attribute the active 2026-10-08 prefill anomaly"
+  },
+  "findings": [
+    {
+      "topic": "Windows PLE RAM and local strict reserve gate",
+      "upstream_commit": "61d5efab4550c53596cfaf01495ede717d67c87d",
+      "upstream_behavior": "Adds Windows VirtualLock through strata::platform::lock_resident. A complete lock sets locked(); a failed or partial lock is undone, warned about, then the table is merely touched and startup continues. The only RAM warning is when table bytes exceed half of total physical RAM; there is no reserve argument or free-RAM admission gate.",
+      "local_commit": "f42160e",
+      "local_behavior": "Adds PleIoOptions.ram_reserve_bytes (12 GiB default), locked_bytes(), and --ple-ram-reserve-gib (4..1024 GiB). Windows checks available physical RAM for table+reserve before warmup, refreshes after the chunked prefetch/touch and after VirtualLock, and fails closed unless the complete requested byte count is locked and the reserve remains. This is materially stricter than upstream's warning-and-pageable fallback; preserve it when integrating.",
+      "upstream_source": [
+        {"file": "src/kernels/ngram.cpp", "symbols": ["PleTable::open", "PleTable::close"], "lines": "330-351"},
+        {"file": "src/platform/memory.cpp", "symbols": ["lock_resident", "unlock_resident"], "lines": "23-64"},
+        {"file": "src/program/generate.cpp", "symbols": ["--ple-io parsing", "pio.lock", "startup report"], "lines": "2783-2818"}
+      ],
+      "local_source": [
+        {"file": "src/kernels/ngram.cpp", "symbols": ["PleIoOptions RAM gate", "complete VirtualLock check", "locked_bytes"], "lines": "330-392, 467-489"},
+        {"file": "src/program/generate.cpp", "symbols": ["--ple-ram-reserve-gib", "pio.ram_reserve_bytes"], "lines": "1592-1599, 2734, 2767"},
+        {"file": "include/strata/kernels/ngram.hpp", "symbols": ["PleIoOptions::ram_reserve_bytes", "PleTable::locked_bytes"], "lines": "156-161, 201-204"}
+      ]
+    },
+    {
+      "topic": "PLE mmap gather during batched prefill",
+      "upstream_commits": ["a34078a", "61d5efa"],
+      "finding": "The prompt path batches PLE lookup through gather_batch. Direct mode submits the whole batch as one reader request. Mmap mode still loops through every row with read_row; unlike the per-token Windows gather path, this batch branch does not issue a batched PrefetchVirtualMemory hint. No later commit in 82f46a8..6674a00 changes that branch. With --ple-io ram, a successful complete lock removes page-fault I/O after startup; with --ple-io mmap, scattered mapped misses may remain serialized. This is a latency observation, not evidence of wrong values.",
+      "source": [
+        {"file": "src/prefill/prefill.cpp", "symbols": ["ple_gather", "gather_batch", "next-chunk overlap"], "lines": "1833-1844, 1912-1917, 1941-1942"},
+        {"file": "src/kernels/ngram.cpp", "symbols": ["PleTable::gather_batch", "Mmap read_row loop", "per-token Windows PrefetchVirtualMemory"], "lines": "507-548, 409-419, 477-488, 588-609"}
+      ]
+    },
+    {
+      "topic": "resident expert complement, RAM pressure, and file tier",
+      "upstream_commits": ["5738d38", "805088d", "aa659c9"],
+      "finding": "5738d38 adds Linux-only paced page acquisition/registration for a pinned resident complement: release the engine's own file cache when needed, allocate/touch in 1 GiB steps subject to a reserve, register a whole-expert-aligned prefix, and retain the remainder pageable. The guard and MemFree/MADV_DONTNEED path are under __linux__; it does not add this paced method to Windows. Windows keeps the earlier working-set trim before available-memory/commit budgeting, then attempts one cudaHostAlloc for the full complement; on refusal it falls back to pageable allocation and lock_resident. 805088d and aa659c9 add Linux file-tier decisions and optional read-ahead/statistics; STRATA_IO_PREFETCH is Linux mapped-file-only. Do not assume these are Windows fixes.",
+      "source": [
+        {"file": "src/core/expert_source.cpp", "symbols": ["FileExpertSource::pin_cache_complement", "SetProcessWorkingSetSize", "Linux pin pacing", "cudaHostAlloc fallback", "lock_resident"], "lines": "2038-2208, 2232-2268, 2290-2422"},
+        {"file": "src/program/generate.cpp", "symbols": ["resident complement plan", "soft budget retry", "resident status"], "lines": "5947-6055"},
+        {"file": "src/program/generate.cpp", "symbols": ["STRATA_IO_PREFETCH platform gating"], "lines": "4073-4085"}
+      ],
+      "reuse_priority": "High for understanding RAM/page-cache pressure and the Linux algorithm; not a drop-in Windows reserve implementation. The resident ArenaExpertSource and default selection were already present at base 82f46a8, so they are not a new delta in this audit."
+    },
+    {
+      "topic": "cache loans and cache/resident ownership restoration",
+      "upstream_commits": ["5738d38", "e155cf8", "09e5ab4"],
+      "finding": "The prompt path lends each participating GPU cache's tail slots, refills the same slots from the same source, and uploads the residency table before decode; multi-stage refills issue per stage before waits unless serial mode is selected. Resident complement planning may keep lent experts in RAM; it warns if a large prompt's lent experts do not all fit. Adaptive RAM exchanges update the resident ownership table only at commit, after the GPU swap completion event. The inspected code has explicit error paths; this source audit found no later patch specifically identified as a stale-cache/NaN repair for the active run.",
+      "source": [
+        {"file": "src/program/generate.cpp", "symbols": ["refill_one", "refill", "lend", "prompt completion refill"], "lines": "9408-9435, 9690-9734"},
+        {"file": "src/program/generate.cpp", "symbols": ["resident complement loan planning", "large-chunk warning"], "lines": "5947-6026"},
+        {"file": "src/program/generate.cpp", "symbols": ["apply_pending", "commit_exchanges", "residency upload"], "lines": "7243-7268"},
+        {"file": "src/core/expert_source.cpp", "symbols": ["commit_exchanges", "commit_copies", "commit_flip"], "lines": "2670-2730"}
+      ]
+    },
+    {
+      "topic": "CPU-share prefill and NaN/copy race fixes",
+      "upstream_commits": ["978d355", "667f2ec", "4322e24", "f1ed65b"],
+      "finding": "978d355 introduces opt-in STRATA_PREFILL_CPU_SHARE for eligible small native prefill chunks: low-routed experts can run on the otherwise idle decode CPU pool. The commit documents that CPU activation quantization can make results differ from GPU rows. 667f2ec fixes a real source-thread race by resolving CPU expert blob pointers on the prefill thread with blob_stable before launching the CPU worker; the worker then only reads immutable pointers/activations/grouping. 4322e24 fixes STRATA_DBG_NAN false positives: GPU debug checks must exclude the CPU-owned GU/H rows that the GPU does not write. That diagnostic fix does not claim the actual layer output was NaN. The current 07 run's source/config must be checked before linking its anomaly to this opt-in feature.",
+      "source": [
+        {"file": "src/prefill/prefill.cpp", "symbols": ["cpu_share_env", "CPU expert selection", "cpu_blob prefetch before async", "pool job", "CPU-row copy", "STRATA_DBG_NAN gpu_rows"], "lines": "143-160, 2740-2762, 2859-2888, 3348-3361, 3388-3391"},
+        {"file": "include/strata/prefill/prefill.hpp", "symbols": ["set_cpu_pool", "PrefillStats::experts_cpu"], "lines": "35-44, 165-173"}
+      ],
+      "reuse_priority": "High only if CPU-share is intentionally enabled; inspect its opt-in env and eligibility. The blob race fix is directly relevant to copied expert sources, but it is not evidence that the current RAM07 arm enabled or hit it."
+    },
+    {
+      "topic": "streamed K8V4 host-copy corruption fix",
+      "upstream_commit": "35435e3d26809167ba32e2e00c53f2ae20d36460",
+      "finding": "This is a concrete stale-host-copy correctness repair, separate from the CPU-share fixes. Batched verify-window append previously passed nullptr for K8V4's host K/V halves; if cells were not resident when appended, restoring that block read a host copy missing the just-written cells, causing lost generated turns and repetition. The batched path now passes kv_hybrid_k_half/v_half when a host mirror exists. Relevance depends on whether the active run uses streamed/resident K8V4; do not infer that from source presence alone.",
+      "source": [
+        {"file": "src/core/verify.cpp", "symbols": ["Verifier::record_window", "kv_hybrid_k_half", "kv_hybrid_v_half", "kv_append_q8_steps", "kv_append_q4_steps"], "lines": "1091-1102"}
+      ]
+    },
+    {
+      "topic": "Intel Arc / NPU capability",
+      "upstream_commits": ["23a38a0", "55c3178", "0130159", "c454a4b", "d5ea713"],
+      "finding": "The added Intel hardware path is Strata's SYCL engine port, primarily documented/tested on Linux Arc Xe/i915 devices. Docs/INTEL.md describes the port; docs/INTEL_ARC.md explicitly says Windows has no native build path. Arc A-series got a constrained setup config (no stream-experts, --ple-io ram, small reserve, host-path settings); additional commits fix Arc driver/queue/allocation issues. Word-boundary search of engine/source/build files found no OpenVINO or NPU backend integration. This is not AI Boost/NPU support.",
+      "source": [
+        {"file": "docs/INTEL.md", "symbols": ["SYCL engine description", "Arc A-series configuration", "port status"], "lines": "1-5, 60-73, 154-191, 678-720"},
+        {"file": "docs/INTEL_ARC.md", "symbols": ["supported scope and untested Windows note", "SYCL build"], "lines": "1-9, 41-52, 107-135"}
+      ]
+    },
+    {
+      "topic": "long context and conversation storage delta",
+      "upstream_commits": ["56ae98d", "13d14a4"],
+      "finding": "56ae98d adds opt-in STRATA_KV_GROW_HOLD=1 to keep K/V allocation sized for the longest parked conversation rather than trimming to the active request; it trades VRAM headroom for less grow/trim churn. 13d14a4 adds opt-in pinned shared-prefix reuse (strata_prefix pin=N) for sibling suffix queries. Existing conversation snapshot save/restore functions are present, but their source files were not changed in this range. These features do not establish correctness at a long prefill length by themselves.",
+      "source": [
+        {"file": "src/program/generate.cpp", "symbols": ["STRATA_KV_GROW_HOLD", "request pin parsing", "pin_checkpoint"], "lines": "9121-9130, 8741-8759, 9659-9677"},
+        {"file": "include/strata/core/conversation_snapshot.hpp", "symbols": ["conversation_checkpoint_save/restore API"], "lines": "57-61"},
+        {"file": "src/core/conversation_state.cpp", "symbols": ["conversation_checkpoint_validate/save/restore"], "lines": "142-180"}
+      ]
+    }
+  ],
+  "negative_findings": [
+    "No upstream commit in this range changes the Windows RAM PLE path to require the local strict available-RAM reserve and a complete locked-byte receipt.",
+    "No later commit in this range adds batch PrefetchVirtualMemory to PleTable::gather_batch's Mmap branch.",
+    "No source evidence from this audit directly explains repeated 128-token prefill output on the currently running RAM07 arm; no run artifacts were inspected for that diagnosis."
+  ]
+}

@@ -392,11 +392,11 @@ def evaluate_text(prompt: dict[str, Any], text: str, run_status: str = "complete
                                                            if tokenizer is not None and run_status == "completed" else None),
               "actual_emitted_token_ids": None,
               "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs"}
-    if run_status != "completed":
-        return {**common, "quality_status": "not_assessed_incomplete_run", "generation_stability": "not_assessed"}
     if _has_bang_loop(text):
         return {**common, "quality_status": "generation_degenerate_bang_loop",
                 "generation_stability": "fail_single_character_bang_loop"}
+    if run_status != "completed":
+        return {**common, "quality_status": "not_assessed_incomplete_run", "generation_stability": "not_assessed"}
     expected = prompt.get("quality", {})
     kind = expected.get("kind")
     if kind == "exact_text":

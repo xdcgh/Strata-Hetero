@@ -1,0 +1,70 @@
+{
+  "started_utc": "2026-10-08T11:08:25.295583+00:00",
+  "prompt": "What is 2+2? Reply with only the number.",
+  "text": "4",
+  "final": {
+    "id": "chatcmpl-7479b8db8fea4fdf9f2476da",
+    "object": "chat.completion.chunk",
+    "created": 1791457705,
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {},
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 25,
+      "completion_tokens": 2,
+      "total_tokens": 27,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 25,
+      "prompt_ms": 562.1,
+      "prompt_per_token_ms": 22.484,
+      "prompt_per_second": 44.5,
+      "predicted_n": 2,
+      "predicted_ms": 138.4,
+      "predicted_per_token_ms": 69.2,
+      "predicted_per_second": 14.5,
+      "draft_n": 3,
+      "draft_n_accepted": 2
+    },
+    "strata_diagnostics": {
+      "actual_generated_token_ids": [
+        19,
+        248046
+      ],
+      "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+      "include_stop": true
+    }
+  },
+  "memory_before": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 38117789696,
+    "physical_used_bytes": 98845458432,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 135803543552,
+    "commit_available_bytes": 9749639168,
+    "commit_total_pages": 33155162,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 9749639168,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null,
+    "errors": []
+  },
+  "purpose": "short independent probe after long_1k degeneration; not performance sample"
+}

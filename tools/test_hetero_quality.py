@@ -69,6 +69,9 @@ class HeteroQualityTests(unittest.TestCase):
     def test_truncation_bang_loop_and_exact_text_statuses(self):
         p = {"id": "a", "quality": {"kind": "exact_text", "expected": "4"}}
         self.assertEqual(quality.evaluate_text(p, "!" * 128)["generation_stability"], "fail_single_character_bang_loop")
+        capped_loop = quality.evaluate_text(p, "!" * 128, run_status="truncated_by_length")
+        self.assertEqual(capped_loop["quality_status"], "generation_degenerate_bang_loop")
+        self.assertEqual(capped_loop["generation_stability"], "fail_single_character_bang_loop")
         self.assertEqual(quality.evaluate_text(p, "4", run_status="truncated_by_length")["quality_status"],
                          "not_assessed_incomplete_run")
         self.assertEqual(quality.evaluate_text(p, "4")["quality_status"], "pass")

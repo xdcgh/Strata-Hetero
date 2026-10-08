@@ -28,6 +28,12 @@ This verifies those task outputs, not logits or emitted-token agreement: the ini
 
 Quality runs can now set `hetero_capture_token_ids: true` in the server config. OpenAI SSE's final chunk then records the integer IDs actually yielded by the engine, including emitted stop/EOS tokens and excluding server-inserted wrap/forced-opening tokens. Heartbeats are excluded. This captures accepted output observed by the server, not speculative proposals that were discarded. The option defaults off and applies only to streamed OpenAI requests. Quality arms use it in both runs; performance acceptance uses a separately declared configuration. It does not capture logits.
 
+The subsequent `20261008-05-upstream20-quality` run also passed all 27 formal tasks and captured their actual generated IDs. `20261008-07-ram20-buffered-quality` matched its short-task IDs but failed natural 1K retrieval with a single-token exclamation loop. Its later lengths were not run. Debug-instrumented diagnostic10 subsequently passed that retrieval; zero non-finite counts and one instrumented success do not prove the uninstrumented configuration stable. No RAM speedup is accepted.
+
+Early Windows client artifacts used `Path.write_text` with automatic newline translation: model text hashes describe logical UTF8, while saved multiline text has Windows CRLF. Original artifacts remain intact, and per-file supplemental writer receipts verify that exact transformation. New client output files use UTF8 bytes without translation. The offline comparator separates model-text hashes from artifact hashes and requires proof for any historical conversion.
+
+Upstream was fetched again on 2026-10-08 and is now `6674a00` (v0.1.40.4), 267 commits beyond the frozen `82f46a8` engine used above. These are frozen-reference measurements, not validation of the latest upstream. Integration and a fresh latest-upstream baseline are pending; the new upstream Windows PLE implementation will be reused while retaining the stricter Hetero reserve/complete-lock checks.
+
 ## Run contract
 
 Store `hardware_manifest.json`, `storage_profile.json`, `baseline.json`, `results.json`, `results.csv`, `resource/`, `logs/`, `comparison.md` and `DECISIONS.md` under `bench/hetero/<run>/`. When an item is not measured, record its status and reason, not a zero value. Keep raw model outputs and engine/client times. Timed-out, truncated, cache-contaminated or admission-failed samples stay in the evidence and are excluded from accepted speedups.

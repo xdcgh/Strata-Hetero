@@ -1,0 +1,26 @@
+{
+  "captured_utc": "2026-10-08T04:40:08.644954+00:00",
+  "engine_cpp": {
+    "sha": "f42160ebc305ba17ae57220cf408fe1052589cc2"
+  },
+  "binary": {
+    "version": "0.1.40",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-ple-ram-01\\strata.exe",
+    "sha256": "963609ef0718325b015373d77867c1ec1b0629948bc67cb82d6149e2dbb60d33"
+  },
+  "server_python": {
+    "checkout_sha": "1cd62b0089ab5777c318d9e28e7fefbe92410d83",
+    "server_file_sha256": "a3771fe1f03e57ee64d8322136de9053c8397a481f02601ec44ff7378e7da3b4",
+    "quality_capture_opt_in": true,
+    "scope": "identical Python bridge in both arms; engine source sha separately identifies frozen C++ inputs"
+  },
+  "matched_controls": "same model/shards/tokenizer/MTP/profile/KV/context/sampling/expert RAM budget=20/placement; PLE mode is experimental difference",
+  "tests": {
+    "capture_fixture_tests": 5,
+    "capture_fixture_status": "passed",
+    "server_mcp_reasoning_cancel_regression_tests": 252,
+    "regression_status": "passed",
+    "gpu_model_used_in_fixture_tests": false
+  },
+  "baseline_identity_scope": "C++ source is independent of the current Python/tools checkout; current bridge includes reviewed opt-in diagnostics"
+}

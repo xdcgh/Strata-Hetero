@@ -1,0 +1,16 @@
+{
+  "request_window_utc": [
+    "2026-10-08T11:35:53.502920+00:00",
+    "2026-10-08T11:36:04.972926+00:00"
+  ],
+  "first_sampler_utc": "2026-10-08T11:35:54.455Z",
+  "last_sampler_utc": "2026-10-08T11:36:04.450Z",
+  "sample_count": 11,
+  "all_ram_gates_pass": true,
+  "minimum_ram_gib": 35.883,
+  "minimum_commit_gib": 9.135101318359375,
+  "all_commit_gates_pass": true,
+  "commit_gate_gib": 4,
+  "alerts": 0,
+  "errors": 0
+}

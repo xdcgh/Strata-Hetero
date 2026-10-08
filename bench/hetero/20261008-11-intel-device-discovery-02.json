@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "attempt": 2,
+  "prior_partial_attempt": "bench/hetero/20261008-11-intel-device-discovery.json (preserved; NPU driver property getter was called without parentheses)",
+  "captured_utc": "2026-10-08T11:42:42.431021+00:00",
+  "python_version": "3.14.8",
+  "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "runtime_path": "E:\\Strata-Hetero-data\\venv-intel\\Lib\\site-packages\\openvino\\__init__.py",
+  "core_initialized": true,
+  "core_operation_scope": "Core initialization and read-only property/device enumeration only; no model import, compile, inference, or compute request.",
+  "available_devices": [
+    "CPU",
+    "GPU.0",
+    "GPU.1",
+    "NPU"
+  ],
+  "listed_devices": {
+    "CPU": {
+      "status": "listed",
+      "queried": true,
+      "full_device_name": {
+        "status": "reported",
+        "value": "Intel(R) Core(TM) Ultra 9 285H"
+      },
+      "architecture": {
+        "status": "reported",
+        "value": "intel64"
+      },
+      "capabilities": {
+        "status": "reported",
+        "value": [
+          "BF16",
+          "FP32",
+          "FP16",
+          "INT8",
+          "BIN",
+          "EXPORT_IMPORT"
+        ]
+      },
+      "supported_properties": {
+        "status": "reported",
+        "value": {
+          "SUPPORTED_PROPERTIES": "RO",
+          "AVAILABLE_DEVICES": "RO",
+          "RANGE_FOR_ASYNC_INFER_REQUESTS": "RO",
+          "RANGE_FOR_STREAMS": "RO",
+          "EXECUTION_DEVICES": "RO",
+          "FULL_DEVICE_NAME": "RO",
+          "OPTIMIZATION_CAPABILITIES": "RO",
+          "DEVICE_TYPE": "RO",
+          "DEVICE_ARCHITECTURE": "RO",
+          "COMPATIBILITY_CHECK": "RO",
+          "NUM_STREAMS": "RW",
+          "INFERENCE_NUM_THREADS": "RW",
+          "PERF_COUNT": "RW",
+          "INFERENCE_PRECISION_HINT": "RW",
+          "PERFORMANCE_HINT": "RW",
+          "EXECUTION_MODE_HINT": "RW",
+          "PERFORMANCE_HINT_NUM_REQUESTS": "RW",
+          "ENABLE_CPU_PINNING": "RW",
+          "ENABLE_CPU_RESERVATION": "RW",
+          "SCHEDULING_CORE_TYPE": "RW",
+          "MODEL_DISTRIBUTION_POLICY": "RW",
+          "ENABLE_HYPER_THREADING": "RW",
+          "DEVICE_ID": "RW",
+          "CPU_DENORMALS_OPTIMIZATION": "RW",
+          "LOG_LEVEL": "RW",
+          "CPU_SPARSE_WEIGHTS_DECOMPRESSION_RATE": "RW",
+          "ENABLE_TENSOR_PARALLEL": "RW",
+          "TBB_PARTITIONER": "RW",
+          "DYNAMIC_QUANTIZATION_GROUP_SIZE": "RW",
+          "KV_CACHE_PRECISION": "RW",
+          "KEY_CACHE_PRECISION": "RW",
+          "VALUE_CACHE_PRECISION": "RW",
+          "KEY_CACHE_GROUP_SIZE": "RW",
+          "VALUE_CACHE_GROUP_SIZE": "RW",
+          "ENABLE_WEIGHTLESS": "RW",
+          "WEIGHTS_PATH": "WO"
+        }
+      },
+      "driver_version": {
+        "status": "unknown",
+        "reason": "No driver-version property is advertised for this device by this pinned runtime."
+      }
+    },
+    "GPU.0": {
+      "status": "listed",
+      "queried": true,
+      "full_device_name": {
+        "status": "reported",
+        "value": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)"
+      },
+      "architecture": {
+        "status": "reported",
+        "value": "GPU: vendor=0x8086 arch=v12.74.4"
+      },
+      "capabilities": {
+        "status": "reported",
+        "value": [
+          "FP32",
+          "BIN",
+          "FP16",
+          "INT8",
+          "GPU_HW_MATMUL",
+          "GPU_USM_MEMORY",
+          "EXPORT_IMPORT"
+        ]
+      },
+      "supported_properties": {
+        "status": "reported",
+        "value": {
+          "SUPPORTED_PROPERTIES": "RO",
+          "AVAILABLE_DEVICES": "RO",
+          "RANGE_FOR_ASYNC_INFER_REQUESTS": "RO",
+          "RANGE_FOR_STREAMS": "RO",
+          "OPTIMAL_BATCH_SIZE": "RO",
+          "MAX_BATCH_SIZE": "RO",
+          "DEVICE_ARCHITECTURE": "RO",
+          "FULL_DEVICE_NAME": "RO",
+          "DEVICE_UUID": "RO",
+          "DEVICE_LUID": "RO",
+          "DEVICE_TYPE": "RO",
+          "DEVICE_GOPS": "RO",
+          "OPTIMIZATION_CAPABILITIES": "RO",
+          "DEVICE_PCI_INFO": "RO",
+          "GPU_DEVICE_ID": "RO",
+          "GPU_DEVICE_TOTAL_MEM_SIZE": "RO",
+          "GPU_DEVICE_MAX_ALLOC_MEM_SIZE": "RO",
+          "GPU_UARCH_VERSION": "RO",
+          "GPU_CACHELINE_SIZE": "RO",
+          "GPU_EXECUTION_UNITS_COUNT": "RO",
+          "GPU_MEMORY_STATISTICS": "RO",
+          "COMPATIBILITY_CHECK": "RO",
+          "PERF_COUNT": "RW",
+          "MODEL_PRIORITY": "RW",
+          "GPU_HOST_TASK_PRIORITY": "RW",
+          "GPU_QUEUE_PRIORITY": "RW",
+          "GPU_QUEUE_THROTTLE": "RW",
+          "GPU_ENABLE_SDPA_OPTIMIZATION": "RW",
+          "GPU_ENABLE_LORA_OPERATION": "RW",
+          "GPU_ENABLE_LARGE_ALLOCATIONS": "RW",
+          "GPU_ENABLE_LOOP_UNROLLING": "RW",
+          "GPU_DISABLE_WINOGRAD_CONVOLUTION": "RW",
+          "CACHE_DIR": "RW",
+          "CACHE_MODE": "RW",
+          "PERFORMANCE_HINT": "RW",
+          "EXECUTION_MODE_HINT": "RW",
+          "COMPILATION_NUM_THREADS": "RW",
+          "NUM_STREAMS": "RW",
+          "PERFORMANCE_HINT_NUM_REQUESTS": "RW",
+          "INFERENCE_PRECISION_HINT": "RW",
+          "ENABLE_CPU_PINNING": "RW",
+          "ENABLE_CPU_RESERVATION": "RW",
+          "DEVICE_ID": "RW",
+          "DYNAMIC_QUANTIZATION_GROUP_SIZE": "RW",
+          "ACTIVATIONS_SCALE_FACTOR": "RW",
+          "WEIGHTS_PATH": "RW",
+          "CACHE_ENCRYPTION_CALLBACKS": "WO",
+          "KV_CACHE_PRECISION": "RW",
+          "MODEL_PTR": "WO",
+          "OFFLOAD_RATIO": "RW",
+          "CONFIG_FILE": "RW"
+        }
+      },
+      "driver_version": {
+        "status": "unknown",
+        "reason": "No driver-version property is advertised for this device by this pinned runtime."
+      }
+    },
+    "GPU.1": {
+      "status": "listed",
+      "queried": true,
+      "full_device_name": {
+        "status": "reported",
+        "value": "NVIDIA GeForce RTX 4090 D (dGPU)"
+      },
+      "architecture": {
+        "status": "reported",
+        "value": "GPU: vendor=0x10de arch=v8.9.0"
+      },
+      "capabilities": {
+        "status": "reported",
+        "value": [
+          "FP32",
+          "BIN",
+          "INT8",
+          "EXPORT_IMPORT"
+        ]
+      },
+      "supported_properties": {
+        "status": "reported",
+        "value": {
+          "SUPPORTED_PROPERTIES": "RO",
+          "AVAILABLE_DEVICES": "RO",
+          "RANGE_FOR_ASYNC_INFER_REQUESTS": "RO",
+          "RANGE_FOR_STREAMS": "RO",
+          "OPTIMAL_BATCH_SIZE": "RO",
+          "MAX_BATCH_SIZE": "RO",
+          "DEVICE_ARCHITECTURE": "RO",
+          "FULL_DEVICE_NAME": "RO",
+          "DEVICE_UUID": "RO",
+          "DEVICE_LUID": "RO",
+          "DEVICE_TYPE": "RO",
+          "DEVICE_GOPS": "RO",
+          "OPTIMIZATION_CAPABILITIES": "RO",
+          "DEVICE_PCI_INFO": "RO",
+          "GPU_DEVICE_ID": "RO",
+          "GPU_DEVICE_TOTAL_MEM_SIZE": "RO",
+          "GPU_DEVICE_MAX_ALLOC_MEM_SIZE": "RO",
+          "GPU_UARCH_VERSION": "RO",
+          "GPU_CACHELINE_SIZE": "RO",
+          "GPU_EXECUTION_UNITS_COUNT": "RO",
+          "GPU_MEMORY_STATISTICS": "RO",
+          "COMPATIBILITY_CHECK": "RO",
+          "PERF_COUNT": "RW",
+          "MODEL_PRIORITY": "RW",
+          "GPU_HOST_TASK_PRIORITY": "RW",
+          "GPU_QUEUE_PRIORITY": "RW",
+          "GPU_QUEUE_THROTTLE": "RW",
+          "GPU_ENABLE_SDPA_OPTIMIZATION": "RW",
+          "GPU_ENABLE_LORA_OPERATION": "RW",
+          "GPU_ENABLE_LARGE_ALLOCATIONS": "RW",
+          "GPU_ENABLE_LOOP_UNROLLING": "RW",
+          "GPU_DISABLE_WINOGRAD_CONVOLUTION": "RW",
+          "CACHE_DIR": "RW",
+          "CACHE_MODE": "RW",
+          "PERFORMANCE_HINT": "RW",
+          "EXECUTION_MODE_HINT": "RW",
+          "COMPILATION_NUM_THREADS": "RW",
+          "NUM_STREAMS": "RW",
+          "PERFORMANCE_HINT_NUM_REQUESTS": "RW",
+          "INFERENCE_PRECISION_HINT": "RW",
+          "ENABLE_CPU_PINNING": "RW",
+          "ENABLE_CPU_RESERVATION": "RW",
+          "DEVICE_ID": "RW",
+          "DYNAMIC_QUANTIZATION_GROUP_SIZE": "RW",
+          "ACTIVATIONS_SCALE_FACTOR": "RW",
+          "WEIGHTS_PATH": "RW",
+          "CACHE_ENCRYPTION_CALLBACKS": "WO",
+          "KV_CACHE_PRECISION": "RW",
+          "MODEL_PTR": "WO",
+          "OFFLOAD_RATIO": "RW",
+          "CONFIG_FILE": "RW"
+        }
+      },
+      "driver_version": {
+        "status": "unknown",
+        "reason": "No driver-version property is advertised for this device by this pinned runtime."
+      }
+    },
+    "NPU": {
+      "status": "listed",
+      "queried": true,
+      "full_device_name": {
+        "status": "reported",
+        "value": "Intel(R) AI Boost"
+      },
+      "architecture": {
+        "status": "reported",
+        "value": "3720"
+      },
+      "capabilities": {
+        "status": "reported",
+        "value": [
+          "FP16",
+          "INT8",
+          "EXPORT_IMPORT"
+        ]
+      },
+      "supported_properties": {
+        "status": "reported",
+        "value": {
+          "AVAILABLE_DEVICES": "RO",
+          "CACHE_DIR": "RW",
+          "CACHE_ENCRYPTION_CALLBACKS": "WO",
+          "COMPATIBILITY_CHECK": "RO",
+          "COMPILATION_NUM_THREADS": "RW",
+          "DEVICE_ARCHITECTURE": "RO",
+          "DEVICE_GOPS": "RO",
+          "DEVICE_ID": "RW",
+          "DEVICE_PCI_INFO": "RO",
+          "DEVICE_TYPE": "RO",
+          "DEVICE_UUID": "RO",
+          "EXECUTION_DEVICES": "RO",
+          "FULL_DEVICE_NAME": "RO",
+          "LOG_LEVEL": "RW",
+          "MODEL_PRIORITY": "RW",
+          "MODEL_PTR": "RO",
+          "NPU_BYPASS_UMD_CACHING": "RW",
+          "NPU_COMPILATION_MODE_PARAMS": "RW",
+          "NPU_COMPILER_TYPE": "RW",
+          "NPU_COMPILER_VERSION": "RO",
+          "NPU_DEFER_WEIGHTS_LOAD": "RW",
+          "NPU_DEVICE_ALLOC_MEM_SIZE": "RO",
+          "NPU_DEVICE_TOTAL_MEM_SIZE": "RO",
+          "NPU_DRIVER_VERSION": "RO",
+          "NPU_MAX_TILES": "RO",
+          "NPU_PLATFORM": "RW",
+          "NUM_STREAMS": "RW",
+          "OPTIMAL_NUMBER_OF_INFER_REQUESTS": "RO",
+          "OPTIMIZATION_CAPABILITIES": "RO",
+          "PERFORMANCE_HINT": "RW",
+          "PERFORMANCE_HINT_NUM_REQUESTS": "RW",
+          "PERF_COUNT": "RW",
+          "RANGE_FOR_ASYNC_INFER_REQUESTS": "RO",
+          "RANGE_FOR_STREAMS": "RO",
+          "SUPPORTED_PROPERTIES": "RO",
+          "WEIGHTS_PATH": "RW"
+        }
+      },
+      "driver_version": {
+        "status": "reported",
+        "value": 2267
+      }
+    }
+  },
+  "requested_exact_device_ids": {
+    "CPU": {
+      "status": "listed",
+      "queried": true,
+      "full_device_name": {
+        "status": "reported",
+        "value": "Intel(R) Core(TM) Ultra 9 285H"
+      },
+      "architecture": {
+        "status": "reported",
+        "value": "intel64"
+      },
+      "capabilities": {
+        "status": "reported",
+        "value": [
+          "BF16",
+          "FP32",
+          "FP16",
+          "INT8",
+          "BIN",
+          "EXPORT_IMPORT"
+        ]
+      },
+      "supported_properties": {
+        "status": "reported",
+        "value": {
+          "SUPPORTED_PROPERTIES": "RO",
+          "AVAILABLE_DEVICES": "RO",
+          "RANGE_FOR_ASYNC_INFER_REQUESTS": "RO",
+          "RANGE_FOR_STREAMS": "RO",
+          "EXECUTION_DEVICES": "RO",
+          "FULL_DEVICE_NAME": "RO",
+          "OPTIMIZATION_CAPABILITIES": "RO",
+          "DEVICE_TYPE": "RO",
+          "DEVICE_ARCHITECTURE": "RO",
+          "COMPATIBILITY_CHECK": "RO",
+          "NUM_STREAMS": "RW",
+          "INFERENCE_NUM_THREADS": "RW",
+          "PERF_COUNT": "RW",
+          "INFERENCE_PRECISION_HINT": "RW",
+          "PERFORMANCE_HINT": "RW",
+          "EXECUTION_MODE_HINT": "RW",
+          "PERFORMANCE_HINT_NUM_REQUESTS": "RW",
+          "ENABLE_CPU_PINNING": "RW",
+          "ENABLE_CPU_RESERVATION": "RW",
+          "SCHEDULING_CORE_TYPE": "RW",
+          "MODEL_DISTRIBUTION_POLICY": "RW",
+          "ENABLE_HYPER_THREADING": "RW",
+          "DEVICE_ID": "RW",
+          "CPU_DENORMALS_OPTIMIZATION": "RW",
+          "LOG_LEVEL": "RW",
+          "CPU_SPARSE_WEIGHTS_DECOMPRESSION_RATE": "RW",
+          "ENABLE_TENSOR_PARALLEL": "RW",
+          "TBB_PARTITIONER": "RW",
+          "DYNAMIC_QUANTIZATION_GROUP_SIZE": "RW",
+          "KV_CACHE_PRECISION": "RW",
+          "KEY_CACHE_PRECISION": "RW",
+          "VALUE_CACHE_PRECISION": "RW",
+          "KEY_CACHE_GROUP_SIZE": "RW",
+          "VALUE_CACHE_GROUP_SIZE": "RW",
+          "ENABLE_WEIGHTLESS": "RW",
+          "WEIGHTS_PATH": "WO"
+        }
+      },
+      "driver_version": {
+        "status": "unknown",
+        "reason": "No driver-version property is advertised for this device by this pinned runtime."
+      }
+    },
+    "GPU.0": {
+      "status": "listed",
+      "queried": true,
+      "full_device_name": {
+        "status": "reported",
+        "value": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)"
+      },
+      "architecture": {
+        "status": "reported",
+        "value": "GPU: vendor=0x8086 arch=v12.74.4"
+      },
+      "capabilities": {
+        "status": "reported",
+        "value": [
+          "FP32",
+          "BIN",
+          "FP16",
+          "INT8",
+          "GPU_HW_MATMUL",
+          "GPU_USM_MEMORY",
+          "EXPORT_IMPORT"
+        ]
+      },
+      "supported_properties": {
+        "status": "reported",
+        "value": {
+          "SUPPORTED_PROPERTIES": "RO",
+          "AVAILABLE_DEVICES": "RO",
+          "RANGE_FOR_ASYNC_INFER_REQUESTS": "RO",
+          "RANGE_FOR_STREAMS": "RO",
+          "OPTIMAL_BATCH_SIZE": "RO",
+          "MAX_BATCH_SIZE": "RO",
+          "DEVICE_ARCHITECTURE": "RO",
+          "FULL_DEVICE_NAME": "RO",
+          "DEVICE_UUID": "RO",
+          "DEVICE_LUID": "RO",
+          "DEVICE_TYPE": "RO",
+          "DEVICE_GOPS": "RO",
+          "OPTIMIZATION_CAPABILITIES": "RO",
+          "DEVICE_PCI_INFO": "RO",
+          "GPU_DEVICE_ID": "RO",
+          "GPU_DEVICE_TOTAL_MEM_SIZE": "RO",
+          "GPU_DEVICE_MAX_ALLOC_MEM_SIZE": "RO",
+          "GPU_UARCH_VERSION": "RO",
+          "GPU_CACHELINE_SIZE": "RO",
+          "GPU_EXECUTION_UNITS_COUNT": "RO",
+          "GPU_MEMORY_STATISTICS": "RO",
+          "COMPATIBILITY_CHECK": "RO",
+          "PERF_COUNT": "RW",
+          "MODEL_PRIORITY": "RW",
+          "GPU_HOST_TASK_PRIORITY": "RW",
+          "GPU_QUEUE_PRIORITY": "RW",
+          "GPU_QUEUE_THROTTLE": "RW",
+          "GPU_ENABLE_SDPA_OPTIMIZATION": "RW",
+          "GPU_ENABLE_LORA_OPERATION": "RW",
+          "GPU_ENABLE_LARGE_ALLOCATIONS": "RW",
+          "GPU_ENABLE_LOOP_UNROLLING": "RW",
+          "GPU_DISABLE_WINOGRAD_CONVOLUTION": "RW",
+          "CACHE_DIR": "RW",
+          "CACHE_MODE": "RW",
+          "PERFORMANCE_HINT": "RW",
+          "EXECUTION_MODE_HINT": "RW",
+          "COMPILATION_NUM_THREADS": "RW",
+          "NUM_STREAMS": "RW",
+          "PERFORMANCE_HINT_NUM_REQUESTS": "RW",
+          "INFERENCE_PRECISION_HINT": "RW",
+          "ENABLE_CPU_PINNING": "RW",
+          "ENABLE_CPU_RESERVATION": "RW",
+          "DEVICE_ID": "RW",
+          "DYNAMIC_QUANTIZATION_GROUP_SIZE": "RW",
+          "ACTIVATIONS_SCALE_FACTOR": "RW",
+          "WEIGHTS_PATH": "RW",
+          "CACHE_ENCRYPTION_CALLBACKS": "WO",
+          "KV_CACHE_PRECISION": "RW",
+          "MODEL_PTR": "WO",
+          "OFFLOAD_RATIO": "RW",
+          "CONFIG_FILE": "RW"
+        }
+      },
+      "driver_version": {
+        "status": "unknown",
+        "reason": "No driver-version property is advertised for this device by this pinned runtime."
+      }
+    },
+    "NPU": {
+      "status": "listed",
+      "queried": true,
+      "full_device_name": {
+        "status": "reported",
+        "value": "Intel(R) AI Boost"
+      },
+      "architecture": {
+        "status": "reported",
+        "value": "3720"
+      },
+      "capabilities": {
+        "status": "reported",
+        "value": [
+          "FP16",
+          "INT8",
+          "EXPORT_IMPORT"
+        ]
+      },
+      "supported_properties": {
+        "status": "reported",
+        "value": {
+          "AVAILABLE_DEVICES": "RO",
+          "CACHE_DIR": "RW",
+          "CACHE_ENCRYPTION_CALLBACKS": "WO",
+          "COMPATIBILITY_CHECK": "RO",
+          "COMPILATION_NUM_THREADS": "RW",
+          "DEVICE_ARCHITECTURE": "RO",
+          "DEVICE_GOPS": "RO",
+          "DEVICE_ID": "RW",
+          "DEVICE_PCI_INFO": "RO",
+          "DEVICE_TYPE": "RO",
+          "DEVICE_UUID": "RO",
+          "EXECUTION_DEVICES": "RO",
+          "FULL_DEVICE_NAME": "RO",
+          "LOG_LEVEL": "RW",
+          "MODEL_PRIORITY": "RW",
+          "MODEL_PTR": "RO",
+          "NPU_BYPASS_UMD_CACHING": "RW",
+          "NPU_COMPILATION_MODE_PARAMS": "RW",
+          "NPU_COMPILER_TYPE": "RW",
+          "NPU_COMPILER_VERSION": "RO",
+          "NPU_DEFER_WEIGHTS_LOAD": "RW",
+          "NPU_DEVICE_ALLOC_MEM_SIZE": "RO",
+          "NPU_DEVICE_TOTAL_MEM_SIZE": "RO",
+          "NPU_DRIVER_VERSION": "RO",
+          "NPU_MAX_TILES": "RO",
+          "NPU_PLATFORM": "RW",
+          "NUM_STREAMS": "RW",
+          "OPTIMAL_NUMBER_OF_INFER_REQUESTS": "RO",
+          "OPTIMIZATION_CAPABILITIES": "RO",
+          "PERFORMANCE_HINT": "RW",
+          "PERFORMANCE_HINT_NUM_REQUESTS": "RW",
+          "PERF_COUNT": "RW",
+          "RANGE_FOR_ASYNC_INFER_REQUESTS": "RO",
+          "RANGE_FOR_STREAMS": "RO",
+          "SUPPORTED_PROPERTIES": "RO",
+          "WEIGHTS_PATH": "RW"
+        }
+      },
+      "driver_version": {
+        "status": "reported",
+        "value": 2267
+      }
+    }
+  },
+  "unlisted_devices_queried": false
+}

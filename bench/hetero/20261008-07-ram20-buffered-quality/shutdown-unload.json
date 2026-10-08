@@ -1,0 +1,75 @@
+{
+  "status": "unloaded",
+  "service": "strata",
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+  "loaded": false,
+  "auto_load": true,
+  "structured_output": {
+    "formats": [
+      "json_object",
+      "json_schema"
+    ],
+    "method": "prompt_and_validate",
+    "constrained_decoding": false,
+    "stream_buffered": true
+  },
+  "engine": "0.1.40",
+  "started": 1791457237,
+  "uptime_s": 700,
+  "cache_max_tokens": 32768,
+  "context": {
+    "native": 32768,
+    "max_positions": 32768
+  },
+  "concurrency": {
+    "serving": 1,
+    "requested": 1
+  },
+  "dialects": [
+    "/v1/chat/completions",
+    "/v1/messages",
+    "/v1/responses"
+  ],
+  "vision": {
+    "enabled": false,
+    "available": false,
+    "error": null
+  },
+  "activity": {
+    "requests": 25,
+    "in_flight": 0,
+    "last_request_at": 1791457706
+  },
+  "last_timings": {
+    "cache_n": 0,
+    "prompt_n": 25,
+    "prompt_ms": 562.1,
+    "prompt_per_token_ms": 22.484,
+    "prompt_per_second": 44.5,
+    "predicted_n": 2,
+    "predicted_ms": 138.4,
+    "predicted_per_token_ms": 69.2,
+    "predicted_per_second": 14.5,
+    "draft_n": 3,
+    "draft_n_accepted": 2,
+    "at": 1791457706
+  },
+  "vram": {
+    "elastic": false
+  },
+  "machine": {
+    "at": 1791457938,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "used_mib": 3692.0,
+      "total_mib": 49140.0,
+      "util_pct": 6,
+      "temp_c": 30,
+      "power_w": 7.079
+    },
+    "ram": {
+      "used_gib": 25.0,
+      "total_gib": 127.6
+    }
+  }
+}

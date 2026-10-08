@@ -1,0 +1,18 @@
+{
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read this natural-text excerpt once. Three checkpoint sentences occur once in the prose. Remember each exact key and its string value.\n\nMOBY-DICK;\n\nor, THE WHALE.\n\nBy Herman Melville\n\nCONTENTS\n\nETYMOLOGY.\n\nEXTRACTS (Supplied by a Sub-Sub-Librarian).\n\nCHAPTER 1. Loomings.\n\nCHAPTER 2. The Carpet-Bag.\n\nCHAPTER 3. The Spouter-Inn.\n\nCHAPTER 4. The Counterpane.\n\nCheckpoint key ARCHIVE-1CA3B1799D has value 126855092.\n\nCHAPTER 5. Breakfast.\n\nCHAPTER 6. The Street.\n\nCHAPTER 7. The Chapel.\n\nCHAPTER 8. The Pulpit.\n\nCHAPTER 9. The Sermon.\n\nCHAPTER 10. A Bosom Friend.\n\nCHAPTER 11. Nightgown.\n\nCHAPTER 12. Biographical.\n\nCHAPTER 13. Wheelbarrow.\n\nCHAPTER 14. Nantucket.\n\nCHAPTER 15. Chowder.\n\nCHAPTER 16. The Ship.\n\nCHAPTER 17. The Ramadan.\n\nCHAPTER 18. His Mark.\n\nCHAPTER 19. The Prophet.\n\nCHAPTER 20. All Astir.\n\nCHAPTER 21. Going Aboard.\n\nCHAPTER 22. Merry Christmas.\n\nCHAPTER 23. The Lee Shore.\n\nCHAPTER 24. The Advocate.\n\nCHAPTER 25. Postscript.\n\nCHAPTER 26. Knights and Squires.\n\nCHAPTER 27. Knights and Squires.\n\nCHAPTER 28. Ahab.\n\nCHAPTER 29. Enter Ahab; to Him, Stubb.\n\nCHAPTER 30. The Pipe.\n\nCHAPTER 31. Queen Mab.\n\nCHAPTER 32. Cetology.\n\nCHAPTER 33. The Specksnyder.\n\nCHAPTER 34. The Cabin-Table.\n\nCHAPTER 35. The Mast-Head.\n\nCHAPTER 36. The Quarter-Deck.\n\nCHAPTER 37. Sunset.\n\nCHAPTER 38. Dusk.\n\nCHAPTER 39. First Night-Watch.\n\nCHAPTER 40. Midnight, Forecastle.\n\nCHAPTER 41. Moby Dick.\n\nCHAPTER 42. The Whiteness of the Whale.\n\nCHAPTER 43. Hark!\n\nCHAPTER 44. The Chart.\n\nCHAPTER 45. The Affidavit.\n\nCHAPTER 46. Surmises.\n\nCheckpoint key ARCHIVE-46BDD640FB has value 362950628.\n\nCHAPTER 47. The Mat-Maker.\n\nCHAPTER 48. The First Lowering.\n\nCHAPTER 49. The Hyena.\n\nCHAPTER 50. Ahab’s Boat and Crew. Fedallah.\n\nCHAPTER 51. The Spirit-Spout.\n\nCHAPTER 52. The Albatross.\n\nCHAPTER 53. The Gam.\n\nCHAPTER 54. The Town-Ho’s Story.\n\nCHAPTER 55. Of the Monstrous Pictures of Whales.\n\nCHAPTER 56. Of the Less Erroneous Pictures of Whales, and the True Pictures of Whaling Scenes.\n\nCHAPTER 57. Of Whales in Paint; in Teeth; in Wood; in Sheet-Iron; in Stone; in Mountains; in Stars.\n\nCHAPTER 58. Brit.\n\nCHAPTER 59. Squid.\n\nCHAPTER 60. The Line.\n\nCHAPTER 61. Stubb Kills a Whale.\n\nCHAPTER 62. The Dart.\n\nCHAPTER 63. The Crotch.\n\nCHAPTER 64. Stubb’s Supper.\n\nCHAPTER 65. The Whale as a Dish.\n\nCHAPTER 66. The Shark Massacre.\n\nCHAPTER 67. Cutting In.\n\nCHAPTER 68. The Blanket.\n\nCHAPTER 69. The Funeral.\n\nCHAPTER 70. The Sphynx.\n\nCHAPTER 71. The Jeroboam’s Story.\n\nCHAPTER 72. The Monkey-Rope.\n\nCHAPTER 73. Stubb and Flask kill a Right Whale; and Then Have a Talk over Him.\n\nCheckpoint key ARCHIVE-23392456DE has value 890779946.\n\nCHAPTER 74. The Sperm Whale’s Head—Contrasted\n\nReturn exactly one JSON object with these three keys and their string values: \"ARCHIVE-1CA3B1799D\", \"ARCHIVE-46BDD640FB\", \"ARCHIVE-23392456DE\". Do not add prose."
+    }
+  ],
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  },
+  "max_tokens": 128,
+  "temperature": 0,
+  "top_p": 1,
+  "seed": 42,
+  "reasoning_effort": "none"
+}

@@ -1,0 +1,8 @@
+{
+  "observed_utc": "2026-10-08T11:02:23.502002+00:00",
+  "our_frozen_cpp_base": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+  "upstream_main": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+  "same_base": false,
+  "running_model_source_unchanged": true,
+  "merge_rebase": "evaluation pending; preserve benchmark frozen controls"
+}

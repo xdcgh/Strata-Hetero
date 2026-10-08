@@ -1,0 +1,65 @@
+{
+  "schema": "strata-hetero-quality-report-v1",
+  "created_utc": "2026-10-08T04:48:31.804501+00:00",
+  "prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-01-quality\\manifest.json",
+  "responses_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-05-upstream20-quality\\requests\\smoke_python_function-20-01",
+  "response_count": 3,
+  "results": [
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\smoke_python_function-20-01\\formal-0000.text.txt",
+      "response_text_sha256": "3ad499e8f3df6c4037306c4a35c19f6516b71b32b319ecd7819fa6663fdee65a",
+      "prompt_id": "smoke_python_function",
+      "run_status": "completed",
+      "response_bytes_utf8": 46,
+      "canonical_visible_text_reencoded_tokens": 17,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "status": "ast_valid",
+      "function": "add_two",
+      "arguments": [
+        "x"
+      ],
+      "execution": "not_run; generated code is parsed only",
+      "quality_status": "pass"
+    },
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\smoke_python_function-20-01\\formal-0001.text.txt",
+      "response_text_sha256": "3ad499e8f3df6c4037306c4a35c19f6516b71b32b319ecd7819fa6663fdee65a",
+      "prompt_id": "smoke_python_function",
+      "run_status": "completed",
+      "response_bytes_utf8": 46,
+      "canonical_visible_text_reencoded_tokens": 17,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "status": "ast_valid",
+      "function": "add_two",
+      "arguments": [
+        "x"
+      ],
+      "execution": "not_run; generated code is parsed only",
+      "quality_status": "pass"
+    },
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\smoke_python_function-20-01\\formal-0002.text.txt",
+      "response_text_sha256": "3ad499e8f3df6c4037306c4a35c19f6516b71b32b319ecd7819fa6663fdee65a",
+      "prompt_id": "smoke_python_function",
+      "run_status": "completed",
+      "response_bytes_utf8": 46,
+      "canonical_visible_text_reencoded_tokens": 17,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "status": "ast_valid",
+      "function": "add_two",
+      "arguments": [
+        "x"
+      ],
+      "execution": "not_run; generated code is parsed only",
+      "quality_status": "pass"
+    }
+  ],
+  "canonical_reencoded_output_token_agreement": {
+    "status": "actual_ids_unavailable",
+    "canonical_visible_text_counts": "per-result count only when tokenizer is supplied",
+    "actual_emitted_token_ids": "unavailable in saved response text; do not infer or claim agreement"
+  }
+}

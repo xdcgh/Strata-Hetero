@@ -1,0 +1,50 @@
+{
+  "schema": "strata-hetero-quality-report-v1",
+  "created_utc": "2026-10-08T04:47:28.297485+00:00",
+  "prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-01-quality\\manifest.json",
+  "responses_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-05-upstream20-quality\\requests\\smoke_arithmetic-20-01",
+  "response_count": 3,
+  "results": [
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\smoke_arithmetic-20-01\\formal-0000.text.txt",
+      "response_text_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "prompt_id": "smoke_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 1,
+      "canonical_visible_text_reencoded_tokens": 1,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    },
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\smoke_arithmetic-20-01\\formal-0001.text.txt",
+      "response_text_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "prompt_id": "smoke_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 1,
+      "canonical_visible_text_reencoded_tokens": 1,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    },
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\smoke_arithmetic-20-01\\formal-0002.text.txt",
+      "response_text_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "prompt_id": "smoke_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 1,
+      "canonical_visible_text_reencoded_tokens": 1,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    }
+  ],
+  "canonical_reencoded_output_token_agreement": {
+    "status": "actual_ids_unavailable",
+    "canonical_visible_text_counts": "per-result count only when tokenizer is supplied",
+    "actual_emitted_token_ids": "unavailable in saved response text; do not infer or claim agreement"
+  }
+}

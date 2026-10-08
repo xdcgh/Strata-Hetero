@@ -1,0 +1,71 @@
+{
+  "schema": "strata-hetero-quality-report-v1",
+  "created_utc": "2026-10-08T04:54:25.134527+00:00",
+  "prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-01-quality\\manifest.json",
+  "responses_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-05-upstream20-quality\\requests\\long_30k7-20-01",
+  "response_count": 3,
+  "results": [
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\long_30k7-20-01\\formal-0000.text.txt",
+      "response_text_sha256": "488416f63021f919fdc84d77545c04bd6bf410d41e578dd09aec3f5cbfcd25c1",
+      "prompt_id": "long_30k7",
+      "run_status": "completed",
+      "response_bytes_utf8": 113,
+      "canonical_visible_text_reencoded_tokens": 83,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "retrieval_status": "all_exact",
+      "exact_values_found": {
+        "ARCHIVE-1CA3B1799D": true,
+        "ARCHIVE-46BDD640FB": true,
+        "ARCHIVE-23392456DE": true
+      },
+      "extra_keys": [],
+      "nonfinite_json_numeric_check": "pass"
+    },
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\long_30k7-20-01\\formal-0001.text.txt",
+      "response_text_sha256": "488416f63021f919fdc84d77545c04bd6bf410d41e578dd09aec3f5cbfcd25c1",
+      "prompt_id": "long_30k7",
+      "run_status": "completed",
+      "response_bytes_utf8": 113,
+      "canonical_visible_text_reencoded_tokens": 83,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "retrieval_status": "all_exact",
+      "exact_values_found": {
+        "ARCHIVE-1CA3B1799D": true,
+        "ARCHIVE-46BDD640FB": true,
+        "ARCHIVE-23392456DE": true
+      },
+      "extra_keys": [],
+      "nonfinite_json_numeric_check": "pass"
+    },
+    {
+      "artifact": "bench\\hetero\\20261008-05-upstream20-quality\\requests\\long_30k7-20-01\\formal-0002.text.txt",
+      "response_text_sha256": "488416f63021f919fdc84d77545c04bd6bf410d41e578dd09aec3f5cbfcd25c1",
+      "prompt_id": "long_30k7",
+      "run_status": "completed",
+      "response_bytes_utf8": 113,
+      "canonical_visible_text_reencoded_tokens": 83,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "retrieval_status": "all_exact",
+      "exact_values_found": {
+        "ARCHIVE-1CA3B1799D": true,
+        "ARCHIVE-46BDD640FB": true,
+        "ARCHIVE-23392456DE": true
+      },
+      "extra_keys": [],
+      "nonfinite_json_numeric_check": "pass"
+    }
+  ],
+  "canonical_reencoded_output_token_agreement": {
+    "status": "actual_ids_unavailable",
+    "canonical_visible_text_counts": "per-result count only when tokenizer is supplied",
+    "actual_emitted_token_ids": "unavailable in saved response text; do not infer or claim agreement"
+  }
+}

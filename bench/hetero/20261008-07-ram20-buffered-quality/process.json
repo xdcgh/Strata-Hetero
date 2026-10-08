@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "launcher_pid": 37368,
+  "start_utc": "2026-10-08T10:55:40.0314576Z",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-u",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py",
+    "--engine",
+    "strata",
+    "--config",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-07-ram20-buffered-quality\\config.json",
+    "--port",
+    "8081"
+  ],
+  "config": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-07-ram20-buffered-quality\\config.json",
+  "run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-07-ram20-buffered-quality",
+  "role": "owned RAM20 buffered quality model"
+}

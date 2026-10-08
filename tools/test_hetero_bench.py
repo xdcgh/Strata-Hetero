@@ -107,6 +107,22 @@ class HeteroBenchTests(unittest.TestCase):
             self.assertEqual(evs[1]["usage"]["completion_tokens"], 2)
             self.assertEqual(row["status"], "completed")
 
+    def test_output_bytes_preserve_unicode_and_intentional_line_endings(self):
+        import hashlib
+        content = "one\ntwo\r\n中文"
+        reasoning = "first\r\nsecond\n"
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            args = argparse.Namespace(model="", max_tokens=32, seed=42, timeout=1, reasoning_effort="none")
+            response = sse(event({"choices": [{"delta": {"content": content, "reasoning_content": reasoning}}]}),
+                           event({"choices": [{"delta": {}, "finish_reason": "stop"}]}),
+                           b"data: [DONE]\n\n")
+            with mock.patch.object(hb._LOOPBACK_OPENER, "open", return_value=response):
+                row = hb.request_once("http://127.0.0.1:9", "p", args, root, "formal", 0, "")
+            self.assertEqual((root / "formal-0000.text.txt").read_bytes(), content.encode("utf-8"))
+            self.assertEqual((root / "formal-0000.reasoning.txt").read_bytes(), reasoning.encode("utf-8"))
+            self.assertEqual(row["content_sha256"], hashlib.sha256(content.encode("utf-8")).hexdigest())
+
     def test_validate_only_has_no_network_or_output_side_effect(self):
         with tempfile.TemporaryDirectory() as td:
             d = Path(td)

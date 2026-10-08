@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "run": "openvino-2026.4.1-attempt-01",
+  "status": "installed_offline_verified",
+  "created_utc": "2026-10-08T04:45:54.1528332Z",
+  "repository": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+    "head": "1cd62b0089ab5777c318d9e28e7fefbe92410d83"
+  },
+  "python": {
+    "base_executable": "C:\\Python314\\python.exe",
+    "version": "3.14.8",
+    "venv": "E:\\Strata-Hetero-data\\venv-intel",
+    "venv_executable": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+    "metadata_only_validation": true,
+    "openvino_runtime_imported": false
+  },
+  "openvino": {
+    "package": "openvino",
+    "version": "2026.4.1",
+    "pypi_requires_python": ">=3.10",
+    "official_pypi_json": "https://pypi.org/pypi/openvino/json",
+    "official_selector": "https://docs.openvino.ai/2026/_static/selector-tool/selector-30c413f.html",
+    "npu_plugin": "official selector says PIP includes NPU plugin Python API",
+    "npu_device_or_core_created": false
+  },
+  "resolution": {
+    "command": "python -m pip download --only-binary=:all: --no-cache-dir --index-url https://pypi.org/simple --dest <dedicated-wheel-dir> openvino==2026.4.1",
+    "pip_log": "E:\\Strata-Hetero-data\\logs\\openvino-prep-20261008-01\\pip-download.log",
+    "observed_indexes": [
+      "https://pypi.org/simple",
+      "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple (inherited extra index)"
+    ],
+    "integrity": "All downloaded wheel filenames, sizes, and SHA-256 digests were independently matched to official PyPI release JSON.",
+    "wheel_directory": "E:\\Strata-Hetero-data\\wheels\\openvino-2026.4.1-attempt-01",
+    "wheel_total_bytes": 97689638,
+    "wheels": [
+      {
+        "name": "numpy",
+        "version": "2.5.3",
+        "filename": "numpy-2.5.3-cp314-cp314-win_amd64.whl",
+        "size_bytes": 12698179,
+        "sha256": "2c25dfa72943e4336ddb6b0ee4277b47a0c85bede0807530ec68103bf58e2c10",
+        "official_pypi_url": "https://files.pythonhosted.org/packages/a4/73/d2c08231e4fde7e415501fd02c715d96e98599b2d8384445933944152984/numpy-2.5.3-cp314-cp314-win_amd64.whl",
+        "official_metadata_url": "https://pypi.org/pypi/numpy/2.5.3/json",
+        "upload_time_utc": "2026-09-06T16:26:00.789283Z",
+        "verified_against_official_metadata": true
+      },
+      {
+        "name": "openvino-telemetry",
+        "version": "2025.2.0",
+        "filename": "openvino_telemetry-2025.2.0-py3-none-any.whl",
+        "size_bytes": 25227,
+        "sha256": "bcb667e83a44f202ecf4cfa49281715c6d7e21499daec04ff853b7f964833599",
+        "official_pypi_url": "https://files.pythonhosted.org/packages/3b/ac/5ab0ca0aa269ad3c73f7bfc3801b10e5f56f75a31bf68c1ae8bd51cf70a4/openvino_telemetry-2025.2.0-py3-none-any.whl",
+        "official_metadata_url": "https://pypi.org/pypi/openvino-telemetry/2025.2.0/json",
+        "upload_time_utc": "2025-07-07T10:29:50.189263Z",
+        "verified_against_official_metadata": true
+      },
+      {
+        "name": "openvino",
+        "version": "2026.4.1",
+        "filename": "openvino-2026.4.1-22982-cp314-cp314-win_amd64.whl",
+        "size_bytes": 84966232,
+        "sha256": "96d5ecb8cca4d61a3eee754c9e477702509cf782eb45596c653a00ddb2176d96",
+        "official_pypi_url": "https://files.pythonhosted.org/packages/56/bc/5ebb236e5c10155d7693ea282308b9dbfe4142c5f3350a77203ab859684b/openvino-2026.4.1-22982-cp314-cp314-win_amd64.whl",
+        "official_metadata_url": "https://pypi.org/pypi/openvino/2026.4.1/json",
+        "upload_time_utc": "2026-10-01T09:59:32.323544Z",
+        "verified_against_official_metadata": true
+      }
+    ]
+  },
+  "requirements_lock": {
+    "path": "E:\\Strata-Hetero-data\\wheels\\openvino-2026.4.1-attempt-01\\requirements.lock.txt",
+    "contents": [
+      "numpy==2.5.3 --hash=sha256:2c25dfa72943e4336ddb6b0ee4277b47a0c85bede0807530ec68103bf58e2c10",
+      "openvino-telemetry==2025.2.0 --hash=sha256:bcb667e83a44f202ecf4cfa49281715c6d7e21499daec04ff853b7f964833599",
+      "openvino==2026.4.1 --hash=sha256:96d5ecb8cca4d61a3eee754c9e477702509cf782eb45596c653a00ddb2176d96"
+    ]
+  },
+  "installed": {
+    "install_command": "python -m pip install --no-index --find-links <dedicated-wheel-dir> --require-hashes -r requirements.lock.txt",
+    "pip_log": "E:\\Strata-Hetero-data\\logs\\openvino-prep-20261008-01\\pip-install.log",
+    "packages": {
+      "openvino": {
+        "version": "2026.4.1",
+        "requires": [
+          "numpy<2.6.0,>=1.16.6",
+          "openvino-telemetry>=2023.2.1"
+        ]
+      },
+      "numpy": {
+        "version": "2.5.3",
+        "requires": []
+      },
+      "openvino-telemetry": {
+        "version": "2025.2.0",
+        "requires": []
+      }
+    },
+    "pip_version": "26.2.1",
+    "pip_check": "No broken requirements found.",
+    "runtime_import_or_device_probe": false
+  },
+  "isolation": {
+    "system_path_changed": false,
+    "global_python_modified": false,
+    "registry_changed": false,
+    "driver_changed": false,
+    "wsl_used": false,
+    "gpu_or_npu_compute_run": false
+  },
+  "notes": [
+    "The first lock-generation metadata lookup retained CR from wheel METADATA and returned 404 before installation; values were trimmed and retried.",
+    "The inherited pip configuration listed a Tsinghua extra index during download; every wheel byte was then matched to the canonical official PyPI filename, size, SHA-256, and URL before installation.",
+    "No OpenVINO Runtime import, Core creation, device enumeration, model conversion, or inference was performed."
+  ]
+}

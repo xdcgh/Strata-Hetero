@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-08T11:15:04.859049+00:00",
+  "reproduces_run": "20261008-07-ram20-buffered-quality",
+  "changes": [
+    "STRATA_DBG_NAN=1",
+    "diagnostic run log paths"
+  ],
+  "reason": "RAM07 short tasks passed; natural 1036-token prefill produced only exclamation token ID0; post-failure independent short arithmetic returned4",
+  "evidence": "existing prefill/verify debug scan, no binary source modification",
+  "planned_requests": [
+    "short arithmetic first",
+    "same failed long_1k with output cap8",
+    "short arithmetic after"
+  ],
+  "performance_sample": false
+}
