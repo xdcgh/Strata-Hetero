@@ -1,0 +1,17 @@
+{
+  "prepared_utc": "2026-10-09T03:15:51.899195+00:00",
+  "engine_cpp": {
+    "sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "binary_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494"
+  },
+  "server_python": {
+    "checkout_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "server_file_sha256": "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+    "quality_capture_opt_in": true,
+    "scope": "same reviewed Python bridge in all arms; C++ inputs identified separately"
+  },
+  "matched_controls": "same verified model/pack/MTP/profile/context/KV/CPUworkers=10/resident20/noadaptive/noPCIe/promptcache0/seed42; all expert reads explicitly buffered",
+  "tokenizer_manifest_current_match": false,
+  "latest_engine_changes": "v0.1.40.4 defaults including CPU-share may differ from frozen82; record live logs, do not compare speeds until task matched",
+  "model_quality_acceptance": false
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "Latest upstream and Hetero CUDA builds verified; real expert CPU/Arc F32 microbench passed; latest model quality next",
+  "phase": "Latest upstream0.1.40.4 direct20 model loading; nine-task quality and exact Hetero control next",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -30,7 +30,9 @@
     "OpenVINO device enumeration confirms GPU.0 Arc140T and NPU AI Boost3720; synthetic NPU9static shapes compiled/inferred withoutfallback but numerical quality gate failed, precisionpolicy unknown",
     "Matched latest-upstream6674 and integratede87 Release SM89 CUDA binaries compiled; root verified both SHA and CMake controls",
     "Actual profile rank0 expert28/288 source Q4_K/Q5_1 exported with official pinned decoder, source identity matched prior full integrity receipt, scoped raw/F32 hashes rechecked",
-    "Real-expert OpenVINO CPU and Arc GPU.0 F32: nine row sizes, five repeats all numerical/policy/execution gates passed; transport and native quantized CPU comparison still pending"
+    "Real-expert OpenVINO CPU and Arc GPU.0 F32: nine row sizes, five repeats all numerical/policy/execution gates passed; transport and native quantized CPU comparison still pending",
+    "Latest tokenizer implementation refreshed; all nine prompt bytes/expected values/token counts remain identical",
+    "Installed Codex MSIX graphics context identified at 250MiB/0% and permitted only by exact protected package path plus idle/lowmemory condition; unknown GPU apps still blocked"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -51,13 +53,22 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "CUDA compile helpers and OpenVINO real-FFN workers terminal; no text model launched",
+    "gpu_state_at_quota_resume": "Owned latest-upstream engine21860 loading at loopback8081; no concurrent compute; worker verifies gates, runs nine sequential quality tasks, then exactowned unload/stop",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Refresh prompt tokenizer provenance without changing prompt bytes; run latest-upstream direct20, Hetero direct20 control, then Hetero RAM20 quality sequentially before larger contexts",
+  "next_experiment": "Complete current latest-upstream quality; Hetero direct20 control then Hetero strict RAM20; preserve failures and continue original storage/CPU/Arc/NPU/planner/long-context requirements",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T03:18:15.980471+00:00"
+  "last_checkpoint_utc": "2026-10-09T03:26:20.362070+00:00",
+  "current_run": "20261009-03-upstream04-quality",
+  "current_model_owner": {
+    "launcher_pid": 15564,
+    "engine_pid_last_verified": 21860,
+    "sampler_launcher_pid": 18908,
+    "start_utc": "2026-10-09T03:23:48.6344988Z",
+    "port": 8081,
+    "cleanup_authorized_worker": "/root/build_latest_upstream"
+  }
 }

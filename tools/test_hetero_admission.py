@@ -83,6 +83,19 @@ class AdmissionTests(unittest.TestCase):
         decision = evaluate(fixture(risky_windows_processes=found), 46000, 12, check_wsl=False)
         self.assertFalse(decision["gates"]["windows_processes"]["pass"])
 
+    def test_installed_codex_desktop_context_requires_exact_package_path_and_idle_resources(self):
+        path = r"C:\Program Files\WindowsApps\OpenAI.Codex_26.1002.7124.0_x64__2p2nqsd0c76g0\app\ChatGPT.exe"
+        gpu = {"name": "GPU", "vram_free_mib": 48000, "vram_used_mib": 250, "utilization_percent": 0}
+        rows = [{"pid": 99, "name": "ChatGPT.exe", "path": path}]
+        def allowed(current_gpu, current_rows):
+            raw = fixture(nvidia={"gpus": [current_gpu], "compute_pids": [99], "processes": current_rows,
+                                  "process_telemetry_unknown": False})
+            return evaluate(raw, 46000, 12, check_wsl=False)["gates"]["gpu_processes"]["pass"]
+        self.assertTrue(allowed(gpu, rows))
+        self.assertFalse(allowed(gpu, [{**rows[0], "path": r"C:\Temp\ChatGPT.exe"}]))
+        self.assertFalse(allowed({**gpu, "utilization_percent": 70}, rows))
+        self.assertFalse(allowed({**gpu, "vram_used_mib": 4096}, rows))
+
     def test_wsl_observer_only_enumerates_running_distros_never_executes_inside(self):
         called = []
 

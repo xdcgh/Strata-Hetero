@@ -26,6 +26,19 @@ DISPLAY_ALLOWLIST = {
 }
 
 
+def _idle_codex_desktop(path: Any, gpus: list[dict[str, Any]]) -> bool:
+    """The installed desktop running this task may hold a small graphics/compute context."""
+    if not isinstance(path, str):
+        return False
+    apps = ntpath.normpath(ntpath.join(os.environ.get("ProgramFiles", r"C:\Program Files"), "WindowsApps"))
+    pattern = (re.escape(apps) + r"\\OpenAI\.Codex_\d+(?:\.\d+){3}_x64__2p2nqsd0c76g0\\app\\ChatGPT\.exe")
+    if re.fullmatch(pattern, ntpath.normpath(path), flags=re.IGNORECASE) is None:
+        return False
+    return bool(gpus) and all(
+        type(g.get("utilization_percent")) in (int, float) and 0 <= g["utilization_percent"] <= 5
+        and type(g.get("vram_used_mib")) is int and 0 <= g["vram_used_mib"] <= 2048 for g in gpus)
+
+
 def _execute(args: list[str], runner: Runner, *, text: bool = True) -> subprocess.CompletedProcess[Any]:
     command = Path(args[0]).name if args else "command"
     try:
@@ -135,7 +148,7 @@ def evaluate(raw: dict[str, Any], required_vram_mib: int, minimum_ram_gib: float
                     blocked.append({"pid": row.get("pid"), "reason": "process identity unknown"})
                 elif re.search(r"strata|python|comfy", name + " " + (path or ""), re.IGNORECASE):
                     blocked.append({"pid": row.get("pid"), "reason": "Strata/Python/ComfyUI process present"})
-                elif base not in DISPLAY_ALLOWLIST:
+                elif base not in DISPLAY_ALLOWLIST and not _idle_codex_desktop(path, gpu_data.get("gpus", [])):
                     blocked.append({"pid": row.get("pid"), "reason": "unapproved GPU process"})
             passed = not blocked
             gates["gpu_processes"] = {"pass": passed, "blocked": blocked,

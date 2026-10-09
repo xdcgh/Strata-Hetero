@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "source": {
+    "sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2"
+  },
+  "config": {
+    "sha256": "1aaf889581f75662c4d813413428c296445988bbe11686b513c741653e9fbbaa",
+    "scope": "quality",
+    "prompt_cache": 0,
+    "deterministic_placement": true,
+    "resident_budget_gib": 20,
+    "expert_file_io": "explicit buffered",
+    "capture_actual_engine_token_ids": true
+  },
+  "model": {
+    "id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "native_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "integrity_manifest": "../20261008-00-admission/model-integrity-02.json",
+    "integrity_status": "full size/SHA pass retained; current identities revalidated before model request",
+    "historical_manifest": "../20261006-00-inventory/historical-manifest.json"
+  },
+  "engine": {
+    "version": "0.1.40.4",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream-04\\strata.exe",
+    "sha256": "7ca324c2792ef4deda57eb77f1b2b38c4c10ac77d0a890acbeb283dd559eeb2f"
+  },
+  "server_python": {
+    "checkout_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "server_file_sha256": "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+    "quality_capture_opt_in": true,
+    "scope": "same reviewed Python bridge in all arms; C++ inputs identified separately"
+  },
+  "acceptance_status": "prepared_not_launched"
+}
