@@ -432,6 +432,8 @@ def build_openvino_model(spec: VisionSpec, arrays: Mapping[str, Any], identity: 
         raise VisionPortError(f"arithmetic_policy must be one of {ARITHMETIC_POLICIES}")
     known_taps = {"patch_merge", "positioned", "pre_norm", "post_norm", "merged", "projection"}
     known_taps.update(f"block.{i}" for i in range(spec.blocks))
+    known_taps.update(f"ln1.{i}" for i in (0, 1, 26) if i < spec.blocks)
+    known_taps.add("qkv.0")
     if len(set(output_taps)) != len(output_taps) or set(output_taps) - known_taps:
         raise VisionPortError("duplicate or unsupported diagnostic output tap")
     validate_decoded_weights(spec, arrays, identity)
@@ -548,7 +550,13 @@ def build_openvino_model(spec: VisionSpec, arrays: Mapping[str, Any], identity: 
 
     for i in range(spec.blocks):
         prefix = f"v.blk.{i}."
-        qkv = split(linear(norm(hidden, prefix + "ln1"), prefix + "attn_qkv"), 3)
+        normed = norm(hidden, prefix + "ln1")
+        projected_qkv = linear(normed, prefix + "attn_qkv")
+        if i in (0, 1, 26):
+            taps[f"ln1.{i}"] = normed
+        if i == 0:
+            taps["qkv.0"] = projected_qkv
+        qkv = split(projected_qkv, 3)
         q, k, v = [transpose(reshape(value, [n, h, d]), [1, 0, 2]) for value in qkv]
         q, k = rope(q), rope(k)
         scale = _f32(1.0 / _f32(math.sqrt(d)))  # clip.cpp:264 uses 1.0f / sqrtf(d_head)

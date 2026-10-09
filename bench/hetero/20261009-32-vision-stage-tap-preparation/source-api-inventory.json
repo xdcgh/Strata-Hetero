@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "status": "read_only_feasibility_not_implemented_not_run",
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "source_checkout_clean_during_review": true,
+  "callback_registration": [
+    "tools/mtmd/mtmd.h:97-113 mtmd_context_params.cb_eval/cb_eval_user_data",
+    "tools/mtmd/mtmd.cpp:568-576 forwards callback to clip_context_params",
+    "tools/mtmd/clip.cpp:220-225 ggml_backend_sched_set_eval_callback",
+    "ggml/include/ggml-backend.h:309-316 callback bool(tensor, ask, userdata)",
+    "ggml/src/ggml-backend.cpp:1805-1830 selected range compute then backend synchronize and observe"
+  ],
+  "copy_api": "ggml_backend_tensor_get with GGML_TYPE_F32, ggml_is_contiguous, ne/nb/byte-budget validation",
+  "selected_transformer_layers": [
+    0,
+    1,
+    26
+  ],
+  "global_post_norm_suffix": 27,
+  "stage_selectors": {
+    "patch_merge": "patch_bias",
+    "positioned": "inp_pos_emb",
+    "ln1": [
+      "ln1-0",
+      "ln1-1",
+      "ln1-26"
+    ],
+    "first_qkv": "Qcur-0 src[0]/view_src contiguous post-bias combined QKV parent",
+    "block": [
+      "layer_out-0",
+      "layer_out-1",
+      "layer_out-26"
+    ],
+    "post_norm": "norm_b-27",
+    "merged": "norm_b-27 (reshaped), view offset zero"
+  },
+  "axis_contract": {
+    "activations_ggml": [
+      1152,
+      "N",
+      1,
+      1
+    ],
+    "activations_numpy": [
+      "N",
+      1152
+    ],
+    "qkv_ggml": [
+      3456,
+      "N",
+      1,
+      1
+    ],
+    "qkv_numpy": [
+      "N",
+      3456
+    ],
+    "q_view_ggml": [
+      72,
+      16,
+      "N",
+      1
+    ],
+    "q_view_nb1_bytes": 288,
+    "q_view_nb2_bytes": 13824,
+    "merged_ggml": [
+      4608,
+      "N/4",
+      1,
+      1
+    ],
+    "merged_numpy": [
+      "N/4",
+      4608
+    ],
+    "type": "F32",
+    "N_allowed": [
+      36,
+      72
+    ]
+  },
+  "budget": {
+    "maximum_per_image_bytes": 16777216,
+    "largest_selected_capture_bytes": 4313088,
+    "formal_capture_count": 3,
+    "largest_three_formal_capture_bytes": 12939264,
+    "warmup_taps_enabled": false,
+    "weights_dumped": false
+  },
+  "current_run31_monitor_limitation": {
+    "reported_by": "root independent review",
+    "recorded_owner_pid": 19424,
+    "recorded_owner_role": "E-venv launcher",
+    "actual_runtime_executable": "C:\\Python314\\python.exe",
+    "actual_runtime_pid_recorded_by_guard": null,
+    "launcher_rss_is_runtime_peak": false,
+    "current_global_memory_gate_evidence_valid": true,
+    "memory_gate_abort_occurred": false,
+    "stop_path_covers_actual_runtime_tree_verified": false,
+    "original_receipts_rewritten": false,
+    "future_requirement": "Bind launcher and all exact runtime descendants by PID/create-time/exe/argv before blocking calls; stop and reap verified owned tree on failed/unknown12/4 gate; no generic process-name kill."
+  },
+  "runtime_gaps": [
+    "Stage callback coverage not run; missing names/shapes/types must fail closed.",
+    "LN1/QKV OpenVINO output aliases need root-reviewed instrumentation.",
+    "Instrumented final-output fingerprints must preserve the frozen references.",
+    "Sticky callback failure and post-encode completeness are needed because callback false only breaks the current split loop."
+  ],
+  "source_hashes": {
+    "tools/mtmd/mtmd.h": "5a9fa6ddc92959dd2d3e91ce00c2a7c9ecba11598c8a789d1f807452a3f19d05",
+    "tools/mtmd/mtmd.cpp": "16ca200494443e760c215a71ebfbabf8d294ab662b6458c03592bbcea6b4eff3",
+    "tools/mtmd/clip.h": "0045773ab7bf19dceb45635f5ab6ce92bed9b4b8ac853f93295137e2f29761af",
+    "tools/mtmd/clip.cpp": "13f10801842caed2e77018da8546a31e4fd248a82a56761039957cfe6e43fd2d",
+    "tools/mtmd/models/qwen3vl.cpp": "ae7a9472feb4322abdf20621237e3e7448d207bc0427c315d869300df63ab1b4",
+    "ggml/include/ggml-backend.h": "0305a9742164ae118ef0490a720971934938c9e62cb174ccd68babf1992fa9c0",
+    "ggml/src/ggml-backend.cpp": "d67dd319e7c1205934c95abd9b0006d0df46837c084f157b41369a9969a46b97",
+    "ggml/include/ggml.h": "62e4d28730f96924bfc3ec46771b38c30a8d4397584769fd636d6327354d5430",
+    "ggml/src/ggml.c": "28f8e72ba3f96e044c78b7a6f75511a9afdc61d5ef5a14de00969f2faa55fff1",
+    "ggml/src/ggml-cpu/ggml-cpu.cpp": "cfe48ce9f3479a6fc185420394088ffcb76e035ba134076bac362a29fd94e16d"
+  },
+  "source_patch_performed": false,
+  "compilation_performed": false,
+  "stage_runtime_performed": false,
+  "gpu_npu_work_performed": false,
+  "vision_api_changed": false,
+  "commit_created_by_agent": false,
+  "created_utc": "2026-10-09T10:01:47.0446010Z"
+}

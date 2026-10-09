@@ -1,0 +1,18 @@
+{
+  "phase": "fixture-compile",
+  "utc": "2026-10-09T10:54:58.8056426Z",
+  "pid": 8600,
+  "create_utc": "2026-10-09T10:54:58.7982244Z",
+  "priority": "Idle",
+  "argv": [
+    "/d",
+    "/c",
+    "call",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-39-vision-stage-cpu-build\\fixture-compile.cmd"
+  ],
+  "actual_executed_script": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-39-vision-stage-cpu-build\\fixture-compile.cmd",
+  "script_sha256": "fec68678bf9d45ce094f61999d8088a71d64884c7d21016e2448b1ef3a55b36e",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\" /nologo /std:c++17 /EHsc /O2 /MT /arch:AVX2 /I\"E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\" /Fo\"E:\\Strata-Hetero-data\\build\\vision-stage-fixture-20261009-39\\fixture.obj\" /Fe\"E:\\Strata-Hetero-data\\build\\vision-stage-fixture-20261009-39\\vision-stage-trace-fixture.exe\" \"C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tests\\core\\vision_stage_trace_test.cpp\"",
+  "ended_utc": "2026-10-09T10:55:03.1906226Z",
+  "exit_code": 0
+}

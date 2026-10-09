@@ -1,0 +1,18 @@
+{
+  "reviewed_utc": "2026-10-09T11:04:10.795829+00:00",
+  "status": "host_fixture_build_verified_actual_stage_runtime_pending",
+  "root_rehashed_new_binary": "f01aa1f111931e4f24c2003d65bd3ab853370c7c1b7f7a8f62900d6b2c7a7c6d",
+  "root_rehashed_original_oracle": "7285dd08f24c3985fd6b97aaff7d9917b65e5ea8b263ae5567985d0dc04ba612",
+  "fixture_exit": 0,
+  "helper_build_exit": 0,
+  "root_related_python_tests_passed": 63,
+  "real_stage_captures": 0,
+  "npu_enabled": false,
+  "source_sha256": {
+    "tools/vision/strata_vision.cpp": "4dfef2f542fbdf7f30bfd5ddb39eaf0ffdf40f78113054575365a86f81933e17",
+    "tools/vision/vision_stage_trace.hpp": "6369605aed47b31aaeeda56a96c5037a8f00c9d47d6f776adde36e6a30e0d6dc",
+    "tests/core/vision_stage_trace_test.cpp": "2da48c784fbfb3c3ad07ee180a4a9ae39267cf08217841e8caad3de62c21df8d",
+    "tools/hetero_vision_qwen3vl.py": "7888d8d1c7c1be3fa919aaed5691038467d4b1d53d884747da279c6fffec482e",
+    "tools/hetero_vision_cpu_compare.py": "60511797bda4d466096ccdb04dcbc279c5537323ca460643ee1d0a4b04ef4230"
+  }
+}

@@ -1,0 +1,746 @@
+[
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /FoCMakeFiles\\strata-vision.dir\\strata_vision.cpp.obj /FdCMakeFiles\\strata-vision.dir\\ /FS -c C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\vision\\strata_vision.cpp",
+  "file": "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/tools/vision/strata_vision.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/CMakeFiles/strata-vision.dir/strata_vision.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml.c.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/ggml.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-alloc.c.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-alloc.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-alloc.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-backend.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-backend.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-backend.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-backend-meta.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-backend-meta.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-backend-meta.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-opt.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-opt.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-opt.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-threading.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-threading.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-threading.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-quants.c.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-quants.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-quants.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\gguf.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\gguf.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/gguf.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml.dir\\ggml-backend-dl.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml.dir\\ggml.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-backend-dl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-backend-dl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml.dir/ggml-backend-dl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml.dir\\ggml-backend-reg.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml.dir\\ggml.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-backend-reg.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-backend-reg.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\ggml-cpu.c.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/ggml-cpu.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\ggml-cpu.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/ggml-cpu.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\repack.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\repack.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/repack.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\iqp.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\iqp.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/iqp.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/iqp.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\hbm.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\hbm.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/hbm.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\quants.c.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\quants.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/quants.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\traits.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\traits.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/traits.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\amx\\amx.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\amx\\amx.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/amx/amx.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\amx\\mmq.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\amx\\mmq.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/amx/mmq.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\binary-ops.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\binary-ops.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/binary-ops.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\unary-ops.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\unary-ops.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/unary-ops.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\vec.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\vec.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/vec.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\ops.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ops.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/ops.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\llamafile\\sgemm.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\llamafile\\sgemm.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/llamafile/sgemm.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/llamafile/sgemm.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\arch\\x86\\quants.c.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\arch\\x86\\quants.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/arch/x86/quants.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\arch\\x86\\repack.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\arch\\x86\\repack.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/arch/x86/repack.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_9_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_9_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_9_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_9_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_8_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_8_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_8_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_8_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_7_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_7_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_7_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_7_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_6_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_6_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_6_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_6_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_5_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_5_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_5_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_5_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_4_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_4_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_4_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_4_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_3_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_3_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_3_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_3_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_2_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_2_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_2_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_2_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_1_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_1_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_1_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_1_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_0_cxx.cxx.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src\\CMakeFiles\\llama.dir\\Unity\\unity_0_cxx.cxx",
+  "file": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_0_cxx.cxx",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/Unity/unity_0_cxx.cxx.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-adapter.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-adapter.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-adapter.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-adapter.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-arch.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-arch.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-arch.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-arch.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-batch.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-batch.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-batch.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-batch.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-chat.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-chat.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-chat.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-chat.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-context.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-context.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-context.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-context.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-cparams.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-cparams.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-cparams.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-cparams.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-grammar.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-grammar.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-grammar.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-grammar.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-graph.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-graph.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-graph.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-graph.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-hparams.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-hparams.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-hparams.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-hparams.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-impl.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-impl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-impl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-impl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-io.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-io.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-io.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-io.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-kv-cache.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-kv-cache.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-kv-cache.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-kv-cache.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-kv-cache-iswa.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-kv-cache-iswa.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-kv-cache-iswa.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-kv-cache-iswa.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-kv-cache-dsa.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-kv-cache-dsa.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-kv-cache-dsa.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-kv-cache-dsa.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-kv-cache-dsa-iswa.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-kv-cache-dsa-iswa.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-kv-cache-dsa-iswa.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-kv-cache-dsa-iswa.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-kv-cache-msa.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-kv-cache-msa.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-kv-cache-msa.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-kv-cache-msa.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-kv-cache-dsv4.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-kv-cache-dsv4.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-kv-cache-dsv4.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-kv-cache-dsv4.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-memory.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-memory.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-memory.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-memory.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-memory-hybrid.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-memory-hybrid.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-memory-hybrid.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-memory-hybrid.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-memory-hybrid-iswa.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-memory-hybrid-iswa.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-memory-hybrid-iswa.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-memory-hybrid-iswa.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-memory-hybrid-idx.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-memory-hybrid-idx.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-memory-hybrid-idx.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-memory-hybrid-idx.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-memory-recurrent.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-memory-recurrent.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-memory-recurrent.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-memory-recurrent.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-mmap.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-mmap.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-mmap.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-mmap.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-model-loader.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-model-loader.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-model-loader.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-model-loader.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-model-saver.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-model-saver.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-model-saver.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-model-saver.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-model.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-model.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-model.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-model.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-quant.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-quant.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-quant.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-quant.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-sampler.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-sampler.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-sampler.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-sampler.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\llama-vocab.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\llama-vocab.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/llama-vocab.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/llama-vocab.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\unicode-data.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\unicode-data.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/unicode-data.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/unicode-data.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\. -IE:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\llama\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\src\\CMakeFiles\\llama.dir\\unicode.cpp.obj /Fdllama\\src\\CMakeFiles\\llama.dir\\llama.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\unicode.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/src/unicode.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/src/CMakeFiles/llama.dir/unicode.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\vendor\\hash\\CMakeFiles\\vendor-hash.dir\\hash.cpp.obj /Fdllama\\vendor\\hash\\CMakeFiles\\vendor-hash.dir\\vendor-hash.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\hash.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/vendor/hash/hash.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/vendor/hash/CMakeFiles/vendor-hash.dir/hash.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\. /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MT /utf-8 /bigobj /w /Follama\\vendor\\hash\\CMakeFiles\\vendor-hash.dir\\xxhash\\xxhash.c.obj /Fdllama\\vendor\\hash\\CMakeFiles\\vendor-hash.dir\\vendor-hash.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\xxhash\\xxhash.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/vendor/hash/xxhash/xxhash.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/vendor/hash/CMakeFiles/vendor-hash.dir/xxhash/xxhash.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /w /Follama\\vendor\\hash\\CMakeFiles\\vendor-hash.dir\\sha1\\sha1.c.obj /Fdllama\\vendor\\hash\\CMakeFiles\\vendor-hash.dir\\vendor-hash.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\sha1\\sha1.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/vendor/hash/sha1/sha1.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/vendor/hash/CMakeFiles/vendor-hash.dir/sha1/sha1.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\. /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MT /utf-8 /bigobj /w /Follama\\vendor\\hash\\CMakeFiles\\vendor-hash.dir\\sha256\\sha256.c.obj /Fdllama\\vendor\\hash\\CMakeFiles\\vendor-hash.dir\\vendor-hash.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\sha256\\sha256.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/vendor/hash/sha256/sha256.c",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/vendor/hash/CMakeFiles/vendor-hash.dir/sha256/sha256.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\mtmd.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/mtmd.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/mtmd.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd-audio.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\mtmd-audio.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/mtmd-audio.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/mtmd-audio.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd-image.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\mtmd-image.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/mtmd-image.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/mtmd-image.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd-helper.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\mtmd-helper.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/mtmd-helper.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd-helper-gen.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\mtmd-helper-gen.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/mtmd-helper-gen.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper-gen.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\clip.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\clip.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/clip.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/clip.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\cogvlm.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\cogvlm.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/cogvlm.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/cogvlm.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\conformer.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\conformer.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/conformer.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/conformer.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\deepseek4v.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\deepseek4v.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/deepseek4v.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/deepseek4v.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\dots3note.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\dots3note.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/dots3note.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/dots3note.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\dotsocr.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\dotsocr.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/dotsocr.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/dotsocr.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\exaone4_5.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\exaone4_5.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/exaone4_5.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/exaone4_5.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\gemma4a.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\gemma4a.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/gemma4a.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4a.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\gemma4v.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\gemma4v.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/gemma4v.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4v.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\gemma4ua.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\gemma4ua.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/gemma4ua.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4ua.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\gemma4uv.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\gemma4uv.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/gemma4uv.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4uv.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\glm4v.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\glm4v.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/glm4v.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/glm4v.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\granite-speech.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\granite-speech.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/granite-speech.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/granite-speech.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\granite4-vision.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\granite4-vision.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/granite4-vision.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/granite4-vision.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\hunyuanvl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\hunyuanvl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/hunyuanvl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/hunyuanvl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\internvl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\internvl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/internvl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/internvl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\kimivl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\kimivl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/kimivl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/kimivl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\kimik25.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\kimik25.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/kimik25.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/kimik25.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\nemotron-v2-vl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\nemotron-v2-vl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/nemotron-v2-vl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/nemotron-v2-vl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\muse-glimmer.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\muse-glimmer.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/muse-glimmer.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/muse-glimmer.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\llama4.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\llama4.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/llama4.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/llama4.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\llava.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\llava.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/llava.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/llava.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\minicpmv.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\minicpmv.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/minicpmv.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/minicpmv.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\paddleocr.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\paddleocr.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/paddleocr.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/paddleocr.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\pixtral.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\pixtral.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/pixtral.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/pixtral.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\qwen2vl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\qwen2vl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/qwen2vl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/qwen2vl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\minimax-m3.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\minimax-m3.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/minimax-m3.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/minimax-m3.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\qwen3vl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\qwen3vl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/qwen3vl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3vl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\mimovl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\mimovl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/mimovl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/mimovl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\qwen3a.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\qwen3a.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/qwen3a.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3a.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\mimo-audio.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\mimo-audio.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/mimo-audio.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/mimo-audio.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\qwen3tts-spkenc.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\qwen3tts-spkenc.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/qwen3tts-spkenc.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3tts-spkenc.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\qwen3tts-gen.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\qwen3tts-gen.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/qwen3tts-gen.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3tts-gen.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\pockettts-seanet.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\pockettts-seanet.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/pockettts-seanet.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-seanet.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\pockettts-spkenc.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\pockettts-spkenc.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/pockettts-spkenc.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-spkenc.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\pockettts-gen.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\pockettts-gen.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/pockettts-gen.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-gen.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\step3vl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\step3vl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/step3vl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/step3vl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\siglip.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\siglip.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/siglip.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/siglip.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\whisper-enc.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\whisper-enc.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/whisper-enc.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/whisper-enc.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\deepseekocr.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\deepseekocr.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/deepseekocr.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/deepseekocr.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\deepseekocr2.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\deepseekocr2.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/deepseekocr2.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/deepseekocr2.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\mobilenetv5.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\mobilenetv5.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/mobilenetv5.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/mobilenetv5.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\youtuvl.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\youtuvl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/youtuvl.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/youtuvl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\yasa2.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\yasa2.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/yasa2.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/yasa2.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_USE_CPU -DMTMD_VIDEO -D_CRT_SECURE_NO_WARNINGS -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\src\\..\\include -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\hash\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\miniaudio\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\stb\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\vendor\\sheredom\\.. /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /Follama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\models\\parakeet.cpp.obj /Fdllama\\tools\\mtmd\\CMakeFiles\\mtmd.dir\\mtmd.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\tools\\mtmd\\models\\parakeet.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/tools/mtmd/models/parakeet.cpp",
+  "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/tools/mtmd/CMakeFiles/mtmd.dir/models/parakeet.cpp.obj"
+}
+]

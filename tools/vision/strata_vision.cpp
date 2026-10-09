@@ -5,12 +5,13 @@
 // rows at the image's pad tokens and gives them their 2-D M-RoPE positions (see --serve GENI in generate.cpp).
 //
 //   strata-vision --mmproj <mmproj.gguf> --model <text model .gguf, first split> [--gpu] [--threads N]
-//                 [--max-tokens N] [--min-tokens N] [--flash-attn on|off|auto]
+//                 [--max-tokens N] [--min-tokens N] [--flash-attn on|off|auto] [--enable-stage-taps]
 // Flash attention defaults to auto, and to off on the CPU when ggml is built with AVX-512 (see main).
 //
 // Resident: prints "READY <n_embd>", then per stdin line
 //   ENC <image path> <output path>   ->  "OK <n_tokens> <nx> <ny> <ms>"  or  "ERR <message>"
 //   QUIT
+// CPU opt-in: ENC_TAPS <image> <output> <new-prefix-directory>; normal ENC never captures stages.
 // The output file is  int32 {0x31455653 'SVE1', n_tokens, nx, ny, n_embd}  then float32 [n_tokens][n_embd],
 // row i at grid position (x = i % nx, y = i / nx).  The text model is opened vocab-only (no weights).
 #include "ggml-cpu.h"
@@ -18,6 +19,7 @@
 #include "llama.h"
 #include "mtmd.h"
 #include "mtmd-helper.h"
+#include "vision_stage_trace.hpp"
 
 #include <algorithm>
 #if !defined(_WIN32)
@@ -57,6 +59,8 @@ bool parse_enc(const std::string& line, std::string& img, std::string& out) {
 int main(int argc, char** argv) {
     std::string mmproj, model;
     bool gpu = false;
+    bool stage_taps_enabled = false;
+    VisionStageTrace stage_trace;
     int threads = 0, max_tokens = 0, min_tokens = 0;
     llama_flash_attn_type fa = LLAMA_FLASH_ATTN_TYPE_AUTO;
     bool fa_given = false;
@@ -69,6 +73,7 @@ int main(int argc, char** argv) {
         if (a == "--mmproj") mmproj = next();
         else if (a == "--model") model = next();
         else if (a == "--gpu") gpu = true;
+        else if (a == "--enable-stage-taps") stage_taps_enabled = true;
         else if (a == "--threads") threads = std::atoi(next().c_str());
         else if (a == "--max-tokens") max_tokens = std::atoi(next().c_str());
         else if (a == "--min-tokens") min_tokens = std::atoi(next().c_str());   // mtmd image_min_tokens (#767)
@@ -82,9 +87,10 @@ int main(int argc, char** argv) {
     }
     if (mmproj.empty() || model.empty()) {
         std::fprintf(stderr, "usage: strata-vision --mmproj <mmproj.gguf> --model <model.gguf> [--gpu] [--threads N] "
-                             "[--max-tokens N] [--min-tokens N] [--flash-attn on|off|auto]\n");
+                             "[--max-tokens N] [--min-tokens N] [--flash-attn on|off|auto] [--enable-stage-taps]\n");
         return 2;
     }
+    if (stage_taps_enabled && gpu) { std::fprintf(stderr,"stage taps require CPU mode\n"); return 2; }
     // On the CPU the GPU stays unseen: a CUDA build otherwise opens a context there (measured: 0.4-0.7 GB of VRAM,
     // 150-260 expert slots less for the engine beside it).  Before anything reaches the CUDA runtime.
     if (!gpu) {
@@ -121,6 +127,7 @@ int main(int argc, char** argv) {
     cp.use_gpu = gpu;
     cp.print_timings = false;
     cp.warmup = false;
+    if (stage_taps_enabled) { cp.cb_eval = VisionStageTrace::callback; cp.cb_eval_user_data = &stage_trace; }
     // On the CPU "auto" turns flash attention on.  ggml's fast (tiled) CPU kernel for it needs the head size, 72 in this
     // encoder, to be a multiple of the vector width: 8 floats with AVX2 (the release builds), 16 with AVX-512 (a build
     // from source on a CPU that has it), where ggml falls back to a kernel that is several times slower and accumulates
@@ -187,8 +194,16 @@ int main(int argc, char** argv) {
     while (std::getline(std::cin, line)) {
         while (!line.empty() && (line.back() == '\r' || line.back() == '\n')) line.pop_back();
         if (line == "QUIT") break;
-        std::string img, out;
-        if (!parse_enc(line, img, out)) { std::printf("ERR expected: ENC <image> <output>\n"); std::fflush(stdout); continue; }
+        std::string img, out, tap_prefix, command = line;
+        const bool capture_taps = line.rfind("ENC_TAPS ",0) == 0;
+        stage_trace.disarm();
+        if (capture_taps) {
+            if (!stage_taps_enabled) { std::printf("ERR stage taps are not enabled\n"); std::fflush(stdout); continue; }
+            const size_t split = line.rfind(' ');
+            if (split == std::string::npos || split <= 9 || split + 1 == line.size()) { std::printf("ERR expected: ENC_TAPS <image> <output> <prefix>\n"); std::fflush(stdout); continue; }
+            tap_prefix = line.substr(split + 1); command = "ENC " + line.substr(9,split - 9);
+        }
+        if (!parse_enc(command, img, out)) { std::printf("ERR expected: ENC <image> <output>\n"); std::fflush(stdout); continue; }
         const auto t0 = std::chrono::steady_clock::now();
         mtmd_helper_bitmap_wrapper bw = mtmd_helper_bitmap_init_from_file(ctx, img.c_str(), false,
                                                                             mtmd_helper_init_opt_default());
@@ -205,7 +220,13 @@ int main(int argc, char** argv) {
             if (mtmd_input_chunk_get_type(ch) == MTMD_INPUT_CHUNK_TYPE_IMAGE) ichunk = ch;
         }
         if (err.empty() && !ichunk) err = "no image chunk";
+        if (err.empty() && capture_taps) {
+            try { stage_trace.begin(img,out,tap_prefix); }
+            catch (const std::exception& e) { err = std::string("stage_taps: ")+e.what(); }
+            catch (...) { err = "stage_taps: unknown prefix initialization failure"; }
+        }
         if (err.empty() && mtmd_encode_chunk(ctx, ichunk) != 0) err = "the vision encoder failed";
+        if (capture_taps) { const auto tap_error=stage_trace.finish(err.empty()); if (!tap_error.empty()) err=tap_error; }
         if (err.empty()) {
             const mtmd_image_tokens* it = mtmd_input_chunk_get_tokens_image(ichunk);
             const int n = (int) mtmd_input_chunk_get_n_tokens(ichunk);
@@ -214,13 +235,14 @@ int main(int argc, char** argv) {
             const int nx = (int) last.x + 1, ny = (int) last.y + 1;
             if (nx * ny != n) err = "the image grid is not rectangular (" + std::to_string(n) + " tokens)";
             const float* embd = mtmd_get_output_embd(ctx);
-            FILE* f = err.empty() ? std::fopen(out.c_str(), "wb") : nullptr;
+            FILE* f = err.empty() ? (capture_taps ? VisionStageTrace::exclusive_output(out) : std::fopen(out.c_str(), "wb")) : nullptr;
             if (err.empty() && !f) err = "cannot write " + out;
             if (f) {
                 const int32_t hdr[5] = {0x31455653, n, nx, ny, n_embd};
-                const bool ok = std::fwrite(hdr, sizeof hdr, 1, f) == 1 &&
+                bool ok = std::fwrite(hdr, sizeof hdr, 1, f) == 1 &&
                                 std::fwrite(embd, sizeof(float) * (size_t) n_embd, (size_t) n, f) == (size_t) n;
-                std::fclose(f);
+                const int closed = std::fclose(f);
+                if (capture_taps && closed != 0) ok = false;
                 if (!ok) err = "short write to " + out;
                 const double ms = std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - t0).count();
                 if (ok) std::printf("OK %d %d %d %.0f\n", n, nx, ny, ms);

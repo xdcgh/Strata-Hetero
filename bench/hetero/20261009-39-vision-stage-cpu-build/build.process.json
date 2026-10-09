@@ -1,0 +1,16 @@
+{
+  "phase": "build",
+  "utc": "2026-10-09T10:55:10.0667849Z",
+  "pid": 20688,
+  "create_utc": "2026-10-09T10:55:10.0615088Z",
+  "priority": "Idle",
+  "argv": [
+    "/d",
+    "/c",
+    "call",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-39-vision-stage-cpu-build\\build.cmd"
+  ],
+  "actual_executed_script": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-39-vision-stage-cpu-build\\build.cmd",
+  "script_sha256": "beccd4ef5e4de32a3568364d7f8dde2492b9b96db6fe390998be663849a51188",
+  "command": "\"E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe\" --build \"E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\" --target strata-vision --parallel 1"
+}

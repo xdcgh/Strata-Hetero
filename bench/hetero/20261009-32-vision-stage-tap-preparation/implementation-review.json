@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "implemented_pending_root_diff_review_native_build_not_run",
+  "native_header": "tools/vision/vision_stage_trace.hpp",
+  "native_header_lines": 172,
+  "native_fixture": "tests/core/vision_stage_trace_test.cpp",
+  "native_fixture_compiled": false,
+  "native_fixture_executed": false,
+  "helper_compiled": false,
+  "helper_invoked": false,
+  "stage_runtime_performed": false,
+  "pure_python_tests": [
+    "test_ln1_qkv_aliases_reuse_computed_values_without_changing_projection",
+    "test_new_alias_contract_validates_without_payload_or_runtime"
+  ],
+  "pure_python_test_count": 2,
+  "pure_python_test_exit_code": 0,
+  "cpp_capture_stage_count": 11,
+  "per_image_raw_byte_cap": 16777216,
+  "max_formal_captures_per_canonical_image": 3,
+  "warmup_taps_enabled": false,
+  "default_enc_format_changed": false,
+  "nn_ggml_graph_operations_changed": false,
+  "optional_ov_aliases": [
+    "ln1.0",
+    "ln1.1",
+    "ln1.26",
+    "qkv.0"
+  ],
+  "real_gguf_payload_read": false,
+  "installed_openvino_imported": false,
+  "core_created": false,
+  "gpu_npu_work_performed": false,
+  "vision_api_changed": false,
+  "commit_created_by_agent": false,
+  "current_guard_actual_runtime_tree_issue_resolved": false,
+  "next_gate": "Root diff review, native-only synthetic fixture compilation, pinned helper build and verified-tree-guarded fingerprint checks before stage runtime acceptance.",
+  "created_utc": "2026-10-09T10:38:29.7956736Z",
+  "code_hashes": [
+    {
+      "path": "tools\\vision\\strata_vision.cpp",
+      "sha256": "4dfef2f542fbdf7f30bfd5ddb39eaf0ffdf40f78113054575365a86f81933e17"
+    },
+    {
+      "path": "tools\\vision\\vision_stage_trace.hpp",
+      "sha256": "6369605aed47b31aaeeda56a96c5037a8f00c9d47d6f776adde36e6a30e0d6dc"
+    },
+    {
+      "path": "tests\\core\\vision_stage_trace_test.cpp",
+      "sha256": "2da48c784fbfb3c3ad07ee180a4a9ae39267cf08217841e8caad3de62c21df8d"
+    },
+    {
+      "path": "tools\\hetero_vision_qwen3vl.py",
+      "sha256": "7888d8d1c7c1be3fa919aaed5691038467d4b1d53d884747da279c6fffec482e"
+    },
+    {
+      "path": "tools\\hetero_vision_cpu_compare.py",
+      "sha256": "60511797bda4d466096ccdb04dcbc279c5537323ca460643ee1d0a4b04ef4230"
+    },
+    {
+      "path": "tools\\test_hetero_vision_qwen3vl.py",
+      "sha256": "cfa0e9c5fd786f9c13540c34dffb8984b0b6816bfecdf70d5d735ebeb7a18e05"
+    },
+    {
+      "path": "tools\\test_hetero_vision_preparation.py",
+      "sha256": "520605eee67edbcf2400889519c2ae81c4413fa8aa061f1c0a671cbf9a3ff69f"
+    }
+  ]
+}

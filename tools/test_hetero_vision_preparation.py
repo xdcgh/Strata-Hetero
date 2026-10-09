@@ -161,6 +161,13 @@ class PreparationTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "completed CPU"):
                     compare.inspect()
 
+    def test_new_alias_contract_validates_without_payload_or_runtime(self):
+        _, _, _, _, metadata = compare.inspect(taps=("ln1.0", "ln1.1", "ln1.26", "qkv.0"))
+        self.assertEqual(metadata["output_taps"], ["ln1.0", "ln1.1", "ln1.26", "qkv.0"])
+        self.assertFalse(metadata["core_created"] or metadata["exported_arrays_read"])
+        with self.assertRaisesRegex(ValueError, "unknown or duplicate"):
+            compare.inspect(taps=("ln1.2",))
+
     def test_failed_memory_gate_preserves_receipt_before_asset_or_core_access(self):
         spec, inventory, fixtures, metadata = payload.inspect()
         _, _, refs, _, comparison_metadata = compare.inspect()

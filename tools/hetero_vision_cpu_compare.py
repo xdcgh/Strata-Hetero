@@ -48,6 +48,8 @@ def inspect(inventory_path=port.DEFAULT_INVENTORY, fixtures_path=payload.DEFAULT
         references[fixture["name"]] = item
     allowed_taps = {"patch_merge", "positioned", "pre_norm", "post_norm", "merged", "projection"}
     allowed_taps.update(f"block.{i}" for i in range(spec.blocks))
+    allowed_taps.update(f"ln1.{i}" for i in (0, 1, 26) if i < spec.blocks)
+    allowed_taps.add("qkv.0")
     if len(set(taps)) != len(taps) or set(taps) - allowed_taps:
         raise ValueError("unknown or duplicate diagnostic tap")
     exported = None

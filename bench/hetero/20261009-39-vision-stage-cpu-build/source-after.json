@@ -1,0 +1,26 @@
+[
+  {
+    "path": "tools\\vision\\strata_vision.cpp",
+    "sha256": "4dfef2f542fbdf7f30bfd5ddb39eaf0ffdf40f78113054575365a86f81933e17"
+  },
+  {
+    "path": "tools\\vision\\vision_stage_trace.hpp",
+    "sha256": "6369605aed47b31aaeeda56a96c5037a8f00c9d47d6f776adde36e6a30e0d6dc"
+  },
+  {
+    "path": "tools\\vision\\CMakeLists.txt",
+    "sha256": "2f513c4b8346d146863723c059246678ec84043fd61f663b3728abb01964fa53"
+  },
+  {
+    "path": "tools\\hetero_native_cpu\\sha256.hpp",
+    "sha256": "5bbdfb8733ec347de4c5ca990ce412cc1241854c5920f81a47ac331d32bc19d8"
+  },
+  {
+    "path": "tests\\core\\vision_stage_trace_test.cpp",
+    "sha256": "2da48c784fbfb3c3ad07ee180a4a9ae39267cf08217841e8caad3de62c21df8d"
+  },
+  {
+    "path": "bench\\hetero\\20261009-39-vision-stage-cpu-build\\run-build.ps1",
+    "sha256": "5282c3fc35bebf9e837dd656ebd3bd76b31bd14a1f97daedf99bb3d33f9edf6b"
+  }
+]

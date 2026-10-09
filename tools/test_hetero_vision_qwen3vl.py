@@ -450,6 +450,31 @@ class VisionPreparationTests(unittest.TestCase):
                      * (1 + 0.044715 * row[c] ** 2))) for c in (0, 8, 16, 24, 31)] for row in merged]
         np.testing.assert_allclose(model.outputs[0].value, expected, rtol=0, atol=6e-7)
 
+    def test_ln1_qkv_aliases_reuse_computed_values_without_changing_projection(self):
+        spec, arrays, identity = small_fixture()
+        for part, factor in enumerate((0.25, 0.5, 0.75)):
+            arrays["v.blk.0.attn_qkv.weight"][part * 8:(part + 1) * 8] = np.eye(8, dtype=np.float32) * np.float32(factor)
+        arrays["v.blk.0.attn_qkv.bias"][:] = np.arange(24, dtype=np.float32) / np.float32(32)
+        identity["weights_sha256"] = {name: port.decoded_array_sha256(array) for name, array in arrays.items()}
+        image = np.arange(3 * 4 * 8, dtype=np.float32).reshape(1, 3, 4, 8) / np.float32(128)
+        fake_ops = ArrayOps(image)
+        fake_ov = types.ModuleType("openvino")
+        fake_ov.opset13 = fake_ops
+        fake_ov.Model = lambda outputs, inputs, name: types.SimpleNamespace(outputs=outputs)
+        with mock.patch.dict(sys.modules, {"openvino": fake_ov, "openvino.opset13": fake_ops}):
+            baseline, _ = port.build_openvino_model(spec, arrays, identity, image_height=4, image_width=8,
+                                                    arithmetic_policy="graph_f32")
+            traced, _ = port.build_openvino_model(spec, arrays, identity, image_height=4, image_width=8,
+                arithmetic_policy="graph_f32", output_taps=("ln1.0", "qkv.0", "positioned"))
+        np.testing.assert_array_equal(baseline.outputs[0].value, traced.outputs[0].value)
+        positioned = traced.outputs[3].value
+        centered = positioned - positioned.mean(axis=1, keepdims=True)
+        expected_ln = centered / np.sqrt(np.mean(centered ** 2, axis=1, keepdims=True) + np.float32(spec.layer_norm_epsilon))
+        np.testing.assert_array_equal(traced.outputs[1].value, expected_ln)
+        expected_qkv = np.concatenate([expected_ln * np.float32(factor) for factor in (0.25, 0.5, 0.75)], axis=1)
+        expected_qkv += arrays["v.blk.0.attn_qkv.bias"]
+        np.testing.assert_array_equal(traced.outputs[2].value, expected_qkv)
+
 
 if __name__ == "__main__":
     unittest.main()
