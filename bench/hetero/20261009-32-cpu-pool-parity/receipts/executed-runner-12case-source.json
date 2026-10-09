@@ -1,0 +1,12 @@
+{
+  "schema": "native-cpu-pool-runner-source-freeze-v1",
+  "run_id": "20261009-32-cpu-pool-parity",
+  "source_git_commit": "dec404386f3c1a4726377e640b63484d286403ec",
+  "source_git_path": "bench/hetero/20261009-32-cpu-pool-parity/run_pool_parity.py",
+  "frozen_copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-32-cpu-pool-parity\\receipts\\executed-runner-12case.py",
+  "bytes": 17668,
+  "sha256": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+  "method": "raw git cat-file blob bytes; SHA-256 verified after exclusive copy",
+  "invocation": "C:\\Python314\\python.exe -B bench\\hetero\\20261009-32-cpu-pool-parity\\run_pool_parity.py --run --root-start-confirmed --vision-cpu-terminal-confirmed",
+  "status": "preserved-executed-source"
+}

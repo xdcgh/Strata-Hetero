@@ -1,0 +1,538 @@
+{
+  "schema": "native-cpu-pool-affinity-execution-contract-v2",
+  "run_id": "20261009-35-cpu-worker-affinity",
+  "status": "prepared_plan_only_root_review_required",
+  "execution_authorized": false,
+  "input_preparation_authorized": false,
+  "scope": "Exact byte parity and bounded CPU worker/affinity microcases for one real Q4_K/Q5_1 FFN expert; no model throughput or P/E labels.",
+  "execution_requires": [
+    "--run",
+    "--root-start-confirmed",
+    "--models-terminal-confirmed"
+  ],
+  "preparation_requires": [
+    "--prepare",
+    "--root-prepare-confirmed"
+  ],
+  "runner_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\run_cpu_affinity_sweep.py",
+  "runner_interpreter": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "source_files": {
+    "runner": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\run_cpu_affinity_sweep.py",
+      "sha256": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843"
+    },
+    "native_harness_source": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_bench.cpp",
+      "sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64"
+    },
+    "cpu_pool_header": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "sha256": "4255fd01ae6e55a650b2e81316202c5b9206e0ae2271cd9fa81edc3b27d33c1a"
+    },
+    "cpu_pool_source": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool.cpp",
+      "sha256": "e54f0c2fe6a297c4aa49a3a9efabab3166d8644f05385b9f7e2fa5e5d34f8eff"
+    },
+    "windows_affinity_helper": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool_affinity_win.hpp",
+      "sha256": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8"
+    },
+    "topology_collector": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_cpu_topology.py",
+      "sha256": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66"
+    },
+    "resource_sampler": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    "file_identity_helper": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_verify_existing.py",
+      "sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3"
+    },
+    "run32_executed_source": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-32-cpu-pool-parity\\receipts\\executed-runner-12case.py",
+      "sha256": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8"
+    }
+  },
+  "inputs_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\inputs-receipt.json",
+  "inputs_manifest_sha256": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+  "extraction_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-01-real-expert\\extraction-01.json",
+  "extraction_receipt_sha256": "e4b8083e5f8f39f04affcb99e4a292bdad92ecf132462499561bbaddbd9dac9d",
+  "expert_identity_path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+  "expert_identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "expert": {
+    "model": "Qwen3.8-Flash-Next Unsloth UD-Q4_K_XL",
+    "layer": 28,
+    "expert": 288,
+    "hidden": 2560,
+    "intermediate": 640,
+    "types": {
+      "gate": "Q4_K",
+      "up": "Q4_K",
+      "down": "Q5_1"
+    },
+    "blob_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+    "blob_bytes": 3072000,
+    "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f"
+  },
+  "blob_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+  "blob_bytes": 3072000,
+  "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+  "binary_path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+  "binary_bytes": 2158592,
+  "binary_sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+  "binary_source_sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+  "build_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-28-native-cpu-pool-build\\build-receipt.json",
+  "build_receipt_sha256": "04ab427e91c7f395e665f8f1662f770626ae594383b789011b590b8fa53e4e27",
+  "old_native_source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609",
+  "frozen_run32_source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-32-cpu-pool-parity\\receipts\\executed-runner-12case.py",
+  "frozen_run32_source_sha256": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+  "topology_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\cpu-topology-current-01.json",
+  "topology_receipt_sha256": "dbb2f655d6f790ce6306e258f83611163459963b2257f7b1c00292c18f3c2dd0",
+  "topology": {
+    "api": "GetSystemCpuSetInformation",
+    "collected_utc": "2026-10-09T11:35:33.853957+00:00",
+    "mutation_policy": "read-only; no affinity, priority, power, or process state changed",
+    "candidate_status": "candidate_only_no_performance_measurement",
+    "classification_basis": "windows EfficiencyClass ordering (higher class first; P/E names unverified)",
+    "classification_confidence": "unknown",
+    "core_type_claims": "unknown; no P/E/LP labels inferred",
+    "allowed_cpu_set_count": 16,
+    "efficiency_classes_numeric_only": {
+      "1": [
+        256,
+        257,
+        266,
+        267,
+        268,
+        269
+      ],
+      "0": [
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        270,
+        271
+      ]
+    }
+  },
+  "affinity_candidates": {
+    "all": {
+      "host_core_candidate": {
+        "cpu_set_id": 256,
+        "group": 0,
+        "logical_processor_index": 0,
+        "native_cpu_id": 0
+      },
+      "worker_candidates": [
+        {
+          "cpu_set_id": 257,
+          "group": 0,
+          "logical_processor_index": 1,
+          "native_cpu_id": 1
+        },
+        {
+          "cpu_set_id": 266,
+          "group": 0,
+          "logical_processor_index": 10,
+          "native_cpu_id": 10
+        },
+        {
+          "cpu_set_id": 267,
+          "group": 0,
+          "logical_processor_index": 11,
+          "native_cpu_id": 11
+        },
+        {
+          "cpu_set_id": 268,
+          "group": 0,
+          "logical_processor_index": 12,
+          "native_cpu_id": 12
+        },
+        {
+          "cpu_set_id": 269,
+          "group": 0,
+          "logical_processor_index": 13,
+          "native_cpu_id": 13
+        },
+        {
+          "cpu_set_id": 258,
+          "group": 0,
+          "logical_processor_index": 2,
+          "native_cpu_id": 2
+        },
+        {
+          "cpu_set_id": 259,
+          "group": 0,
+          "logical_processor_index": 3,
+          "native_cpu_id": 3
+        },
+        {
+          "cpu_set_id": 260,
+          "group": 0,
+          "logical_processor_index": 4,
+          "native_cpu_id": 4
+        },
+        {
+          "cpu_set_id": 261,
+          "group": 0,
+          "logical_processor_index": 5,
+          "native_cpu_id": 5
+        },
+        {
+          "cpu_set_id": 262,
+          "group": 0,
+          "logical_processor_index": 6,
+          "native_cpu_id": 6
+        },
+        {
+          "cpu_set_id": 263,
+          "group": 0,
+          "logical_processor_index": 7,
+          "native_cpu_id": 7
+        },
+        {
+          "cpu_set_id": 264,
+          "group": 0,
+          "logical_processor_index": 8,
+          "native_cpu_id": 8
+        },
+        {
+          "cpu_set_id": 265,
+          "group": 0,
+          "logical_processor_index": 9,
+          "native_cpu_id": 9
+        },
+        {
+          "cpu_set_id": 270,
+          "group": 0,
+          "logical_processor_index": 14,
+          "native_cpu_id": 14
+        },
+        {
+          "cpu_set_id": 271,
+          "group": 0,
+          "logical_processor_index": 15,
+          "native_cpu_id": 15
+        }
+      ]
+    },
+    "auto": {
+      "host_core_candidate": {
+        "cpu_set_id": 256,
+        "group": 0,
+        "logical_processor_index": 0,
+        "native_cpu_id": 0
+      },
+      "worker_candidates": [
+        {
+          "cpu_set_id": 257,
+          "group": 0,
+          "logical_processor_index": 1,
+          "native_cpu_id": 1
+        },
+        {
+          "cpu_set_id": 266,
+          "group": 0,
+          "logical_processor_index": 10,
+          "native_cpu_id": 10
+        },
+        {
+          "cpu_set_id": 267,
+          "group": 0,
+          "logical_processor_index": 11,
+          "native_cpu_id": 11
+        },
+        {
+          "cpu_set_id": 268,
+          "group": 0,
+          "logical_processor_index": 12,
+          "native_cpu_id": 12
+        },
+        {
+          "cpu_set_id": 269,
+          "group": 0,
+          "logical_processor_index": 13,
+          "native_cpu_id": 13
+        },
+        {
+          "cpu_set_id": 258,
+          "group": 0,
+          "logical_processor_index": 2,
+          "native_cpu_id": 2
+        },
+        {
+          "cpu_set_id": 259,
+          "group": 0,
+          "logical_processor_index": 3,
+          "native_cpu_id": 3
+        },
+        {
+          "cpu_set_id": 260,
+          "group": 0,
+          "logical_processor_index": 4,
+          "native_cpu_id": 4
+        },
+        {
+          "cpu_set_id": 261,
+          "group": 0,
+          "logical_processor_index": 5,
+          "native_cpu_id": 5
+        },
+        {
+          "cpu_set_id": 262,
+          "group": 0,
+          "logical_processor_index": 6,
+          "native_cpu_id": 6
+        },
+        {
+          "cpu_set_id": 263,
+          "group": 0,
+          "logical_processor_index": 7,
+          "native_cpu_id": 7
+        },
+        {
+          "cpu_set_id": 264,
+          "group": 0,
+          "logical_processor_index": 8,
+          "native_cpu_id": 8
+        },
+        {
+          "cpu_set_id": 265,
+          "group": 0,
+          "logical_processor_index": 9,
+          "native_cpu_id": 9
+        },
+        {
+          "cpu_set_id": 270,
+          "group": 0,
+          "logical_processor_index": 14,
+          "native_cpu_id": 14
+        },
+        {
+          "cpu_set_id": 271,
+          "group": 0,
+          "logical_processor_index": 15,
+          "native_cpu_id": 15
+        }
+      ]
+    },
+    "p-cores": {
+      "host_core_candidate": {
+        "cpu_set_id": 256,
+        "group": 0,
+        "logical_processor_index": 0,
+        "native_cpu_id": 0
+      },
+      "worker_candidates": [
+        {
+          "cpu_set_id": 257,
+          "group": 0,
+          "logical_processor_index": 1,
+          "native_cpu_id": 1
+        },
+        {
+          "cpu_set_id": 266,
+          "group": 0,
+          "logical_processor_index": 10,
+          "native_cpu_id": 10
+        },
+        {
+          "cpu_set_id": 267,
+          "group": 0,
+          "logical_processor_index": 11,
+          "native_cpu_id": 11
+        },
+        {
+          "cpu_set_id": 268,
+          "group": 0,
+          "logical_processor_index": 12,
+          "native_cpu_id": 12
+        },
+        {
+          "cpu_set_id": 269,
+          "group": 0,
+          "logical_processor_index": 13,
+          "native_cpu_id": 13
+        }
+      ]
+    }
+  },
+  "rows": [
+    1,
+    2,
+    4,
+    6,
+    10,
+    16
+  ],
+  "workers": [
+    1,
+    2,
+    4,
+    6,
+    10,
+    16
+  ],
+  "affinities": [
+    "none",
+    "all",
+    "auto",
+    "p-cores"
+  ],
+  "default_gate_rows": [
+    6,
+    10
+  ],
+  "frozen_reference_rows": [
+    1,
+    2,
+    4,
+    16
+  ],
+  "strict_pcore_candidate_limit": 5,
+  "warmup": 1,
+  "formal_repeats": 5,
+  "input_seed_base": 42,
+  "input_generator": "numpy.default_rng(42+rows).standard_normal((rows,2560),dtype=float32)*float32(0.25)",
+  "input_specs": [
+    {
+      "rows": 1,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+      "bytes": 10240,
+      "sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+      "source": "frozen native input manifest"
+    },
+    {
+      "rows": 2,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-002.f32",
+      "bytes": 20480,
+      "sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+      "source": "frozen native input manifest"
+    },
+    {
+      "rows": 4,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-004.f32",
+      "bytes": 40960,
+      "sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+      "source": "frozen native input manifest"
+    },
+    {
+      "rows": 6,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs\\input-006.f32",
+      "bytes": 61440,
+      "sha256": null,
+      "source": "exclusive seeded input; generation requires explicit approval",
+      "generator": {
+        "seed": 48,
+        "formula": "default_rng(42+rows).standard_normal((rows,2560),dtype=float32)*float32(0.25)",
+        "encoding": "little-endian float32"
+      }
+    },
+    {
+      "rows": 10,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs\\input-010.f32",
+      "bytes": 102400,
+      "sha256": null,
+      "source": "exclusive seeded input; generation requires explicit approval",
+      "generator": {
+        "seed": 52,
+        "formula": "default_rng(42+rows).standard_normal((rows,2560),dtype=float32)*float32(0.25)",
+        "encoding": "little-endian float32"
+      }
+    },
+    {
+      "rows": 16,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+      "bytes": 163840,
+      "sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+      "source": "frozen native input manifest"
+    }
+  ],
+  "frozen_outputs": {
+    "1": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-001\\native-receipt.json",
+      "receipt_sha256": "36bd3aeb7af0303175d9b97044feb7aa1d57ac49651a5bf18768313067196320",
+      "binary_sha256": "9cd95dae9c92b50a6487a3a564322576cc2f9aaeb9f16a72946e97afa2ab90b6",
+      "source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609"
+    },
+    "2": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-002.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-002\\native-receipt.json",
+      "receipt_sha256": "32e11e164e0837a1535d05242ca13a82f5942e8091b2d3aa684d6a278cceb620",
+      "binary_sha256": "9cd95dae9c92b50a6487a3a564322576cc2f9aaeb9f16a72946e97afa2ab90b6",
+      "source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609"
+    },
+    "4": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-004.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-004\\native-receipt.json",
+      "receipt_sha256": "81d319a137f06064b1274c3c7bc81f4c1944e66d4b010b2b73739897a30d997b",
+      "binary_sha256": "9cd95dae9c92b50a6487a3a564322576cc2f9aaeb9f16a72946e97afa2ab90b6",
+      "source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609"
+    },
+    "16": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-016\\native-receipt.json",
+      "receipt_sha256": "8082d1ff398410074d051f9e5db2c4eef6ae5d718365d6cb9e92fa6786de4631",
+      "binary_sha256": "9cd95dae9c92b50a6487a3a564322576cc2f9aaeb9f16a72946e97afa2ab90b6",
+      "source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609"
+    }
+  },
+  "reference_controls_expected": {
+    "STRATA_KQ256": "0 (process-local)",
+    "STRATA_NO_Q8K_AVX2": "unset (model-default Q8_K activation path, process-local)",
+    "q8k_avx2_selected": true,
+    "activation_quantizer": "q8k_quant_avx2",
+    "down_activation_quantizer": "ggml Q8_1 from_float"
+  },
+  "parameters": {
+    "hidden": 2560,
+    "intermediate": 640,
+    "gu_type": 12,
+    "down_type": 7,
+    "host_works": true,
+    "worker_semantics": "N background workers plus participating caller",
+    "max_native_multi_rows_per_job": 8
+  },
+  "resource_gate": {
+    "minimum_physical_bytes": 12884901888,
+    "minimum_commit_bytes": 4294967296,
+    "sample_interval_seconds": 1,
+    "minimum_free_disk_bytes": 12884901888,
+    "fail_closed": true,
+    "observer": "GlobalMemoryStatusEx + PSAPI through tools.hetero_resources; psutil direct-process identity"
+  },
+  "data_root": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity",
+  "inputs_root": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs",
+  "preparation_receipt": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs-preparation.json",
+  "output_root": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\outputs",
+  "output_root_created": false,
+  "stop_policy": "stop at first gate/process/identity/receipt/nonfinite/bitwise mismatch; retain all partial evidence; no retries",
+  "claims": {
+    "worker_pin_success_observed": false,
+    "p_e_labels_verified": false,
+    "model_throughput_claim": false,
+    "gpu_execution": false,
+    "kernel_execution_in_plan_mode": false
+  },
+  "reference_semantics": "rows 1/2/4/16 must match frozen native CPU outputs; rows 6/10 pool outputs must match the same candidate binary default baseline.",
+  "overflow_semantics": {
+    "all_auto": "allowed unpinned overflow is recorded; worker pin success is unavailable",
+    "p-cores": "requested workers greater than fresh candidate count are NOT RUN",
+    "none": "host and workers unpinned"
+  }
+}
