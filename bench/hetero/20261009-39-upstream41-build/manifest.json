@@ -1,0 +1,626 @@
+{
+  "schema_version": 1,
+  "status": "copied_byte_preserving",
+  "files": [
+    {
+      "path": "build/hetero/.ninja_deps",
+      "bytes": 118632,
+      "sha256": "9f64a6499a21071e9edd8518cff41cebfbecc2723c48fdd3532f1125a1be53d0"
+    },
+    {
+      "path": "build/hetero/.ninja_log",
+      "bytes": 14818,
+      "sha256": "f0f4d2b5cfb7ed28cb349b5b5fcb18d8b653dbd07559261119bf217fc672e4c5"
+    },
+    {
+      "path": "build/hetero/build-receipt.json",
+      "bytes": 13014,
+      "sha256": "19b780caa700cbf3b147fc7d6038266c8ef0782e491d4a96cf166d07e746c342"
+    },
+    {
+      "path": "build/hetero/build.cmd",
+      "bytes": 1088,
+      "sha256": "88c1faee5e5af4ad9bcf2ece435e2e3b35e6eb7e21cbc65ffee2d77c81480b14"
+    },
+    {
+      "path": "build/hetero/build.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "build/hetero/build.log",
+      "bytes": 1377636,
+      "sha256": "ed6c0009449fdfb30841031f61eff2cbcc4a8ce6b625a7afa0bd7b8d441330b7"
+    },
+    {
+      "path": "build/hetero/build.ninja",
+      "bytes": 384099,
+      "sha256": "01bbb4f37c95bdc1bf9b9ec017e3e85c0c269782461231fe19dac3d55a56b001"
+    },
+    {
+      "path": "build/hetero/build.process.json",
+      "bytes": 311,
+      "sha256": "89348207633b2250781fa5ab4f1c4d8db2e8454645c3f6785609f1a062b79620"
+    },
+    {
+      "path": "build/hetero/build.result.json",
+      "bytes": 951,
+      "sha256": "7752737d2080c21e928ed6616f2bb05623695b979f6e81b41a5776d0228534cf"
+    },
+    {
+      "path": "build/hetero/build.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "path": "build/hetero/cl-version.log",
+      "bytes": 1291,
+      "sha256": "061fe6b537e9c01b47465b86ed2a6e087510d2007be8738ec3c69f52b5f1f3a0"
+    },
+    {
+      "path": "build/hetero/cmake-version.log",
+      "bytes": 90,
+      "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+    },
+    {
+      "path": "build/hetero/cmake_install.cmake",
+      "bytes": 1941,
+      "sha256": "65c7a1ea4bbfb616e1955dd19f285b281efc7afea5756aa1d25665d0f42d100e"
+    },
+    {
+      "path": "build/hetero/CMakeCache.txt",
+      "bytes": 49224,
+      "sha256": "5e046e2b7a1726178b3432db1b270907941edbf7971126c66d888c3efe2494f8"
+    },
+    {
+      "path": "build/hetero/compile_commands.json",
+      "bytes": 29453,
+      "sha256": "56d74337b0d701508c6d0fd6127d3eda4b5801cb6b83107ddcd0d82206b7082c"
+    },
+    {
+      "path": "build/hetero/configure.cmd",
+      "bytes": 2431,
+      "sha256": "31c9cc728cefca5e0b2cddd559d8a586a78b9814a020e7a824575c6d47a341b0"
+    },
+    {
+      "path": "build/hetero/configure.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "build/hetero/configure.log",
+      "bytes": 3272,
+      "sha256": "b9fc626b6b20eab948ef048f5809546baea0c4134fbea40c9066b00d14d7500f"
+    },
+    {
+      "path": "build/hetero/configure.process.json",
+      "bytes": 318,
+      "sha256": "ea4c11078c7f91618ce0885f7ed2985a60f25179aaace95258c8f0a18a58cd59"
+    },
+    {
+      "path": "build/hetero/configure.result.json",
+      "bytes": 969,
+      "sha256": "2a0b45802d91ed77849bfab92558f87f50aaa2edb48d1d7272bb04e5f1d84265"
+    },
+    {
+      "path": "build/hetero/configure.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "path": "build/hetero/CTestTestfile.cmake",
+      "bytes": 16532,
+      "sha256": "a0371490c20480d61e9e2121d363949ca9a60530fea969bfcd197d9487e2b36a"
+    },
+    {
+      "path": "build/hetero/ggml/cmake_install.cmake",
+      "bytes": 3889,
+      "sha256": "ed028d4cfc58c9dbed9a24fa876b104a65e3917d7fb8aaf5f4a7ebdf7593a7aa"
+    },
+    {
+      "path": "build/hetero/ggml/CTestTestfile.cmake",
+      "bytes": 331,
+      "sha256": "03fb1ffb382a0e65a983bea14373875e2368961a629b9cd479c44d0d507d3f06"
+    },
+    {
+      "path": "build/hetero/ggml/ggml-config-version.cmake",
+      "bytes": 2830,
+      "sha256": "77585509b3e33a0c106d28bc7ea15f10193b5b8f9af42dd8f5f005f1d36d41af"
+    },
+    {
+      "path": "build/hetero/ggml/ggml-config.cmake",
+      "bytes": 13602,
+      "sha256": "b1fc781806ca5c89067d9fe52ee6be27bf12fa82fd9ae99828e5dcebe899edd5"
+    },
+    {
+      "path": "build/hetero/ggml/src/cmake_install.cmake",
+      "bytes": 1784,
+      "sha256": "e4b94791a4724f9924c549119525f48d4c2d6ee7b44bc50b4b16d66c35538e09"
+    },
+    {
+      "path": "build/hetero/ggml/src/CTestTestfile.cmake",
+      "bytes": 344,
+      "sha256": "4b8dad45fca69c2340563c07b0980076cad5fb2f4f986f0a7008901f624ab814"
+    },
+    {
+      "path": "build/hetero/ggml/src/ggml-cpu/cmake_install.cmake",
+      "bytes": 1358,
+      "sha256": "dbf6d027ba2b4e680005189a9f57b86e9c6f38182a7e42d8faf7bef8e40b2321"
+    },
+    {
+      "path": "build/hetero/ggml/src/ggml-cpu/CTestTestfile.cmake",
+      "bytes": 341,
+      "sha256": "a5f06f80ffb28336202c91e4b88310e7ecd196a9af2ed6d3f4df119b67bd200e"
+    },
+    {
+      "path": "build/hetero/ggml/src/ggml-version.h",
+      "bytes": 79,
+      "sha256": "2cac76bc44b18e8fda4b475facfec342128f5e8a45fd6679c7b01c01987755a0"
+    },
+    {
+      "path": "build/hetero/ninja-version.log",
+      "bytes": 37,
+      "sha256": "cc30d39e321dcb24ca5c4c5d5b7730e25ab769876a825616360194c634824754"
+    },
+    {
+      "path": "build/hetero/nvcc-version.log",
+      "bytes": 231,
+      "sha256": "c9a2d15f807013db977d10dd509b539cdd30059caa01fbc42c23f19d4bfd4c59"
+    },
+    {
+      "path": "build/hetero/resource-preflight.json",
+      "bytes": 518,
+      "sha256": "98a69ef4ee54a93fb6702857483622f4c900ae9201957e1c3f61a1bd559a732b"
+    },
+    {
+      "path": "build/hetero/resource-sampler-process.json",
+      "bytes": 736,
+      "sha256": "d354b87b808dab29f901de5a3631112106a9f781f3fe90a97fe46d545105498a"
+    },
+    {
+      "path": "build/hetero/resource-sampler.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build/hetero/resource-sampler.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build/hetero/resource_sampler.py",
+      "bytes": 971,
+      "sha256": "9281c59e8bbd1f499b821ffc93633a745d298fead48baa837df8efdd2c5e8beb"
+    },
+    {
+      "path": "build/hetero/resources.jsonl",
+      "bytes": 119770,
+      "sha256": "246d02216bd1b90d73a364a2781a2f809cc9f8859e9c8cb9801000b55e1fde3d"
+    },
+    {
+      "path": "build/hetero/resources.STOP",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build/hetero/where-cl.log",
+      "bytes": 111,
+      "sha256": "4a7478a9bfd9a41d57cfdd05f4396905c804b400414ac9dc4267625208f6837f"
+    },
+    {
+      "path": "build/hetero/where-nvcc.log",
+      "bytes": 59,
+      "sha256": "20b5b6c89d5294d6d5c9d15b003810aa73007e16a3d11d9843c57351a83c6c71"
+    },
+    {
+      "path": "build/upstream/.ninja_deps",
+      "bytes": 120780,
+      "sha256": "a0e4957bf8779bb847ae81ead48c876018e7f6af272e30e2b09d7ee921d5a4d3"
+    },
+    {
+      "path": "build/upstream/.ninja_log",
+      "bytes": 14816,
+      "sha256": "94b7bf1fd0157ac4b1398c5e5f3e9f010a1eb67ff174c1e8180fb4da078d54d0"
+    },
+    {
+      "path": "build/upstream/build-receipt.json",
+      "bytes": 13044,
+      "sha256": "bed93afa420b67eb402c1a9fedb2c10b871bf37af57f6176b79ac9826e863ea1"
+    },
+    {
+      "path": "build/upstream/build.cmd",
+      "bytes": 1098,
+      "sha256": "c81611eea5af6a5edcbc8f969221e831217e4148b4dfc96a6747f0c86f871cad"
+    },
+    {
+      "path": "build/upstream/build.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "build/upstream/build.log",
+      "bytes": 1384721,
+      "sha256": "0aa39f8aa4a5500b87d32f78ebded2f147764b229bf3562ea1b89bba0f72fc62"
+    },
+    {
+      "path": "build/upstream/build.ninja",
+      "bytes": 387601,
+      "sha256": "c4335643c4d2347b72d039e39fe6743c472404015248335dc900ae8e203dd8cf"
+    },
+    {
+      "path": "build/upstream/build.process.json",
+      "bytes": 315,
+      "sha256": "fd7c66ca7e0019b101b8d26a594924ff56f230a907a35da6df957b32eee1eb87"
+    },
+    {
+      "path": "build/upstream/build.result.json",
+      "bytes": 960,
+      "sha256": "9684fd79716115c369c55b29874d7f12d5517cc8ec46b0d128809ab9e827534e"
+    },
+    {
+      "path": "build/upstream/build.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "path": "build/upstream/cl-version.log",
+      "bytes": 1291,
+      "sha256": "061fe6b537e9c01b47465b86ed2a6e087510d2007be8738ec3c69f52b5f1f3a0"
+    },
+    {
+      "path": "build/upstream/cmake-version.log",
+      "bytes": 90,
+      "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+    },
+    {
+      "path": "build/upstream/cmake_install.cmake",
+      "bytes": 1954,
+      "sha256": "9a5c645a422194e4e033d149ac11c75c8a696d9e3b21462af1e71797d21ba296"
+    },
+    {
+      "path": "build/upstream/CMakeCache.txt",
+      "bytes": 49261,
+      "sha256": "555ddb1a6de2dce3e05da7e506ef656a8807d88d05d7d31dbed882d0a61cbcdf"
+    },
+    {
+      "path": "build/upstream/compile_commands.json",
+      "bytes": 29575,
+      "sha256": "39cea30fee3ec0c0da92a326487424dd34f30c0fa38330df5e24c260a1825759"
+    },
+    {
+      "path": "build/upstream/configure.cmd",
+      "bytes": 2462,
+      "sha256": "c81730e95d4130586ab45658d37c9800b8d9f36c1b2ca13ff7af55a3432a47af"
+    },
+    {
+      "path": "build/upstream/configure.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "build/upstream/configure.log",
+      "bytes": 3274,
+      "sha256": "71ae5ea77d5a588bed82d31dbb6281b9b2e2d4d60d2b1ba6f181f4a99165d012"
+    },
+    {
+      "path": "build/upstream/configure.process.json",
+      "bytes": 323,
+      "sha256": "2dc7d96d999a19d87667e61a93695ee186cbdef0ef8a485558ebfc4a5eba5db4"
+    },
+    {
+      "path": "build/upstream/configure.result.json",
+      "bytes": 979,
+      "sha256": "22899f697121b586a8abaeb1208dcc8ea6afd01a9756d430f5f0a73165a63dd3"
+    },
+    {
+      "path": "build/upstream/configure.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "path": "build/upstream/CTestTestfile.cmake",
+      "bytes": 17570,
+      "sha256": "fbc0173904d08d71044f59ac9734b94bbb466b3d8901d2b463e9fbb754f407ac"
+    },
+    {
+      "path": "build/upstream/ggml/cmake_install.cmake",
+      "bytes": 3901,
+      "sha256": "e833fac1164ac458f221f2e131025a4ea700a4458fa9151a1f5a2ae3ea73c093"
+    },
+    {
+      "path": "build/upstream/ggml/CTestTestfile.cmake",
+      "bytes": 333,
+      "sha256": "f6e59853c7938a1ac83cf8ccd1b1ade7b510426396b455b1aa9ffd9b54e00e86"
+    },
+    {
+      "path": "build/upstream/ggml/ggml-config-version.cmake",
+      "bytes": 2830,
+      "sha256": "77585509b3e33a0c106d28bc7ea15f10193b5b8f9af42dd8f5f005f1d36d41af"
+    },
+    {
+      "path": "build/upstream/ggml/ggml-config.cmake",
+      "bytes": 13602,
+      "sha256": "b1fc781806ca5c89067d9fe52ee6be27bf12fa82fd9ae99828e5dcebe899edd5"
+    },
+    {
+      "path": "build/upstream/ggml/src/cmake_install.cmake",
+      "bytes": 1790,
+      "sha256": "f068314a1608beb739eafee7008ed7971b4c73bd97439774d365ac52116d446e"
+    },
+    {
+      "path": "build/upstream/ggml/src/CTestTestfile.cmake",
+      "bytes": 346,
+      "sha256": "6d5800300767f40c8aa82e17e338b0f1ed5429b4b1752d76a93e071de8b2e808"
+    },
+    {
+      "path": "build/upstream/ggml/src/ggml-cpu/cmake_install.cmake",
+      "bytes": 1360,
+      "sha256": "e6231bd99980c1774f6f5d98cea69ba0e40cf3d694288d19a6ca29f2b2569990"
+    },
+    {
+      "path": "build/upstream/ggml/src/ggml-cpu/CTestTestfile.cmake",
+      "bytes": 343,
+      "sha256": "f299af5b4f6c8cb020c304459602960a2a23ab02b5f94d26105097c80a57231d"
+    },
+    {
+      "path": "build/upstream/ggml/src/ggml-version.h",
+      "bytes": 79,
+      "sha256": "2cac76bc44b18e8fda4b475facfec342128f5e8a45fd6679c7b01c01987755a0"
+    },
+    {
+      "path": "build/upstream/ninja-version.log",
+      "bytes": 37,
+      "sha256": "cc30d39e321dcb24ca5c4c5d5b7730e25ab769876a825616360194c634824754"
+    },
+    {
+      "path": "build/upstream/nvcc-version.log",
+      "bytes": 231,
+      "sha256": "c9a2d15f807013db977d10dd509b539cdd30059caa01fbc42c23f19d4bfd4c59"
+    },
+    {
+      "path": "build/upstream/resource-preflight.json",
+      "bytes": 519,
+      "sha256": "73eb49cfa65d6e214835a26eb7c953ca901cb83e4e4764d95480e8ddb939937f"
+    },
+    {
+      "path": "build/upstream/resource-sampler-process.json",
+      "bytes": 745,
+      "sha256": "20cf3c55c170bee94dd3bfda0805e9dbf43ef6fe81fcbfcd0553dd6282e35f2e"
+    },
+    {
+      "path": "build/upstream/resource-sampler.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build/upstream/resource-sampler.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build/upstream/resource_sampler.py",
+      "bytes": 971,
+      "sha256": "9281c59e8bbd1f499b821ffc93633a745d298fead48baa837df8efdd2c5e8beb"
+    },
+    {
+      "path": "build/upstream/resources.jsonl",
+      "bytes": 119770,
+      "sha256": "bb24724cee96616f20d9820ef65854c386c6791dd21c652928c1f6b026fb7feb"
+    },
+    {
+      "path": "build/upstream/resources.STOP",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build/upstream/where-cl.log",
+      "bytes": 111,
+      "sha256": "4a7478a9bfd9a41d57cfdd05f4396905c804b400414ac9dc4267625208f6837f"
+    },
+    {
+      "path": "build/upstream/where-nvcc.log",
+      "bytes": 59,
+      "sha256": "20b5b6c89d5294d6d5c9d15b003810aa73007e16a3d11d9843c57351a83c6c71"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-01/build-receipt.json",
+      "bytes": 3474,
+      "sha256": "3f4f81318ebd0697d01476770b19cd72a8050321b83258cbe5272c0834365b36"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/build-receipt.json",
+      "bytes": 8069,
+      "sha256": "3ebbc947247ae0152701887a38513348bb437b787c12bc34b35e52b05aca45db"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/configure.cmd",
+      "bytes": 2456,
+      "sha256": "bbeb6607e141443beec93a41407c8eb8decdfe17db1b62fed782d48809b1a181"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/configure.exit.txt",
+      "bytes": 3,
+      "sha256": "df4e26a04a444901b95afef44e4a96cfae34690fff2ad2c66389c70079cdff2b"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/configure.log",
+      "bytes": 64,
+      "sha256": "a2df826442023e8b75a23e438585f0f2fab5c6f49d6890340c1e45724748985c"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/configure.process.json",
+      "bytes": 323,
+      "sha256": "127b51385e3305ae914de042ccbea99a522b1837cb0969ef8c34236b71bcea68"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/configure.result.json",
+      "bytes": 978,
+      "sha256": "908313c6b161bb98e3a88ff77fef745b7a2fec3ad352af9a759a410e38ed8887"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/configure.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/resource-preflight.json",
+      "bytes": 519,
+      "sha256": "dc4a29db423b29a2d7f8e7754a2766965138d8d32c93a6835de6d8eb2b4fbbeb"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/resource-sampler-process.json",
+      "bytes": 745,
+      "sha256": "ce2a2ad9ab0945c31aa6ff8990dea41968ae80b54e922eba869f28dbed6e6c80"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/resource-sampler.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/resource-sampler.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/resource_sampler.py",
+      "bytes": 971,
+      "sha256": "9281c59e8bbd1f499b821ffc93633a745d298fead48baa837df8efdd2c5e8beb"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/resources.jsonl",
+      "bytes": 1160,
+      "sha256": "05776fb811934dfdf5caeaf22a00b2031ba3a20ba90d8e40e9d6cc6f6b21f613"
+    },
+    {
+      "path": "failed-attempts/cuda-upstream41-02/resources.STOP",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pair/build-driver-preflight-review2.json",
+      "bytes": 12027,
+      "sha256": "f49d8949a0662bd2ac375a4e09a17e2639051faed8c0e31ba85d2360dcf40175"
+    },
+    {
+      "path": "pair/build-driver-preflight-review3.json",
+      "bytes": 12962,
+      "sha256": "6b74538110a37f184ab688d7dfc4b13d395fc493c9ed6decd913bf2afd4bcb96"
+    },
+    {
+      "path": "pair/build-driver-preflight.json",
+      "bytes": 7111,
+      "sha256": "1b80f680dcc8b5c1e6141d9356cbcf584c63733107d139a7d8db6f0f7f51cbd6"
+    },
+    {
+      "path": "pair/controller-evidence/hetero-01/controller-process.json",
+      "bytes": 1286,
+      "sha256": "882b5c53f9bf3d282464d358ae046790139bef75f05be4d7b79f3dc16468e186"
+    },
+    {
+      "path": "pair/controller-evidence/hetero-01/controller.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pair/controller-evidence/hetero-01/controller.stdout.log",
+      "bytes": 10764,
+      "sha256": "042e6c95647cb7d1f7207ccaf4c617f8a9fe75f07e3720e8573822ad5921a1ef"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-01/controller-failure.json",
+      "bytes": 2613,
+      "sha256": "9bc7af60ea33cf8a8bf0713e5bea84cc3d6101aa1eb431635398e5a5fc9a0fa4"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-01/controller-process.json",
+      "bytes": 1239,
+      "sha256": "04561fe1c31086c961f7705b11beece1245e7d996ff3227756a3fc8458d1f188"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-01/controller.stderr.log",
+      "bytes": 457,
+      "sha256": "69cdad8f81834ea1283aa16fb7718441c4b73d1ae9743f80ab72f737f7ece82a"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-01/controller.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-02/controller-process.json",
+      "bytes": 1211,
+      "sha256": "ab8b0e62960b6878d93430faba6c7ff90665e75a7138a3341d171c9402e5c8c9"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-02/controller.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-02/controller.stdout.log",
+      "bytes": 3043,
+      "sha256": "9be7b0c6b8e21d32797c69c6904e2e27eaf86888e34fd2c87f89e9ad47be7488"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-03/controller-process.json",
+      "bytes": 1218,
+      "sha256": "54a8eda6ffacba28cdaa0da9b3133117276f6a237eadc1f82525d721639d073d"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-03/controller.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-03/controller.stdout.log",
+      "bytes": 6617,
+      "sha256": "d419e2b7f846a881dd6aee750be33966cb289ca064a3eacbc7f0bfa8b203c266"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-04/controller-process.json",
+      "bytes": 1218,
+      "sha256": "05d369375e3be4626ec18192a85f1f0e13b5398564b7973f2343560e3ea6ba7e"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-04/controller.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pair/controller-evidence/upstream-04/controller.stdout.log",
+      "bytes": 10794,
+      "sha256": "fbc4157fb077d9321762ff6eee0c79ba542e12cd78ab798f1b4cf73643d496d7"
+    },
+    {
+      "path": "pair/cuda-build-pair-41.json",
+      "bytes": 4616,
+      "sha256": "8d913c7a090ab8ac2c00aae9fa40bcdf9217698f219212f6f458dbc477a10c4a"
+    },
+    {
+      "path": "pair/review-notes.md",
+      "bytes": 2541,
+      "sha256": "a14e544fddae31c63e52eb8478f3f4e636ac08ef818d7e88f492aa76cd622544"
+    },
+    {
+      "path": "pair/review-summary.json",
+      "bytes": 3148,
+      "sha256": "b046f8d77e27739b8336d1ebb1e99b08c42b35cc15a9709b0a59878be8e05b59"
+    },
+    {
+      "path": "pair/run_cuda_build-executed-upstream02.ps1",
+      "bytes": 31519,
+      "sha256": "8e1bfed1da5aa6a6b32b038589a234816b59519434721de1430cda1a8bd6072b"
+    },
+    {
+      "path": "pair/run_cuda_build.ps1",
+      "bytes": 31747,
+      "sha256": "79dd9d544277d781f141db90067eedd951f4a4415b1aa23178ab9044d023c2dc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1211,
+      "sha256": "0c9e21ecbd35d75e816ab7f3b6f2f35992c1fce7e2faf74de13638afffebaf43"
+    }
+  ]
+}

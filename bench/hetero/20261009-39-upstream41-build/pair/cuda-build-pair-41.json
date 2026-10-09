@@ -1,0 +1,108 @@
+{
+  "schema": "strata-upstream41-hetero-cuda-build-pair-v1",
+  "recorded_utc": "2026-10-09T10:41:13.3875212Z",
+  "status": "both_targets_built_no_engine_launch",
+  "driver": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41-review-01\\run_cuda_build.ps1",
+  "driver_sha256": "79dd9d544277d781f141db90067eedd951f4a4415b1aa23178ab9044d023c2dc",
+  "common_inputs": {
+    "ggml_path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "msvc_version": "19.51.36260.0",
+    "architecture": "sm_89",
+    "cuda_sdk_root": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+    "nvcc_version": "Cuda compilation tools, release 13.3, V13.3.73",
+    "cmake_version": "cmake version 4.4.3",
+    "ninja_version": "1.13.2.git.kitware.jobserver-pipe-1",
+    "ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d"
+  },
+  "build_controls": {
+    "CMAKE_PROJECT_VERSION": "0.1.41",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CUDA_ARCHITECTURES": "89",
+    "CMAKE_CUDA_COMPILER": "E:/Strata-Hetero-data/toolchains/cuda-13.3.1/bin/nvcc.exe",
+    "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+    "STRATA_ENABLE_CUDA": "ON",
+    "STRATA_ENABLE_HIP": "OFF",
+    "STRATA_HIP_GFX906": "OFF",
+    "STRATA_ENABLE_SYCL": "OFF",
+    "STRATA_BUILD_TESTS": "OFF",
+    "STRATA_NATIVE_EXPERTS": "ON",
+    "STRATA_PORTABLE": "ON",
+    "STRATA_MMQ_KQUANTS": "OFF",
+    "STRATA_Q6K_EXPERTS": "OFF",
+    "STRATA_PREFILL_MMQ": "OFF",
+    "STRATA_ORCA_Q4KS_MMQ": "OFF",
+    "STRATA_ISA_FLOOR": "",
+    "STRATA_GGML_DIR": "E:/Strata-Hetero-data/source/llama-3cf0325",
+    "CUDAToolkit_ROOT": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+    "CMAKE_MAKE_PROGRAM": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "GGML_CUDA": "OFF"
+  },
+  "builds": [
+    {
+      "run": "upstream-fb58",
+      "source_path": "E:\\Strata-Hetero-data\\source\\upstream-fb58-build-01",
+      "source_head": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+      "source_tree": "b5a210b6301395b703e3ed6224e0251c3ae5cc35",
+      "source_clean_before": true,
+      "source_clean_after": true,
+      "configure_exit": 0,
+      "configure_cmd_pid": 16880,
+      "build_exit": 0,
+      "build_cmd_pid": 11000,
+      "binary": {
+        "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe",
+        "size_bytes": 52428800,
+        "sha256": "a6e2763ffce668e213f12380389223674621c47e4e5cb94c0f724e6ea8e686fc"
+      },
+      "min_ram_gib": 108.976,
+      "min_commit_gib": 113.921,
+      "resource_samples": 412,
+      "receipt": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\build-receipt.json",
+      "configure_log": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\configure.log",
+      "build_log": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\build.log"
+    },
+    {
+      "run": "hetero-ffeb748",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41",
+      "source_head": "ffeb748d190ddeedff23587ce848596d4db0c752",
+      "source_tree": "ae84e7b6108e631926ef4316d7b671b42d08cf37",
+      "source_clean_before": true,
+      "source_clean_after": true,
+      "configure_exit": 0,
+      "configure_cmd_pid": 6916,
+      "build_exit": 0,
+      "build_cmd_pid": 19412,
+      "binary": {
+        "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe",
+        "size_bytes": 52433920,
+        "sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb"
+      },
+      "min_ram_gib": 109.079,
+      "min_commit_gib": 114.041,
+      "resource_samples": 412,
+      "receipt": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\build-receipt.json",
+      "configure_log": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\configure.log",
+      "build_log": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\build.log"
+    }
+  ],
+  "execution": {
+    "engine_or_model_cli_executed": false,
+    "gpu_executed": false,
+    "tests_run": false,
+    "tests_built": false,
+    "active_compile_or_engine_processes_after_build": []
+  },
+  "pre_cmake_helper_failures": [
+    {
+      "cause": "Git function collision/recursive helper, no CMake or compile",
+      "phase": "driver preflight",
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-01"
+    },
+    {
+      "cause": "batch line serializer concatenated tool commands; CMake did not execute",
+      "phase": "configure wrapper",
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-02"
+    }
+  ],
+  "prior_failures_preserved": true
+}

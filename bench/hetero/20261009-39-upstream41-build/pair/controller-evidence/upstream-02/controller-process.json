@@ -1,0 +1,27 @@
+{
+  "run": "cleanupstream-v041",
+  "pid": 18480,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "parent_pid": 8076,
+  "create_utc": "2026-10-09T10:18:45.4042110Z",
+  "priority": "Idle",
+  "pwsh_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "driver": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41-review-01\\run_cuda_build.ps1",
+  "driver_sha256": "e098a21ad2faf279ee91b668c040248fe7cca2842f37aaed2b21fcd30bb02165",
+  "argv": [
+    "-NoProfile",
+    "-File",
+    "E:\\Strata-Hetero-data\\source\\hetero-0-1-41-review-01\\run_cuda_build.ps1",
+    "-SourcePath",
+    "E:\\Strata-Hetero-data\\source\\upstream-fb58-build-01",
+    "-BuildPath",
+    "E:\\Strata-Hetero-data\\build\\cuda-upstream41-01",
+    "-ExpectedHead",
+    "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+    "-RunName",
+    "cleanupstream-v041",
+    "-Execute"
+  ],
+  "stdout": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41-review-01\\build-controller\\upstream-02\\controller.stdout.log",
+  "stderr": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41-review-01\\build-controller\\upstream-02\\controller.stderr.log"
+}

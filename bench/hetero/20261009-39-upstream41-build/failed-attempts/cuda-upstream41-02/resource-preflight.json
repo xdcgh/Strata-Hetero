@@ -1,0 +1,16 @@
+{
+  "sample": {
+    "sampled_at_utc": "2026-10-09T10:22:26.15Z",
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 117992386560,
+    "commit_limit_bytes": 145553182720,
+    "commit_available_bytes": 123341320192,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "error": null
+  },
+  "age_seconds": 0.0467199,
+  "ram_floor_bytes": 12884901888,
+  "commit_headroom_floor_bytes": 4294967296,
+  "sample_interval_seconds": 1,
+  "pass": true
+}
