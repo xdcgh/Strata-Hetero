@@ -1,0 +1,172 @@
+{
+  "selection": {
+    "layer": 28,
+    "expert": 288,
+    "profile_rank": 0
+  },
+  "profile": {
+    "version": 1,
+    "layers": 48,
+    "experts": 512,
+    "slots": 24576,
+    "ranked_count": 24576,
+    "sha256": "8f59b4aa8873209dff11c11e37bcda9529a1335b724a1afeea37bf6388975baf"
+  },
+  "native_entry": {
+    "layer": 28,
+    "gate_type_id": 12,
+    "down_type_id": 7,
+    "layer_blob_offset": 44774195200,
+    "blob_bytes": 3072000,
+    "gate_offset": 28182262208,
+    "up_offset": 28661115328,
+    "down_offset": 27551375808,
+    "shards": {
+      "gate": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "up": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "down": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf"
+    }
+  },
+  "gguf_py": {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py\\gguf\\__init__.py",
+    "expected_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "actual_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "quants_py_sha256": "123b9d5741ede6ca8a321d7e08d43c8a0bd9fb53ec4f786323f5d9b9a214b4e8"
+  },
+  "dequant_support": {
+    "gate": {
+      "type": "Q4_K",
+      "official_trait_available": true
+    },
+    "up": {
+      "type": "Q4_K",
+      "official_trait_available": true
+    },
+    "down": {
+      "type": "Q5_1",
+      "official_trait_available": true
+    }
+  },
+  "integrity_manifest": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+    "run_id": "run-20261008-02-model-hash",
+    "status": "pass",
+    "scope_note": "The receipt records a prior full-shard hash. This tool checks only the selected shard's current size, timestamps, volume and file index against that receipt; it does not rehash the full shard.",
+    "selected_shards": {
+      "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf": {
+        "expected_sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3",
+        "matches_expected_in_prior_full_hash_run": true,
+        "current_identity_matches_prior_after_state": true,
+        "prior_after": {
+          "size_bytes": 49376141504,
+          "mtime_ns": 1791270330000000000,
+          "ctime_ns": 1791269021380000000,
+          "file_id": {
+            "volume": 2894736058,
+            "index": 790292857600
+          }
+        }
+      }
+    }
+  },
+  "dimensions": {
+    "hidden": 2560,
+    "intermediate": 640,
+    "worker_shapes": {
+      "gate": [
+        640,
+        2560
+      ],
+      "up": [
+        640,
+        2560
+      ],
+      "down": [
+        2560,
+        640
+      ]
+    }
+  },
+  "tensors": {
+    "gate": {
+      "name": "blk.28.ffn_gate_exps.weight",
+      "shard": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "type": "Q4_K",
+      "type_id": 12,
+      "gguf_dims": [
+        2560,
+        640,
+        512
+      ],
+      "reader_data_shape": [
+        512,
+        640,
+        1440
+      ],
+      "data_offset": 28182262208,
+      "n_bytes": 471859200
+    },
+    "up": {
+      "name": "blk.28.ffn_up_exps.weight",
+      "shard": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "type": "Q4_K",
+      "type_id": 12,
+      "gguf_dims": [
+        2560,
+        640,
+        512
+      ],
+      "reader_data_shape": [
+        512,
+        640,
+        1440
+      ],
+      "data_offset": 28661115328,
+      "n_bytes": 471859200
+    },
+    "down": {
+      "name": "blk.28.ffn_down_exps.weight",
+      "shard": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "type": "Q5_1",
+      "type_id": 7,
+      "gguf_dims": [
+        640,
+        2560,
+        512
+      ],
+      "reader_data_shape": [
+        512,
+        2560,
+        480
+      ],
+      "data_offset": 27551375808,
+      "n_bytes": 629145600
+    }
+  },
+  "status": "extracted",
+  "payload_read": true,
+  "files_written": true,
+  "weights_path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+  "identity_path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+  "raw_selected_payload_sha256": {
+    "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+    "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+    "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+  },
+  "decoded_float32_sha256": {
+    "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+    "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+    "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+  },
+  "raw_selected_payload_bytes": {
+    "gate": 921600,
+    "up": 921600,
+    "down": 1228800
+  },
+  "decoded_float32_bytes": {
+    "gate": 6553600,
+    "up": 6553600,
+    "down": 6553600
+  },
+  "source_file_stat_unchanged": true
+}

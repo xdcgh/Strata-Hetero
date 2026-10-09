@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "run": "cuda-hetero-upstream04-01",
+  "status": "success",
+  "exit_code": 0,
+  "duration_seconds": 425.159,
+  "execution": {
+    "helper_pid": 22336,
+    "command_pid": 11588,
+    "helper_start_utc": "2026-10-09T03:01:15.5031745Z",
+    "command_start_utc": "2026-10-09T03:01:16.116417Z",
+    "finished_utc": "2026-10-09T03:08:20.6617407Z",
+    "priority": "Idle",
+    "jobs": 1,
+    "target": "strata",
+    "actual_exit_code": 0,
+    "gpu_executed": false,
+    "engine_executed": false,
+    "cli_executed": false,
+    "tests_built": false,
+    "tests_run": false
+  },
+  "source": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-e87d74c",
+    "branch": "detached",
+    "head_at_configure": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "head_at_receipt": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "clean_at_receipt": true,
+    "status_porcelain": null,
+    "ggml_path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "ggml_sha": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "ggml_clean": true
+  },
+  "toolchain": {
+    "cmake_version": "cmake version 4.4.3",
+    "cmake_path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "ninja_version": "1.13.2.git.kitware.jobserver-pipe-1",
+    "ninja_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "msvc_version": "19.51.36260.0",
+    "vcvars64_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+    "nvcc_version": "Cuda compilation tools, release 13.3, V13.3.73",
+    "nvcc_path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+    "sdk_root": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+    "process_local_dll_paths": [
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin",
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64",
+      "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\nvvm\\bin"
+    ]
+  },
+  "cmake": {
+    "generator": "Ninja",
+    "build_directory": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01",
+    "build_type": "Release",
+    "target": "strata",
+    "parallel_jobs": 1,
+    "configure_argv": [
+      "-S",
+      "E:\\Strata-Hetero-data\\source\\hetero-e87d74c",
+      "-B",
+      "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01",
+      "-G",
+      "Ninja",
+      "-DCMAKE_MAKE_PROGRAM=E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+      "-DSTRATA_ENABLE_CUDA=ON",
+      "-DCMAKE_CUDA_ARCHITECTURES=89",
+      "-DSTRATA_BUILD_TESTS=OFF",
+      "-DSTRATA_NATIVE_EXPERTS=ON",
+      "-DSTRATA_PORTABLE=ON",
+      "-DSTRATA_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+      "-DCMAKE_CUDA_COMPILER=E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+      "-DCUDAToolkit_ROOT=E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    "build_argv": [
+      "--build",
+      "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01",
+      "--target",
+      "strata",
+      "-j",
+      "1"
+    ],
+    "options": {
+      "STRATA_ENABLE_CUDA": "ON",
+      "CMAKE_CUDA_ARCHITECTURES": "89",
+      "STRATA_BUILD_TESTS": "OFF",
+      "STRATA_NATIVE_EXPERTS": "ON",
+      "STRATA_PORTABLE": "ON",
+      "STRATA_MMQ_KQUANTS": "OFF (default)",
+      "STRATA_GGML_DIR": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+      "CMAKE_CUDA_COMPILER": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+      "CUDAToolkit_ROOT": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+      "CMAKE_BUILD_TYPE": "Release",
+      "CMAKE_MAKE_PROGRAM": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe"
+    }
+  },
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+    "size_bytes": 50760704,
+    "sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494"
+  },
+  "host": {
+    "ram_total_bytes": 136963248128,
+    "ram_min_available_sampled_bytes": 113950789632,
+    "commit_max_sampled_bytes": 24230785024,
+    "commit_headroom_min_sampled_bytes": 121322397696,
+    "commit_limit_bytes": 145553182720,
+    "sample_interval_seconds": 5,
+    "sample_count": 81,
+    "ram_floor_bytes": 12884901888,
+    "commit_headroom_floor_bytes": 4294967296,
+    "helper_cpu_seconds": 1.484
+  },
+  "warnings": {
+    "msvc_c4819": 5010,
+    "nvcc_177d": 16,
+    "msvc_c4211": 207,
+    "msvc_c4244": 6,
+    "msvc_c4100": 2,
+    "fatal_markers": 0
+  },
+  "logs": {
+    "configure": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\configure.log",
+    "build": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\build.log",
+    "resource_samples": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\resources.json",
+    "process_identity": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\process.json",
+    "exit_code": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\exit-code.txt",
+    "vcvars": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\vcvars.log",
+    "tool_paths": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\tool-paths.log",
+    "cl_version": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\cl-version.log"
+  },
+  "failure_reason": null
+}

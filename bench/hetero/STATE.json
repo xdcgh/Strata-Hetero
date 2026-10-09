@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "0.1.40.4 source integration host and Python regression passed; matched CUDA builds and model baseline next",
+  "phase": "Latest upstream and Hetero CUDA builds verified; real expert CPU/Arc F32 microbench passed; latest model quality next",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -27,7 +27,10 @@
     "OpenVINO2026.4.1 isolated binary dependencies verified and installed; XPU FFN harness/parser fixtures prepared, no helper model performance yet",
     "Merged upstream0.1.40.4 conflicts resolved; upstream Windows VirtualLock reused, strict complete-lock/reserve/locked-byte checks retained",
     "Merged native Release host CTest3/3 and 13 Python modules415 tests passed (one script invocation corrected to module invocation; initial failure retained)",
-    "OpenVINO device enumeration confirms GPU.0 Arc140T and NPU AI Boost3720; synthetic NPU9static shapes compiled/inferred withoutfallback but numerical quality gate failed, precisionpolicy unknown"
+    "OpenVINO device enumeration confirms GPU.0 Arc140T and NPU AI Boost3720; synthetic NPU9static shapes compiled/inferred withoutfallback but numerical quality gate failed, precisionpolicy unknown",
+    "Matched latest-upstream6674 and integratede87 Release SM89 CUDA binaries compiled; root verified both SHA and CMake controls",
+    "Actual profile rank0 expert28/288 source Q4_K/Q5_1 exported with official pinned decoder, source identity matched prior full integrity receipt, scoped raw/F32 hashes rechecked",
+    "Real-expert OpenVINO CPU and Arc GPU.0 F32: nine row sizes, five repeats all numerical/policy/execution gates passed; transport and native quantized CPU comparison still pending"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -48,12 +51,13 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "Diagnostic10 safely unloaded and owned processes stopped; device discovery read-only in progress",
+    "gpu_state_at_quota_resume": "CUDA compile helpers and OpenVINO real-FFN workers terminal; no text model launched",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Build frozen clean latest upstream and integrated Hetero with matched SM89/MSVC/CUDA/ggml controls; no-debug quality first, then isolate RAM/mmap and request-order effects; actual Arc/model-vision and disk measurements still pending",
+  "next_experiment": "Refresh prompt tokenizer provenance without changing prompt bytes; run latest-upstream direct20, Hetero direct20 control, then Hetero RAM20 quality sequentially before larger contexts",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
-  "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253"
+  "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
+  "last_checkpoint_utc": "2026-10-09T03:18:15.980471+00:00"
 }

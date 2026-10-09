@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-00-matched-cuda/cuda-upstream-04",
+  "status": "success",
+  "started_utc": "2026-10-09T03:00:48.1833267Z",
+  "completed_utc": "2026-10-09T03:07:36.6033465Z",
+  "duration_seconds": 414.9,
+  "source": {
+    "repository": "Niko1221/Strata",
+    "commit": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+    "version": "0.1.40.4",
+    "worktree": "E:\\Strata-Hetero-data\\source\\upstream-6674a00",
+    "clean": true,
+    "ggml_commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d"
+  },
+  "build": {
+    "directory": "E:\\Strata-Hetero-data\\build\\cuda-upstream-04",
+    "generator": "Ninja",
+    "configuration": "Release",
+    "target": "strata",
+    "jobs": 1,
+    "options": {
+      "STRATA_PORTABLE": true,
+      "STRATA_NATIVE_EXPERTS": true,
+      "STRATA_ENABLE_CUDA": true,
+      "CMAKE_CUDA_ARCHITECTURES": 89,
+      "STRATA_BUILD_TESTS": false,
+      "STRATA_MMQ_KQUANTS": false,
+      "STRATA_ENABLE_HIP": false
+    }
+  },
+  "toolchain": {
+    "cmake": "4.4.3",
+    "ninja": "1.13.2.git.kitware.jobserver-pipe-1",
+    "cuda_toolkit": "13.3.73",
+    "msvc": "19.51.36260.0",
+    "nvcc_path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+    "cmake_path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "ninja_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe"
+  },
+  "result": {
+    "exit_code": 0,
+    "binary": "E:\\Strata-Hetero-data\\build\\cuda-upstream-04\\strata.exe",
+    "binary_size_bytes": 50758656,
+    "binary_sha256": "7ca324c2792ef4deda57eb77f1b2b38c4c10ac77d0a890acbeb283dd559eeb2f"
+  },
+  "resources": {
+    "sampling_interval_seconds": 5,
+    "minimum_free_physical_gib": 106.251,
+    "minimum_free_commit_gib": 112.564,
+    "physical_gate_gib": 12,
+    "commit_gate_gib": 4,
+    "gate_breached": false
+  },
+  "gpu_executed": false,
+  "runtime_executed": false,
+  "diagnostics": {
+    "earlier_attempts": [
+      "Attempt 01: configure exited 1 during ASM compiler identification; preserved build.log and exit-code.txt; subsequent configure succeeded in same build directory.",
+      "Attempt 02: diagnostic build invocation had inline cmd PATH expansion; nvcc reported cl.exe missing. Preserved build-attempt-02.log and exit-code-02.txt. Final attempt used build.cmd with vcvars64 and succeeded."
+    ],
+    "warning_classes": [
+      "MSVC C4211 nvcc stub warning",
+      "MSVC C4819 CUDA header code-page warning"
+    ]
+  }
+}
