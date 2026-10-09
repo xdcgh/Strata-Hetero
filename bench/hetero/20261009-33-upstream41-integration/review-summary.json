@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "isolated no-commit upstream merge; static review only",
+  "main_checkout": {
+    "head": "47fded1cfc6f50b8fa861e0c545925a7e25b34fd",
+    "no_working_file_edits": true,
+    "branch": "codex/09-upstream-0-1-40-4",
+    "premerge_clean": true
+  },
+  "worktree": {
+    "head": "47fded1cfc6f50b8fa861e0c545925a7e25b34fd",
+    "branch": "codex/33-upstream-0-1-41",
+    "commit_created": false,
+    "merge_conflicts": [],
+    "merge_head": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41"
+  },
+  "upstream": {
+    "remote_tag_verified": true,
+    "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+    "remote": "upstream",
+    "tag": "v0.1.41"
+  },
+  "merge": {
+    "staged_diff": "merge.staged.diff",
+    "shortstat": "235 files changed, 30018 insertions(+), 394 deletions(-)",
+    "diff_check_exit": 2,
+    "status_log": "merge.status.txt",
+    "changed_paths": 235,
+    "unstaged_diff": "merge.unstaged.diff",
+    "status": "staged_no_commit",
+    "name_status": "merge.name-status.txt",
+    "diff_check_details": "git diff --cached --check exits 2 due 109 added rows with trailing whitespace in upstream bench/results/2026-10-07-community-arc-b65-v01402/results.csv; no other file reported."
+  },
+  "source_findings": {
+    "version": "CMake project version changes 0.1.40.4 -> 0.1.41",
+    "ggml_pin": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "actual_token_id_capture": "serve/server.py capture opt-in path/config key unchanged by upstream diff",
+    "ple_ram_reserve_default_gib": 12,
+    "stage_pin": "STAGE_PIN_DEFAULT=0; do not force STRATA_STAGE_PIN=1 for matched validation, upstream describes prior long-prompt IQ3_S decode corruption",
+    "ggml_source": "STRATA_GGML_DIR external checkout; no git submodule update",
+    "build_cache_source": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\CMakeCache.txt",
+    "cpu_share": "new 0.1.41 default on CUDA, one GPU, no batch slots; unset STRATA_PREFILL_CPU_SHARE means auto share; 0 disables and preserves pre-1.41 output behavior; layer-split, batch, HIP remain off",
+    "ple_ram_reserve_changed": false
+  },
+  "matching_build_flags": {
+    "CMAKE_CUDA_ARCHITECTURES": "89",
+    "GGML_CUDA": "OFF (forced by STRATA_NATIVE_EXPERTS; Strata CUDA targets remain enabled)",
+    "STRATA_PREFILL_MMQ": "OFF",
+    "STRATA_NATIVE_EXPERTS": "ON",
+    "STRATA_GGML_DIR": "E:/Strata-Hetero-data/source/llama-3cf0325",
+    "CMAKE_CUDA_COMPILER": "E:/Strata-Hetero-data/toolchains/cuda-13.3.1/bin/nvcc.exe",
+    "STRATA_ENABLE_HIP": "OFF",
+    "STRATA_BUILD_TESTS": "OFF",
+    "STRATA_ISA_FLOOR": "",
+    "STRATA_Q6K_EXPERTS": "OFF",
+    "STRATA_MMQ_KQUANTS": "OFF",
+    "STRATA_PORTABLE": "ON",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded (set by STRATA_PORTABLE on MSVC)",
+    "STRATA_ENABLE_CUDA": "ON",
+    "STRATA_HIP_GFX906": "OFF",
+    "STRATA_ENABLE_SYCL": "OFF",
+    "STRATA_ORCA_Q4KS_MMQ": "OFF"
+  },
+  "review_dir": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41-review-01"
+}

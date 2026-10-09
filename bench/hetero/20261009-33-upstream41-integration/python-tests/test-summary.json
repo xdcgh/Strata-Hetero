@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "branch": "codex/33-upstream-0-1-41",
+  "base_head": "47fded1cfc6f50b8fa861e0c545925a7e25b34fd",
+  "merge_head": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+  "merge_state": "staged_no_commit_no_conflicts",
+  "source_changes_from_tests": "none; only requested .gitattributes exception is unstaged",
+  "gitattributes_rule_present": true,
+  "upstream_csv_raw_blob_sha1": "05f136a4c46cdbc92d57454110f469322b532171",
+  "upstream_csv_index_blob_sha1": "05f136a4c46cdbc92d57454110f469322b532171",
+  "csv_bytes_match_index": true,
+  "post_attribute_staged_diff_check": "pass; exit 0",
+  "successful_suites": [
+    {
+      "suite": "serve unit modules",
+      "receipt": "serve-venv.json",
+      "log": "serve-venv.log",
+      "tests_passed": 399,
+      "exit_code": 0,
+      "skipped": 1,
+      "tests_run": 400
+    },
+    {
+      "suite": "calibrate/setup pure modules",
+      "receipt": "calibrate-setup-venv.json",
+      "log": "calibrate-setup-venv.log",
+      "tests_passed": 163,
+      "exit_code": 0,
+      "skipped": 0,
+      "tests_run": 163
+    },
+    {
+      "suite": "tokenizer piece-cache",
+      "receipt": "tokenizer-venv.json",
+      "log": "tokenizer-venv.log",
+      "tests_passed": 2,
+      "exit_code": 0,
+      "skipped": 0,
+      "tests_run": 2
+    },
+    {
+      "suite": "Hetero synthetic suites",
+      "receipt": "hetero-direct-path-results.json",
+      "tests_passed": 192,
+      "exit_code": 0,
+      "skipped": 0,
+      "module_logs": [
+        "hetero_admission-path.log",
+        "hetero_bench-path.log",
+        "hetero_compare_quality-path.log",
+        "hetero_copy_verified-path.log",
+        "hetero_cpu_topology-path.log",
+        "hetero_extract_expert-path.log",
+        "hetero_inventory-path.log",
+        "hetero_native_activation-path.log",
+        "hetero_native_inputs-path.log",
+        "hetero_quality-path.log",
+        "hetero_resources-path.log",
+        "hetero_vision_preparation-path.log",
+        "hetero_vision_qwen3vl-path.log",
+        "hetero_xpu_service-path.log",
+        "hetero_xpu_transport-path.log",
+        "hetero_xpu_worker-path.log"
+      ],
+      "tests_run": 192
+    },
+    {
+      "suite": "Hetero CUDA preparation mocked-network/temp-archive tests",
+      "receipt": "hetero_prepare_cuda.json",
+      "log": "hetero_prepare_cuda.log",
+      "tests_run": 13,
+      "tests_passed": 13,
+      "exit_code": 0,
+      "skipped": 0,
+      "network_scope": "all urlopen/build_opener interactions are monkeypatched; synthetic temporary archives only"
+    }
+  ],
+  "unique_tests_passed": 769,
+  "unsuccessful_initial_invocations": [
+    {
+      "receipt": "serve-c14.json",
+      "reason": "C14 lacks jinja2; server suite module imports failed before tests ran",
+      "log": "serve-c14.log"
+    },
+    {
+      "receipt": "tokenizer-calibrate-setup-c14.json",
+      "reason": "C14 lacks regex and jinja2; affected tests rerun successfully in venv",
+      "log": "tokenizer-calibrate-setup-c14.log"
+    },
+    {
+      "receipt": "hetero-pure-venv.json",
+      "reason": "unittest module invocation omitted tools directory import path; direct script run with repo/tools PYTHONPATH passed all modules",
+      "log": "hetero-pure-venv.log"
+    }
+  ],
+  "excluded": [
+    "model/GPU/Core/build tests; no actual SDK download or archive extraction was performed"
+  ],
+  "execution_scope": "No build, compiler, model, API request, GPU, or OpenVINO/Core initialization.",
+  "tests_run_total": 770,
+  "tests_passed_total": 769,
+  "tests_skipped_total": 1,
+  "tests_failed_total": 0,
+  "download_test_scope": "tools/test_hetero_prepare_cuda.py was run: its HTTP openers were mocked and archive tests used synthetic temp fixtures; no real network transfer."
+}

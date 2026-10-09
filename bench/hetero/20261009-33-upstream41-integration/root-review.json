@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "isolated_upstream_merge_reviewed_pushed_build_pending",
+  "reviewed_utc": "2026-10-09T09:58:50.468549+00:00",
+  "merge_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+  "worktree": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41",
+  "branch": "codex/33-upstream-0-1-41",
+  "upstream": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+  "tests_run": 770,
+  "tests_passed": 769,
+  "tests_skipped": 1,
+  "actual_model_or_cuda_runtime_validated": false,
+  "binary_builds": "authorized serial matched upstream/candidate builds; see agent runtime receipts when terminal",
+  "deterministic_future_quality_env": {
+    "STRATA_PREFILL_CPU_SHARE": "0",
+    "STRATA_STAGE_PIN": "0"
+  },
+  "upstream_csv_preserved_git_blob": "05f136a4c46cdbc92d57454110f469322b532171",
+  "root_main_checkout_not_merged_yet": true
+}
