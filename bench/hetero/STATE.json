@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "Upstream04 all27 quality passed; verified NVMe copy and96arm storage profile done; Hetero04 directcontrol loading",
+  "phase": "Latest upstream and integrated direct controls pass; native CPU fixture passed; strict RAM20 next",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -35,7 +35,9 @@
     "Installed Codex MSIX graphics context identified at 250MiB/0% and permitted only by exact protected package path plus idle/lowmemory condition; unknown GPU apps still blocked",
     "Latest upstream04: nine tasks27formal allpass; strict reviewed selfcomparison27/27 and frozen05 actualIDs/wiretext27/27 equal, no performance claim",
     "F original shard2 copied to E with source-stream and independent ownedpart SHA checked; finalfile identity verified, original unchanged;49859583136B",
-    "E NVMe Disk1 vsF USB Disk3:96 read-only unbuffered arms288 measured repeats allok, sampled tails and globalcounter attribution limitations retained"
+    "E NVMe Disk1 vsF USB Disk3:96 read-only unbuffered arms288 measured repeats allok, sampled tails and globalcounter attribution limitations retained",
+    "Integrated latest H4 direct control: corrected cap128 natural tasks, all27 formal quality and actualIDs/SSEtext/output bytes equal latest03; owned model/bridge/sampler stopped",
+    "Native CPU harness linked actual Strata CPU/ggml kernels with static MSVC CRT; two metadata/SHA/CLI fixtures pass; original 3MB expert payload and nine matched input files prepared with scoped/readback SHA"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -56,21 +58,15 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "Owned Hetero04 directcontrol on127.0.0.1:8081 loading; diskprofile/copy terminal and observers stopped",
+    "gpu_state_at_quota_resume": "H4 quality completed and owned instance fully stopped; native CPU comparison runs without a device",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Complete Hetero directcontrol ninequality tasks against exactlatest03; thenstrictRAMquality; nativeCPU harnesspreparedbutlinkingunverified; storageplacementruntime andArc/NPU transport/planner/longcontext remain originalscope",
+  "next_experiment": "Finish bounded native CPU expert comparison, then launch admitted latest integrated RAM20 nine-task quality; E/F placement, worker transport/contention, NPU vision and full planner/long contexts remain original scope",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T04:17:51.855666+00:00",
-  "current_run": "20261009-04-hetero04-direct-quality",
-  "current_model_owner": {
-    "launcher_pid": 1888,
-    "sampler_launcher_pid": 11160,
-    "start_utc": "2026-10-09T04:11:49.1431862Z",
-    "port": 8081,
-    "cleanup_authorized_worker": "/root/prepare_real_expert"
-  }
+  "last_checkpoint_utc": "2026-10-09T04:39:55.875077+00:00",
+  "current_run": null,
+  "current_model_owner": null
 }

@@ -16,5 +16,14 @@
   "frozen_prompt_manifest_implementation_still_matches": false,
   "quality_prompt_manifest": "../20261009-06-quality-prompts/manifest.json",
   "quality_prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
-  "quality_prompt_counts_refreshed": true
+  "quality_prompt_counts_refreshed": true,
+  "launch_admission": {
+    "receipt": "admission.json",
+    "receipt_sha256": "f91eef9c63391f71279c31fa58e6557d4b6e2aa07e6484965fe958caca96bb13",
+    "status": "pass",
+    "launch_process_receipt": "process.json",
+    "process_receipt_sha256": "0994fd8cc74e81bc2d80485a25f183c1ffeaf6001d060fce20e0b49cec679b0d",
+    "scope": "Fresh admission passed before this run launch; exact stored admission and launcher-process receipt bytes are SHA-256 bound here.",
+    "provenance_before_launch_sha256": "2f6c75a9343117334ac0b021a28f2aab4efa1ec9efe99b148112c445b02a39d6"
+  }
 }

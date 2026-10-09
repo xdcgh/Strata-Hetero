@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "preserved_excluded_attempts",
+  "reason": "Four natural prompts were executed with max_tokens=1024; the required baseline control is max_tokens=128. Their original request metadata, SSE, responses, summaries and warmups are preserved here and excluded from reviewed-max128 comparison.",
+  "comparison": "quality/direct04-vs-upstream03-full.json",
+  "attempts": [
+    {
+      "id": "long_1k",
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_1k",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\quality\\attempts-max1024\\long_1k",
+      "max_tokens": 1024
+    },
+    {
+      "id": "long_4k",
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_4k",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\quality\\attempts-max1024\\long_4k",
+      "max_tokens": 1024
+    },
+    {
+      "id": "long_16k",
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_16k",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\quality\\attempts-max1024\\long_16k",
+      "max_tokens": 1024
+    },
+    {
+      "id": "long_30k7",
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_30k7",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\quality\\attempts-max1024\\long_30k7",
+      "max_tokens": 1024
+    }
+  ]
+}

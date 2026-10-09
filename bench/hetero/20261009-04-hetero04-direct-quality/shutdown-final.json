@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-04-hetero04-direct-quality",
+  "status": "complete_quality_and_cleanup",
+  "baseline": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality",
+  "candidate": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+  "manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "final_comparison": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\quality\\reviewed-final.json",
+    "sha256": "68c0d5f6e25871c2e792066b3b35b4eaf443fbf81aac17a0e1aa8393cb2d6cf4",
+    "status": "accepted",
+    "accepted": true,
+    "expected_pairs": 27,
+    "observed_pairs": 27,
+    "all_actual_token_ids_equal": true,
+    "all_model_text_from_sse_equal": true,
+    "all_artifact_byte_hashes_equal": true,
+    "all_quality_pass": true,
+    "controls_match": true,
+    "control_errors": [],
+    "unexpected_control_differences": [],
+    "allowed_binary_difference": {
+      "baseline_path": "E:\\Strata-Hetero-data\\build\\cuda-upstream-04\\strata.exe",
+      "candidate_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+      "baseline_sha256": "7ca324c2792ef4deda57eb77f1b2b38c4c10ac77d0a890acbeb283dd559eeb2f",
+      "candidate_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+      "baseline_source_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+      "candidate_source_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c"
+    }
+  },
+  "quality": {
+    "formal_requests": 27,
+    "warmup_requests": 9,
+    "prompt_results": {
+      "smoke_arithmetic": {
+        "kind": "smoke",
+        "local_chat_prompt_tokens": 27,
+        "max_tokens": 128,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          27,
+          27,
+          27
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "smoke_unicode": {
+        "kind": "smoke",
+        "local_chat_prompt_tokens": 32,
+        "max_tokens": 128,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          32,
+          32,
+          32
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "smoke_json_arithmetic": {
+        "kind": "smoke",
+        "local_chat_prompt_tokens": 50,
+        "max_tokens": 128,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          50,
+          50,
+          50
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "smoke_python_function": {
+        "kind": "smoke",
+        "local_chat_prompt_tokens": 39,
+        "max_tokens": 256,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          39,
+          39,
+          39
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "smoke_three_key_retrieval": {
+        "kind": "smoke",
+        "local_chat_prompt_tokens": 114,
+        "max_tokens": 128,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          114,
+          114,
+          114
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "long_1k": {
+        "kind": "long_natural_text",
+        "local_chat_prompt_tokens": 1036,
+        "max_tokens": 128,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          1036,
+          1036,
+          1036
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "long_4k": {
+        "kind": "long_natural_text",
+        "local_chat_prompt_tokens": 4109,
+        "max_tokens": 128,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          4109,
+          4109,
+          4109
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "long_16k": {
+        "kind": "long_natural_text",
+        "local_chat_prompt_tokens": 16396,
+        "max_tokens": 128,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          16396,
+          16396,
+          16396
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "long_30k7": {
+        "kind": "long_natural_text",
+        "local_chat_prompt_tokens": 30712,
+        "max_tokens": 128,
+        "warmups": 1,
+        "formal_requests": 3,
+        "formal_statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "usage_prompt_tokens": [
+          30712,
+          30712,
+          30712
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_engine_raw_id_sse_valid": [
+          true,
+          true,
+          true
+        ],
+        "actual_id_hashes_equal_within_candidate": true,
+        "baseline_pair_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      }
+    }
+  },
+  "resource_windows": {
+    "candidate": {
+      "physical_available_min_gib": 64.053,
+      "commit_available_min_gib": 45.402,
+      "sample_count": 157,
+      "commit_scope": [
+        "PSAPI GetPerformanceInfo"
+      ]
+    },
+    "baseline": {
+      "physical_available_min_gib": 63.936,
+      "commit_available_min_gib": 45.601,
+      "sample_count": 159,
+      "commit_scope": [
+        "PSAPI GetPerformanceInfo"
+      ]
+    }
+  },
+  "identity": {
+    "engine_version": "0.1.40.4",
+    "engine_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+    "source_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "config_sha256": "fa27117900dd16bae7f5af7ced1149448fce7296f035906a726ddbc9d59082ee",
+    "resident_ram_gib": 20,
+    "file_tier": "buffered"
+  },
+  "launch_admission": {
+    "status": "pass",
+    "receipt": "admission.json",
+    "receipt_sha256": "f91eef9c63391f71279c31fa58e6557d4b6e2aa07e6484965fe958caca96bb13",
+    "process_receipt": "process.json",
+    "process_receipt_sha256": "0994fd8cc74e81bc2d80485a25f183c1ffeaf6001d060fce20e0b49cec679b0d",
+    "provenance_sha256_after_binding": "ff8f9dc63b72be8126693ce139ae8c558bfad396721cfdb37759d2aa6fcdbca1"
+  },
+  "shutdown": {
+    "unload_status": "unloaded",
+    "model_loaded_after_unload": false,
+    "in_flight_after_unload": 0,
+    "sampler_stopped": true,
+    "sampler_child_stopped": true,
+    "bridge_pid_stopped": 10268,
+    "launcher_pid": 1888,
+    "launcher_exited_after_bridge_stop": true,
+    "engine_absent_after_unload": true,
+    "listener_absent": true,
+    "receipts": [
+      "shutdown-preunload-04.json",
+      "shutdown-unload-01.json",
+      "sampler-stop-01.json",
+      "shutdown-bridge-stop-01.json"
+    ]
+  },
+  "excluded_attempts": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\quality\\attempts-max1024",
+    "reason": "Preserved original natural-prompt attempts that used max_tokens=1024; they were excluded from the reviewed max128 comparison."
+  }
+}

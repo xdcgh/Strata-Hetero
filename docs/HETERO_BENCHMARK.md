@@ -18,7 +18,7 @@ Source: `C:\Users\DC\Documents\ChatGPT\Strata\bench\results\2026-10-06-local-rtx
 
 Those rows are historical observations. The report's 65.5%-72.4% draft acceptance is aggregate, not a pure MTP rate. Pelican with reasoning disabled generated HTML; reasoning-enabled runs exhausted their budgets before an answer. A successful smoke, verified download and a performance sample are separate claims. The capacity/performance directory contains a separate later investigation and must not be silently combined with this matrix.
 
-The later historical capacity report records a 523,572-token non-repeated natural-text prompt that retrieved all three keys (523.95 prefill tok/s, 26 generated tokens, 36.1 decode tok/s) and a 1,046,977-token prompt that produced 128 `!` tokens (532.26 prefill tok/s). Both are single samples. A subsequent 1M clean restart also failed short probes in that investigation. Capacity/prefill executed, but 1M retrieval and stable generation did not pass; the cause remains unresolved. Another chat is still running that historical investigation. These observations are preserved as historical failure shields, not as current-upstream or Hetero validation.
+The later historical capacity report records a 523,572-token non-repeated natural-text prompt that retrieved all three keys (523.95 prefill tok/s, 26 generated tokens, 36.1 decode tok/s) and a 1,046,977-token prompt that produced 128 `!` tokens (532.26 prefill tok/s). Both are single samples. A subsequent 1M clean restart also failed short probes in that investigation. Capacity/prefill executed, but 1M retrieval and stable generation did not pass; the cause remains unresolved. The other chat has completed and the user authorized this checkout's GPU experiments. These observations are preserved as historical failure shields, not as current-upstream or Hetero validation.
 
 ## Current upstream quality check on 2026-10-08
 
@@ -32,7 +32,15 @@ The subsequent `20261008-05-upstream20-quality` run also passed all 27 formal ta
 
 Early Windows client artifacts used `Path.write_text` with automatic newline translation: model text hashes describe logical UTF8, while saved multiline text has Windows CRLF. Original artifacts remain intact, and per-file supplemental writer receipts verify that exact transformation. New client output files use UTF8 bytes without translation. The offline comparator separates model-text hashes from artifact hashes and requires proof for any historical conversion.
 
-Upstream was fetched again on 2026-10-08 and is now `6674a00` (v0.1.40.4), 267 commits beyond the frozen `82f46a8` engine used above. These are frozen-reference measurements, not validation of the latest upstream. Integration and a fresh latest-upstream baseline are pending; the new upstream Windows PLE implementation will be reused while retaining the stricter Hetero reserve/complete-lock checks.
+Upstream was fetched again on 2026-10-08 at `6674a00` (v0.1.40.4), 267 commits beyond the frozen `82f46a8` engine used above. It was integrated as `e87d74c`, reusing upstream Windows VirtualLock while retaining the stricter Hetero reserve/complete-lock checks. Both CUDA binaries were built with matched compiler, SDK, ggml and SM89 controls.
+
+## Latest upstream and integrated direct control on 2026-10-09
+
+`20261009-03-upstream04-quality` passed all nine tasks, with one warmup and three formal requests each. `20261009-04-hetero04-direct-quality` then passed the same 27 formal pairs against that exact baseline: actual emitted token IDs, reconstructed SSE text and stored output bytes all match. The final strict comparison is `quality/reviewed-final.json`; it validates source/config/model/tokenizer controls, complete prompt-index pairs and admission/process receipt hashes. Both use resident experts 20 GiB, buffered expert reads, INT8 KV, context limit 32,768, ten CPU workers, MTP spec 4, prompt cache off and token capture on. CPU prefill sharing remains unset/off.
+
+The first candidate natural-text attempt used an output cap of 1,024 rather than the required 128. Its four raw request groups remain under `quality/attempts-max1024/`, and the original incomplete comparison is preserved. Those tasks were actually rerun at 128; code uses 256 and other tasks use 128. The accepted natural requests have prompt usage 1,036/4,109/16,396/30,712 and `cache_n=0`. Across the compared candidate request windows, minimum physical availability was 64.053 GiB and minimum PSAPI system commit headroom was 45.402 GiB. These minima describe the compared windows, not every startup sample.
+
+The integrated direct control was unloaded and its exact owned bridge, launcher and sampler stopped; port 8081 was released. This is bounded direct-mode task/token parity. Full-table RAM, logits, performance without token capture, larger contexts, Pelican, RULER and concurrent throughput still need their own measurements.
 
 ## Run contract
 

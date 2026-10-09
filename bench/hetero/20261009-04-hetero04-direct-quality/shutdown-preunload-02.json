@@ -1,0 +1,2486 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-10-09T04:32:22.0072285+00:00",
+  "run_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+  "run_id": "20261009-04-hetero04-direct-quality",
+  "correction_note": "shutdown-preunload.json contains null from an earlier serialization error; no shutdown action occurred then. This valid evidence supersedes that invalid file.",
+  "checks": {
+    "launcher_exact": false,
+    "launcher_create_delta_ms": 28800000.0,
+    "server_child_exact": true,
+    "engine_child_exact": true,
+    "listener_owned": true,
+    "in_flight_zero": true,
+    "model_loaded": true,
+    "sampler_exact": true
+  },
+  "process_receipt": {
+    "schema_version": 1,
+    "launcher_pid": 1888,
+    "start_utc": "2026-10-09T04:11:49.1431862Z",
+    "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "argv": [
+      "-u",
+      "-X",
+      "utf8",
+      "-B",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py",
+      "--engine",
+      "strata",
+      "--config",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\config.json",
+      "--port",
+      "8081"
+    ],
+    "config": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\config.json",
+    "run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+    "role": "ownedHetero04 direct20 control"
+  },
+  "launcher": {
+    "pid": 1888,
+    "creation_date": "2026-10-09T12:11:49.143186+08:00",
+    "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\config.json --port 8081"
+  },
+  "server_child": {
+    "pid": 10268,
+    "parent_pid": 1888,
+    "creation_date": "2026-10-09T12:11:49.180576+08:00",
+    "executable_path": "C:\\Python314\\python.exe",
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\config.json --port 8081"
+  },
+  "engine_child": {
+    "pid": 3868,
+    "parent_pid": 10268,
+    "creation_date": "2026-10-09T12:11:49.815432+08:00",
+    "executable_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+    "command_line": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io direct"
+  },
+  "listener": [
+    {
+      "CimClass": {
+        "CimSuperClassName": "MSFT_NetTransportConnection",
+        "CimSuperClass": {
+          "CimSuperClassName": "CIM_NetworkPipe",
+          "CimSuperClass": {
+            "CimSuperClassName": "CIM_EnabledLogicalElement",
+            "CimSuperClass": {
+              "CimSuperClassName": "CIM_LogicalElement",
+              "CimSuperClass": {
+                "CimSuperClassName": "CIM_ManagedSystemElement",
+                "CimSuperClass": {
+                  "CimSuperClassName": "CIM_ManagedElement",
+                  "CimSuperClass": "ROOT/StandardCimv2:CIM_ManagedElement",
+                  "CimClassProperties": "Caption Description ElementName InstanceID CommunicationStatus DetailedStatus HealthState InstallDate Name OperatingStatus OperationalStatus PrimaryStatus Status StatusDescriptions",
+                  "CimClassQualifiers": "UMLPackagePath = \"CIM::Core::CoreElements\" Abstract = True locale = 1033",
+                  "CimClassMethods": "",
+                  "CimSystemProperties": "Microsoft.Management.Infrastructure.CimSystemProperties"
+                },
+                "CimClassProperties": [
+                  "Caption",
+                  "Description",
+                  "ElementName",
+                  "InstanceID",
+                  "CommunicationStatus",
+                  "DetailedStatus",
+                  "HealthState",
+                  "InstallDate",
+                  "Name",
+                  "OperatingStatus",
+                  "OperationalStatus",
+                  "PrimaryStatus",
+                  "Status",
+                  "StatusDescriptions"
+                ],
+                "CimClassQualifiers": [
+                  "UMLPackagePath = \"CIM::Core::CoreElements\"",
+                  "Abstract = True",
+                  "locale = 1033"
+                ],
+                "CimClassMethods": [],
+                "CimSystemProperties": {
+                  "Namespace": "ROOT/StandardCimv2",
+                  "ServerName": "GTI15",
+                  "ClassName": "CIM_LogicalElement",
+                  "Path": null
+                }
+              },
+              "CimClassProperties": [
+                {
+                  "Name": "Caption",
+                  "Value": null,
+                  "CimType": 14,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "MaxLen = 64",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "Description",
+                  "Value": null,
+                  "CimType": 14,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "ElementName",
+                  "Value": null,
+                  "CimType": 14,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "InstanceID",
+                  "Value": null,
+                  "CimType": 14,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "CommunicationStatus",
+                  "Value": null,
+                  "CimType": 4,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "DetailedStatus",
+                  "Value": null,
+                  "CimType": 4,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "HealthState",
+                  "Value": null,
+                  "CimType": 4,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "InstallDate",
+                  "Value": null,
+                  "CimType": 13,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "Name",
+                  "Value": null,
+                  "CimType": 14,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "MaxLen = 1024",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "OperatingStatus",
+                  "Value": null,
+                  "CimType": 4,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "OperationalStatus",
+                  "Value": null,
+                  "CimType": 20,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ArrayType = \"Indexed\" ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "PrimaryStatus",
+                  "Value": null,
+                  "CimType": 4,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "Status",
+                  "Value": null,
+                  "CimType": 14,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "MaxLen = 10 ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "StatusDescriptions",
+                  "Value": null,
+                  "CimType": 30,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ArrayType = \"Indexed\" ModelCorrespondence = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "AvailableRequestedStates",
+                  "Value": null,
+                  "CimType": 20,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "EnabledDefault",
+                  "Value": 2,
+                  "CimType": 4,
+                  "Flags": "Property",
+                  "Qualifiers": "ValueMap = ... write = True",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "EnabledState",
+                  "Value": 5,
+                  "CimType": 4,
+                  "Flags": "Property",
+                  "Qualifiers": "ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "OtherEnabledState",
+                  "Value": null,
+                  "CimType": 14,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "ModelCorrespondence = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "RequestedState",
+                  "Value": 12,
+                  "CimType": 4,
+                  "Flags": "Property",
+                  "Qualifiers": "ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "TimeOfLastStateChange",
+                  "Value": null,
+                  "CimType": 13,
+                  "Flags": "Property, NullValue",
+                  "Qualifiers": "",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "TransitioningToState",
+                  "Value": 12,
+                  "CimType": 4,
+                  "Flags": "Property",
+                  "Qualifiers": "ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                }
+              ],
+              "CimClassQualifiers": [
+                {
+                  "Name": "UMLPackagePath",
+                  "Value": "CIM::Core::CoreElements",
+                  "CimType": 14,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "Abstract",
+                  "Value": true,
+                  "CimType": 1,
+                  "Flags": "EnableOverride, Restricted"
+                },
+                {
+                  "Name": "locale",
+                  "Value": 1033,
+                  "CimType": 7,
+                  "Flags": "EnableOverride, Restricted"
+                }
+              ],
+              "CimClassMethods": [
+                {
+                  "Name": "RequestStateChange",
+                  "ReturnType": 6,
+                  "Parameters": "Microsoft.Management.Infrastructure.Internal.Data.CimMethodParameterDeclarationOfMethod Microsoft.Management.Infrastructure.Internal.Data.CimMethodParameterDeclarationOfMethod Microsoft.Management.Infrastructure.Internal.Data.CimMethodParameterDeclarationOfMethod",
+                  "Qualifiers": "ModelCorrespondence = ... ValueMap = ..."
+                }
+              ],
+              "CimSystemProperties": {
+                "Namespace": "ROOT/StandardCimv2",
+                "ServerName": "GTI15",
+                "ClassName": "CIM_EnabledLogicalElement",
+                "Path": null
+              }
+            },
+            "CimClassProperties": [
+              {
+                "Name": "Caption",
+                "Value": null,
+                "CimType": 14,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "MaxLen = 64"
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "Description",
+                "Value": null,
+                "CimType": 14,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "ElementName",
+                "Value": null,
+                "CimType": 14,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "InstanceID",
+                "Value": null,
+                "CimType": 14,
+                "Flags": "Property, Key, NullValue",
+                "Qualifiers": [
+                  "key = True",
+                  "Override = \"InstanceID\""
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "CommunicationStatus",
+                "Value": null,
+                "CimType": 4,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "DetailedStatus",
+                "Value": null,
+                "CimType": 4,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "HealthState",
+                "Value": null,
+                "CimType": 4,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "InstallDate",
+                "Value": null,
+                "CimType": 13,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "Name",
+                "Value": null,
+                "CimType": 14,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "MaxLen = 1024"
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "OperatingStatus",
+                "Value": null,
+                "CimType": 4,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "OperationalStatus",
+                "Value": null,
+                "CimType": 20,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ArrayType = \"Indexed\"",
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "PrimaryStatus",
+                "Value": null,
+                "CimType": 4,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "Status",
+                "Value": null,
+                "CimType": 14,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "MaxLen = 10",
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "StatusDescriptions",
+                "Value": null,
+                "CimType": 30,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ArrayType = \"Indexed\"",
+                  "ModelCorrespondence = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "AvailableRequestedStates",
+                "Value": null,
+                "CimType": 20,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "EnabledDefault",
+                "Value": 2,
+                "CimType": 4,
+                "Flags": "Property",
+                "Qualifiers": [
+                  "ValueMap = ...",
+                  "write = True"
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "EnabledState",
+                "Value": null,
+                "CimType": 4,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ...",
+                  "Override = \"EnabledState\""
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "OtherEnabledState",
+                "Value": null,
+                "CimType": 14,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ModelCorrespondence = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "RequestedState",
+                "Value": 5,
+                "CimType": 4,
+                "Flags": "Property",
+                "Qualifiers": [
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ...",
+                  "Override = \"RequestedState\"",
+                  "write = True"
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "TimeOfLastStateChange",
+                "Value": null,
+                "CimType": 13,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "TransitioningToState",
+                "Value": 12,
+                "CimType": 4,
+                "Flags": "Property",
+                "Qualifiers": [
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "AggregationBehavior",
+                "Value": null,
+                "CimType": 4,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "Directionality",
+                "Value": null,
+                "CimType": 4,
+                "Flags": "Property, NullValue",
+                "Qualifiers": [
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              }
+            ],
+            "CimClassQualifiers": [
+              {
+                "Name": "UMLPackagePath",
+                "Value": "CIM::Network::Pipes",
+                "CimType": 14,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "locale",
+                "Value": 1033,
+                "CimType": 7,
+                "Flags": "EnableOverride, Restricted"
+              }
+            ],
+            "CimClassMethods": [
+              {
+                "Name": "RequestStateChange",
+                "ReturnType": 6,
+                "Parameters": [
+                  "Microsoft.Management.Infrastructure.Internal.Data.CimMethodParameterDeclarationOfMethod",
+                  "Microsoft.Management.Infrastructure.Internal.Data.CimMethodParameterDeclarationOfMethod",
+                  "Microsoft.Management.Infrastructure.Internal.Data.CimMethodParameterDeclarationOfMethod"
+                ],
+                "Qualifiers": [
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ..."
+                ]
+              }
+            ],
+            "CimSystemProperties": {
+              "Namespace": "ROOT/StandardCimv2",
+              "ServerName": "GTI15",
+              "ClassName": "CIM_NetworkPipe",
+              "Path": null
+            }
+          },
+          "CimClassProperties": [
+            {
+              "Name": "Caption",
+              "Value": null,
+              "CimType": 14,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "MaxLen",
+                  "Value": 64,
+                  "CimType": 7,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "Description",
+              "Value": null,
+              "CimType": 14,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "ElementName",
+              "Value": null,
+              "CimType": 14,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "InstanceID",
+              "Value": null,
+              "CimType": 14,
+              "Flags": "Property, Key, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "key",
+                  "Value": true,
+                  "CimType": 1,
+                  "Flags": "DisableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "CommunicationStatus",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 1 2 3 4 .. 0x8000..",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "DetailedStatus",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_EnabledLogicalElement.PrimaryStatus CIM_ManagedSystemElement.HealthState",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 1 2 3 4 5 .. 0x8000..",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "HealthState",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 5 10 15 20 25 30 ..",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "InstallDate",
+              "Value": null,
+              "CimType": 13,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "Name",
+              "Value": null,
+              "CimType": 14,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "MaxLen",
+                  "Value": 1024,
+                  "CimType": 7,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "OperatingStatus",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_EnabledLogicalElement.EnabledState",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 .. 0x8000..",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "OperationalStatus",
+              "Value": null,
+              "CimType": 20,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ArrayType",
+                  "Value": "Indexed",
+                  "CimType": 14,
+                  "Flags": "DisableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_ManagedSystemElement.StatusDescriptions",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 .. 0x8000..",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "PrimaryStatus",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_ManagedSystemElement.DetailedStatus CIM_ManagedSystemElement.HealthState",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 1 2 3 .. 0x8000..",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "Status",
+              "Value": null,
+              "CimType": 14,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "MaxLen",
+                  "Value": 10,
+                  "CimType": 7,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "OK Error Degraded Unknown Pred Fail Starting Stopping Service Stressed NonRecover No Contact Lost Comm Stopped",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "StatusDescriptions",
+              "Value": null,
+              "CimType": 30,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ArrayType",
+                  "Value": "Indexed",
+                  "CimType": 14,
+                  "Flags": "DisableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_ManagedSystemElement.OperationalStatus",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "AvailableRequestedStates",
+              "Value": null,
+              "CimType": 20,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_EnabledLogicalElement.RequestStateChange CIM_EnabledLogicalElementCapabilities.RequestedStatesSupported",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "2 3 4 6 7 8 9 10 11 ..",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "EnabledDefault",
+              "Value": 2,
+              "CimType": 4,
+              "Flags": "Property",
+              "Qualifiers": [
+                {
+                  "Name": "ValueMap",
+                  "Value": "2 3 5 6 7 9 .. 32768..65535",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "write",
+                  "Value": true,
+                  "CimType": 1,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "EnabledState",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_EnabledLogicalElement.OtherEnabledState",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 1 2 3 4 5 6 7 8 9 10 11..32767 32768..65535",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "OtherEnabledState",
+              "Value": null,
+              "CimType": 14,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_EnabledLogicalElement.EnabledState",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "RequestedState",
+              "Value": 5,
+              "CimType": 4,
+              "Flags": "Property",
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_EnabledLogicalElement.EnabledState",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 2 3 4 5 6 7 8 9 10 11 12 .. 32768..65535",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "write",
+                  "Value": true,
+                  "CimType": 1,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "TimeOfLastStateChange",
+              "Value": null,
+              "CimType": 13,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "TransitioningToState",
+              "Value": 12,
+              "CimType": 4,
+              "Flags": "Property",
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_EnabledLogicalElement.RequestStateChange CIM_EnabledLogicalElement.RequestedState CIM_EnabledLogicalElement.EnabledState",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 2 3 4 5 6 7 8 9 10 11 12 ..",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "AggregationBehavior",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 2 3 4",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "Directionality",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 2 3",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "CreationTime",
+              "Value": null,
+              "CimType": 13,
+              "Flags": "Property, ReadOnly, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "read",
+                  "Value": true,
+                  "CimType": 1,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "LocalAddress",
+              "Value": null,
+              "CimType": 14,
+              "Flags": "Property, ReadOnly, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "read",
+                  "Value": true,
+                  "CimType": 1,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "LocalPort",
+              "Value": null,
+              "CimType": 4,
+              "Flags": "Property, ReadOnly, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "read",
+                  "Value": true,
+                  "CimType": 1,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            },
+            {
+              "Name": "OwningProcess",
+              "Value": null,
+              "CimType": 6,
+              "Flags": "Property, ReadOnly, NullValue",
+              "Qualifiers": [
+                {
+                  "Name": "read",
+                  "Value": true,
+                  "CimType": 1,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ],
+              "ReferenceClassName": null
+            }
+          ],
+          "CimClassQualifiers": [
+            {
+              "Name": "UMLPackagePath",
+              "Value": "CIM::Network::Pipes",
+              "CimType": 14,
+              "Flags": "EnableOverride, ToSubclass"
+            },
+            {
+              "Name": "ClassVersion",
+              "Value": "1.0.0",
+              "CimType": 14,
+              "Flags": "EnableOverride, ToSubclass"
+            },
+            {
+              "Name": "dynamic",
+              "Value": true,
+              "CimType": 1,
+              "Flags": "EnableOverride, ToSubclass"
+            },
+            {
+              "Name": "locale",
+              "Value": 1033,
+              "CimType": 7,
+              "Flags": "EnableOverride, Restricted"
+            },
+            {
+              "Name": "provider",
+              "Value": "nettcpip",
+              "CimType": 14,
+              "Flags": "EnableOverride, ToSubclass"
+            }
+          ],
+          "CimClassMethods": [
+            {
+              "Name": "RequestStateChange",
+              "ReturnType": 6,
+              "Parameters": [
+                {
+                  "Name": "RequestedState",
+                  "CimType": 4,
+                  "Qualifiers": "ID = 0 In = True ModelCorrespondence = ... ValueMap = ...",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "TimeoutPeriod",
+                  "CimType": 13,
+                  "Qualifiers": "ID = 2 In = True",
+                  "ReferenceClassName": null
+                },
+                {
+                  "Name": "Job",
+                  "CimType": 15,
+                  "Qualifiers": "ID = 1 Out = True",
+                  "ReferenceClassName": "CIM_ConcreteJob"
+                }
+              ],
+              "Qualifiers": [
+                {
+                  "Name": "ModelCorrespondence",
+                  "Value": "CIM_EnabledLogicalElement.RequestedState",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                },
+                {
+                  "Name": "ValueMap",
+                  "Value": "0 1 2 3 4 5 6 .. 4096 4097 4098 4099 4100..32767 32768..65535",
+                  "CimType": 30,
+                  "Flags": "EnableOverride, ToSubclass"
+                }
+              ]
+            }
+          ],
+          "CimSystemProperties": {
+            "Namespace": "ROOT/StandardCimv2",
+            "ServerName": "GTI15",
+            "ClassName": "MSFT_NetTransportConnection",
+            "Path": null
+          }
+        },
+        "CimClassProperties": [
+          {
+            "Name": "Caption",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "MaxLen",
+                "Value": 64,
+                "CimType": 7,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "Description",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "ElementName",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "InstanceID",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, Key, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "key",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "DisableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "CommunicationStatus",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "..",
+                  "0x8000.."
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "DetailedStatus",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_EnabledLogicalElement.PrimaryStatus",
+                  "CIM_ManagedSystemElement.HealthState"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "..",
+                  "0x8000.."
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "HealthState",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "5",
+                  "10",
+                  "15",
+                  "20",
+                  "25",
+                  "30",
+                  ".."
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "InstallDate",
+            "Value": null,
+            "CimType": 13,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "Name",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "MaxLen",
+                "Value": 1024,
+                "CimType": 7,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "OperatingStatus",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_EnabledLogicalElement.EnabledState"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15",
+                  "16",
+                  "..",
+                  "0x8000.."
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "OperationalStatus",
+            "Value": null,
+            "CimType": 20,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ArrayType",
+                "Value": "Indexed",
+                "CimType": 14,
+                "Flags": "DisableOverride, ToSubclass"
+              },
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_ManagedSystemElement.StatusDescriptions"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15",
+                  "16",
+                  "17",
+                  "18",
+                  "..",
+                  "0x8000.."
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "PrimaryStatus",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_ManagedSystemElement.DetailedStatus",
+                  "CIM_ManagedSystemElement.HealthState"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "..",
+                  "0x8000.."
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "Status",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "MaxLen",
+                "Value": 10,
+                "CimType": 7,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "OK",
+                  "Error",
+                  "Degraded",
+                  "Unknown",
+                  "Pred Fail",
+                  "Starting",
+                  "Stopping",
+                  "Service",
+                  "Stressed",
+                  "NonRecover",
+                  "No Contact",
+                  "Lost Comm",
+                  "Stopped"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "StatusDescriptions",
+            "Value": null,
+            "CimType": 30,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ArrayType",
+                "Value": "Indexed",
+                "CimType": 14,
+                "Flags": "DisableOverride, ToSubclass"
+              },
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_ManagedSystemElement.OperationalStatus"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "AvailableRequestedStates",
+            "Value": null,
+            "CimType": 20,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_EnabledLogicalElement.RequestStateChange",
+                  "CIM_EnabledLogicalElementCapabilities.RequestedStatesSupported"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "2",
+                  "3",
+                  "4",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  ".."
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "EnabledDefault",
+            "Value": 2,
+            "CimType": 4,
+            "Flags": "Property",
+            "Qualifiers": [
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "2",
+                  "3",
+                  "5",
+                  "6",
+                  "7",
+                  "9",
+                  "..",
+                  "32768..65535"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "write",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "EnabledState",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_EnabledLogicalElement.OtherEnabledState"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11..32767",
+                  "32768..65535"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "OtherEnabledState",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_EnabledLogicalElement.EnabledState"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "RequestedState",
+            "Value": 5,
+            "CimType": 4,
+            "Flags": "Property",
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_EnabledLogicalElement.EnabledState"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "..",
+                  "32768..65535"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "write",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "TimeOfLastStateChange",
+            "Value": null,
+            "CimType": 13,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "TransitioningToState",
+            "Value": 12,
+            "CimType": 4,
+            "Flags": "Property",
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_EnabledLogicalElement.RequestStateChange",
+                  "CIM_EnabledLogicalElement.RequestedState",
+                  "CIM_EnabledLogicalElement.EnabledState"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  ".."
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "AggregationBehavior",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "2",
+                  "3",
+                  "4"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "Directionality",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "2",
+                  "3"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "CreationTime",
+            "Value": null,
+            "CimType": 13,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "LocalAddress",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "LocalPort",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "OwningProcess",
+            "Value": null,
+            "CimType": 6,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "AppliedSetting",
+            "Value": null,
+            "CimType": 2,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "OffloadState",
+            "Value": null,
+            "CimType": 2,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "RemoteAddress",
+            "Value": null,
+            "CimType": 14,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "RemotePort",
+            "Value": null,
+            "CimType": 4,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          },
+          {
+            "Name": "State",
+            "Value": null,
+            "CimType": 2,
+            "Flags": "Property, ReadOnly, NullValue",
+            "Qualifiers": [
+              {
+                "Name": "read",
+                "Value": true,
+                "CimType": 1,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ],
+            "ReferenceClassName": null
+          }
+        ],
+        "CimClassQualifiers": [
+          {
+            "Name": "UMLPackagePath",
+            "Value": "CIM::Network::Pipes",
+            "CimType": 14,
+            "Flags": "EnableOverride, ToSubclass"
+          },
+          {
+            "Name": "dynamic",
+            "Value": true,
+            "CimType": 1,
+            "Flags": "EnableOverride, ToSubclass"
+          },
+          {
+            "Name": "provider",
+            "Value": "nettcpip",
+            "CimType": 14,
+            "Flags": "EnableOverride, ToSubclass"
+          },
+          {
+            "Name": "ClassVersion",
+            "Value": "1.0.0",
+            "CimType": 14,
+            "Flags": "EnableOverride, ToSubclass"
+          },
+          {
+            "Name": "locale",
+            "Value": 1033,
+            "CimType": 7,
+            "Flags": "EnableOverride, Restricted"
+          }
+        ],
+        "CimClassMethods": [
+          {
+            "Name": "RequestStateChange",
+            "ReturnType": 6,
+            "Parameters": [
+              {
+                "Name": "RequestedState",
+                "CimType": 4,
+                "Qualifiers": [
+                  "ID = 0",
+                  "In = True",
+                  "ModelCorrespondence = ...",
+                  "ValueMap = ..."
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "TimeoutPeriod",
+                "CimType": 13,
+                "Qualifiers": [
+                  "ID = 2",
+                  "In = True"
+                ],
+                "ReferenceClassName": null
+              },
+              {
+                "Name": "Job",
+                "CimType": 15,
+                "Qualifiers": [
+                  "ID = 1",
+                  "Out = True"
+                ],
+                "ReferenceClassName": "CIM_ConcreteJob"
+              }
+            ],
+            "Qualifiers": [
+              {
+                "Name": "ModelCorrespondence",
+                "Value": [
+                  "CIM_EnabledLogicalElement.RequestedState"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              },
+              {
+                "Name": "ValueMap",
+                "Value": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "..",
+                  "4096",
+                  "4097",
+                  "4098",
+                  "4099",
+                  "4100..32767",
+                  "32768..65535"
+                ],
+                "CimType": 30,
+                "Flags": "EnableOverride, ToSubclass"
+              }
+            ]
+          }
+        ],
+        "CimSystemProperties": {
+          "Namespace": "ROOT/StandardCimv2",
+          "ServerName": "GTI15",
+          "ClassName": "MSFT_NetTCPConnection",
+          "Path": null
+        }
+      },
+      "CimInstanceProperties": [
+        {
+          "Name": "Caption",
+          "Value": null,
+          "CimType": 14,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "Description",
+          "Value": null,
+          "CimType": 14,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "ElementName",
+          "Value": null,
+          "CimType": 14,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "InstanceID",
+          "Value": "127.0.0.1++8081++0.0.0.0++0",
+          "CimType": 14,
+          "Flags": "Property, Key, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "CommunicationStatus",
+          "Value": null,
+          "CimType": 4,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "DetailedStatus",
+          "Value": null,
+          "CimType": 4,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "HealthState",
+          "Value": null,
+          "CimType": 4,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "InstallDate",
+          "Value": null,
+          "CimType": 13,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "Name",
+          "Value": null,
+          "CimType": 14,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "OperatingStatus",
+          "Value": null,
+          "CimType": 4,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "OperationalStatus",
+          "Value": null,
+          "CimType": 20,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "PrimaryStatus",
+          "Value": null,
+          "CimType": 4,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "Status",
+          "Value": null,
+          "CimType": 14,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "StatusDescriptions",
+          "Value": null,
+          "CimType": 30,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "AvailableRequestedStates",
+          "Value": null,
+          "CimType": 20,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "EnabledDefault",
+          "Value": 2,
+          "CimType": 4,
+          "Flags": "Property, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "EnabledState",
+          "Value": null,
+          "CimType": 4,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "OtherEnabledState",
+          "Value": null,
+          "CimType": 14,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "RequestedState",
+          "Value": 5,
+          "CimType": 4,
+          "Flags": "Property, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "TimeOfLastStateChange",
+          "Value": null,
+          "CimType": 13,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "TransitioningToState",
+          "Value": 12,
+          "CimType": 4,
+          "Flags": "Property, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "AggregationBehavior",
+          "Value": null,
+          "CimType": 4,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "Directionality",
+          "Value": null,
+          "CimType": 4,
+          "Flags": "Property, NotModified, NullValue",
+          "IsValueModified": false
+        },
+        {
+          "Name": "CreationTime",
+          "Value": "2026-10-09T12:17:45+08:00",
+          "CimType": 13,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "LocalAddress",
+          "Value": "127.0.0.1",
+          "CimType": 14,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "LocalPort",
+          "Value": 8081,
+          "CimType": 4,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "OwningProcess",
+          "Value": 10268,
+          "CimType": 6,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "AppliedSetting",
+          "Value": 6,
+          "CimType": 2,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "OffloadState",
+          "Value": 0,
+          "CimType": 2,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "RemoteAddress",
+          "Value": "0.0.0.0",
+          "CimType": 14,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "RemotePort",
+          "Value": 0,
+          "CimType": 4,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "State",
+          "Value": 2,
+          "CimType": 2,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        }
+      ],
+      "CimSystemProperties": {
+        "Namespace": "ROOT/StandardCimv2",
+        "ServerName": "GTI15",
+        "ClassName": "MSFT_NetTCPConnection",
+        "Path": null
+      },
+      "State": 2,
+      "AppliedSetting": null,
+      "OffloadState": 0,
+      "Caption": null,
+      "Description": null,
+      "ElementName": null,
+      "InstanceID": "127.0.0.1++8081++0.0.0.0++0",
+      "CommunicationStatus": null,
+      "DetailedStatus": null,
+      "HealthState": null,
+      "InstallDate": null,
+      "Name": null,
+      "OperatingStatus": null,
+      "OperationalStatus": null,
+      "PrimaryStatus": null,
+      "Status": null,
+      "StatusDescriptions": null,
+      "AvailableRequestedStates": null,
+      "EnabledDefault": 2,
+      "EnabledState": null,
+      "OtherEnabledState": null,
+      "RequestedState": 5,
+      "TimeOfLastStateChange": null,
+      "TransitioningToState": 12,
+      "AggregationBehavior": null,
+      "Directionality": null,
+      "CreationTime": "2026-10-09T12:17:45+08:00",
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 8081,
+      "OwningProcess": 10268,
+      "RemoteAddress": "0.0.0.0",
+      "RemotePort": 0,
+      "PSComputerName": null
+    }
+  ],
+  "status": {
+    "service": "strata",
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "loaded": true,
+    "auto_load": true,
+    "structured_output": {
+      "formats": [
+        "json_object",
+        "json_schema"
+      ],
+      "method": "prompt_and_validate",
+      "constrained_decoding": false,
+      "stream_buffered": true
+    },
+    "engine": "0.1.40.4",
+    "started": 1791519465,
+    "uptime_s": 876,
+    "cache_max_tokens": 32768,
+    "context": {
+      "native": 32768,
+      "max_positions": 32768
+    },
+    "concurrency": {
+      "serving": 1,
+      "requested": 1
+    },
+    "dialects": [
+      "/v1/chat/completions",
+      "/v1/messages",
+      "/v1/responses"
+    ],
+    "vision": {
+      "enabled": false,
+      "available": false,
+      "error": null
+    },
+    "activity": {
+      "requests": 52,
+      "in_flight": 0,
+      "last_request_at": 1791520244
+    },
+    "last_timings": {
+      "cache_n": 0,
+      "prompt_n": 30712,
+      "prompt_ms": 18389.3,
+      "prompt_per_token_ms": 0.599,
+      "prompt_per_second": 1670.1,
+      "predicted_n": 84,
+      "predicted_ms": 1820.1,
+      "predicted_per_token_ms": 21.668,
+      "predicted_per_second": 46.2,
+      "draft_n": 63,
+      "draft_n_accepted": 62,
+      "at": 1791520244
+    },
+    "vram": {
+      "elastic": false
+    },
+    "machine": {
+      "at": 1791520341,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "used_mib": 44927.0,
+        "total_mib": 49140.0,
+        "util_pct": 0,
+        "temp_c": 33,
+        "power_w": 8.951
+      },
+      "ram": {
+        "used_gib": 63.5,
+        "total_gib": 127.6
+      }
+    }
+  },
+  "resource_sample": {
+    "schema_version": 1,
+    "record_type": "resource_sample",
+    "observed_at_utc": "2026-10-09T04:32:21.279Z",
+    "monotonic_seconds": 5967.9872011,
+    "sample_gap_seconds": 1.000470299999506,
+    "sampler_elapsed_seconds": 0.12749239999993733,
+    "owner_pid": 1888,
+    "cpu": {
+      "percent": 6.9,
+      "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+    },
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 68852236288,
+      "physical_used_bytes": 68111011840,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 95584083968,
+      "commit_available_bytes": 49969098752,
+      "commit_total_pages": 23335958,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 49969098752,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "ram_gate": {
+      "status": "pass",
+      "available_gib": 64.124,
+      "required_gib": 12
+    },
+    "commit_gate": {
+      "status": "pass",
+      "available_gib": 46.537,
+      "required_gib": 4.0,
+      "source": "PSAPI GetPerformanceInfo"
+    },
+    "owner_process_tree": [
+      {
+        "pid": 1888,
+        "parent_pid": 8036,
+        "name": "python.exe",
+        "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "rss_bytes": 4243456,
+        "io_read_bytes": 185,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0,
+        "errors": []
+      },
+      {
+        "pid": 11108,
+        "parent_pid": 1888,
+        "name": "conhost.exe",
+        "executable_path": "C:\\Windows\\System32\\conhost.exe",
+        "rss_bytes": 11214848,
+        "io_read_bytes": 16607,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.171875,
+        "cpu_system_seconds": 0.921875,
+        "errors": []
+      },
+      {
+        "pid": 10268,
+        "parent_pid": 1888,
+        "name": "python.exe",
+        "executable_path": "C:\\Python314\\python.exe",
+        "rss_bytes": 224825344,
+        "io_read_bytes": 15515135,
+        "io_write_bytes": 1917754,
+        "cpu_user_seconds": 2.875,
+        "cpu_system_seconds": 1.828125,
+        "errors": []
+      },
+      {
+        "pid": 3868,
+        "parent_pid": 10268,
+        "name": "strata.exe",
+        "executable_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+        "rss_bytes": 45946048512,
+        "io_read_bytes": 3976722876,
+        "io_write_bytes": 61176,
+        "cpu_user_seconds": 2532.75,
+        "cpu_system_seconds": 2060.546875,
+        "errors": []
+      }
+    ],
+    "disk_io": {
+      "PhysicalDrive0": {
+        "read_bytes": 8630752768,
+        "write_bytes": 4453441536,
+        "read_count": 234494,
+        "write_count": 261512,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive1": {
+        "read_bytes": 318054376448,
+        "write_bytes": 56382363648,
+        "read_count": 9668647,
+        "write_count": 164911,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive2": {
+        "read_bytes": 522641920,
+        "write_bytes": 1490944,
+        "read_count": 3910,
+        "write_count": 281,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive3": {
+        "read_bytes": 258976295424,
+        "write_bytes": 0,
+        "read_count": 4472801,
+        "write_count": 0,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      }
+    },
+    "nvidia": {
+      "source": "nvidia-smi",
+      "telemetry_known": true,
+      "devices": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "memory_used_mib": 44416,
+          "memory_free_mib": 4213,
+          "utilization_percent": 0.0,
+          "power_watts": 8.95,
+          "temperature_c": 33.0,
+          "telemetry_known": true,
+          "optional": {
+            "clocks.current.graphics": 210,
+            "clocks.current.memory": 405,
+            "pcie.link.gen.current": 1,
+            "pcie.link.width.current": 8
+          }
+        }
+      ]
+    },
+    "alerts": [],
+    "errors": []
+  },
+  "ready_for_unload": false
+}

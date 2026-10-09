@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-04-hetero04-direct-quality",
+  "stopped_at_utc": "2026-10-09T04:35:07.7819121+00:00",
+  "bridge_before": {
+    "pid": 10268,
+    "parent_pid": 1888,
+    "creation_date": "2026-10-09T12:11:49.1805760+08:00",
+    "executable_path": "C:\\Python314\\python.exe",
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\config.json --port 8081"
+  },
+  "launcher_before": {
+    "pid": 1888,
+    "creation_utc": "2026-10-09T04:11:49.1431860+00:00",
+    "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\config.json --port 8081"
+  },
+  "prechecks": {
+    "launcher_pid_exact": true,
+    "launcher_start_delta_ms": 0.0002,
+    "launcher_executable_exact": true,
+    "launcher_command_exact": true,
+    "bridge_pid_exact": true,
+    "bridge_parent_exact": true,
+    "bridge_config_exact": true,
+    "listener_owned_by_bridge": true,
+    "in_flight_zero": true,
+    "model_already_unloaded": true,
+    "engine_process_absent": true,
+    "sampler_stopped": true,
+    "sampler_stop_file_exists": true
+  },
+  "bridge_termination": "Stop-Process on exact verified run-owned server bridge PID 10268 after API unload",
+  "launcher_stopped_by_agent": false,
+  "final_bridge_absent": true,
+  "final_launcher_absent": true,
+  "final_listener_absent": true,
+  "final_listener": [],
+  "final_launcher": null,
+  "final_bridge": null,
+  "engine_was_absent_before_bridge_stop": true,
+  "sampler_was_stopped_before_bridge_stop": true
+}
