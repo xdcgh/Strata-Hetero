@@ -1,0 +1,6 @@
+Write-Error: E:\Strata-Hetero-data\source\hetero-0-1-41-review-01\run_cuda_build.ps1:140
+Line |
+ 140 |  бн Write-Error "Could not write build receipt: $($_.Exception.Message)"}
+     |                                                  ~~~~~~~~~~~~~~~~~~~~
+     | Could not write build receipt: Exception calling "Open" with "4" argument(s): "Could not find a part of the path
+     | 'E:\Strata-Hetero-data\build\cuda-upstream41-01\build-receipt.json'."

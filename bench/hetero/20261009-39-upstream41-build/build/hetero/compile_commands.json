@@ -1,0 +1,158 @@
+[
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\ggml.c.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml.c",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/ggml.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\ggml.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-alloc.c.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-alloc.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-alloc.c",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-backend.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-backend.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-backend.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-backend-meta.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-backend-meta.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-backend-meta.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-opt.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-opt.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-opt.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-threading.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-threading.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-threading.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-quants.c.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-quants.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-quants.c",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\ggml\\src -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-base.dir\\gguf.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-base.dir\\ggml-base.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\gguf.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/gguf.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml.dir\\ggml-backend-dl.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml.dir\\ggml.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-backend-dl.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-backend-dl.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml.dir/ggml-backend-dl.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml.dir\\ggml-backend-reg.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml.dir\\ggml.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-backend-reg.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-backend-reg.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\ggml-cpu.c.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/ggml-cpu.c",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\ggml-cpu.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/ggml-cpu.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\repack.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\repack.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/repack.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\iqp.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\iqp.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/iqp.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/iqp.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\hbm.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\hbm.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/hbm.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\quants.c.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\quants.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/quants.c",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\traits.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\traits.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/traits.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\amx\\amx.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\amx\\amx.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/amx/amx.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\amx\\mmq.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\amx\\mmq.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/amx/mmq.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\binary-ops.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\binary-ops.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/binary-ops.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\unary-ops.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\unary-ops.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/unary-ops.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\vec.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\vec.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/vec.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\ops.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ops.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/ops.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\arch\\x86\\quants.c.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\arch\\x86\\quants.c",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/arch/x86/quants.c",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.obj"
+},
+{
+  "directory": "E:/Strata-Hetero-data/build/cuda-hetero41-01",
+  "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DSTRATA_VERSION=\\\"0.1.41\\\" -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /Zi /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /utf-8 /Foggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\arch\\x86\\repack.cpp.obj /Fdggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\arch\\x86\\repack.cpp",
+  "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/arch/x86/repack.cpp",
+  "output": "E:/Strata-Hetero-data/build/cuda-hetero41-01/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.obj"
+}
+]

@@ -1,0 +1,24 @@
+{
+  "phase": "build",
+  "exit_code": 0,
+  "batch_exit_file": 0,
+  "duration_seconds": 401.0503689,
+  "process": {
+    "pid": 11000,
+    "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+    "created": "2026-10-09T10:26:08.9070730Z",
+    "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\build.cmd\"",
+    "batch": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\build.cmd"
+  },
+  "log": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\build.log",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\build.cmd",
+  "last_resource": {
+    "sampled_at_utc": "2026-10-09T10:32:49.692Z",
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 117680271360,
+    "commit_limit_bytes": 145553182720,
+    "commit_available_bytes": 123040473088,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "error": null
+  }
+}

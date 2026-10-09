@@ -1,0 +1,20 @@
+{
+  "launcher_pid": 20556,
+  "launcher_exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "launcher_create_utc": "2026-10-09T10:25:58.2120020Z",
+  "child_pid": 21988,
+  "child_parent_pid": 20556,
+  "child_exe": "C:\\Python314\\python.exe",
+  "child_create_utc": "2026-10-09T10:25:58.2472400Z",
+  "argv": [
+    "-u",
+    "-B",
+    "-X",
+    "utf8",
+    "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\resource_sampler.py",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+    "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\resources.jsonl",
+    "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\resources.STOP"
+  ],
+  "output": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\resources.jsonl"
+}
