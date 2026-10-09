@@ -1,0 +1,34 @@
+{
+  "warmups": [
+    {
+      "batch_index": 0,
+      "label": "warmup",
+      "start_monotonic_ns": 21112139461300,
+      "end_monotonic_ns": 21114511781700,
+      "elapsed_s": 2.3723193000005267
+    }
+  ],
+  "formal": [
+    {
+      "batch_index": 0,
+      "label": "formal",
+      "start_monotonic_ns": 21114511802500,
+      "end_monotonic_ns": 21115771122400,
+      "elapsed_s": 1.259319000000687
+    },
+    {
+      "batch_index": 1,
+      "label": "formal",
+      "start_monotonic_ns": 21115771142100,
+      "end_monotonic_ns": 21117062304300,
+      "elapsed_s": 1.2911616000019421
+    },
+    {
+      "batch_index": 2,
+      "label": "formal",
+      "start_monotonic_ns": 21117062321300,
+      "end_monotonic_ns": 21118392154500,
+      "elapsed_s": 1.3298326000003726
+    }
+  ]
+}

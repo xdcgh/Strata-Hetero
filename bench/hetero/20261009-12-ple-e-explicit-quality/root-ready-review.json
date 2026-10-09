@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "root_E_ready_quality_authorized",
+  "checked_utc": "2026-10-09T08:43:56.4050471Z",
+  "live_status": {
+    "service": "strata",
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "loaded": true,
+    "auto_load": true,
+    "structured_output": {
+      "formats": [
+        "json_object",
+        "json_schema"
+      ],
+      "method": "prompt_and_validate",
+      "constrained_decoding": false,
+      "stream_buffered": true
+    },
+    "engine": "0.1.40.4",
+    "started": 1791534966,
+    "uptime_s": 469,
+    "cache_max_tokens": 32768,
+    "context": {
+      "native": 32768,
+      "max_positions": 32768
+    },
+    "concurrency": {
+      "serving": 1,
+      "requested": 1
+    },
+    "dialects": [
+      "/v1/chat/completions",
+      "/v1/messages",
+      "/v1/responses"
+    ],
+    "vision": {
+      "enabled": false,
+      "available": false,
+      "error": null
+    },
+    "activity": {
+      "requests": 0,
+      "in_flight": 0,
+      "last_request_at": null
+    },
+    "last_timings": null,
+    "vram": {
+      "elastic": false
+    },
+    "machine": {
+      "at": 1791535436,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "used_mib": 44803.0,
+        "total_mib": 49140.0,
+        "util_pct": 0,
+        "temp_c": 30,
+        "power_w": 7.274
+      },
+      "ram": {
+        "used_gib": 42.2,
+        "total_gib": 127.6
+      }
+    }
+  },
+  "read_only_check": "E -CheckReady passed under identified pwsh7 with0chat requests",
+  "launcher_pid": 20708,
+  "bridge_pid": 21636,
+  "engine_pid": 10868,
+  "sampler_launcher_pid": 9280,
+  "sampler_child_pid": 15924,
+  "cache_gpu_slots": 12213,
+  "loan_slots": 1184,
+  "resident_pinned_gib": 20,
+  "shared_counts_match_F_H4": true,
+  "source_difference": "only --ple-gguf verifiedE2 copy; native dense F4 same",
+  "quality_script_sha256": "ce881c9c86b2469bd35c26e54c7eee0823a23de26f551231a02747cbaa18f445"
+}

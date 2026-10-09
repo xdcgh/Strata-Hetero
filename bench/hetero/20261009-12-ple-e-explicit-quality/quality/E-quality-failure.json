@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "status": "failed_stopped",
+  "phase": "run-quality-after-ready",
+  "utc": "2026-10-09T08:46:39.1241777Z",
+  "error_type": "ParameterBindingArgumentTransformationException",
+  "error": "Cannot process argument transformation on parameter 'LauncherProcessId'. Cannot convert the \"System.Diagnostics.Process (python)\" value of type \"System.Diagnostics.Process\" to type \"System.Int32\".",
+  "completed_prompts": [
+    {
+      "prompt_id": "smoke_arithmetic",
+      "prompt_sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+      "local_chat_tokens": 27,
+      "max_tokens": 128,
+      "warmups": 1,
+      "formal": 3,
+      "runner_exit": 0,
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "actual_sse_token_ids_valid": true,
+      "actual_token_id_hashes": [
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea"
+      ],
+      "h4_token_id_hashes": [
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea"
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "formal_prompt_tokens": [
+        27,
+        27,
+        27
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "diagnostic_observed": false
+    },
+    {
+      "prompt_id": "smoke_unicode",
+      "prompt_sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+      "local_chat_tokens": 32,
+      "max_tokens": 128,
+      "warmups": 1,
+      "formal": 3,
+      "runner_exit": 0,
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "actual_sse_token_ids_valid": true,
+      "actual_token_id_hashes": [
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c"
+      ],
+      "h4_token_id_hashes": [
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c"
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "formal_prompt_tokens": [
+        32,
+        32,
+        32
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "diagnostic_observed": false
+    },
+    {
+      "prompt_id": "smoke_json_arithmetic",
+      "prompt_sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+      "local_chat_tokens": 50,
+      "max_tokens": 128,
+      "warmups": 1,
+      "formal": 3,
+      "runner_exit": 0,
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "actual_sse_token_ids_valid": true,
+      "actual_token_id_hashes": [
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec"
+      ],
+      "h4_token_id_hashes": [
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec"
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "formal_prompt_tokens": [
+        50,
+        50,
+        50
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "diagnostic_observed": false
+    },
+    {
+      "prompt_id": "smoke_python_function",
+      "prompt_sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+      "local_chat_tokens": 39,
+      "max_tokens": 256,
+      "warmups": 1,
+      "formal": 3,
+      "runner_exit": 0,
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "actual_sse_token_ids_valid": true,
+      "actual_token_id_hashes": [
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb"
+      ],
+      "h4_token_id_hashes": [
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb"
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "formal_prompt_tokens": [
+        39,
+        39,
+        39
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "diagnostic_observed": false
+    },
+    {
+      "prompt_id": "smoke_three_key_retrieval",
+      "prompt_sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+      "local_chat_tokens": 114,
+      "max_tokens": 128,
+      "warmups": 1,
+      "formal": 3,
+      "runner_exit": 0,
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "actual_sse_token_ids_valid": true,
+      "actual_token_id_hashes": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "h4_token_id_hashes": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "formal_prompt_tokens": [
+        114,
+        114,
+        114
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "diagnostic_observed": false
+    },
+    {
+      "prompt_id": "long_1k",
+      "prompt_sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+      "local_chat_tokens": 1036,
+      "max_tokens": 128,
+      "warmups": 1,
+      "formal": 3,
+      "runner_exit": 0,
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "actual_sse_token_ids_valid": true,
+      "actual_token_id_hashes": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "h4_token_id_hashes": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "formal_prompt_tokens": [
+        1036,
+        1036,
+        1036
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "diagnostic_observed": false
+    },
+    {
+      "prompt_id": "long_4k",
+      "prompt_sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+      "local_chat_tokens": 4109,
+      "max_tokens": 128,
+      "warmups": 1,
+      "formal": 3,
+      "runner_exit": 0,
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "actual_sse_token_ids_valid": true,
+      "actual_token_id_hashes": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "h4_token_id_hashes": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "formal_prompt_tokens": [
+        4109,
+        4109,
+        4109
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "diagnostic_observed": false
+    }
+  ]
+}

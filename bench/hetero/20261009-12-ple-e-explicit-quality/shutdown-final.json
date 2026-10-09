@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-12-ple-e-explicit-quality",
+  "status": "terminal",
+  "finished_utc": "2026-10-09T09:02:21.2112267Z",
+  "identities_verified": [
+    {
+      "parent": null,
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "utc": "2026-10-09T08:33:58.4367720Z",
+      "pid": 20708
+    },
+    {
+      "parent": 20708,
+      "exe": "C:\\Python314\\python.exe",
+      "utc": "2026-10-09T08:33:58.4710540Z",
+      "pid": 21636
+    },
+    {
+      "parent": null,
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "utc": "2026-10-09T08:33:58.4777830Z",
+      "pid": 9280
+    },
+    {
+      "parent": 9280,
+      "exe": "C:\\Python314\\python.exe",
+      "utc": "2026-10-09T08:33:58.5161290Z",
+      "pid": 15924
+    }
+  ],
+  "engine_identity_verified": {
+    "binary_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+    "parent": 21636,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+    "pid": 10868,
+    "argv_exact": true,
+    "create_utc": "2026-10-09T08:33:58.9718020Z"
+  },
+  "requests": 36,
+  "in_flight_before_unload": 0,
+  "unload_response": {
+    "status": "unloaded",
+    "service": "strata",
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "loaded": false,
+    "auto_load": true,
+    "structured_output": {
+      "formats": [
+        "json_object",
+        "json_schema"
+      ],
+      "method": "prompt_and_validate",
+      "constrained_decoding": false,
+      "stream_buffered": true
+    },
+    "engine": "0.1.40.4",
+    "started": 1791534966,
+    "uptime_s": 1572,
+    "cache_max_tokens": 32768,
+    "context": {
+      "native": 32768,
+      "max_positions": 32768
+    },
+    "concurrency": {
+      "serving": 1,
+      "requested": 1
+    },
+    "dialects": [
+      "/v1/chat/completions",
+      "/v1/messages",
+      "/v1/responses"
+    ],
+    "vision": {
+      "enabled": false,
+      "available": false,
+      "error": null
+    },
+    "activity": {
+      "requests": 36,
+      "in_flight": 0,
+      "last_request_at": 1791536284
+    },
+    "last_timings": {
+      "cache_n": 0,
+      "prompt_n": 30712,
+      "prompt_ms": 17123.6,
+      "prompt_per_token_ms": 0.558,
+      "prompt_per_second": 1793.5,
+      "predicted_n": 84,
+      "predicted_ms": 2049.5,
+      "predicted_per_token_ms": 24.399,
+      "predicted_per_second": 41.0,
+      "draft_n": 63,
+      "draft_n_accepted": 62,
+      "at": 1791536284
+    },
+    "vram": {
+      "elastic": false
+    },
+    "machine": {
+      "at": 1791536539,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "used_mib": 8307.0,
+        "total_mib": 49140.0,
+        "util_pct": 0,
+        "temp_c": 31,
+        "power_w": 7.633
+      },
+      "ram": {
+        "used_gib": 22.2,
+        "total_gib": 127.6
+      }
+    }
+  },
+  "engine_exited": true,
+  "sampler_stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-12-ple-e-explicit-quality\\resource\\STOP",
+  "all_owned_processes_absent": true,
+  "listener_8081_absent": true,
+  "no_restart_or_prompt_retry": true,
+  "controller_note": "First controller failed; existing16K data completed; rootreviewed without rerun; only previously unrun30K executed separately"
+}

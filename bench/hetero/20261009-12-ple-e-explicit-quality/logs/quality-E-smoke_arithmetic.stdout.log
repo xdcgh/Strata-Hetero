@@ -1,0 +1,30 @@
+{
+  "run_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-12-ple-e-explicit-quality\\requests\\smoke_arithmetic",
+  "acceptance_status": "not_accepted_pending_quality",
+  "formal_summary": {
+    "requests": 3,
+    "successful_requests": 3,
+    "concurrency": 1,
+    "length_capped_requests_in_timing": 0,
+    "quality_pass_inferred_from_finish": false,
+    "client_e2e_s_mean_success_only": 0.6372697333329901,
+    "client_e2e_s_p95_success_only": 0.6706087999991723,
+    "first_generated_s_mean_includes_reasoning_success_only": 0.42978130000119563,
+    "first_visible_content_s_mean_success_only": 0.42978130000119563,
+    "completion_token_count_requests": 3,
+    "completion_token_count_missing_or_invalid": 0,
+    "completion_tokens_total_matched_subset": 6,
+    "formal_batch_elapsed_s_total": 1.9180455000023358,
+    "concurrent_batch_output_tok_s": 3.1281843939534766,
+    "concurrent_batch_output_tok_s_note": "Known completion tokens from eligible requests divided by all formal batch wall time, including failed batches. A lower bound if counts are missing. Warmups excluded.",
+    "requests_with_engine_timing_success_only": 3,
+    "requests_with_cache_reuse_success_only": 0,
+    "engine_cache_reuse_tokens_total_success_only": 0,
+    "all_successful_requests_cache_clean": true,
+    "mean_concurrent_batch_output_tok_s": 3.1444083625510357,
+    "uncached_prompt_per_second_mean": 68.3,
+    "uncached_prompt_timing_requests": 3,
+    "engine_predicted_per_second_mean_success_only": 9.066666666666666,
+    "engine_timing_note": "Uses server timings.predicted_per_second when finite and positive; Strata extension, not standard OpenAI metadata."
+  }
+}

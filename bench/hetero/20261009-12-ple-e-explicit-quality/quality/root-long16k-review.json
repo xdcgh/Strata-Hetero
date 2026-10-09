@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-09T08:54:35.017671+00:00",
+  "status": "existing_long16k_completed_quality_pass_no_retry",
+  "formal": 3,
+  "warmup": 1,
+  "rows": [
+    {
+      "formal": 0,
+      "sse_sha256": "e8da2b953d9b41c6236d956292fa4705c12c1d258e02bf4465aefc288922bfff",
+      "id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "actual_ids_equal_H4": true,
+      "text_equal_H4": true
+    },
+    {
+      "formal": 1,
+      "sse_sha256": "dfb44266ca0e88548747700b31339ac9dea1b78129993bdb1591426f6855747f",
+      "id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "actual_ids_equal_H4": true,
+      "text_equal_H4": true
+    },
+    {
+      "formal": 2,
+      "sse_sha256": "42cc419f9c0b8a52b39f47430ff6747afb0a68927123e5750bdffba2226a8b9c",
+      "id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "actual_ids_equal_H4": true,
+      "text_equal_H4": true
+    }
+  ],
+  "quality_report_sha256": "2bc6a4f47a17dd0abb64014f0bf0e2226fc0e6264538aff788ce12706a770f94",
+  "controller_failure": "Cleanup argument-type error masked the original observer exception; original cause remains unavailable. Do not classify as model failure.",
+  "request_state": "all32 first8task requests already completed; runner naturallyexited; no laterrequestyet",
+  "next_step": "Only previously unrun long_30k7, originalwarm1 formal3 cap128; no restart or completedprompt retry"
+}

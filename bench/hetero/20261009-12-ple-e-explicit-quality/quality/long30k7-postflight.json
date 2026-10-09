@@ -1,0 +1,87 @@
+{
+  "utc": "2026-10-09T08:58:41.6680308Z",
+  "status": {
+    "service": "strata",
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "loaded": true,
+    "auto_load": true,
+    "structured_output": {
+      "formats": [
+        "json_object",
+        "json_schema"
+      ],
+      "method": "prompt_and_validate",
+      "constrained_decoding": false,
+      "stream_buffered": true
+    },
+    "engine": "0.1.40.4",
+    "started": 1791534966,
+    "uptime_s": 1354,
+    "cache_max_tokens": 32768,
+    "context": {
+      "native": 32768,
+      "max_positions": 32768
+    },
+    "concurrency": {
+      "serving": 1,
+      "requested": 1
+    },
+    "dialects": [
+      "/v1/chat/completions",
+      "/v1/messages",
+      "/v1/responses"
+    ],
+    "vision": {
+      "enabled": false,
+      "available": false,
+      "error": null
+    },
+    "activity": {
+      "requests": 36,
+      "in_flight": 0,
+      "last_request_at": 1791536284
+    },
+    "last_timings": {
+      "cache_n": 0,
+      "prompt_n": 30712,
+      "prompt_ms": 17123.6,
+      "prompt_per_token_ms": 0.558,
+      "prompt_per_second": 1793.5,
+      "predicted_n": 84,
+      "predicted_ms": 2049.5,
+      "predicted_per_token_ms": 24.399,
+      "predicted_per_second": 41.0,
+      "draft_n": 63,
+      "draft_n_accepted": 62,
+      "at": 1791536284
+    },
+    "vram": {
+      "elastic": false
+    },
+    "machine": {
+      "at": 1791536321,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "used_mib": 44943.0,
+        "total_mib": 49140.0,
+        "util_pct": 0,
+        "temp_c": 35,
+        "power_w": 8.764
+      },
+      "ram": {
+        "used_gib": 60.9,
+        "total_gib": 127.6
+      }
+    }
+  },
+  "status_endpoint": "GET /v1/status",
+  "benchmark_wrapper_pid": 9424,
+  "benchmark_child_pid": 9692,
+  "benchmark_handles_gone": true,
+  "sample_utc": "2026-10-09T08:58:40.595Z",
+  "sample_age_seconds": 1.0583058,
+  "ram_gib": 66.68,
+  "commit_gib": 47.109,
+  "alerts": [],
+  "errors": []
+}

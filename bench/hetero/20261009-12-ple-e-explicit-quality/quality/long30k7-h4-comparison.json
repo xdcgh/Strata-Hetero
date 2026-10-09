@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-12-ple-e-explicit-quality",
+  "prompt_id": "long_30k7",
+  "status": "pass",
+  "warmup_count": 1,
+  "formal_count": 3,
+  "caps": 128,
+  "prompt_tokens_expected": 30712,
+  "quality_pass_all": true,
+  "metadata_contract_pass": true,
+  "status_token_cache_contract_pass": true,
+  "formal_comparisons": [
+    {
+      "formal": 0,
+      "candidate_sse_sha256": "37f96be066a52b1e24977d4e973dcec500d8a215616e16096f5f5a96075500b5",
+      "h4_sse_sha256": "e9dc01ed59e4edd404e7ce0520ba836f0c2c42040445898d495168bd10bde4cd",
+      "candidate_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "h4_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "ids_valid": true,
+      "actual_token_ids_equal_H4": true,
+      "candidate_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+      "h4_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+      "text_bytes_equal_H4": true
+    },
+    {
+      "formal": 1,
+      "candidate_sse_sha256": "2db1e82deee91769f6a3d479429273c4653f27b640fbad2ca45cbf0c1a781238",
+      "h4_sse_sha256": "8888f563e75c9744114d2472158c883948cc85de7fcf0ff78691998fbdd01a7b",
+      "candidate_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "h4_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "ids_valid": true,
+      "actual_token_ids_equal_H4": true,
+      "candidate_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+      "h4_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+      "text_bytes_equal_H4": true
+    },
+    {
+      "formal": 2,
+      "candidate_sse_sha256": "f4c14784a4d747e7ee468ebe2d47faf2c321b7212806f55e876c1a9c65681b85",
+      "h4_sse_sha256": "a06b4e52ae57fedcd8d537bdd5b822375faa0b4b044b29b95473668cc6c08c2c",
+      "candidate_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "h4_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "ids_valid": true,
+      "actual_token_ids_equal_H4": true,
+      "candidate_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+      "h4_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+      "text_bytes_equal_H4": true
+    }
+  ],
+  "source_scope": "offline comparison of saved request artifacts; no new request, API call, model or device operation"
+}

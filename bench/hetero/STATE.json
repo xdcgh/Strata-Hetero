@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "F PLE placement passed27formal exactIDs/text and terminal; E matched placement prepared",
+  "phase": "F/E explicit PLE quality complete27formal each and terminal; CPU pool compiled/tests pass; identified vision export active",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -44,7 +44,10 @@
     "Actual Arc pipe worker completed45 F32 comparisons; serialized transfer-inclusive latency measured; native quantized equivalence and model gain not accepted",
     "H21 same-binary diagnostic-off:21formal passed;16K threeformal128 ID0 loops and later threecap8 arithmetic ID0 loops; full-RAM route rejected; exact owned cleanup terminal",
     "Native CPU vision oracle:four aligned PNGs16 finite exact SVE outputs, all warm/formal hashes stable;34memory gates pass; owned helper exited; root verified raw hashes; OpenVINO/NPU parity pending",
-    "Explicit F PLE placement:all9tasks27formal exactIDs and reconstructedSSEtext matchH4; warm1 formal3 fixedcaps/cache0; rootreviewed and exactownedcleanup terminal"
+    "Explicit F PLE placement:all9tasks27formal exactIDs and reconstructedSSEtext matchH4; warm1 formal3 fixedcaps/cache0; rootreviewed and exactownedcleanup terminal",
+    "Explicit E PLE arm:all9tasks27formal exactIDs/text matchF/H4; original36requests withno retry; rootverifiednormalizedcontrols; ownedcleanupterminal",
+    "F/E qualitytiming comparison16K/30K E2E medians approximately4.5%/1.5% lower onE; exploratoryonly, storagedefault notpromoted",
+    "Optionalnative CPU pool harnesscompiledCPU-only with2CTest passed; rootartifact/source/controlSHA verified; actualpool numerical/performance matrix notrun"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -65,16 +68,16 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "F placement terminal; noexperiment modelowner/listener; E pairprepared; oldservice/ComfyUI restoration remainsdueafterexperiment work",
+    "gpu_state_at_quota_resume": "F/E allowned model/bridge/sampler processes absent and8081released; CPU-only buildterminal; vision exportactive; oldservice/ComfyUI restoration stillpending",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Review CPU vision oracle and compare identified OpenVINO graph before NPU; proceed controlled F/E PLE placement, CPU role benchmarks, helper arithmetic/contention and measured planner. RAM failure cause remains unresolved; preserve full original scope.",
+  "next_experiment": "Verify realvision export, thenCPU/native vision comparison beforeNPU; verifyrealpool output againstfrozen native CPU thenworker/affinity sweep; integrate reviewed0.1.41 withfreshmatchedbuild/quality andretainfulloriginal performance/context/planner scope.",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T08:29:01.496796+00:00",
-  "current_run": null,
+  "last_checkpoint_utc": "2026-10-09T09:18:13.116763+00:00",
+  "current_run": "20261009-30-native-vision-export",
   "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
