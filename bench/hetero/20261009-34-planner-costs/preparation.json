@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "measured_cost_selector_pure_tests_passed",
+  "created_utc": "2026-10-09T09:40:36.515231+00:00",
+  "tests": 9,
+  "command": "C:\\Python314\\python.exe -B -m unittest tools.test_hetero_planner -v",
+  "code_sha256": {
+    "tools/hetero_planner.py": "11fd158e50bdc3874446e494132db12a291122cdbbd426444d645b9f1607dfb3",
+    "tools/test_hetero_planner.py": "83e92e95ef4cb305a68ba29936890d0c0de8c0f0fbce13aafc6c895ec21069f8"
+  },
+  "features": [
+    "complete_job_latency_boundary",
+    "queue_and_weight_readiness",
+    "operator_phase_exactshape_keys",
+    "identity_expiry",
+    "measured_contention",
+    "EMA_and_failure_quarantine",
+    "perpurpose_user_acceptance_gates"
+  ],
+  "engine_dispatch_integrated": false,
+  "calibration_profiles_ingested": false,
+  "production_routes_enabled": false,
+  "required_remaining": "measured profile ingestion and actual engine dispatch; no runtime speedup established by fixtures"
+}
