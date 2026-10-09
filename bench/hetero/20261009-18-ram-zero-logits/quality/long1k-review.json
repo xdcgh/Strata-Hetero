@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "status": "long_1k_quality_pass_h4_ids_text_equal",
+  "run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-18-ram-zero-logits",
+  "reviewed_utc": "2026-10-09T06:32:02.561662+00:00",
+  "run_controls": {
+    "prompt_file": "long_1k.prompt.txt",
+    "prompt_sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+    "manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+    "max_tokens": 128,
+    "warmup": 1,
+    "formal": 3,
+    "concurrency": 1,
+    "seed": 42,
+    "reasoning_effort": "none",
+    "local_chat_prompt_tokens": 1036,
+    "formal_prompt_tokens": [
+      1036,
+      1036,
+      1036
+    ],
+    "formal_completion_tokens": [
+      84,
+      84,
+      84
+    ],
+    "cache_n": [
+      0,
+      0,
+      0
+    ],
+    "finish_reasons": [
+      "stop",
+      "stop",
+      "stop"
+    ],
+    "runner_exit_code": 0
+  },
+  "quality": {
+    "formal_count": 3,
+    "statuses": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "all_pass": true
+  },
+  "h4_comparison": {
+    "baseline": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+    "all_three_formal_actual_ids_equal": true,
+    "all_three_formal_visible_text_equal": true,
+    "formals": [
+      {
+        "formal": 1,
+        "H18_id_count": 84,
+        "H4_id_count": 84,
+        "H18_id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "H4_id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "first_id_difference": null,
+        "ids_equal": true,
+        "text_equal": true,
+        "H18_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+        "H4_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+        "finish_reason": "stop",
+        "include_stop": true
+      },
+      {
+        "formal": 2,
+        "H18_id_count": 84,
+        "H4_id_count": 84,
+        "H18_id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "H4_id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "first_id_difference": null,
+        "ids_equal": true,
+        "text_equal": true,
+        "H18_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+        "H4_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+        "finish_reason": "stop",
+        "include_stop": true
+      },
+      {
+        "formal": 3,
+        "H18_id_count": 84,
+        "H4_id_count": 84,
+        "H18_id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "H4_id_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "first_id_difference": null,
+        "ids_equal": true,
+        "text_equal": true,
+        "H18_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+        "H4_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+        "finish_reason": "stop",
+        "include_stop": true
+      }
+    ]
+  },
+  "zero_logits_diagnostic": {
+    "engine_log_marker": "strata zero-logits diag:",
+    "lines_found_in_log": 0,
+    "rows_observed": 0,
+    "finite_nan_posinf_neginf_zeros_finite_argmax_id19": "unavailable: no diagnostic row emitted; absence is not evidence of finite logits or zero zeros"
+  },
+  "resource_window": {
+    "sample_count": 19,
+    "monotonic_start_seconds": 13085.4545147,
+    "monotonic_end_seconds": 13104.2155746,
+    "min_physical_available_gib": 40.173,
+    "min_commit_available_gib": 20.38,
+    "all_samples_pass": true
+  },
+  "limitations": [
+    "No zero-logits diagnostic row was emitted, so numerical logit fields remain unknown.",
+    "No long prompts beyond 1k were started.",
+    "No cleanup or restart was performed; H18 server and resource sampler remain under root ownership."
+  ]
+}

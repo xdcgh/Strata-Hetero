@@ -1,0 +1,49 @@
+{
+  "prepared_utc": "2026-10-09T11:15:51.928985+08:00",
+  "engine_cpp": {
+    "source_current_head": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+    "binary_sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+    "binary_path": "E:\\Strata-Hetero-data\\build\\cuda-zero-diag-01\\strata.exe",
+    "version": "0.1.40.4",
+    "compiled_snapshot_head": "388bb47a1aae0bfa042d0fa17af7103eedea3a58",
+    "verify_cpp_base_blob": "6b805694a4dc1a824963b41e67bbfdd60b2dc9c4",
+    "verify_cpp_source_sha256": "85cecc948e687900c7624da07ee25e02797b36722d567668b9842cb5ca05ebc3",
+    "verify_cpp_patch_sha256": "58ee6f105162ff55ddbeeaa0b7f0ba7344a183bd7be55e4848ce961ae5d3485e",
+    "build_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-17-zero-logits-diagnostic\\build-evidence\\build-receipt.json",
+    "build_receipt_sha256": "a8fdc43f8de46fa5aa8bbc3b54ffd57d3c3b3d0f3d9835282501cb9b691827c9",
+    "snapshot_clean": false
+  },
+  "server_python": {
+    "checkout_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "server_file_sha256": "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+    "quality_capture_opt_in": true,
+    "scope": "unchanged frozen API/token-capture bridge"
+  },
+  "matched_controls": "same verified model/pack/MTP/profile/context/KV/CPUworkers=10/resident20/noadaptive/noPCIe/promptcache0/seed42; all expert reads explicitly buffered",
+  "latest_engine_changes": "v0.1.40.4 may differ from frozen82; CPU prefill share is opt-in and remains unset/zero in these controls",
+  "model_quality_acceptance": false,
+  "frozen_prompt_manifest_implementation_still_matches": false,
+  "quality_prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "quality_prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "quality_prompt_counts_refreshed": true,
+  "acceptance_status": "prepared_not_launched",
+  "diagnostic_scope": {
+    "only_extra_env": "STRATA_DIAG_ZERO_LOGITS=1",
+    "explicitly_absent": [
+      "STRATA_DBG_NAN"
+    ],
+    "acceptance": "diagnostic-only, not normal model-quality or performance acceptance",
+    "diagnostic_action": "record only; never terminate the active request due to a diagnostic line",
+    "current_request": "finish fixed-cap request and preserve raw SSE/token-ID artifacts",
+    "after_request": "offline classify; if a diagnostic occurred, stop before the next prompt",
+    "restart": false
+  },
+  "launch_admission": {
+    "receipt": "admission.json",
+    "receipt_sha256": "54ac954c7638be050bb409b3ab78974b829b236cc7a54256de55a3898a3c8c26",
+    "status": "pass",
+    "launch_process_receipt": "process.json",
+    "process_receipt_sha256": "c819197bce2aff3688a076f5eec9981b8691bee7de6bd39930d8d0d7ba4ba656",
+    "scope": "launched immediately after fresh pass and commit check; exact saved JSON bytes"
+  }
+}

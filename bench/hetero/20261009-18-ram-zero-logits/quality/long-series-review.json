@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "status": "four_long_tasks_complete_quality_pass_raw_ids_text_match_h4",
+  "created_utc": "2026-10-09T06:37:15.712817+00:00",
+  "run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-18-ram-zero-logits",
+  "scope": {
+    "only_authorized_tasks_run": [
+      "long_1k",
+      "long_4k",
+      "long_16k",
+      "long_30k7"
+    ],
+    "shorts_rerun": false,
+    "other_load_started": false,
+    "strict_compare_accepted_claim": false,
+    "cleanup_or_restart_performed": false
+  },
+  "controls": {
+    "manifest": "20261009-06-quality-prompts",
+    "max_tokens_each": 128,
+    "warmup_each": 1,
+    "formal_each": 3,
+    "seed": 42,
+    "concurrency": 1,
+    "reasoning_effort": "none",
+    "H18_prompt_cache": 0,
+    "cache_n_each_formal": 0
+  },
+  "long_tasks": [
+    {
+      "prompt_id": "long_1k",
+      "prompt_sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+      "local_prompt_tokens": 1036,
+      "max_tokens": 128,
+      "warmup": 1,
+      "formal": 3,
+      "completion_tokens": [
+        84,
+        84,
+        84
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "finish_reasons": [
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "raw_comparison_formals": [
+        {
+          "formal": 1,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        },
+        {
+          "formal": 2,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        },
+        {
+          "formal": 3,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        }
+      ],
+      "resource_window": {
+        "sample_count": 19,
+        "physical_min_gib": 40.173,
+        "commit_min_gib": 20.38,
+        "all_owner_gates_alerts_pass": true
+      }
+    },
+    {
+      "prompt_id": "long_4k",
+      "prompt_sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+      "local_prompt_tokens": 4109,
+      "max_tokens": 128,
+      "warmup": 1,
+      "formal": 3,
+      "completion_tokens": [
+        84,
+        84,
+        84
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "finish_reasons": [
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "raw_comparison_formals": [
+        {
+          "formal": 1,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        },
+        {
+          "formal": 2,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        },
+        {
+          "formal": 3,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        }
+      ],
+      "resource_window": {
+        "sample_count": 20,
+        "physical_min_gib": 39.093,
+        "commit_min_gib": 20.425,
+        "all_owner_gates_alerts_pass": true
+      }
+    },
+    {
+      "prompt_id": "long_16k",
+      "prompt_sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+      "local_prompt_tokens": 16396,
+      "max_tokens": 128,
+      "warmup": 1,
+      "formal": 3,
+      "completion_tokens": [
+        84,
+        84,
+        84
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "finish_reasons": [
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "raw_comparison_formals": [
+        {
+          "formal": 1,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        },
+        {
+          "formal": 2,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        },
+        {
+          "formal": 3,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        }
+      ],
+      "resource_window": {
+        "sample_count": 36,
+        "physical_min_gib": 37.702,
+        "commit_min_gib": 20.428,
+        "all_owner_gates_alerts_pass": true
+      }
+    },
+    {
+      "prompt_id": "long_30k7",
+      "prompt_sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+      "local_prompt_tokens": 30712,
+      "max_tokens": 128,
+      "warmup": 1,
+      "formal": 3,
+      "completion_tokens": [
+        84,
+        84,
+        84
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "finish_reasons": [
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "raw_comparison_formals": [
+        {
+          "formal": 1,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        },
+        {
+          "formal": 2,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        },
+        {
+          "formal": 3,
+          "H18_token_count": 84,
+          "H4_token_count": 84,
+          "H18_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "H4_token_ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "first_raw_id_difference": null,
+          "raw_ids_equal": true,
+          "visible_text_equal": true,
+          "visible_text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "token0_tail_count": 0,
+          "bang_tail_count": 0,
+          "finish_reason": "stop"
+        }
+      ],
+      "resource_window": {
+        "sample_count": 59,
+        "physical_min_gib": 39.333,
+        "commit_min_gib": 20.357,
+        "all_owner_gates_alerts_pass": true
+      }
+    }
+  ],
+  "H18_vs_H4_source_controls": {
+    "strict_full_run_comparator_used": false,
+    "interpretation": "Manual raw engine SSE IDs and exact visible SSE text were compared by corresponding formal only. This is not strict accepted=true or proof of causation/fix.",
+    "H18": {
+      "source_sha": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+      "engine_sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+      "config_sha256": "639021d4f5eadf9cbb0b5627a532dd1bec921ed8b3614008e8dac538b86f01bd",
+      "env": {
+        "STRATA_DIAG_ZERO_LOGITS": "1",
+        "STRATA_UNBUFFERED_LOAD": "0"
+      },
+      "ple_args": [
+        [
+          "--ple-io",
+          "ram"
+        ]
+      ]
+    },
+    "H4": {
+      "source_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+      "engine_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+      "config_sha256": "fa27117900dd16bae7f5af7ced1149448fce7296f035906a726ddbc9d59082ee",
+      "env": {
+        "STRATA_DIAG_ZERO_LOGITS": null,
+        "STRATA_UNBUFFERED_LOAD": "0"
+      },
+      "ple_args": [
+        [
+          "--ple-io",
+          "direct"
+        ]
+      ]
+    }
+  },
+  "zero_logits_diagnostic": {
+    "matching_log_lines": 0,
+    "rows_observed": 0,
+    "finite_nan_inf_zero_argmax_id19_values": "unavailable; no diagnostic row emitted; absence is not evidence of finite logits or zero-valued logits"
+  },
+  "notes": [
+    "All four requested long tasks passed offline prompt quality classification and matched H4 corresponding raw IDs and visible SSE text in all three formals.",
+    "H18 used a different source revision and engine binary, set STRATA_DIAG_ZERO_LOGITS=1, and used PLE RAM with a 12 GiB reserve; H4 used a different source/binary/config and PLE direct. These differences prevent a strict causal or repair claim.",
+    "No further model requests, cleanup, restart, or parameter change was performed."
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "prepared_utc": "2026-10-09T06:41:24.3155996Z",
+  "run_id": "20261009-21-ram-diagnostic-off",
+  "status": "prepared_not_launched",
+  "source_identity_sha": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+  "workspace_head_at_preparation": "5eb3abfd6d9ef1c4c233845ca7653885bdec479e",
+  "compiled_snapshot": {
+    "head": "388bb47a1aae0bfa042d0fa17af7103eedea3a58",
+    "verify_cpp_sha256": "85cecc948e687900c7624da07ee25e02797b36722d567668b9842cb5ca05ebc3",
+    "verify_cpp_patch_sha256": "58ee6f105162ff55ddbeeaa0b7f0ba7344a183bd7be55e4848ce961ae5d3485e",
+    "build_receipt_sha256": "a8fdc43f8de46fa5aa8bbc3b54ffd57d3c3b3d0f3d9835282501cb9b691827c9",
+    "snapshot_clean": false
+  },
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-zero-diag-01\\strata.exe",
+    "sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+    "bytes": 50761728,
+    "version": "0.1.40.4"
+  },
+  "bridge": {
+    "server_file_sha256": "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+    "origin_checkout": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c"
+  },
+  "reference_H18": {
+    "source_identity_sha": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+    "binary_sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+    "diagnostic_env_value": "1",
+    "current_processes": [],
+    "port8081_listeners": []
+  },
+  "config_control": {
+    "same_CLI_as_H18": true,
+    "all_base_env_values_equal": true,
+    "removed_environment_keys": [
+      "STRATA_DIAG_ZERO_LOGITS"
+    ],
+    "added_environment_keys": [],
+    "STRATA_DIAG_ZERO_LOGITS_present": false,
+    "STRATA_DBG_NAN_present": false,
+    "resident_budget_gib": 20,
+    "context": 32768,
+    "kv": "int8",
+    "workers": 10,
+    "buffered_load": "0",
+    "ple_io": "ram",
+    "ple_ram_reserve_gib": 12,
+    "prompt_cache": 0,
+    "adapt_swaps": 0,
+    "pcie_frac": 0,
+    "token_capture": true
+  },
+  "prompts": {
+    "manifest_source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+    "manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+    "manifest_copy_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+    "copy_identical": true,
+    "prompt_count": 9,
+    "prompt_ids": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k",
+      "long_4k",
+      "long_16k",
+      "long_30k7"
+    ],
+    "caps": {
+      "smoke_arithmetic": 128,
+      "smoke_unicode": 128,
+      "smoke_json_arithmetic": 128,
+      "smoke_python_function": 256,
+      "smoke_three_key_retrieval": 128,
+      "long_1k": 128,
+      "long_4k": 128,
+      "long_16k": 128,
+      "long_30k7": 128
+    },
+    "warmup": 1,
+    "formal_repeats": 3,
+    "concurrency": 1,
+    "files": [
+      {
+        "name": "long_16k.prompt.txt",
+        "bytes": 66202,
+        "source_sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+        "run_sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751"
+      },
+      {
+        "name": "long_1k.prompt.txt",
+        "bytes": 2838,
+        "source_sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+        "run_sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3"
+      },
+      {
+        "name": "long_30k7.prompt.txt",
+        "bytes": 127193,
+        "source_sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+        "run_sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af"
+      },
+      {
+        "name": "long_4k.prompt.txt",
+        "bytes": 14249,
+        "source_sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+        "run_sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065"
+      },
+      {
+        "name": "smoke_arithmetic.prompt.txt",
+        "bytes": 48,
+        "source_sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+        "run_sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd"
+      },
+      {
+        "name": "smoke_json_arithmetic.prompt.txt",
+        "bytes": 143,
+        "source_sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+        "run_sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52"
+      },
+      {
+        "name": "smoke_python_function.prompt.txt",
+        "bytes": 126,
+        "source_sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+        "run_sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74"
+      },
+      {
+        "name": "smoke_three_key_retrieval.prompt.txt",
+        "bytes": 265,
+        "source_sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+        "run_sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f"
+      },
+      {
+        "name": "smoke_unicode.prompt.txt",
+        "bytes": 82,
+        "source_sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+        "run_sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008"
+      }
+    ]
+  },
+  "static_guards": {
+    "launcher_root_relative": true,
+    "quality_runner_root_relative": true,
+    "launcher_or_runner_contains_H5_or_H18_output_paths": false,
+    "launcher_parser_errors": [],
+    "quality_runner_parser_errors": [],
+    "new_run_process_or_admission_files": [],
+    "process_json_exists": false,
+    "admission_json_exists": false,
+    "log_files": [],
+    "resource_files": [],
+    "request_files": [],
+    "quality_files": []
+  },
+  "launch": false,
+  "api_requests_sent": 0,
+  "automatic_restart": false,
+  "requires_H18_cleanup_and_root_start_signal": true,
+  "model_started": false,
+  "gpu_or_core_started": false,
+  "acceptance": "separate same-binary diagnostic-off control; does not erase or mask H18 evidence",
+  "prepared_artifacts": {
+    "launch-owned.ps1": {
+      "bytes": 5968,
+      "sha256": "782f84335705db890f94ddc3a1d456ad57a3ec579909af2b1061efb15a065bcb"
+    },
+    "task-contract.json": {
+      "bytes": 2815,
+      "sha256": "424bc1a65adba2c96bd1793b0565ba7bc5ceecb0d58e9d7c45f7bf52a0bc4fa5"
+    },
+    "run-status.json": {
+      "bytes": 361,
+      "sha256": "839aa694f39e35ec7330f05d144719fea03483aea30d290fa903f9c5a3b0653c"
+    },
+    "provenance.json": {
+      "bytes": 3310,
+      "sha256": "b87985d0b8f8e8ec6c6df8c911e941a285a4485323a9843890e84b4cdd784e18"
+    },
+    "run-quality-after-ready.ps1": {
+      "bytes": 19401,
+      "sha256": "65977c5e080c2ccfcb1a2443a9cce8acdc86e550256c43a5a9493681e2ef8561"
+    },
+    "config.json": {
+      "bytes": 1848,
+      "sha256": "3fcb54307e381d5cfd5b28f5afe87465b9a532950c653530995d0e346afc5b99"
+    },
+    "quality-execution-contract.json": {
+      "bytes": 5433,
+      "sha256": "0e6fde25d54378d423ac4018c65cab6fabc87dba7a487f120d3f45ff893ec355"
+    },
+    "manifest.json": {
+      "bytes": 14980,
+      "sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd"
+    },
+    "identity.json": {
+      "bytes": 2640,
+      "sha256": "0dd328c273bdef52e1179687451ec1b03a948269aa0f42d32b1335897116f34d"
+    }
+  }
+}

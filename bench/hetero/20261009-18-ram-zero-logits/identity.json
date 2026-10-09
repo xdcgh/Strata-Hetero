@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "source": {
+    "sha": "a7925b6a78ce5d89d940e4525f5c9699134b5c63"
+  },
+  "config": {
+    "sha256": "639021d4f5eadf9cbb0b5627a532dd1bec921ed8b3614008e8dac538b86f01bd",
+    "scope": "quality",
+    "prompt_cache": 0,
+    "deterministic_placement": true,
+    "resident_budget_gib": 20,
+    "expert_file_io": "explicit buffered",
+    "capture_actual_engine_token_ids": true
+  },
+  "model": {
+    "id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "native_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "integrity_manifest": "../20261008-00-admission/model-integrity-02.json",
+    "integrity_status": "full size/SHA pass retained; current identities revalidated before model request",
+    "historical_manifest": "../20261006-00-inventory/historical-manifest.json"
+  },
+  "engine": {
+    "version": "0.1.40.4",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-zero-diag-01\\strata.exe",
+    "sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc"
+  },
+  "server_python": {
+    "checkout_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "server_file_sha256": "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+    "quality_capture_opt_in": true,
+    "scope": "same reviewed Python bridge in all arms; C++ inputs identified separately"
+  },
+  "acceptance_status": "prepared_not_launched",
+  "compiled_snapshot": {
+    "snapshot_head": "388bb47a1aae0bfa042d0fa17af7103eedea3a58",
+    "verify_cpp_base_blob": "6b805694a4dc1a824963b41e67bbfdd60b2dc9c4",
+    "verify_cpp_sha256": "85cecc948e687900c7624da07ee25e02797b36722d567668b9842cb5ca05ebc3",
+    "verify_cpp_patch_sha256": "58ee6f105162ff55ddbeeaa0b7f0ba7344a183bd7be55e4848ce961ae5d3485e",
+    "build_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-17-zero-logits-diagnostic\\build-evidence\\build-receipt.json",
+    "build_receipt_sha256": "a8fdc43f8de46fa5aa8bbc3b54ffd57d3c3b3d0f3d9835282501cb9b691827c9",
+    "snapshot_clean": false,
+    "snapshot_only_modified_file": "src/core/verify.cpp"
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-18-ram-zero-logits",
+  "status": "terminal",
+  "finished_utc": "2026-10-09T06:40:47.302428+00:00",
+  "launch_identity": {
+    "process_json_sha256": "c819197bce2aff3688a076f5eec9981b8691bee7de6bd39930d8d0d7ba4ba656",
+    "sampler_process_json_sha256": "d7c3d3e8094e675c474c83a9bbb41a336187ef3881179f6eb86eaf3678f5c6f6",
+    "identity_json_sha256": "13a00de617f10abe9447016be118ac149050af98ba4a996682d5d2ad8a0d1884",
+    "identity_recheck_sha256": "c08e40c80245b371ed3cba263ac43da25160c6b9622a0dc8749164ea37fe4d6d",
+    "config_sha256": "639021d4f5eadf9cbb0b5627a532dd1bec921ed8b3614008e8dac538b86f01bd",
+    "admission_sha256": "54ac954c7638be050bb409b3ab78974b829b236cc7a54256de55a3898a3c8c26",
+    "provenance_sha256": "32be45e5a4d1327ea15dcd8127a492413311cf06a62523fdca07c1c1092a0b5e",
+    "launch_admission": {
+      "receipt": "admission.json",
+      "receipt_sha256": "54ac954c7638be050bb409b3ab78974b829b236cc7a54256de55a3898a3c8c26",
+      "status": "pass",
+      "launch_process_receipt": "process.json",
+      "process_receipt_sha256": "c819197bce2aff3688a076f5eec9981b8691bee7de6bd39930d8d0d7ba4ba656",
+      "scope": "launched immediately after fresh pass and commit check; exact saved JSON bytes"
+    },
+    "launcher": {
+      "pid": 3324,
+      "parent_pid": 2668,
+      "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "argv": [
+        "-u",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py",
+        "--engine",
+        "strata",
+        "--config",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-18-ram-zero-logits\\config.json",
+        "--port",
+        "8081"
+      ],
+      "start_utc_receipt": "2026-10-09T06:18:31.6083190Z",
+      "observed_creation_delta_ms": 0.0,
+      "command_exact_match": true
+    },
+    "bridge": {
+      "pid": 17392,
+      "parent_pid": 3324,
+      "executable": "C:\\Python314\\python.exe",
+      "config_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-18-ram-zero-logits\\config.json",
+      "listener_address": "127.0.0.1",
+      "listener_port": 8081,
+      "exact_owned_pid_stopped": true
+    },
+    "engine": {
+      "pid": 5040,
+      "parent_pid": 17392,
+      "executable": "E:\\Strata-Hetero-data\\build\\cuda-zero-diag-01\\strata.exe",
+      "version": "0.1.40.4",
+      "expected_sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+      "observed_sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+      "sha_match": true,
+      "command_exact_match": true
+    },
+    "sampler": {
+      "launcher_pid": 3508,
+      "parent_pid": 2668,
+      "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "argv": [
+        "-u",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+        "--output",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-18-ram-zero-logits\\resource\\samples.jsonl",
+        "--pid",
+        "3324",
+        "--interval",
+        "1",
+        "--max-seconds",
+        "10800",
+        "--minimum-commit-gib",
+        "4",
+        "--stop-file",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-18-ram-zero-logits\\resource\\STOP"
+      ],
+      "start_utc_receipt": "2026-10-09T06:18:31.6358576Z",
+      "observed_creation_delta_ms": 0.0006,
+      "actual_child_pid": 15792,
+      "actual_child_parent_pid": 3508,
+      "actual_child_executable": "C:\\Python314\\python.exe",
+      "actual_child_command_matched_sampler_argv": true
+    }
+  },
+  "unload": {
+    "initial_attempt": {
+      "receipt": "shutdown-unload.json",
+      "http_status": 415,
+      "body": "{\"error\": {\"message\": \"send application/json\"}}",
+      "meaning": "preserved failed attempt; application/json header was required"
+    },
+    "successful_attempt": {
+      "receipt": "shutdown-unload-02.json",
+      "http_status": 200,
+      "body": "{\"status\": \"unloaded\", \"service\": \"strata\", \"model\": \"qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero\", \"loaded\": false, \"auto_load\": true, \"structured_output\": {\"formats\": [\"json_object\", \"json_schema\"], \"method\": \"prompt_and_validate\", \"constrained_decoding\": false, \"stream_buffered\": true}, \"engine\": \"0.1.40.4\", \"started\": 1791526947, \"uptime_s\": 1027, \"cache_max_tokens\": 32768, \"context\": {\"native\": 32768, \"max_positions\": 32768}, \"concurrency\": {\"serving\": 1, \"requested\": 1}, \"dialects\": [\"/v1/chat/completions\", \"/v1/messages\", \"/v1/responses\"], \"vision\": {\"enabled\": false, \"available\": false, \"error\": null}, \"activity\": {\"requests\": 36, \"in_flight\": 0, \"last_request_at\": 1791527787}, \"last_timings\": {\"cache_n\": 0, \"prompt_n\": 30712, \"prompt_ms\": 17754.7, \"prompt_per_token_ms\": 0.578, \"prompt_per_second\": 1729.8, \"predicted_n\": 84, \"predicted_ms\": 1995.1, \"predicted_per_token_ms\": 23.751, \"predicted_per_second\": 42.1, \"draft_n\": 63, \"draft_n_accepted\": 62, \"at\": 1791527787}, \"vram\": {\"elastic\": false}, \"machine\": {\"at\": 1791527974, \"gpu\": {\"name\": \"NVIDIA GeForce RTX 4090 D\", \"used_mib\": 6519.0, \"total_mib\": 49140.0, \"util_pct\": 0, \"temp_c\": 31, \"power_w\": 7.354}, \"ram\": {\"used_gib\": 22.4, \"total_gib\": 127.6}}}",
+      "loaded_after": false,
+      "in_flight_after": 0,
+      "requests_total": 36
+    },
+    "engine_exit_observed_within_seconds": 0.13
+  },
+  "sampler_stop": {
+    "stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-18-ram-zero-logits\\resource\\STOP",
+    "stop_file_created_utc": 1791527989890359300,
+    "terminal_record": {
+      "schema_version": 1,
+      "record_type": "sampler_stopped",
+      "observed_at_utc": "2026-10-09T06:39:50.747Z",
+      "monotonic_seconds": 13617.4556269,
+      "reason": "stop_file_exists"
+    },
+    "sampler_exit_code": 0,
+    "sampler_and_actual_child_exited": true
+  },
+  "bridge_and_launcher_stop": {
+    "exact_bridge_pid_terminated": 17392,
+    "bridge_exit_observed_within_seconds": 0.55,
+    "launcher_pid": 3324,
+    "launcher_natural_exit": true,
+    "launcher_exit_observed_within_seconds": 0.26
+  },
+  "post_cleanup_process_check": {
+    "checked_pids": {
+      "launcher": 3324,
+      "bridge": 17392,
+      "engine": 5040,
+      "sampler_launcher": 3508,
+      "sampler_actual_python_child": 15792,
+      "launcher_conhost": 14296,
+      "sampler_conhost": 21172
+    },
+    "all_checked_owned_pids_absent": true,
+    "listener_8081_absent": true,
+    "other_services_or_processes_stopped": false
+  },
+  "benchmark_evidence": {
+    "prompts": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k",
+      "long_4k",
+      "long_16k",
+      "long_30k7"
+    ],
+    "completed_formals": 27,
+    "quality_passes": 27,
+    "formal_request_count": 27,
+    "total_requests_including_warmups": 36,
+    "all_long_ids_and_visible_text_matched_h4_per_formal": true,
+    "strict_comparator_accepted_claim": false,
+    "per_task_resource_windows": {
+      "smoke_arithmetic": {
+        "request_monotonic_start_s": 12776.6685436,
+        "request_monotonic_end_s": 12778.1804904,
+        "sample_count": 1,
+        "min_physical_available_gib": 53.917,
+        "min_commit_available_gib": 18.723,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      },
+      "smoke_unicode": {
+        "request_monotonic_start_s": 12782.8549565,
+        "request_monotonic_end_s": 12784.7793458,
+        "sample_count": 2,
+        "min_physical_available_gib": 52.791,
+        "min_commit_available_gib": 18.68,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      },
+      "smoke_json_arithmetic": {
+        "request_monotonic_start_s": 12791.3768799,
+        "request_monotonic_end_s": 12794.857891,
+        "sample_count": 4,
+        "min_physical_available_gib": 51.276,
+        "min_commit_available_gib": 18.775,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      },
+      "smoke_python_function": {
+        "request_monotonic_start_s": 12800.8599042,
+        "request_monotonic_end_s": 12804.5239994,
+        "sample_count": 4,
+        "min_physical_available_gib": 49.932,
+        "min_commit_available_gib": 18.732,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      },
+      "smoke_three_key_retrieval": {
+        "request_monotonic_start_s": 12814.8938248,
+        "request_monotonic_end_s": 12827.6023416,
+        "sample_count": 13,
+        "min_physical_available_gib": 47.215,
+        "min_commit_available_gib": 18.425,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      },
+      "long_1k": {
+        "request_monotonic_start_s": 13085.4545147,
+        "request_monotonic_end_s": 13104.2155746,
+        "sample_count": 19,
+        "min_physical_available_gib": 40.173,
+        "min_commit_available_gib": 20.38,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      },
+      "long_4k": {
+        "request_monotonic_start_s": 13226.2636713,
+        "request_monotonic_end_s": 13246.1504739,
+        "sample_count": 20,
+        "min_physical_available_gib": 39.093,
+        "min_commit_available_gib": 20.425,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      },
+      "long_16k": {
+        "request_monotonic_start_s": 13280.7456941,
+        "request_monotonic_end_s": 13316.6594339,
+        "sample_count": 36,
+        "min_physical_available_gib": 37.702,
+        "min_commit_available_gib": 20.428,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      },
+      "long_30k7": {
+        "request_monotonic_start_s": 13355.7286572,
+        "request_monotonic_end_s": 13414.5908428,
+        "sample_count": 59,
+        "min_physical_available_gib": 39.333,
+        "min_commit_available_gib": 20.357,
+        "all_samples_owner_gates_no_alerts_errors_pass": true
+      }
+    }
+  },
+  "resource_window": {
+    "resource_sample_count": 1279,
+    "first_sample_utc": "2026-10-09T06:18:31.747Z",
+    "last_sample_utc": "2026-10-09T06:39:49.747Z",
+    "min_physical_available_gib": 37.702,
+    "min_commit_available_gib": 17.8,
+    "all_samples_owner_3324_gates_pass_no_alerts_errors": true,
+    "last_sample": {
+      "schema_version": 1,
+      "record_type": "resource_sample",
+      "observed_at_utc": "2026-10-09T06:39:49.747Z",
+      "monotonic_seconds": 13616.4558578,
+      "sample_gap_seconds": 0.9999542999994446,
+      "sampler_elapsed_seconds": 0.11357990000033169,
+      "owner_pid": 3324,
+      "cpu": {
+        "percent": 20.0,
+        "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+      },
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 118018162688,
+        "physical_used_bytes": 18945085440,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 21847937024,
+        "commit_available_bytes": 123705245696,
+        "commit_total_pages": 5333969,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123705245696,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "ram_gate": {
+        "status": "pass",
+        "available_gib": 109.913,
+        "required_gib": 12
+      },
+      "commit_gate": {
+        "status": "pass",
+        "available_gib": 115.209,
+        "required_gib": 4.0,
+        "source": "PSAPI GetPerformanceInfo"
+      },
+      "owner_process_tree": [
+        {
+          "pid": 3324,
+          "parent_pid": 2668,
+          "name": "python.exe",
+          "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+          "rss_bytes": 4243456,
+          "io_read_bytes": 185,
+          "io_write_bytes": 0,
+          "cpu_user_seconds": 0.0,
+          "cpu_system_seconds": 0.0,
+          "errors": []
+        },
+        {
+          "pid": 14296,
+          "parent_pid": 3324,
+          "name": "conhost.exe",
+          "executable_path": "C:\\Windows\\System32\\conhost.exe",
+          "rss_bytes": 12079104,
+          "io_read_bytes": 16607,
+          "io_write_bytes": 0,
+          "cpu_user_seconds": 0.125,
+          "cpu_system_seconds": 0.640625,
+          "errors": []
+        },
+        {
+          "pid": 17392,
+          "parent_pid": 3324,
+          "name": "python.exe",
+          "executable_path": "C:\\Python314\\python.exe",
+          "rss_bytes": 222703616,
+          "io_read_bytes": 15504151,
+          "io_write_bytes": 964361,
+          "cpu_user_seconds": 2.296875,
+          "cpu_system_seconds": 2.53125,
+          "errors": []
+        }
+      ],
+      "disk_io": {
+        "PhysicalDrive0": {
+          "read_bytes": 11920663040,
+          "write_bytes": 6478523392,
+          "read_count": 323691,
+          "write_count": 385544,
+          "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+          "volume_mapping": "not_inferred"
+        },
+        "PhysicalDrive1": {
+          "read_bytes": 322682610688,
+          "write_bytes": 59570340864,
+          "read_count": 10054448,
+          "write_count": 243548,
+          "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+          "volume_mapping": "not_inferred"
+        },
+        "PhysicalDrive2": {
+          "read_bytes": 604910080,
+          "write_bytes": 2666496,
+          "read_count": 4775,
+          "write_count": 517,
+          "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+          "volume_mapping": "not_inferred"
+        },
+        "PhysicalDrive3": {
+          "read_bytes": 425884740096,
+          "write_bytes": 0,
+          "read_count": 5790413,
+          "write_count": 0,
+          "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+          "volume_mapping": "not_inferred"
+        }
+      },
+      "nvidia": {
+        "source": "nvidia-smi",
+        "telemetry_known": true,
+        "devices": [
+          {
+            "name": "NVIDIA GeForce RTX 4090 D",
+            "memory_used_mib": 246,
+            "memory_free_mib": 48383,
+            "utilization_percent": 0.0,
+            "power_watts": 6.9,
+            "temperature_c": 31.0,
+            "telemetry_known": true,
+            "optional": {
+              "clocks.current.graphics": 210,
+              "clocks.current.memory": 405,
+              "pcie.link.gen.current": 1,
+              "pcie.link.width.current": 8
+            }
+          }
+        ]
+      },
+      "alerts": [],
+      "errors": []
+    }
+  },
+  "zero_logits_diagnostic": {
+    "marker": "strata zero-logits diag:",
+    "matching_engine_log_lines": 0,
+    "rows_observed": 0,
+    "finite_nan_posinf_neginf_zeros_finite_argmax_id19": "unavailable; diagnostic row was not emitted. This is not evidence that logits were finite or had zero zeros.",
+    "config_flag": "1"
+  },
+  "preservation_and_limits": [
+    "Original H5 failure artifacts and H18 success artifacts remain unchanged.",
+    "No model requests, restart, later-stage workload, or external process cleanup occurred during shutdown.",
+    "H18/H4 source, engine binary, PLE I/O mode, and diagnostic environment differ; no causal fix claim is made."
+  ]
+}

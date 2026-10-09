@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_launched",
+  "prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "warmup": 1,
+  "formal_repeats": 3,
+  "seed": 42,
+  "concurrency": 1,
+  "minimum_physical_gib": 12,
+  "minimum_commit_gib": 4,
+  "tasks": [
+    {
+      "prompt_id": "smoke_arithmetic",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_unicode",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_json_arithmetic",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_python_function",
+      "max_tokens": 256
+    },
+    {
+      "prompt_id": "smoke_three_key_retrieval",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_1k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_4k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_16k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_30k7",
+      "max_tokens": 128
+    }
+  ],
+  "cap_authority": "explicit matched experiment contract; do not replace caps with manifest max_output_tokens",
+  "comparison_runs": [
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality"
+  ],
+  "prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "run_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-18-ram-zero-logits",
+  "execution_authorized": false,
+  "diagnostic": {
+    "only_extra_environment": "STRATA_DIAG_ZERO_LOGITS=1",
+    "explicitly_absent_environment": [
+      "STRATA_DBG_NAN"
+    ],
+    "expected_prompt_ids": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k",
+      "long_4k",
+      "long_16k",
+      "long_30k7"
+    ],
+    "warmup": 1,
+    "formal_repeats": 3,
+    "concurrency": 1,
+    "max_tokens_by_prompt": {
+      "smoke_arithmetic": 128,
+      "smoke_unicode": 128,
+      "smoke_json_arithmetic": 128,
+      "smoke_python_function": 256,
+      "smoke_three_key_retrieval": 128,
+      "long_1k": 128,
+      "long_4k": 128,
+      "long_16k": 128,
+      "long_30k7": 128
+    },
+    "diagnostic_caps_source": "copied H5 explicit controls: smoke_python_function=256; every other prompt=128",
+    "max_diagnostic_windows": 16,
+    "max_head_logits_readback_bytes": 67108864,
+    "trigger": "only after existing synced sampling already selected token ID 0",
+    "on_zero_logit_event": "Record the event and exact engine.log lines; let the current fixed-cap API request finish and save complete response/SSE/token-ID artifacts; run offline quality classification; if a diagnostic was observed, stop before the next prompt. Never kill the client/request because of this diagnostic and never restart.",
+    "model_quality_acceptance": false,
+    "compiled_source_current_head": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+    "compiled_snapshot_head": "388bb47a1aae0bfa042d0fa17af7103eedea3a58",
+    "compiled_verify_cpp_sha256": "85cecc948e687900c7624da07ee25e02797b36722d567668b9842cb5ca05ebc3",
+    "compiled_patch_sha256": "58ee6f105162ff55ddbeeaa0b7f0ba7344a183bd7be55e4848ce961ae5d3485e",
+    "build_receipt_sha256": "a8fdc43f8de46fa5aa8bbc3b54ffd57d3c3b3d0f3d9835282501cb9b691827c9",
+    "client_terminated_for_diagnostic": false,
+    "current_request_must_complete_before_stop": true,
+    "stop_before_next_prompt_after_offline_classification": true
+  }
+}

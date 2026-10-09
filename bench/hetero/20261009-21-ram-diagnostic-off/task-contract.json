@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_launched",
+  "prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "warmup": 1,
+  "formal_repeats": 3,
+  "seed": 42,
+  "concurrency": 1,
+  "minimum_physical_gib": 12,
+  "minimum_commit_gib": 4,
+  "tasks": [
+    {
+      "prompt_id": "smoke_arithmetic",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_unicode",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_json_arithmetic",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_python_function",
+      "max_tokens": 256
+    },
+    {
+      "prompt_id": "smoke_three_key_retrieval",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_1k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_4k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_16k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_30k7",
+      "max_tokens": 128
+    }
+  ],
+  "cap_authority": "explicit matched experiment contract; do not replace caps with manifest max_output_tokens",
+  "comparison_runs": [
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality"
+  ],
+  "prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "run_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off",
+  "execution_authorized": false,
+  "control_comparison": {
+    "reference_run": "20261009-18-ram-zero-logits",
+    "runtime_diagnostic_env_present": false,
+    "compiled_binary_has_optional_diagnostic_branch": true,
+    "STRATA_DIAG_ZERO_LOGITS_set": false,
+    "STRATA_DBG_NAN_set": false,
+    "purpose": "same compiled binary with optional diagnostic disabled, to compare flag/readback overhead independently from startup/build",
+    "automatic_restart": false,
+    "requires_H18_cleanup_and_root_review_before_launch": true,
+    "all_CLI_and_prompt_controls_match_H18": true,
+    "compiled_engine_source_identity_sha": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+    "compiled_snapshot_head": "388bb47a1aae0bfa042d0fa17af7103eedea3a58",
+    "verify_cpp_sha256": "85cecc948e687900c7624da07ee25e02797b36722d567668b9842cb5ca05ebc3",
+    "verify_cpp_patch_sha256": "58ee6f105162ff55ddbeeaa0b7f0ba7344a183bd7be55e4848ce961ae5d3485e",
+    "build_receipt_sha256": "a8fdc43f8de46fa5aa8bbc3b54ffd57d3c3b3d0f3d9835282501cb9b691827c9",
+    "unexpected_diagnostic_line_policy": "record evidence and complete current fixed-cap request; offline classify; stop before next prompt"
+  }
+}

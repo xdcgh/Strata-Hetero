@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "prepared_utc": "2026-10-09T06:13:00.8140820Z",
+  "run_id": "20261009-18-ram-zero-logits",
+  "status": "prepared_not_launched",
+  "source_current_head": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+  "compiled_snapshot": {
+    "head": "388bb47a1aae0bfa042d0fa17af7103eedea3a58",
+    "verify_cpp_sha256": "85cecc948e687900c7624da07ee25e02797b36722d567668b9842cb5ca05ebc3",
+    "verify_cpp_patch_sha256": "58ee6f105162ff55ddbeeaa0b7f0ba7344a183bd7be55e4848ce961ae5d3485e",
+    "build_receipt_sha256": "a8fdc43f8de46fa5aa8bbc3b54ffd57d3c3b3d0f3d9835282501cb9b691827c9",
+    "snapshot_clean": false
+  },
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-zero-diag-01\\strata.exe",
+    "sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+    "bytes": 50761728,
+    "version": "0.1.40.4"
+  },
+  "bridge": {
+    "path": "serve/server.py",
+    "sha256": "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+    "frozen_checkout": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c"
+  },
+  "config": {
+    "path": "bench\\hetero\\20261009-18-ram-zero-logits\\config.json",
+    "sha256": "639021d4f5eadf9cbb0b5627a532dd1bec921ed8b3614008e8dac538b86f01bd",
+    "args_identical_to_h5": true,
+    "all_original_h5_env_values_preserved": true,
+    "added_env_keys": [
+      "STRATA_DIAG_ZERO_LOGITS"
+    ],
+    "STRATA_DIAG_ZERO_LOGITS": "1",
+    "STRATA_DBG_NAN_absent": true,
+    "resident_budget_gib": 20,
+    "context": 32768,
+    "kv": "int8",
+    "pool_workers": 10,
+    "unbuffered_load": "0",
+    "ple_io": "ram",
+    "ple_ram_reserve_gib": 12,
+    "prompt_cache": 0,
+    "adapt_swaps": 0,
+    "pcie_frac": 0,
+    "token_capture": true
+  },
+  "prompts": {
+    "source_manifest": "bench/hetero/20261009-06-quality-prompts/manifest.json",
+    "source_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+    "run_copy": "bench\\hetero\\20261009-18-ram-zero-logits\\manifest.json",
+    "run_copy_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+    "copy_matches_source": true,
+    "prompt_count": 9,
+    "prompt_ids": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k",
+      "long_4k",
+      "long_16k",
+      "long_30k7"
+    ],
+    "caps": {
+      "smoke_arithmetic": 128,
+      "smoke_unicode": 128,
+      "smoke_json_arithmetic": 128,
+      "smoke_python_function": 256,
+      "smoke_three_key_retrieval": 128,
+      "long_1k": 128,
+      "long_4k": 128,
+      "long_16k": 128,
+      "long_30k7": 128
+    },
+    "warmup": 1,
+    "formal_repeats": 3,
+    "concurrency": 1
+  },
+  "guards": {
+    "run_status": "prepared_not_launched",
+    "port8081_listeners": 0,
+    "strata_ninja_cl_native_expert_processes": 0,
+    "launch_output_guard_files_present": [],
+    "process_json_present": false,
+    "admission_json_present": false,
+    "log_files": [],
+    "resource_files": [],
+    "requests_files": [],
+    "quality_files": [],
+    "launch_owned_parser_errors": [],
+    "quality_runner_parser_errors": []
+  },
+  "diagnostic_stop_policy": "Record diagnostics, finish the active capped request, preserve all SSE/token IDs, offline-classify, then stop before next prompt; never terminate the client due to the diagnostic line.",
+  "launch_owned_helper": "bench\\hetero\\20261009-18-ram-zero-logits\\launch-owned.ps1",
+  "quality_runner": "bench\\hetero\\20261009-18-ram-zero-logits\\run-quality-after-ready.ps1",
+  "execution_authorized": false,
+  "model_started": false,
+  "api_requests_sent": 0,
+  "gpu_core_started": false,
+  "quality_acceptance": false,
+  "run_artifact_hashes": {
+    "config_sha256": "639021d4f5eadf9cbb0b5627a532dd1bec921ed8b3614008e8dac538b86f01bd",
+    "identity_sha256": "13a00de617f10abe9447016be118ac149050af98ba4a996682d5d2ad8a0d1884",
+    "provenance_sha256": "17fab49e6bfa24560025e46683f6d20bcc91ed2a561c193e56ea75df208c0ac5",
+    "task_contract_sha256": "cea91185fb45e008c4b08977606a76dbd045bdcb9c7f5aa486f23b58c361aad3",
+    "quality_contract_sha256": "a51e93cd4f2ab67e1a0e443fc8127ac45435613c825766f19654f2c44da05db6",
+    "launch_helper_sha256": "2e8e989f4e4898da6071ff3d842e52510952a77b74acd5630bf87cb6544e5e62",
+    "quality_runner_sha256": "3383ba82756dad87d4d9cbec0769683407d81ae3e88ba57be8206f258dce1dee"
+  },
+  "diagnostic_behavior": {
+    "zero_diag_event_kills_client": false,
+    "complete_current_request": true,
+    "save_sse_and_actual_ids": true,
+    "offline_quality_classification_before_stop": true,
+    "stop_before_next_prompt_if_diagnostic": true,
+    "resource_gate_failure_behavior": "unchanged safety abort path; only exact owned runner process",
+    "diagnostic_log_event_file_pattern": "quality/zero-logits-<prompt>.json"
+  }
+}

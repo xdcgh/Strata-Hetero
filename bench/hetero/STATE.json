@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "Latest RAM20 short retrieval failed and was stopped; native PLE parity host harness is under build review",
+  "phase": "H18 diagnostic27 passed and stopped; H21 diagnostic-off prepared; CPU vision oracle build next",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -59,15 +59,15 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "H5 terminal; exact model/server/sampler stopped and port8081 released; original service and ComfyUI restoration remain due after experiments",
+    "gpu_state_at_quota_resume": "H18/H19 fully terminal with exact owned process/descendant/listener cleanup; no newmodel yet. H21prepared andCPU-only vision oracle build authorized; original service/ComfyUI restoration still due after experiments",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Compile/test CPU-only real PLE parity, then admitted Direct/pageable/locked row comparison; model RAM regression remains unresolved. Controlled E/F runtime placement, Arc IPC/quantization/contention, NPU vision, planner and larger-context matrix remain original scope.",
+  "next_experiment": "Finish CPU-only vision oracle build; admitted same-binary RAM diagnostic-off H21 quality next. Source reviewer checks mapped-memory coherence. Controlled E/F runtime placement, CPU scheduling, Arc quantization/contention, vision/NPU, planner and full original context/performance matrix remain required.",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T05:19:30.436395+00:00",
-  "current_run": null,
+  "last_checkpoint_utc": "2026-10-09T06:40:00+00:00",
+  "current_run": "20261009-20-vision-oracle-preparation",
   "current_model_owner": null
 }

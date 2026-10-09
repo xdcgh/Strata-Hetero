@@ -42,6 +42,8 @@ The subsequent GPU-free `20261009-14-real-ple-parity` experiment compared Direct
 
 The opt-in `STRATA_DIAG_ZERO_LOGITS=1` diagnostic reads verifier head scores only after an already synchronized sampling result includes ID 0. It bounds each readback at 64 MiB and samples at most 16 windows per process, counting finite values, NaNs, positive/negative infinities and zeros and recording the finite score range/argmax plus scores for IDs 0 and 19. Readback errors are reported unavailable. The default is off; this does not enable `STRATA_DBG_NAN` or add prefill GEMM synchronizations. Compilation of the isolated diagnostic snapshot passed in `20261009-17-zero-logits-diagnostic`; no model run is established by that build. A diagnostic may affect later timing, so an instrumented pass still cannot establish an uninstrumented repair.
 
+The H18 diagnostic instance subsequently passed all nine tasks/27 formal requests, with emitted IDs and visible text matching H4. There were no ID-0 degeneration events and no diagnostic log lines, so no head-score readback occurred: finite/NaN/Inf/zero/argmax statistics are unavailable. Its owned model and sampler tree were stopped. H5's same-control failure remains preserved. H21 prepares the same H18 compiled binary with only the diagnostic environment flag removed; it is not yet launched. This control can distinguish flag overhead from other build/startup effects, but an isolated passing run does not establish the regression's cause or long-context stability.
+
 | Arm | Expert budget | PLE | What must be recorded |
 |---|---|---|---|
 | Current upstream | Matched reference | Direct, existing row cache | Initial/warm startup, PLE wait, full prefill and output rates, file reads |

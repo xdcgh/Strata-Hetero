@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-18-ram-zero-logits",
+  "requested_utc": "2026-10-09T06:39:18.8516422Z",
+  "endpoint": "POST http://127.0.0.1:8081/v1/unload",
+  "http_status": 415,
+  "response_body": "{\"error\": {\"message\": \"send application/json\"}}",
+  "status_before": {
+    "loaded": true,
+    "requests": 36,
+    "inflight": 0,
+    "engine": "0.1.40.4"
+  },
+  "status_after": {
+    "loaded": true,
+    "requests": 36,
+    "inflight": 0,
+    "engine": "0.1.40.4"
+  },
+  "status_after_error": null
+}
