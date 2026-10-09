@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-09T05:30:31.6941129Z",
+  "run_json": "bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.json",
+  "run_json_sha256": "c92df0b049aaa819c3c5f4bc174ea748b9bbe6143ef95efcd6b8447420c5a9bb",
+  "run_status": "complete",
+  "parity": true,
+  "first_direct_formal_sha256": "90451e0210be9449c68602d09b192a6b82b277ad3a6f27a91fbae3076445e91b",
+  "formal_sha_count": 45,
+  "all_45_formal_hashes_match_direct_first": true,
+  "warmup_count": 15,
+  "all_15_warmup_hashes_match_direct_first": true,
+  "all_1_310_720_values_finite": true,
+  "all_bit_diff_and_max_abs_zero": true,
+  "row_id_buffer_sha256": "ebe263801b2ef7c363e91a9cc8ba1d9b2cef79ad95713d2e0b751fe5f937ed5a",
+  "table": {
+    "rows": 320001536,
+    "row_bytes": 90,
+    "payload_bytes": 28800138240,
+    "file_offset": 682453280
+  },
+  "arms": [
+    {
+      "name": "direct",
+      "mode": "direct",
+      "open_started_utc": "2026-10-09T05:27:46Z",
+      "open_ms": 1.5765,
+      "lock_requested": false,
+      "locked": false,
+      "locked_bytes": 0,
+      "expected_locked_bytes": 28800138240,
+      "read_rows_checked": 8192,
+      "read_row_matches_gather": true,
+      "input_identity_stable": true,
+      "selected_row_sha256": {
+        "0": "e434adca0a510d646d239c6462b7cac835b0bcd49820bb9ba90ac0006e7774f4",
+        "19": "0ca6b327172510e6b255c661fc3cc373bbe0927d8b5939a55f1eea519ebd536c",
+        "320001535": "9e132485d5107211de325a45e7917cbe3e4b5b9cde3e4ee91d7d2102317759ee"
+      },
+      "batch_sizes": [
+        1,
+        2,
+        6,
+        96,
+        512
+      ],
+      "error": ""
+    },
+    {
+      "name": "mmap_pageable",
+      "mode": "mmap",
+      "open_started_utc": "2026-10-09T05:27:52Z",
+      "open_ms": 1.0549,
+      "lock_requested": false,
+      "locked": false,
+      "locked_bytes": 0,
+      "expected_locked_bytes": 28800138240,
+      "read_rows_checked": 8192,
+      "read_row_matches_gather": true,
+      "input_identity_stable": true,
+      "selected_row_sha256": {
+        "0": "e434adca0a510d646d239c6462b7cac835b0bcd49820bb9ba90ac0006e7774f4",
+        "19": "0ca6b327172510e6b255c661fc3cc373bbe0927d8b5939a55f1eea519ebd536c",
+        "320001535": "9e132485d5107211de325a45e7917cbe3e4b5b9cde3e4ee91d7d2102317759ee"
+      },
+      "batch_sizes": [
+        1,
+        2,
+        6,
+        96,
+        512
+      ],
+      "error": ""
+    },
+    {
+      "name": "mmap_locked",
+      "mode": "mmap",
+      "open_started_utc": "2026-10-09T05:27:57Z",
+      "open_ms": 109995,
+      "lock_requested": true,
+      "locked": true,
+      "locked_bytes": 28800138240,
+      "expected_locked_bytes": 28800138240,
+      "read_rows_checked": 8192,
+      "read_row_matches_gather": true,
+      "input_identity_stable": true,
+      "selected_row_sha256": {
+        "0": "e434adca0a510d646d239c6462b7cac835b0bcd49820bb9ba90ac0006e7774f4",
+        "19": "0ca6b327172510e6b255c661fc3cc373bbe0927d8b5939a55f1eea519ebd536c",
+        "320001535": "9e132485d5107211de325a45e7917cbe3e4b5b9cde3e4ee91d7d2102317759ee"
+      },
+      "batch_sizes": [
+        1,
+        2,
+        6,
+        96,
+        512
+      ],
+      "error": ""
+    }
+  ],
+  "selected_hashes_match_all_arms": true,
+  "binary_sha256": "5e830b82fabcd877e311adc1b0f3560f2256d5ee15c2b2d1a4371d5390119245",
+  "owner": {
+    "pid": 22208,
+    "exe": "E:\\Strata-Hetero-data\\build\\host-ple-parity-20261009-01\\strata-ple-table-parity.exe",
+    "argv": [
+      "--run",
+      "--file",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "--output",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.json"
+    ],
+    "start_utc": "2026-10-09T05:27:43.8256644Z",
+    "child_exit_code": 0,
+    "priority": "Idle",
+    "identity_valid": true
+  },
+  "monitor": {
+    "sampler_pid": 12264,
+    "sampler_stopped_after_child": true,
+    "sampler_process_still_present": false,
+    "child_process_still_present": false,
+    "stop_reason": "child_terminal",
+    "child_killed": false,
+    "duration_seconds": 128.0,
+    "sample_count": 141,
+    "sample_period_seconds": "approximately 1",
+    "min_available_physical_bytes": 87127875584.0,
+    "min_available_commit_bytes": 94186041344.0,
+    "physical_floor_bytes": 41685040128,
+    "commit_floor_bytes": 4294967296,
+    "floors_passed": true
+  },
+  "logs": {
+    "stdout": "real-parity-01.stdout.log",
+    "stdout_bytes": 0,
+    "stderr": "real-parity-01.stderr.log",
+    "stderr_bytes": 0
+  },
+  "scope": {
+    "gpu_executed": false,
+    "model_or_engine_started": false,
+    "extra_sweeps": false,
+    "payload_rehashed_before_run": false,
+    "performance_claim": false
+  }
+}

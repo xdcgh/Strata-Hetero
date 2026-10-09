@@ -31,6 +31,9 @@ add_executable(strata-storage-profile "${STRATA_SOURCE_ROOT}/src/hetero/storage_
 target_link_libraries(strata-storage-profile PRIVATE strata_hetero_host)
 add_executable(strata-storage-profile-test "${STRATA_SOURCE_ROOT}/src/hetero/storage_profile_test.cpp")
 target_link_libraries(strata-storage-profile-test PRIVATE strata_hetero_host)
+add_executable(strata-ple-table-parity "${STRATA_SOURCE_ROOT}/src/hetero/ple_table_parity.cpp")
+target_include_directories(strata-ple-table-parity PRIVATE "${CMAKE_CURRENT_LIST_DIR}/../hetero_native_cpu")
+target_link_libraries(strata-ple-table-parity PRIVATE strata_hetero_host)
 
 enable_testing()
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/fixtures")
@@ -39,3 +42,8 @@ add_test(NAME ple_reader_cpu COMMAND strata-ple-reader --selftest
 add_test(NAME resident_memory_cpu COMMAND strata-memory-check)
 add_test(NAME storage_profile_fixture_cpu COMMAND strata-storage-profile-test
     --dir "${CMAKE_CURRENT_BINARY_DIR}/fixtures/storage_profile_new_testdir")
+add_test(NAME ple_table_parity_cli COMMAND "${CMAKE_COMMAND}"
+    "-DPROGRAM=$<TARGET_FILE:strata-ple-table-parity>"
+    "-DFIXTURE_DIR=${CMAKE_CURRENT_BINARY_DIR}/fixtures/ple_table_parity_cli"
+    -P "${CMAKE_CURRENT_LIST_DIR}/ple_table_parity_cli_fixtures.cmake")
+set_tests_properties(ple_table_parity_cli PROPERTIES TIMEOUT 15)

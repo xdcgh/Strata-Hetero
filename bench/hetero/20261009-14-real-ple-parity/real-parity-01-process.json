@@ -1,0 +1,26 @@
+{
+    "schema_version":  1,
+    "started_utc":  "2026-10-09T05:27:43.8073883Z",
+    "pid":  22208,
+    "executable":  "E:\\Strata-Hetero-data\\build\\host-ple-parity-20261009-01\\strata-ple-table-parity.exe",
+    "executable_sha256":  "5e830b82fabcd877e311adc1b0f3560f2256d5ee15c2b2d1a4371d5390119245",
+    "process_start_utc":  "2026-10-09T05:27:43.8256644Z",
+    "argv":  [
+                 "--run",
+                 "--file",
+                 "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+                 "--output",
+                 "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.json"
+             ],
+    "cmdline":  "\"E:\\Strata-Hetero-data\\build\\host-ple-parity-20261009-01\\strata-ple-table-parity.exe\" --run --file F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --output C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.json ",
+    "parent_pid":  12264,
+    "priority_before":  "Normal",
+    "timeout_seconds":  1280,
+    "identity_check":  "PID + exact executable path + process start time + exact command line before any stop",
+    "stdout":  "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.stdout.log",
+    "stderr":  "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.stderr.log",
+    "result_json":  "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.json",
+    "priority_after":  "Idle",
+    "identity_valid":  true,
+    "command_line":  "\"E:\\Strata-Hetero-data\\build\\host-ple-parity-20261009-01\\strata-ple-table-parity.exe\" --run --file F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --output C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.json "
+}

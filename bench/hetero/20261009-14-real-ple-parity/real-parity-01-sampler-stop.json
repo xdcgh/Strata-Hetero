@@ -1,0 +1,16 @@
+{
+    "schema_version":  1,
+    "sampler_pid":  12264,
+    "sampler_executable":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "sampler_started_utc":  "2026-10-09T05:27:43.9200919Z",
+    "stop_utc":  "2026-10-09T05:29:51.0053594Z",
+    "reason":  "child_terminal",
+    "child_pid":  22208,
+    "child_exited":  true,
+    "child_exit_code":  0,
+    "child_killed_by_floor_or_timeout":  false,
+    "min_available_physical_bytes":  87127875584,
+    "min_available_commit_bytes":  94186041344,
+    "resource_sample_count":  141,
+    "sampler_exits_after_receipt":  true
+}

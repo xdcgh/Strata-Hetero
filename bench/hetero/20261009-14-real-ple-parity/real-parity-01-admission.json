@@ -1,0 +1,94 @@
+{
+    "schema_version":  1,
+    "created_utc":  "2026-10-09T05:27:43.2923864Z",
+    "status":  "pass",
+    "task":  "single CPU-only real IQ4_NL PLE row/gather parity run",
+    "model_path":  "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "binary_path":  "E:\\Strata-Hetero-data\\build\\host-ple-parity-20261009-01\\strata-ple-table-parity.exe",
+    "argv":  [
+                 "--run",
+                 "--file",
+                 "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+                 "--output",
+                 "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\real-parity-01.json"
+             ],
+    "no_payload_rehash_performed":  true,
+    "block_reasons":  [
+
+                      ],
+    "gates":  {
+                  "model_manifest":  {
+                                         "manifest":  "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\..\\20261008-00-admission\\model-integrity-02.json",
+                                         "record_found":  true,
+                                         "expected_bytes":  49859583136,
+                                         "expected_sha256":  "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+                                         "prior_hash_receipt_matches":  true
+                                     },
+                  "fresh_identity_receipt":  {
+                                                 "receipt":  "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-14-real-ple-parity\\..\\20261009-03-upstream04-quality\\fresh-identities-before-request.json",
+                                                 "record_found":  true,
+                                                 "matches_prior_full_hash_file_identity":  true,
+                                                 "prior_sha256":  "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+                                                 "current_stat":  {
+                                                                      "size_bytes":  49859583136,
+                                                                      "mtime_ns":  1791268992000000000,
+                                                                      "ctime_ns":  1791267636110000000,
+                                                                      "device":  2894736058,
+                                                                      "file_index":  790292857216,
+                                                                      "fstat_size_bytes":  49859583136,
+                                                                      "fstat_mtime_ns":  1791268992000000000,
+                                                                      "fstat_device":  2894736058,
+                                                                      "fstat_file_index":  790292857216
+                                                                  }
+                                             },
+                  "current_model_identity":  {
+                                                 "method":  "CreateFileW + GetFileInformationByHandle/Ex metadata only; no payload read",
+                                                 "identity":  {
+                                                                  "volume":  2894736058,
+                                                                  "file_index":  790292857216,
+                                                                  "size_bytes":  49859583136,
+                                                                  "last_write_filetime":  134357425920000000,
+                                                                  "creation_filetime":  134357412361100000,
+                                                                  "change_filetime":  0
+                                                              },
+                                                 "mtime_ns":  1791268992000000000,
+                                                 "ctime_compatibility_ns":  1791267636110000000,
+                                                 "change_time_ns":  -1.16444736E+19,
+                                                 "matches_fresh_identity_receipt":  true
+                                             },
+                  "binary":  {
+                                 "path":  "E:\\Strata-Hetero-data\\build\\host-ple-parity-20261009-01\\strata-ple-table-parity.exe",
+                                 "bytes":  215552,
+                                 "sha256":  "5e830b82fabcd877e311adc1b0f3560f2256d5ee15c2b2d1a4371d5390119245",
+                                 "expected_sha256":  "5e830b82fabcd877e311adc1b0f3560f2256d5ee15c2b2d1a4371d5390119245",
+                                 "matches_user_confirmed_sha":  true,
+                                 "matches_build_receipt":  true
+                             },
+                  "resource_gate":  {
+                                        "sample_utc":  "2026-10-09T05:27:43.6104771Z",
+                                        "method":  "GlobalMemoryStatusEx PSAPI",
+                                        "success":  true,
+                                        "physical_available_bytes":  116062142464,
+                                        "physical_required_bytes":  41685040128,
+                                        "table_payload_bytes":  28800138240,
+                                        "ram_reserve_bytes":  12884901888,
+                                        "available_commit_bytes":  123149893632,
+                                        "commit_required_bytes":  4294967296,
+                                        "physical_pass":  true,
+                                        "commit_pass":  true
+                                    },
+                  "competitor_processes":  {
+                                               "scope":  "Strata engine/server command lines only",
+                                               "matches":  [
+
+                                                           ],
+                                               "none":  true
+                                           }
+              },
+    "timeout_seconds":  1280,
+    "physical_floor_bytes":  41685040128,
+    "commit_floor_bytes":  4294967296,
+    "monitor_sampling_seconds":  1,
+    "gpu_executed":  false,
+    "virtual_lock_will_be_attempted_only_if_started":  true
+}
