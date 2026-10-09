@@ -2,6 +2,8 @@
 
 This describes upstream `82f46a8c8f475f001ad76d92f58f4a4f8ffb0253`, inspected on 2026-10-06. Solid paths below exist in that source. Arc/NPU helpers and SSD conversation persistence are proposed extensions; they are drawn separately. The model has 48 hybrid layers, 512 routed experts per layer and top-10 routing. PLE is a block at layer 1, not a lookup at every transformer layer.
 
+The repository now integrates upstream `6674a00` (v0.1.40.4). That revision adds an opt-in CPU prefill share (`STRATA_PREFILL_CPU_SHARE=auto` or a fraction) for suitable chunks: the least-routed streamed experts can run in the existing CPU pool while the GPU handles the others. The default remains zero, so the current three-arm quality controls do not enable it. Reuse this upstream path before adding a second CPU/GPU split. Windows PLE locking is also now upstream; Hetero retains stronger complete-lock and reserve checks. The older source references and measurements below keep their frozen scope.
+
 ## Prompt processing
 
 ```mermaid
