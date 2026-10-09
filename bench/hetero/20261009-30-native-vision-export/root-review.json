@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_verified_vision_payload_export",
+  "reviewed_utc": "2026-10-09T09:23:22.376865+00:00",
+  "receipt_sha256": "9293d413d80a89bea202d9c79c480fb3e8c07ca79e8fae740ca52cfca0ff4e01",
+  "owned_export_files_rehashed": 338,
+  "total_npy_bytes": 1796320448,
+  "decoded_tensor_count": 334,
+  "normalized_inputs": 4,
+  "source_asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "core_compiled_inferred": "not_run",
+  "production_npu_route": false
+}

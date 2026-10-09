@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "F/E explicit PLE quality complete27formal each and terminal; CPU pool compiled/tests pass; identified vision export active",
+  "phase": "F/E quality terminal; CPU pool compiled/metadata tests passed; real334tensor vision export verified",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -47,7 +47,8 @@
     "Explicit F PLE placement:all9tasks27formal exactIDs and reconstructedSSEtext matchH4; warm1 formal3 fixedcaps/cache0; rootreviewed and exactownedcleanup terminal",
     "Explicit E PLE arm:all9tasks27formal exactIDs/text matchF/H4; original36requests withno retry; rootverifiednormalizedcontrols; ownedcleanupterminal",
     "F/E qualitytiming comparison16K/30K E2E medians approximately4.5%/1.5% lower onE; exploratoryonly, storagedefault notpromoted",
-    "Optionalnative CPU pool harnesscompiledCPU-only with2CTest passed; rootartifact/source/controlSHA verified; actualpool numerical/performance matrix notrun"
+    "Optionalnative CPU pool harnesscompiledCPU-only with2CTest passed; rootartifact/source/controlSHA verified; actualpool numerical/performance matrix notrun",
+    "Real visionpayload export:334 originalF32/BF16 tensors plus4 normalized inputs, wholeassetSHA checked twice; root independently rehashed338NPY files; noCore/graph/inference/NPU yet"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -68,7 +69,7 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "F/E allowned model/bridge/sampler processes absent and8081released; CPU-only buildterminal; vision exportactive; oldservice/ComfyUI restoration stillpending",
+    "gpu_state_at_quota_resume": "AllownedF/E model/bridge/sampler processes and8081absent; CPUbuild/exportterminal; externalidleWSL restart observed, ComfyUI temporarydisabled state restoration stilldue",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
@@ -76,8 +77,8 @@
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T09:18:13.116763+00:00",
-  "current_run": "20261009-30-native-vision-export",
+  "last_checkpoint_utc": "2026-10-09T09:23:22.377868+00:00",
+  "current_run": null,
   "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",

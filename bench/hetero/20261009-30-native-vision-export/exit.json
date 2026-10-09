@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "pid": 21584,
+  "launch_utc": "2026-10-09T09:09:44.8681738Z",
+  "ended_utc": "2026-10-09T09:09:56.3603382Z",
+  "exit_code": 0,
+  "safe_exit": true,
+  "owned_process_only": true
+}

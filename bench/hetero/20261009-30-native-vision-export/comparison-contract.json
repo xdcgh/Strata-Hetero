@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "metadata_only",
+  "asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "inventory_sha256": "94320d1390e67d39ad455f3085592d45592f352618e445d75c721f9ba827f657",
+  "fixture_manifest_sha256": "80a9f0f46f8c9b3d552e9d9fcc16c638766b8b0d4997e0b9e41dbc76a5455630",
+  "tensor_count": 334,
+  "fixture_count": 4,
+  "asset_opened": false,
+  "payload_read": false,
+  "files_written": false,
+  "core_created": false,
+  "compiled": false,
+  "inference_run": false,
+  "npu_accepted": false,
+  "export_receipt_sha256": "9293d413d80a89bea202d9c79c480fb3e8c07ca79e8fae740ca52cfca0ff4e01",
+  "native_index_sha256": "cc53ce6bcfdcf8d0755c1c54cf4578c5fe9543d8080ae23bc9e511e3ce3fbc10",
+  "native_receipt_sha256": "8fbd49fca4fc3a8a75f9374ad9756fd1c45957f3e5b8bf2cb8eeb18422e0edfb",
+  "device_requested": "CPU",
+  "arithmetic_policies": [
+    "graph_f32",
+    "cpu_vec_dot_rounding"
+  ],
+  "compile_properties_required": {
+    "INFERENCE_PRECISION_HINT": "f32",
+    "EXECUTION_MODE_HINT": "ACCURACY"
+  },
+  "quality_contract": "hetero_xpu_worker.DEFAULT_TOLERANCES, unchanged; no tolerance override flags",
+  "native_sve_read": false,
+  "exported_arrays_read": false,
+  "native_parity": "NOT_RUN",
+  "output_taps": [],
+  "warmups_per_image": 1,
+  "formal_repeats_per_image": 3
+}

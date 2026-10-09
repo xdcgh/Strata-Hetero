@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "started",
+  "scope": "Real selected payload export only; no Core/graph/device/API",
+  "launch_utc": "2026-10-09T09:09:44.8681738Z",
+  "pid": 21584,
+  "process_create_utc": "2026-10-09T09:09:44.8825960Z",
+  "process_command_line": "\"E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe\" -u tools\\hetero_vision_payload.py --prepare --output-dir E:\\Strata-Hetero-data\\vision-payloads\\20261009-30-native-vision-export",
+  "python": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+  "argv": [
+    "-u",
+    "tools\\hetero_vision_payload.py",
+    "--prepare",
+    "--output-dir",
+    "E:\\Strata-Hetero-data\\vision-payloads\\20261009-30-native-vision-export"
+  ],
+  "output_directory": "E:\\Strata-Hetero-data\\vision-payloads\\20261009-30-native-vision-export",
+  "bench_run_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-30-native-vision-export",
+  "source_hashes": [
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_payload.py",
+      "sha256": "3e8537a8ea3ce1cdf403392dbd7bad0eebea44b2b91323a9750e395ce7fb6440"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_qwen3vl.py",
+      "sha256": "8ba61c9ed897352649d2a6194262af9b718181325e8b74cb627d314cd752c2a3"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+      "sha256": "16a377d348c3a0c8d3a58d222d96807065dd0dcd9438c6025900c842ec836603"
+    },
+    {
+      "path": "C:\\Python314\\python.exe",
+      "sha256": "434b361fe0c5960d404974feed493db47f2603a1ace2574312104fbed0182c6f"
+    }
+  ],
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "expected_asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "expected_asset_bytes": 907543008,
+  "concurrent_cpu_helper_scope": "Root reported separate CPU-only harness compilation; export I/O is not a performance claim",
+  "core_authorized": false,
+  "graph_compile_authorized": false,
+  "inference_authorized": false,
+  "npu_accepted": false,
+  "production_route_enabled": false
+}

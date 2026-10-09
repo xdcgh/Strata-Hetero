@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "export_verified",
+  "stdout_matches_terminal_receipt": true,
+  "tensor_count": 334,
+  "identity_hash_count": 334,
+  "raw_bytes": 907523008,
+  "decoded_tensor_bytes": 1795724224,
+  "tensor_npy_file_bytes": 1795766976,
+  "all_tensor_files_have_declared_size": true,
+  "all_identity_decoded_hashes_match_index": true,
+  "all_input_files_have_declared_size": true,
+  "source_stat_still_matches_export": true,
+  "asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "source_whole_hash_assertions_completed": 2,
+  "whole_hash_assertion_evidence": "Successful terminal status from reviewed hashed exporter requires both before/after whole-file checks against the same selected SHA-256.",
+  "raw_decoded_npy_readbacks_completed": 334,
+  "source_package": {
+    "name": "gguf",
+    "version": "0.19.0",
+    "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d"
+  },
+  "resource_gate_count": 354,
+  "all_resource_gates_pass": true,
+  "minimum_physical_gib": 110.14842224121094,
+  "minimum_commit_gib": 115.09921264648438,
+  "inputs": [
+    {
+      "name": "gray-96",
+      "shape": [
+        1,
+        3,
+        96,
+        96
+      ],
+      "png_sha256": "ff4593f146942e4220f1bf8a67619dd97ce23816285716d8a61b90d408a3592f",
+      "input_sha256": "f2b65f387f6e5bcdfcec1e7396ce8168850b437774768f377747d812308b407d"
+    },
+    {
+      "name": "quadrants-96",
+      "shape": [
+        1,
+        3,
+        96,
+        96
+      ],
+      "png_sha256": "8fc2fdcfc4d530a9f1492ba76831e7500d1204239eb06738f2d174c183ae5d63",
+      "input_sha256": "eddcd454d209b77d0406cd98cfb25b4d4c787790b1742e798f270712c79dcee1"
+    },
+    {
+      "name": "checkerboard-96",
+      "shape": [
+        1,
+        3,
+        96,
+        96
+      ],
+      "png_sha256": "53d0436943b19c283c57aeda49d8ea74a9ed7cc8f08539b37c7b080299c9da23",
+      "input_sha256": "cff3654e176cede5b12b39f7dea94986d85384f74f78bf8a805e8d4fb120dd31"
+    },
+    {
+      "name": "gradient-192x96",
+      "shape": [
+        1,
+        3,
+        96,
+        192
+      ],
+      "png_sha256": "4c29aee8d357dfb9fae0a2afea14aa819c19ad76246015a8791f781518d9116d",
+      "input_sha256": "e0dd097b35c61c3c9fb9f3daa9ba1ddb14a0ed575fdc0547b6532df37a947691"
+    }
+  ],
+  "core_created": false,
+  "compiled": false,
+  "inference_run": false,
+  "npu_accepted": false,
+  "production_route_enabled": false,
+  "claim_limit": "Artifact integrity only; no vision correctness, runtime acceptance or performance claim.",
+  "artifact_hashes": [
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-30-native-vision-export\\stdout.json",
+      "sha256": "5c846f40a5958ad156955df1577a98af2457dd05fc3770ad636a3d0d12b960e5"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-30-native-vision-export\\stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\vision-payloads\\20261009-30-native-vision-export\\export-receipt.json",
+      "sha256": "9293d413d80a89bea202d9c79c480fb3e8c07ca79e8fae740ca52cfca0ff4e01"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\vision-payloads\\20261009-30-native-vision-export\\progress.jsonl",
+      "sha256": "42ff1110852b8e6daec6be91d740444e9f1066e0ea83b0c842d9ed9decb722b9"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "python_executable": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+  "base_executable": "C:\\Python314\\python.exe",
+  "python": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.3",
+    "PyYAML": "6.0.3",
+    "Pillow": "12.3.0"
+  },
+  "memory": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 118436970496,
+    "physical_used_bytes": 18526277632,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 21805035520,
+    "commit_available_bytes": 123748147200,
+    "commit_total_pages": 5323495,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 123748147200,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "errors": [],
+  "created_utc": "2026-10-09T09:09:44.8390038Z"
+}

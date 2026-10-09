@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-10-09T09:20:03.2163894Z",
+  "owned_pid": 21584,
+  "owned_creation_utc": "2026-10-09T09:09:44.882596Z",
+  "exit_code": 0,
+  "safe_exit": true,
+  "pid_present": false,
+  "original_process_still_present": false,
+  "stderr_bytes": 0,
+  "core_created": false,
+  "compiled": false,
+  "inference_run": false,
+  "npu_accepted": false,
+  "production_route_enabled": false
+}
