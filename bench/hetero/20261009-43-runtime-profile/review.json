@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "profile_dispatch_api_fixture_verified",
+  "tests": {
+    "run": 16,
+    "passed": 16,
+    "failed": 0,
+    "command": "python -m unittest tools.test_hetero_planner tools.test_hetero_runtime"
+  },
+  "sources": {
+    "tools/hetero_runtime.py": "571f7d4e4da0e5cb13f5c47e8e01d010c228035824a8b192f0c1e66e39343334",
+    "tools/hetero_planner.py": "b2af5511596948f154acb562266972af63f22a0f40ccddd04c060e9705181ee5",
+    "tools/test_hetero_runtime.py": "3fa8f20be3ababbd9f12dec800fe60e9b350cf86e50bc2fd8d44dfa76adf3ad4"
+  },
+  "actual_engine_dispatch": false,
+  "actual_calibration": false,
+  "default_helper_enabled": false,
+  "remaining": "Engine handlers, actual evidence ingestion, calibrator and model validation"
+}

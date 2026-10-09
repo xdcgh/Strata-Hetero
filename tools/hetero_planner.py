@@ -124,7 +124,8 @@ class HeteroCostModel:
     def __init__(self, identity: Mapping, observations: tuple[Observation, ...],
                  acceptance: tuple[Acceptance, ...], *, expires_utc: datetime, ema: float = .2):
         self.identity = identity_hash(identity)
-        if expires_utc.tzinfo is None or not 0 < ema <= 1:
+        if (expires_utc.tzinfo is None or type(ema) not in (int, float) or
+                not math.isfinite(ema) or not 0 < ema <= 1):
             raise ValueError("timezone-aware expiry and EMA in (0,1] required")
         self.expires = expires_utc.astimezone(timezone.utc)
         self.ema = ema

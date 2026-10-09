@@ -2,6 +2,8 @@
 
 These preparation tools run independently of setup and do not enable a new backend. The final `--hetero-calibrate` installer integration is pending model measurements.
 
+The profile API in `tools/hetero_runtime.py` now supports exclusive `write_profile` and bounded `load_profile` with explicit evidence paths keyed by their SHA-256. Loading checks those receipts again. Helper acceptance additionally requires a `strata-hetero-route-acceptance-v1` report scoped to `model_end_to_end`, bound to the exact hardware/runtime/model/engine identity and matching the acceptance fields. Its producer must perform the benchmark and quality checks; changing the JSON schema cannot create that evidence. An IPC microbenchmark profile without model acceptance retains the primary route. This API does not run calibration, launch workers or edit setup settings.
+
 ## Inspect and validate before using the model
 
 ```powershell
