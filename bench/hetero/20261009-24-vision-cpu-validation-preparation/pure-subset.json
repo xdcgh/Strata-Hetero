@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "pure_subset_pass",
+  "created_utc": "2026-10-09T07:47:44.8025320Z",
+  "tests_requested": 7,
+  "exit_code": 0,
+  "decoder_test_pending_root_dependency": true,
+  "real_asset_opened": false,
+  "real_payload_read": false,
+  "installed_openvino_imported": false,
+  "real_core_created": false,
+  "real_graph_compiled": false,
+  "real_inference_run": false,
+  "fake_host_state_machine_used": true,
+  "production_route_enabled": false,
+  "npu_accepted": false,
+  "code_sha256": {
+    "compare": "4e9bf99291b79d87c9e662e3852cf92b449b1decabe165a8c51a6e8c3fbddf57",
+    "payload": "e6cc17c7ccfa2f55c6d91e4517508e54a37ae1903b7fefe02eeee99c94a29ccc",
+    "fixtures": "0ec6079a9252ce2da3c71614ac309522107d2f8e2c36d8e56cef09004fe2afdd"
+  }
+}

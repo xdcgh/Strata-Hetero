@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "targeted_fixtures_pass",
+  "requested_revision": "reader mapping lifetime and one warmup plus three formal results per image/policy",
+  "targeted_tests": [
+    "test_header_mapping_closes_only_after_views_release_including_metadata_failure",
+    "test_negative_quality_comparisons_keep_all_arms_with_unchanged_tolerances",
+    "test_both_default_clis_read_only_json_without_compute_imports_or_asset_access"
+  ],
+  "test_count": 3,
+  "exit_code": 0,
+  "observed_test_seconds": 0.336,
+  "payload_tool_lines": 297,
+  "compare_tool_lines": 294,
+  "host_fake_image_groups": 8,
+  "host_fake_warmups": 8,
+  "host_fake_formal_results": 24,
+  "host_fake_infer_calls": 32,
+  "saved_negative_formal_outputs": 24,
+  "warmup_quality_reports_created": false,
+  "quality_tolerances_changed": false,
+  "mapping_views_released_before_close": true,
+  "mapping_cleanup_on_metadata_failure": true,
+  "real_asset_opened": false,
+  "real_tensor_payload_read": false,
+  "installed_openvino_imported": false,
+  "real_core_created": false,
+  "real_model_compiled": false,
+  "real_inference_run": false,
+  "production_route_enabled": false,
+  "npu_accepted": false,
+  "commits_created_by_agent": false,
+  "created_utc": "2026-10-09T08:47:38.7827333Z",
+  "code_sha256": {
+    "fixtures": "924b9a4ed4885cc8fc8bf774934f27967d226f3592691468e317fd507616b12f",
+    "compare": "a693024cac7cae76e7774f2930999a89bd9343ff9b43ff29ecf53a3c5298f343",
+    "payload": "3e8537a8ea3ce1cdf403392dbd7bad0eebea44b2b91323a9750e395ce7fb6440"
+  }
+}

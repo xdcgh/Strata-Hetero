@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "decoder_pure_suite_passed_after_isolated_dependency_install",
+  "created_utc": "2026-10-09T08:15:38.081442+00:00",
+  "passed": 8,
+  "failed": 0,
+  "command": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe -B -m unittest tools.test_hetero_vision_preparation -v",
+  "packages": {
+    "PyYAML": "6.0.3",
+    "Pillow": "12.3.0"
+  },
+  "prior_missing_dependency_failure_preserved": true,
+  "real_model_payload_opened": false,
+  "core_created": false,
+  "device_executed": false,
+  "global_packages_changed": false
+}

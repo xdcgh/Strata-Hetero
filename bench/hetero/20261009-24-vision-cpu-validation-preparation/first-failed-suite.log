@@ -1,0 +1,28 @@
+Command: E:\Strata-Hetero-data\venv-intel\Scripts\python.exe -m unittest tools.test_hetero_vision_preparation -v
+Exit code: 1
+
+test_both_default_clis_read_only_json_without_compute_imports_or_asset_access ... ok
+test_export_contract_validates_all_hash_layout_range_and_path_bindings ... ok
+test_failed_memory_gate_preserves_receipt_before_asset_or_core_access ... ok
+test_native_gpu_or_flash_attention_receipts_are_refused ... ok
+test_negative_quality_comparisons_keep_all_arms_with_unchanged_tolerances ... ok
+test_owned_npy_readback_and_hash_corruption_gate ... ok
+test_pinned_f32_bf16_decoder_with_small_known_bits_and_reverse_layout ... ERROR
+test_sve_parser_checks_hash_header_finite_and_exact_body ... ok
+
+Traceback from the first synthetic source-import attempt:
+  test_hetero_vision_preparation.py:83
+    decoder, _ = payload.pinned_decoder()
+  hetero_vision_payload.py:148
+    decoder = importlib.import_module("gguf.quants")
+  E:\Strata-Hetero-data\source\llama-3cf0325\gguf-py\gguf\__init__.py:9
+    from .metadata import *
+  E:\Strata-Hetero-data\source\llama-3cf0325\gguf-py\gguf\metadata.py:5
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+Ran 8 tests in 0.411s
+FAILED (errors=1)
+
+This retained log summarizes the observed first tool output. No real GGUFReader
+instance, model payload, installed OpenVINO package, Core, or device was used.

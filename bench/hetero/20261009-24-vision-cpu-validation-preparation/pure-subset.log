@@ -1,0 +1,12 @@
+test_both_default_clis_read_only_json_without_compute_imports_or_asset_access (tools.test_hetero_vision_preparation.PreparationTests.test_both_default_clis_read_only_json_without_compute_imports_or_asset_access) ... ok
+test_export_contract_validates_all_hash_layout_range_and_path_bindings (tools.test_hetero_vision_preparation.PreparationTests.test_export_contract_validates_all_hash_layout_range_and_path_bindings) ... ok
+test_failed_memory_gate_preserves_receipt_before_asset_or_core_access (tools.test_hetero_vision_preparation.PreparationTests.test_failed_memory_gate_preserves_receipt_before_asset_or_core_access) ... ok
+test_native_gpu_or_flash_attention_receipts_are_refused (tools.test_hetero_vision_preparation.PreparationTests.test_native_gpu_or_flash_attention_receipts_are_refused) ... ok
+test_negative_quality_comparisons_keep_all_arms_with_unchanged_tolerances (tools.test_hetero_vision_preparation.PreparationTests.test_negative_quality_comparisons_keep_all_arms_with_unchanged_tolerances) ... ok
+test_owned_npy_readback_and_hash_corruption_gate (tools.test_hetero_vision_preparation.PreparationTests.test_owned_npy_readback_and_hash_corruption_gate) ... ok
+test_sve_parser_checks_hash_header_finite_and_exact_body (tools.test_hetero_vision_preparation.PreparationTests.test_sve_parser_checks_hash_header_finite_and_exact_body) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.397s
+
+OK

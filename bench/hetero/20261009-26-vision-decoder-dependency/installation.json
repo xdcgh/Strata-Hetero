@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T08:02:43.269949+00:00",
+  "status": "installed_verified_isolated_dependency",
+  "wheel_sha256": "4a2e8cebe2ff6ab7d1050ecd59c25d4c8bd7e6f400f5f82b96557ac0abafd0ac",
+  "target_python": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+  "global_environment_changed": false,
+  "commands": [
+    {
+      "stage": "before-packages",
+      "argv": [
+        "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "list",
+        "--format=json",
+        "--disable-pip-version-check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "stage": "install",
+      "argv": [
+        "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--disable-pip-version-check",
+        "E:\\Strata-Hetero-data\\downloads\\vision-decoder-20261009-26\\pyyaml-6.0.3-cp314-cp314-win_amd64.whl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "stage": "after-packages",
+      "argv": [
+        "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "list",
+        "--format=json",
+        "--disable-pip-version-check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "stage": "import-check",
+      "argv": [
+        "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+        "-c",
+        "import yaml,sys,importlib.util,json; print(json.dumps({\"yaml_version\":yaml.__version__,\"yaml_path\":yaml.__file__,\"python\":sys.executable,\"pillow_available\":importlib.util.find_spec(\"PIL\") is not None}))"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "import_check": {
+    "yaml_version": "6.0.3",
+    "yaml_path": "E:\\Strata-Hetero-data\\venv-intel\\Lib\\site-packages\\yaml\\__init__.py",
+    "python": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+    "pillow_available": false
+  }
+}

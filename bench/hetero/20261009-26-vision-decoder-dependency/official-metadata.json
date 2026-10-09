@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T07:44:14.998222+00:00",
+  "project": "PyYAML",
+  "version": "6.0.3",
+  "source_api": "https://pypi.org/pypi/PyYAML/json",
+  "api_sha256": "d0c463a86ed24144dd112fd1fe43b7c208e52c7d3903c2f51c84acfb5b10c749",
+  "selected": {
+    "filename": "pyyaml-6.0.3-cp314-cp314-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/23/20/bb6982b26a40bb43951265ba29d4c246ef0ff59c9fdcdf0ed04e0687de4d/pyyaml-6.0.3-cp314-cp314-win_amd64.whl",
+    "size": 156429,
+    "digests": {
+      "blake2b_256": "2320bb6982b26a40bb43951265ba29d4c246ef0ff59c9fdcdf0ed04e0687de4d",
+      "md5": "17e9f7ea1c6d95cf186341a89ab9b7f1",
+      "sha256": "4a2e8cebe2ff6ab7d1050ecd59c25d4c8bd7e6f400f5f82b96557ac0abafd0ac"
+    },
+    "requires_python": ">=3.8",
+    "yanked": false
+  },
+  "target_venv": "E:\\Strata-Hetero-data\\venv-intel",
+  "status": "official_metadata_selected_not_installed"
+}

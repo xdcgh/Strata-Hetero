@@ -1,0 +1,1 @@
+[{"name": "numpy", "version": "2.5.3"}, {"name": "openvino", "version": "2026.4.1"}, {"name": "openvino-telemetry", "version": "2025.2.0"}, {"name": "pip", "version": "26.2.1"}]

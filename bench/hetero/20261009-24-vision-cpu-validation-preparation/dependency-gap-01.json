@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "dependency_missing_resolvable",
+  "command": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe -m unittest tools.test_hetero_vision_preparation -v",
+  "exit_code": 1,
+  "tests_total": 8,
+  "tests_passed": 7,
+  "tests_errored": 1,
+  "errored_test": "test_pinned_f32_bf16_decoder_with_small_known_bits_and_reverse_layout",
+  "phase": "pinned GGUF package import for synthetic byte fixture",
+  "error_type": "ModuleNotFoundError",
+  "error": "No module named 'yaml'",
+  "import_chain": [
+    "tools.hetero_vision_payload.pinned_decoder",
+    "gguf.quants through pinned gguf/__init__.py",
+    "gguf/metadata.py import yaml"
+  ],
+  "environment": "E:\\Strata-Hetero-data\\venv-intel",
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "source_import_attempted": true,
+  "gguf_reader_instantiated": false,
+  "real_asset_opened": false,
+  "real_tensor_payload_read": false,
+  "installed_openvino_imported": false,
+  "real_core_created": false,
+  "real_model_compiled": false,
+  "real_inference_run": false,
+  "root_resolution": "Root will verify an official-PyPI PyYAML wheel hash and install only in venv-intel, then rerun the same synthetic suite.",
+  "agent_dependency_install_performed": false,
+  "package_import_bypass_added": false,
+  "production_route_enabled": false,
+  "npu_accepted": false
+}

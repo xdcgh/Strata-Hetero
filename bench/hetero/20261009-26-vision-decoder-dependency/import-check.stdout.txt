@@ -1,0 +1,1 @@
+{"yaml_version": "6.0.3", "yaml_path": "E:\\Strata-Hetero-data\\venv-intel\\Lib\\site-packages\\yaml\\__init__.py", "python": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe", "pillow_available": false}

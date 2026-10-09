@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_preparation_pure_tests_pass",
+  "reviewed_utc": "2026-10-09T09:18:13.117080+00:00",
+  "test_count": 9,
+  "file_hashes": {
+    "tools/hetero_vision_payload.py": "3e8537a8ea3ce1cdf403392dbd7bad0eebea44b2b91323a9750e395ce7fb6440",
+    "tools/hetero_vision_cpu_compare.py": "a693024cac7cae76e7774f2930999a89bd9343ff9b43ff29ecf53a3c5298f343",
+    "tools/test_hetero_vision_preparation.py": "924b9a4ed4885cc8fc8bf774934f27967d226f3592691468e317fd507616b12f"
+  },
+  "dependency_receipts": "../20261009-26-vision-decoder-dependency",
+  "decoder_suite_passed": true,
+  "header_mapping_lifetime_reviewed": true,
+  "warmups": 1,
+  "formals_perimage_policy": 3,
+  "actual_core_compile_inference": "not_run",
+  "quality_tolerances_unchanged": true,
+  "production_route_enabled": false
+}

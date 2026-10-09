@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T08:10:16.461876+00:00",
+  "status": "verified_pinned_pillow_installed_isolated",
+  "wheel": "E:\\Strata-Hetero-data\\downloads\\vision-decoder-20261009-26\\pillow-12.3.0-cp314-cp314-win_amd64.whl",
+  "sha256": "fdafc9cce40277e0f7a0feabce0ee50dd2fa1800f3b38015e51296b5e814048d",
+  "readback_sha_verified": true,
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--no-deps",
+    "--disable-pip-version-check",
+    "E:\\Strata-Hetero-data\\downloads\\vision-decoder-20261009-26\\pillow-12.3.0-cp314-cp314-win_amd64.whl"
+  ],
+  "exit_code": 0,
+  "import_check": {
+    "version": "12.3.0",
+    "path": "E:\\Strata-Hetero-data\\venv-intel\\Lib\\site-packages\\PIL\\__init__.py"
+  },
+  "global_environment_changed": false
+}
