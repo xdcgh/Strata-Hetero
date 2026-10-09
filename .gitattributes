@@ -10,6 +10,8 @@ bench/hetero/**/*.sse.txt -whitespace
 bench/hetero/**/*.log -whitespace
 # Executed benchmark helpers are retained as evidence with their original bytes.
 bench/hetero/**/*.ps1 -whitespace
+# Raw Git patches retain required single-space context prefixes on blank lines.
+bench/hetero/**/*.patch -whitespace
 
 # launchers keep their platform line endings wherever the repository is cloned
 *.sh text eol=lf

@@ -70,9 +70,15 @@
   },
   "next_experiment": "Review CPU vision oracle and compare identified OpenVINO graph before NPU; proceed controlled F/E PLE placement, CPU role benchmarks, helper arithmetic/contention and measured planner. RAM failure cause remains unresolved; preserve full original scope.",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
-  "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+  "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T07:23:46.557048+00:00",
+  "last_checkpoint_utc": "2026-10-09T07:34:18.816001+00:00",
   "current_run": null,
-  "current_model_owner": null
+  "current_model_owner": null,
+  "upstream_pending_integration": {
+    "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+    "tag": "v0.1.41",
+    "status": "reviewed_not_built",
+    "review": "bench\\hetero\\20261009-25-upstream-0-1-41-review\\review.json"
+  }
 }

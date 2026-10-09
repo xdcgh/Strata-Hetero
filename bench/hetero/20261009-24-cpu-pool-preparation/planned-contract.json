@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-24-cpu-pool-preparation",
+  "created_utc": "2026-10-09T07:39:20.662716+00:00",
+  "status": "prepared_read_only_root_choice_pending",
+  "execution_authorized": false,
+  "scope": "Design a future CPU-only ExpertPool/native-expert microbenchmark. No compile, run, current affinity change, model API, GPU/NPU, source port, or commit in this preparation task.",
+  "frozen_control": {
+    "engine_version": "0.1.40.4",
+    "H21_binary_sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+    "H21_source_identity_sha": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+    "source_compare_baseline_ref": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+    "upstream_ref": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+    "pool_file_hashes": {
+      "include/strata/kernels/cpu/pool.hpp": {
+        "baseline_6674_sha256": "5f7e7ee3f48ce6505ad25975c320310e647551df3304a87052ce3c7e2b414936",
+        "upstream_fb58_sha256": "5f7e7ee3f48ce6505ad25975c320310e647551df3304a87052ce3c7e2b414936",
+        "identical": true
+      },
+      "src/kernels/cpu/pool.cpp": {
+        "baseline_6674_sha256": "f789078f1e14b6cf72bec5cacc2802d358ad82cbd7bf890f344a4a4a32158611",
+        "upstream_fb58_sha256": "f789078f1e14b6cf72bec5cacc2802d358ad82cbd7bf890f344a4a4a32158611",
+        "identical": true
+      },
+      "src/kernels/cpu/pool_affinity_win.hpp": {
+        "baseline_6674_sha256": "63a3e8d6346d2887b6e139638ad74ab5ce005be20f6c0d4664c16938a84abe6f",
+        "upstream_fb58_sha256": "63a3e8d6346d2887b6e139638ad74ab5ce005be20f6c0d4664c16938a84abe6f",
+        "identical": true
+      },
+      "include/strata/kernels/cpu/native_expert.hpp": {
+        "baseline_6674_sha256": "711dcaf43608b7d607f05e17f81993356b6fe36f18bcfa64b1ca111e9eeab0bc",
+        "upstream_fb58_sha256": "711dcaf43608b7d607f05e17f81993356b6fe36f18bcfa64b1ca111e9eeab0bc",
+        "identical": true
+      }
+    },
+    "difference_summary": "ExpertPool API/implementation and affinity helper are unchanged at upstream fb58. CPU prefill-share integration, AVX-ISA-safe feature/format predicates, and calibrator sweeps are separate changes; none changes the H21 binary or proves H21 causality."
+  },
+  "topology_evidence": {
+    "latest_saved_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261007-03-cpu-topology\\hardware_cpu-review-02.json",
+    "receipt_sha256": "86c3611b3c5d6064df32467990e6107c68ee59f77e1d1e80120e5f8bf6282596",
+    "collected_utc": "2026-10-06T22:23:17.915246+00:00",
+    "fresh_for_future_run": false,
+    "api": "GetSystemCpuSetInformation",
+    "logical_processor_count": 16,
+    "group_ids": [
+      0
+    ],
+    "cpu_set_id_range": [
+      256,
+      271
+    ],
+    "efficiency_class_by_group0_lp": {
+      "1": [
+        0,
+        1,
+        10,
+        11,
+        12,
+        13
+      ],
+      "0": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15
+      ]
+    },
+    "pool_candidates": {
+      "pool-affinity-all": {
+        "host_core_candidate": {
+          "group": 0,
+          "logical_processor_index": 0
+        },
+        "worker_lp_candidates": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15
+        ]
+      },
+      "pool-affinity-auto": {
+        "host_core_candidate": {
+          "group": 0,
+          "logical_processor_index": 0
+        },
+        "worker_lp_candidates": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15
+        ]
+      },
+      "pool-affinity-p-cores": {
+        "host_core_candidate": {
+          "group": 0,
+          "logical_processor_index": 0
+        },
+        "worker_lp_candidates": [
+          1,
+          10,
+          11,
+          12,
+          13
+        ]
+      }
+    },
+    "label_caveat": "unknown; no P/E/LP labels inferred",
+    "fresh_preflight": "future execution must use current read-only detect_cpu_topology output; do not hard-code this 2026-10-07 snapshot"
+  },
+  "native_operator": {
+    "api": "strata::kernels::cpu::ExpertPool::run_split_multi_native(const NativeFmt&, ExpertJobMulti*, int)",
+    "native_format_call": "native_fmt(12, 7, 2560, 640, fmt, err)",
+    "ggml_type_ids": {
+      "gate_up_Q4_K": 12,
+      "down_Q5_1": 7
+    },
+    "hidden": 2560,
+    "intermediate": 640,
+    "expert_blob": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+      "bytes": 3072000,
+      "sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f"
+    },
+    "operators_in_order": [
+      "native_quant_act for each input token (same native harness path)",
+      "run_split_multi_native gate/up rows",
+      "native_quant_h for intermediates (pool call)",
+      "run_split_multi_native down rows"
+    ],
+    "no_substitution": "Use NativeFmt/native_* functions and real quantized blob directly. Do not dequantize, reconstruct weights, or substitute memcpy-only/no-op jobs.",
+    "per_job_max_token_rows": 8,
+    "job_partition_by_rows": {
+      "1": [
+        1
+      ],
+      "2": [
+        2
+      ],
+      "4": [
+        4
+      ],
+      "6": [
+        6
+      ],
+      "10": [
+        8,
+        2
+      ],
+      "16": [
+        8,
+        8
+      ]
+    },
+    "one_expert_job_grouping": "Jobs use the same real expert blob and disjoint token input/output row ranges; job count is ceil(rows/MAXT), never more than two for this matrix.",
+    "reference_quant_controls": {
+      "STRATA_KQ256": "0, process-local to benchmark child, as saved native reference",
+      "STRATA_NO_Q8K_AVX2": "unset, matching saved model-default Q8_K activation path",
+      "q8k_activation": "q8k_quant_avx2 per native receipts",
+      "down_activation": "ggml Q8_1 from_float",
+      "STRATA_IQ_MT_MIN": "not used by Q4_K/Q5_1"
+    },
+    "operator_identity_note": "For Q4_K/Q5_1 with KQ256 disabled, row calculations use the same per-token native ggml dot path as the saved reference; future output comparison remains a strict bitwise requirement, never tolerance widening."
+  },
+  "inputs_and_references": {
+    "input_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\inputs-receipt.json",
+    "input_receipt_sha256": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+    "native_run_summary": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\run-summary.json",
+    "native_run_status": "complete_with_quality_failures",
+    "rows": [
+      {
+        "token_rows": 1,
+        "input_source_rows": 1,
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+        "input_file_bytes": 10240,
+        "input_file_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+        "input_slice": {
+          "first_token_row": 0,
+          "token_rows": 1,
+          "bytes": 10240,
+          "derived_slice_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98"
+        },
+        "native_output_reference_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+        "native_output_reference_bytes": 10240,
+        "native_output_reference_sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+        "native_output_reference_slice": {
+          "first_token_row": 0,
+          "token_rows": 1,
+          "bytes": 10240,
+          "derived_slice_sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3"
+        },
+        "reference_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-001\\native-receipt.json",
+        "reference_execution": {
+          "mode": "actual_native_quantized_cpu_expert",
+          "native_kernel_called": true,
+          "engine_pool_called": false,
+          "threads": 1,
+          "gpu_executed": false,
+          "model_cli_executed": false
+        }
+      },
+      {
+        "token_rows": 2,
+        "input_source_rows": 2,
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-002.f32",
+        "input_file_bytes": 20480,
+        "input_file_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+        "input_slice": {
+          "first_token_row": 0,
+          "token_rows": 2,
+          "bytes": 20480,
+          "derived_slice_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19"
+        },
+        "native_output_reference_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-002.f32",
+        "native_output_reference_bytes": 20480,
+        "native_output_reference_sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+        "native_output_reference_slice": {
+          "first_token_row": 0,
+          "token_rows": 2,
+          "bytes": 20480,
+          "derived_slice_sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8"
+        },
+        "reference_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-002\\native-receipt.json",
+        "reference_execution": {
+          "mode": "actual_native_quantized_cpu_expert",
+          "native_kernel_called": true,
+          "engine_pool_called": false,
+          "threads": 1,
+          "gpu_executed": false,
+          "model_cli_executed": false
+        }
+      },
+      {
+        "token_rows": 4,
+        "input_source_rows": 4,
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-004.f32",
+        "input_file_bytes": 40960,
+        "input_file_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+        "input_slice": {
+          "first_token_row": 0,
+          "token_rows": 4,
+          "bytes": 40960,
+          "derived_slice_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529"
+        },
+        "native_output_reference_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-004.f32",
+        "native_output_reference_bytes": 40960,
+        "native_output_reference_sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+        "native_output_reference_slice": {
+          "first_token_row": 0,
+          "token_rows": 4,
+          "bytes": 40960,
+          "derived_slice_sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4"
+        },
+        "reference_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-004\\native-receipt.json",
+        "reference_execution": {
+          "mode": "actual_native_quantized_cpu_expert",
+          "native_kernel_called": true,
+          "engine_pool_called": false,
+          "threads": 1,
+          "gpu_executed": false,
+          "model_cli_executed": false
+        }
+      },
+      {
+        "token_rows": 6,
+        "input_source_rows": 8,
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-008.f32",
+        "input_file_bytes": 81920,
+        "input_file_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+        "input_slice": {
+          "first_token_row": 0,
+          "token_rows": 6,
+          "bytes": 61440,
+          "derived_slice_sha256": "compute_and_record_during_future_preflight"
+        },
+        "native_output_reference_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-008.f32",
+        "native_output_reference_bytes": 81920,
+        "native_output_reference_sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+        "native_output_reference_slice": {
+          "first_token_row": 0,
+          "token_rows": 6,
+          "bytes": 61440,
+          "derived_slice_sha256": "compute_and_record_during_future_preflight"
+        },
+        "reference_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-008\\native-receipt.json",
+        "reference_execution": {
+          "mode": "actual_native_quantized_cpu_expert",
+          "native_kernel_called": true,
+          "engine_pool_called": false,
+          "threads": 1,
+          "gpu_executed": false,
+          "model_cli_executed": false
+        }
+      },
+      {
+        "token_rows": 10,
+        "input_source_rows": 16,
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+        "input_file_bytes": 163840,
+        "input_file_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+        "input_slice": {
+          "first_token_row": 0,
+          "token_rows": 10,
+          "bytes": 102400,
+          "derived_slice_sha256": "compute_and_record_during_future_preflight"
+        },
+        "native_output_reference_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+        "native_output_reference_bytes": 163840,
+        "native_output_reference_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+        "native_output_reference_slice": {
+          "first_token_row": 0,
+          "token_rows": 10,
+          "bytes": 102400,
+          "derived_slice_sha256": "compute_and_record_during_future_preflight"
+        },
+        "reference_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-016\\native-receipt.json",
+        "reference_execution": {
+          "mode": "actual_native_quantized_cpu_expert",
+          "native_kernel_called": true,
+          "engine_pool_called": false,
+          "threads": 1,
+          "gpu_executed": false,
+          "model_cli_executed": false
+        }
+      },
+      {
+        "token_rows": 16,
+        "input_source_rows": 16,
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+        "input_file_bytes": 163840,
+        "input_file_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+        "input_slice": {
+          "first_token_row": 0,
+          "token_rows": 16,
+          "bytes": 163840,
+          "derived_slice_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f"
+        },
+        "native_output_reference_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+        "native_output_reference_bytes": 163840,
+        "native_output_reference_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+        "native_output_reference_slice": {
+          "first_token_row": 0,
+          "token_rows": 16,
+          "bytes": 163840,
+          "derived_slice_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e"
+        },
+        "reference_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-016\\native-receipt.json",
+        "reference_execution": {
+          "mode": "actual_native_quantized_cpu_expert",
+          "native_kernel_called": true,
+          "engine_pool_called": false,
+          "threads": 1,
+          "gpu_executed": false,
+          "model_cli_executed": false
+        }
+      }
+    ],
+    "rows_6_10_derivation": "Prefix rows from already-verified row-008/row-016 input and actual native CPU output receipts. Compute and save the derived slice hashes before any pool case; files remain immutable.",
+    "quality": "Per-case pool F32 output must be finite and bitwise equal to the corresponding saved native-CPU quantized output rows. The native run\u2019s ~1% differences versus NumPy F32 are a separate operator comparison and do not alter this oracle."
+  },
+  "matrix": {
+    "token_rows": [
+      1,
+      2,
+      4,
+      6,
+      10,
+      16
+    ],
+    "background_pool_workers": [
+      1,
+      2,
+      4,
+      6,
+      10,
+      16
+    ],
+    "worker_affinity_modes": [
+      {
+        "name": "none",
+        "pin": false,
+        "policy_enum": "All",
+        "meaning": "OS scheduling; PoolAffinity has no None value"
+      },
+      {
+        "name": "all",
+        "pin": true,
+        "policy_enum": "All"
+      },
+      {
+        "name": "auto",
+        "pin": true,
+        "policy_enum": "Auto"
+      },
+      {
+        "name": "p-cores",
+        "pin": true,
+        "policy_enum": "PCores"
+      }
+    ],
+    "nominal_cases": 144,
+    "pool_constructor": {
+      "n_workers": "matrix value",
+      "pin": "per affinity mode",
+      "host_works": true,
+      "host_works_rationale": "matches the engine default; report background worker count N and effective compute participants N+1 separately",
+      "affinity_scope": "pin applies to spawned workers; caller/host placement remains OS-scheduled unless a separately authorized host-pin method is chosen",
+      "tasks": 0
+    },
+    "affinity_overflow_rule": "Capture fresh candidate list. If pin=true and n_workers exceeds the actual worker candidate count, additional pool threads get core=-1 and are unpinned. Label as mixed/overflow, never strict All/Auto/PCores; root must decide whether those cells are run or marked unsupported.",
+    "topology_capture": "Record actual CpuTopology fields and planned worker LP IDs per case before construction. Pool pin failures are logged but not exposed as a per-worker API status; do not claim successful pinning from candidate intent alone.",
+    "warmup_formal": {
+      "warmup": 1,
+      "formal": 5,
+      "concurrency": 1
+    }
+  },
+  "timing_contract": {
+    "pool_call": "wall duration of run_split_multi_native; contains gate/up, hidden requantization, down, and pool barrier/host-work costs",
+    "activation_quantization": "time native_quant_act separately and report operator total = activation quantization + pool call",
+    "phase_details": "snapshot/delta public ms_multi_gu/ms_multi_q/ms_multi_down and phase_ms wait-park/drain/repark counters",
+    "excluded": "input/blob reads, NativeFmt discovery, allocations, output hashing/serialization, receipts, quality checks; no HTTP/client time exists"
+  },
+  "test_and_build_surface": {
+    "existing_pool_tasks_test": "src/kernels/cpu/pool_tasks_test.cpp: native ExpertPool path parity using fixtures, optional blob, worker1/3, host true/false and task-count cases; not the actual native inputs/topology matrix",
+    "existing_pool_test": "src/kernels/cpu/pool_test.cpp: packed S2 expert path, not native GGUF expert arithmetic",
+    "existing_affinity_test": "src/kernels/cpu/pool_affinity_test.cpp: tests CPU-set/group-affinity behavior and mutates affinity while executing; do not run during this read-only preparation",
+    "standalone_build_proposal": "Add a small separate native-pool executable target to the existing tools/hetero_native_cpu CPU-only CMake project and link the real strata_kernels_cpu plus pinned ggml-cpu; preserve src/hetero/native_expert_bench as the single-thread baseline. Root chooses whether to add the target.",
+    "build_scope": "If later authorized, CPU-only target; no engine executable, model API, GPU/NPU libraries or model load."
+  },
+  "resource_and_stop_gates": {
+    "preflight": "future root authorization plus fresh CPU/system resource admission; topology and candidate counts; exclusive output paths",
+    "no_side_effects_now": true,
+    "failed_parity": "preserve first failure and stop remaining cases; no retry or thread/affinity tuning without a separate decision"
+  },
+  "limitations": [
+    "This is a microbenchmark of the native CPU expert stage, not model throughput or Strata routing.",
+    "The previous native run has quality failures only against a different NumPy F32 operator; this design compares to actual native quantized CPU outputs.",
+    "CPU topology receipt is stale; P/E naming is an inference from numeric EfficiencyClass ordering, not established by the stored Windows API record.",
+    "H21 output failures and this CPU-pool experiment have not been causally linked."
+  ]
+}

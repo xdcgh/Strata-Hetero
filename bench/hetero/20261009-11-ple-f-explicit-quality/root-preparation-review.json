@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_prepared_not_launched",
+  "reviewed_utc": "2026-10-09T07:46:59.347684+00:00",
+  "scripts_sha256": {
+    "launch-owned.ps1": "faf61fb3c02de0074bc4148e5d91089ab727adcb102370e8d8d56e5aa7be28ec",
+    "run-quality-after-ready.ps1": "f2d67d142a27752776bef3e710f08560e28b26800789ce8b53354e5d702f592d"
+  },
+  "default_validation": "both scripts pass; no model/API/WSL/affinity action",
+  "identity_scope": "four original F GGUF stats,14 pack/MTP runtime stats, expert profile/config/engine/bridge/manifest hashes",
+  "launch_gate": "fresh12GiB physical/4GiB commit/46000MiB VRAM; WSL temporary shutdown authorized",
+  "quality_contract": "nine fixed H4 tasks; warm1 formal3;128 caps except code256; per-prompt actual IDs compare H4; fail stops later tasks",
+  "sampler_policy": "kept live for root cleanup",
+  "frozen_binary": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+  "upstream_new_version": "v0.1.41 fetched/reviewed separately; no active-source merge or compiled control change",
+  "authorized_next_step": "start only after this preparation checkpoint; root checks ready and actual process/resource state before quality"
+}

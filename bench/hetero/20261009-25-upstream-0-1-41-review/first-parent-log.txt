@@ -1,0 +1,15 @@
+fb58e0dbc8399662c0e47c76578c6e878b14f6cf Stage buffers: pinning is opt-in (STRATA_STAGE_PIN=1); on by default it corrupted IQ3_S decode after a long prompt in the release gate
+982b8cf5158b839a8466172f65543fff0a096c69 stage pin: no cudaErrorNotSupported (it is not in the HIP compat layer); same behaviour
+69342e8e6cdf39d1040363399fa497c0fcdc38a1 Merge main (v0.1.40.4) into f-141
+459bf635377771b9ec932443e9fd07b1a6097cd1 tests: drop the duplicate test_pipeline_windows_wins left by the merge; the hotfix-tag test no longer assumes a four-number MIN_ENGINE
+0a45d54b2fdb6353e21aa87444b06dc8c9bcb2bd Version 0.1.41: MIN_ENGINE 0.1.41
+9b5e9ab13ac72dfcf6fb2f4403164b3b1a61842b 0.1.41 merge cleanups: bench key placeholder, B65 README author text, calibration time text, fixups.py regenerates the run-time spin bound
+e5c5739ae0453e98962c25ba5498e52adfd30e4f Merge f-141-research: STRATA_DBG_FEAT and ROUTE_OVERRIDE debug hooks (env-gated)
+ed13c9a10f08cf5f327bfc31b83086d2261b26d1 Merge f-141-routeres: route-resident experts (opt-in, experimental)
+b0bc4a70f4915097526615608c293d41e59d76f7 Merge f-141-conc: --batch-groups auto for layer-split batches, #857 fix, listen backlog
+4aca10c5a0cfc83b08f806ab1b2c7eec197bf583 Merge f-141-mgpu: no-P2P path (opt-in), #794, #793, peer knobs
+a00d889383457ee80b9e50c8a4204de47d40cc63 Merge f-141-amdintel: AMD and Intel work, watchdog file-tier tolerance, ports
+ef80713032450b39ef12660131b010a30506a3e2 Merge f-141-fixb: Python, docs and bench fixes and ports
+e50c5946c7a37fc81a0b2fd1642552bd51e9d9f7 Merge f-141-fixa: Pascal decode regression (#1469), clamps, SYCL multi-card and spin bound
+c27998f5ac11d799fe1f54eefa8e4147e24e415b Merge f-141-cuda: foresight, GDN chunked, per-arch tables, stage pin, CUDA bug fixes
+073e2fe28d24a83a34a9fc9e6ee64e9e9a5f36c6 Merge f-141-quick: CPU prefill share, file tier batched reads, tokenizer cache, server hardening, small fixes

@@ -1,0 +1,41 @@
+commit fb58e0dbc8399662c0e47c76578c6e878b14f6cf
+Author:     Niko1221 <Niko1221@users.noreply.github.com>
+AuthorDate: Thu Oct 8 12:25:39 2026 +0200
+Commit:     Niko1221 <Niko1221@users.noreply.github.com>
+CommitDate: Thu Oct 8 12:25:39 2026 +0200
+
+    Stage buffers: pinning is opt-in (STRATA_STAGE_PIN=1); on by default it corrupted IQ3_S decode after a long prompt in the release gate
+
+diff --git a/docs/DETAILS.md b/docs/DETAILS.md
+index 7c5773e..d5a0c1f 100644
+--- a/docs/DETAILS.md
++++ b/docs/DETAILS.md
+@@ -1443,8 +1443,9 @@ the pairs in which the switched arm won). They are here so you can try them on y
+   returned: decode 4 slots, median tok/s B/A (pairs faster): RTX 3060 0.95 (0/6) with misses only, 0.91 (0/6) with the
+   look-ahead; Tesla P100 0.97 (2/6) and 1.00 (4/6); 16 slots on the P100 0.96 (0/6); RTX 5070 0.98 (1/6). The reporter
+   measured the same on 2x RTX 3090 (the misses per layer are below one there, so the CPU round trip stays). Left off.
+-- **`STRATA_STAGE_PIN`: pinned stage buffers** (Zhong Uncle, #1237; **on by default** while the host has 3 GiB of RAM to
+-  spare, `STRATA_STAGE_PIN=0` turns it off, `=1` pins without the RAM check). Where the experts are served from the GGUF in
++- **`STRATA_STAGE_PIN`: pinned stage buffers** (Zhong Uncle, #1237; **opt-in, `STRATA_STAGE_PIN=1`**. It was on by default in
++  development, but the 0.1.41 release gate found IQ3_S decode corrupted after a 4096-token prompt with it on, likely a stage
++  buffer recycled before its asynchronous copy finished; it stays off until that is fixed). Where the experts are served from the GGUF in
+   place (`--mmap-experts`, or too little RAM for the arena) the buffers the cache fill copies from are page-locked, so the
+   copy no longer goes through the driver's bounce buffer (about 0.4-0.6 GiB of pinned RAM, one buffer falls back to
+   pageable when the driver refuses). Decode, median tok/s on, off, 6 pairs of whole runs: Tesla P100 with the RAM capped at
+diff --git a/src/core/expert_source.cpp b/src/core/expert_source.cpp
+index 840e65d..e4b4649 100644
+--- a/src/core/expert_source.cpp
++++ b/src/core/expert_source.cpp
+@@ -1149,8 +1149,10 @@ bool FileExpertSource::copy_from_files(int64_t layer, int64_t expert, uint8_t* d
+     return true;
+ }
+ 
+-// Pinned stage buffers (PR 1237): whether they are the default is decided by the A/B in notes-141-cuda.md.
+-#define STAGE_PIN_DEFAULT 1
++// Pinned stage buffers (PR 1237): opt-in (STRATA_STAGE_PIN=1).  On by default they corrupted IQ3_S decode after a 4096-token
++// prompt in the 0.1.41 release gate (48 tokens of id 0; off = identical to 0.1.40.4): with page-locked buffers the cache-fill
++// copy is truly asynchronous, so a recycled stage buffer can be overwritten before its copy finishes.  Off until that is fixed.
++#define STAGE_PIN_DEFAULT 0
+ constexpr uint64_t kStagePinFloor = 3ull << 30;   // RAM left available after a pinned stage buffer
+ void FileExpertSource::StageBufFree::operator()(uint8_t* p) const noexcept {
+     if (pinned) (void) cudaFreeHost(p);

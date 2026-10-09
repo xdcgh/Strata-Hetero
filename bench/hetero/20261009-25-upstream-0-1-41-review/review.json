@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T07:34:18.814847+00:00",
+  "fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+  "upstream_tag": "v0.1.41",
+  "previous_frozen_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+  "status": "reviewed_not_integrated_not_built",
+  "working_tree_merge_performed": false,
+  "frozen_placement_controls_unchanged": true,
+  "evidence": [
+    {
+      "file": "first-parent-log.txt",
+      "argv": [
+        "git",
+        "log",
+        "--first-parent",
+        "--format=%H %s",
+        "6674a0065fb96bacde33e3eb10f91a1df86f95f2..fb58e0dbc8399662c0e47c76578c6e878b14f6cf"
+      ],
+      "exit_code": 0,
+      "sha256": "1da4b58be12a64e01c1f966c1ead52350625a64e11ed75ce19c5902ab18078e4"
+    },
+    {
+      "file": "diff-numstat.txt",
+      "argv": [
+        "git",
+        "diff",
+        "--numstat",
+        "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+        "fb58e0dbc8399662c0e47c76578c6e878b14f6cf"
+      ],
+      "exit_code": 0,
+      "sha256": "97d049db4089a6f703c23846f13d7c38b3533752600350c31464876a2f9b741f"
+    },
+    {
+      "file": "stage-pin-final-change.patch",
+      "argv": [
+        "git",
+        "show",
+        "--format=fuller",
+        "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+        "--",
+        "src/core/expert_source.cpp",
+        "docs/DETAILS.md"
+      ],
+      "exit_code": 0,
+      "sha256": "da69e9d7bf2d97093c708e825fe2831586847172618dfd8433258e9f6d8a6b87"
+    },
+    {
+      "file": "native-cpu-change.patch",
+      "argv": [
+        "git",
+        "diff",
+        "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+        "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+        "--",
+        "src/kernels/cpu/native_expert.cpp"
+      ],
+      "exit_code": 0,
+      "sha256": "9cce6f0ee1393caf7738c1fe9a1e537df1448b93972484784536c5121a1eee17"
+    },
+    {
+      "file": "dry-merge.txt",
+      "argv": [
+        "git",
+        "merge-tree",
+        "--write-tree",
+        "HEAD",
+        "fb58e0dbc8399662c0e47c76578c6e878b14f6cf"
+      ],
+      "exit_code": 0,
+      "sha256": "0c6f7ff1183d75f24cd03cbf7aa382c12a1d042614a189961eb50143c463e66a"
+    }
+  ],
+  "relevant_changes": [
+    "CPU prefill sharing defaults to measured auto on qualified one-GPU CUDA paths; prior unset meant off. Future deterministic controls must explicitly disable it before strict version comparison.",
+    "Batched file staging, GDN chunking, foresight and calibration sweeps merit reuse and separate validation.",
+    "Stage pinning was introduced in this new update and is opt-in in final commit after a release-gate IQ3_S degeneration. It is absent from frozen H21; that note does not establish H21 cause.",
+    "Residency-biased routing is experimental, opt-in and changes output; not an accepted quality-preserving optimization."
+  ],
+  "next_step": "Review relevant changes and build matched isolated upstream/hetero binaries after frozen F/E placement and CPU-vision runs are terminal; preserve existing baselines."
+}
