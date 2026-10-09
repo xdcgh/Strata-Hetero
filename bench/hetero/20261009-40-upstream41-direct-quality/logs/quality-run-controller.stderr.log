@@ -1,0 +1,6 @@
+ParentContainsErrorRecordException: C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261009-40-upstream41-direct-quality\run-quality-after-ready.ps1:126
+Line |
+ 126 |      $doc = [System.Text.Json.JsonDocument]::Parse([string]$line)
+     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Exception calling "Parse" with "1" argument(s): "'{' is invalid after a single JSON value. Expected end of data.
+     | LineNumber: 0 | BytePositionInLine: 3453."

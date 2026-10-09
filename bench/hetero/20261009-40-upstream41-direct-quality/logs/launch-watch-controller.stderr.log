@@ -1,0 +1,5 @@
+Exception: C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261009-40-upstream41-direct-quality\launch-watch-controller.ps1:9
+Line |
+   9 |  бн tring).exe){throw 'run40 launch receipt does not bind exact expected  бн
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | run40 launch receipt does not bind exact expected launcher/server/configured engine
