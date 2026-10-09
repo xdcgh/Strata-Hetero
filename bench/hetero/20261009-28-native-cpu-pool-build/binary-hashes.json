@@ -1,0 +1,27 @@
+[
+  {
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert_metadata_fixture.exe",
+    "bytes": 1478144,
+    "sha256": "f26a7241d33accaabd94ad976ff9e4c0269bbc2a0d39b04451ee771726fc59ed"
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+    "bytes": 2158592,
+    "sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467"
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ggml\\src\\ggml-base.lib",
+    "bytes": 9742248,
+    "sha256": "3d95cba97be1ff4674046696a745d10d4122ee45f93a1f69207d3be57af355a6"
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ggml\\src\\ggml-cpu.lib",
+    "bytes": 6219384,
+    "sha256": "442ae617c6a6a5b783c5866d8930349ecfd358f4f19d0fb139fdf0696f4046a9"
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\strata-root\\strata_kernels_cpu.lib",
+    "bytes": 6593352,
+    "sha256": "71811c122b558afafa7eaa6b1c1d6a502b47d5b0c597acf58577387a5df89ffe"
+  }
+]

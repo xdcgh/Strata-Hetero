@@ -1,0 +1,18 @@
+ M bench/hetero/STATE.json
+ M src/hetero/native_expert_bench.cpp
+ M tools/hetero_native_cpu/cli_fixtures.cmake
+?? bench/hetero/20261009-12-ple-e-explicit-quality/admission.json
+?? bench/hetero/20261009-12-ple-e-explicit-quality/identity-recheck.json
+?? bench/hetero/20261009-12-ple-e-explicit-quality/process.json
+?? bench/hetero/20261009-12-ple-e-explicit-quality/quality/
+?? bench/hetero/20261009-12-ple-e-explicit-quality/requests/
+?? bench/hetero/20261009-12-ple-e-explicit-quality/resource/
+?? bench/hetero/20261009-12-ple-e-explicit-quality/root-ready-review.json
+?? bench/hetero/20261009-12-ple-e-explicit-quality/sampler-process.json
+?? bench/hetero/20261009-12-ple-e-explicit-quality/shutdown-final.json
+?? bench/hetero/20261009-24-vision-cpu-validation-preparation/
+?? bench/hetero/20261009-26-vision-decoder-dependency/
+?? bench/hetero/20261009-29-f-e-placement-comparison/
+?? tools/hetero_vision_cpu_compare.py
+?? tools/hetero_vision_payload.py
+?? tools/test_hetero_vision_preparation.py

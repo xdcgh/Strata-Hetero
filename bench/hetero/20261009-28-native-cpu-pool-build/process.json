@@ -1,0 +1,17 @@
+{
+  "run_id": "native-cpu-pool-20261009-28",
+  "process_id": 22268,
+  "create_time_utc": "2026-10-09T09:07:00.8094480+00:00",
+  "executable_path": "C:\\WINDOWS\\system32\\cmd.exe",
+  "command_line": "\"C:\\WINDOWS\\system32\\cmd.exe\" /d /c \"E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\run-build.cmd\"",
+  "owned_batch_absolute_path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\run-build.cmd",
+  "priority": "Idle",
+  "cmake_target": [
+    "hetero_native_expert",
+    "hetero_native_expert_metadata_fixture"
+  ],
+  "parallel_jobs": 1,
+  "gpu_executed": false,
+  "model_cli_executed": false,
+  "build_directory": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28"
+}

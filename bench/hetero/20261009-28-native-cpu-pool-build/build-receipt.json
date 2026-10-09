@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "run_id": "native-cpu-pool-20261009-28",
+  "status": "success",
+  "failure_reason": null,
+  "start_utc": "2026-10-09T09:07:00.4211713+00:00",
+  "finish_utc": "2026-10-09T09:07:27.7182098+00:00",
+  "duration_seconds": 27.297,
+  "source": {
+    "repo": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+    "branch_at_start": "codex/09-upstream-0-1-40-4",
+    "branch_at_finish": "codex/09-upstream-0-1-40-4",
+    "head_at_start": "9eb9960ec750b0db97634ea0dfafaed48b015a2a",
+    "head_at_finish": "9eb9960ec750b0db97634ea0dfafaed48b015a2a",
+    "head_changed_during_build": false,
+    "source_changed_during_build": false,
+    "tracked_and_untracked_source_hashes_before": [
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\CMakeLists.txt",
+        "bytes": 101182,
+        "sha256": "be8e3543e4d68d554327d3894a9f0cac3c677ab265346960302c4154a09fdf36",
+        "git_blob_at_head": "65c6cc5a351d057bd10158c5c0092ace4c26345e",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\expert.cpp",
+        "bytes": 35624,
+        "sha256": "b60c0a6b03f01e6e390cf801253ec73c9c7dd480069af59e9a42549e6d2755fc",
+        "git_blob_at_head": "045e3d58aa5dffaccb6ae35d8c94d1ba77dbf897",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool.cpp",
+        "bytes": 39994,
+        "sha256": "e54f0c2fe6a297c4aa49a3a9efabab3166d8644f05385b9f7e2fa5e5d34f8eff",
+        "git_blob_at_head": "16e3fb2d8f8beb4df064f2b469370d5d178c3a3c",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\native_expert.cpp",
+        "bytes": 11251,
+        "sha256": "709f85f441e1a7d337f03b18e36af4bb7035332fc712ff47cc566d234d3a8757",
+        "git_blob_at_head": "066afe0d41fa45e13aee38b7b8cfd619625a2246",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\expert_layout.cpp",
+        "bytes": 17360,
+        "sha256": "dd48014fa4c8c33f08379c22114bd2e9ca3ea92038299c6205a6882255377142",
+        "git_blob_at_head": "cc218f272cfaea9894deb3c93f1129f6d10f5338",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\iq_avx2.cpp",
+        "bytes": 29294,
+        "sha256": "8a680a143c8a97e11ce7836b79555dfe0fc10478675b1a181369418796de1fe8",
+        "git_blob_at_head": "ca722a582765a4c2093b37a3f0e839463471132a",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\iq_avx512.cpp",
+        "bytes": 15633,
+        "sha256": "d04be136d59973c12af78b5ff23c708343389f968113e8b31641a74d697a6e81",
+        "git_blob_at_head": "26d2c5a715e32a1129ea623b3b9ab1988d697150",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\kq_avx2.cpp",
+        "bytes": 13524,
+        "sha256": "c6534dcc95985dc4985f9e827cbe3aaac11d931e9727ebb1b26834de87b52579",
+        "git_blob_at_head": "a34731198c3fb5addde74145e15164fd986d5ae4",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\kq_avx1.cpp",
+        "bytes": 3199,
+        "sha256": "93c029348834f626c2c76f4b1af65486ff1785465f5edd50bfef9d739239257e",
+        "git_blob_at_head": "fbdf73f40f3d6dd7fad2032f8eddcee6247ba6b2",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\expert.hpp",
+        "bytes": 12425,
+        "sha256": "c1c4ac822465b16fd9adbfe85aeb819265f508fa2c48c3cda3837315efa7c0b1",
+        "git_blob_at_head": "8510598b30806413d8cd24a51aa0cc8ab8c00f60",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\pool.hpp",
+        "bytes": 18504,
+        "sha256": "4255fd01ae6e55a650b2e81316202c5b9206e0ae2271cd9fa81edc3b27d33c1a",
+        "git_blob_at_head": "6796e39173a0015ff7e397b71a6b3170415897ec",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\native_expert.hpp",
+        "bytes": 2923,
+        "sha256": "269ab8daef96fc6e14471430ef5c44475af7f166d127d812fb447c4062131b7e",
+        "git_blob_at_head": "c41a1991bfe634b6dd11ef59b1808142f64cd6dd",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\expert_layout.hpp",
+        "bytes": 6663,
+        "sha256": "c653b2646f06ec967142bc4d4a056f3238e58809df9fa3332cf0f22e00119d11",
+        "git_blob_at_head": "615afa195a8c7bde8ae96d9bdbd2c460a9474bcf",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\iq_avx2.hpp",
+        "bytes": 2997,
+        "sha256": "dd596f7ee740be765eb9635fb3de13533f590b3f0517dd66355b13c9720c1a10",
+        "git_blob_at_head": "519efa2c5a0d49074ca750c53ab8973cf8dc88b2",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\iq_avx512.hpp",
+        "bytes": 894,
+        "sha256": "bed355390929a1bc2668ff098f9ef48fecfc60f8fc05922a9c41ef3aac3a2080",
+        "git_blob_at_head": "a9a71c461a74b5a14ef28addc0bae9e60a585df4",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\kq_avx2.hpp",
+        "bytes": 1411,
+        "sha256": "810cecff725f1cf64d92658409ef1995c1d4473b305bcf0edd2803e1d1fedf0f",
+        "git_blob_at_head": "01b7a63cc9a669938cc5646bb1627c516cf0aa45",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_bench.cpp",
+        "bytes": 44285,
+        "sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+        "git_blob_at_head": "674cd77107264d2ed2952da82e88b4672d09ea85",
+        "git_status": " M src/hetero/native_expert_bench.cpp"
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_fixture.cpp",
+        "bytes": 2303,
+        "sha256": "db7cc1bedbe08604c940f4541e5b7c89dd182b7cc58c4c3d1e00d2db1b0023fa",
+        "git_blob_at_head": "b7eb2da54fdb61cc04b383d442542f234ed64292",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\CMakeLists.txt",
+        "bytes": 4279,
+        "sha256": "cc4a4c59b9af0b1af902199bc99cb75f93396eb8ae2a4210d6103cbd0cc6c75a",
+        "git_blob_at_head": "afe93bdb2077f6987bceabab1eacffc2f9c34815",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\sha256.hpp",
+        "bytes": 4226,
+        "sha256": "5bbdfb8733ec347de4c5ca990ce412cc1241854c5920f81a47ac331d32bc19d8",
+        "git_blob_at_head": "7636087eba4ce179876b05e46462f4018acc6e7c",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\cli_fixtures.cmake",
+        "bytes": 5198,
+        "sha256": "25be0a80057b1b334e843699b5c4af2debc307ebb23427cd0e2532f3e94b8031",
+        "git_blob_at_head": "90780e3d2949d012b222c8cfcf218456a0d6aca5",
+        "git_status": " M tools/hetero_native_cpu/cli_fixtures.cmake"
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\run_build.ps1",
+        "bytes": 29394,
+        "sha256": "012eedb22c8ad7c1596a90c1202102431e5960edd5f37f7ab3ee0bfd80eb91ef",
+        "git_blob_at_head": "bb556fb958adeaa4f398e1c7ff3fcf7c9ed7a168",
+        "git_status": ""
+      }
+    ],
+    "tracked_and_untracked_source_hashes_after": [
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\CMakeLists.txt",
+        "bytes": 101182,
+        "sha256": "be8e3543e4d68d554327d3894a9f0cac3c677ab265346960302c4154a09fdf36",
+        "git_blob_at_head": "65c6cc5a351d057bd10158c5c0092ace4c26345e",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\expert.cpp",
+        "bytes": 35624,
+        "sha256": "b60c0a6b03f01e6e390cf801253ec73c9c7dd480069af59e9a42549e6d2755fc",
+        "git_blob_at_head": "045e3d58aa5dffaccb6ae35d8c94d1ba77dbf897",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool.cpp",
+        "bytes": 39994,
+        "sha256": "e54f0c2fe6a297c4aa49a3a9efabab3166d8644f05385b9f7e2fa5e5d34f8eff",
+        "git_blob_at_head": "16e3fb2d8f8beb4df064f2b469370d5d178c3a3c",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\native_expert.cpp",
+        "bytes": 11251,
+        "sha256": "709f85f441e1a7d337f03b18e36af4bb7035332fc712ff47cc566d234d3a8757",
+        "git_blob_at_head": "066afe0d41fa45e13aee38b7b8cfd619625a2246",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\expert_layout.cpp",
+        "bytes": 17360,
+        "sha256": "dd48014fa4c8c33f08379c22114bd2e9ca3ea92038299c6205a6882255377142",
+        "git_blob_at_head": "cc218f272cfaea9894deb3c93f1129f6d10f5338",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\iq_avx2.cpp",
+        "bytes": 29294,
+        "sha256": "8a680a143c8a97e11ce7836b79555dfe0fc10478675b1a181369418796de1fe8",
+        "git_blob_at_head": "ca722a582765a4c2093b37a3f0e839463471132a",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\iq_avx512.cpp",
+        "bytes": 15633,
+        "sha256": "d04be136d59973c12af78b5ff23c708343389f968113e8b31641a74d697a6e81",
+        "git_blob_at_head": "26d2c5a715e32a1129ea623b3b9ab1988d697150",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\kq_avx2.cpp",
+        "bytes": 13524,
+        "sha256": "c6534dcc95985dc4985f9e827cbe3aaac11d931e9727ebb1b26834de87b52579",
+        "git_blob_at_head": "a34731198c3fb5addde74145e15164fd986d5ae4",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\kq_avx1.cpp",
+        "bytes": 3199,
+        "sha256": "93c029348834f626c2c76f4b1af65486ff1785465f5edd50bfef9d739239257e",
+        "git_blob_at_head": "fbdf73f40f3d6dd7fad2032f8eddcee6247ba6b2",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\expert.hpp",
+        "bytes": 12425,
+        "sha256": "c1c4ac822465b16fd9adbfe85aeb819265f508fa2c48c3cda3837315efa7c0b1",
+        "git_blob_at_head": "8510598b30806413d8cd24a51aa0cc8ab8c00f60",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\pool.hpp",
+        "bytes": 18504,
+        "sha256": "4255fd01ae6e55a650b2e81316202c5b9206e0ae2271cd9fa81edc3b27d33c1a",
+        "git_blob_at_head": "6796e39173a0015ff7e397b71a6b3170415897ec",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\native_expert.hpp",
+        "bytes": 2923,
+        "sha256": "269ab8daef96fc6e14471430ef5c44475af7f166d127d812fb447c4062131b7e",
+        "git_blob_at_head": "c41a1991bfe634b6dd11ef59b1808142f64cd6dd",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\expert_layout.hpp",
+        "bytes": 6663,
+        "sha256": "c653b2646f06ec967142bc4d4a056f3238e58809df9fa3332cf0f22e00119d11",
+        "git_blob_at_head": "615afa195a8c7bde8ae96d9bdbd2c460a9474bcf",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\iq_avx2.hpp",
+        "bytes": 2997,
+        "sha256": "dd596f7ee740be765eb9635fb3de13533f590b3f0517dd66355b13c9720c1a10",
+        "git_blob_at_head": "519efa2c5a0d49074ca750c53ab8973cf8dc88b2",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\iq_avx512.hpp",
+        "bytes": 894,
+        "sha256": "bed355390929a1bc2668ff098f9ef48fecfc60f8fc05922a9c41ef3aac3a2080",
+        "git_blob_at_head": "a9a71c461a74b5a14ef28addc0bae9e60a585df4",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\kq_avx2.hpp",
+        "bytes": 1411,
+        "sha256": "810cecff725f1cf64d92658409ef1995c1d4473b305bcf0edd2803e1d1fedf0f",
+        "git_blob_at_head": "01b7a63cc9a669938cc5646bb1627c516cf0aa45",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_bench.cpp",
+        "bytes": 44285,
+        "sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+        "git_blob_at_head": "674cd77107264d2ed2952da82e88b4672d09ea85",
+        "git_status": " M src/hetero/native_expert_bench.cpp"
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_fixture.cpp",
+        "bytes": 2303,
+        "sha256": "db7cc1bedbe08604c940f4541e5b7c89dd182b7cc58c4c3d1e00d2db1b0023fa",
+        "git_blob_at_head": "b7eb2da54fdb61cc04b383d442542f234ed64292",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\CMakeLists.txt",
+        "bytes": 4279,
+        "sha256": "cc4a4c59b9af0b1af902199bc99cb75f93396eb8ae2a4210d6103cbd0cc6c75a",
+        "git_blob_at_head": "afe93bdb2077f6987bceabab1eacffc2f9c34815",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\sha256.hpp",
+        "bytes": 4226,
+        "sha256": "5bbdfb8733ec347de4c5ca990ce412cc1241854c5920f81a47ac331d32bc19d8",
+        "git_blob_at_head": "7636087eba4ce179876b05e46462f4018acc6e7c",
+        "git_status": ""
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\cli_fixtures.cmake",
+        "bytes": 5198,
+        "sha256": "25be0a80057b1b334e843699b5c4af2debc307ebb23427cd0e2532f3e94b8031",
+        "git_blob_at_head": "90780e3d2949d012b222c8cfcf218456a0d6aca5",
+        "git_status": " M tools/hetero_native_cpu/cli_fixtures.cmake"
+      },
+      {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\run_build.ps1",
+        "bytes": 29394,
+        "sha256": "012eedb22c8ad7c1596a90c1202102431e5960edd5f37f7ab3ee0bfd80eb91ef",
+        "git_blob_at_head": "bb556fb958adeaa4f398e1c7ff3fcf7c9ed7a168",
+        "git_status": ""
+      }
+    ]
+  },
+  "ggml": {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "pinned_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "head_at_start": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "head_at_finish": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "head_changed_during_build": false,
+    "clean_at_start": true,
+    "changed_during_build": false,
+    "source_hashes_before": [
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\\ggml.h",
+        "bytes": 119166,
+        "sha256": "62e4d28730f96924bfc3ec46771b38c30a8d4397584769fd636d6327354d5430",
+        "git_blob_at_head": "224bdef927ac90bfa07ee39db3247b7bac4f14ec",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\\ggml-cpu.h",
+        "bytes": 7905,
+        "sha256": "696a54474002227a7f73b967b643055d6829853464244a8d3f4fe2e7d0b85abe",
+        "git_blob_at_head": "dc6453c6eaa16667f720f987659ad42d03a403a2",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-common.h",
+        "bytes": 137072,
+        "sha256": "3ac6eed12695ceea1acd18f556845023a45f92f6ce0530c18c70bb10450207ea",
+        "git_blob_at_head": "1dbbe326d0fc6a5ce8a86d237cb94901340443af",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml.c",
+        "bytes": 268856,
+        "sha256": "28f8e72ba3f96e044c78b7a6f75511a9afdc61d5ef5a14de00969f2faa55fff1",
+        "git_blob_at_head": "1752814093b5cf973a820794e0dbe53fb8c6fe5b",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.c",
+        "bytes": 136540,
+        "sha256": "2f0a37f6c00c230a783cf078ee0c99f248095c501dff56b8ee47fb356dae3538",
+        "git_blob_at_head": "8bb0ff7bc3366be957dd20aba3fbe0f50dd249d7",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\quants.c",
+        "bytes": 46463,
+        "sha256": "459ecbb123f56bd9230b2681430e7591764a5587b6b83f058f002bf6511fdbad",
+        "git_blob_at_head": "5e36459f8cbc5900b375d2189414307393471a6b",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\arch\\x86\\quants.c",
+        "bytes": 201515,
+        "sha256": "99a98747c1ac84ec40e2d1a31227b947aeb0a05bf1d8e79ec630a6d783b89f86",
+        "git_blob_at_head": "ea54cfe44ce403fe06c8b4aa10b5a882779e7e71",
+        "git_status": ""
+      }
+    ],
+    "source_hashes_after": [
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\\ggml.h",
+        "bytes": 119166,
+        "sha256": "62e4d28730f96924bfc3ec46771b38c30a8d4397584769fd636d6327354d5430",
+        "git_blob_at_head": "224bdef927ac90bfa07ee39db3247b7bac4f14ec",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\\ggml-cpu.h",
+        "bytes": 7905,
+        "sha256": "696a54474002227a7f73b967b643055d6829853464244a8d3f4fe2e7d0b85abe",
+        "git_blob_at_head": "dc6453c6eaa16667f720f987659ad42d03a403a2",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-common.h",
+        "bytes": 137072,
+        "sha256": "3ac6eed12695ceea1acd18f556845023a45f92f6ce0530c18c70bb10450207ea",
+        "git_blob_at_head": "1dbbe326d0fc6a5ce8a86d237cb94901340443af",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml.c",
+        "bytes": 268856,
+        "sha256": "28f8e72ba3f96e044c78b7a6f75511a9afdc61d5ef5a14de00969f2faa55fff1",
+        "git_blob_at_head": "1752814093b5cf973a820794e0dbe53fb8c6fe5b",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.c",
+        "bytes": 136540,
+        "sha256": "2f0a37f6c00c230a783cf078ee0c99f248095c501dff56b8ee47fb356dae3538",
+        "git_blob_at_head": "8bb0ff7bc3366be957dd20aba3fbe0f50dd249d7",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\quants.c",
+        "bytes": 46463,
+        "sha256": "459ecbb123f56bd9230b2681430e7591764a5587b6b83f058f002bf6511fdbad",
+        "git_blob_at_head": "5e36459f8cbc5900b375d2189414307393471a6b",
+        "git_status": ""
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\arch\\x86\\quants.c",
+        "bytes": 201515,
+        "sha256": "99a98747c1ac84ec40e2d1a31227b947aeb0a05bf1d8e79ec630a6d783b89f86",
+        "git_blob_at_head": "ea54cfe44ce403fe06c8b4aa10b5a882779e7e71",
+        "git_status": ""
+      }
+    ]
+  },
+  "toolchain": {
+    "cmake_path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "cmake_version": "cmake version 4.4.3",
+    "cmake_sha256": "ab8247ca4554871e5d75c0ee118ee8663727bd6fdf37ad76b17e9cc8d5f286a8",
+    "ninja_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "ninja_version": "1.13.2.git.kitware.jobserver-pipe-1",
+    "ninja_sha256": "a7f084e8ee37bff0872aa8bd3d17cc19632d2a37734f6c242dd3dee22d77c0b4",
+    "ctest_path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "ctest_sha256": "083f482c8656c86932c28906445cb3c10c0c5ee649a90ff3e0080ee4447d3dfc",
+    "vcvars64_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+    "vcvars64_sha256": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209",
+    "cl_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "cl_sha256": "b0a1818ebae6da7f18230a84e76ce839212584ac4c2ab55b97a0d5268085da57",
+    "cl_version_log": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\cl-version.log",
+    "local_dll_changes": false,
+    "global_environment_changed": false,
+    "cuda_or_hip_compiler_invoked": false,
+    "process_priority": "Idle"
+  },
+  "process_identity": {
+    "process_id": 22268,
+    "create_time_utc": "2026-10-09T09:07:00.8094480+00:00",
+    "executable_path": "C:\\WINDOWS\\system32\\cmd.exe",
+    "command_line": "\"C:\\WINDOWS\\system32\\cmd.exe\" /d /c \"E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\run-build.cmd\"",
+    "batch_path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\run-build.cmd"
+  },
+  "stop_result": null,
+  "cmake_options": {
+    "generator": "Ninja",
+    "configuration": "Release",
+    "targets": [
+      "hetero_native_expert",
+      "hetero_native_expert_metadata_fixture"
+    ],
+    "parallel_jobs": 1,
+    "STRATA_ENABLE_CUDA": "OFF",
+    "STRATA_ENABLE_HIP": "OFF",
+    "STRATA_HIP_GFX906": "OFF",
+    "STRATA_ENABLE_SYCL": "OFF",
+    "STRATA_PREFILL_MMQ": "OFF",
+    "STRATA_MMQ_KQUANTS": "OFF",
+    "STRATA_ORCA_Q4KS_MMQ": "OFF",
+    "STRATA_NATIVE_EXPERTS": "ON",
+    "STRATA_BUILD_TESTS": "OFF",
+    "STRATA_PORTABLE": "ON",
+    "STRATA_ISA_FLOOR": "",
+    "STRATA_GGML_DIR": "E:\\Strata-Hetero-data\\source\\llama-3cf0325"
+  },
+  "actual_exit_codes": {
+    "configure": 0,
+    "build": 0,
+    "ctest": 0,
+    "command_shell": 0
+  },
+  "host": {
+    "ram_total_bytes": 136963248128,
+    "ram_min_available_sampled_bytes": 118266212352.0,
+    "commit_headroom_min_sampled_bytes": 123528241152.0,
+    "ram_floor_bytes": 12884901888,
+    "commit_headroom_floor_bytes": 4294967296,
+    "sample_interval_seconds": 5,
+    "sample_count": 8,
+    "samples": [
+      {
+        "time_utc": "2026-10-09T09:06:58.5132826+00:00",
+        "available_physical_bytes": 118512721920,
+        "committed_bytes": 21750661120,
+        "commit_limit_bytes": 145553182720,
+        "commit_headroom_bytes": 123802521600
+      },
+      {
+        "time_utc": "2026-10-09T09:07:00.7677488+00:00",
+        "available_physical_bytes": 118456643584,
+        "committed_bytes": 21827547136,
+        "commit_limit_bytes": 145553182720,
+        "commit_headroom_bytes": 123725635584
+      },
+      {
+        "time_utc": "2026-10-09T09:07:06.2819742+00:00",
+        "available_physical_bytes": 118351372288,
+        "committed_bytes": 21974450176,
+        "commit_limit_bytes": 145553182720,
+        "commit_headroom_bytes": 123578732544
+      },
+      {
+        "time_utc": "2026-10-09T09:07:11.6506731+00:00",
+        "available_physical_bytes": 118266212352,
+        "committed_bytes": 22024941568,
+        "commit_limit_bytes": 145553182720,
+        "commit_headroom_bytes": 123528241152
+      },
+      {
+        "time_utc": "2026-10-09T09:07:17.0204570+00:00",
+        "available_physical_bytes": 118293155840,
+        "committed_bytes": 21978091520,
+        "commit_limit_bytes": 145553182720,
+        "commit_headroom_bytes": 123575091200
+      },
+      {
+        "time_utc": "2026-10-09T09:07:22.3633662+00:00",
+        "available_physical_bytes": 118328807424,
+        "committed_bytes": 22011707392,
+        "commit_limit_bytes": 145553182720,
+        "commit_headroom_bytes": 123541475328
+      },
+      {
+        "time_utc": "2026-10-09T09:07:27.7172981+00:00",
+        "available_physical_bytes": 118384955392,
+        "committed_bytes": 21892440064,
+        "commit_limit_bytes": 145553182720,
+        "commit_headroom_bytes": 123660742656
+      },
+      {
+        "time_utc": "2026-10-09T09:07:28.0384564+00:00",
+        "available_physical_bytes": 118386094080,
+        "committed_bytes": 21894230016,
+        "commit_limit_bytes": 145553182720,
+        "commit_headroom_bytes": 123658952704
+      }
+    ]
+  },
+  "binary_artifacts": [
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert_metadata_fixture.exe",
+      "bytes": 1478144,
+      "sha256": "f26a7241d33accaabd94ad976ff9e4c0269bbc2a0d39b04451ee771726fc59ed"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+      "bytes": 2158592,
+      "sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ggml\\src\\ggml-base.lib",
+      "bytes": 9742248,
+      "sha256": "3d95cba97be1ff4674046696a745d10d4122ee45f93a1f69207d3be57af355a6"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ggml\\src\\ggml-cpu.lib",
+      "bytes": 6219384,
+      "sha256": "442ae617c6a6a5b783c5866d8930349ecfd358f4f19d0fb139fdf0696f4046a9"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\strata-root\\strata_kernels_cpu.lib",
+      "bytes": 6593352,
+      "sha256": "71811c122b558afafa7eaa6b1c1d6a502b47d5b0c597acf58577387a5df89ffe"
+    }
+  ],
+  "logs": {
+    "configure": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\configure.log",
+    "build": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\build.log",
+    "ctest": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ctest.log",
+    "vcvars": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\vcvars.log",
+    "tool_paths": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\tool-paths.log",
+    "cl_version": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\cl-version.log",
+    "cmake_version": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\cmake-version.log",
+    "ninja_version": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ninja-version.log"
+  },
+  "build_directory": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28",
+  "gpu_executed": false,
+  "model_or_engine_cli_executed": false
+}

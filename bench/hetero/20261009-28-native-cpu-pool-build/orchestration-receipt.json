@@ -1,0 +1,18 @@
+{
+  "run_id": "native-cpu-pool-20261009-28",
+  "python_preflight": {
+    "available_physical_bytes": 118579437568,
+    "commit_headroom_bytes": 123896967168,
+    "committed_bytes": 21656215552,
+    "commit_limit_bytes": 145553182720,
+    "source": "isolated Python stdlib ctypes GlobalMemoryStatusEx + PSAPI GetPerformanceInfo"
+  },
+  "python_preflight_exit_code": 0,
+  "helper_pid": 14944,
+  "helper_start_utc": "2026-10-09T09:06:56.9532871+00:00",
+  "helper_executable": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "helper_exit_code": 0,
+  "stdout": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28-helper.stdout.log",
+  "stderr": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28-helper.stderr.log",
+  "resource_sampler_receipt": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource-sampler-receipt.json"
+}

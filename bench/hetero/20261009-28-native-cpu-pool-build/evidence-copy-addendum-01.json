@@ -1,0 +1,23 @@
+{
+  "schema": "native-cpu-pool-build-evidence-addendum-v1",
+  "note": "The first derived native-expert-compile-command.txt ended with a literal `n due to PowerShell single-quoted string construction. It is preserved unchanged; use native-expert-compile-command-verified.txt, extracted verbatim from expanded-build-commands.txt.",
+  "corrected_compile_command": {
+    "name": "native-expert-compile-command-verified.txt",
+    "bytes": 1097,
+    "sha256": "0694091a2860799190c3d61773d5f529d83b0aa722dfa09dbbdc9b1d7b7d8ebc"
+  },
+  "copied_helper_logs": [
+    {
+      "name": "native-cpu-pool-20261009-28-helper.stdout.log",
+      "bytes": 231,
+      "sha256": "3fdc2f8cc9eba331529e954a984156cdb04020568f9da0fc52cd98178eee9d45",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28-helper.stdout.log"
+    },
+    {
+      "name": "native-cpu-pool-20261009-28-helper.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28-helper.stderr.log"
+    }
+  ]
+}

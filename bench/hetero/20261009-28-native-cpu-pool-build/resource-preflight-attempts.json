@@ -1,0 +1,18 @@
+{
+  "run_id": "native-cpu-pool-20261009-28",
+  "attempts": [
+    {
+      "status": "preflight_failed",
+      "method": "isolated Python stdlib ctypes snapshot",
+      "error": "Initial PSAPI PERFORMANCE_INFORMATION struct declared PageSize as DWORD (struct size 96 instead of 104); GetPerformanceInfo returned WinError 24 (ERROR_BAD_LENGTH). No build directory, process, or model data access occurred in that attempt."
+    },
+    {
+      "status": "passed",
+      "method": "isolated Python stdlib ctypes GlobalMemoryStatusEx + PSAPI GetPerformanceInfo",
+      "struct_bytes": 104,
+      "exit_code": 0,
+      "available_physical_bytes": 118579437568,
+      "commit_headroom_bytes": 123896967168
+    }
+  ]
+}

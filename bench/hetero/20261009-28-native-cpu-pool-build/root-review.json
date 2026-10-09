@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_compiled_cpu_pool_metadata_only",
+  "reviewed_utc": "2026-10-09T09:17:07.471161+00:00",
+  "copied_evidence_hashes_verified": 30,
+  "build_ctest_exitcodes": {
+    "configure": 0,
+    "build": 0,
+    "ctest": 0,
+    "command_shell": 0
+  },
+  "binary_sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+  "source_sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+  "metadata1worker_none_rootchecked": true,
+  "actual_kernel_pool_run": "not_run",
+  "actual_worker_pin_success": "not_exposed; no claim",
+  "model_performance": "not_run",
+  "review_correction": "Initial review incorrectly treated generator/native/portable options as GPU flags; explicit CUDA/HIP/SYCL keys and no accelerator compiler were checked."
+}

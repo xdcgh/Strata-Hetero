@@ -1,0 +1,40 @@
+[1/40] Building C object ggml\src\CMakeFiles\ggml-base.dir\ggml.c.obj
+[2/40] Building CXX object ggml\src\CMakeFiles\ggml-base.dir\ggml.cpp.obj
+[3/40] Building C object ggml\src\CMakeFiles\ggml-base.dir\ggml-alloc.c.obj
+[4/40] Building CXX object ggml\src\CMakeFiles\ggml-base.dir\ggml-backend.cpp.obj
+[5/40] Building CXX object ggml\src\CMakeFiles\ggml-base.dir\ggml-backend-meta.cpp.obj
+[6/40] Building CXX object ggml\src\CMakeFiles\ggml-base.dir\ggml-opt.cpp.obj
+[7/40] Building CXX object ggml\src\CMakeFiles\ggml-base.dir\ggml-threading.cpp.obj
+[8/40] Building C object ggml\src\CMakeFiles\ggml-base.dir\ggml-quants.c.obj
+[9/40] Building CXX object ggml\src\CMakeFiles\ggml-base.dir\gguf.cpp.obj
+[10/40] Linking CXX static library ggml\src\ggml-base.lib
+[11/40] Building C object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\ggml-cpu.c.obj
+[12/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\ggml-cpu.cpp.obj
+[13/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\repack.cpp.obj
+[14/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\iqp.cpp.obj
+[15/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\hbm.cpp.obj
+[16/40] Building C object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\quants.c.obj
+[17/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\traits.cpp.obj
+[18/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\amx\amx.cpp.obj
+[19/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\amx\mmq.cpp.obj
+[20/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\binary-ops.cpp.obj
+[21/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\unary-ops.cpp.obj
+[22/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\vec.cpp.obj
+[23/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\ops.cpp.obj
+[24/40] Building C object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\arch\x86\quants.c.obj
+[25/40] Building CXX object ggml\src\CMakeFiles\ggml-cpu.dir\ggml-cpu\arch\x86\repack.cpp.obj
+[26/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\expert.cpp.obj
+[27/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\pool.cpp.obj
+[28/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\expert_layout.cpp.obj
+[29/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\q2_avx2.cpp.obj
+[30/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\native_expert.cpp.obj
+[31/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\iq_avx512.cpp.obj
+[32/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\iq_avx2.cpp.obj
+[33/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\kq_avx2.cpp.obj
+[34/40] Building CXX object strata-root\CMakeFiles\strata_kernels_cpu.dir\src\kernels\cpu\kq_avx1.cpp.obj
+[35/40] Linking CXX static library ggml\src\ggml-cpu.lib
+[36/40] Building CXX object CMakeFiles\hetero_native_expert.dir\C_\Users\DC\Documents\ChatGPT\Strata-Hetero\src\hetero\native_expert_bench.cpp.obj
+[37/40] Building CXX object CMakeFiles\hetero_native_expert_metadata_fixture.dir\C_\Users\DC\Documents\ChatGPT\Strata-Hetero\src\hetero\native_expert_fixture.cpp.obj
+[38/40] Linking CXX static library strata-root\strata_kernels_cpu.lib
+[39/40] Linking CXX executable hetero_native_expert.exe
+[40/40] Linking CXX executable hetero_native_expert_metadata_fixture.exe

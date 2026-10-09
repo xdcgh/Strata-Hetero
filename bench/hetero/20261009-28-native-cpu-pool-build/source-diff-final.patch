@@ -1,0 +1,334 @@
+diff --git a/src/hetero/native_expert_bench.cpp b/src/hetero/native_expert_bench.cpp
+index 674cd77..46e60ff 100644
+--- a/src/hetero/native_expert_bench.cpp
++++ b/src/hetero/native_expert_bench.cpp
+@@ -2,6 +2,7 @@
+ // The default path validates metadata only; kernels run only after an explicit --run.
+ #include "strata/kernels/cpu/native_expert.hpp"
+ #include "strata/kernels/cpu/expert_layout.hpp"
++#include "strata/kernels/cpu/pool.hpp"
+ #include "ggml.h"
+ #include "sha256.hpp"
+ 
+@@ -55,6 +56,7 @@
+ #endif
+ 
+ namespace fs = std::filesystem;
++namespace cpu = strata::kernels::cpu;
+ using strata::kernels::cpu::NativeFmt;
+ 
+ namespace {
+@@ -76,6 +78,9 @@ struct Args {
+     int down_type = 7;            // GGML_TYPE_Q5_1
+     uint64_t warmup = 1;
+     uint64_t repeat = 3;
++    int pool_workers = 0;           // 0 keeps the original single-thread path
++    std::string pool_affinity = "none";
++    bool pool_workers_set = false, pool_affinity_set = false;
+     bool has_rows = false, has_hidden = false, has_intermediate = false;
+     bool has_gu_type = false, has_down_type = false;
+     fs::path blob, input, output, receipt;
+@@ -152,12 +157,18 @@ Args parse_args(int argc, char** argv) {
+         else if (opt == "--down-type") { args.down_type = parse_int(value_after(i, "--down-type"), "--down-type"); args.has_down_type = true; }
+         else if (opt == "--warmup") args.warmup = parse_u64(value_after(i, "--warmup"), "--warmup");
+         else if (opt == "--repeat") args.repeat = parse_u64(value_after(i, "--repeat"), "--repeat");
++        else if (opt == "--pool-workers") { args.pool_workers = parse_int(value_after(i, "--pool-workers"), "--pool-workers"); args.pool_workers_set = true; }
++        else if (opt == "--pool-affinity") { args.pool_affinity = std::string(value_after(i, "--pool-affinity")); args.pool_affinity_set = true; }
+         else if (opt == "--blob") args.blob = fs::u8path(value_after(i, "--blob"));
+         else if (opt == "--input") args.input = fs::u8path(value_after(i, "--input"));
+         else if (opt == "--output") args.output = fs::u8path(value_after(i, "--output"));
+         else if (opt == "--receiptJSON" || opt == "--receipt-json") args.receipt = fs::u8path(value_after(i, opt.c_str()));
+         else throw std::runtime_error("unknown option: " + opt);
+     }
++    if ((args.pool_workers_set && (args.pool_workers < 1 || args.pool_workers > 64)) ||
++        (args.pool_affinity_set && !args.pool_workers_set) ||
++        (args.pool_affinity != "none" && args.pool_affinity != "all" && args.pool_affinity != "auto" && args.pool_affinity != "p-cores"))
++        throw std::runtime_error("pool mode requires --pool-workers 1..64 and affinity none|all|auto|p-cores");
+     return args;
+ }
+ 
+@@ -171,6 +182,7 @@ void print_help() {
+         "    --run --blob RAW_QUANTIZED_BLOB --input F32LE_INPUT --rows N --hidden H\n"
+         "    --intermediate I --gu-type ID --down-type ID --output F32LE_OUTPUT\n"
+         "    --receiptJSON RECEIPT.json [--warmup N] [--repeat N] [--canonical-q8k]\n"
++        "    [--pool-workers 1..64] [--pool-affinity none|all|auto|p-cores]\n"
+         "  Default --run keeps the model Q8_K activation quantizer path; --canonical-q8k selects ggml's Q8_K from_float path.\n"
+         "  Input is token-major raw little-endian float32 [rows, hidden]. Output has the same shape.\n"
+         "  Native blob layout follows native_fmt: [gate rows][up rows][down rows].\n"
+@@ -301,6 +313,8 @@ NativeFmt make_format(const Args& args) {
+     if (!strata::kernels::cpu::native_fmt(args.gu_type, args.down_type, args.hidden, args.intermediate, fmt, error)) {
+         throw std::runtime_error("unsupported native format: " + error);
+     }
++    if (args.pool_workers > 0 && (fmt.gu_type != 12 || fmt.d_type != 7))
++        throw std::runtime_error("pool mode is restricted to the prepared Q4_K/Q5_1 native expert (types 12/7)");
+     if (fmt.bytes == 0 || fmt.bytes > kMaxIoBytes || fmt.act_bytes == 0 || fmt.h_bytes == 0) {
+         throw std::runtime_error("native format exceeds bounded harness buffers");
+     }
+@@ -326,7 +340,12 @@ std::string metadata_json(const Args& args, const NativeFmt& fmt) {
+       << "  \"gu_row_bytes\": " << fmt.gu_row << ", \"down_row_bytes\": " << fmt.d_row << ",\n"
+       << "  \"up_offset_bytes\": " << fmt.up_off << ", \"down_offset_bytes\": " << fmt.down_off << ",\n"
+       << "  \"blob_bytes\": " << fmt.bytes << ", \"act_bytes_per_row\": " << fmt.act_bytes
+-      << ", \"hidden_bytes_per_row\": " << fmt.h_bytes << "\n}\n";
++      << ", \"hidden_bytes_per_row\": " << fmt.h_bytes;
++    if (args.pool_workers > 0)
++        s << ",\n  \"pool\": {\"requested_workers\": " << args.pool_workers
++          << ", \"affinity\": " << json_quote(args.pool_affinity)
++          << ", \"kernel_started\": false, \"topology_queried\": false}";
++    s << "\n}\n";
+     return s.str();
+ }
+ 
+@@ -369,6 +388,71 @@ struct WorkBuffers {
+     std::vector<float*> ff_ptrs, output_ptrs;
+ };
+ 
++struct PoolRunInfo {
++    cpu::PoolAffinity affinity = cpu::PoolAffinity::All;
++    cpu::CpuTopology topology;
++    int workers = 0, actual_workers = 0, unpinned_overflow = 0;
++    bool pin = false, host_pinned = false;
++    std::vector<uint64_t> activation_ns, pool_ns, gu_ns, hidden_q_ns, down_ns;
++    std::vector<uint64_t> wait_park_ns, drain_ns, repark_ns;
++};
++
++struct ScopedHostPin {
++    cpu::ThreadAffinity previous;
++    explicit ScopedHostPin(int core) : previous(cpu::pin_current_thread(core)) {
++        if (!previous.valid) throw std::runtime_error("pool host affinity could not be saved/applied");
++    }
++    ~ScopedHostPin() { cpu::restore_thread_affinity(previous); }
++};
++
++cpu::PoolAffinity pool_affinity(const Args& args) {
++    if (args.pool_affinity == "auto") return cpu::PoolAffinity::Auto;
++    if (args.pool_affinity == "p-cores") return cpu::PoolAffinity::PCores;
++    return cpu::PoolAffinity::All;
++}
++
++const char* planned_affinity(const Args& args) {
++    return args.pool_affinity == "none" ? "all" : args.pool_affinity.c_str();
++}
++
++std::vector<cpu::ExpertJobMulti> pool_jobs(const uint8_t* blob, WorkBuffers& b) {
++    const int groups = (int) ((b.input.size() + cpu::MAXT - 1) / cpu::MAXT);
++    std::vector<cpu::ExpertJobMulti> jobs((size_t) groups);
++    for (int j = 0; j < groups; ++j) {
++        auto& job = jobs[(size_t) j]; job.blob = blob;
++        job.nt = (int) (std::min)((size_t) cpu::MAXT, b.input.size() - (size_t) j * cpu::MAXT);
++        for (int t = 0; t < job.nt; ++t) {
++            const size_t row = (size_t) j * cpu::MAXT + (size_t) t;
++            // Q4_K/Q5_1 pool kernels consume nact; job.act is only used by the Q2 fallback.
++            job.nact[t] = b.act[row].data(); job.out[t] = b.output[row].data();
++        }
++    }
++    return jobs;
++}
++
++uint64_t ms_ns(double ms) { return (uint64_t) (ms * 1.0e6 + 0.5); }
++
++uint64_t pool_iteration(const NativeFmt& fmt, WorkBuffers& b, cpu::ExpertPool& pool,
++                        std::vector<cpu::ExpertJobMulti>& jobs, PoolRunInfo& info, bool record) {
++    double w0, d0, r0, w1, d1, r1;
++    pool.phase_ms(w0, d0, r0);
++    const double gu0 = pool.ms_multi_gu, q0 = pool.ms_multi_q, down0 = pool.ms_multi_down;
++    const auto a = std::chrono::steady_clock::now();
++    for (size_t t = 0; t < b.input.size(); ++t) cpu::native_quant_act(fmt, b.input[t].data(), b.act[t].data());
++    const auto bq = std::chrono::steady_clock::now();
++    pool.run_split_multi_native(fmt, jobs.data(), (int) jobs.size());
++    const auto c = std::chrono::steady_clock::now();
++    pool.phase_ms(w1, d1, r1);
++    if (record) {
++        info.activation_ns.push_back((uint64_t) std::chrono::duration_cast<std::chrono::nanoseconds>(bq-a).count());
++        info.pool_ns.push_back((uint64_t) std::chrono::duration_cast<std::chrono::nanoseconds>(c-bq).count());
++        info.gu_ns.push_back(ms_ns(pool.ms_multi_gu-gu0)); info.hidden_q_ns.push_back(ms_ns(pool.ms_multi_q-q0));
++        info.down_ns.push_back(ms_ns(pool.ms_multi_down-down0)); info.wait_park_ns.push_back(ms_ns(w1-w0));
++        info.drain_ns.push_back(ms_ns(d1-d0)); info.repark_ns.push_back(ms_ns(r1-r0));
++    }
++    return (uint64_t) std::chrono::duration_cast<std::chrono::nanoseconds>(c-a).count();
++}
++
+ WorkBuffers allocate_buffers(const Args& args, const NativeFmt& fmt, const uint8_t* input_bytes) {
+     WorkBuffers b;
+     b.input.reserve(args.rows); b.act.reserve(args.rows); b.hidden_q.reserve(args.rows);
+@@ -432,7 +516,8 @@ std::vector<uint8_t> encode_output_le(const Args& args, const WorkBuffers& b) {
+ 
+ std::string run_json(const Args& args, const NativeFmt& fmt, uint64_t blob_bytes, const std::string& blob_sha,
+                      uint64_t input_bytes, const std::string& input_sha, uint64_t output_bytes,
+-                     const std::string& output_sha, const std::vector<uint64_t>& formal_ns, bool avx2_available) {
++                     const std::string& output_sha, const std::vector<uint64_t>& formal_ns, bool avx2_available,
++                     const PoolRunInfo* pool_info) {
+     std::vector<uint64_t> sorted = formal_ns;
+     std::sort(sorted.begin(), sorted.end());
+     const uint64_t min_ns = sorted.front();
+@@ -447,7 +532,10 @@ std::string run_json(const Args& args, const NativeFmt& fmt, uint64_t blob_bytes
+       << ", \"native_harness_source_sha256\": " << json_quote(HETERO_NATIVE_SOURCE_SHA256)
+       << ", \"sha256_header_sha256\": " << json_quote(HETERO_NATIVE_SHA_HEADER_SHA256)
+       << ", \"harness_cmake_sha256\": " << json_quote(HETERO_NATIVE_CMAKE_SHA256) << "},\n"
+-      << "  \"execution\": {\"mode\": \"actual_native_quantized_cpu_expert\", \"native_kernel_called\": true, \"engine_pool_called\": false, \"threads\": 1, \"gpu_executed\": false, \"model_cli_executed\": false},\n"
++      << "  \"execution\": {\"mode\": " << json_quote(pool_info ? "actual_native_quantized_cpu_expert_pool" : "actual_native_quantized_cpu_expert")
++      << ", \"native_kernel_called\": true, \"engine_pool_called\": " << (pool_info ? "true" : "false")
++      << ", \"threads\": " << (pool_info ? pool_info->actual_workers + 1 : 1)
++      << ", \"gpu_executed\": false, \"model_cli_executed\": false},\n"
+       << "  \"parameters\": {\"rows\": " << args.rows << ", \"hidden\": " << args.hidden
+       << ", \"intermediate\": " << args.intermediate << ", \"gu_type\": " << fmt.gu_type
+       << ", \"down_type\": " << fmt.d_type << ", \"warmup\": " << args.warmup << ", \"repeat\": " << args.repeat << "},\n"
+@@ -457,19 +545,53 @@ std::string run_json(const Args& args, const NativeFmt& fmt, uint64_t blob_bytes
+       << ", \"q8k_avx2_selected\": " << ((!args.canonical_q8k && avx2_available) ? "true" : "false")
+       << ", \"activation_quantizer\": " << json_quote((!args.canonical_q8k && avx2_available) ? "q8k_quant_avx2" : "ggml Q8_K from_float")
+       << ", \"down_activation_quantizer\": \"ggml Q8_1 from_float\", \"STRATA_IQ_MT_MIN\": \"not used by Q4_K/Q5_1 path\"},\n"
+-      << "  \"layout\": {\"gu_row_bytes\": " << fmt.gu_row << ", \"down_row_bytes\": " << fmt.d_row
++      ;
++    if (pool_info) {
++        s << "  \"pool\": {\"requested_background_workers\": " << pool_info->workers
++          << ", \"actual_background_workers\": " << pool_info->actual_workers << ", \"host_works\": true"
++          << ", \"effective_compute_participants\": " << pool_info->actual_workers + 1 << ", \"pin\": " << (pool_info->pin ? "true" : "false")
++          << ", \"affinity\": " << json_quote(args.pool_affinity)
++          << ", \"topology_scope\": \"planned_only\", \"planned_topology_affinity\": " << json_quote(planned_affinity(args))
++          << ", \"planned_host_cpu_id\": " << pool_info->topology.host_core
++          << ", \"host_pin_applied\": " << (pool_info->host_pinned ? "true" : "false") << ", \"planned_worker_cpu_ids\": [";
++        for (size_t i = 0; i < pool_info->topology.worker_cores.size(); ++i) { if (i) s << ", "; s << pool_info->topology.worker_cores[i]; }
++        s << "], \"unpinned_worker_overflow\": " << pool_info->unpinned_overflow
++          << ", \"planned_pinned_worker_ids\": [";
++        if (pool_info->pin) {
++            for (int i = 0; i < pool_info->workers && i < (int) pool_info->topology.worker_cores.size(); ++i) {
++                if (i) s << ", ";
++                s << pool_info->topology.worker_cores[(size_t) i];
++            }
++        }
++        s << "], \"worker_pin_success_available\": false"
++          << ", \"topology_basis\": \"upstream OS class heuristic; P/E labels are not independently verified\"},\n"
++          << "  \"pool_timing_ns\": {";
++        const std::vector<uint64_t>* arrays[] = {&pool_info->activation_ns, &pool_info->pool_ns, &pool_info->gu_ns,
++            &pool_info->hidden_q_ns, &pool_info->down_ns, &pool_info->wait_park_ns, &pool_info->drain_ns, &pool_info->repark_ns};
++        const char* names[] = {"activation_quant", "pool_call", "gate_up", "hidden_quant", "down", "wait_park", "drain", "repark"};
++        for (size_t a = 0; a < 8; ++a) {
++            if (a) s << ", ";
++            s << "\"" << names[a] << "\": [";
++            for (size_t i = 0; i < arrays[a]->size(); ++i) { if (i) s << ", "; s << (*arrays[a])[i]; }
++            s << "]";
++        }
++        s << "},\n  \"pool_timing_scope\": \"gate_up/hidden_quant/down are included in pool_call; wait_park/drain/repark are pool host phase counters\",\n";
++    }
++    s << "  \"layout\": {\"gu_row_bytes\": " << fmt.gu_row << ", \"down_row_bytes\": " << fmt.d_row
+       << ", \"up_offset_bytes\": " << fmt.up_off << ", \"down_offset_bytes\": " << fmt.down_off
+       << ", \"blob_bytes\": " << fmt.bytes << ", \"activation_bytes\": " << fmt.act_bytes
+       << ", \"hidden_quantized_bytes\": " << fmt.h_bytes << "},\n"
+       << "  \"blob\": {\"path\": " << utc_path(args.blob) << ", \"bytes\": " << blob_bytes << ", \"sha256\": " << json_quote(blob_sha) << "},\n"
+       << "  \"input\": {\"path\": " << utc_path(args.input) << ", \"bytes\": " << input_bytes << ", \"format\": \"token-major raw little-endian float32\", \"sha256\": " << json_quote(input_sha) << "},\n"
+-      << "  \"timing_scope\": \"each formal iteration includes x-to-Q8 activation quantization, full gate/up rows with SiLU-times-up, hidden-to-Q8 requantization, and full down rows; file I/O, allocation, SHA-256, and output serialization are excluded\",\n"
++      << "  \"timing_scope\": " << json_quote(pool_info ? "formal total includes native input quantization plus ExpertPool gate/up, hidden quantization and down; pool_call is separately timed; file I/O, allocation, SHA-256, and output serialization are excluded"
++                                                        : "each formal iteration includes x-to-Q8 activation quantization, full gate/up rows with SiLU-times-up, hidden-to-Q8 requantization, and full down rows; file I/O, allocation, SHA-256, and output serialization are excluded") << ",\n"
+       << "  \"timings_ns\": {\"warmup_iterations\": " << args.warmup << ", \"formal_iterations\": [";
+     for (size_t i = 0; i < formal_ns.size(); ++i) { if (i) s << ", "; s << formal_ns[i]; }
+     s << "], \"min\": " << min_ns << ", \"median\": " << median_ns << "},\n"
+       << "  \"output\": {\"path\": " << utc_path(args.output) << ", \"bytes\": " << output_bytes
+       << ", \"format\": \"token-major raw little-endian float32\", \"sha256\": " << json_quote(output_sha) << "},\n"
+-      << "  \"claim_limit\": \"single-thread native expert reference only; not engine scheduling, model throughput, or GPU performance\"\n}\n";
++      << "  \"claim_limit\": " << json_quote(pool_info ? "standalone native expert CPU-pool microbenchmark; not model throughput or GPU performance"
++                                                       : "single-thread native expert reference only; not engine scheduling, model throughput, or GPU performance") << "\n}\n";
+     return s.str();
+ }
+ 
+@@ -536,8 +658,11 @@ std::string failure_receipt_json(const Args& args, const RunContext& context, st
+       << "  \"parameters\": {\"rows\": " << args.rows << ", \"hidden\": " << args.hidden
+       << ", \"intermediate\": " << args.intermediate << ", \"gu_type\": " << args.gu_type
+       << ", \"down_type\": " << args.down_type << ", \"warmup\": " << args.warmup
+-      << ", \"repeat\": " << args.repeat << "},\n"
+-      << "  \"paths\": {\"blob\": " << json_quote(path_string(fs::absolute(args.blob).lexically_normal()))
++      << ", \"repeat\": " << args.repeat << "},\n";
++    if (args.pool_workers_set)
++        s << "  \"pool_request\": {\"workers\": " << args.pool_workers << ", \"affinity\": "
++          << json_quote(args.pool_affinity) << "},\n";
++    s << "  \"paths\": {\"blob\": " << json_quote(path_string(fs::absolute(args.blob).lexically_normal()))
+       << ", \"input\": " << json_quote(path_string(fs::absolute(args.input).lexically_normal()))
+       << ", \"output\": " << json_quote(path_string(fs::absolute(args.output).lexically_normal()))
+       << ", \"receipt\": " << json_quote(path_string(fs::absolute(args.receipt).lexically_normal())) << "},\n"
+@@ -586,26 +711,57 @@ int run(const Args& args, RunContext& context) {
+     const std::string blob_sha = sha256(blob.data(), static_cast<size_t>(blob_size));
+     const std::string input_sha = sha256(input_raw.data(), static_cast<size_t>(input_size));
+     WorkBuffers buffers = allocate_buffers(args, fmt, input_raw.data());
++    PoolRunInfo pool_info;
++    std::unique_ptr<ScopedHostPin> host_pin; // declared before the pool: pool workers join before the caller is restored
++    std::unique_ptr<cpu::ExpertPool> pool;
++    std::vector<cpu::ExpertJobMulti> jobs;
++    if (args.pool_workers_set) {
++        context.phase = "pool_initialization";
++        pool_info.workers = args.pool_workers; pool_info.pin = args.pool_affinity != "none";
++        pool_info.affinity = pool_affinity(args); pool_info.topology = cpu::detect_cpu_topology(true, pool_info.affinity);
++        if (pool_info.affinity == cpu::PoolAffinity::PCores && pool_info.workers > (int) pool_info.topology.worker_cores.size())
++            throw std::runtime_error("p-cores pool worker count exceeds eligible worker IDs; refusing unpinned overflow");
++        pool_info.unpinned_overflow = pool_info.pin
++            ? (std::max)(0, pool_info.workers - (int) pool_info.topology.worker_cores.size()) : 0;
++        if (pool_info.pin) {
++            host_pin = std::make_unique<ScopedHostPin>(pool_info.topology.host_core);
++            pool_info.host_pinned = true;
++        }
++        pool = std::make_unique<cpu::ExpertPool>(pool_info.workers, pool_info.pin, true, pool_info.affinity);
++        pool_info.actual_workers = pool->workers();
++        jobs = pool_jobs(blob.data(), buffers);
++    }
+ 
++    if (pool) {
++        pool_info.activation_ns.reserve((size_t) args.repeat); pool_info.pool_ns.reserve((size_t) args.repeat);
++        pool_info.gu_ns.reserve((size_t) args.repeat); pool_info.hidden_q_ns.reserve((size_t) args.repeat);
++        pool_info.down_ns.reserve((size_t) args.repeat); pool_info.wait_park_ns.reserve((size_t) args.repeat);
++        pool_info.drain_ns.reserve((size_t) args.repeat); pool_info.repark_ns.reserve((size_t) args.repeat);
++    }
+     context.phase = "warmup_and_native_kernel_run";
+     for (uint64_t i = 0; i < args.warmup; ++i) {
+-        one_iteration(args, fmt, blob.data(), buffers);
++        if (pool) (void) pool_iteration(fmt, buffers, *pool, jobs, pool_info, false);
++        else one_iteration(args, fmt, blob.data(), buffers);
+         validate_finite_outputs(args, buffers);
+     }
+     std::vector<uint64_t> formal_ns;
+     formal_ns.reserve(static_cast<size_t>(args.repeat));
+     for (uint64_t i = 0; i < args.repeat; ++i) {
+-        const auto start = std::chrono::steady_clock::now();
+-        one_iteration(args, fmt, blob.data(), buffers);
+-        const auto stop = std::chrono::steady_clock::now();
+-        formal_ns.push_back(static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start).count()));
++        if (pool) formal_ns.push_back(pool_iteration(fmt, buffers, *pool, jobs, pool_info, true));
++        else {
++            const auto start = std::chrono::steady_clock::now();
++            one_iteration(args, fmt, blob.data(), buffers);
++            const auto stop = std::chrono::steady_clock::now();
++            formal_ns.push_back(static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start).count()));
++        }
+         validate_finite_outputs(args, buffers);
+     }
+     context.phase = "output_serialization";
+     std::vector<uint8_t> encoded = encode_output_le(args, buffers);
+     const std::string output_sha = sha256(encoded.data(), encoded.size());
+     const std::string receipt_json = run_json(args, fmt, blob_size, blob_sha, input_size, input_sha,
+-                                              encoded.size(), output_sha, formal_ns, avx2_available);
++                                              encoded.size(), output_sha, formal_ns, avx2_available,
++                                              pool ? &pool_info : nullptr);
+     context.phase = "write_output";
+     context.output_write_started = true;
+     write_new_file(args.output, encoded.data(), encoded.size(), "binary output");
+diff --git a/tools/hetero_native_cpu/cli_fixtures.cmake b/tools/hetero_native_cpu/cli_fixtures.cmake
+index 90780e3..afc040b 100644
+--- a/tools/hetero_native_cpu/cli_fixtures.cmake
++++ b/tools/hetero_native_cpu/cli_fixtures.cmake
+@@ -33,9 +33,20 @@ endfunction()
+ # Metadata mode exercises the explicit and default parser paths without model files or output writes.
+ expect_success("default metadata")
+ expect_success("explicit metadata" --validate-only --rows 1 --hidden 2560 --intermediate 640 --gu-type 12 --down-type 7)
++# Pool options are parser/metadata-only here: they must not construct a pool or touch model data.
++foreach(affinity IN ITEMS none all auto p-cores)
++  expect_success("pool metadata ${affinity}" --validate-only --rows 1 --hidden 2560 --intermediate 640
++    --gu-type 12 --down-type 7 --pool-workers 1 --pool-affinity ${affinity})
++endforeach()
++expect_success("pool worker lower bound" --validate-only --pool-workers 1)
++expect_success("pool worker upper bound" --validate-only --pool-workers 64)
+ expect_failure("unknown option" --validate-only --not-a-real-option)
+ expect_failure("bounded rows" --validate-only --rows 257)
+ expect_failure("unsupported native type" --validate-only --gu-type 999)
++expect_failure("pool worker below bound" --validate-only --pool-workers 0)
++expect_failure("pool worker above bound" --validate-only --pool-workers 65)
++expect_failure("pool affinity requires workers" --validate-only --pool-affinity auto)
++expect_failure("unsupported pool affinity" --validate-only --pool-workers 1 --pool-affinity random)
+ expect_failure("metadata output option requires run" --validate-only --output "${FIXTURE_DIR}/denied.bin")
+ if(EXISTS "${FIXTURE_DIR}/denied.bin")
+   message(FATAL_ERROR "metadata mode created an output file")

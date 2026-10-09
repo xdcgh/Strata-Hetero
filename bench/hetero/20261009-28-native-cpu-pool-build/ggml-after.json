@@ -1,0 +1,51 @@
+[
+  {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\\ggml.h",
+    "bytes": 119166,
+    "sha256": "62e4d28730f96924bfc3ec46771b38c30a8d4397584769fd636d6327354d5430",
+    "git_blob_at_head": "224bdef927ac90bfa07ee39db3247b7bac4f14ec",
+    "git_status": ""
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\\ggml-cpu.h",
+    "bytes": 7905,
+    "sha256": "696a54474002227a7f73b967b643055d6829853464244a8d3f4fe2e7d0b85abe",
+    "git_blob_at_head": "dc6453c6eaa16667f720f987659ad42d03a403a2",
+    "git_status": ""
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-common.h",
+    "bytes": 137072,
+    "sha256": "3ac6eed12695ceea1acd18f556845023a45f92f6ce0530c18c70bb10450207ea",
+    "git_blob_at_head": "1dbbe326d0fc6a5ce8a86d237cb94901340443af",
+    "git_status": ""
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml.c",
+    "bytes": 268856,
+    "sha256": "28f8e72ba3f96e044c78b7a6f75511a9afdc61d5ef5a14de00969f2faa55fff1",
+    "git_blob_at_head": "1752814093b5cf973a820794e0dbe53fb8c6fe5b",
+    "git_status": ""
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.c",
+    "bytes": 136540,
+    "sha256": "2f0a37f6c00c230a783cf078ee0c99f248095c501dff56b8ee47fb356dae3538",
+    "git_blob_at_head": "8bb0ff7bc3366be957dd20aba3fbe0f50dd249d7",
+    "git_status": ""
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\quants.c",
+    "bytes": 46463,
+    "sha256": "459ecbb123f56bd9230b2681430e7591764a5587b6b83f058f002bf6511fdbad",
+    "git_blob_at_head": "5e36459f8cbc5900b375d2189414307393471a6b",
+    "git_status": ""
+  },
+  {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\arch\\x86\\quants.c",
+    "bytes": 201515,
+    "sha256": "99a98747c1ac84ec40e2d1a31227b947aeb0a05bf1d8e79ec630a6d783b89f86",
+    "git_blob_at_head": "ea54cfe44ce403fe06c8b4aa10b5a882779e7e71",
+    "git_status": ""
+  }
+]

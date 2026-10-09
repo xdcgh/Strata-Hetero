@@ -1,0 +1,189 @@
+{
+  "schema": "native-cpu-pool-build-evidence-copy-v1",
+  "source_run_directory": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28",
+  "destination_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-28-native-cpu-pool-build",
+  "copied_utc": "2026-10-09T09:13:36.3858984+00:00",
+  "policy": "exclusive new files; evidence only; binaries and full build objects not copied",
+  "artifacts": [
+    {
+      "name": "build-receipt.json",
+      "bytes": 27911,
+      "sha256": "04ab427e91c7f395e665f8f1662f770626ae594383b789011b590b8fa53e4e27",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\build-receipt.json"
+    },
+    {
+      "name": "binary-hashes.json",
+      "bytes": 1117,
+      "sha256": "80a88d0900f4ecdcbb62312eda73e7d8d14b889665f381e0100a51f99f2fd785",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\binary-hashes.json"
+    },
+    {
+      "name": "configure.log",
+      "bytes": 2419,
+      "sha256": "10130d3ec2ae1807f455e602765cfa6c1a6c08460b4d0ed7a90a6f23b2f9ee9e",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\configure.log"
+    },
+    {
+      "name": "build.log",
+      "bytes": 3615,
+      "sha256": "7af38f6cc4379776b6e040e2c644a645577b6814411c41a48c7e82f2fb730bc7",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\build.log"
+    },
+    {
+      "name": "ctest.log",
+      "bytes": 384,
+      "sha256": "628c842e710f9e2c3107154665aa4c246bcb2bddd28d783d7f2ce161b39d5f16",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ctest.log"
+    },
+    {
+      "name": "configure.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\configure.exit.txt"
+    },
+    {
+      "name": "build.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\build.exit.txt"
+    },
+    {
+      "name": "ctest.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ctest.exit.txt"
+    },
+    {
+      "name": "source-before.json",
+      "bytes": 6884,
+      "sha256": "14b8acaf52934d866c002fb476f4850a684a011ba620c4a619509a87de6a19aa",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\source-before.json"
+    },
+    {
+      "name": "source-after.json",
+      "bytes": 6884,
+      "sha256": "14b8acaf52934d866c002fb476f4850a684a011ba620c4a619509a87de6a19aa",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\source-after.json"
+    },
+    {
+      "name": "ggml-before.json",
+      "bytes": 2086,
+      "sha256": "8d128c13ee94896ab2996cfa60150f3960a0005bd7562eb3f893e15e776a6e18",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ggml-before.json"
+    },
+    {
+      "name": "ggml-after.json",
+      "bytes": 2086,
+      "sha256": "8d128c13ee94896ab2996cfa60150f3960a0005bd7562eb3f893e15e776a6e18",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ggml-after.json"
+    },
+    {
+      "name": "source-diff-final.patch",
+      "bytes": 23067,
+      "sha256": "50f6e644d40932012fdc084cecf52b27ed5e960848267cadef1d96d88c468abb",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\source-diff-final.patch"
+    },
+    {
+      "name": "git-status-final.txt",
+      "bytes": 1000,
+      "sha256": "d64553ae4a4de4a341d8b6caca2534502ebf1d8a06ed1aa19da1782b2386b7f6",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\git-status-final.txt"
+    },
+    {
+      "name": "process.json",
+      "bytes": 727,
+      "sha256": "e8c66391da101193fba9dfdd21e377c16965cf5e9cf7bbe655d8f9f55fd290b3",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\process.json"
+    },
+    {
+      "name": "process-identity-verified.txt",
+      "bytes": 35,
+      "sha256": "e7a07fb9309d3761750ca12ab885922519505de07e12da4af625429a2af2c5f4",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\process-identity-verified.txt"
+    },
+    {
+      "name": "run-build.cmd",
+      "bytes": 3501,
+      "sha256": "221c7f68489a7080dd245a0785565588ab4a02858e918240fa9cc825778bb486",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\run-build.cmd"
+    },
+    {
+      "name": "orchestration-receipt.json",
+      "bytes": 932,
+      "sha256": "6f6c88df7b3edc89e242e52087e63abab4e71c491559810a64d6b952dba98717",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\orchestration-receipt.json"
+    },
+    {
+      "name": "resource_sampler.py",
+      "bytes": 2148,
+      "sha256": "8d6066560b7cf3717ba07e7138ed0dc882f1818092019d5f4ef41f84221ad01d",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource_sampler.py"
+    },
+    {
+      "name": "resource-preflight-attempts.json",
+      "bytes": 726,
+      "sha256": "0b201fba04601ab9d95a22dcfafeaee6893d46f7371f2b8e0e3a906fcc70bb03",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource-preflight-attempts.json"
+    },
+    {
+      "name": "resource-samples-1s.jsonl",
+      "bytes": 9114,
+      "sha256": "0c10744caa2f0e570aa1586f4f9fb2d85138fe795fa6c61d1255eb1cd88ee26f",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource-samples-1s.jsonl"
+    },
+    {
+      "name": "resource-sampler-receipt.json",
+      "bytes": 779,
+      "sha256": "d826be7e79806fc3be5fe452f9ad4f0eb9b6aba8b167ff0e4a8a3096b49573c3",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource-sampler-receipt.json"
+    },
+    {
+      "name": "resource-sampler.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource-sampler.stderr.log"
+    },
+    {
+      "name": "tool-paths.log",
+      "bytes": 361,
+      "sha256": "3d1e76008ecd2ece73758df0485ac08dc924bdf65795579a1194a024d03460d8",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\tool-paths.log"
+    },
+    {
+      "name": "cl-version.log",
+      "bytes": 1291,
+      "sha256": "061fe6b537e9c01b47465b86ed2a6e087510d2007be8738ec3c69f52b5f1f3a0",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\cl-version.log"
+    },
+    {
+      "name": "cmake-version.log",
+      "bytes": 90,
+      "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\cmake-version.log"
+    },
+    {
+      "name": "ninja-version.log",
+      "bytes": 37,
+      "sha256": "cc30d39e321dcb24ca5c4c5d5b7730e25ab769876a825616360194c634824754",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\ninja-version.log"
+    },
+    {
+      "name": "vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42",
+      "source": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\vcvars.log"
+    },
+    {
+      "name": "cmake-controls.json",
+      "bytes": 1939,
+      "sha256": "4c43b8122b4bcd8bfad016e50568ed2076721f8565dee83c237c1d7e0ca324ff",
+      "derived_from": "build-receipt.json and expanded-build-commands.txt"
+    },
+    {
+      "name": "native-expert-compile-command.txt",
+      "bytes": 1097,
+      "sha256": "9a113497a68f3ffedc0eb4cab71b81bff12bee8dcb9a32c22cc79d05a78b203a",
+      "derived_from": "build-receipt.json and expanded-build-commands.txt"
+    }
+  ]
+}

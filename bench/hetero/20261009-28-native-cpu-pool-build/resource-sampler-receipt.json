@@ -1,0 +1,18 @@
+{
+  "run_id": "native-cpu-pool-20261009-28",
+  "pid": 5796,
+  "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -I -B E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource_sampler.py E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource-samples-1s.jsonl E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\resource-sampler.STOP",
+  "priority": "Idle",
+  "python_isolated_flags": [
+    "-I",
+    "-B"
+  ],
+  "interval_seconds": 1,
+  "sample_count": 31,
+  "minimum_available_physical_bytes": 118199619584.0,
+  "minimum_commit_headroom_bytes": 123437551616.0,
+  "all_samples_gate_ok": true,
+  "process_exit_code": 0,
+  "stderr": null
+}

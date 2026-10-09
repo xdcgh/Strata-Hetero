@@ -1,0 +1,8 @@
+{
+  "schema": "native-cpu-pool-build-evidence-addendum-v2",
+  "use_cmake_controls": "cmake-controls-verified.json",
+  "use_compile_command": "native-expert-compile-command-verified.txt",
+  "sha256_controls": "9f29fb9a9e633da1a9ed6aef95c98acf2537e294e4409dc630bdf209016a3f8d",
+  "sha256_compile_command": "0694091a2860799190c3d61773d5f529d83b0aa722dfa09dbbdc9b1d7b7d8ebc",
+  "supersedes_semantic_use": "cmake-controls.json references the preserved first command artifact; use this verified controls summary and verbatim expanded Ninja compile command instead."
+}
