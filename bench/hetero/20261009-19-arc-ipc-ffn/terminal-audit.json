@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-19-arc-ipc-ffn",
+  "status": "complete_terminal_audit",
+  "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\receipt.json",
+  "receipt_sha256": "81c67ee29890174d765b3e6092f3536dedbd8332e0d0c937d79c909a5e6631af",
+  "authorized_scope": "root explicitly authorized only this Arc IPC FFN benchmark; contract remains prepared execution_authorized=false by design",
+  "request_count": 63,
+  "request_ids_strictly_increasing": true,
+  "formal_count": 45,
+  "formal_csv_rows": 45,
+  "quality": {
+    "f32_acceptance": "45/45 passed unchanged worker_api.DEFAULT_TOLERANCES",
+    "native_cpu": "informational comparison only; different native quantized arithmetic; no tolerance change",
+    "per_shape": [
+      {
+        "rows": 1,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 265439300,
+        "formal_rtt_ns_mean": 743580,
+        "formal_rtt_ns_median": 739500,
+        "formal_rtt_ns_spread": 74400,
+        "worker_wall_ns_mean": 453180,
+        "worker_wall_ns_median": 442900,
+        "worker_wall_ns_spread": 53200,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 8.79305246482558e-07,
+        "f32_max_abs_max": 2.0489096641540527e-08,
+        "f32_row_norm_relative_max": 1.1074225345641604e-08,
+        "native_cpu_info_relative_rmse_mean": 0.011056878086845974,
+        "native_cpu_info_relative_rmse_median": 0.011056878086845974,
+        "output": {
+          "rows": 1,
+          "bytes": 10240,
+          "sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+          "readback_verified": true
+        }
+      },
+      {
+        "rows": 2,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 117541600,
+        "formal_rtt_ns_mean": 771360,
+        "formal_rtt_ns_median": 714600,
+        "formal_rtt_ns_spread": 419300,
+        "worker_wall_ns_mean": 421820,
+        "worker_wall_ns_median": 416700,
+        "worker_wall_ns_spread": 46100,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 7.269745683055499e-07,
+        "f32_max_abs_max": 2.0489096641540527e-08,
+        "f32_row_norm_relative_max": 9.696616719251814e-08,
+        "native_cpu_info_relative_rmse_mean": 0.012339318633398759,
+        "native_cpu_info_relative_rmse_median": 0.012339318633398759,
+        "output": {
+          "rows": 2,
+          "bytes": 20480,
+          "sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+          "readback_verified": true
+        }
+      },
+      {
+        "rows": 4,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 121978200,
+        "formal_rtt_ns_mean": 770320,
+        "formal_rtt_ns_median": 688200,
+        "formal_rtt_ns_spread": 428500,
+        "worker_wall_ns_mean": 475760,
+        "worker_wall_ns_median": 409200,
+        "worker_wall_ns_spread": 334200,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 8.079131007566013e-07,
+        "f32_max_abs_max": 2.1420419216156006e-08,
+        "f32_row_norm_relative_max": 8.88901829303638e-08,
+        "native_cpu_info_relative_rmse_mean": 0.012217860576061756,
+        "native_cpu_info_relative_rmse_median": 0.012217860576061756,
+        "output": {
+          "rows": 4,
+          "bytes": 40960,
+          "sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+          "readback_verified": true
+        }
+      },
+      {
+        "rows": 8,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 23401300,
+        "formal_rtt_ns_mean": 1040540,
+        "formal_rtt_ns_median": 1047800,
+        "formal_rtt_ns_spread": 206700,
+        "worker_wall_ns_mean": 489720,
+        "worker_wall_ns_median": 490000,
+        "worker_wall_ns_spread": 46500,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 8.856564847347482e-07,
+        "f32_max_abs_max": 4.0978193283081055e-08,
+        "f32_row_norm_relative_max": 5.6709282743721e-07,
+        "native_cpu_info_relative_rmse_mean": 0.012996193710008996,
+        "native_cpu_info_relative_rmse_median": 0.012996193710008996,
+        "output": {
+          "rows": 8,
+          "bytes": 81920,
+          "sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+          "readback_verified": true
+        }
+      },
+      {
+        "rows": 16,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 21376400,
+        "formal_rtt_ns_mean": 920500,
+        "formal_rtt_ns_median": 906500,
+        "formal_rtt_ns_spread": 248900,
+        "worker_wall_ns_mean": 467860,
+        "worker_wall_ns_median": 467800,
+        "worker_wall_ns_spread": 54800,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 8.421540989489114e-07,
+        "f32_max_abs_max": 2.7939677238464355e-08,
+        "f32_row_norm_relative_max": 1.1732227691216772e-07,
+        "native_cpu_info_relative_rmse_mean": 0.012315222072681185,
+        "native_cpu_info_relative_rmse_median": 0.012315222072681185,
+        "output": {
+          "rows": 16,
+          "bytes": 163840,
+          "sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+          "readback_verified": true
+        }
+      },
+      {
+        "rows": 32,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 21922800,
+        "formal_rtt_ns_mean": 1990240,
+        "formal_rtt_ns_median": 1875200,
+        "formal_rtt_ns_spread": 1033000,
+        "worker_wall_ns_mean": 940480,
+        "worker_wall_ns_median": 719800,
+        "worker_wall_ns_spread": 898600,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 8.555413257690874e-07,
+        "f32_max_abs_max": 2.7939677238464355e-08,
+        "f32_row_norm_relative_max": 3.072829625915855e-07,
+        "native_cpu_info_relative_rmse_mean": 0.012523950547510092,
+        "native_cpu_info_relative_rmse_median": 0.012523950547510092,
+        "output": {
+          "rows": 32,
+          "bytes": 327680,
+          "sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+          "readback_verified": true
+        }
+      },
+      {
+        "rows": 64,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 172616000,
+        "formal_rtt_ns_mean": 3867480,
+        "formal_rtt_ns_median": 3999800,
+        "formal_rtt_ns_spread": 1793000,
+        "worker_wall_ns_mean": 1487420,
+        "worker_wall_ns_median": 1473800,
+        "worker_wall_ns_spread": 1136000,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 1.076495875404587e-06,
+        "f32_max_abs_max": 6.51925802230835e-08,
+        "f32_row_norm_relative_max": 2.648822834025157e-07,
+        "native_cpu_info_relative_rmse_mean": 0.012404295176528473,
+        "native_cpu_info_relative_rmse_median": 0.012404295176528473,
+        "output": {
+          "rows": 64,
+          "bytes": 655360,
+          "sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+          "readback_verified": true
+        }
+      },
+      {
+        "rows": 128,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 95391500,
+        "formal_rtt_ns_mean": 9630440,
+        "formal_rtt_ns_median": 8646100,
+        "formal_rtt_ns_spread": 4129100,
+        "worker_wall_ns_mean": 3341040,
+        "worker_wall_ns_median": 3185500,
+        "worker_wall_ns_spread": 2072700,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 1.0820758235840386e-06,
+        "f32_max_abs_max": 4.470348358154297e-08,
+        "f32_row_norm_relative_max": 2.902817784199816e-07,
+        "native_cpu_info_relative_rmse_mean": 0.012369887820199054,
+        "native_cpu_info_relative_rmse_median": 0.012369887820199054,
+        "output": {
+          "rows": 128,
+          "bytes": 1310720,
+          "sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+          "readback_verified": true
+        }
+      },
+      {
+        "rows": 256,
+        "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "reported_precision": "<Type: 'float32'>",
+        "precision_policy": {
+          "precision_policy_status": "match",
+          "precision_policy_matches": true
+        },
+        "compile_ns_excluded": 173729700,
+        "formal_rtt_ns_mean": 17544900,
+        "formal_rtt_ns_median": 17659100,
+        "formal_rtt_ns_spread": 845500,
+        "worker_wall_ns_mean": 5107720,
+        "worker_wall_ns_median": 5218900,
+        "worker_wall_ns_spread": 529300,
+        "f32_formals_pass": 5,
+        "f32_relative_rmse_max": 1.0786302996177604e-06,
+        "f32_max_abs_max": 3.91155481338501e-08,
+        "f32_row_norm_relative_max": 4.082284747114061e-07,
+        "native_cpu_info_relative_rmse_mean": 0.012444534009332807,
+        "native_cpu_info_relative_rmse_median": 0.012444534009332807,
+        "output": {
+          "rows": 256,
+          "bytes": 2621440,
+          "sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+          "readback_verified": true
+        }
+      }
+    ]
+  },
+  "resource_window": {
+    "sample_count": 6,
+    "stopped_record": {
+      "schema_version": 1,
+      "record_type": "sampler_stopped",
+      "observed_at_utc": "2026-10-09T06:14:01.152Z",
+      "monotonic_seconds": 12067.8599013,
+      "reason": "stop_file_exists"
+    },
+    "physical_available_gib_min": 107.523,
+    "physical_available_gib_max": 107.976,
+    "system_commit_available_gib_min": 113.378,
+    "system_commit_available_gib_max": 114.217,
+    "all_samples_gates_pass": true,
+    "gpu_telemetry_scope": "resource observer had NVIDIA telemetry only; Arc device identity/execution policy are from per-shape IPC INIT, not Arc utilization telemetry"
+  },
+  "outputs": [
+    {
+      "rows": 1,
+      "bytes": 10240,
+      "sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+      "readback_verified": true
+    },
+    {
+      "rows": 2,
+      "bytes": 20480,
+      "sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+      "readback_verified": true
+    },
+    {
+      "rows": 4,
+      "bytes": 40960,
+      "sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+      "readback_verified": true
+    },
+    {
+      "rows": 8,
+      "bytes": 81920,
+      "sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+      "readback_verified": true
+    },
+    {
+      "rows": 16,
+      "bytes": 163840,
+      "sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+      "readback_verified": true
+    },
+    {
+      "rows": 32,
+      "bytes": 327680,
+      "sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+      "readback_verified": true
+    },
+    {
+      "rows": 64,
+      "bytes": 655360,
+      "sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+      "readback_verified": true
+    },
+    {
+      "rows": 128,
+      "bytes": 1310720,
+      "sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+      "readback_verified": true
+    },
+    {
+      "rows": 256,
+      "bytes": 2621440,
+      "sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+      "readback_verified": true
+    }
+  ],
+  "owned_process_tree_observed_in_last_sample": [
+    {
+      "pid": 10468,
+      "parent_pid": 22364,
+      "name": "python.exe",
+      "executable_path": "C:\\Python314\\python.exe",
+      "live_at_audit": false
+    },
+    {
+      "pid": 9692,
+      "parent_pid": 10468,
+      "name": "python.exe",
+      "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "live_at_audit": false
+    },
+    {
+      "pid": 8880,
+      "parent_pid": 10468,
+      "name": "python.exe",
+      "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+      "live_at_audit": false
+    },
+    {
+      "pid": 3188,
+      "parent_pid": 8880,
+      "name": "conhost.exe",
+      "executable_path": "C:\\Windows\\System32\\conhost.exe",
+      "live_at_audit": false
+    },
+    {
+      "pid": 12148,
+      "parent_pid": 8880,
+      "name": "python.exe",
+      "executable_path": "C:\\Python314\\python.exe",
+      "live_at_audit": false
+    },
+    {
+      "pid": 14012,
+      "parent_pid": 9692,
+      "name": "conhost.exe",
+      "executable_path": "C:\\Windows\\System32\\conhost.exe",
+      "live_at_audit": false
+    },
+    {
+      "pid": 19636,
+      "parent_pid": 9692,
+      "name": "python.exe",
+      "executable_path": "C:\\Python314\\python.exe",
+      "live_at_audit": false
+    }
+  ],
+  "terminal_process_check": {
+    "owned_pipe_worker": {
+      "pid": 8880,
+      "returncode": 1,
+      "reaped": true
+    },
+    "resource_observer": {
+      "pid": 9692,
+      "returncode": 0,
+      "stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\resource\\STOP"
+    },
+    "tracked_pids_live": {
+      "8880": {
+        "live_at_audit": false
+      },
+      "9692": {
+        "live_at_audit": false
+      }
+    },
+    "listener_8081_or_8080_owned_by_h19": false,
+    "all_sampled_owned_processes_absent": true,
+    "worker_exit_code_note": "OwnedPipeWorker.close terminated/reaped its exact Windows venv process (returncode 1); sampler sample recorded its C:\\Python314\\python.exe service child, and a post-run exact-PID query confirmed launcher and actual child PIDs absent. No unrelated process was stopped."
+  },
+  "stderr_bytes": 0,
+  "limitations": [
+    "This is one real expert FFN IPC benchmark, not a model-level route.",
+    "No simultaneous CPU+Arc contention test or native CPU pool comparison was run.",
+    "Arc utilization was not sampled by the resource observer; INIT proves execution_devices GPU.0 and reported f32 policy only."
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-19-arc-ipc-ffn",
+  "status": "cpu_preflight_pass",
+  "device_or_child_started": false,
+  "openvino_core_created": false,
+  "verified_input_rows": {
+    "1": {
+      "bytes": 10240,
+      "sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98"
+    },
+    "2": {
+      "bytes": 20480,
+      "sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19"
+    },
+    "4": {
+      "bytes": 40960,
+      "sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529"
+    },
+    "8": {
+      "bytes": 81920,
+      "sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f"
+    },
+    "16": {
+      "bytes": 163840,
+      "sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f"
+    },
+    "32": {
+      "bytes": 327680,
+      "sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75"
+    },
+    "64": {
+      "bytes": 655360,
+      "sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf"
+    },
+    "128": {
+      "bytes": 1310720,
+      "sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6"
+    },
+    "256": {
+      "bytes": 2621440,
+      "sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b"
+    }
+  },
+  "verified_native_output_rows": {
+    "1": {
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3"
+    },
+    "2": {
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8"
+    },
+    "4": {
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4"
+    },
+    "8": {
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3"
+    },
+    "16": {
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e"
+    },
+    "32": {
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33"
+    },
+    "64": {
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2"
+    },
+    "128": {
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea"
+    },
+    "256": {
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8"
+    }
+  },
+  "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "weights_header_shapes": {
+    "gate": [
+      640,
+      2560
+    ],
+    "up": [
+      640,
+      2560
+    ],
+    "down": [
+      2560,
+      640
+    ]
+  },
+  "weights_payload_sha256_verified": {
+    "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+    "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+    "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+  },
+  "numpy_reference_rows1": {
+    "shape": [
+      1,
+      2560
+    ],
+    "finite": true,
+    "quality_self": {
+      "shape_ok": true,
+      "finite": true,
+      "max_abs_error": 0.0,
+      "relative_rmse": 0.0,
+      "max_row_norm_relative_error": 0.0,
+      "tolerances": {
+        "max_abs": 0.01,
+        "relative_rmse": 0.001,
+        "row_norm_relative": 0.001
+      },
+      "pass": true
+    },
+    "quality_vs_native_cpu_informational": {
+      "shape_ok": true,
+      "finite": true,
+      "max_abs_error": 0.0002280878834426403,
+      "relative_rmse": 0.011056810152376643,
+      "max_row_norm_relative_error": 0.0009592830042026346,
+      "tolerances": {
+        "max_abs": 0.01,
+        "relative_rmse": 0.001,
+        "row_norm_relative": 0.001
+      },
+      "pass": false
+    }
+  },
+  "quality_report_signature": "(actual: 'np.ndarray', reference: 'np.ndarray', tolerances: 'dict[str, float]' = {'max_abs': 0.01, 'relative_rmse': 0.001, 'row_norm_relative': 0.001}) -> 'dict[str, Any]'",
+  "tolerances_passed_explicitly": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "synthetic_decode_response": {
+    "request_id": 7,
+    "worker_wall_ns": 123456,
+    "body": "fixture-body"
+  },
+  "preparation_findings": [
+    {
+      "finding": "Initial client version omitted required quality tolerances at the call sites.",
+      "resolution": "Fixed to pass worker_api.DEFAULT_TOLERANCES explicitly for F32 and native-CPU reports."
+    },
+    {
+      "finding": "Initial shape receipt update path could append a shape twice.",
+      "resolution": "Fixed by appending each shape once before its warmup/formals."
+    },
+    {
+      "finding": "Initial client lacked shutil import used by disk capacity gate.",
+      "resolution": "Added import; syntax/API preflight passed."
+    }
+  ]
+}

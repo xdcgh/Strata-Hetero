@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-19-arc-ipc-ffn",
+  "status": "cpu_integration_preflight_pass",
+  "device_or_worker_started": false,
+  "openvino_core_created": false,
+  "isolated_cli_import_gate": "exit 2 confirmed separately, no import error",
+  "all_input_and_native_files_sha_size_verified": true,
+  "rows_verified": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "tensor_shapes": {
+    "gate": [
+      640,
+      2560
+    ],
+    "up": [
+      640,
+      2560
+    ],
+    "down": [
+      2560,
+      640
+    ]
+  },
+  "quality_report_signature": "(actual: 'np.ndarray', reference: 'np.ndarray', tolerances: 'dict[str, float]' = {'max_abs': 0.01, 'relative_rmse': 0.001, 'row_norm_relative': 0.001}) -> 'dict[str, Any]'",
+  "explicit_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "row1_f32_self_quality": {
+    "shape_ok": true,
+    "finite": true,
+    "max_abs_error": 0.0,
+    "relative_rmse": 0.0,
+    "max_row_norm_relative_error": 0.0,
+    "tolerances": {
+      "max_abs": 0.01,
+      "relative_rmse": 0.001,
+      "row_norm_relative": 0.001
+    },
+    "pass": true
+  },
+  "row1_native_cpu_informational_quality": {
+    "shape_ok": true,
+    "finite": true,
+    "max_abs_error": 0.0002280878834426403,
+    "relative_rmse": 0.011056810152376643,
+    "max_row_norm_relative_error": 0.0009592830042026346,
+    "tolerances": {
+      "max_abs": 0.01,
+      "relative_rmse": 0.001,
+      "row_norm_relative": 0.001
+    },
+    "pass": false
+  },
+  "reported_precision_cases": "observed <Type: float32> and f32 accepted; float16/unknown rejected",
+  "synthetic_decode_response": "passed",
+  "synthetic_owned_output_rtt_boundary": {
+    "array_owns_memory": true,
+    "expected_duration_ns": 677,
+    "passed": true
+  },
+  "failed_finally_path": "injected artifact-load exception produced failed receipt and returned without undefined csv_path; fixture removed",
+  "review_history": [
+    "Correction: quality_report already had a DEFAULT_TOLERANCES default; the earlier TypeError claim was mistaken. Client explicitly supplies the unchanged default limits as the contract requires.",
+    "Fixed isolated -I imports by prepending resolved repository ROOT before tools imports.",
+    "Initialized csv_path=None before try so early failures can finish the receipt in finally.",
+    "Normalized only exact f32/float32 type spellings; precision policy match and requested f32 remain required.",
+    "RTT now stops immediately after the owned F32 output copy; wire RTT retained separately; hashing, finite checks and quality stay outside measured interval."
+  ]
+}

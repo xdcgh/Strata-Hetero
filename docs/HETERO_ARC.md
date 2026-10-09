@@ -16,4 +16,20 @@ Native medians were 0.1205/0.2418/0.4747/0.9458/1.9525/3.9053/7.8599/17.8075/34.
 
 The next route decision requires real expert bytes and matching activations, finite outputs and error statistics, CPU and Arc timings including transport, and combined contention samples. Prefill precedes tiny decode jobs. Retain a helper route only after the affected model workload improves by at least 8%; automatic selection must avoid a stable regression over 2%. Unavailable, incorrect or slower routes remain disabled in the profile. This document makes no Arc model-performance claim.
 
-The standalone service in `tools/hetero_xpu_service.py` now uses the bounded SXPU pipe transport. Default validation reads only identity/NPZ headers. Explicit serve mode selects Intel Arc GPU.0 with F32/ACCURACY hints, verifies execution and precision properties, and keeps one static-row graph at a time. INIT binds the fixed expert identity and a nonce; INFER accepts exact F32 row bytes and returns finite copied output with a worker timer. Client transport latency will be measured separately. Failed initialization invalidates readiness, framed errors stay bounded valid JSON, and stdout is reserved for the binary protocol before device creation. Twenty-seven fake transport/service fixtures passed, including owned-child cleanup, blocked-write timeout and failed-init refusal. No real service benchmark or CUDA route is accepted from these fixtures.
+The standalone service in `tools/hetero_xpu_service.py` uses the bounded SXPU pipe transport. Default validation reads only identity/NPZ headers. Explicit serve mode selects Intel Arc GPU.0 with F32/ACCURACY hints, verifies execution and precision properties, and keeps one static-row graph at a time. INIT binds the fixed expert identity and a nonce; INFER accepts exact F32 row bytes and returns finite copied output with a worker timer. Failed initialization invalidates readiness, framed errors stay bounded valid JSON, and stdout is reserved for the binary protocol before device creation. Twenty-seven fake transport/service fixtures passed, including owned-child cleanup, blocked-write timeout and failed-init refusal.
+
+The actual pipe experiment `20261009-19-arc-ipc-ffn` then ran the same identified expert and input bytes through one separate Arc service. Each of nine shapes had one warmup and five formal requests; all 45 formal results passed the unchanged float32 reference thresholds. Runtime execution was GPU.0 / Intel Arc 140T and reported precision matched F32. Client RTT starts before input serialization and ends after its copied output array; worker time covers its input copy, inference and output serialization. Compilation and INIT are separate.
+
+| Rows | Client median RTT ms | Worker median ms |
+|---:|---:|---:|
+| 1 | 0.7395 | 0.4429 |
+| 2 | 0.7146 | 0.4167 |
+| 4 | 0.6882 | 0.4092 |
+| 8 | 1.0478 | 0.4900 |
+| 16 | 0.9065 | 0.4678 |
+| 32 | 1.8752 | 0.7198 |
+| 64 | 3.9998 | 1.4738 |
+| 128 | 8.6461 | 3.1855 |
+| 256 | 17.6591 | 5.2189 |
+
+The duration difference is descriptive serialization/transport/client overhead, not a measured wire-only timer. All nine native-quantized CPU comparisons still fail the 0.001 relative-error limit; no limits were relaxed. Consequently this establishes a functioning, transport-measured float32 helper, not native arithmetic parity, a model route, a native pool crossover or the required model gain. CPU/Arc contention and quantization alignment remain pending. Six system resource samples passed the 12/4 GiB floors; the worker launcher, actual Python child and sampler tree were all confirmed exited in `terminal-audit.json`.

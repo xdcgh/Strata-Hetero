@@ -1,0 +1,5292 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "run_id": "20261009-19-arc-ipc-ffn",
+  "started_utc": "2026-10-09T06:13:55.005927+00:00",
+  "contract": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\execution-contract.json",
+  "shapes": [
+    {
+      "rows": 1,
+      "shape": [
+        1,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+      "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+      "native_cpu_output_sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:55.151Z",
+        "monotonic_seconds": 12061.8593678,
+        "sample_gap_seconds": null,
+        "sampler_elapsed_seconds": 0.13185060000068916,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 0.0,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115938492416,
+          "physical_used_bytes": 21024755712,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 22913785856,
+          "commit_available_bytes": 122639396864,
+          "commit_total_pages": 5594186,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 122639396864,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.976,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 114.217,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 68206592,
+            "io_read_bytes": 35349870,
+            "io_write_bytes": 11907,
+            "cpu_user_seconds": 0.078125,
+            "cpu_system_seconds": 0.0625,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26206208,
+            "io_read_bytes": 2142213,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.046875,
+            "cpu_system_seconds": 0.046875,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11060677632,
+            "write_bytes": 6115188736,
+            "read_count": 299822,
+            "write_count": 345943,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321358672896,
+            "write_bytes": 59251643392,
+            "read_count": 10034070,
+            "write_count": 228507,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 7.22,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 1,
+        "nonce": "7626309458065c1534e2b751e4496c02",
+        "client_rtt_ns": 2054153400,
+        "worker_wall_ns": 1499130400,
+        "reported_compile_ns": 265439300,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 1,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 265439300,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "7626309458065c1534e2b751e4496c02",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 2,
+        "rtt_ns": 3114300,
+        "wire_rtt_ns_before_numpy_output_copy": 3090200,
+        "worker_wall_ns": 2562600,
+        "rtt_minus_worker_ns_descriptive": 551700,
+        "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+        "input_bytes": 10240,
+        "output_sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+        "output_bytes": 10240
+      },
+      "formals": [
+        {
+          "request_id": 3,
+          "rtt_ns": 767400,
+          "wire_rtt_ns_before_numpy_output_copy": 754600,
+          "worker_wall_ns": 476800,
+          "rtt_minus_worker_ns_descriptive": 290600,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "input_bytes": 10240,
+          "output_sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+          "output_bytes": 10240,
+          "formal_index": 1,
+          "input_shape": [
+            1,
+            2560
+          ],
+          "output_shape": [
+            1,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 8.79305246482558e-07,
+            "max_row_norm_relative_error": 1.1074225345641604e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00022808858193457127,
+            "relative_rmse": 0.011056878086845974,
+            "max_row_norm_relative_error": 0.0009592940678046641,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 4,
+          "rtt_ns": 783900,
+          "wire_rtt_ns_before_numpy_output_copy": 775000,
+          "worker_wall_ns": 481100,
+          "rtt_minus_worker_ns_descriptive": 302800,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "input_bytes": 10240,
+          "output_sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+          "output_bytes": 10240,
+          "formal_index": 2,
+          "input_shape": [
+            1,
+            2560
+          ],
+          "output_shape": [
+            1,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 8.79305246482558e-07,
+            "max_row_norm_relative_error": 1.1074225345641604e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00022808858193457127,
+            "relative_rmse": 0.011056878086845974,
+            "max_row_norm_relative_error": 0.0009592940678046641,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 5,
+          "rtt_ns": 739500,
+          "wire_rtt_ns_before_numpy_output_copy": 723000,
+          "worker_wall_ns": 442900,
+          "rtt_minus_worker_ns_descriptive": 296600,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "input_bytes": 10240,
+          "output_sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+          "output_bytes": 10240,
+          "formal_index": 3,
+          "input_shape": [
+            1,
+            2560
+          ],
+          "output_shape": [
+            1,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 8.79305246482558e-07,
+            "max_row_norm_relative_error": 1.1074225345641604e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00022808858193457127,
+            "relative_rmse": 0.011056878086845974,
+            "max_row_norm_relative_error": 0.0009592940678046641,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 6,
+          "rtt_ns": 709500,
+          "wire_rtt_ns_before_numpy_output_copy": 696100,
+          "worker_wall_ns": 427900,
+          "rtt_minus_worker_ns_descriptive": 281600,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "input_bytes": 10240,
+          "output_sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+          "output_bytes": 10240,
+          "formal_index": 4,
+          "input_shape": [
+            1,
+            2560
+          ],
+          "output_shape": [
+            1,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 8.79305246482558e-07,
+            "max_row_norm_relative_error": 1.1074225345641604e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00022808858193457127,
+            "relative_rmse": 0.011056878086845974,
+            "max_row_norm_relative_error": 0.0009592940678046641,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 7,
+          "rtt_ns": 717600,
+          "wire_rtt_ns_before_numpy_output_copy": 706300,
+          "worker_wall_ns": 437200,
+          "rtt_minus_worker_ns_descriptive": 280400,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "input_bytes": 10240,
+          "output_sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+          "output_bytes": 10240,
+          "formal_index": 5,
+          "input_shape": [
+            1,
+            2560
+          ],
+          "output_shape": [
+            1,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 8.79305246482558e-07,
+            "max_row_norm_relative_error": 1.1074225345641604e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00022808858193457127,
+            "relative_rmse": 0.011056878086845974,
+            "max_row_norm_relative_error": 0.0009592940678046641,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-001.f32",
+        "bytes": 10240,
+        "sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+        "readback_sha256": "05d396332ef0feadffa79b47bcc5504a0ceed769ad339d89b6cd579485974e78",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 743580,
+        "rtt_ns_median": 739500,
+        "rtt_ns_spread_max_minus_min": 74400,
+        "worker_wall_ns_mean": 453180,
+        "worker_wall_ns_median": 442900,
+        "worker_wall_ns_spread_max_minus_min": 53200,
+        "compile_ns_excluded": 265439300
+      }
+    },
+    {
+      "rows": 2,
+      "shape": [
+        2,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-002.f32",
+      "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-002.f32",
+      "native_cpu_output_sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:57.151Z",
+        "monotonic_seconds": 12063.8597457,
+        "sample_gap_seconds": 1.000198800000362,
+        "sampler_elapsed_seconds": 0.13030629999957455,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 4.7,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115588599808,
+          "physical_used_bytes": 21374648320,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 23694417920,
+          "commit_available_bytes": 121858764800,
+          "commit_total_pages": 5784770,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 121858764800,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.65,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 113.49,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 68665344,
+            "io_read_bytes": 35356626,
+            "io_write_bytes": 33635,
+            "cpu_user_seconds": 0.078125,
+            "cpu_system_seconds": 0.0625,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 8880,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "rss_bytes": 4182016,
+            "io_read_bytes": 2803,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 3188,
+            "parent_pid": 8880,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7913472,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.03125,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 12148,
+            "parent_pid": 8880,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 401907712,
+            "io_read_bytes": 36324497,
+            "io_write_bytes": 286,
+            "cpu_user_seconds": 0.3125,
+            "cpu_system_seconds": 0.34375,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26611712,
+            "io_read_bytes": 2142349,
+            "io_write_bytes": 7482,
+            "cpu_user_seconds": 0.046875,
+            "cpu_system_seconds": 0.109375,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11235093504,
+            "write_bytes": 6115835904,
+            "read_count": 306687,
+            "write_count": 346064,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321391329792,
+            "write_bytes": 59251889152,
+            "read_count": 10035143,
+            "write_count": 228519,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 8.05,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 8,
+        "nonce": "bc8df0286e4a8ad4c0841ced898dccaf",
+        "client_rtt_ns": 121063500,
+        "worker_wall_ns": 120487000,
+        "reported_compile_ns": 117541600,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 2,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 117541600,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "bc8df0286e4a8ad4c0841ced898dccaf",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 9,
+        "rtt_ns": 1349900,
+        "wire_rtt_ns_before_numpy_output_copy": 1328200,
+        "worker_wall_ns": 693700,
+        "rtt_minus_worker_ns_descriptive": 656200,
+        "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+        "input_bytes": 20480,
+        "output_sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+        "output_bytes": 20480
+      },
+      "formals": [
+        {
+          "request_id": 10,
+          "rtt_ns": 1065600,
+          "wire_rtt_ns_before_numpy_output_copy": 1044100,
+          "worker_wall_ns": 451300,
+          "rtt_minus_worker_ns_descriptive": 614300,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "input_bytes": 20480,
+          "output_sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+          "output_bytes": 20480,
+          "formal_index": 1,
+          "input_shape": [
+            2,
+            2560
+          ],
+          "output_shape": [
+            2,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 7.269745683055499e-07,
+            "max_row_norm_relative_error": 9.696616719251814e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00028322963044047356,
+            "relative_rmse": 0.012339318633398759,
+            "max_row_norm_relative_error": 0.0006762111486661491,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 11,
+          "rtt_ns": 760000,
+          "wire_rtt_ns_before_numpy_output_copy": 730400,
+          "worker_wall_ns": 427600,
+          "rtt_minus_worker_ns_descriptive": 332400,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "input_bytes": 20480,
+          "output_sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+          "output_bytes": 20480,
+          "formal_index": 2,
+          "input_shape": [
+            2,
+            2560
+          ],
+          "output_shape": [
+            2,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 7.269745683055499e-07,
+            "max_row_norm_relative_error": 9.696616719251814e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00028322963044047356,
+            "relative_rmse": 0.012339318633398759,
+            "max_row_norm_relative_error": 0.0006762111486661491,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 12,
+          "rtt_ns": 714600,
+          "wire_rtt_ns_before_numpy_output_copy": 696100,
+          "worker_wall_ns": 416700,
+          "rtt_minus_worker_ns_descriptive": 297900,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "input_bytes": 20480,
+          "output_sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+          "output_bytes": 20480,
+          "formal_index": 3,
+          "input_shape": [
+            2,
+            2560
+          ],
+          "output_shape": [
+            2,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 7.269745683055499e-07,
+            "max_row_norm_relative_error": 9.696616719251814e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00028322963044047356,
+            "relative_rmse": 0.012339318633398759,
+            "max_row_norm_relative_error": 0.0006762111486661491,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 13,
+          "rtt_ns": 670300,
+          "wire_rtt_ns_before_numpy_output_copy": 651500,
+          "worker_wall_ns": 408300,
+          "rtt_minus_worker_ns_descriptive": 262000,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "input_bytes": 20480,
+          "output_sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+          "output_bytes": 20480,
+          "formal_index": 4,
+          "input_shape": [
+            2,
+            2560
+          ],
+          "output_shape": [
+            2,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 7.269745683055499e-07,
+            "max_row_norm_relative_error": 9.696616719251814e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00028322963044047356,
+            "relative_rmse": 0.012339318633398759,
+            "max_row_norm_relative_error": 0.0006762111486661491,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 14,
+          "rtt_ns": 646300,
+          "wire_rtt_ns_before_numpy_output_copy": 623900,
+          "worker_wall_ns": 405200,
+          "rtt_minus_worker_ns_descriptive": 241100,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "input_bytes": 20480,
+          "output_sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+          "output_bytes": 20480,
+          "formal_index": 5,
+          "input_shape": [
+            2,
+            2560
+          ],
+          "output_shape": [
+            2,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0489096641540527e-08,
+            "relative_rmse": 7.269745683055499e-07,
+            "max_row_norm_relative_error": 9.696616719251814e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00028322963044047356,
+            "relative_rmse": 0.012339318633398759,
+            "max_row_norm_relative_error": 0.0006762111486661491,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-002.f32",
+        "bytes": 20480,
+        "sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+        "readback_sha256": "82d2adb9c6bcc83c161df4e4483f403519e87267c05e9d90099795277cf85e61",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 771360,
+        "rtt_ns_median": 714600,
+        "rtt_ns_spread_max_minus_min": 419300,
+        "worker_wall_ns_mean": 421820,
+        "worker_wall_ns_median": 416700,
+        "worker_wall_ns_spread_max_minus_min": 46100,
+        "compile_ns_excluded": 117541600
+      }
+    },
+    {
+      "rows": 4,
+      "shape": [
+        4,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-004.f32",
+      "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-004.f32",
+      "native_cpu_output_sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:57.151Z",
+        "monotonic_seconds": 12063.8597457,
+        "sample_gap_seconds": 1.000198800000362,
+        "sampler_elapsed_seconds": 0.13030629999957455,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 4.7,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115588599808,
+          "physical_used_bytes": 21374648320,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 23694417920,
+          "commit_available_bytes": 121858764800,
+          "commit_total_pages": 5784770,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 121858764800,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.65,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 113.49,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 68665344,
+            "io_read_bytes": 35356626,
+            "io_write_bytes": 33635,
+            "cpu_user_seconds": 0.078125,
+            "cpu_system_seconds": 0.0625,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 8880,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "rss_bytes": 4182016,
+            "io_read_bytes": 2803,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 3188,
+            "parent_pid": 8880,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7913472,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.03125,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 12148,
+            "parent_pid": 8880,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 401907712,
+            "io_read_bytes": 36324497,
+            "io_write_bytes": 286,
+            "cpu_user_seconds": 0.3125,
+            "cpu_system_seconds": 0.34375,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26611712,
+            "io_read_bytes": 2142349,
+            "io_write_bytes": 7482,
+            "cpu_user_seconds": 0.046875,
+            "cpu_system_seconds": 0.109375,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11235093504,
+            "write_bytes": 6115835904,
+            "read_count": 306687,
+            "write_count": 346064,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321391329792,
+            "write_bytes": 59251889152,
+            "read_count": 10035143,
+            "write_count": 228519,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 8.05,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 15,
+        "nonce": "60b2e8aeaa214808421021a556c86327",
+        "client_rtt_ns": 125487100,
+        "worker_wall_ns": 124954300,
+        "reported_compile_ns": 121978200,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 4,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 121978200,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "60b2e8aeaa214808421021a556c86327",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 16,
+        "rtt_ns": 2199500,
+        "wire_rtt_ns_before_numpy_output_copy": 2181100,
+        "worker_wall_ns": 1647900,
+        "rtt_minus_worker_ns_descriptive": 551600,
+        "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+        "input_bytes": 40960,
+        "output_sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+        "output_bytes": 40960
+      },
+      "formals": [
+        {
+          "request_id": 17,
+          "rtt_ns": 688200,
+          "wire_rtt_ns_before_numpy_output_copy": 659000,
+          "worker_wall_ns": 451500,
+          "rtt_minus_worker_ns_descriptive": 236700,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "input_bytes": 40960,
+          "output_sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+          "output_bytes": 40960,
+          "formal_index": 1,
+          "input_shape": [
+            4,
+            2560
+          ],
+          "output_shape": [
+            4,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.1420419216156006e-08,
+            "relative_rmse": 8.079131007566013e-07,
+            "max_row_norm_relative_error": 8.88901829303638e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00024576298892498016,
+            "relative_rmse": 0.012217860576061756,
+            "max_row_norm_relative_error": 0.0018662855931571465,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 18,
+          "rtt_ns": 1096000,
+          "wire_rtt_ns_before_numpy_output_copy": 1085800,
+          "worker_wall_ns": 726900,
+          "rtt_minus_worker_ns_descriptive": 369100,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "input_bytes": 40960,
+          "output_sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+          "output_bytes": 40960,
+          "formal_index": 2,
+          "input_shape": [
+            4,
+            2560
+          ],
+          "output_shape": [
+            4,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.1420419216156006e-08,
+            "relative_rmse": 8.079131007566013e-07,
+            "max_row_norm_relative_error": 8.88901829303638e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00024576298892498016,
+            "relative_rmse": 0.012217860576061756,
+            "max_row_norm_relative_error": 0.0018662855931571465,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 19,
+          "rtt_ns": 727500,
+          "wire_rtt_ns_before_numpy_output_copy": 701100,
+          "worker_wall_ns": 398500,
+          "rtt_minus_worker_ns_descriptive": 329000,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "input_bytes": 40960,
+          "output_sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+          "output_bytes": 40960,
+          "formal_index": 3,
+          "input_shape": [
+            4,
+            2560
+          ],
+          "output_shape": [
+            4,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.1420419216156006e-08,
+            "relative_rmse": 8.079131007566013e-07,
+            "max_row_norm_relative_error": 8.88901829303638e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00024576298892498016,
+            "relative_rmse": 0.012217860576061756,
+            "max_row_norm_relative_error": 0.0018662855931571465,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 20,
+          "rtt_ns": 672400,
+          "wire_rtt_ns_before_numpy_output_copy": 645900,
+          "worker_wall_ns": 409200,
+          "rtt_minus_worker_ns_descriptive": 263200,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "input_bytes": 40960,
+          "output_sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+          "output_bytes": 40960,
+          "formal_index": 4,
+          "input_shape": [
+            4,
+            2560
+          ],
+          "output_shape": [
+            4,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.1420419216156006e-08,
+            "relative_rmse": 8.079131007566013e-07,
+            "max_row_norm_relative_error": 8.88901829303638e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00024576298892498016,
+            "relative_rmse": 0.012217860576061756,
+            "max_row_norm_relative_error": 0.0018662855931571465,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 21,
+          "rtt_ns": 667500,
+          "wire_rtt_ns_before_numpy_output_copy": 648300,
+          "worker_wall_ns": 392700,
+          "rtt_minus_worker_ns_descriptive": 274800,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "input_bytes": 40960,
+          "output_sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+          "output_bytes": 40960,
+          "formal_index": 5,
+          "input_shape": [
+            4,
+            2560
+          ],
+          "output_shape": [
+            4,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.1420419216156006e-08,
+            "relative_rmse": 8.079131007566013e-07,
+            "max_row_norm_relative_error": 8.88901829303638e-08,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00024576298892498016,
+            "relative_rmse": 0.012217860576061756,
+            "max_row_norm_relative_error": 0.0018662855931571465,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-004.f32",
+        "bytes": 40960,
+        "sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+        "readback_sha256": "e10d5d98c36737cb4fd10665a40c1656ba5f3323f79dfa62064e2148891ac28f",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 770320,
+        "rtt_ns_median": 688200,
+        "rtt_ns_spread_max_minus_min": 428500,
+        "worker_wall_ns_mean": 475760,
+        "worker_wall_ns_median": 409200,
+        "worker_wall_ns_spread_max_minus_min": 334200,
+        "compile_ns_excluded": 121978200
+      }
+    },
+    {
+      "rows": 8,
+      "shape": [
+        8,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-008.f32",
+      "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-008.f32",
+      "native_cpu_output_sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:57.151Z",
+        "monotonic_seconds": 12063.8597457,
+        "sample_gap_seconds": 1.000198800000362,
+        "sampler_elapsed_seconds": 0.13030629999957455,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 4.7,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115588599808,
+          "physical_used_bytes": 21374648320,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 23694417920,
+          "commit_available_bytes": 121858764800,
+          "commit_total_pages": 5784770,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 121858764800,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.65,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 113.49,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 68665344,
+            "io_read_bytes": 35356626,
+            "io_write_bytes": 33635,
+            "cpu_user_seconds": 0.078125,
+            "cpu_system_seconds": 0.0625,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 8880,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "rss_bytes": 4182016,
+            "io_read_bytes": 2803,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 3188,
+            "parent_pid": 8880,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7913472,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.03125,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 12148,
+            "parent_pid": 8880,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 401907712,
+            "io_read_bytes": 36324497,
+            "io_write_bytes": 286,
+            "cpu_user_seconds": 0.3125,
+            "cpu_system_seconds": 0.34375,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26611712,
+            "io_read_bytes": 2142349,
+            "io_write_bytes": 7482,
+            "cpu_user_seconds": 0.046875,
+            "cpu_system_seconds": 0.109375,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11235093504,
+            "write_bytes": 6115835904,
+            "read_count": 306687,
+            "write_count": 346064,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321391329792,
+            "write_bytes": 59251889152,
+            "read_count": 10035143,
+            "write_count": 228519,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 8.05,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 22,
+        "nonce": "8c00864c355e92aedb47d63bc04fa495",
+        "client_rtt_ns": 27406800,
+        "worker_wall_ns": 26887000,
+        "reported_compile_ns": 23401300,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 8,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 23401300,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "8c00864c355e92aedb47d63bc04fa495",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 23,
+        "rtt_ns": 1468300,
+        "wire_rtt_ns_before_numpy_output_copy": 1444500,
+        "worker_wall_ns": 663200,
+        "rtt_minus_worker_ns_descriptive": 805100,
+        "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+        "input_bytes": 81920,
+        "output_sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+        "output_bytes": 81920
+      },
+      "formals": [
+        {
+          "request_id": 24,
+          "rtt_ns": 1095800,
+          "wire_rtt_ns_before_numpy_output_copy": 1067000,
+          "worker_wall_ns": 467700,
+          "rtt_minus_worker_ns_descriptive": 628100,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "input_bytes": 81920,
+          "output_sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+          "output_bytes": 81920,
+          "formal_index": 1,
+          "input_shape": [
+            8,
+            2560
+          ],
+          "output_shape": [
+            8,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.0978193283081055e-08,
+            "relative_rmse": 8.856564847347482e-07,
+            "max_row_norm_relative_error": 5.6709282743721e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.000502660870552063,
+            "relative_rmse": 0.012996193710008996,
+            "max_row_norm_relative_error": 0.005217716785464599,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 25,
+          "rtt_ns": 1016000,
+          "wire_rtt_ns_before_numpy_output_copy": 995300,
+          "worker_wall_ns": 501100,
+          "rtt_minus_worker_ns_descriptive": 514900,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "input_bytes": 81920,
+          "output_sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+          "output_bytes": 81920,
+          "formal_index": 2,
+          "input_shape": [
+            8,
+            2560
+          ],
+          "output_shape": [
+            8,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.0978193283081055e-08,
+            "relative_rmse": 8.856564847347482e-07,
+            "max_row_norm_relative_error": 5.6709282743721e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.000502660870552063,
+            "relative_rmse": 0.012996193710008996,
+            "max_row_norm_relative_error": 0.005217716785464599,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 26,
+          "rtt_ns": 918200,
+          "wire_rtt_ns_before_numpy_output_copy": 900100,
+          "worker_wall_ns": 514200,
+          "rtt_minus_worker_ns_descriptive": 404000,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "input_bytes": 81920,
+          "output_sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+          "output_bytes": 81920,
+          "formal_index": 3,
+          "input_shape": [
+            8,
+            2560
+          ],
+          "output_shape": [
+            8,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.0978193283081055e-08,
+            "relative_rmse": 8.856564847347482e-07,
+            "max_row_norm_relative_error": 5.6709282743721e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.000502660870552063,
+            "relative_rmse": 0.012996193710008996,
+            "max_row_norm_relative_error": 0.005217716785464599,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 27,
+          "rtt_ns": 1124900,
+          "wire_rtt_ns_before_numpy_output_copy": 1092400,
+          "worker_wall_ns": 475600,
+          "rtt_minus_worker_ns_descriptive": 649300,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "input_bytes": 81920,
+          "output_sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+          "output_bytes": 81920,
+          "formal_index": 4,
+          "input_shape": [
+            8,
+            2560
+          ],
+          "output_shape": [
+            8,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.0978193283081055e-08,
+            "relative_rmse": 8.856564847347482e-07,
+            "max_row_norm_relative_error": 5.6709282743721e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.000502660870552063,
+            "relative_rmse": 0.012996193710008996,
+            "max_row_norm_relative_error": 0.005217716785464599,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 28,
+          "rtt_ns": 1047800,
+          "wire_rtt_ns_before_numpy_output_copy": 1022000,
+          "worker_wall_ns": 490000,
+          "rtt_minus_worker_ns_descriptive": 557800,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "input_bytes": 81920,
+          "output_sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+          "output_bytes": 81920,
+          "formal_index": 5,
+          "input_shape": [
+            8,
+            2560
+          ],
+          "output_shape": [
+            8,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.0978193283081055e-08,
+            "relative_rmse": 8.856564847347482e-07,
+            "max_row_norm_relative_error": 5.6709282743721e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.000502660870552063,
+            "relative_rmse": 0.012996193710008996,
+            "max_row_norm_relative_error": 0.005217716785464599,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-008.f32",
+        "bytes": 81920,
+        "sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+        "readback_sha256": "88c9d49462f3aa106fea7de0e52fd35fc869f4c140800230b3ed5dff32f9ef2b",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 1040540,
+        "rtt_ns_median": 1047800,
+        "rtt_ns_spread_max_minus_min": 206700,
+        "worker_wall_ns_mean": 489720,
+        "worker_wall_ns_median": 490000,
+        "worker_wall_ns_spread_max_minus_min": 46500,
+        "compile_ns_excluded": 23401300
+      }
+    },
+    {
+      "rows": 16,
+      "shape": [
+        16,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+      "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+      "native_cpu_output_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:57.151Z",
+        "monotonic_seconds": 12063.8597457,
+        "sample_gap_seconds": 1.000198800000362,
+        "sampler_elapsed_seconds": 0.13030629999957455,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 4.7,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115588599808,
+          "physical_used_bytes": 21374648320,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 23694417920,
+          "commit_available_bytes": 121858764800,
+          "commit_total_pages": 5784770,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 121858764800,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.65,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 113.49,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 68665344,
+            "io_read_bytes": 35356626,
+            "io_write_bytes": 33635,
+            "cpu_user_seconds": 0.078125,
+            "cpu_system_seconds": 0.0625,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 8880,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "rss_bytes": 4182016,
+            "io_read_bytes": 2803,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 3188,
+            "parent_pid": 8880,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7913472,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.03125,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 12148,
+            "parent_pid": 8880,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 401907712,
+            "io_read_bytes": 36324497,
+            "io_write_bytes": 286,
+            "cpu_user_seconds": 0.3125,
+            "cpu_system_seconds": 0.34375,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26611712,
+            "io_read_bytes": 2142349,
+            "io_write_bytes": 7482,
+            "cpu_user_seconds": 0.046875,
+            "cpu_system_seconds": 0.109375,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11235093504,
+            "write_bytes": 6115835904,
+            "read_count": 306687,
+            "write_count": 346064,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321391329792,
+            "write_bytes": 59251889152,
+            "read_count": 10035143,
+            "write_count": 228519,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 8.05,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 29,
+        "nonce": "d22e2c3468e70bf4b398716faf0f0e7c",
+        "client_rtt_ns": 25385500,
+        "worker_wall_ns": 24409500,
+        "reported_compile_ns": 21376400,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 16,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 21376400,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "d22e2c3468e70bf4b398716faf0f0e7c",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 30,
+        "rtt_ns": 2577800,
+        "wire_rtt_ns_before_numpy_output_copy": 2545400,
+        "worker_wall_ns": 1309800,
+        "rtt_minus_worker_ns_descriptive": 1268000,
+        "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+        "input_bytes": 163840,
+        "output_sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+        "output_bytes": 163840
+      },
+      "formals": [
+        {
+          "request_id": 31,
+          "rtt_ns": 1079300,
+          "wire_rtt_ns_before_numpy_output_copy": 1062900,
+          "worker_wall_ns": 475200,
+          "rtt_minus_worker_ns_descriptive": 604100,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "input_bytes": 163840,
+          "output_sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+          "output_bytes": 163840,
+          "formal_index": 1,
+          "input_shape": [
+            16,
+            2560
+          ],
+          "output_shape": [
+            16,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.421540989489114e-07,
+            "max_row_norm_relative_error": 1.1732227691216772e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003664442338049412,
+            "relative_rmse": 0.012315222072681185,
+            "max_row_norm_relative_error": 0.0020439894809157937,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 32,
+          "rtt_ns": 906500,
+          "wire_rtt_ns_before_numpy_output_copy": 878000,
+          "worker_wall_ns": 501700,
+          "rtt_minus_worker_ns_descriptive": 404800,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "input_bytes": 163840,
+          "output_sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+          "output_bytes": 163840,
+          "formal_index": 2,
+          "input_shape": [
+            16,
+            2560
+          ],
+          "output_shape": [
+            16,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.421540989489114e-07,
+            "max_row_norm_relative_error": 1.1732227691216772e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003664442338049412,
+            "relative_rmse": 0.012315222072681185,
+            "max_row_norm_relative_error": 0.0020439894809157937,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 33,
+          "rtt_ns": 864900,
+          "wire_rtt_ns_before_numpy_output_copy": 850700,
+          "worker_wall_ns": 467800,
+          "rtt_minus_worker_ns_descriptive": 397100,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "input_bytes": 163840,
+          "output_sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+          "output_bytes": 163840,
+          "formal_index": 3,
+          "input_shape": [
+            16,
+            2560
+          ],
+          "output_shape": [
+            16,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.421540989489114e-07,
+            "max_row_norm_relative_error": 1.1732227691216772e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003664442338049412,
+            "relative_rmse": 0.012315222072681185,
+            "max_row_norm_relative_error": 0.0020439894809157937,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 34,
+          "rtt_ns": 830400,
+          "wire_rtt_ns_before_numpy_output_copy": 816000,
+          "worker_wall_ns": 447700,
+          "rtt_minus_worker_ns_descriptive": 382700,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "input_bytes": 163840,
+          "output_sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+          "output_bytes": 163840,
+          "formal_index": 4,
+          "input_shape": [
+            16,
+            2560
+          ],
+          "output_shape": [
+            16,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.421540989489114e-07,
+            "max_row_norm_relative_error": 1.1732227691216772e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003664442338049412,
+            "relative_rmse": 0.012315222072681185,
+            "max_row_norm_relative_error": 0.0020439894809157937,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 35,
+          "rtt_ns": 921400,
+          "wire_rtt_ns_before_numpy_output_copy": 909400,
+          "worker_wall_ns": 446900,
+          "rtt_minus_worker_ns_descriptive": 474500,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "input_bytes": 163840,
+          "output_sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+          "output_bytes": 163840,
+          "formal_index": 5,
+          "input_shape": [
+            16,
+            2560
+          ],
+          "output_shape": [
+            16,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.421540989489114e-07,
+            "max_row_norm_relative_error": 1.1732227691216772e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003664442338049412,
+            "relative_rmse": 0.012315222072681185,
+            "max_row_norm_relative_error": 0.0020439894809157937,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-016.f32",
+        "bytes": 163840,
+        "sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+        "readback_sha256": "01d220efe6b55a1b7b16420e36d3686e8ff95b7cea73ddf10cf24907b595feea",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 920500,
+        "rtt_ns_median": 906500,
+        "rtt_ns_spread_max_minus_min": 248900,
+        "worker_wall_ns_mean": 467860,
+        "worker_wall_ns_median": 467800,
+        "worker_wall_ns_spread_max_minus_min": 54800,
+        "compile_ns_excluded": 21376400
+      }
+    },
+    {
+      "rows": 32,
+      "shape": [
+        32,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-032.f32",
+      "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-032.f32",
+      "native_cpu_output_sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:58.172Z",
+        "monotonic_seconds": 12064.8808755,
+        "sample_gap_seconds": 1.0211297999994713,
+        "sampler_elapsed_seconds": 0.22133910000047763,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 32.7,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115481604096,
+          "physical_used_bytes": 21481644032,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 23785934848,
+          "commit_available_bytes": 121767247872,
+          "commit_total_pages": 5807113,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 121767247872,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.551,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 113.405,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 74063872,
+            "io_read_bytes": 36279331,
+            "io_write_bytes": 1485756,
+            "cpu_user_seconds": 4.375,
+            "cpu_system_seconds": 0.421875,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 8880,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "rss_bytes": 4182016,
+            "io_read_bytes": 2803,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 3188,
+            "parent_pid": 8880,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7913472,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.03125,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 12148,
+            "parent_pid": 8880,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 475926528,
+            "io_read_bytes": 36771107,
+            "io_write_bytes": 434323,
+            "cpu_user_seconds": 0.640625,
+            "cpu_system_seconds": 0.546875,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26611712,
+            "io_read_bytes": 2142417,
+            "io_write_bytes": 11583,
+            "cpu_user_seconds": 0.0625,
+            "cpu_system_seconds": 0.140625,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11235841024,
+            "write_bytes": 6117196288,
+            "read_count": 306729,
+            "write_count": 346200,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321402073600,
+            "write_bytes": 59252089856,
+            "read_count": 10035595,
+            "write_count": 228534,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 8.29,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 36,
+        "nonce": "ff5aa449a96d0faec5d2244db70cd929",
+        "client_rtt_ns": 25665000,
+        "worker_wall_ns": 24831100,
+        "reported_compile_ns": 21922800,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 32,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 21922800,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "ff5aa449a96d0faec5d2244db70cd929",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 37,
+        "rtt_ns": 2688200,
+        "wire_rtt_ns_before_numpy_output_copy": 2657000,
+        "worker_wall_ns": 1267700,
+        "rtt_minus_worker_ns_descriptive": 1420500,
+        "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+        "input_bytes": 327680,
+        "output_sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+        "output_bytes": 327680
+      },
+      "formals": [
+        {
+          "request_id": 38,
+          "rtt_ns": 1538700,
+          "wire_rtt_ns_before_numpy_output_copy": 1512000,
+          "worker_wall_ns": 659500,
+          "rtt_minus_worker_ns_descriptive": 879200,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "input_bytes": 327680,
+          "output_sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+          "output_bytes": 327680,
+          "formal_index": 1,
+          "input_shape": [
+            32,
+            2560
+          ],
+          "output_shape": [
+            32,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.555413257690874e-07,
+            "max_row_norm_relative_error": 3.072829625915855e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00043156929314136505,
+            "relative_rmse": 0.012523950547510092,
+            "max_row_norm_relative_error": 0.0018769053618984761,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 39,
+          "rtt_ns": 2571700,
+          "wire_rtt_ns_before_numpy_output_copy": 2543800,
+          "worker_wall_ns": 1527000,
+          "rtt_minus_worker_ns_descriptive": 1044700,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "input_bytes": 327680,
+          "output_sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+          "output_bytes": 327680,
+          "formal_index": 2,
+          "input_shape": [
+            32,
+            2560
+          ],
+          "output_shape": [
+            32,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.555413257690874e-07,
+            "max_row_norm_relative_error": 3.072829625915855e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00043156929314136505,
+            "relative_rmse": 0.012523950547510092,
+            "max_row_norm_relative_error": 0.0018769053618984761,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 40,
+          "rtt_ns": 1774200,
+          "wire_rtt_ns_before_numpy_output_copy": 1745600,
+          "worker_wall_ns": 719800,
+          "rtt_minus_worker_ns_descriptive": 1054400,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "input_bytes": 327680,
+          "output_sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+          "output_bytes": 327680,
+          "formal_index": 3,
+          "input_shape": [
+            32,
+            2560
+          ],
+          "output_shape": [
+            32,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.555413257690874e-07,
+            "max_row_norm_relative_error": 3.072829625915855e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00043156929314136505,
+            "relative_rmse": 0.012523950547510092,
+            "max_row_norm_relative_error": 0.0018769053618984761,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 41,
+          "rtt_ns": 2191400,
+          "wire_rtt_ns_before_numpy_output_copy": 2166500,
+          "worker_wall_ns": 1167700,
+          "rtt_minus_worker_ns_descriptive": 1023700,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "input_bytes": 327680,
+          "output_sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+          "output_bytes": 327680,
+          "formal_index": 4,
+          "input_shape": [
+            32,
+            2560
+          ],
+          "output_shape": [
+            32,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.555413257690874e-07,
+            "max_row_norm_relative_error": 3.072829625915855e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00043156929314136505,
+            "relative_rmse": 0.012523950547510092,
+            "max_row_norm_relative_error": 0.0018769053618984761,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 42,
+          "rtt_ns": 1875200,
+          "wire_rtt_ns_before_numpy_output_copy": 1782000,
+          "worker_wall_ns": 628400,
+          "rtt_minus_worker_ns_descriptive": 1246800,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "input_bytes": 327680,
+          "output_sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+          "output_bytes": 327680,
+          "formal_index": 5,
+          "input_shape": [
+            32,
+            2560
+          ],
+          "output_shape": [
+            32,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.7939677238464355e-08,
+            "relative_rmse": 8.555413257690874e-07,
+            "max_row_norm_relative_error": 3.072829625915855e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00043156929314136505,
+            "relative_rmse": 0.012523950547510092,
+            "max_row_norm_relative_error": 0.0018769053618984761,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-032.f32",
+        "bytes": 327680,
+        "sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+        "readback_sha256": "339376b285fef98da29efd2eeb6629418fc72633857eb341a7bd92f667d5fb88",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 1990240,
+        "rtt_ns_median": 1875200,
+        "rtt_ns_spread_max_minus_min": 1033000,
+        "worker_wall_ns_mean": 940480,
+        "worker_wall_ns_median": 719800,
+        "worker_wall_ns_spread_max_minus_min": 898600,
+        "compile_ns_excluded": 21922800
+      }
+    },
+    {
+      "rows": 64,
+      "shape": [
+        64,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-064.f32",
+      "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-064.f32",
+      "native_cpu_output_sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:58.172Z",
+        "monotonic_seconds": 12064.8808755,
+        "sample_gap_seconds": 1.0211297999994713,
+        "sampler_elapsed_seconds": 0.22133910000047763,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 32.7,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115481604096,
+          "physical_used_bytes": 21481644032,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 23785934848,
+          "commit_available_bytes": 121767247872,
+          "commit_total_pages": 5807113,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 121767247872,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.551,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 113.405,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 74063872,
+            "io_read_bytes": 36279331,
+            "io_write_bytes": 1485756,
+            "cpu_user_seconds": 4.375,
+            "cpu_system_seconds": 0.421875,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 8880,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "rss_bytes": 4182016,
+            "io_read_bytes": 2803,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 3188,
+            "parent_pid": 8880,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7913472,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.03125,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 12148,
+            "parent_pid": 8880,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 475926528,
+            "io_read_bytes": 36771107,
+            "io_write_bytes": 434323,
+            "cpu_user_seconds": 0.640625,
+            "cpu_system_seconds": 0.546875,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26611712,
+            "io_read_bytes": 2142417,
+            "io_write_bytes": 11583,
+            "cpu_user_seconds": 0.0625,
+            "cpu_system_seconds": 0.140625,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11235841024,
+            "write_bytes": 6117196288,
+            "read_count": 306729,
+            "write_count": 346200,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321402073600,
+            "write_bytes": 59252089856,
+            "read_count": 10035595,
+            "write_count": 228534,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 8.29,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 43,
+        "nonce": "322d6cf4a13c63ae5ee3196ddd1bd30e",
+        "client_rtt_ns": 176952300,
+        "worker_wall_ns": 176105300,
+        "reported_compile_ns": 172616000,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 64,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 172616000,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "322d6cf4a13c63ae5ee3196ddd1bd30e",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 44,
+        "rtt_ns": 4632800,
+        "wire_rtt_ns_before_numpy_output_copy": 4594000,
+        "worker_wall_ns": 1987500,
+        "rtt_minus_worker_ns_descriptive": 2645300,
+        "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+        "input_bytes": 655360,
+        "output_sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+        "output_bytes": 655360
+      },
+      "formals": [
+        {
+          "request_id": 45,
+          "rtt_ns": 2886500,
+          "wire_rtt_ns_before_numpy_output_copy": 2671300,
+          "worker_wall_ns": 792100,
+          "rtt_minus_worker_ns_descriptive": 2094400,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "input_bytes": 655360,
+          "output_sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+          "output_bytes": 655360,
+          "formal_index": 1,
+          "input_shape": [
+            64,
+            2560
+          ],
+          "output_shape": [
+            64,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 6.51925802230835e-08,
+            "relative_rmse": 1.076495875404587e-06,
+            "max_row_norm_relative_error": 2.648822834025157e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00037223659455776215,
+            "relative_rmse": 0.012404295176528473,
+            "max_row_norm_relative_error": 0.0029982470825693215,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 46,
+          "rtt_ns": 3629000,
+          "wire_rtt_ns_before_numpy_output_copy": 3377600,
+          "worker_wall_ns": 1473800,
+          "rtt_minus_worker_ns_descriptive": 2155200,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "input_bytes": 655360,
+          "output_sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+          "output_bytes": 655360,
+          "formal_index": 2,
+          "input_shape": [
+            64,
+            2560
+          ],
+          "output_shape": [
+            64,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 6.51925802230835e-08,
+            "relative_rmse": 1.076495875404587e-06,
+            "max_row_norm_relative_error": 2.648822834025157e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00037223659455776215,
+            "relative_rmse": 0.012404295176528473,
+            "max_row_norm_relative_error": 0.0029982470825693215,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 47,
+          "rtt_ns": 4142600,
+          "wire_rtt_ns_before_numpy_output_copy": 3913900,
+          "worker_wall_ns": 1453700,
+          "rtt_minus_worker_ns_descriptive": 2688900,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "input_bytes": 655360,
+          "output_sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+          "output_bytes": 655360,
+          "formal_index": 3,
+          "input_shape": [
+            64,
+            2560
+          ],
+          "output_shape": [
+            64,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 6.51925802230835e-08,
+            "relative_rmse": 1.076495875404587e-06,
+            "max_row_norm_relative_error": 2.648822834025157e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00037223659455776215,
+            "relative_rmse": 0.012404295176528473,
+            "max_row_norm_relative_error": 0.0029982470825693215,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 48,
+          "rtt_ns": 4679500,
+          "wire_rtt_ns_before_numpy_output_copy": 4521800,
+          "worker_wall_ns": 1928100,
+          "rtt_minus_worker_ns_descriptive": 2751400,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "input_bytes": 655360,
+          "output_sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+          "output_bytes": 655360,
+          "formal_index": 4,
+          "input_shape": [
+            64,
+            2560
+          ],
+          "output_shape": [
+            64,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 6.51925802230835e-08,
+            "relative_rmse": 1.076495875404587e-06,
+            "max_row_norm_relative_error": 2.648822834025157e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00037223659455776215,
+            "relative_rmse": 0.012404295176528473,
+            "max_row_norm_relative_error": 0.0029982470825693215,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 49,
+          "rtt_ns": 3999800,
+          "wire_rtt_ns_before_numpy_output_copy": 3780400,
+          "worker_wall_ns": 1789400,
+          "rtt_minus_worker_ns_descriptive": 2210400,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "input_bytes": 655360,
+          "output_sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+          "output_bytes": 655360,
+          "formal_index": 5,
+          "input_shape": [
+            64,
+            2560
+          ],
+          "output_shape": [
+            64,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 6.51925802230835e-08,
+            "relative_rmse": 1.076495875404587e-06,
+            "max_row_norm_relative_error": 2.648822834025157e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00037223659455776215,
+            "relative_rmse": 0.012404295176528473,
+            "max_row_norm_relative_error": 0.0029982470825693215,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-064.f32",
+        "bytes": 655360,
+        "sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+        "readback_sha256": "29776d41be25e9100941b81af2c75b40aa46fccd7b40a69849b4ec134c65c602",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 3867480,
+        "rtt_ns_median": 3999800,
+        "rtt_ns_spread_max_minus_min": 1793000,
+        "worker_wall_ns_mean": 1487420,
+        "worker_wall_ns_median": 1473800,
+        "worker_wall_ns_spread_max_minus_min": 1136000,
+        "compile_ns_excluded": 172616000
+      }
+    },
+    {
+      "rows": 128,
+      "shape": [
+        128,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-128.f32",
+      "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-128.f32",
+      "native_cpu_output_sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:59.151Z",
+        "monotonic_seconds": 12065.8600249,
+        "sample_gap_seconds": 0.9791494000000966,
+        "sampler_elapsed_seconds": 0.2787355000000389,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 64.8,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115470532608,
+          "physical_used_bytes": 21492715520,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 23797768192,
+          "commit_available_bytes": 121755414528,
+          "commit_total_pages": 5810002,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 121755414528,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.54,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 113.394,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 76324864,
+            "io_read_bytes": 38330739,
+            "io_write_bytes": 4660698,
+            "cpu_user_seconds": 13.921875,
+            "cpu_system_seconds": 0.421875,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 8880,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "rss_bytes": 4182016,
+            "io_read_bytes": 2803,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 3188,
+            "parent_pid": 8880,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7913472,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.03125,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 12148,
+            "parent_pid": 8880,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 484597760,
+            "io_read_bytes": 38912640,
+            "io_write_bytes": 2568071,
+            "cpu_user_seconds": 0.703125,
+            "cpu_system_seconds": 0.5625,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26619904,
+            "io_read_bytes": 2142485,
+            "io_write_bytes": 15694,
+            "cpu_user_seconds": 0.0625,
+            "cpu_system_seconds": 0.171875,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11235841024,
+            "write_bytes": 6119191040,
+            "read_count": 306729,
+            "write_count": 346320,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321402089984,
+            "write_bytes": 59252872192,
+            "read_count": 10035596,
+            "write_count": 228554,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 7.67,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 50,
+        "nonce": "3e63829c18b09a711db53e2f91d361a8",
+        "client_rtt_ns": 100810900,
+        "worker_wall_ns": 100147100,
+        "reported_compile_ns": 95391500,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 128,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 95391500,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "3e63829c18b09a711db53e2f91d361a8",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 51,
+        "rtt_ns": 7797700,
+        "wire_rtt_ns_before_numpy_output_copy": 7456700,
+        "worker_wall_ns": 2397400,
+        "rtt_minus_worker_ns_descriptive": 5400300,
+        "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+        "input_bytes": 1310720,
+        "output_sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+        "output_bytes": 1310720
+      },
+      "formals": [
+        {
+          "request_id": 52,
+          "rtt_ns": 7873700,
+          "wire_rtt_ns_before_numpy_output_copy": 7518800,
+          "worker_wall_ns": 2551500,
+          "rtt_minus_worker_ns_descriptive": 5322200,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "input_bytes": 1310720,
+          "output_sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+          "output_bytes": 1310720,
+          "formal_index": 1,
+          "input_shape": [
+            128,
+            2560
+          ],
+          "output_shape": [
+            128,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.470348358154297e-08,
+            "relative_rmse": 1.0820758235840386e-06,
+            "max_row_norm_relative_error": 2.902817784199816e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00036232778802514076,
+            "relative_rmse": 0.012369887820199054,
+            "max_row_norm_relative_error": 0.004134220356110076,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 53,
+          "rtt_ns": 11023100,
+          "wire_rtt_ns_before_numpy_output_copy": 10633400,
+          "worker_wall_ns": 4624200,
+          "rtt_minus_worker_ns_descriptive": 6398900,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "input_bytes": 1310720,
+          "output_sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+          "output_bytes": 1310720,
+          "formal_index": 2,
+          "input_shape": [
+            128,
+            2560
+          ],
+          "output_shape": [
+            128,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.470348358154297e-08,
+            "relative_rmse": 1.0820758235840386e-06,
+            "max_row_norm_relative_error": 2.902817784199816e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00036232778802514076,
+            "relative_rmse": 0.012369887820199054,
+            "max_row_norm_relative_error": 0.004134220356110076,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 54,
+          "rtt_ns": 12002800,
+          "wire_rtt_ns_before_numpy_output_copy": 11548800,
+          "worker_wall_ns": 3458300,
+          "rtt_minus_worker_ns_descriptive": 8544500,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "input_bytes": 1310720,
+          "output_sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+          "output_bytes": 1310720,
+          "formal_index": 3,
+          "input_shape": [
+            128,
+            2560
+          ],
+          "output_shape": [
+            128,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.470348358154297e-08,
+            "relative_rmse": 1.0820758235840386e-06,
+            "max_row_norm_relative_error": 2.902817784199816e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00036232778802514076,
+            "relative_rmse": 0.012369887820199054,
+            "max_row_norm_relative_error": 0.004134220356110076,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 55,
+          "rtt_ns": 8606500,
+          "wire_rtt_ns_before_numpy_output_copy": 8194000,
+          "worker_wall_ns": 3185500,
+          "rtt_minus_worker_ns_descriptive": 5421000,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "input_bytes": 1310720,
+          "output_sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+          "output_bytes": 1310720,
+          "formal_index": 4,
+          "input_shape": [
+            128,
+            2560
+          ],
+          "output_shape": [
+            128,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.470348358154297e-08,
+            "relative_rmse": 1.0820758235840386e-06,
+            "max_row_norm_relative_error": 2.902817784199816e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00036232778802514076,
+            "relative_rmse": 0.012369887820199054,
+            "max_row_norm_relative_error": 0.004134220356110076,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 56,
+          "rtt_ns": 8646100,
+          "wire_rtt_ns_before_numpy_output_copy": 8268000,
+          "worker_wall_ns": 2885700,
+          "rtt_minus_worker_ns_descriptive": 5760400,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "input_bytes": 1310720,
+          "output_sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+          "output_bytes": 1310720,
+          "formal_index": 5,
+          "input_shape": [
+            128,
+            2560
+          ],
+          "output_shape": [
+            128,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.470348358154297e-08,
+            "relative_rmse": 1.0820758235840386e-06,
+            "max_row_norm_relative_error": 2.902817784199816e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.00036232778802514076,
+            "relative_rmse": 0.012369887820199054,
+            "max_row_norm_relative_error": 0.004134220356110076,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-128.f32",
+        "bytes": 1310720,
+        "sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+        "readback_sha256": "c803eaf09eb2132cdffc6a80696e07fcf845bb94ddb9f904589f2e19f3987882",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 9630440,
+        "rtt_ns_median": 8646100,
+        "rtt_ns_spread_max_minus_min": 4129100,
+        "worker_wall_ns_mean": 3341040,
+        "worker_wall_ns_median": 3185500,
+        "worker_wall_ns_spread_max_minus_min": 2072700,
+        "compile_ns_excluded": 95391500
+      }
+    },
+    {
+      "rows": 256,
+      "shape": [
+        256,
+        2560
+      ],
+      "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-256.f32",
+      "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+      "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-256.f32",
+      "native_cpu_output_sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "resource_before_init": {
+        "schema_version": 1,
+        "record_type": "resource_sample",
+        "observed_at_utc": "2026-10-09T06:13:59.151Z",
+        "monotonic_seconds": 12065.8600249,
+        "sample_gap_seconds": 0.9791494000000966,
+        "sampler_elapsed_seconds": 0.2787355000000389,
+        "owner_pid": 10468,
+        "cpu": {
+          "percent": 64.8,
+          "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+        },
+        "memory": {
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "sources": {
+            "physical": "GlobalMemoryStatusEx",
+            "system_commit": "PSAPI GetPerformanceInfo",
+            "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+          },
+          "physical_total_bytes": 136963248128,
+          "physical_available_bytes": 115470532608,
+          "physical_used_bytes": 21492715520,
+          "commit_limit_bytes": 145553182720,
+          "commit_used_bytes": 23797768192,
+          "commit_available_bytes": 121755414528,
+          "commit_total_pages": 5810002,
+          "commit_limit_pages": 35535445,
+          "commit_page_size_bytes": 4096,
+          "gms_pagefile_total_bytes": 145553182720,
+          "gms_pagefile_avail_bytes_unclassified": 121755414528,
+          "pagefile_total_bytes": null,
+          "pagefile_used_bytes": null
+        },
+        "ram_gate": {
+          "status": "pass",
+          "available_gib": 107.54,
+          "required_gib": 12
+        },
+        "commit_gate": {
+          "status": "pass",
+          "available_gib": 113.394,
+          "required_gib": 4.0,
+          "source": "PSAPI GetPerformanceInfo"
+        },
+        "owner_process_tree": [
+          {
+            "pid": 10468,
+            "parent_pid": 22364,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 76324864,
+            "io_read_bytes": 38330739,
+            "io_write_bytes": 4660698,
+            "cpu_user_seconds": 13.921875,
+            "cpu_system_seconds": 0.421875,
+            "errors": []
+          },
+          {
+            "pid": 9692,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+            "rss_bytes": 4186112,
+            "io_read_bytes": 185,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 8880,
+            "parent_pid": 10468,
+            "name": "python.exe",
+            "executable_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "rss_bytes": 4182016,
+            "io_read_bytes": 2803,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 3188,
+            "parent_pid": 8880,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7913472,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.03125,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 12148,
+            "parent_pid": 8880,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 484597760,
+            "io_read_bytes": 38912640,
+            "io_write_bytes": 2568071,
+            "cpu_user_seconds": 0.703125,
+            "cpu_system_seconds": 0.5625,
+            "errors": []
+          },
+          {
+            "pid": 14012,
+            "parent_pid": 9692,
+            "name": "conhost.exe",
+            "executable_path": "C:\\Windows\\System32\\conhost.exe",
+            "rss_bytes": 7917568,
+            "io_read_bytes": 0,
+            "io_write_bytes": 0,
+            "cpu_user_seconds": 0.0,
+            "cpu_system_seconds": 0.0,
+            "errors": []
+          },
+          {
+            "pid": 19636,
+            "parent_pid": 9692,
+            "name": "python.exe",
+            "executable_path": "C:\\Python314\\python.exe",
+            "rss_bytes": 26619904,
+            "io_read_bytes": 2142485,
+            "io_write_bytes": 15694,
+            "cpu_user_seconds": 0.0625,
+            "cpu_system_seconds": 0.171875,
+            "errors": []
+          }
+        ],
+        "disk_io": {
+          "PhysicalDrive0": {
+            "read_bytes": 11235841024,
+            "write_bytes": 6119191040,
+            "read_count": 306729,
+            "write_count": 346320,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive1": {
+            "read_bytes": 321402089984,
+            "write_bytes": 59252872192,
+            "read_count": 10035596,
+            "write_count": 228554,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive2": {
+            "read_bytes": 583092224,
+            "write_bytes": 2285568,
+            "read_count": 4602,
+            "write_count": 449,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          },
+          "PhysicalDrive3": {
+            "read_bytes": 362622121472,
+            "write_bytes": 0,
+            "read_count": 5169849,
+            "write_count": 0,
+            "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+            "volume_mapping": "not_inferred"
+          }
+        },
+        "nvidia": {
+          "source": "nvidia-smi",
+          "telemetry_known": true,
+          "devices": [
+            {
+              "name": "NVIDIA GeForce RTX 4090 D",
+              "memory_used_mib": 246,
+              "memory_free_mib": 48383,
+              "utilization_percent": 0.0,
+              "power_watts": 7.67,
+              "temperature_c": 30.0,
+              "telemetry_known": true,
+              "optional": {
+                "clocks.current.graphics": 210,
+                "clocks.current.memory": 405,
+                "pcie.link.gen.current": 1,
+                "pcie.link.width.current": 8
+              }
+            }
+          ]
+        },
+        "alerts": [],
+        "errors": []
+      },
+      "init": {
+        "request_id": 57,
+        "nonce": "1835602e1fbbcf8f419185a30b14083c",
+        "client_rtt_ns": 177860900,
+        "worker_wall_ns": 176824000,
+        "reported_compile_ns": 173729700,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 256,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 173729700,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "cached_graph_reused": false,
+          "nonce": "1835602e1fbbcf8f419185a30b14083c",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        }
+      },
+      "warmup": {
+        "request_id": 58,
+        "rtt_ns": 18346300,
+        "wire_rtt_ns_before_numpy_output_copy": 17497200,
+        "worker_wall_ns": 5487100,
+        "rtt_minus_worker_ns_descriptive": 12859200,
+        "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+        "input_bytes": 2621440,
+        "output_sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+        "output_bytes": 2621440
+      },
+      "formals": [
+        {
+          "request_id": 59,
+          "rtt_ns": 17795600,
+          "wire_rtt_ns_before_numpy_output_copy": 16922200,
+          "worker_wall_ns": 5218900,
+          "rtt_minus_worker_ns_descriptive": 12576700,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "input_bytes": 2621440,
+          "output_sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+          "output_bytes": 2621440,
+          "formal_index": 1,
+          "input_shape": [
+            256,
+            2560
+          ],
+          "output_shape": [
+            256,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 3.91155481338501e-08,
+            "relative_rmse": 1.0786302996177604e-06,
+            "max_row_norm_relative_error": 4.082284747114061e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003735718200914562,
+            "relative_rmse": 0.012444534009332807,
+            "max_row_norm_relative_error": 0.0033200602550044612,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 60,
+          "rtt_ns": 17253500,
+          "wire_rtt_ns_before_numpy_output_copy": 16443200,
+          "worker_wall_ns": 5269400,
+          "rtt_minus_worker_ns_descriptive": 11984100,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "input_bytes": 2621440,
+          "output_sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+          "output_bytes": 2621440,
+          "formal_index": 2,
+          "input_shape": [
+            256,
+            2560
+          ],
+          "output_shape": [
+            256,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 3.91155481338501e-08,
+            "relative_rmse": 1.0786302996177604e-06,
+            "max_row_norm_relative_error": 4.082284747114061e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003735718200914562,
+            "relative_rmse": 0.012444534009332807,
+            "max_row_norm_relative_error": 0.0033200602550044612,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 61,
+          "rtt_ns": 17085400,
+          "wire_rtt_ns_before_numpy_output_copy": 16310200,
+          "worker_wall_ns": 5008400,
+          "rtt_minus_worker_ns_descriptive": 12077000,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "input_bytes": 2621440,
+          "output_sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+          "output_bytes": 2621440,
+          "formal_index": 3,
+          "input_shape": [
+            256,
+            2560
+          ],
+          "output_shape": [
+            256,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 3.91155481338501e-08,
+            "relative_rmse": 1.0786302996177604e-06,
+            "max_row_norm_relative_error": 4.082284747114061e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003735718200914562,
+            "relative_rmse": 0.012444534009332807,
+            "max_row_norm_relative_error": 0.0033200602550044612,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 62,
+          "rtt_ns": 17659100,
+          "wire_rtt_ns_before_numpy_output_copy": 16758400,
+          "worker_wall_ns": 4756300,
+          "rtt_minus_worker_ns_descriptive": 12902800,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "input_bytes": 2621440,
+          "output_sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+          "output_bytes": 2621440,
+          "formal_index": 4,
+          "input_shape": [
+            256,
+            2560
+          ],
+          "output_shape": [
+            256,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 3.91155481338501e-08,
+            "relative_rmse": 1.0786302996177604e-06,
+            "max_row_norm_relative_error": 4.082284747114061e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003735718200914562,
+            "relative_rmse": 0.012444534009332807,
+            "max_row_norm_relative_error": 0.0033200602550044612,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        },
+        {
+          "request_id": 63,
+          "rtt_ns": 17930900,
+          "wire_rtt_ns_before_numpy_output_copy": 17121700,
+          "worker_wall_ns": 5285600,
+          "rtt_minus_worker_ns_descriptive": 12645300,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "input_bytes": 2621440,
+          "output_sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+          "output_bytes": 2621440,
+          "formal_index": 5,
+          "input_shape": [
+            256,
+            2560
+          ],
+          "output_shape": [
+            256,
+            2560
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "f32_reference_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 3.91155481338501e-08,
+            "relative_rmse": 1.0786302996177604e-06,
+            "max_row_norm_relative_error": 4.082284747114061e-07,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "native_cpu_informational_quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 0.0003735718200914562,
+            "relative_rmse": 0.012444534009332807,
+            "max_row_norm_relative_error": 0.0033200602550044612,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": false
+          },
+          "native_cpu_comparison_scope": "different native Q4_K/Q5_1 + Q8 activation arithmetic; report only, do not widen F32 reference tolerance"
+        }
+      ],
+      "status": "complete",
+      "stored_last_formal_f32_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn\\output-256.f32",
+        "bytes": 2621440,
+        "sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+        "readback_sha256": "3e43eb73ef9482840be1fd1dfc624db14e882df16e331712f5dd4f126ef11e70",
+        "readback_verified": true
+      },
+      "timing_summary": {
+        "rtt_ns_mean": 17544900,
+        "rtt_ns_median": 17659100,
+        "rtt_ns_spread_max_minus_min": 845500,
+        "worker_wall_ns_mean": 5107720,
+        "worker_wall_ns_median": 5218900,
+        "worker_wall_ns_spread_max_minus_min": 529300,
+        "compile_ns_excluded": 173729700
+      }
+    }
+  ],
+  "device_requested": "GPU.0",
+  "precision_requested": "f32",
+  "native_cpu_comparison_note": "Native quantized CPU uses Q4_K/Q5_1 with Q8 activation arithmetic; compare descriptively under unchanged F32 tolerances, not as the F32 acceptance reference.",
+  "timing_note": "Client RTT includes F32LE input serialization, IPC, response receipt and client-owned contiguous NumPy F32 output copy. The separately recorded wire RTT ends before that NumPy copy. worker_wall_ns is service-local duration; subtraction is descriptive only.",
+  "model_route_claim": false,
+  "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "weights_header_info": {
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+    "size_bytes": 19661538,
+    "mtime_ns": 1791515299026387800,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 562949953527697
+    },
+    "tensors": {
+      "gate": {
+        "shape": [
+          640,
+          2560
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57"
+      },
+      "up": {
+        "shape": [
+          640,
+          2560
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5"
+      },
+      "down": {
+        "shape": [
+          2560,
+          640
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+      }
+    },
+    "hidden": 2560,
+    "intermediate": 640,
+    "tensor_payload_bytes": 19660800,
+    "max_tensor_payload_bytes": 536870912,
+    "payload_hashes_verified": false,
+    "tensor_arrays_materialized": false
+  },
+  "weights_payload_hashes_verified": {
+    "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+    "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+    "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+  },
+  "input_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\inputs-receipt.json",
+  "inputs_verified": {
+    "1": {
+      "sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+      "bytes": 10240
+    },
+    "2": {
+      "sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+      "bytes": 20480
+    },
+    "4": {
+      "sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+      "bytes": 40960
+    },
+    "8": {
+      "sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+      "bytes": 81920
+    },
+    "16": {
+      "sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+      "bytes": 163840
+    },
+    "32": {
+      "sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+      "bytes": 327680
+    },
+    "64": {
+      "sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+      "bytes": 655360
+    },
+    "128": {
+      "sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+      "bytes": 1310720
+    },
+    "256": {
+      "sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+      "bytes": 2621440
+    }
+  },
+  "native_cpu_outputs_verified": {
+    "1": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+    "2": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+    "4": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+    "8": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+    "16": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+    "32": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+    "64": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+    "128": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+    "256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8"
+  },
+  "system_gates_before_worker": {
+    "at_utc": "2026-10-09T06:13:55.037072+00:00",
+    "physical_bytes": 115950415872,
+    "physical_gib": 107.98723983764648,
+    "commit_bytes": 122651017216,
+    "commit_gib": 114.2276611328125,
+    "status": "pass"
+  },
+  "resource_observer": {
+    "pid": 9692,
+    "argv": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "--output",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\resource\\samples.jsonl",
+      "--pid",
+      "10468",
+      "--interval",
+      "1",
+      "--max-seconds",
+      "3600",
+      "--minimum-commit-gib",
+      "4",
+      "--stop-file",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\resource\\STOP"
+    ],
+    "output": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\resource\\samples.jsonl"
+  },
+  "resource_gate_initial": {
+    "schema_version": 1,
+    "record_type": "resource_sample",
+    "observed_at_utc": "2026-10-09T06:13:55.151Z",
+    "monotonic_seconds": 12061.8593678,
+    "sample_gap_seconds": null,
+    "sampler_elapsed_seconds": 0.13185060000068916,
+    "owner_pid": 10468,
+    "cpu": {
+      "percent": 0.0,
+      "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+    },
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 115938492416,
+      "physical_used_bytes": 21024755712,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 22913785856,
+      "commit_available_bytes": 122639396864,
+      "commit_total_pages": 5594186,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 122639396864,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "ram_gate": {
+      "status": "pass",
+      "available_gib": 107.976,
+      "required_gib": 12
+    },
+    "commit_gate": {
+      "status": "pass",
+      "available_gib": 114.217,
+      "required_gib": 4.0,
+      "source": "PSAPI GetPerformanceInfo"
+    },
+    "owner_process_tree": [
+      {
+        "pid": 10468,
+        "parent_pid": 22364,
+        "name": "python.exe",
+        "executable_path": "C:\\Python314\\python.exe",
+        "rss_bytes": 68206592,
+        "io_read_bytes": 35349870,
+        "io_write_bytes": 11907,
+        "cpu_user_seconds": 0.078125,
+        "cpu_system_seconds": 0.0625,
+        "errors": []
+      },
+      {
+        "pid": 9692,
+        "parent_pid": 10468,
+        "name": "python.exe",
+        "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "rss_bytes": 4186112,
+        "io_read_bytes": 185,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0,
+        "errors": []
+      },
+      {
+        "pid": 14012,
+        "parent_pid": 9692,
+        "name": "conhost.exe",
+        "executable_path": "C:\\Windows\\System32\\conhost.exe",
+        "rss_bytes": 7917568,
+        "io_read_bytes": 0,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0,
+        "errors": []
+      },
+      {
+        "pid": 19636,
+        "parent_pid": 9692,
+        "name": "python.exe",
+        "executable_path": "C:\\Python314\\python.exe",
+        "rss_bytes": 26206208,
+        "io_read_bytes": 2142213,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.046875,
+        "cpu_system_seconds": 0.046875,
+        "errors": []
+      }
+    ],
+    "disk_io": {
+      "PhysicalDrive0": {
+        "read_bytes": 11060677632,
+        "write_bytes": 6115188736,
+        "read_count": 299822,
+        "write_count": 345943,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive1": {
+        "read_bytes": 321358672896,
+        "write_bytes": 59251643392,
+        "read_count": 10034070,
+        "write_count": 228507,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive2": {
+        "read_bytes": 583092224,
+        "write_bytes": 2285568,
+        "read_count": 4602,
+        "write_count": 449,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive3": {
+        "read_bytes": 362622121472,
+        "write_bytes": 0,
+        "read_count": 5169849,
+        "write_count": 0,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      }
+    },
+    "nvidia": {
+      "source": "nvidia-smi",
+      "telemetry_known": true,
+      "devices": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "memory_used_mib": 246,
+          "memory_free_mib": 48383,
+          "utilization_percent": 0.0,
+          "power_watts": 7.22,
+          "temperature_c": 30.0,
+          "telemetry_known": true,
+          "optional": {
+            "clocks.current.graphics": 210,
+            "clocks.current.memory": 405,
+            "pcie.link.gen.current": 1,
+            "pcie.link.width.current": 8
+          }
+        }
+      ]
+    },
+    "alerts": [],
+    "errors": []
+  },
+  "worker": {
+    "pid": 8880,
+    "argv": [
+      "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+      "--serve",
+      "--weights",
+      "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+      "--identity",
+      "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+      "--device",
+      "GPU.0",
+      "--precision",
+      "f32"
+    ],
+    "spawn_wall_ns": 11609800
+  },
+  "worker_closed": {
+    "pid": 8880,
+    "returncode": 1,
+    "reaped": true
+  },
+  "resource_observer_closed": {
+    "pid": 9692,
+    "returncode": 0,
+    "stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\resource\\STOP"
+  },
+  "finished_utc": "2026-10-09T06:14:01.166472+00:00",
+  "all_shapes_complete": true
+}

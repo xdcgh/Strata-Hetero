@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-19-arc-ipc-ffn",
+  "status": "prepared_waiting_for_root_start_signal",
+  "execution_authorized": false,
+  "scope": "One real-expert FFN IPC benchmark on exact Intel Arc GPU.0. No model route, service API, NPU, H5, device fallback, or shared-CPU speedup claim.",
+  "weights": {
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+    "identity_path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+    "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+    "identity": {
+      "model": "Qwen3.8-Flash-Next Unsloth UD-Q4_K_XL",
+      "shard": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "layer": 28,
+      "expert": 288,
+      "weights_sha256": {
+        "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+        "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+        "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+      }
+    },
+    "extraction_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-01-real-expert\\extraction-01.json",
+    "extraction_receipt_sha256": "e4b8083e5f8f39f04affcb99e4a292bdad92ecf132462499561bbaddbd9dac9d",
+    "npz_expected_shapes": {
+      "gate": [
+        640,
+        2560
+      ],
+      "up": [
+        640,
+        2560
+      ],
+      "down": [
+        2560,
+        640
+      ]
+    }
+  },
+  "worker": {
+    "owned_pipe_api": "tools.hetero_xpu_transport.OwnedPipeWorker",
+    "service_script": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+    "argv": [
+      "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+      "--serve",
+      "--weights",
+      "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+      "--identity",
+      "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+      "--device",
+      "GPU.0",
+      "--precision",
+      "f32"
+    ],
+    "device": "GPU.0",
+    "precision": "f32",
+    "init_schema": "strata-xpu-init-v1",
+    "init_kind": 1,
+    "infer_kind": 2,
+    "result_prefix": "<u32 status, u64 worker_wall_ns>",
+    "request_ids": "strictly increasing UInt64, starting at 1; one child worker for all nine shapes",
+    "init_nonce": "fresh 32-character hex nonce per shape",
+    "compile_and_init_timing": "record child start-to-ready, INIT client RTT and reported compile_ns separately; excluded from inference latency",
+    "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\logs\\arc-worker.stderr.log"
+  },
+  "inputs": {
+    "receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\inputs-receipt.json",
+    "receipt_sha256": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+    "native_cpu_run_summary": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\run-summary.json",
+    "native_cpu_run_status": "complete_with_quality_failures",
+    "rows": [
+      {
+        "rows": 1,
+        "shape": [
+          1,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+        "input_bytes": 10240,
+        "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+        "native_cpu_output_bytes": 10240,
+        "native_cpu_output_sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.011067426946947104,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-001\\comparison.json"
+      },
+      {
+        "rows": 2,
+        "shape": [
+          2,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-002.f32",
+        "input_bytes": 20480,
+        "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-002.f32",
+        "native_cpu_output_bytes": 20480,
+        "native_cpu_output_sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.012333951942374572,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-002\\comparison.json"
+      },
+      {
+        "rows": 4,
+        "shape": [
+          4,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-004.f32",
+        "input_bytes": 40960,
+        "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-004.f32",
+        "native_cpu_output_bytes": 40960,
+        "native_cpu_output_sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.01222108582327333,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-004\\comparison.json"
+      },
+      {
+        "rows": 8,
+        "shape": [
+          8,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-008.f32",
+        "input_bytes": 81920,
+        "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-008.f32",
+        "native_cpu_output_bytes": 81920,
+        "native_cpu_output_sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.01298096471840956,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-008\\comparison.json"
+      },
+      {
+        "rows": 16,
+        "shape": [
+          16,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+        "input_bytes": 163840,
+        "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+        "native_cpu_output_bytes": 163840,
+        "native_cpu_output_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.0123097888806356,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-016\\comparison.json"
+      },
+      {
+        "rows": 32,
+        "shape": [
+          32,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-032.f32",
+        "input_bytes": 327680,
+        "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-032.f32",
+        "native_cpu_output_bytes": 327680,
+        "native_cpu_output_sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.012527179876984472,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-032\\comparison.json"
+      },
+      {
+        "rows": 64,
+        "shape": [
+          64,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-064.f32",
+        "input_bytes": 655360,
+        "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-064.f32",
+        "native_cpu_output_bytes": 655360,
+        "native_cpu_output_sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.012404527237087863,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-064\\comparison.json"
+      },
+      {
+        "rows": 128,
+        "shape": [
+          128,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-128.f32",
+        "input_bytes": 1310720,
+        "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-128.f32",
+        "native_cpu_output_bytes": 1310720,
+        "native_cpu_output_sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.012369696037272837,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-128\\comparison.json"
+      },
+      {
+        "rows": 256,
+        "shape": [
+          256,
+          2560
+        ],
+        "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-256.f32",
+        "input_bytes": 2621440,
+        "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+        "native_cpu_output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-256.f32",
+        "native_cpu_output_bytes": 2621440,
+        "native_cpu_output_sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+        "native_cpu_quality_vs_f32": false,
+        "native_cpu_relative_rmse_vs_f32": 0.012444221800046429,
+        "native_cpu_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-256\\comparison.json"
+      }
+    ],
+    "format": "token-major little-endian float32, shape [rows,2560]",
+    "recipe": "default_rng(seed+rows).standard_normal(shape,dtype=float32)*float32(0.25)"
+  },
+  "request_controls": {
+    "rows_in_order": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "warmups_per_shape": 1,
+    "formal_requests_per_shape": 5,
+    "seed": 42,
+    "timeout_seconds": 300,
+    "concurrency": 1
+  },
+  "timing_contract": {
+    "client_rtt_start": "immediately before per-request contiguous F32LE input serialization",
+    "client_rtt_end": "after response frame/status parsing and owned output bytes copy",
+    "worker_wall_ns": "service duration from worker response prefix; its clock domain differs from client RTT",
+    "rtt_minus_worker": "record as descriptive duration subtraction only; not an independently clock-synchronized metric",
+    "input_sha256": "compute outside timed interval",
+    "output_sha256": "compute outside timed interval",
+    "quality_and_finite_stats": "compute outside timed interval"
+  },
+  "quality_contract": {
+    "reference": "tools.hetero_xpu_worker.numpy_ffn using the same verified F32 weights and saved F32 inputs",
+    "acceptance_tolerances": {
+      "max_abs": 0.01,
+      "relative_rmse": 0.001,
+      "row_norm_relative": 0.001
+    },
+    "finite_and_shape_required": true,
+    "tolerance_widening": false,
+    "native_cpu_comparison": "also report the same statistics versus the saved native quantized CPU output; this uses different Q4_K/Q5_1 and Q8 activation arithmetic and is informational, never a replacement F32 reference or reason to widen tolerance",
+    "native_cpu_prior_quality": "the existing native-CPU run has approximately 1% relative-RMSE differences from F32; preserve and label per-row measurements",
+    "model_route_claim": false
+  },
+  "outputs": {
+    "directory": "E:\\Strata-Hetero-data\\experts\\20261009-19-arc-ipc-ffn",
+    "one_final_f32_file_per_rows": true,
+    "names": "output-{rows:03d}.f32",
+    "write_mode": "exclusive",
+    "readback_sha256_required": true,
+    "receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\receipt.json",
+    "formal_csv": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\formal-results.csv",
+    "resource_samples": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\resource\\samples.jsonl",
+    "worker_stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\logs\\arc-worker.stderr.log",
+    "sampler_logs": [
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\logs\\resource.stdout.log",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-19-arc-ipc-ffn\\logs\\resource.stderr.log"
+    ]
+  },
+  "resource_gates": {
+    "physical_available_gib_min": 12,
+    "system_commit_available_gib_min": 4,
+    "source": "GlobalMemoryStatusEx physical plus PSAPI GetPerformanceInfo system commit",
+    "observer": "owned tools/hetero_resources.py child, 1 second samples",
+    "check_before_each_shape": true,
+    "check_before_and_after_each_formal": true,
+    "unknown_or_alert_or_error": "stop before next INFER, preserve evidence, close exact owned workers"
+  },
+  "failure_policy": {
+    "unknown_device_or_precision_or_execution_fallback": "stop immediately",
+    "timeout_or_frame_error_or_nonfinite_or_shape_error": "stop immediately",
+    "numpy_f32_quality_failure": "stop immediately",
+    "preserve_partial_receipt_and_outputs": true,
+    "close_only_owned_pipe_worker_and_resource_observer": true
+  },
+  "limits": [
+    "No hardware/software changes.",
+    "No Core/device probing or child startup until explicit root start signal and CUDA build stop confirmation.",
+    "No timing claim about concurrent CPU+Arc contention; no native CPU pool comparison was performed.",
+    "No model-level routing or vision inference claim."
+  ]
+}
