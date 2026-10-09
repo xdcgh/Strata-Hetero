@@ -32,6 +32,8 @@ For this host, the verified SDK is `E:\Strata-Hetero-data\toolchains\cuda-13.3.1
 
 ## Repeated API measurements
 
+`tools/hetero_native_inputs.py` prepares a Strata native CPU comparison from an already completed real-expert extraction. Its default mode checks metadata and the original shard identities without reading tensor payloads or writing files. Explicit `--prepare --source-receipt ... --output-dir <new-absolute-directory> --receipt <new-absolute-path>` reads only the selected gate/up/down slices, verifies their prior scoped hashes, and concatenates the original quantized bytes. It does not requantize the float32 NPZ. Nine little-endian float32 input files use the same seeded recipe as the OpenVINO expert probe, with independent small-artifact readback hashes. Preparation is separate from a kernel or model measurement.
+
 After admitting and starting an isolated loopback server, validate the client without a request:
 
 ```text
