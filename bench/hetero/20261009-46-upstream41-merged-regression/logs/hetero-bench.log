@@ -1,0 +1,64 @@
+test_cached_or_unknown_prefill_does_not_become_uncached_speed (__main__.HeteroBenchTests.test_cached_or_unknown_prefill_does_not_become_uncached_speed) ... ok
+test_clean_length_cap_can_time_output_without_claiming_quality (__main__.HeteroBenchTests.test_clean_length_cap_can_time_output_without_claiming_quality) ... ok
+test_existing_run_path_is_never_overwritten (__main__.HeteroBenchTests.test_existing_run_path_is_never_overwritten) ... ok
+test_generated_token_equals_seven_is_not_rewritten (__main__.HeteroBenchTests.test_generated_token_equals_seven_is_not_rewritten) ... ok
+test_identity_shape_and_live_comparison_do_not_auto_accept (__main__.HeteroBenchTests.test_identity_shape_and_live_comparison_do_not_auto_accept) ... ok
+test_live_identity_mismatch_writes_receipt_without_benchmark_requests (__main__.HeteroBenchTests.test_live_identity_mismatch_writes_receipt_without_benchmark_requests) ... ok
+test_output_bytes_preserve_unicode_and_intentional_line_endings (__main__.HeteroBenchTests.test_output_bytes_preserve_unicode_and_intentional_line_endings) ... ok
+test_proxy_is_disabled_and_redirects_are_rejected (__main__.HeteroBenchTests.test_proxy_is_disabled_and_redirects_are_rejected) ... ok
+test_redaction_and_response_artifacts_never_store_api_key (__main__.HeteroBenchTests.test_redaction_and_response_artifacts_never_store_api_key) ... ok
+test_remote_base_url_rejected (__main__.HeteroBenchTests.test_remote_base_url_rejected) ... ok
+test_server_error_event_preserved_as_failure (__main__.HeteroBenchTests.test_server_error_event_preserved_as_failure) ... ok
+test_sse_usage_reasoning_and_role_empty_delta_ttft (__main__.HeteroBenchTests.test_sse_usage_reasoning_and_role_empty_delta_ttft) ... ok
+test_summary_excludes_failures_and_uses_formal_batch_wall_time (__main__.HeteroBenchTests.test_summary_excludes_failures_and_uses_formal_batch_wall_time) ... ok
+test_truncated_and_timeout_keep_partial_event (__main__.HeteroBenchTests.test_truncated_and_timeout_keep_partial_event) ... ok
+test_validate_only_has_no_network_or_output_side_effect (__main__.HeteroBenchTests.test_validate_only_has_no_network_or_output_side_effect) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.059s
+
+OK
+validation failed: run directory already exists: C:\Users\DC\AppData\Local\Temp\tmpdd47960n\runs\same
+{
+  "status": "identity_mismatch_preflight_failed",
+  "benchmark_started": false,
+  "identity_comparison": {
+    "status": "mismatch",
+    "matches": {
+      "model": false,
+      "engine": false
+    },
+    "mismatches": [
+      "model",
+      "engine"
+    ],
+    "unverifiable": [
+      "schema",
+      "source",
+      "config"
+    ],
+    "live_model": "wrong-model",
+    "live_engine_build_info": "Strata 2.0"
+  },
+  "live_identity": {
+    "health": {
+      "model": "wrong-model"
+    },
+    "models": {
+      "data": [
+        {
+          "id": "wrong-model"
+        }
+      ]
+    },
+    "props": {
+      "build_info": "Strata 2.0"
+    }
+  }
+}
+{
+  "valid": true,
+  "network": false,
+  "run_directory": "C:\\Users\\DC\\AppData\\Local\\Temp\\tmpvzaldidn\\runs\\dry-run",
+  "identity_verification": "unverified"
+}

@@ -1,0 +1,1 @@
+PowerShell rejected bare JSON literal false in the runner metadata hashtable; no suite began; exit code 1.

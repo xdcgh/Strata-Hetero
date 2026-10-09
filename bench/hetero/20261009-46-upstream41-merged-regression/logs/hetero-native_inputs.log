@@ -1,0 +1,12 @@
+test_changed_payload_between_inspection_and_prepare_creates_nothing (__main__.NativeInputTests.test_changed_payload_between_inspection_and_prepare_creates_nothing) ... ok
+test_exact_quantized_concat_and_input_recipe (__main__.NativeInputTests.test_exact_quantized_concat_and_input_recipe) ... ok
+test_existing_directory_is_preserved (__main__.NativeInputTests.test_existing_directory_is_preserved) ... ok
+test_metadata_does_not_read_payload_or_write_outputs (__main__.NativeInputTests.test_metadata_does_not_read_payload_or_write_outputs) ... ok
+test_out_of_range_payload_offset_is_refused (__main__.NativeInputTests.test_out_of_range_payload_offset_is_refused) ... ok
+test_source_changed_since_receipt_is_refused (__main__.NativeInputTests.test_source_changed_since_receipt_is_refused) ... ok
+test_wrong_scoped_hash_creates_nothing (__main__.NativeInputTests.test_wrong_scoped_hash_creates_nothing) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.175s
+
+OK

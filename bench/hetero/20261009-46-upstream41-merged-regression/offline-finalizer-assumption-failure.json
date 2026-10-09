@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "offline_finalizer_rejected_due_to_wrong_expected_totals",
+  "runner_sha256": "8d5fc49a0baa98b815eb6f19885267de5fdeec5ef85ee5226701d5340b67e840",
+  "finalizer_sha256": "97d4e92734d9eb5dec24eff9cee809aba5461cc75396dede6fe5252ff4292daf",
+  "observed_python_tests_run": 792,
+  "observed_python_tests_passed": 791,
+  "observed_python_tests_skipped": 1,
+  "observed_python_tests_failed": 0,
+  "custom_fixture_cases": 10,
+  "tests_rerun": 0,
+  "reason": "Hardcoded expected count did not account for merged-tree tests added to existing vision and XPU service suites; all command receipts and suite logs agree on observed counts.",
+  "recorded_utc": "2026-10-09T12:24:13.5531646Z"
+}

@@ -1,0 +1,49 @@
+test_cpu_and_gpu_still_require_both_compile_hints (__main__.HeteroXpuWorkerTests.test_cpu_and_gpu_still_require_both_compile_hints) ... ok
+test_device_cli_rejects_fallback_names (__main__.HeteroXpuWorkerTests.test_device_cli_rejects_fallback_names) ... usage: test_hetero_xpu_worker.py [-h] [--validate-only | --run]
+                                 --weights WEIGHTS --identity IDENTITY
+                                 [--device {CPU,GPU.0,NPU}]
+                                 [--precision {f32,f16}] [--repeat REPEAT]
+                                 [--warmups WARMUPS] [--seed SEED]
+                                 [--output OUTPUT] [--max-abs-tol MAX_ABS_TOL]
+                                 [--relative-rmse-tol RELATIVE_RMSE_TOL]
+                                 [--row-norm-rel-tol ROW_NORM_REL_TOL]
+test_hetero_xpu_worker.py: error: argument --device: invalid choice: 'AUTO' (choose from 'CPU', 'GPU.0', 'NPU')
+usage: test_hetero_xpu_worker.py [-h] [--validate-only | --run]
+                                 --weights WEIGHTS --identity IDENTITY
+                                 [--device {CPU,GPU.0,NPU}]
+                                 [--precision {f32,f16}] [--repeat REPEAT]
+                                 [--warmups WARMUPS] [--seed SEED]
+                                 [--output OUTPUT] [--max-abs-tol MAX_ABS_TOL]
+                                 [--relative-rmse-tol RELATIVE_RMSE_TOL]
+                                 [--row-norm-rel-tol ROW_NORM_REL_TOL]
+test_hetero_xpu_worker.py: error: argument --device: invalid choice: 'HETERO:GPU,CPU' (choose from 'CPU', 'GPU.0', 'NPU')
+usage: test_hetero_xpu_worker.py [-h] [--validate-only | --run]
+                                 --weights WEIGHTS --identity IDENTITY
+                                 [--device {CPU,GPU.0,NPU}]
+                                 [--precision {f32,f16}] [--repeat REPEAT]
+                                 [--warmups WARMUPS] [--seed SEED]
+                                 [--output OUTPUT] [--max-abs-tol MAX_ABS_TOL]
+                                 [--relative-rmse-tol RELATIVE_RMSE_TOL]
+                                 [--row-norm-rel-tol ROW_NORM_REL_TOL]
+test_hetero_xpu_worker.py: error: argument --device: invalid choice: 'GPU' (choose from 'CPU', 'GPU.0', 'NPU')
+ok
+test_execution_device_must_match_requested_identifier_exactly (__main__.HeteroXpuWorkerTests.test_execution_device_must_match_requested_identifier_exactly) ... ok
+test_identity_requires_explicit_expert_and_hashes (__main__.HeteroXpuWorkerTests.test_identity_requires_explicit_expert_and_hashes) ... ok
+test_npu_compile_policy_omits_unadvertised_hints_and_keeps_precision_unknown (__main__.HeteroXpuWorkerTests.test_npu_compile_policy_omits_unadvertised_hints_and_keeps_precision_unknown) ... ok
+test_npu_full_name_accepts_intel_ai_boost_alias (__main__.HeteroXpuWorkerTests.test_npu_full_name_accepts_intel_ai_boost_alias) ... ok
+test_npu_submits_only_advertised_precision_hint (__main__.HeteroXpuWorkerTests.test_npu_submits_only_advertised_precision_hint) ... ok
+test_npz_header_metadata_and_real_run_payload_hash_check (__main__.HeteroXpuWorkerTests.test_npz_header_metadata_and_real_run_payload_hash_check) ... ok
+test_numpy_ffn_reference_is_finite_and_quality_metrics_gate (__main__.HeteroXpuWorkerTests.test_numpy_ffn_reference_is_finite_and_quality_metrics_gate) ... ok
+test_payload_hash_mismatch_is_rejected (__main__.HeteroXpuWorkerTests.test_payload_hash_mismatch_is_rejected) ... ok
+test_precision_policy_unknown_and_mismatch_are_not_verified (__main__.HeteroXpuWorkerTests.test_precision_policy_unknown_and_mismatch_are_not_verified) ... ok
+test_rejects_big_endian_float32 (__main__.HeteroXpuWorkerTests.test_rejects_big_endian_float32) ... ok
+test_rejects_implausible_dimension_before_payload_load (__main__.HeteroXpuWorkerTests.test_rejects_implausible_dimension_before_payload_load) ... ok
+test_rejects_overdeclared_tensor_payload_from_small_header_without_allocating_it (__main__.HeteroXpuWorkerTests.test_rejects_overdeclared_tensor_payload_from_small_header_without_allocating_it) ... ok
+test_rejects_wrong_tensor_shape_dtype_and_extra_member (__main__.HeteroXpuWorkerTests.test_rejects_wrong_tensor_shape_dtype_and_extra_member) ... ok
+test_row_shapes_and_modes_are_explicit (__main__.HeteroXpuWorkerTests.test_row_shapes_and_modes_are_explicit) ... ok
+test_validate_only_reads_headers_and_has_no_side_effects_or_openvino_import (__main__.HeteroXpuWorkerTests.test_validate_only_reads_headers_and_has_no_side_effects_or_openvino_import) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.122s
+
+OK

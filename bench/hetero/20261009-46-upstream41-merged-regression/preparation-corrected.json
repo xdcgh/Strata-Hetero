@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-46-upstream41-merged-regression",
+  "source_head": "167689590a66d4ad620b5e8cc0b7893190fc19d5",
+  "branch": "codex/45-upstream41-runtime",
+  "status_before": [
+    "?? bench/hetero/20261009-43-vision-stage-openvino/",
+    "?? bench/hetero/20261009-46-upstream41-merged-regression/"
+  ],
+  "execution_scope": "pure Python/PowerShell unit and fake fixtures only; no compile/model/API/GPU/OpenVINO/Core/download",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "python_sha256": "16a377d348c3a0c8d3a58d222d96807065dd0dcd9438c6025900c842ec836603",
+  "python_info": "captured by runner",
+  "pythonpath_scope": "process-local repo root + tools only for direct tools/test_hetero_*.py",
+  "intel_venv_used": false,
+  "openvino_core_initialized": false,
+  "started_utc": "2026-10-09T12:17:01.6623885Z",
+  "prior_invalid_preparation_artifact": "preparation.json contains null from a pre-run path-literal construction error; retained unchanged",
+  "runner_script": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-46-upstream41-merged-regression\\run-regression.ps1",
+  "runner_sha256": "8d5fc49a0baa98b815eb6f19885267de5fdeec5ef85ee5226701d5340b67e840",
+  "planned_test_counts": {
+    "run33_reused_tests": 770,
+    "new_planner_runtime_tests": "captured from test summaries",
+    "powershell_jsonl_fixture_cases": 10
+  },
+  "preflight_attempt_backup_sha256": "e4b1164543a87631ed3d6696f5ab82216a162c908b2d5176dc68559f41555207",
+  "runner_preflight_correction": "Test-Path operands individually parenthesized; first runner invocation stopped before suites began",
+  "preflight_attempt_02_backup_sha256": "15890e30368ea8b8a6edaa8fef57d5dd5383cc9c39a42b1b6790c1e34af6fdc1",
+  "runner_preflight_correction_02": "bare false literal corrected to PowerShell $false; no test suite began in previous attempt"
+}

@@ -1,0 +1,14 @@
+test_distinct_user_acceptance_thresholds_and_npu_memory_benefit (__main__.PlannerTests.test_distinct_user_acceptance_thresholds_and_npu_memory_benefit) ... ok
+test_end_to_end_threshold_and_margin (__main__.PlannerTests.test_end_to_end_threshold_and_margin) ... ok
+test_f32_microbench_cannot_replace_native_operator_or_model_gate (__main__.PlannerTests.test_f32_microbench_cannot_replace_native_operator_or_model_gate) ... ok
+test_identity_expiry_and_unmeasured_shape_preserve_primary (__main__.PlannerTests.test_identity_expiry_and_unmeasured_shape_preserve_primary) ... ok
+test_invalid_evidence_duplicates_and_clock_values_are_refused (__main__.PlannerTests.test_invalid_evidence_duplicates_and_clock_values_are_refused) ... ok
+test_measured_contention_and_unknown_cache_state_gate (__main__.PlannerTests.test_measured_contention_and_unknown_cache_state_gate) ... ok
+test_online_update_moves_choice_and_failure_quarantines (__main__.PlannerTests.test_online_update_moves_choice_and_failure_quarantines) ... ok
+test_queue_and_weight_wait_can_make_faster_compute_slower (__main__.PlannerTests.test_queue_and_weight_wait_can_make_faster_compute_slower) ... ok
+test_unknown_primary_weights_are_not_a_fictitious_zero_cost_hit (__main__.PlannerTests.test_unknown_primary_weights_are_not_a_fictitious_zero_cost_hit) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

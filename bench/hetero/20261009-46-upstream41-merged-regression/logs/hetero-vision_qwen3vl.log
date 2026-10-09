@@ -1,0 +1,21 @@
+test_bilinear_align_corners_plane_endpoints_and_singletons (__main__.VisionPreparationTests.test_bilinear_align_corners_plane_endpoints_and_singletons) ... ok
+test_cli_rejects_gguf_before_file_access (__main__.VisionPreparationTests.test_cli_rejects_gguf_before_file_access) ... ok
+test_decoded_identity_shape_hash_dtype_and_bf16_gates (__main__.VisionPreparationTests.test_decoded_identity_shape_hash_dtype_and_bf16_gates) ... ok
+test_entire_static_graph_with_tiny_host_evaluator_and_closed_form_projection (__main__.VisionPreparationTests.test_entire_static_graph_with_tiny_host_evaluator_and_closed_form_projection) ... ok
+test_gelu_variant_is_tanh_and_cpu_rounding_is_separate (__main__.VisionPreparationTests.test_gelu_variant_is_tanh_and_cpu_rounding_is_separate) ... ok
+test_invalid_build_is_rejected_before_openvino_import (__main__.VisionPreparationTests.test_invalid_build_is_rejected_before_openvino_import) ... ok
+test_linear_weight_direction_for_nonsquare_gguf_tensor (__main__.VisionPreparationTests.test_linear_weight_direction_for_nonsquare_gguf_tensor) ... ok
+test_ln1_qkv_aliases_reuse_computed_values_without_changing_projection (__main__.VisionPreparationTests.test_ln1_qkv_aliases_reuse_computed_values_without_changing_projection) ... ok
+test_mapped_array_is_rejected_before_payload_hash (__main__.VisionPreparationTests.test_mapped_array_is_rejected_before_payload_hash) ... ok
+test_merge_order_rectangular_grid_and_source_cont_permute (__main__.VisionPreparationTests.test_merge_order_rectangular_grid_and_source_cont_permute) ... ok
+test_metadata_only_cli_does_not_import_array_or_device_runtime (__main__.VisionPreparationTests.test_metadata_only_cli_does_not_import_array_or_device_runtime) ... ok
+test_missing_semantics_and_deepstack_are_rejected (__main__.VisionPreparationTests.test_missing_semantics_and_deepstack_are_rejected) ... ok
+test_nonzero_uniform_attention_ffn_residuals_and_both_norms (__main__.VisionPreparationTests.test_nonzero_uniform_attention_ffn_residuals_and_both_norms) ... ok
+test_positions_match_merge_coordinates_and_four_source_axes (__main__.VisionPreparationTests.test_positions_match_merge_coordinates_and_four_source_axes) ... ok
+test_unsupported_merge_and_incomplete_norm_fail (__main__.VisionPreparationTests.test_unsupported_merge_and_incomplete_norm_fail) ... ok
+test_vision_rope_matches_scalar_pinned_source_translation (__main__.VisionPreparationTests.test_vision_rope_matches_scalar_pinned_source_translation) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.060s
+
+OK

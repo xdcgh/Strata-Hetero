@@ -1,0 +1,73 @@
+{
+  "launcher": {
+    "pid": 16060,
+    "parent_pid": 3876,
+    "create_time": 1791547803.534717,
+    "executable": "e:\\strata-hetero-data\\venv\\scripts\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+      "--run"
+    ]
+  },
+  "descendants": [
+    {
+      "pid": 16636,
+      "parent_pid": 16060,
+      "create_time": 1791547803.5402253,
+      "executable": "c:\\windows\\system32\\conhost.exe",
+      "command_line": [
+        "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+        "0x4"
+      ]
+    },
+    {
+      "pid": 7512,
+      "parent_pid": 16060,
+      "create_time": 1791547803.5739768,
+      "executable": "c:\\python314\\python.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-u",
+        "-B",
+        "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+        "--run"
+      ]
+    }
+  ],
+  "actual_service_child": {
+    "pid": 7512,
+    "parent_pid": 16060,
+    "create_time": 1791547803.5739768,
+    "executable": "c:\\python314\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+      "--run"
+    ]
+  },
+  "live_service_children": 1,
+  "observed_utc": "2026-10-09T12:10:03.659431+00:00",
+  "outer_launcher_binding": {
+    "argv0_windows_path_normalized": true,
+    "ordered_argv_tail_exact": true,
+    "identity": {
+      "pid": 16060,
+      "parent_pid": 3876,
+      "create_time": 1791547803.534717,
+      "executable": "e:\\strata-hetero-data\\venv\\scripts\\python.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-u",
+        "-B",
+        "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+        "--run"
+      ]
+    }
+  },
+  "scope": "actual C Python OV controller; exact ordered argv tail"
+}

@@ -1,0 +1,11 @@
+{
+  "host_fixture_count": 3,
+  "host_fixture_exit_code": 0,
+  "default_plan_exit_code": 0,
+  "fixture_tool_chunk": "7fe002",
+  "native_client_unchanged": true,
+  "worker_timeout_seconds": 1800,
+  "scope": "root conditional CPU OV only; no NPU/GPU/affinity/C++ compile/retry",
+  "driver_sha256": "8da72cbc7c2128ff272821a67796b07ea972e6a61ede8480d2f79e0b03b33fc7",
+  "contract_sha256": "a90bde78407dbe3c2b3d02c103b5f93ab79569d5e87c15bd1744bad6f507aab1"
+}

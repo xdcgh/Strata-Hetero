@@ -1,0 +1,4591 @@
+{
+  "schema_version": 1,
+  "verified_by_bound_postrun_reader": true,
+  "warmup_output_count": 8,
+  "formal_outputs": [
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+      "file_sha256": "2c78c5006eff1c7de7dd9807df93cbe12bb93ffe09162975003e2a11c8e7d65a",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "eaf975d368d11737d518ecf4a2ecf35a41b9269b4dc4cdb03ba1534dac504e90",
+      "file_sha256": "f13b76263fc06865eeb54ebfde5cc7a4083d857d64831d063f1b947a2627cc00",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a1367dbe74c3002e64d3956b2bc7416d579e3e82dca02ed3e827fee488ce7435",
+      "file_sha256": "6e55576d7bbf6222871078742604252c24507e53bb2763e4393773e06e6f5f43",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7d45b9c7f41211d8e9b61dceaf21d9ce183459ea54365c74b7a72153f5db35e4",
+      "file_sha256": "3e202a47add845c8fbcc261dbcbfa53387e8035845faeb1c6ea0ab4ba81b7271",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ba119d2e5c6aa1c0b066c20f4a328dcbb2c3296af7a7ffca4e32bb843dd0ee7d",
+      "file_sha256": "5616303e88584c3082d098c1d350b93f2dccd40947f7c470977079542dd44fca",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f7c83a763382c766a258ed902fa96602e8c1921e5a9bc730088a05e4718f5860",
+      "file_sha256": "03e39989904fa977a72fe3be14535cf6888777b59f6d7ed2668260b27c7f09c1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "03313211ee8eb76188e1f1c9ba0a7041c3950dd9d0166caf04d1dca5e5cb4bb8",
+      "file_sha256": "dbb87fe53b4003e98f653cdce06809a42504eba1604f789d656ca8bcc17a0236",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4e88ff1efb99af10f274629f2d968c2209e158f23b83d41af07d049db14f13d1",
+      "file_sha256": "8f80e317d1560b10cc2a7477abae939522c74c1179c7e3511f93ea8961d36fd2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c9ffd20ffe274e32bf78f1a0d8ae9233d7ee24b47a2be7f4498fb37b1e5613fb",
+      "file_sha256": "662c8e2c99b520bd91acdf45f4cee7d759350d988bbe6aa6bfd4506f5bcaa98f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3a1fb3a08acffa804fb4e814be19d0735a75c510a143c6affb0b7ce1941ea223",
+      "file_sha256": "61e5f748897da5b49640a0212078edce8672a2ebf7b286cc6558fe09c8abcb12",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2235ba1040addf38aa42c280806dbebbc549a3da45187bb93404c9b1f3d402e5",
+      "file_sha256": "e0780280fb0faab7cb5a0bd3bb29e005d2f6149f1bf456c482330341aba70c3a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-1.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2235ba1040addf38aa42c280806dbebbc549a3da45187bb93404c9b1f3d402e5",
+      "file_sha256": "a1e1ee565cfc91088173f054e742fcc3f62f271e90a180a60d46ebaa350163e0",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+      "file_sha256": "2c78c5006eff1c7de7dd9807df93cbe12bb93ffe09162975003e2a11c8e7d65a",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "eaf975d368d11737d518ecf4a2ecf35a41b9269b4dc4cdb03ba1534dac504e90",
+      "file_sha256": "f13b76263fc06865eeb54ebfde5cc7a4083d857d64831d063f1b947a2627cc00",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a1367dbe74c3002e64d3956b2bc7416d579e3e82dca02ed3e827fee488ce7435",
+      "file_sha256": "6e55576d7bbf6222871078742604252c24507e53bb2763e4393773e06e6f5f43",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7d45b9c7f41211d8e9b61dceaf21d9ce183459ea54365c74b7a72153f5db35e4",
+      "file_sha256": "3e202a47add845c8fbcc261dbcbfa53387e8035845faeb1c6ea0ab4ba81b7271",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ba119d2e5c6aa1c0b066c20f4a328dcbb2c3296af7a7ffca4e32bb843dd0ee7d",
+      "file_sha256": "5616303e88584c3082d098c1d350b93f2dccd40947f7c470977079542dd44fca",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f7c83a763382c766a258ed902fa96602e8c1921e5a9bc730088a05e4718f5860",
+      "file_sha256": "03e39989904fa977a72fe3be14535cf6888777b59f6d7ed2668260b27c7f09c1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "03313211ee8eb76188e1f1c9ba0a7041c3950dd9d0166caf04d1dca5e5cb4bb8",
+      "file_sha256": "dbb87fe53b4003e98f653cdce06809a42504eba1604f789d656ca8bcc17a0236",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4e88ff1efb99af10f274629f2d968c2209e158f23b83d41af07d049db14f13d1",
+      "file_sha256": "8f80e317d1560b10cc2a7477abae939522c74c1179c7e3511f93ea8961d36fd2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c9ffd20ffe274e32bf78f1a0d8ae9233d7ee24b47a2be7f4498fb37b1e5613fb",
+      "file_sha256": "662c8e2c99b520bd91acdf45f4cee7d759350d988bbe6aa6bfd4506f5bcaa98f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3a1fb3a08acffa804fb4e814be19d0735a75c510a143c6affb0b7ce1941ea223",
+      "file_sha256": "61e5f748897da5b49640a0212078edce8672a2ebf7b286cc6558fe09c8abcb12",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2235ba1040addf38aa42c280806dbebbc549a3da45187bb93404c9b1f3d402e5",
+      "file_sha256": "e0780280fb0faab7cb5a0bd3bb29e005d2f6149f1bf456c482330341aba70c3a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-2.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2235ba1040addf38aa42c280806dbebbc549a3da45187bb93404c9b1f3d402e5",
+      "file_sha256": "a1e1ee565cfc91088173f054e742fcc3f62f271e90a180a60d46ebaa350163e0",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+      "file_sha256": "2c78c5006eff1c7de7dd9807df93cbe12bb93ffe09162975003e2a11c8e7d65a",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "eaf975d368d11737d518ecf4a2ecf35a41b9269b4dc4cdb03ba1534dac504e90",
+      "file_sha256": "f13b76263fc06865eeb54ebfde5cc7a4083d857d64831d063f1b947a2627cc00",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a1367dbe74c3002e64d3956b2bc7416d579e3e82dca02ed3e827fee488ce7435",
+      "file_sha256": "6e55576d7bbf6222871078742604252c24507e53bb2763e4393773e06e6f5f43",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7d45b9c7f41211d8e9b61dceaf21d9ce183459ea54365c74b7a72153f5db35e4",
+      "file_sha256": "3e202a47add845c8fbcc261dbcbfa53387e8035845faeb1c6ea0ab4ba81b7271",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ba119d2e5c6aa1c0b066c20f4a328dcbb2c3296af7a7ffca4e32bb843dd0ee7d",
+      "file_sha256": "5616303e88584c3082d098c1d350b93f2dccd40947f7c470977079542dd44fca",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f7c83a763382c766a258ed902fa96602e8c1921e5a9bc730088a05e4718f5860",
+      "file_sha256": "03e39989904fa977a72fe3be14535cf6888777b59f6d7ed2668260b27c7f09c1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "03313211ee8eb76188e1f1c9ba0a7041c3950dd9d0166caf04d1dca5e5cb4bb8",
+      "file_sha256": "dbb87fe53b4003e98f653cdce06809a42504eba1604f789d656ca8bcc17a0236",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4e88ff1efb99af10f274629f2d968c2209e158f23b83d41af07d049db14f13d1",
+      "file_sha256": "8f80e317d1560b10cc2a7477abae939522c74c1179c7e3511f93ea8961d36fd2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c9ffd20ffe274e32bf78f1a0d8ae9233d7ee24b47a2be7f4498fb37b1e5613fb",
+      "file_sha256": "662c8e2c99b520bd91acdf45f4cee7d759350d988bbe6aa6bfd4506f5bcaa98f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3a1fb3a08acffa804fb4e814be19d0735a75c510a143c6affb0b7ce1941ea223",
+      "file_sha256": "61e5f748897da5b49640a0212078edce8672a2ebf7b286cc6558fe09c8abcb12",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2235ba1040addf38aa42c280806dbebbc549a3da45187bb93404c9b1f3d402e5",
+      "file_sha256": "e0780280fb0faab7cb5a0bd3bb29e005d2f6149f1bf456c482330341aba70c3a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-gray-96-formal-3.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2235ba1040addf38aa42c280806dbebbc549a3da45187bb93404c9b1f3d402e5",
+      "file_sha256": "a1e1ee565cfc91088173f054e742fcc3f62f271e90a180a60d46ebaa350163e0",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+      "file_sha256": "c85073c40ee930ade4448481db2c26dd0059d5874dec290ff4d2776b9c5213ba",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "917d42978394f6302342bf4d8f71a9f6d2080ea74ccdf891817bdd5876de4149",
+      "file_sha256": "cc945708e9d505d72cb288afd6dd77d4a8dab6d40a20a4dd4d0922b28ea0f98f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4c9e6b59c8368180ae24d6530bb2d3ce8f1c2240f47a23591c2610307442d468",
+      "file_sha256": "8cd9a90a2e9ac9683c7ee97a37f40dccb03f4c1217b80af9c9d6d93b15cad7e6",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0551be5feeb987d1492d4bcbb57542cb31e2024732940fce0c0d88ed3cb22f7c",
+      "file_sha256": "36569fa5d972072bb8f27d869bedf2421d7b997b7910d8f20968ad0ea1ad33bf",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8af72d22d8d446c1f3e166d7c1f11ef8a2ed7a271b3031e350f6f130ff3112d0",
+      "file_sha256": "9504a1a083dd7db6b4c41dbaf84c5223d05092c87a1d5611acee1e230cd6c750",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "725369094bd3cf0a27ca2126aac95e5474f36e1738f545b368399e86a1c027ca",
+      "file_sha256": "e5c46920c011f9354a9e2c19e4241b175c5c43b66ada9d81984ddfc72a085008",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "79bf4fc3fae41b9c24b11d4ae2393b0ed6ad86ee276884861a64742ef6c52b11",
+      "file_sha256": "d0b91c3b783ef0c63c3fa74ae52ba24d32c2deaafa5e6fbd09e2535562115065",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ae6bbc23392ae3d9a85cb5fb7de1e11bd601174c22f23cd31354108ebb193f14",
+      "file_sha256": "03e13f3661e603d8979e0906ce87f7f2470dfa4436bb3fe9b84ba1a75bac1ffd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7755189d6781e50ec159ce76394c368d3437f5a857f40ad76c170e738108cbc0",
+      "file_sha256": "dd7d18b649673f253563bc838f26fc7be577b0356082c9f1686451830924e5a1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "19026fabe08dfe73abd69bdb9434ae67aa2ebdb958f6bc3c1bb0212122c7f55b",
+      "file_sha256": "c016ad123833d8913fce10195fee06acab79493d62ee9a438a57b1e0ac62fce2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5197757b032803323eef41ed0ae5d39260e610500afdd7318baa4aaddb83d419",
+      "file_sha256": "080543d369b5f04c348bdee6580f1c27997eb0f47e50176a8ba0f8396d7bd7ad",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-1.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5197757b032803323eef41ed0ae5d39260e610500afdd7318baa4aaddb83d419",
+      "file_sha256": "9e4d1bd60b3d56508a9ef486bd58ffa645974938696c14e578cb6cb6191e1a7b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+      "file_sha256": "c85073c40ee930ade4448481db2c26dd0059d5874dec290ff4d2776b9c5213ba",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "917d42978394f6302342bf4d8f71a9f6d2080ea74ccdf891817bdd5876de4149",
+      "file_sha256": "cc945708e9d505d72cb288afd6dd77d4a8dab6d40a20a4dd4d0922b28ea0f98f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4c9e6b59c8368180ae24d6530bb2d3ce8f1c2240f47a23591c2610307442d468",
+      "file_sha256": "8cd9a90a2e9ac9683c7ee97a37f40dccb03f4c1217b80af9c9d6d93b15cad7e6",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0551be5feeb987d1492d4bcbb57542cb31e2024732940fce0c0d88ed3cb22f7c",
+      "file_sha256": "36569fa5d972072bb8f27d869bedf2421d7b997b7910d8f20968ad0ea1ad33bf",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8af72d22d8d446c1f3e166d7c1f11ef8a2ed7a271b3031e350f6f130ff3112d0",
+      "file_sha256": "9504a1a083dd7db6b4c41dbaf84c5223d05092c87a1d5611acee1e230cd6c750",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "725369094bd3cf0a27ca2126aac95e5474f36e1738f545b368399e86a1c027ca",
+      "file_sha256": "e5c46920c011f9354a9e2c19e4241b175c5c43b66ada9d81984ddfc72a085008",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "79bf4fc3fae41b9c24b11d4ae2393b0ed6ad86ee276884861a64742ef6c52b11",
+      "file_sha256": "d0b91c3b783ef0c63c3fa74ae52ba24d32c2deaafa5e6fbd09e2535562115065",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ae6bbc23392ae3d9a85cb5fb7de1e11bd601174c22f23cd31354108ebb193f14",
+      "file_sha256": "03e13f3661e603d8979e0906ce87f7f2470dfa4436bb3fe9b84ba1a75bac1ffd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7755189d6781e50ec159ce76394c368d3437f5a857f40ad76c170e738108cbc0",
+      "file_sha256": "dd7d18b649673f253563bc838f26fc7be577b0356082c9f1686451830924e5a1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "19026fabe08dfe73abd69bdb9434ae67aa2ebdb958f6bc3c1bb0212122c7f55b",
+      "file_sha256": "c016ad123833d8913fce10195fee06acab79493d62ee9a438a57b1e0ac62fce2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5197757b032803323eef41ed0ae5d39260e610500afdd7318baa4aaddb83d419",
+      "file_sha256": "080543d369b5f04c348bdee6580f1c27997eb0f47e50176a8ba0f8396d7bd7ad",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-2.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5197757b032803323eef41ed0ae5d39260e610500afdd7318baa4aaddb83d419",
+      "file_sha256": "9e4d1bd60b3d56508a9ef486bd58ffa645974938696c14e578cb6cb6191e1a7b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+      "file_sha256": "c85073c40ee930ade4448481db2c26dd0059d5874dec290ff4d2776b9c5213ba",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "917d42978394f6302342bf4d8f71a9f6d2080ea74ccdf891817bdd5876de4149",
+      "file_sha256": "cc945708e9d505d72cb288afd6dd77d4a8dab6d40a20a4dd4d0922b28ea0f98f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4c9e6b59c8368180ae24d6530bb2d3ce8f1c2240f47a23591c2610307442d468",
+      "file_sha256": "8cd9a90a2e9ac9683c7ee97a37f40dccb03f4c1217b80af9c9d6d93b15cad7e6",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0551be5feeb987d1492d4bcbb57542cb31e2024732940fce0c0d88ed3cb22f7c",
+      "file_sha256": "36569fa5d972072bb8f27d869bedf2421d7b997b7910d8f20968ad0ea1ad33bf",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8af72d22d8d446c1f3e166d7c1f11ef8a2ed7a271b3031e350f6f130ff3112d0",
+      "file_sha256": "9504a1a083dd7db6b4c41dbaf84c5223d05092c87a1d5611acee1e230cd6c750",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "725369094bd3cf0a27ca2126aac95e5474f36e1738f545b368399e86a1c027ca",
+      "file_sha256": "e5c46920c011f9354a9e2c19e4241b175c5c43b66ada9d81984ddfc72a085008",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "79bf4fc3fae41b9c24b11d4ae2393b0ed6ad86ee276884861a64742ef6c52b11",
+      "file_sha256": "d0b91c3b783ef0c63c3fa74ae52ba24d32c2deaafa5e6fbd09e2535562115065",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ae6bbc23392ae3d9a85cb5fb7de1e11bd601174c22f23cd31354108ebb193f14",
+      "file_sha256": "03e13f3661e603d8979e0906ce87f7f2470dfa4436bb3fe9b84ba1a75bac1ffd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7755189d6781e50ec159ce76394c368d3437f5a857f40ad76c170e738108cbc0",
+      "file_sha256": "dd7d18b649673f253563bc838f26fc7be577b0356082c9f1686451830924e5a1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "19026fabe08dfe73abd69bdb9434ae67aa2ebdb958f6bc3c1bb0212122c7f55b",
+      "file_sha256": "c016ad123833d8913fce10195fee06acab79493d62ee9a438a57b1e0ac62fce2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5197757b032803323eef41ed0ae5d39260e610500afdd7318baa4aaddb83d419",
+      "file_sha256": "080543d369b5f04c348bdee6580f1c27997eb0f47e50176a8ba0f8396d7bd7ad",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-quadrants-96-formal-3.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5197757b032803323eef41ed0ae5d39260e610500afdd7318baa4aaddb83d419",
+      "file_sha256": "9e4d1bd60b3d56508a9ef486bd58ffa645974938696c14e578cb6cb6191e1a7b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+      "file_sha256": "e946d6a2944f20fa4ec71f437113fbfe7b5ae9e077eee5ea5187654dba112f7e",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8c47aee70ed1b2dd969adf0afc385f8f7c8a5048a3568557bb2d71409cc20fa2",
+      "file_sha256": "31553b7eb2905c80134c3137c210e8ab47137db587368a160993925491dc0bdc",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b0dcf85fa18b953c4deb2db52cbb36026679b7d3ca324eccc4e339ada1aaff73",
+      "file_sha256": "878921e3a9f464cfd7c56a6e3e80322eede002fb86343cebc915f4d341634e5b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "1826d39339a38d5622f7a156722da5263b34b126f2a76240027da7648d614ff0",
+      "file_sha256": "84c801c90af07bc3a863234a0d4f81f3195311772ad92ee502cb24460051d2e2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2c10c45ede5cd6cb3fa5aecb0bf01edd75789d2b2881ce905c2c5a1e836f205d",
+      "file_sha256": "311e5392dd8f91ee0db5a1516b8fbe62e0f080e146f8ee1a5a32cbf8744a4e26",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c04c9fffc5fcf25588030126013e106147d63c1e42012521490fe2cd716b9164",
+      "file_sha256": "1709bf149dc5fbe2c74a4cbfeb1b094cdf3aa304bf91946ca1855e9b3f3e1f5b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "096262bb87c03982f38b24761181468bbf169cdcfea74eedbca95a4433833fe9",
+      "file_sha256": "4dd273411a5f0969cd40d450c265a6d16c81223ee25906806cfc8ca6e9387160",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8264caf4524483f246ca7c3e60b9e471cfbec2d39ae30ab07712dc72dfc40b22",
+      "file_sha256": "f99bfbbf6dae82d538b084c6f166c69e3b89ac07c381786115bb4465cee1f661",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0931bc3f472cecc39f83695ecf75dbd8fd16ac0e00c4009c77a7f25437c04e3b",
+      "file_sha256": "0d9fc6dc749e2db57e99726c6984d3d2410e5738c81805e7d1956f7d026bfec5",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "00c030454710f2f6cb5d2c8764caa2ebdb74a2b5746677b1e9a7d5a26cb7c02e",
+      "file_sha256": "6c365df48d4947a3f38231f3d6960e5b970081c32bf42728833d9805ed957209",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "26b9d48abe9079449f8f10ceca27c2cf21406e13429907aa3c3d70d17ea44db1",
+      "file_sha256": "3fe202a97831f259f78b1fe9fc9376a0c9439a42458dec2ce94aaf8706cbcd9e",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-1.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "26b9d48abe9079449f8f10ceca27c2cf21406e13429907aa3c3d70d17ea44db1",
+      "file_sha256": "814dd956969a25035b3aaf1bd879259d8926a59fd876bcb93d0acf26a8da2ed1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+      "file_sha256": "e946d6a2944f20fa4ec71f437113fbfe7b5ae9e077eee5ea5187654dba112f7e",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8c47aee70ed1b2dd969adf0afc385f8f7c8a5048a3568557bb2d71409cc20fa2",
+      "file_sha256": "31553b7eb2905c80134c3137c210e8ab47137db587368a160993925491dc0bdc",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b0dcf85fa18b953c4deb2db52cbb36026679b7d3ca324eccc4e339ada1aaff73",
+      "file_sha256": "878921e3a9f464cfd7c56a6e3e80322eede002fb86343cebc915f4d341634e5b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "1826d39339a38d5622f7a156722da5263b34b126f2a76240027da7648d614ff0",
+      "file_sha256": "84c801c90af07bc3a863234a0d4f81f3195311772ad92ee502cb24460051d2e2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2c10c45ede5cd6cb3fa5aecb0bf01edd75789d2b2881ce905c2c5a1e836f205d",
+      "file_sha256": "311e5392dd8f91ee0db5a1516b8fbe62e0f080e146f8ee1a5a32cbf8744a4e26",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c04c9fffc5fcf25588030126013e106147d63c1e42012521490fe2cd716b9164",
+      "file_sha256": "1709bf149dc5fbe2c74a4cbfeb1b094cdf3aa304bf91946ca1855e9b3f3e1f5b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "096262bb87c03982f38b24761181468bbf169cdcfea74eedbca95a4433833fe9",
+      "file_sha256": "4dd273411a5f0969cd40d450c265a6d16c81223ee25906806cfc8ca6e9387160",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8264caf4524483f246ca7c3e60b9e471cfbec2d39ae30ab07712dc72dfc40b22",
+      "file_sha256": "f99bfbbf6dae82d538b084c6f166c69e3b89ac07c381786115bb4465cee1f661",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0931bc3f472cecc39f83695ecf75dbd8fd16ac0e00c4009c77a7f25437c04e3b",
+      "file_sha256": "0d9fc6dc749e2db57e99726c6984d3d2410e5738c81805e7d1956f7d026bfec5",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "00c030454710f2f6cb5d2c8764caa2ebdb74a2b5746677b1e9a7d5a26cb7c02e",
+      "file_sha256": "6c365df48d4947a3f38231f3d6960e5b970081c32bf42728833d9805ed957209",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "26b9d48abe9079449f8f10ceca27c2cf21406e13429907aa3c3d70d17ea44db1",
+      "file_sha256": "3fe202a97831f259f78b1fe9fc9376a0c9439a42458dec2ce94aaf8706cbcd9e",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-2.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "26b9d48abe9079449f8f10ceca27c2cf21406e13429907aa3c3d70d17ea44db1",
+      "file_sha256": "814dd956969a25035b3aaf1bd879259d8926a59fd876bcb93d0acf26a8da2ed1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+      "file_sha256": "e946d6a2944f20fa4ec71f437113fbfe7b5ae9e077eee5ea5187654dba112f7e",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8c47aee70ed1b2dd969adf0afc385f8f7c8a5048a3568557bb2d71409cc20fa2",
+      "file_sha256": "31553b7eb2905c80134c3137c210e8ab47137db587368a160993925491dc0bdc",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b0dcf85fa18b953c4deb2db52cbb36026679b7d3ca324eccc4e339ada1aaff73",
+      "file_sha256": "878921e3a9f464cfd7c56a6e3e80322eede002fb86343cebc915f4d341634e5b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "1826d39339a38d5622f7a156722da5263b34b126f2a76240027da7648d614ff0",
+      "file_sha256": "84c801c90af07bc3a863234a0d4f81f3195311772ad92ee502cb24460051d2e2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2c10c45ede5cd6cb3fa5aecb0bf01edd75789d2b2881ce905c2c5a1e836f205d",
+      "file_sha256": "311e5392dd8f91ee0db5a1516b8fbe62e0f080e146f8ee1a5a32cbf8744a4e26",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c04c9fffc5fcf25588030126013e106147d63c1e42012521490fe2cd716b9164",
+      "file_sha256": "1709bf149dc5fbe2c74a4cbfeb1b094cdf3aa304bf91946ca1855e9b3f3e1f5b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "096262bb87c03982f38b24761181468bbf169cdcfea74eedbca95a4433833fe9",
+      "file_sha256": "4dd273411a5f0969cd40d450c265a6d16c81223ee25906806cfc8ca6e9387160",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8264caf4524483f246ca7c3e60b9e471cfbec2d39ae30ab07712dc72dfc40b22",
+      "file_sha256": "f99bfbbf6dae82d538b084c6f166c69e3b89ac07c381786115bb4465cee1f661",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0931bc3f472cecc39f83695ecf75dbd8fd16ac0e00c4009c77a7f25437c04e3b",
+      "file_sha256": "0d9fc6dc749e2db57e99726c6984d3d2410e5738c81805e7d1956f7d026bfec5",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "00c030454710f2f6cb5d2c8764caa2ebdb74a2b5746677b1e9a7d5a26cb7c02e",
+      "file_sha256": "6c365df48d4947a3f38231f3d6960e5b970081c32bf42728833d9805ed957209",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "26b9d48abe9079449f8f10ceca27c2cf21406e13429907aa3c3d70d17ea44db1",
+      "file_sha256": "3fe202a97831f259f78b1fe9fc9376a0c9439a42458dec2ce94aaf8706cbcd9e",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x96-checkerboard-96-formal-3.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "26b9d48abe9079449f8f10ceca27c2cf21406e13429907aa3c3d70d17ea44db1",
+      "file_sha256": "814dd956969a25035b3aaf1bd879259d8926a59fd876bcb93d0acf26a8da2ed1",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.npy",
+      "shape": [
+        18,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+      "file_sha256": "611c4dbf0f9dcb647fe3706a9f62b69ef2233e371d2a809927a816adb627bbf9",
+      "file_bytes": 184448
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-patch_merge.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b33dd4cbbc56fc6af917e58d523e4899b2126a688c1cc4325ad726a59f104b1f",
+      "file_sha256": "afed13b36e7693dda194d5cf18e733302006ba0f13699640dbdcba6df608ace1",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-positioned.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5a9fff3aaead55232d9d287ed377ea95db33c6036669a16659d9cd21714f064f",
+      "file_sha256": "64f81fa26f5e99ff02d4602788148bf97f0bc914d4b1fe0cce974ed9ea638fe3",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-ln1.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "be0b1c8316eb6d56e4235a7e3a9bd1d7a08762cd46ae85eda324e3f3fde8c256",
+      "file_sha256": "fe472a07bf4e55c9bccc7353e9ae4a05d42a3910c0a40587c36844e6377e00be",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-ln1.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4c3f8c159cbbe95d7384a73977bf9cc2741a65c8526435ba131dfac3409ab18a",
+      "file_sha256": "8bf7e43ba1881ee95c4f96f6ed8c47aa5877c34f6486f0ec0583d22e77b2beff",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-ln1.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a306738e98468968033ddf424bf8fc1f25c7da8752ac159c02679eb7a3e8fbce",
+      "file_sha256": "87c07945dc37d728511e29c92abfd2ca348e2bc9f1daf324a097335d4d3391ff",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-qkv.0.npy",
+      "shape": [
+        72,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "fce71eb87a5c4877175b8de21ea50bd349b8d8d6385b68a27d5c43e914fbf4b4",
+      "file_sha256": "d2d1133f93b6ecbc04780c908fbc9823023c6f576ddd54d2ddad342d2aebd7c1",
+      "file_bytes": 995456
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-block.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2b7675f3a88ec2008dfcdb0de5e6f890b7c459910c3dea733abdff721f5a25b4",
+      "file_sha256": "1cc17b02db4c7592d61b60a7b1b6815ea86603fe642f3a80aff3889b67b929ad",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-block.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b06fb8fda2e30acb1346ded862c40f1effec198e81b4dbf4359b617ee3628522",
+      "file_sha256": "da0cf6e828dc67c97b099425fb23f849186b8fa2c216f8b8ebc4601cbfb3abb6",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-block.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "03a377b0237eb25d49e9df59ed2f73bc6617c5fcaa19f4220aaa18585c0fee41",
+      "file_sha256": "9df8b74c59fecc0a4f789aaaa44d14308770450cd4c9e729e6a4c51d16615da1",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-post_norm.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f13dafcdffc04d0d046aa795fd9337b1e3055ffb4f5b7b3c6ad4e351de5daca9",
+      "file_sha256": "e968d582c7a6d7cba819e516317424d61e2985d3ff6a68393ff67fb5cead9245",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-1.tap-merged.npy",
+      "shape": [
+        18,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f13dafcdffc04d0d046aa795fd9337b1e3055ffb4f5b7b3c6ad4e351de5daca9",
+      "file_sha256": "a27d2b05e6ac6740cb70424b1d165aeafab435a297cf71af81695936421cb2b6",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.npy",
+      "shape": [
+        18,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+      "file_sha256": "611c4dbf0f9dcb647fe3706a9f62b69ef2233e371d2a809927a816adb627bbf9",
+      "file_bytes": 184448
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-patch_merge.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b33dd4cbbc56fc6af917e58d523e4899b2126a688c1cc4325ad726a59f104b1f",
+      "file_sha256": "afed13b36e7693dda194d5cf18e733302006ba0f13699640dbdcba6df608ace1",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-positioned.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5a9fff3aaead55232d9d287ed377ea95db33c6036669a16659d9cd21714f064f",
+      "file_sha256": "64f81fa26f5e99ff02d4602788148bf97f0bc914d4b1fe0cce974ed9ea638fe3",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-ln1.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "be0b1c8316eb6d56e4235a7e3a9bd1d7a08762cd46ae85eda324e3f3fde8c256",
+      "file_sha256": "fe472a07bf4e55c9bccc7353e9ae4a05d42a3910c0a40587c36844e6377e00be",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-ln1.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4c3f8c159cbbe95d7384a73977bf9cc2741a65c8526435ba131dfac3409ab18a",
+      "file_sha256": "8bf7e43ba1881ee95c4f96f6ed8c47aa5877c34f6486f0ec0583d22e77b2beff",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-ln1.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a306738e98468968033ddf424bf8fc1f25c7da8752ac159c02679eb7a3e8fbce",
+      "file_sha256": "87c07945dc37d728511e29c92abfd2ca348e2bc9f1daf324a097335d4d3391ff",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-qkv.0.npy",
+      "shape": [
+        72,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "fce71eb87a5c4877175b8de21ea50bd349b8d8d6385b68a27d5c43e914fbf4b4",
+      "file_sha256": "d2d1133f93b6ecbc04780c908fbc9823023c6f576ddd54d2ddad342d2aebd7c1",
+      "file_bytes": 995456
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-block.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2b7675f3a88ec2008dfcdb0de5e6f890b7c459910c3dea733abdff721f5a25b4",
+      "file_sha256": "1cc17b02db4c7592d61b60a7b1b6815ea86603fe642f3a80aff3889b67b929ad",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-block.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b06fb8fda2e30acb1346ded862c40f1effec198e81b4dbf4359b617ee3628522",
+      "file_sha256": "da0cf6e828dc67c97b099425fb23f849186b8fa2c216f8b8ebc4601cbfb3abb6",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-block.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "03a377b0237eb25d49e9df59ed2f73bc6617c5fcaa19f4220aaa18585c0fee41",
+      "file_sha256": "9df8b74c59fecc0a4f789aaaa44d14308770450cd4c9e729e6a4c51d16615da1",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-post_norm.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f13dafcdffc04d0d046aa795fd9337b1e3055ffb4f5b7b3c6ad4e351de5daca9",
+      "file_sha256": "e968d582c7a6d7cba819e516317424d61e2985d3ff6a68393ff67fb5cead9245",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-2.tap-merged.npy",
+      "shape": [
+        18,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f13dafcdffc04d0d046aa795fd9337b1e3055ffb4f5b7b3c6ad4e351de5daca9",
+      "file_sha256": "a27d2b05e6ac6740cb70424b1d165aeafab435a297cf71af81695936421cb2b6",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.npy",
+      "shape": [
+        18,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+      "file_sha256": "611c4dbf0f9dcb647fe3706a9f62b69ef2233e371d2a809927a816adb627bbf9",
+      "file_bytes": 184448
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-patch_merge.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b33dd4cbbc56fc6af917e58d523e4899b2126a688c1cc4325ad726a59f104b1f",
+      "file_sha256": "afed13b36e7693dda194d5cf18e733302006ba0f13699640dbdcba6df608ace1",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-positioned.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5a9fff3aaead55232d9d287ed377ea95db33c6036669a16659d9cd21714f064f",
+      "file_sha256": "64f81fa26f5e99ff02d4602788148bf97f0bc914d4b1fe0cce974ed9ea638fe3",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-ln1.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "be0b1c8316eb6d56e4235a7e3a9bd1d7a08762cd46ae85eda324e3f3fde8c256",
+      "file_sha256": "fe472a07bf4e55c9bccc7353e9ae4a05d42a3910c0a40587c36844e6377e00be",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-ln1.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4c3f8c159cbbe95d7384a73977bf9cc2741a65c8526435ba131dfac3409ab18a",
+      "file_sha256": "8bf7e43ba1881ee95c4f96f6ed8c47aa5877c34f6486f0ec0583d22e77b2beff",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-ln1.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a306738e98468968033ddf424bf8fc1f25c7da8752ac159c02679eb7a3e8fbce",
+      "file_sha256": "87c07945dc37d728511e29c92abfd2ca348e2bc9f1daf324a097335d4d3391ff",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-qkv.0.npy",
+      "shape": [
+        72,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "fce71eb87a5c4877175b8de21ea50bd349b8d8d6385b68a27d5c43e914fbf4b4",
+      "file_sha256": "d2d1133f93b6ecbc04780c908fbc9823023c6f576ddd54d2ddad342d2aebd7c1",
+      "file_bytes": 995456
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-block.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2b7675f3a88ec2008dfcdb0de5e6f890b7c459910c3dea733abdff721f5a25b4",
+      "file_sha256": "1cc17b02db4c7592d61b60a7b1b6815ea86603fe642f3a80aff3889b67b929ad",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-block.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b06fb8fda2e30acb1346ded862c40f1effec198e81b4dbf4359b617ee3628522",
+      "file_sha256": "da0cf6e828dc67c97b099425fb23f849186b8fa2c216f8b8ebc4601cbfb3abb6",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-block.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "03a377b0237eb25d49e9df59ed2f73bc6617c5fcaa19f4220aaa18585c0fee41",
+      "file_sha256": "9df8b74c59fecc0a4f789aaaa44d14308770450cd4c9e729e6a4c51d16615da1",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-post_norm.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f13dafcdffc04d0d046aa795fd9337b1e3055ffb4f5b7b3c6ad4e351de5daca9",
+      "file_sha256": "e968d582c7a6d7cba819e516317424d61e2985d3ff6a68393ff67fb5cead9245",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\graph_f32-96x192-gradient-192x96-formal-3.tap-merged.npy",
+      "shape": [
+        18,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f13dafcdffc04d0d046aa795fd9337b1e3055ffb4f5b7b3c6ad4e351de5daca9",
+      "file_sha256": "a27d2b05e6ac6740cb70424b1d165aeafab435a297cf71af81695936421cb2b6",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+      "file_sha256": "2dba0b8b8abb5475db7feafe181c6767d912447d14f2f2bd8c86eb066d2ca692",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "9e736b510003f7db2d02668bb121ec10c4c34ab9739526cc5cfb2a8d1d884ffb",
+      "file_sha256": "e7ac4bf6f8a0f5a9ed29bc2d1923967162cca287c3ba8d86da8cd536f99ae558",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f741230c0f2dee0658601f0c5d7cb8e387753628bf314bff754301a4c980ca98",
+      "file_sha256": "bcd0e16c9a36eddb1b81636c518a871fe80f16f23776360627e455f217acb194",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "38d9af093cf47ae64d44b1db68a2eff6631b9bf86cddc38c93e9348583da3bee",
+      "file_sha256": "75f7efebee6744ffd347b8a01d9a0be87259ce5f57ad6e29add69d95ab51440a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8f0f273680694d2bed4560f36ec7baef1c1df07447c91e0e56c245880cc59292",
+      "file_sha256": "a181117af47b702688eaa3357ea087c5a83112020a017576add637c90dbc03db",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b1aca3044f874846b8730eeafcca71f30d9899f32105f1964168cf774f20c780",
+      "file_sha256": "a4cd92bf947f6cb499803d1f1ddce7f11c3db1d6cf19fc52d83c897a81c0627f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2f489765d96f23aa48f7d9b5f402a8fa8d8f9e6797ef4832b0f98253b7719e34",
+      "file_sha256": "54996e2de8c6bd65d9216862ea2dc022389fe52607d7cd2dafa46184479068df",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "e8f0fe545046862dff20edc9847361847daf05125488aa761e34133209dadf93",
+      "file_sha256": "57400d9ab7034cf190288dea6d99d65161944bba47a1920e75ad01fe4926578a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2dcb30677d71b9945f0be221072c9e5d5f63b6d019308c9394cebea2156a20c1",
+      "file_sha256": "51227397a8f932cc7428aed8e31af5bd0a7c6b8334812f7cdb8819218bc4c731",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7a744f01dff48ea9fc7c7615fbeb7f153abbdc44d47541af10b2f830dc748c36",
+      "file_sha256": "2675f84b0cd5afda0e0fa71bc8bd6be29d0a9dbc6c3b4306f9e30752f0b60d1d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8b200ad2d2467a6ca323ef6fc5b21b09a7caccb721b9fd1514fafaf9a4385c62",
+      "file_sha256": "e02a890882059e43c9a8a4fef4628a364dadd3430f1bfb3df73964c46fe4717f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8b200ad2d2467a6ca323ef6fc5b21b09a7caccb721b9fd1514fafaf9a4385c62",
+      "file_sha256": "08a0c26b8902ae528d26fd67e0ae279afe9c23911070f106850ccbf01d94d1d8",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+      "file_sha256": "2dba0b8b8abb5475db7feafe181c6767d912447d14f2f2bd8c86eb066d2ca692",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "9e736b510003f7db2d02668bb121ec10c4c34ab9739526cc5cfb2a8d1d884ffb",
+      "file_sha256": "e7ac4bf6f8a0f5a9ed29bc2d1923967162cca287c3ba8d86da8cd536f99ae558",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f741230c0f2dee0658601f0c5d7cb8e387753628bf314bff754301a4c980ca98",
+      "file_sha256": "bcd0e16c9a36eddb1b81636c518a871fe80f16f23776360627e455f217acb194",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "38d9af093cf47ae64d44b1db68a2eff6631b9bf86cddc38c93e9348583da3bee",
+      "file_sha256": "75f7efebee6744ffd347b8a01d9a0be87259ce5f57ad6e29add69d95ab51440a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8f0f273680694d2bed4560f36ec7baef1c1df07447c91e0e56c245880cc59292",
+      "file_sha256": "a181117af47b702688eaa3357ea087c5a83112020a017576add637c90dbc03db",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b1aca3044f874846b8730eeafcca71f30d9899f32105f1964168cf774f20c780",
+      "file_sha256": "a4cd92bf947f6cb499803d1f1ddce7f11c3db1d6cf19fc52d83c897a81c0627f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2f489765d96f23aa48f7d9b5f402a8fa8d8f9e6797ef4832b0f98253b7719e34",
+      "file_sha256": "54996e2de8c6bd65d9216862ea2dc022389fe52607d7cd2dafa46184479068df",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "e8f0fe545046862dff20edc9847361847daf05125488aa761e34133209dadf93",
+      "file_sha256": "57400d9ab7034cf190288dea6d99d65161944bba47a1920e75ad01fe4926578a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2dcb30677d71b9945f0be221072c9e5d5f63b6d019308c9394cebea2156a20c1",
+      "file_sha256": "51227397a8f932cc7428aed8e31af5bd0a7c6b8334812f7cdb8819218bc4c731",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7a744f01dff48ea9fc7c7615fbeb7f153abbdc44d47541af10b2f830dc748c36",
+      "file_sha256": "2675f84b0cd5afda0e0fa71bc8bd6be29d0a9dbc6c3b4306f9e30752f0b60d1d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8b200ad2d2467a6ca323ef6fc5b21b09a7caccb721b9fd1514fafaf9a4385c62",
+      "file_sha256": "e02a890882059e43c9a8a4fef4628a364dadd3430f1bfb3df73964c46fe4717f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8b200ad2d2467a6ca323ef6fc5b21b09a7caccb721b9fd1514fafaf9a4385c62",
+      "file_sha256": "08a0c26b8902ae528d26fd67e0ae279afe9c23911070f106850ccbf01d94d1d8",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+      "file_sha256": "2dba0b8b8abb5475db7feafe181c6767d912447d14f2f2bd8c86eb066d2ca692",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "9e736b510003f7db2d02668bb121ec10c4c34ab9739526cc5cfb2a8d1d884ffb",
+      "file_sha256": "e7ac4bf6f8a0f5a9ed29bc2d1923967162cca287c3ba8d86da8cd536f99ae558",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "f741230c0f2dee0658601f0c5d7cb8e387753628bf314bff754301a4c980ca98",
+      "file_sha256": "bcd0e16c9a36eddb1b81636c518a871fe80f16f23776360627e455f217acb194",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "38d9af093cf47ae64d44b1db68a2eff6631b9bf86cddc38c93e9348583da3bee",
+      "file_sha256": "75f7efebee6744ffd347b8a01d9a0be87259ce5f57ad6e29add69d95ab51440a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8f0f273680694d2bed4560f36ec7baef1c1df07447c91e0e56c245880cc59292",
+      "file_sha256": "a181117af47b702688eaa3357ea087c5a83112020a017576add637c90dbc03db",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b1aca3044f874846b8730eeafcca71f30d9899f32105f1964168cf774f20c780",
+      "file_sha256": "a4cd92bf947f6cb499803d1f1ddce7f11c3db1d6cf19fc52d83c897a81c0627f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2f489765d96f23aa48f7d9b5f402a8fa8d8f9e6797ef4832b0f98253b7719e34",
+      "file_sha256": "54996e2de8c6bd65d9216862ea2dc022389fe52607d7cd2dafa46184479068df",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "e8f0fe545046862dff20edc9847361847daf05125488aa761e34133209dadf93",
+      "file_sha256": "57400d9ab7034cf190288dea6d99d65161944bba47a1920e75ad01fe4926578a",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2dcb30677d71b9945f0be221072c9e5d5f63b6d019308c9394cebea2156a20c1",
+      "file_sha256": "51227397a8f932cc7428aed8e31af5bd0a7c6b8334812f7cdb8819218bc4c731",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "7a744f01dff48ea9fc7c7615fbeb7f153abbdc44d47541af10b2f830dc748c36",
+      "file_sha256": "2675f84b0cd5afda0e0fa71bc8bd6be29d0a9dbc6c3b4306f9e30752f0b60d1d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8b200ad2d2467a6ca323ef6fc5b21b09a7caccb721b9fd1514fafaf9a4385c62",
+      "file_sha256": "e02a890882059e43c9a8a4fef4628a364dadd3430f1bfb3df73964c46fe4717f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "8b200ad2d2467a6ca323ef6fc5b21b09a7caccb721b9fd1514fafaf9a4385c62",
+      "file_sha256": "08a0c26b8902ae528d26fd67e0ae279afe9c23911070f106850ccbf01d94d1d8",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+      "file_sha256": "a62e5a71873db811f865260c9e276fc739c1a322e7d04eb0a5c0c50b6ddf6605",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "31980f67fc4bfe0be6aaa84b379b690719a085dc31f4de81903a4e01df98da81",
+      "file_sha256": "dcbdb84ae0391942c8b3a30cc0b3e085d757c439a11cef29468e675598b7bf70",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0126156cda5b2ebd6a1a54ba72f3ab47e9444426dae18a09952dc2b75900c035",
+      "file_sha256": "5958f322a10ba2d3bda6222052b38e36594fe8b05aeb6ce758c7647b1078065f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2381a4fbf633c6676b72632a31f30eb3fa0f20be20ab69c47386db44a0dad3f1",
+      "file_sha256": "e03ca79239a55a5e0e3bc8154f599f9d78d6d65a1aff4e6ff3c5d7550513cb4b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0b27414714b56c68d9b14a6b2fb3df884b311370549cce3ee612bc8226b124ec",
+      "file_sha256": "e553bbbe7a8e09202d205052ab08fbadce79e0248c1c70701e30d95be0779437",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "676f4a78b1c6214ed6a0eccfc10e1da066e5864eb56c05596939f00c29736565",
+      "file_sha256": "c72f89cbc75f73af4e4621d37156a7d6483c849a1643572f820eb5d686c6e90d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3197a2a5a5adfd41cd81b9d076b1f2a9893b13d8bc92d01117a89e257cc99885",
+      "file_sha256": "5b9aa8896b41e8ee5bde8fa3df4a414d4ea6fce6799e77ff685f985328a4beeb",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "bcc3e80d783be5ea2e804e56d3cc92e5d8c5652fe2ad36ff37b1182ba8b284f5",
+      "file_sha256": "db327859a926e4f052cf7690062d0e33c7fb58310e13bb0c669d73caebdfc4fe",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "843e359a5abb13669c5ca7408c67379360b8e90f5bb1f8f8a025d0b128e6e2bf",
+      "file_sha256": "d9effe615846540558f8a54df7924006d181b7a84fb88eb9d292b8fd5e2cf392",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "79632b52a568a015d7e97c7c2d7e1d2476e106df9731d0b88461a21b66b8842f",
+      "file_sha256": "72c52f66783f91f774432e0ded8790d5fa0685765b2446f4fa6dec1a6a15ffde",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a035bf91481623d8a1355f2acd675698aa1508f8fe37d22c67f64e731fc0468e",
+      "file_sha256": "435954f1f0e7637eb54372bf7a39b16c1f716a2201dc975a18a3bbfef687dd12",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a035bf91481623d8a1355f2acd675698aa1508f8fe37d22c67f64e731fc0468e",
+      "file_sha256": "7697bbde4aa6a043ae36a98d8edcfffca60cf6a81dd262b3bcb81eda6fd0ea0f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+      "file_sha256": "a62e5a71873db811f865260c9e276fc739c1a322e7d04eb0a5c0c50b6ddf6605",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "31980f67fc4bfe0be6aaa84b379b690719a085dc31f4de81903a4e01df98da81",
+      "file_sha256": "dcbdb84ae0391942c8b3a30cc0b3e085d757c439a11cef29468e675598b7bf70",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0126156cda5b2ebd6a1a54ba72f3ab47e9444426dae18a09952dc2b75900c035",
+      "file_sha256": "5958f322a10ba2d3bda6222052b38e36594fe8b05aeb6ce758c7647b1078065f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2381a4fbf633c6676b72632a31f30eb3fa0f20be20ab69c47386db44a0dad3f1",
+      "file_sha256": "e03ca79239a55a5e0e3bc8154f599f9d78d6d65a1aff4e6ff3c5d7550513cb4b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0b27414714b56c68d9b14a6b2fb3df884b311370549cce3ee612bc8226b124ec",
+      "file_sha256": "e553bbbe7a8e09202d205052ab08fbadce79e0248c1c70701e30d95be0779437",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "676f4a78b1c6214ed6a0eccfc10e1da066e5864eb56c05596939f00c29736565",
+      "file_sha256": "c72f89cbc75f73af4e4621d37156a7d6483c849a1643572f820eb5d686c6e90d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3197a2a5a5adfd41cd81b9d076b1f2a9893b13d8bc92d01117a89e257cc99885",
+      "file_sha256": "5b9aa8896b41e8ee5bde8fa3df4a414d4ea6fce6799e77ff685f985328a4beeb",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "bcc3e80d783be5ea2e804e56d3cc92e5d8c5652fe2ad36ff37b1182ba8b284f5",
+      "file_sha256": "db327859a926e4f052cf7690062d0e33c7fb58310e13bb0c669d73caebdfc4fe",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "843e359a5abb13669c5ca7408c67379360b8e90f5bb1f8f8a025d0b128e6e2bf",
+      "file_sha256": "d9effe615846540558f8a54df7924006d181b7a84fb88eb9d292b8fd5e2cf392",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "79632b52a568a015d7e97c7c2d7e1d2476e106df9731d0b88461a21b66b8842f",
+      "file_sha256": "72c52f66783f91f774432e0ded8790d5fa0685765b2446f4fa6dec1a6a15ffde",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a035bf91481623d8a1355f2acd675698aa1508f8fe37d22c67f64e731fc0468e",
+      "file_sha256": "435954f1f0e7637eb54372bf7a39b16c1f716a2201dc975a18a3bbfef687dd12",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a035bf91481623d8a1355f2acd675698aa1508f8fe37d22c67f64e731fc0468e",
+      "file_sha256": "7697bbde4aa6a043ae36a98d8edcfffca60cf6a81dd262b3bcb81eda6fd0ea0f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+      "file_sha256": "a62e5a71873db811f865260c9e276fc739c1a322e7d04eb0a5c0c50b6ddf6605",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "31980f67fc4bfe0be6aaa84b379b690719a085dc31f4de81903a4e01df98da81",
+      "file_sha256": "dcbdb84ae0391942c8b3a30cc0b3e085d757c439a11cef29468e675598b7bf70",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0126156cda5b2ebd6a1a54ba72f3ab47e9444426dae18a09952dc2b75900c035",
+      "file_sha256": "5958f322a10ba2d3bda6222052b38e36594fe8b05aeb6ce758c7647b1078065f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2381a4fbf633c6676b72632a31f30eb3fa0f20be20ab69c47386db44a0dad3f1",
+      "file_sha256": "e03ca79239a55a5e0e3bc8154f599f9d78d6d65a1aff4e6ff3c5d7550513cb4b",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0b27414714b56c68d9b14a6b2fb3df884b311370549cce3ee612bc8226b124ec",
+      "file_sha256": "e553bbbe7a8e09202d205052ab08fbadce79e0248c1c70701e30d95be0779437",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "676f4a78b1c6214ed6a0eccfc10e1da066e5864eb56c05596939f00c29736565",
+      "file_sha256": "c72f89cbc75f73af4e4621d37156a7d6483c849a1643572f820eb5d686c6e90d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3197a2a5a5adfd41cd81b9d076b1f2a9893b13d8bc92d01117a89e257cc99885",
+      "file_sha256": "5b9aa8896b41e8ee5bde8fa3df4a414d4ea6fce6799e77ff685f985328a4beeb",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "bcc3e80d783be5ea2e804e56d3cc92e5d8c5652fe2ad36ff37b1182ba8b284f5",
+      "file_sha256": "db327859a926e4f052cf7690062d0e33c7fb58310e13bb0c669d73caebdfc4fe",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "843e359a5abb13669c5ca7408c67379360b8e90f5bb1f8f8a025d0b128e6e2bf",
+      "file_sha256": "d9effe615846540558f8a54df7924006d181b7a84fb88eb9d292b8fd5e2cf392",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "79632b52a568a015d7e97c7c2d7e1d2476e106df9731d0b88461a21b66b8842f",
+      "file_sha256": "72c52f66783f91f774432e0ded8790d5fa0685765b2446f4fa6dec1a6a15ffde",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a035bf91481623d8a1355f2acd675698aa1508f8fe37d22c67f64e731fc0468e",
+      "file_sha256": "435954f1f0e7637eb54372bf7a39b16c1f716a2201dc975a18a3bbfef687dd12",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "a035bf91481623d8a1355f2acd675698aa1508f8fe37d22c67f64e731fc0468e",
+      "file_sha256": "7697bbde4aa6a043ae36a98d8edcfffca60cf6a81dd262b3bcb81eda6fd0ea0f",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+      "file_sha256": "b86be81bc2d530b546d30e6893459951c784769ea80c5cea47fc5b2b01908985",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b73005ff206f78ca140ea9d635474128a78469cac28bc32b16a99190d9fab2ab",
+      "file_sha256": "c51f3df5255089a64a14442f0b066c4f64eb42927694a250a6106e2358044d1d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "53fdc4ab2cdeb4d07e50252049f9fe757eb01f59cd8a4cfafb8b03238be0ba1a",
+      "file_sha256": "921e138677c2556c69cd5ce202527d57318c00485c4c72a42d2faa9402fd3ff5",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0529f3c429236bd5fb3a8ffa70b5e0b2ba54833841bb7025f61c14c10bd444d5",
+      "file_sha256": "b39f25d6a8e9c938f286ea5c9aedf41270fd46f84efcf202234ab2e94df5ace2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2d67ba003215d7f769f35e46aed27461700017cf30df8375450056b8310d9560",
+      "file_sha256": "2305ded3b70f260a41214a40836d0f88c8afb23324e579f6f9ef4d93965e3012",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c4d9a25b33a2778d226135ba55c3537dc4a6aa9e9c216963e1b9afc3f5839354",
+      "file_sha256": "b67af5fbca25f59b0468e2a6dc7f13469313a80ecfdedba3fbf6abb276c640bd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ab97dcd487d8ba758ec772865eabe5f7402e1f3b950e40143b7fcef1bb24ec1c",
+      "file_sha256": "9f9013aed36c20819d35d144d30c5034e618bb714bf37a3cc6ea749426255f0d",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2597b65ebad9640d1ae093837476136c0d4892e0f13e12242feb3224abb7358c",
+      "file_sha256": "76ef9dd2ca0e15b0c535dd4d610634386df7b8da8ce3ad94014b219230b6997c",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "38db5751d92fcce0b2e398a4da881328d0cea3d1a146a5c0ca874479165dda48",
+      "file_sha256": "b234465d3ac70b4c02b46156abb28c1a67fdefc6c596533082be2db7331ca7ce",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "21f373d562dc4ab069f5347e9577615079c623cc1d21c4ca5100b93c9f12de2a",
+      "file_sha256": "3d12404e3738e5bf91e728661b0031b2ff9207ca587853dcc46d72bb52a313cf",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "66fae390e8e9ebd88c12033238fe69d75dda77ffa1e961568622a323689dc842",
+      "file_sha256": "0efd499d8d10070a988ddf04b86862fd0109b060d1a06a9c189ec2c5c9dffc45",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "66fae390e8e9ebd88c12033238fe69d75dda77ffa1e961568622a323689dc842",
+      "file_sha256": "038566bda354c3da57fd5ab0b7b4e2f421a2335a2683713612fa408e651e58dd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+      "file_sha256": "b86be81bc2d530b546d30e6893459951c784769ea80c5cea47fc5b2b01908985",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b73005ff206f78ca140ea9d635474128a78469cac28bc32b16a99190d9fab2ab",
+      "file_sha256": "c51f3df5255089a64a14442f0b066c4f64eb42927694a250a6106e2358044d1d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "53fdc4ab2cdeb4d07e50252049f9fe757eb01f59cd8a4cfafb8b03238be0ba1a",
+      "file_sha256": "921e138677c2556c69cd5ce202527d57318c00485c4c72a42d2faa9402fd3ff5",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0529f3c429236bd5fb3a8ffa70b5e0b2ba54833841bb7025f61c14c10bd444d5",
+      "file_sha256": "b39f25d6a8e9c938f286ea5c9aedf41270fd46f84efcf202234ab2e94df5ace2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2d67ba003215d7f769f35e46aed27461700017cf30df8375450056b8310d9560",
+      "file_sha256": "2305ded3b70f260a41214a40836d0f88c8afb23324e579f6f9ef4d93965e3012",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c4d9a25b33a2778d226135ba55c3537dc4a6aa9e9c216963e1b9afc3f5839354",
+      "file_sha256": "b67af5fbca25f59b0468e2a6dc7f13469313a80ecfdedba3fbf6abb276c640bd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ab97dcd487d8ba758ec772865eabe5f7402e1f3b950e40143b7fcef1bb24ec1c",
+      "file_sha256": "9f9013aed36c20819d35d144d30c5034e618bb714bf37a3cc6ea749426255f0d",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2597b65ebad9640d1ae093837476136c0d4892e0f13e12242feb3224abb7358c",
+      "file_sha256": "76ef9dd2ca0e15b0c535dd4d610634386df7b8da8ce3ad94014b219230b6997c",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "38db5751d92fcce0b2e398a4da881328d0cea3d1a146a5c0ca874479165dda48",
+      "file_sha256": "b234465d3ac70b4c02b46156abb28c1a67fdefc6c596533082be2db7331ca7ce",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "21f373d562dc4ab069f5347e9577615079c623cc1d21c4ca5100b93c9f12de2a",
+      "file_sha256": "3d12404e3738e5bf91e728661b0031b2ff9207ca587853dcc46d72bb52a313cf",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "66fae390e8e9ebd88c12033238fe69d75dda77ffa1e961568622a323689dc842",
+      "file_sha256": "0efd499d8d10070a988ddf04b86862fd0109b060d1a06a9c189ec2c5c9dffc45",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "66fae390e8e9ebd88c12033238fe69d75dda77ffa1e961568622a323689dc842",
+      "file_sha256": "038566bda354c3da57fd5ab0b7b4e2f421a2335a2683713612fa408e651e58dd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.npy",
+      "shape": [
+        9,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+      "file_sha256": "b86be81bc2d530b546d30e6893459951c784769ea80c5cea47fc5b2b01908985",
+      "file_bytes": 92288
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-patch_merge.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "b73005ff206f78ca140ea9d635474128a78469cac28bc32b16a99190d9fab2ab",
+      "file_sha256": "c51f3df5255089a64a14442f0b066c4f64eb42927694a250a6106e2358044d1d",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-positioned.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "53fdc4ab2cdeb4d07e50252049f9fe757eb01f59cd8a4cfafb8b03238be0ba1a",
+      "file_sha256": "921e138677c2556c69cd5ce202527d57318c00485c4c72a42d2faa9402fd3ff5",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-ln1.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "0529f3c429236bd5fb3a8ffa70b5e0b2ba54833841bb7025f61c14c10bd444d5",
+      "file_sha256": "b39f25d6a8e9c938f286ea5c9aedf41270fd46f84efcf202234ab2e94df5ace2",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-ln1.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2d67ba003215d7f769f35e46aed27461700017cf30df8375450056b8310d9560",
+      "file_sha256": "2305ded3b70f260a41214a40836d0f88c8afb23324e579f6f9ef4d93965e3012",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-ln1.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "c4d9a25b33a2778d226135ba55c3537dc4a6aa9e9c216963e1b9afc3f5839354",
+      "file_sha256": "b67af5fbca25f59b0468e2a6dc7f13469313a80ecfdedba3fbf6abb276c640bd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-qkv.0.npy",
+      "shape": [
+        36,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ab97dcd487d8ba758ec772865eabe5f7402e1f3b950e40143b7fcef1bb24ec1c",
+      "file_sha256": "9f9013aed36c20819d35d144d30c5034e618bb714bf37a3cc6ea749426255f0d",
+      "file_bytes": 497792
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-block.0.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "2597b65ebad9640d1ae093837476136c0d4892e0f13e12242feb3224abb7358c",
+      "file_sha256": "76ef9dd2ca0e15b0c535dd4d610634386df7b8da8ce3ad94014b219230b6997c",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-block.1.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "38db5751d92fcce0b2e398a4da881328d0cea3d1a146a5c0ca874479165dda48",
+      "file_sha256": "b234465d3ac70b4c02b46156abb28c1a67fdefc6c596533082be2db7331ca7ce",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-block.26.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "21f373d562dc4ab069f5347e9577615079c623cc1d21c4ca5100b93c9f12de2a",
+      "file_sha256": "3d12404e3738e5bf91e728661b0031b2ff9207ca587853dcc46d72bb52a313cf",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-post_norm.npy",
+      "shape": [
+        36,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "66fae390e8e9ebd88c12033238fe69d75dda77ffa1e961568622a323689dc842",
+      "file_sha256": "0efd499d8d10070a988ddf04b86862fd0109b060d1a06a9c189ec2c5c9dffc45",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.tap-merged.npy",
+      "shape": [
+        9,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "66fae390e8e9ebd88c12033238fe69d75dda77ffa1e961568622a323689dc842",
+      "file_sha256": "038566bda354c3da57fd5ab0b7b4e2f421a2335a2683713612fa408e651e58dd",
+      "file_bytes": 166016
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.npy",
+      "shape": [
+        18,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+      "file_sha256": "55bed6af4177351176536748b20ee07c57f8ab377cf38425440aad6e2f495b4d",
+      "file_bytes": 184448
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-patch_merge.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "752ffa16e6e0a65379498633b057491930002f50f7a16a9fe086a2fc333aaab7",
+      "file_sha256": "1776554dc11cf1a3d1f80da1d6ab22492f55afe56a7d7822aaa9c0d5875ae4fb",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-positioned.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4423eb14fb0ee80f758418c79b9125feac02f44cdb52b1037de20f5d21623140",
+      "file_sha256": "59cd63b38d4101c579474350f7f4b1a96c10925a9c3435ba95c0027fb0d94052",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-ln1.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "1f4722fa81fba89aeca8a6c82b1b789af13c82de4608b9021f1f4e66101f65bc",
+      "file_sha256": "5b2260de271d553c9bdef1f445f4fae88202f8b0ff490f4e6c45d11dcf796640",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-ln1.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "e05bfb07d0184523a9c0be2515d01516822b4b381d358c2115684abe8e59efe8",
+      "file_sha256": "491711a74f0e5e12003266d6638465227fb67e19852233fdc99945ff90abcd34",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-ln1.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3aff7ded385c769ba482ac6292736fa5231ec73d7201c91cfbf9da0cb0fed703",
+      "file_sha256": "7d954d52c043d36ca2d28e7b0425e2433c4e5465bc10955082fd895bd7589d09",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-qkv.0.npy",
+      "shape": [
+        72,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "296205207119f83fb2dffa5a23dad2b9087cb4e0ea722e9fe482075ccebb560f",
+      "file_sha256": "8df5ca08fe28e41602da0e0561421e8e6b2f55e5cea7708a925b079a378c0f01",
+      "file_bytes": 995456
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-block.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "417dada9db429aec16fc99d814597b1f3e49f4364581ce4dc9f201227ee0841f",
+      "file_sha256": "22fdafe88dda07f59cbad47ae5044dab5dec5a92bffa3b41291a0e095fd44792",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-block.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ce10e048e36cb25a22667eb48a8e1adf36ae3db39b3ed3b9f00c919c50d9c825",
+      "file_sha256": "9e29657efaeb572dc50b057327a064b562aa2d99bbc37556c5f5fd52178c77fc",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-block.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ecbe09e8c193f53873c4ec8307111872eabfc8e62ec6a95368ad33176133aeda",
+      "file_sha256": "5545e7c790373ce5d97acdffec1c2b9f04c25a670520c1ef4fb0d5c3f5c0b012",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-post_norm.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5c7d20bc72f96ba3b98b8ac0b87031f314d71ac5ca2ee804431c7b6645b2d8ab",
+      "file_sha256": "a8894052eb689753fd21d55b939ac242761b52a3d267f49021015b3aafe96d65",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-merged.npy",
+      "shape": [
+        18,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5c7d20bc72f96ba3b98b8ac0b87031f314d71ac5ca2ee804431c7b6645b2d8ab",
+      "file_sha256": "871a9ecb14bd25fbc50f376e775794db6e10a50f4b20769905f2942e6b56d814",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.npy",
+      "shape": [
+        18,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+      "file_sha256": "55bed6af4177351176536748b20ee07c57f8ab377cf38425440aad6e2f495b4d",
+      "file_bytes": 184448
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-patch_merge.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "752ffa16e6e0a65379498633b057491930002f50f7a16a9fe086a2fc333aaab7",
+      "file_sha256": "1776554dc11cf1a3d1f80da1d6ab22492f55afe56a7d7822aaa9c0d5875ae4fb",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-positioned.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4423eb14fb0ee80f758418c79b9125feac02f44cdb52b1037de20f5d21623140",
+      "file_sha256": "59cd63b38d4101c579474350f7f4b1a96c10925a9c3435ba95c0027fb0d94052",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-ln1.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "1f4722fa81fba89aeca8a6c82b1b789af13c82de4608b9021f1f4e66101f65bc",
+      "file_sha256": "5b2260de271d553c9bdef1f445f4fae88202f8b0ff490f4e6c45d11dcf796640",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-ln1.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "e05bfb07d0184523a9c0be2515d01516822b4b381d358c2115684abe8e59efe8",
+      "file_sha256": "491711a74f0e5e12003266d6638465227fb67e19852233fdc99945ff90abcd34",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-ln1.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3aff7ded385c769ba482ac6292736fa5231ec73d7201c91cfbf9da0cb0fed703",
+      "file_sha256": "7d954d52c043d36ca2d28e7b0425e2433c4e5465bc10955082fd895bd7589d09",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-qkv.0.npy",
+      "shape": [
+        72,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "296205207119f83fb2dffa5a23dad2b9087cb4e0ea722e9fe482075ccebb560f",
+      "file_sha256": "8df5ca08fe28e41602da0e0561421e8e6b2f55e5cea7708a925b079a378c0f01",
+      "file_bytes": 995456
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-block.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "417dada9db429aec16fc99d814597b1f3e49f4364581ce4dc9f201227ee0841f",
+      "file_sha256": "22fdafe88dda07f59cbad47ae5044dab5dec5a92bffa3b41291a0e095fd44792",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-block.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ce10e048e36cb25a22667eb48a8e1adf36ae3db39b3ed3b9f00c919c50d9c825",
+      "file_sha256": "9e29657efaeb572dc50b057327a064b562aa2d99bbc37556c5f5fd52178c77fc",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-block.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ecbe09e8c193f53873c4ec8307111872eabfc8e62ec6a95368ad33176133aeda",
+      "file_sha256": "5545e7c790373ce5d97acdffec1c2b9f04c25a670520c1ef4fb0d5c3f5c0b012",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-post_norm.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5c7d20bc72f96ba3b98b8ac0b87031f314d71ac5ca2ee804431c7b6645b2d8ab",
+      "file_sha256": "a8894052eb689753fd21d55b939ac242761b52a3d267f49021015b3aafe96d65",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.tap-merged.npy",
+      "shape": [
+        18,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5c7d20bc72f96ba3b98b8ac0b87031f314d71ac5ca2ee804431c7b6645b2d8ab",
+      "file_sha256": "871a9ecb14bd25fbc50f376e775794db6e10a50f4b20769905f2942e6b56d814",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_projection",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.npy",
+      "shape": [
+        18,
+        2560
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+      "file_sha256": "55bed6af4177351176536748b20ee07c57f8ab377cf38425440aad6e2f495b4d",
+      "file_bytes": 184448
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "patch_merge",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-patch_merge.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "752ffa16e6e0a65379498633b057491930002f50f7a16a9fe086a2fc333aaab7",
+      "file_sha256": "1776554dc11cf1a3d1f80da1d6ab22492f55afe56a7d7822aaa9c0d5875ae4fb",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "positioned",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-positioned.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "4423eb14fb0ee80f758418c79b9125feac02f44cdb52b1037de20f5d21623140",
+      "file_sha256": "59cd63b38d4101c579474350f7f4b1a96c10925a9c3435ba95c0027fb0d94052",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "ln1.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-ln1.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "1f4722fa81fba89aeca8a6c82b1b789af13c82de4608b9021f1f4e66101f65bc",
+      "file_sha256": "5b2260de271d553c9bdef1f445f4fae88202f8b0ff490f4e6c45d11dcf796640",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "ln1.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-ln1.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "e05bfb07d0184523a9c0be2515d01516822b4b381d358c2115684abe8e59efe8",
+      "file_sha256": "491711a74f0e5e12003266d6638465227fb67e19852233fdc99945ff90abcd34",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "ln1.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-ln1.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "3aff7ded385c769ba482ac6292736fa5231ec73d7201c91cfbf9da0cb0fed703",
+      "file_sha256": "7d954d52c043d36ca2d28e7b0425e2433c4e5465bc10955082fd895bd7589d09",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "qkv.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-qkv.0.npy",
+      "shape": [
+        72,
+        3456
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "296205207119f83fb2dffa5a23dad2b9087cb4e0ea722e9fe482075ccebb560f",
+      "file_sha256": "8df5ca08fe28e41602da0e0561421e8e6b2f55e5cea7708a925b079a378c0f01",
+      "file_bytes": 995456
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "block.0",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-block.0.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "417dada9db429aec16fc99d814597b1f3e49f4364581ce4dc9f201227ee0841f",
+      "file_sha256": "22fdafe88dda07f59cbad47ae5044dab5dec5a92bffa3b41291a0e095fd44792",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "block.1",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-block.1.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ce10e048e36cb25a22667eb48a8e1adf36ae3db39b3ed3b9f00c919c50d9c825",
+      "file_sha256": "9e29657efaeb572dc50b057327a064b562aa2d99bbc37556c5f5fd52178c77fc",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "block.26",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-block.26.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "ecbe09e8c193f53873c4ec8307111872eabfc8e62ec6a95368ad33176133aeda",
+      "file_sha256": "5545e7c790373ce5d97acdffec1c2b9f04c25a670520c1ef4fb0d5c3f5c0b012",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "post_norm",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-post_norm.npy",
+      "shape": [
+        72,
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5c7d20bc72f96ba3b98b8ac0b87031f314d71ac5ca2ee804431c7b6645b2d8ab",
+      "file_sha256": "a8894052eb689753fd21d55b939ac242761b52a3d267f49021015b3aafe96d65",
+      "file_bytes": 331904
+    },
+    {
+      "kind": "formal_tap",
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "tap": "merged",
+      "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.tap-merged.npy",
+      "shape": [
+        18,
+        4608
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "5c7d20bc72f96ba3b98b8ac0b87031f314d71ac5ca2ee804431c7b6645b2d8ab",
+      "file_sha256": "871a9ecb14bd25fbc50f376e775794db6e10a50f4b20769905f2942e6b56d814",
+      "file_bytes": 331904
+    }
+  ]
+}

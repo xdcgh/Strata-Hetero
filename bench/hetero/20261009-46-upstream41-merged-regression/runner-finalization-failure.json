@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-46-upstream41-merged-regression",
+  "status": "runner_finalization_failed_after_all_commands_passed",
+  "source_head": "167689590a66d4ad620b5e8cc0b7893190fc19d5",
+  "runner_sha256": "8d5fc49a0baa98b815eb6f19885267de5fdeec5ef85ee5226701d5340b67e840",
+  "tests_started": 23,
+  "tests_completed": 23,
+  "error": "Write-FinalEvidence ran under StrictMode and accessed tests_run on the custom fixture record, which has fixture_cases only. All test command exit codes were zero; no tests were rerun.",
+  "recorded_utc": "2026-10-09T12:24:24.279452+00:00"
+}

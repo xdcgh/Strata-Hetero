@@ -1,0 +1,14 @@
+test_collect_hetero_bench_artifacts_maps_prompt_and_separates_failed_runs (__main__.HeteroQualityTests.test_collect_hetero_bench_artifacts_maps_prompt_and_separates_failed_runs) ... ok
+test_json_numeric_nonfinite_is_separate_from_retrieval_and_arithmetic (__main__.HeteroQualityTests.test_json_numeric_nonfinite_is_separate_from_retrieval_and_arithmetic) ... ok
+test_long_body_inserts_each_marker_once_and_no_source_repetition (__main__.HeteroQualityTests.test_long_body_inserts_each_marker_once_and_no_source_repetition) ... ok
+test_long_prompt_sizer_respects_tolerance_and_returns_count (__main__.HeteroQualityTests.test_long_prompt_sizer_respects_tolerance_and_returns_count) ... ok
+test_marker_generation_is_seeded_and_avoids_source_literals (__main__.HeteroQualityTests.test_marker_generation_is_seeded_and_avoids_source_literals) ... ok
+test_python_is_parsed_but_never_executed (__main__.HeteroQualityTests.test_python_is_parsed_but_never_executed) ... ok
+test_python_rejects_coroutines_overrides_and_signature_side_effects (__main__.HeteroQualityTests.test_python_rejects_coroutines_overrides_and_signature_side_effects) ... ok
+test_response_file_size_is_bounded (__main__.HeteroQualityTests.test_response_file_size_is_bounded) ... ok
+test_truncation_bang_loop_and_exact_text_statuses (__main__.HeteroQualityTests.test_truncation_bang_loop_and_exact_text_statuses) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.015s
+
+OK

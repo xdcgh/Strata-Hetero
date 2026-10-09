@@ -1,0 +1,12 @@
+test_accepted_helper_dispatches_and_reports_complete_boundary (__main__.RuntimeTests.test_accepted_helper_dispatches_and_reports_complete_boundary) ... ok
+test_cleanup_failure_prevents_fallback_and_primary_failure_propagates (__main__.RuntimeTests.test_cleanup_failure_prevents_fallback_and_primary_failure_propagates) ... ok
+test_kernel_receipt_cannot_authorize_model_route_and_duplicate_json_is_rejected (__main__.RuntimeTests.test_kernel_receipt_cannot_authorize_model_route_and_duplicate_json_is_rejected) ... ok
+test_microbench_only_expired_or_mismatched_profile_keeps_primary (__main__.RuntimeTests.test_microbench_only_expired_or_mismatched_profile_keeps_primary) ... ok
+test_output_validation_failure_closes_then_falls_back_with_original_input (__main__.RuntimeTests.test_output_validation_failure_closes_then_falls_back_with_original_input) ... ok
+test_profile_roundtrip_hashes_receipts_and_requires_matching_model_report (__main__.RuntimeTests.test_profile_roundtrip_hashes_receipts_and_requires_matching_model_report) ... ok
+test_unready_or_busy_helper_and_mutable_input_are_refused (__main__.RuntimeTests.test_unready_or_busy_helper_and_mutable_input_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.026s
+
+OK

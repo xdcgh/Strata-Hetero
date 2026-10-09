@@ -1,0 +1,720 @@
+{
+  "schema_version": 1,
+  "status": "cpu_stage_diagnostic_numerical_negative",
+  "single_ov_run": true,
+  "retry": false,
+  "verified_utc": "2026-10-09T12:13:52.402680+00:00",
+  "outer_controller_exit_code": 0,
+  "outer_observer_exit_code": 0,
+  "worker_exit_code": 1,
+  "warmups": 8,
+  "formal_projections": 24,
+  "formal_tap_outputs": 264,
+  "formal_npy_files": 288,
+  "stage_comparisons": 264,
+  "negative_stage_reports": 153,
+  "all_formal_projection_shapes_finite": true,
+  "all_stage_shapes_finite": true,
+  "all_projection_repeat_identical": true,
+  "all_88_tap_groups_repeat_identical": true,
+  "policy_quality_pass": {
+    "graph_f32": false,
+    "cpu_vec_dot_rounding": false
+  },
+  "final_projection_groups": [
+    {
+      "policy": "graph_f32",
+      "shape": [
+        96,
+        96
+      ],
+      "fixture": "gray-96",
+      "final_projection_quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.001525403931736946,
+        "relative_rmse": 0.005810805349017307,
+        "max_row_norm_relative_error": 0.00502287419945075,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "graph_f32",
+      "shape": [
+        96,
+        96
+      ],
+      "fixture": "quadrants-96",
+      "final_projection_quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.003727838397026062,
+        "relative_rmse": 0.010702989901585755,
+        "max_row_norm_relative_error": 0.007563565723943423,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "graph_f32",
+      "shape": [
+        96,
+        96
+      ],
+      "fixture": "checkerboard-96",
+      "final_projection_quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0035295188426971436,
+        "relative_rmse": 0.009343125985063223,
+        "max_row_norm_relative_error": 0.010725744579842102,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "graph_f32",
+      "shape": [
+        96,
+        192
+      ],
+      "fixture": "gradient-192x96",
+      "final_projection_quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.007519155740737915,
+        "relative_rmse": 0.013770816687660099,
+        "max_row_norm_relative_error": 0.03990680732098783,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "shape": [
+        96,
+        96
+      ],
+      "fixture": "gray-96",
+      "final_projection_quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.000668063759803772,
+        "relative_rmse": 0.0027642156317457707,
+        "max_row_norm_relative_error": 0.0027598291578677103,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "shape": [
+        96,
+        96
+      ],
+      "fixture": "quadrants-96",
+      "final_projection_quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.00196230411529541,
+        "relative_rmse": 0.006932052091057517,
+        "max_row_norm_relative_error": 0.007523953467021395,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "shape": [
+        96,
+        96
+      ],
+      "fixture": "checkerboard-96",
+      "final_projection_quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.003157496452331543,
+        "relative_rmse": 0.00935906761577915,
+        "max_row_norm_relative_error": 0.014274082040954183,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "shape": [
+        96,
+        192
+      ],
+      "fixture": "gradient-192x96",
+      "final_projection_quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0029339492321014404,
+        "relative_rmse": 0.007583188910378232,
+        "max_row_norm_relative_error": 0.017489461912534414,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    }
+  ],
+  "first_gate_failure_by_policy_fixture": [
+    {
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "first_failing_stage": "block.0"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "first_failing_stage": "qkv.0"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "first_failing_stage": "block.0"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "first_failing_stage": "qkv.0"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "first_failing_stage": "block.1"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "first_failing_stage": "ln1.1"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "first_failing_stage": "block.1"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "first_failing_stage": "ln1.1"
+    }
+  ],
+  "all_24_projection_fingerprints_changed_from_frozen31": true,
+  "projection_fingerprints": {
+    "status": "diagnostic_only",
+    "projection_changed_from_frozen_run31": true,
+    "rows": [
+      {
+        "policy": "graph_f32",
+        "fixture": "gray-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+        "diagnostic_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gray-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+        "diagnostic_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gray-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+        "diagnostic_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "quadrants-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+        "diagnostic_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "quadrants-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+        "diagnostic_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "quadrants-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+        "diagnostic_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "checkerboard-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+        "diagnostic_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "checkerboard-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+        "diagnostic_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "checkerboard-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+        "diagnostic_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gradient-192x96",
+        "iteration": 1,
+        "frozen_run31_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+        "diagnostic_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gradient-192x96",
+        "iteration": 2,
+        "frozen_run31_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+        "diagnostic_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gradient-192x96",
+        "iteration": 3,
+        "frozen_run31_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+        "diagnostic_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gray-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+        "diagnostic_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gray-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+        "diagnostic_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gray-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+        "diagnostic_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "quadrants-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+        "diagnostic_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "quadrants-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+        "diagnostic_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "quadrants-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+        "diagnostic_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "checkerboard-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+        "diagnostic_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "checkerboard-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+        "diagnostic_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "checkerboard-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+        "diagnostic_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gradient-192x96",
+        "iteration": 1,
+        "frozen_run31_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+        "diagnostic_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gradient-192x96",
+        "iteration": 2,
+        "frozen_run31_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+        "diagnostic_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gradient-192x96",
+        "iteration": 3,
+        "frozen_run31_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+        "diagnostic_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+        "changed": true
+      }
+    ],
+    "native_reference_replaced": false,
+    "numerical_gate_relaxed": false
+  },
+  "instrumentation_changed_final_projection": true,
+  "original_native_reference_replaced": false,
+  "numerical_gate_relaxed": false,
+  "exact_cpu_only": true,
+  "reported_precision": "<Type: 'float32'>",
+  "reported_execution_mode": "ExecutionMode.ACCURACY",
+  "tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "owned_pids_observed_gone": [
+    16060,
+    7512,
+    444,
+    16764
+  ],
+  "owned_tree_terminal": true,
+  "outer_controller_binding": {
+    "launcher": {
+      "pid": 16060,
+      "parent_pid": 3876,
+      "create_time": 1791547803.534717,
+      "executable": "e:\\strata-hetero-data\\venv\\scripts\\python.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-u",
+        "-B",
+        "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+        "--run"
+      ]
+    },
+    "descendants": [
+      {
+        "pid": 16636,
+        "parent_pid": 16060,
+        "create_time": 1791547803.5402253,
+        "executable": "c:\\windows\\system32\\conhost.exe",
+        "command_line": [
+          "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+          "0x4"
+        ]
+      },
+      {
+        "pid": 7512,
+        "parent_pid": 16060,
+        "create_time": 1791547803.5739768,
+        "executable": "c:\\python314\\python.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+          "-u",
+          "-B",
+          "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+          "--run"
+        ]
+      }
+    ],
+    "actual_service_child": {
+      "pid": 7512,
+      "parent_pid": 16060,
+      "create_time": 1791547803.5739768,
+      "executable": "c:\\python314\\python.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "-u",
+        "-B",
+        "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+        "--run"
+      ]
+    },
+    "live_service_children": 1,
+    "observed_utc": "2026-10-09T12:10:03.659431+00:00",
+    "outer_launcher_binding": {
+      "argv0_windows_path_normalized": true,
+      "ordered_argv_tail_exact": true,
+      "identity": {
+        "pid": 16060,
+        "parent_pid": 3876,
+        "create_time": 1791547803.534717,
+        "executable": "e:\\strata-hetero-data\\venv\\scripts\\python.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+          "-u",
+          "-B",
+          "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+          "--run"
+        ]
+      }
+    },
+    "scope": "actual C Python OV controller; exact ordered argv tail"
+  },
+  "actual_worker_binding": {
+    "launcher": {
+      "pid": 444,
+      "parent_pid": 7512,
+      "create_time": 1791547803.7089584,
+      "executable": "e:\\strata-hetero-data\\venv-intel\\scripts\\python.exe",
+      "command_line": [
+        "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+        "-u",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+        "--run",
+        "--export-receipt",
+        "E:/Strata-Hetero-data/vision-payloads/20261009-30-native-vision-export/export-receipt.json",
+        "--output-dir",
+        "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+        "--tap",
+        "patch_merge",
+        "--tap",
+        "positioned",
+        "--tap",
+        "ln1.0",
+        "--tap",
+        "ln1.1",
+        "--tap",
+        "ln1.26",
+        "--tap",
+        "qkv.0",
+        "--tap",
+        "block.0",
+        "--tap",
+        "block.1",
+        "--tap",
+        "block.26",
+        "--tap",
+        "post_norm",
+        "--tap",
+        "merged"
+      ]
+    },
+    "descendants": [
+      {
+        "pid": 8652,
+        "parent_pid": 444,
+        "create_time": 1791547803.714432,
+        "executable": "c:\\windows\\system32\\conhost.exe",
+        "command_line": [
+          "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+          "0x4"
+        ]
+      },
+      {
+        "pid": 16764,
+        "parent_pid": 444,
+        "create_time": 1791547803.7249749,
+        "executable": "c:\\python314\\python.exe",
+        "command_line": [
+          "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+          "-u",
+          "-B",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+          "--run",
+          "--export-receipt",
+          "E:/Strata-Hetero-data/vision-payloads/20261009-30-native-vision-export/export-receipt.json",
+          "--output-dir",
+          "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+          "--tap",
+          "patch_merge",
+          "--tap",
+          "positioned",
+          "--tap",
+          "ln1.0",
+          "--tap",
+          "ln1.1",
+          "--tap",
+          "ln1.26",
+          "--tap",
+          "qkv.0",
+          "--tap",
+          "block.0",
+          "--tap",
+          "block.1",
+          "--tap",
+          "block.26",
+          "--tap",
+          "post_norm",
+          "--tap",
+          "merged"
+        ]
+      }
+    ],
+    "actual_service_child": {
+      "pid": 16764,
+      "parent_pid": 444,
+      "create_time": 1791547803.7249749,
+      "executable": "c:\\python314\\python.exe",
+      "command_line": [
+        "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+        "-u",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+        "--run",
+        "--export-receipt",
+        "E:/Strata-Hetero-data/vision-payloads/20261009-30-native-vision-export/export-receipt.json",
+        "--output-dir",
+        "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+        "--tap",
+        "patch_merge",
+        "--tap",
+        "positioned",
+        "--tap",
+        "ln1.0",
+        "--tap",
+        "ln1.1",
+        "--tap",
+        "ln1.26",
+        "--tap",
+        "qkv.0",
+        "--tap",
+        "block.0",
+        "--tap",
+        "block.1",
+        "--tap",
+        "block.26",
+        "--tap",
+        "post_norm",
+        "--tap",
+        "merged"
+      ]
+    },
+    "live_service_children": 1
+  },
+  "controller_identity": {
+    "pid": 7512,
+    "parent_pid": 16060,
+    "create_time": 1791547803.5739768,
+    "executable": "c:\\python314\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+      "--run"
+    ]
+  },
+  "external_resource_samples": 24,
+  "internal_memory_gate_samples": 416,
+  "all_global_memory_gates_pass": true,
+  "minimum_physical_available_bytes": 112602161152,
+  "minimum_commit_available_bytes": 117453819904,
+  "max_resource_sample_gap_seconds": 1.058174,
+  "source_sha256": {
+    "driver": "8da72cbc7c2128ff272821a67796b07ea972e6a61ede8480d2f79e0b03b33fc7",
+    "contract": "a90bde78407dbe3c2b3d02c103b5f93ab79569d5e87c15bd1744bad6f507aab1",
+    "comparison_receipt": "c8370f4b7f82cebd4b58df75fe4b2c4294416b66ff716d639a50fdb95104049a",
+    "stage_comparison": "4999bd580b9c0e40a09b2cbc1212169b79e630f9b5ef955603528a8ef45dd5a0"
+  },
+  "no_cpp_compile": true,
+  "no_affinity_changes": true,
+  "npu_accepted": false,
+  "native_helper_run_in_this_phase": false,
+  "raw_arrays_in_git": false,
+  "postrun_memory": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 117453492224,
+    "physical_used_bytes": 19509755904,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 22770524160,
+    "commit_available_bytes": 122782658560,
+    "commit_total_pages": 5559210,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 122782658560,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "postrun_errors": []
+}

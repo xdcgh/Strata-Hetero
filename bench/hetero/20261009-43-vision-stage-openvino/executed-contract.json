@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "status": "root_conditionally_authorized_cpu_ov_diagnostic_native_frozen",
+  "execution_authorized": true,
+  "run_id": "20261009-43-vision-stage-oracle",
+  "helper": {
+    "path": "E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+    "bytes": 5069824,
+    "sha256": "f01aa1f111931e4f24c2003d65bd3ab853370c7c1b7f7a8f62900d6b2c7a7c6d"
+  },
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "helper_argv": [
+    "E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+    "--mmproj",
+    "E:/Strata-Hetero-data/models/vision-ed59f92/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "--model",
+    "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "--threads",
+    "10",
+    "--max-tokens",
+    "256",
+    "--flash-attn",
+    "off",
+    "--enable-stage-taps"
+  ],
+  "mmproj": {
+    "path": "E:/Strata-Hetero-data/models/vision-ed59f92/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "size_bytes": 907543008,
+    "sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0"
+  },
+  "text_model": {
+    "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "size_bytes": 10946624,
+    "sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+    "mtime_ns": 1791267636000000000,
+    "ctime_ns": 1791267635050000000,
+    "volume": 2894736058,
+    "file_index": 790292856832,
+    "stat_stable_while_hashed": true,
+    "identity_receipt": "bench/hetero/20261008-00-admission/model-integrity-02.json"
+  },
+  "fixtures": [
+    {
+      "name": "gray-96",
+      "path": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu\\gray-96.png",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "format": "PNG",
+      "size_bytes": 196,
+      "sha256": "ff4593f146942e4220f1bf8a67619dd97ce23816285716d8a61b90d408a3592f",
+      "pixel_rule": "constant RGB(128,128,128)",
+      "frozen_native_sve": {
+        "image": "gray-96",
+        "iteration": "formal-1",
+        "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gray-96-formal-1.sve",
+        "size_bytes": 92180,
+        "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+        "n_tokens": 9,
+        "nx": 3,
+        "ny": 3,
+        "n_embd": 2560,
+        "reported_encoder_ms": 91.0,
+        "finite_check": "passed by client SVE1 parser"
+      },
+      "frozen_ov_decoded_sha256": {
+        "graph_f32": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+        "cpu_vec_dot_rounding": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764"
+      }
+    },
+    {
+      "name": "quadrants-96",
+      "path": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu\\quadrants-96.png",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "format": "PNG",
+      "size_bytes": 212,
+      "sha256": "8fc2fdcfc4d530a9f1492ba76831e7500d1204239eb06738f2d174c183ae5d63",
+      "pixel_rule": "four 48x48 RGB quadrants: red, green, blue, yellow",
+      "frozen_native_sve": {
+        "image": "quadrants-96",
+        "iteration": "formal-1",
+        "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\quadrants-96-formal-1.sve",
+        "size_bytes": 92180,
+        "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+        "n_tokens": 9,
+        "nx": 3,
+        "ny": 3,
+        "n_embd": 2560,
+        "reported_encoder_ms": 81.0,
+        "finite_check": "passed by client SVE1 parser"
+      },
+      "frozen_ov_decoded_sha256": {
+        "graph_f32": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+        "cpu_vec_dot_rounding": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140"
+      }
+    },
+    {
+      "name": "checkerboard-96",
+      "path": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu\\checkerboard-96.png",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "format": "PNG",
+      "size_bytes": 237,
+      "sha256": "53d0436943b19c283c57aeda49d8ea74a9ed7cc8f08539b37c7b080299c9da23",
+      "pixel_rule": "12x12 alternating black/white checkerboard",
+      "frozen_native_sve": {
+        "image": "checkerboard-96",
+        "iteration": "formal-1",
+        "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\checkerboard-96-formal-1.sve",
+        "size_bytes": 92180,
+        "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+        "n_tokens": 9,
+        "nx": 3,
+        "ny": 3,
+        "n_embd": 2560,
+        "reported_encoder_ms": 82.0,
+        "finite_check": "passed by client SVE1 parser"
+      },
+      "frozen_ov_decoded_sha256": {
+        "graph_f32": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+        "cpu_vec_dot_rounding": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1"
+      }
+    },
+    {
+      "name": "gradient-192x96",
+      "path": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu\\gradient-192x96.png",
+      "width": 192,
+      "height": 96,
+      "mode": "RGB",
+      "format": "PNG",
+      "size_bytes": 398,
+      "sha256": "4c29aee8d357dfb9fae0a2afea14aa819c19ad76246015a8791f781518d9116d",
+      "pixel_rule": "RGB=(floor(x*255/191),floor(y*255/95),(x+3*y) mod 256)",
+      "frozen_native_sve": {
+        "image": "gradient-192x96",
+        "iteration": "formal-1",
+        "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gradient-192x96-formal-1.sve",
+        "size_bytes": 184340,
+        "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+        "n_tokens": 18,
+        "nx": 6,
+        "ny": 3,
+        "n_embd": 2560,
+        "reported_encoder_ms": 151.0,
+        "finite_check": "passed by client SVE1 parser"
+      },
+      "frozen_ov_decoded_sha256": {
+        "graph_f32": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+        "cpu_vec_dot_rounding": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9"
+      }
+    }
+  ],
+  "selectors": {
+    "patch_merge": "patch_bias",
+    "positioned": "inp_pos_emb",
+    "ln1.0": "ln1-0",
+    "ln1.1": "ln1-1",
+    "ln1.26": "ln1-26",
+    "qkv.0": "Qcur-0",
+    "block.0": "layer_out-0",
+    "block.1": "layer_out-1",
+    "block.26": "layer_out-26",
+    "post_norm": "norm_b-27",
+    "merged": "norm_b-27 (reshaped)"
+  },
+  "encoder": {
+    "embedding": 1152,
+    "heads": 16,
+    "head_dim": 72,
+    "patch_size": 16,
+    "merge": 2,
+    "projection": 2560,
+    "dtype": "F32",
+    "transformer_layers": [
+      0,
+      1,
+      26
+    ]
+  },
+  "protocol": {
+    "ready": "READY 2560",
+    "baseline_command": "ENC",
+    "baseline_checks_per_fixture": 1,
+    "warmup_command": "ENC",
+    "warmups_per_fixture": 1,
+    "formal_command": "ENC_TAPS",
+    "formal_repeats": 3,
+    "native_commands_total": 20,
+    "per_image_tap_byte_cap": 16777216,
+    "manifest_stage_count": 11,
+    "allow_reference_switch": false,
+    "require_native_final_full_sve_sha": true
+  },
+  "output_root": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native",
+  "ov_diagnostic_root": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+  "ov_output_taps": [
+    "patch_merge",
+    "positioned",
+    "ln1.0",
+    "ln1.1",
+    "ln1.26",
+    "qkv.0",
+    "block.0",
+    "block.1",
+    "block.26",
+    "post_norm",
+    "merged"
+  ],
+  "ov_projection_fingerprint_policy": "Explicitly report changes from frozen run31 by policy/fixture; never replace frozen native run23 reference.",
+  "resource_gate": {
+    "physical_bytes": 12884901888,
+    "commit_bytes": 4294967296,
+    "interval_seconds": 1,
+    "known_telemetry_required": true
+  },
+  "owned_process_guard": {
+    "shared_agent42_api": "Reviewed run42 frozen OwnedServiceTree/ResourceMonitor",
+    "bind_fields": [
+      "pid",
+      "creation_time",
+      "executable",
+      "argv",
+      "parent_relation"
+    ],
+    "actual_cpython_child_required_for_ov": true,
+    "native_helper_direct_executable": true,
+    "failed_gate_action": "Stop/reap verified actual descendant tree before launcher; preserve terminal identities.",
+    "reviewed_binding": {
+      "module_file": "bench/hetero/20261009-42-native-q4k-q5_1-ipc/executed-client.py",
+      "sha256": "49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83",
+      "root_reviewed": true,
+      "review_scope": "Shared owned-process guard only; vision execution is not authorized."
+    }
+  },
+  "controller_interpreter": "E:/Strata-Hetero-data/venv/Scripts/python.exe",
+  "ov_worker_interpreter": "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+  "no_npu": true,
+  "no_vision_api": true,
+  "code_and_build_sha256": {
+    "tools/vision/strata_vision.cpp": "4dfef2f542fbdf7f30bfd5ddb39eaf0ffdf40f78113054575365a86f81933e17",
+    "tools/vision/vision_stage_trace.hpp": "6369605aed47b31aaeeda56a96c5037a8f00c9d47d6f776adde36e6a30e0d6dc",
+    "tools/hetero_vision_qwen3vl.py": "7888d8d1c7c1be3fa919aaed5691038467d4b1d53d884747da279c6fffec482e",
+    "tools/hetero_vision_cpu_compare.py": "60511797bda4d466096ccdb04dcbc279c5537323ca460643ee1d0a4b04ef4230",
+    "bench/hetero/20261009-22-vision-oracle-cpu/oracle_client.py": "17fd4ae4856ef1e144574c7ba52c18ec8d0aa8d2f429d4697cd0c3ecd3f7846b",
+    "bench/hetero/20261009-39-vision-stage-cpu-build/build-receipt.json": "e4d2b6e5d7402bcb98ad67dfe23fafac1f4418f9f83a0da871889ca32c4214e4",
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/client.py": "ea0dbe8745be86496b9bcf3c05631835882a89e4b2f3a3a0f7134d6b451633fe",
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py": "8da72cbc7c2128ff272821a67796b07ea972e6a61ede8480d2f79e0b03b33fc7",
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/analyse.py": "a161378939fc7c00d12dcb452dda0e5e1405c4a0fecacfdde5245fd5d319e336",
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/test_ov_driver.py": "2cbf50b61751defc730f2f640178a715babdd681cd0df8e84114493cadba5d23"
+  },
+  "capture_forward_order": [
+    "patch_merge",
+    "positioned",
+    "ln1.0",
+    "qkv.0",
+    "block.0",
+    "ln1.1",
+    "block.1",
+    "ln1.26",
+    "block.26",
+    "post_norm",
+    "merged"
+  ],
+  "external_launch_guard_requirement": "Use main venv with psutil for the controller; bind its actual C Python PID/create/exe/full argv explicitly. Native direct Popen is the actual runtime, requires command_line == helper_argv and never waits for a Cpython child. OV worker alone uses Intel venv and requires its actual C Python child binding.",
+  "openvino_run_authorized": true,
+  "ov_worker_timeout_seconds": 1800
+}

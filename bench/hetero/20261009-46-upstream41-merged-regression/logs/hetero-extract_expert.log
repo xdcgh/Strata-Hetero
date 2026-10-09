@@ -1,0 +1,10 @@
+test_file_stat_rejects_fstat_inode_or_mtime_mismatch (__main__.ExpertExtractorTests.test_file_stat_rejects_fstat_inode_or_mtime_mismatch) ... ok
+test_native_v4_parser_preserves_per_role_shards_and_offsets (__main__.ExpertExtractorTests.test_native_v4_parser_preserves_per_role_shards_and_offsets) ... ok
+test_path_ctime_survives_windows_fstat_zero_ctime (__main__.ExpertExtractorTests.test_path_ctime_survives_windows_fstat_zero_ctime) ... ok
+test_pinned_official_dequantizer_handles_synthetic_small_rows (__main__.ExpertExtractorTests.test_pinned_official_dequantizer_handles_synthetic_small_rows) ... ok
+test_profile_parser_reads_rank_without_touching_model (__main__.ExpertExtractorTests.test_profile_parser_reads_rank_without_touching_model) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.094s
+
+OK

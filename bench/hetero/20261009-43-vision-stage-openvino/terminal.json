@@ -1,0 +1,8 @@
+{
+  "ended_utc": "2026-10-09T12:10:28.2471302Z",
+  "launcher_pid": 16060,
+  "exit_code": 0,
+  "observer_exit_code": 0,
+  "scope": "CPU OV diagnostic only",
+  "outer_identity_bound": true
+}

@@ -1,0 +1,18 @@
+test_bad_gpu_csv_field_count_or_required_na_is_unknown (__main__.ResourceSamplerTests.test_bad_gpu_csv_field_count_or_required_na_is_unknown) ... ok
+test_low_ram_and_failed_nvidia_have_explicit_alerts_not_zero_gpu (__main__.ResourceSamplerTests.test_low_ram_and_failed_nvidia_have_explicit_alerts_not_zero_gpu) ... ok
+test_memory_global_and_psutil_fallback_have_explicit_sources (__main__.ResourceSamplerTests.test_memory_global_and_psutil_fallback_have_explicit_sources) ... ok
+test_memory_snapshot_does_not_mutate_reused_injected_dict (__main__.ResourceSamplerTests.test_memory_snapshot_does_not_mutate_reused_injected_dict) ... ok
+test_nvidia_zero_is_real_and_na_optional_fields_stay_unknown (__main__.ResourceSamplerTests.test_nvidia_zero_is_real_and_na_optional_fields_stay_unknown) ... ok
+test_optional_gpu_csv_n_a_and_bad_row_count (__main__.ResourceSamplerTests.test_optional_gpu_csv_n_a_and_bad_row_count) ... ok
+test_sample_contains_pid_tree_disk_labels_memory_gate_and_timestamps (__main__.ResourceSamplerTests.test_sample_contains_pid_tree_disk_labels_memory_gate_and_timestamps) ... ok
+test_stop_file_interrupts_sampler_and_keeps_utc_monotonic_records (__main__.ResourceSamplerTests.test_stop_file_interrupts_sampler_and_keeps_utc_monotonic_records) ... ok
+test_systemwide_commit_uses_psapi_not_gms_pagefile_comparison (__main__.ResourceSamplerTests.test_systemwide_commit_uses_psapi_not_gms_pagefile_comparison) ... ok
+test_validate_only_and_output_guard_do_not_construct_sampler_or_overwrite (__main__.ResourceSamplerTests.test_validate_only_and_output_guard_do_not_construct_sampler_or_overwrite) ... output already exists
+{"status": "valid", "queries_started": false, "output_written": false}
+ok
+test_windows_memory_api_wrapper_calls_both_native_apis_and_preserves_legacy_nulls (__main__.ResourceSamplerTests.test_windows_memory_api_wrapper_calls_both_native_apis_and_preserves_legacy_nulls) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.007s
+
+OK

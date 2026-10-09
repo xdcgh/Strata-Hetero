@@ -1,0 +1,18 @@
+test_core_identity_includes_processor_group (__main__.CpuTopologyTests.test_core_identity_includes_processor_group) ... ok
+test_efficiency_classes_are_numeric_only_no_cpu_brand_claim (__main__.CpuTopologyTests.test_efficiency_classes_are_numeric_only_no_cpu_brand_claim) ... ok
+test_linux_cpu_zero_keeps_valid_candidate_identity (__main__.CpuTopologyTests.test_linux_cpu_zero_keeps_valid_candidate_identity) ... ok
+test_linux_fixture_respects_sched_affinity_and_package_core_pair (__main__.CpuTopologyTests.test_linux_fixture_respects_sched_affinity_and_package_core_pair) ... ok
+test_malformed_or_truncated_records_rejected (__main__.CpuTopologyTests.test_malformed_or_truncated_records_rejected) ... ok
+test_output_is_exclusive (__main__.CpuTopologyTests.test_output_is_exclusive) ... ok
+test_process_allowed_mask_and_cpu_set_allocation_restrict_candidates (__main__.CpuTopologyTests.test_process_allowed_mask_and_cpu_set_allocation_restrict_candidates) ... ok
+test_process_default_cpu_set_selection_restricts_allowed_set (__main__.CpuTopologyTests.test_process_default_cpu_set_selection_restricts_allowed_set) ... ok
+test_scheduling_class_is_byte_not_reserved_union_word (__main__.CpuTopologyTests.test_scheduling_class_is_byte_not_reserved_union_word) ... ok
+test_validate_only_performs_no_observation_or_write (__main__.CpuTopologyTests.test_validate_only_performs_no_observation_or_write) ... ok
+test_variable_size_entries_and_unknown_type_skip (__main__.CpuTopologyTests.test_variable_size_entries_and_unknown_type_skip) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.017s
+
+OK
+{"valid": false, "error": "output_exists", "path": "C:\\Users\\DC\\AppData\\Local\\Temp\\tmp264vk7v7\\cpu.json"}
+{"valid": true, "observation_performed": false, "write_performed": false, "path": "C:\\Users\\DC\\AppData\\Local\\Temp\\tmpphq9nb_m\\new\\cpu.json"}

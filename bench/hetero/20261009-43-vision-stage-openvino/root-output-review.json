@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-09T12:21:59.934812+00:00",
+  "status": "root_all288_formal_arrays_file_and_decoded_hashes_shape_finite_verified",
+  "array_count": 288,
+  "stage_comparisons": 264,
+  "negative_stage_comparisons": 153,
+  "native_reference_replaced": false,
+  "npu_route_enabled": false,
+  "index_sha256": "d755ac6b4c9a771d32d17e8826f324bcc75a3f45ee3acc945aa806901078d0f7"
+}

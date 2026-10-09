@@ -1,0 +1,18 @@
+test_download_accepts_only_exact_pinned_bytes_then_publishes_archive (__main__.DownloadTests.test_download_accepts_only_exact_pinned_bytes_then_publishes_archive) ... ok
+test_hash_mismatch_keeps_each_attempt_partial_and_never_publishes_archive (__main__.DownloadTests.test_hash_mismatch_keeps_each_attempt_partial_and_never_publishes_archive) ... ok
+test_manifest_source_cannot_redirect_downloads_to_another_host (__main__.ManifestTests.test_manifest_source_cannot_redirect_downloads_to_another_host) ... ok
+test_only_official_windows_x64_archive_paths_are_accepted (__main__.ManifestTests.test_only_official_windows_x64_archive_paths_are_accepted) ... ok
+test_validate_only_has_no_network_or_filesystem_side_effects (__main__.ReadOnlyValidationTests.test_validate_only_has_no_network_or_filesystem_side_effects) ... ok
+test_validate_only_refuses_an_unreceipted_existing_root_without_mutation (__main__.ReadOnlyValidationTests.test_validate_only_refuses_an_unreceipted_existing_root_without_mutation) ... ok
+test_existing_sdk_reuse_requires_matching_manifest_and_all_file_hashes (__main__.ReceiptTests.test_existing_sdk_reuse_requires_matching_manifest_and_all_file_hashes) ... ok
+test_different_component_root_licenses_are_preserved_separately (__main__.ZipSafetyTests.test_different_component_root_licenses_are_preserved_separately) ... ok
+test_different_component_sdk_headers_still_fail_closed (__main__.ZipSafetyTests.test_different_component_sdk_headers_still_fail_closed) ... ok
+test_different_content_collision_fails_without_overwriting_existing_file (__main__.ZipSafetyTests.test_different_content_collision_fails_without_overwriting_existing_file) ... ok
+test_drive_ads_and_symlink_entries_are_rejected (__main__.ZipSafetyTests.test_drive_ads_and_symlink_entries_are_rejected) ... ok
+test_identical_content_collision_is_reused (__main__.ZipSafetyTests.test_identical_content_collision_is_reused) ... ok
+test_traversal_entry_is_rejected_before_any_file_is_written (__main__.ZipSafetyTests.test_traversal_entry_is_rejected_before_any_file_is_written) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.132s
+
+OK

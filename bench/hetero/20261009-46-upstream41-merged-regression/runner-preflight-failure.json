@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "runner_preflight_failed_before_any_tests",
+  "utc": "2026-10-09T12:18:27.7059409Z",
+  "original_runner_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-46-upstream41-merged-regression\\run-regression.ps1",
+  "original_runner_sha256": "e4b1164543a87631ed3d6696f5ab82216a162c908b2d5176dc68559f41555207",
+  "backup_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-46-upstream41-merged-regression\\run-regression.before-testpath-fix.ps1",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-46-upstream41-merged-regression\\logs\\runner-preflight-failure.stderr.log",
+  "tests_started": 0,
+  "reason": "Test-Path at line 11 parsed -or as an invalid parameter. No test suite started; exit code 1."
+}

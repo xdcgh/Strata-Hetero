@@ -1,0 +1,11 @@
+test_existing_snapshot_is_preserved_without_collecting (__main__.InventoryHelpersTests.test_existing_snapshot_is_preserved_without_collecting) ... ok
+test_letterless_volume_joins_by_volume_path (__main__.InventoryHelpersTests.test_letterless_volume_joins_by_volume_path) ... ok
+test_nvidia_csv_parses_numbers_strictly (__main__.InventoryHelpersTests.test_nvidia_csv_parses_numbers_strictly) ... ok
+test_powershell_bom_does_not_erase_partial_results (__main__.InventoryHelpersTests.test_powershell_bom_does_not_erase_partial_results) ... ok
+test_shared_physical_disk_keeps_each_volume_partition_mapping (__main__.InventoryHelpersTests.test_shared_physical_disk_keeps_each_volume_partition_mapping) ... ok
+test_unknown_devices_are_preserved_and_section_errors_do_not_erase_data (__main__.InventoryHelpersTests.test_unknown_devices_are_preserved_and_section_errors_do_not_erase_data) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+OK

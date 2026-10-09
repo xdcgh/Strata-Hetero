@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "status": "diagnostics_completed",
+  "argv": [
+    "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+    "-u",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+    "--run",
+    "--export-receipt",
+    "E:/Strata-Hetero-data/vision-payloads/20261009-30-native-vision-export/export-receipt.json",
+    "--output-dir",
+    "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+    "--tap",
+    "patch_merge",
+    "--tap",
+    "positioned",
+    "--tap",
+    "ln1.0",
+    "--tap",
+    "ln1.1",
+    "--tap",
+    "ln1.26",
+    "--tap",
+    "qkv.0",
+    "--tap",
+    "block.0",
+    "--tap",
+    "block.1",
+    "--tap",
+    "block.26",
+    "--tap",
+    "post_norm",
+    "--tap",
+    "merged"
+  ],
+  "mode": "CPU diagnostic aliases only",
+  "worker_timeout_seconds": 1800,
+  "controller_identity": {
+    "pid": 7512,
+    "parent_pid": 16060,
+    "create_time": 1791547803.5739768,
+    "executable": "c:\\python314\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py",
+      "--run"
+    ]
+  },
+  "worker_started_utc": "2026-10-09T12:10:03.708484+00:00",
+  "actual_worker_tree": {
+    "launcher": {
+      "pid": 444,
+      "parent_pid": 7512,
+      "create_time": 1791547803.7089584,
+      "executable": "e:\\strata-hetero-data\\venv-intel\\scripts\\python.exe",
+      "command_line": [
+        "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+        "-u",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+        "--run",
+        "--export-receipt",
+        "E:/Strata-Hetero-data/vision-payloads/20261009-30-native-vision-export/export-receipt.json",
+        "--output-dir",
+        "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+        "--tap",
+        "patch_merge",
+        "--tap",
+        "positioned",
+        "--tap",
+        "ln1.0",
+        "--tap",
+        "ln1.1",
+        "--tap",
+        "ln1.26",
+        "--tap",
+        "qkv.0",
+        "--tap",
+        "block.0",
+        "--tap",
+        "block.1",
+        "--tap",
+        "block.26",
+        "--tap",
+        "post_norm",
+        "--tap",
+        "merged"
+      ]
+    },
+    "descendants": [
+      {
+        "pid": 8652,
+        "parent_pid": 444,
+        "create_time": 1791547803.714432,
+        "executable": "c:\\windows\\system32\\conhost.exe",
+        "command_line": [
+          "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+          "0x4"
+        ]
+      },
+      {
+        "pid": 16764,
+        "parent_pid": 444,
+        "create_time": 1791547803.7249749,
+        "executable": "c:\\python314\\python.exe",
+        "command_line": [
+          "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+          "-u",
+          "-B",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+          "--run",
+          "--export-receipt",
+          "E:/Strata-Hetero-data/vision-payloads/20261009-30-native-vision-export/export-receipt.json",
+          "--output-dir",
+          "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+          "--tap",
+          "patch_merge",
+          "--tap",
+          "positioned",
+          "--tap",
+          "ln1.0",
+          "--tap",
+          "ln1.1",
+          "--tap",
+          "ln1.26",
+          "--tap",
+          "qkv.0",
+          "--tap",
+          "block.0",
+          "--tap",
+          "block.1",
+          "--tap",
+          "block.26",
+          "--tap",
+          "post_norm",
+          "--tap",
+          "merged"
+        ]
+      }
+    ],
+    "actual_service_child": {
+      "pid": 16764,
+      "parent_pid": 444,
+      "create_time": 1791547803.7249749,
+      "executable": "c:\\python314\\python.exe",
+      "command_line": [
+        "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+        "-u",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+        "--run",
+        "--export-receipt",
+        "E:/Strata-Hetero-data/vision-payloads/20261009-30-native-vision-export/export-receipt.json",
+        "--output-dir",
+        "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+        "--tap",
+        "patch_merge",
+        "--tap",
+        "positioned",
+        "--tap",
+        "ln1.0",
+        "--tap",
+        "ln1.1",
+        "--tap",
+        "ln1.26",
+        "--tap",
+        "qkv.0",
+        "--tap",
+        "block.0",
+        "--tap",
+        "block.1",
+        "--tap",
+        "block.26",
+        "--tap",
+        "post_norm",
+        "--tap",
+        "merged"
+      ]
+    },
+    "live_service_children": 1
+  },
+  "worker_exit_code": 1,
+  "projection_fingerprints": {
+    "status": "diagnostic_only",
+    "projection_changed_from_frozen_run31": true,
+    "rows": [
+      {
+        "policy": "graph_f32",
+        "fixture": "gray-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+        "diagnostic_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gray-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+        "diagnostic_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gray-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+        "diagnostic_sha256": "7b02f6d8a65a1ff3504a61bfe8a24fe792d1ef693f616513f9e4c6bb8d6766a0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "quadrants-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+        "diagnostic_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "quadrants-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+        "diagnostic_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "quadrants-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+        "diagnostic_sha256": "10ec92f165c4046ff0701d77700c433be844f61b0c2d5bc674d162dee43eeef0",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "checkerboard-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+        "diagnostic_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "checkerboard-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+        "diagnostic_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "checkerboard-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+        "diagnostic_sha256": "01914f1790a4e84ac6259407a0b36c6b6b2c762b0ab045f9d002d35544bd4396",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gradient-192x96",
+        "iteration": 1,
+        "frozen_run31_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+        "diagnostic_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gradient-192x96",
+        "iteration": 2,
+        "frozen_run31_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+        "diagnostic_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+        "changed": true
+      },
+      {
+        "policy": "graph_f32",
+        "fixture": "gradient-192x96",
+        "iteration": 3,
+        "frozen_run31_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+        "diagnostic_sha256": "aa3e89ab75dcbc19b338a00c37a25b23949ceb75198f8a594e29a3bfcf8a936e",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gray-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+        "diagnostic_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gray-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+        "diagnostic_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gray-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+        "diagnostic_sha256": "8cf9f69692b740922faab6ba9ba6dad19749a6cd0656233288f1e81b068bda2d",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "quadrants-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+        "diagnostic_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "quadrants-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+        "diagnostic_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "quadrants-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+        "diagnostic_sha256": "b5d0c90cbfbfc750f8530770e5bfce41e5970201d218e5d34d266796ed820c76",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "checkerboard-96",
+        "iteration": 1,
+        "frozen_run31_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+        "diagnostic_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "checkerboard-96",
+        "iteration": 2,
+        "frozen_run31_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+        "diagnostic_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "checkerboard-96",
+        "iteration": 3,
+        "frozen_run31_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+        "diagnostic_sha256": "0006494f0776651dc2cefababd8fe7f2442097ab14ee829a160d86f02a60af77",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gradient-192x96",
+        "iteration": 1,
+        "frozen_run31_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+        "diagnostic_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gradient-192x96",
+        "iteration": 2,
+        "frozen_run31_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+        "diagnostic_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+        "changed": true
+      },
+      {
+        "policy": "cpu_vec_dot_rounding",
+        "fixture": "gradient-192x96",
+        "iteration": 3,
+        "frozen_run31_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+        "diagnostic_sha256": "60f6bc72f1faa495f113a76303f10cf131426b01276c771f24ef31934d602c20",
+        "changed": true
+      }
+    ],
+    "native_reference_replaced": false,
+    "numerical_gate_relaxed": false
+  },
+  "native_reference_replaced": false,
+  "policy_quality_pass": {
+    "graph_f32": false,
+    "cpu_vec_dot_rounding": false
+  },
+  "numerical_gate_relaxed": false,
+  "descendant_cleanup": {
+    "descendant_cleanup": [
+      {
+        "identity": {
+          "pid": 16764,
+          "parent_pid": 444,
+          "create_time": 1791547803.7249749,
+          "executable": "c:\\python314\\python.exe",
+          "command_line": [
+            "E:/Strata-Hetero-data/venv-intel/Scripts/python.exe",
+            "-u",
+            "-B",
+            "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+            "--run",
+            "--export-receipt",
+            "E:/Strata-Hetero-data/vision-payloads/20261009-30-native-vision-export/export-receipt.json",
+            "--output-dir",
+            "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-openvino",
+            "--tap",
+            "patch_merge",
+            "--tap",
+            "positioned",
+            "--tap",
+            "ln1.0",
+            "--tap",
+            "ln1.1",
+            "--tap",
+            "ln1.26",
+            "--tap",
+            "qkv.0",
+            "--tap",
+            "block.0",
+            "--tap",
+            "block.1",
+            "--tap",
+            "block.26",
+            "--tap",
+            "post_norm",
+            "--tap",
+            "merged"
+          ]
+        },
+        "action": "exited_during_cleanup"
+      },
+      {
+        "identity": {
+          "pid": 8652,
+          "parent_pid": 444,
+          "create_time": 1791547803.714432,
+          "executable": "c:\\windows\\system32\\conhost.exe",
+          "command_line": [
+            "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+            "0x4"
+          ]
+        },
+        "action": "exited_during_cleanup"
+      }
+    ],
+    "remaining_owned_descendants": [],
+    "terminal": true
+  },
+  "root_cleanup": null,
+  "monitor_cleanup": null,
+  "owned_tree_terminal": true,
+  "finished_utc": "2026-10-09T12:10:28.229292+00:00"
+}

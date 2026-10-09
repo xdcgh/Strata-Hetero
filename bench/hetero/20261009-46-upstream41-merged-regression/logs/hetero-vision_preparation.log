@@ -1,0 +1,15 @@
+test_both_default_clis_read_only_json_without_compute_imports_or_asset_access (__main__.PreparationTests.test_both_default_clis_read_only_json_without_compute_imports_or_asset_access) ... ok
+test_export_contract_validates_all_hash_layout_range_and_path_bindings (__main__.PreparationTests.test_export_contract_validates_all_hash_layout_range_and_path_bindings) ... ok
+test_failed_memory_gate_preserves_receipt_before_asset_or_core_access (__main__.PreparationTests.test_failed_memory_gate_preserves_receipt_before_asset_or_core_access) ... ok
+test_header_mapping_closes_only_after_views_release_including_metadata_failure (__main__.PreparationTests.test_header_mapping_closes_only_after_views_release_including_metadata_failure) ... ok
+test_native_gpu_or_flash_attention_receipts_are_refused (__main__.PreparationTests.test_native_gpu_or_flash_attention_receipts_are_refused) ... ok
+test_negative_quality_comparisons_keep_all_arms_with_unchanged_tolerances (__main__.PreparationTests.test_negative_quality_comparisons_keep_all_arms_with_unchanged_tolerances) ... ok
+test_new_alias_contract_validates_without_payload_or_runtime (__main__.PreparationTests.test_new_alias_contract_validates_without_payload_or_runtime) ... ok
+test_owned_npy_readback_and_hash_corruption_gate (__main__.PreparationTests.test_owned_npy_readback_and_hash_corruption_gate) ... ok
+test_pinned_f32_bf16_decoder_with_small_known_bits_and_reverse_layout (__main__.PreparationTests.test_pinned_f32_bf16_decoder_with_small_known_bits_and_reverse_layout) ... ok
+test_sve_parser_checks_hash_header_finite_and_exact_body (__main__.PreparationTests.test_sve_parser_checks_hash_header_finite_and_exact_body) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.582s
+
+OK

@@ -1,0 +1,201 @@
+test_a_failed_restart_keeps_the_measurements_1337 (tools.test_calibrate.Calibrate.test_a_failed_restart_keeps_the_measurements_1337) ... ok
+test_adaptive_tier (tools.test_calibrate.Calibrate.test_adaptive_tier) ... ok
+test_apply (tools.test_calibrate.Calibrate.test_apply) ... ok
+test_defaults_kept_when_flat (tools.test_calibrate.Calibrate.test_defaults_kept_when_flat) ... ok
+test_engine_args_are_the_servers (tools.test_calibrate.Calibrate.test_engine_args_are_the_servers) ... ok
+test_engine_error (tools.test_calibrate.Calibrate.test_engine_error) ... ok
+test_fewer_workers (tools.test_calibrate.Calibrate.test_fewer_workers) ... ok
+test_finds_pcie_and_min_p (tools.test_calibrate.Calibrate.test_finds_pcie_and_min_p) ... ok
+test_old_calibration_is_the_baseline_reset (tools.test_calibrate.Calibrate.test_old_calibration_is_the_baseline_reset) ... ok
+test_one_failing_worker_count_only_drops_that_candidate_1337 (tools.test_calibrate.Calibrate.test_one_failing_worker_count_only_drops_that_candidate_1337) ... ok
+test_pick (tools.test_calibrate.Calibrate.test_pick) ... ok
+test_run_measures_with_the_servers_args (tools.test_calibrate.Calibrate.test_run_measures_with_the_servers_args) ... ok
+test_small_gain_is_noise (tools.test_calibrate.Calibrate.test_small_gain_is_noise) ... ok
+test_worker_candidates (tools.test_calibrate.Calibrate.test_worker_candidates) ... ok
+
+  Tuning Strata for this PC: the output speed is measured with a few engine settings (the PCIe share, the
+  draft depth, the CPU threads, the expert cache). It takes roughly 15-30 minutes (3 rounds of each value); the PC is busy meanwhile.
+  [ok] tuned for this PC: --pcie-frac 0.20 (61.2 tok/s)
+test_calibrate_config_writes_and_remembers (tools.test_calibrate.SetupIntegration.test_calibrate_config_writes_and_remembers) ... ok
+
+  Tuning Strata for this PC: the output speed is measured with a few engine settings (the PCIe share, the
+  draft depth, the CPU threads, the expert cache). It takes roughly 15-30 minutes (3 rounds of each value); the PC is busy meanwhile.
+  [!]  the tuning did not finish (the engine exited before it was ready): the default settings stay
+test_failed_calibration_keeps_defaults (tools.test_calibrate.SetupIntegration.test_failed_calibration_keeps_defaults) ... ok
+test_failed_calibration_says_the_engines_reason (tools.test_calibrate.SetupIntegration.test_failed_calibration_says_the_engines_reason) ... ok
+test_the_encoder_is_built_native (tools.test_setup_choices.CudaVision.test_the_encoder_is_built_native) ... ok
+test_desktop_detection (tools.test_setup_choices.DesktopReserveTip.test_desktop_detection) ... ok
+test_the_tip (tools.test_setup_choices.DesktopReserveTip.test_the_tip) ... ok
+test_cuda_132_on_sm120 (tools.test_setup_choices.ExperimentalSm60.test_cuda_132_on_sm120)
+#892 / #968: nvcc 13.2 for an RTX 50 card: an older 13.x is taken when there is one, else a warning; never an ... ok
+test_find_nvcc_below (tools.test_setup_choices.ExperimentalSm60.test_find_nvcc_below) ... ok
+test_pascal_takes_cuda_12 (tools.test_setup_choices.ExperimentalSm60.test_pascal_takes_cuda_12) ... ok
+test_pascal_without_cuda_12_stops (tools.test_setup_choices.ExperimentalSm60.test_pascal_without_cuda_12_stops) ... ok
+test_the_build_flag (tools.test_setup_choices.ExperimentalSm60.test_the_build_flag) ... ok
+test_the_gate (tools.test_setup_choices.ExperimentalSm60.test_the_gate) ... ok
+test_another_split_of_a_setup_size (tools.test_setup_choices.GgufDirShards.test_another_split_of_a_setup_size) ... ok
+test_four_unsloth_shards (tools.test_setup_choices.GgufDirShards.test_four_unsloth_shards) ... ok
+test_nothing_recognisable_keeps_the_published_names (tools.test_setup_choices.GgufDirShards.test_nothing_recognisable_keeps_the_published_names) ... ok
+test_the_published_two_shards (tools.test_setup_choices.GgufDirShards.test_the_published_two_shards) ... ok
+test_a_folder_without_the_choice_names_what_is_there (tools.test_setup_choices.GgufDirUnsupported.test_a_folder_without_the_choice_names_what_is_there) ... ok
+test_an_unsloth_ud_file_is_not_taken_for_a_gsq_rco_size (tools.test_setup_choices.GgufDirUnsupported.test_an_unsloth_ud_file_is_not_taken_for_a_gsq_rco_size) ... ok
+test_quant_names (tools.test_setup_choices.GgufDirUnsupported.test_quant_names) ... ok
+test_the_size_of_another_family (tools.test_setup_choices.GgufDirUnsupported.test_the_size_of_another_family) ... ok
+test_usable_folders_are_left_alone (tools.test_setup_choices.GgufDirUnsupported.test_usable_folders_are_left_alone) ... ok
+test_the_choice (tools.test_setup_choices.HipVision.test_the_choice) ... ok
+test_the_cpu_encoder_is_built_once (tools.test_setup_choices.HipVision.test_the_cpu_encoder_is_built_once) ... ok
+test_without_images_nothing_changes (tools.test_setup_choices.HipVision.test_without_images_nothing_changes) ... ok
+test_a_card_the_encoder_has_no_code_for_gets_the_cpu_encoder (tools.test_setup_choices.PrebuiltVision.test_a_card_the_encoder_has_no_code_for_gets_the_cpu_encoder) ... ok
+test_covered_cards_keep_the_gpu_encoder (tools.test_setup_choices.PrebuiltVision.test_covered_cards_keep_the_gpu_encoder) ... ok
+test_other_choices_are_left_alone (tools.test_setup_choices.PrebuiltVision.test_other_choices_are_left_alone) ... ok
+test_a_finish_mark_that_cannot_be_written_is_a_warning (tools.test_setup_choices.ReadOnlyGgufDir.test_a_finish_mark_that_cannot_be_written_is_a_warning) ... ok
+test_mark_itself_never_stops_on_a_read_only_folder (tools.test_setup_choices.ReadOnlyGgufDir.test_mark_itself_never_stops_on_a_read_only_folder)
+  [!]  the finish mark of x.gguf cannot be written ([Errno 13] read-only): the next run does this step again
+#570: every finish mark (the SHA-256 result of a verified shard too), not only the one for a whole shard. ... ok
+test_does_not_fit (tools.test_setup_choices.RotationalDisk.test_does_not_fit) ... ok
+test_fits (tools.test_setup_choices.RotationalDisk.test_fits) ... ok
+test_ssd (tools.test_setup_choices.RotationalDisk.test_ssd) ... ok
+test_sysfs (tools.test_setup_choices.RotationalDisk.test_sysfs) ... ok
+test_a_6gb_card (tools.test_setup_choices.SmallCardTip.test_a_6gb_card) ... ok
+test_a_given_reserve_is_kept (tools.test_setup_choices.SmallCardTip.test_a_given_reserve_is_kept) ... ok
+test_an_8gb_card_has_no_tip (tools.test_setup_choices.SmallCardTip.test_an_8gb_card_has_no_tip) ... ok
+test_the_tip (tools.test_setup_choices.SmallCardTip.test_the_tip) ... ok
+test_a_negative_value_is_refused (tools.test_setup_choices.VramReserve.test_a_negative_value_is_refused) ... ok
+test_given_at_setup (tools.test_setup_choices.VramReserve.test_given_at_setup) ... ok
+test_given_on_a_start (tools.test_setup_choices.VramReserve.test_given_on_a_start) ... ok
+test_kept_from_an_earlier_install (tools.test_setup_choices.VramReserve.test_kept_from_an_earlier_install) ... ok
+test_with_images_one_value (tools.test_setup_choices.VramReserve.test_with_images_one_value) ... ok
+test_the_range_follows_the_toolkit (tools.test_setup_choices.VsRange.test_the_range_follows_the_toolkit) ... ok
+test_default_is_silent (tools.test_setup_compute_mode.Mode.test_default_is_silent) ... ok
+test_other_modes_warn (tools.test_setup_compute_mode.Mode.test_other_modes_warn) ... ok
+test_query (tools.test_setup_compute_mode.Mode.test_query) ... ok
+test_a_failure_part_way_leaves_the_old_engine_whole (tools.test_setup_engine_keep.KeepPrevious.test_a_failure_part_way_leaves_the_old_engine_whole) ... ok
+  [!]  no earlier engine is kept in C:\Users\DC\AppData\Local\Temp\tmpfuykbn9f\engine\.previous (one is kept when an update replaces the engine)
+test_a_first_install_keeps_nothing (tools.test_setup_engine_keep.KeepPrevious.test_a_first_install_keeps_nothing) ... ok
+  [ok] the engine it replaced (0.1.38) is kept in C:\Users\DC\AppData\Local\Temp\tmpa44i7ifb\engine\.previous; setup.py --rollback-engine puts it back
+  [ok] the engine it replaced (0.1.39) is kept in C:\Users\DC\AppData\Local\Temp\tmpa44i7ifb\engine\.previous; setup.py --rollback-engine puts it back
+test_one_generation_only (tools.test_setup_engine_keep.KeepPrevious.test_one_generation_only) ... ok
+test_previous_keeps_its_build_json_after_get_prebuilt_moved_it_aside (tools.test_setup_engine_keep.KeepPrevious.test_previous_keeps_its_build_json_after_get_prebuilt_moved_it_aside)
+  [ok] the engine it replaced (0.1.39) is kept in C:\Users\DC\AppData\Local\Temp\tmptrr3ss_3\engine\.previous; setup.py --rollback-engine puts it back
+get_prebuilt takes the old BUILD.json out of the way (BUILD.json.prev) before the unpack, so the ... ok
+  [ok] the engine it replaced (0.1.39) is kept in C:\Users\DC\AppData\Local\Temp\tmp5ohu5mx9\engine\.previous; setup.py --rollback-engine puts it back
+  [ok] engine 0.1.39 is installed again (it replaced 0.1.40, which is kept in C:\Users\DC\AppData\Local\Temp\tmp5ohu5mx9\engine\.previous)
+  [ok] engine 0.1.40 is installed again (it replaced 0.1.39, which is kept in C:\Users\DC\AppData\Local\Temp\tmp5ohu5mx9\engine\.previous)
+test_the_replaced_engine_is_kept_and_rolled_back (tools.test_setup_engine_keep.KeepPrevious.test_the_replaced_engine_is_kept_and_rolled_back) ... ok
+test_a_four_part_version_compares_all_four_numbers (tools.test_setup_hotfix_tag.HotfixTag.test_a_four_part_version_compares_all_four_numbers) ... ok
+test_an_engine_that_says_four_parts_is_read_as_four (tools.test_setup_hotfix_tag.HotfixTag.test_an_engine_that_says_four_parts_is_read_as_four) ... ok
+test_the_engine_zips_are_found_for_a_hotfix_tag (tools.test_setup_hotfix_tag.HotfixTag.test_the_engine_zips_are_found_for_a_hotfix_tag) ... ok
+test_install_on_one_gpu (tools.test_setup_remote_opt.Install.test_install_on_one_gpu) ... ok
+test_install_on_two_gpus (tools.test_setup_remote_opt.Install.test_install_on_two_gpus)
+#1447: a plain two-GPU install has no helper cache, so no --remote-expert-opt is written. ... ok
+test_no_helper_cache_no_flag (tools.test_setup_remote_opt.Rule.test_no_helper_cache_no_flag)
+#1447: on a plain layer split there is no helper cache for the flag to act on, so setup does not write it. ... ok
+test_one_gpu_is_untouched (tools.test_setup_remote_opt.Rule.test_one_gpu_is_untouched) ... ok
+test_overrides (tools.test_setup_remote_opt.Rule.test_overrides) ... ok
+test_pipeline_windows_wins (tools.test_setup_remote_opt.Rule.test_pipeline_windows_wins)
+#1352: the two exclude each other (the engine drops the pipeline beside the helper caches), so setup ... ok
+test_the_users_key_is_kept_on_a_rerun (tools.test_setup_remote_opt.Rule.test_the_users_key_is_kept_on_a_rerun) ... ok
+test_two_gpus_get_it_once (tools.test_setup_remote_opt.Rule.test_two_gpus_get_it_once) ... ok
+test_an_empty_config_is_skipped (tools.test_setup_risk.BrokenEarlierConfig.test_an_empty_config_is_skipped) ... ok
+test_the_newest_readable_config_is_used (tools.test_setup_risk.BrokenEarlierConfig.test_the_newest_readable_config_is_used) ... ok
+test_write_config_leaves_no_partial_file (tools.test_setup_risk.BrokenEarlierConfig.test_write_config_leaves_no_partial_file) ... ok
+test_interactive_default_is_no (tools.test_setup_risk.ConfirmRisk.test_interactive_default_is_no) ... ok
+test_paging_with_an_explicit_model (tools.test_setup_risk.ConfirmRisk.test_paging_with_an_explicit_model) ... ok
+test_yes_alone_keeps_the_stop (tools.test_setup_risk.ConfirmRisk.test_yes_alone_keeps_the_stop) ... ok
+test_yes_with_an_explicit_choice_is_consent (tools.test_setup_risk.ConfirmRisk.test_yes_with_an_explicit_choice_is_consent) ... ok
+test_a_200k_choice_is_kept (tools.test_setup_risk.Context.test_a_200k_choice_is_kept)
+#406: 200K was added between the 128K rule and 256K - it is inside the trained 262144, so no rope scaling, ... ok
+test_a_picked_256k_is_kept_and_the_menu_says_the_risk (tools.test_setup_risk.Context.test_a_picked_256k_is_kept_and_the_menu_says_the_risk) ... ok
+test_an_explicit_256k_is_kept (tools.test_setup_risk.Context.test_an_explicit_256k_is_kept) ... ok
+test_low_ram_mode_keeps_262k_without_a_ram_note (tools.test_setup_risk.Context.test_low_ram_mode_keeps_262k_without_a_ram_note) ... ok
+test_the_earlier_install_keeps_its_context (tools.test_setup_risk.Context.test_the_earlier_install_keeps_its_context)
+An update (a new copy of Strata) set up like the earlier install keeps its 256K instead of capping it. ... ok
+test_the_ram_rule (tools.test_setup_risk.Context.test_the_ram_rule) ... ok
+test_budget_flag_on_another_size (tools.test_setup_risk.KvStreaming.test_budget_flag_on_another_size) ... ok
+test_k8v4_streams (tools.test_setup_risk.KvStreaming.test_k8v4_streams) ... ok
+test_off (tools.test_setup_risk.KvStreaming.test_off) ... ok
+test_on_past_the_ram_test (tools.test_setup_risk.KvStreaming.test_on_past_the_ram_test) ... ok
+test_on_where_it_cannot (tools.test_setup_risk.KvStreaming.test_on_where_it_cannot) ... ok
+test_asked_and_answered_two (tools.test_setup_risk.LowRamGpus.test_asked_and_answered_two) ... ok
+test_explicit_gpus_are_kept_with_the_mapped_variant (tools.test_setup_risk.LowRamGpus.test_explicit_gpus_are_kept_with_the_mapped_variant) ... ok
+test_low_ram_on_gpus_with_a_resident_split_engine (tools.test_setup_risk.LowRamGpus.test_low_ram_on_gpus_with_a_resident_split_engine)
+#642: an engine that runs the resident variant on a layer split keeps the cards together, resident. ... ok
+test_low_ram_resident_alone_keeps_one_gpu_without_asking (tools.test_setup_risk.LowRamGpus.test_low_ram_resident_alone_keeps_one_gpu_without_asking) ... ok
+test_low_ram_resident_with_gpus (tools.test_setup_risk.LowRamGpus.test_low_ram_resident_with_gpus) ... ok
+test_the_share_counts_every_card (tools.test_setup_risk.LowRamGpus.test_the_share_counts_every_card) ... ok
+test_yes_and_enter_keep_one_gpu (tools.test_setup_risk.LowRamGpus.test_yes_and_enter_keep_one_gpu) ... ok
+test_an_explicit_model_goes_on (tools.test_setup_risk.RamFloor.test_an_explicit_model_goes_on) ... ok
+test_yes_alone_stops (tools.test_setup_risk.RamFloor.test_yes_alone_stops) ... ok
+test_the_low_ram_rule_is_the_flag_setup_writes (tools.test_setup_risk.RulesAgreeWithTheWrittenConfig.test_the_low_ram_rule_is_the_flag_setup_writes) ... ok
+test_the_streaming_rule_is_the_flag_setup_writes (tools.test_setup_risk.RulesAgreeWithTheWrittenConfig.test_the_streaming_rule_is_the_flag_setup_writes) ... ok
+test_named_and_enter_stops (tools.test_setup_risk.SmallCard.test_named_and_enter_stops) ... ok
+test_named_with_yes (tools.test_setup_risk.SmallCard.test_named_with_yes) ... ok
+test_not_named_is_not_offered (tools.test_setup_risk.SmallCard.test_not_named_is_not_offered) ... ok
+test_named_pair_is_kept (tools.test_setup_risk.SplitShortCard.test_named_pair_is_kept) ... ok
+test_offer_together_defaults_to_one (tools.test_setup_risk.SplitShortCard.test_offer_together_defaults_to_one) ... ok
+test_rule (tools.test_setup_risk.SplitShortCard.test_rule) ... ok
+test_yes_takes_the_first_card (tools.test_setup_risk.SplitShortCard.test_yes_takes_the_first_card) ... ok
+test_offer_together_recommends_one_gpu_for_a_resident_config (tools.test_setup_risk.StartOnSeveralGpus.test_offer_together_recommends_one_gpu_for_a_resident_config) ... ok
+test_resident_split_engine_keeps_a_resident_config (tools.test_setup_risk.StartOnSeveralGpus.test_resident_split_engine_keeps_a_resident_config)
+#642: from RESIDENT_SPLIT_ENGINE a resident config is offered both cards as any other, and stays resident. ... ok
+test_split_mmap (tools.test_setup_risk.StartOnSeveralGpus.test_split_mmap) ... ok
+test_start_with_gpus (tools.test_setup_risk.StartOnSeveralGpus.test_start_with_gpus) ... ok
+test_ram_less_24 (tools.test_setup_unsloth.Budget.test_ram_less_24) ... ok
+test_choices_from_config (tools.test_setup_unsloth.Config.test_choices_from_config) ... ok
+test_amd_is_not_asked (tools.test_setup_unsloth.IQ4XS.test_amd_is_not_asked) ... ok
+test_budget (tools.test_setup_unsloth.IQ4XS.test_budget) ... ok
+test_check_below_every_floor (tools.test_setup_unsloth.IQ4XS.test_check_below_every_floor) ... ok
+test_check_verdict (tools.test_setup_unsloth.IQ4XS.test_check_verdict) ... ok
+test_engine_0138 (tools.test_setup_unsloth.IQ4XS.test_engine_0138) ... ok
+test_family_default_and_menus (tools.test_setup_unsloth.IQ4XS.test_family_default_and_menus)
+The first menu lists the Unsloth family without [experimental]; its size menu puts UD-IQ4_XS first (the ... ok
+test_images (tools.test_setup_unsloth.IQ4XS.test_images)
+Images on: the original model's image encoder (the same base model), the vision flags in the config. ... ok
+test_install (tools.test_setup_unsloth.IQ4XS.test_install) ... ok
+test_pins (tools.test_setup_unsloth.IQ4XS.test_pins) ... ok
+test_asked_one_gpu_by_default (tools.test_setup_unsloth.LayerSplit.test_asked_one_gpu_by_default) ... ok
+test_offered_at_a_start (tools.test_setup_unsloth.LayerSplit.test_offered_at_a_start) ... ok
+test_start_with_gpus_drops_the_budget (tools.test_setup_unsloth.LayerSplit.test_start_with_gpus_drops_the_budget) ... ok
+test_start_with_gpus_without_the_ram_is_asked (tools.test_setup_unsloth.LayerSplit.test_start_with_gpus_without_the_ram_is_asked) ... ok
+test_amd_is_asked_before_the_download (tools.test_setup_unsloth.Main.test_amd_is_asked_before_the_download)
+#429: UD-Q4_K_XL has not run on AMD (CUDA-only prompt kernels): --yes alone stops before the 111 GB ... ok
+test_an_explicit_budget_keeps_one_gpu (tools.test_setup_unsloth.Main.test_an_explicit_budget_keeps_one_gpu) ... ok
+test_budget_flag (tools.test_setup_unsloth.Main.test_budget_flag)
+S4: --resident-budget-gib N is kept; more than the recommendation says what it risks. ... ok
+test_budget_flag_needs_a_positive_number (tools.test_setup_unsloth.Main.test_budget_flag_needs_a_positive_number) ... ok
+test_budget_flag_with_kv_streaming_is_kept (tools.test_setup_unsloth.Main.test_budget_flag_with_kv_streaming_is_kept) ... ok
+test_install (tools.test_setup_unsloth.Main.test_install) ... ok
+test_kv_streaming_comes_out_of_the_budget (tools.test_setup_unsloth.Main.test_kv_streaming_comes_out_of_the_budget) ... ok
+test_more_ram_bigger_budget (tools.test_setup_unsloth.Main.test_more_ram_bigger_budget) ... ok
+test_old_engine_stops_before_the_download (tools.test_setup_unsloth.Main.test_old_engine_stops_before_the_download) ... ok
+test_one_gpu_and_images_with_a_warning (tools.test_setup_unsloth.Main.test_one_gpu_and_images_with_a_warning)
+#967: images are allowed with UD-Q4_K_XL, said to be untested. ... ok
+test_recommended_context_on_12_gb (tools.test_setup_unsloth.Main.test_recommended_context_on_12_gb) ... ok
+test_resumed_download_needs_room_for_the_rest_only (tools.test_setup_unsloth.Main.test_resumed_download_needs_room_for_the_rest_only)
+#425: the disk check counts the finished shards and .part files already there (sizes scaled down: a ... ok
+test_split_when_the_ram_holds_it (tools.test_setup_unsloth.Main.test_split_when_the_ram_holds_it) ... ok
+test_split_without_the_ram_is_a_warning_not_a_wall (tools.test_setup_unsloth.Main.test_split_without_the_ram_is_a_warning_not_a_wall) ... ok
+test_too_little_ram (tools.test_setup_unsloth.Main.test_too_little_ram) ... ok
+test_too_little_ram_with_an_explicit_model_installs (tools.test_setup_unsloth.Main.test_too_little_ram_with_an_explicit_model_installs)
+S6 (the owner's rule): --model with --yes is the consent; the risk is said. ... ok
+test_yes_alone_keeps_one_gpu (tools.test_setup_unsloth.Main.test_yes_alone_keeps_one_gpu) ... ok
+test_not_in_the_other_families (tools.test_setup_unsloth.Pins.test_not_in_the_other_families) ... ok
+test_the_four_shards (tools.test_setup_unsloth.Pins.test_the_four_shards) ... ok
+test_a_download_mark_alone_is_not_enough (tools.test_setup_unsloth.Sha256.test_a_download_mark_alone_is_not_enough) ... ok
+test_good_file_marked_once (tools.test_setup_unsloth.Sha256.test_good_file_marked_once) ... ok
+test_wrong_hash_deletes_it (tools.test_setup_unsloth.Sha256.test_wrong_hash_deletes_it) ... ok
+test_wrong_size (tools.test_setup_unsloth.Sha256.test_wrong_size) ... ok
+test_kernel_in_an_anonymous_namespace_of_a_wide_file_is_fine (tools.test_check_isa_guard.Policy.test_kernel_in_an_anonymous_namespace_of_a_wide_file_is_fine) ... ok
+test_listed_public_entry_point_is_fine (tools.test_check_isa_guard.Policy.test_listed_public_entry_point_is_fine) ... ok
+test_msvc_vectorizer_guard_is_accepted (tools.test_check_isa_guard.Policy.test_msvc_vectorizer_guard_is_accepted) ... ok
+test_the_probe_must_not_be_wide (tools.test_check_isa_guard.Policy.test_the_probe_must_not_be_wide) ... ok
+test_weak_symbol_is_a_violation_even_in_a_wide_file (tools.test_check_isa_guard.Policy.test_weak_symbol_is_a_violation_even_in_a_wide_file) ... ok
+test_wide_code_in_another_object_is_a_violation (tools.test_check_isa_guard.Policy.test_wide_code_in_another_object_is_a_violation) ... ok
+test_avx_vnni_and_registers_above_15 (tools.test_check_isa_guard.WideInstruction.test_avx_vnni_and_registers_above_15) ... ok
+test_evex_prefix_is_wide (tools.test_check_isa_guard.WideInstruction.test_evex_prefix_is_wide) ... ok
+test_vex_avx2_is_not (tools.test_check_isa_guard.WideInstruction.test_vex_avx2_is_not) ... ok
+
+----------------------------------------------------------------------
+Ran 163 tests in 29.906s
+
+OK

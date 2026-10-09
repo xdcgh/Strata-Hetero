@@ -1,0 +1,21 @@
+test_error_json_unicode_truncation_stays_valid_and_bounded (__main__.HeteroXpuServiceTests.test_error_json_unicode_truncation_stays_valid_and_bounded) ... ok
+test_failed_reinit_invalidates_previous_nonce (__main__.HeteroXpuServiceTests.test_failed_reinit_invalidates_previous_nonce) ... ok
+test_identity_growth_is_rejected_with_bounded_read (__main__.HeteroXpuServiceTests.test_identity_growth_is_rejected_with_bounded_read) ... ok
+test_infer_requires_init_exact_shape_finite_input_and_returns_le_f32 (__main__.HeteroXpuServiceTests.test_infer_requires_init_exact_shape_finite_input_and_returns_le_f32) ... ok
+test_init_rejects_response_prefix_boundary_without_allocating_tensor (__main__.HeteroXpuServiceTests.test_init_rejects_response_prefix_boundary_without_allocating_tensor) ... ok
+test_init_returns_ready_nonce_identity_and_reuses_same_static_graph (__main__.HeteroXpuServiceTests.test_init_returns_ready_nonce_identity_and_reuses_same_static_graph) ... ok
+test_module_and_default_cli_validate_only_without_openvino_or_core (__main__.HeteroXpuServiceTests.test_module_and_default_cli_validate_only_without_openvino_or_core) ... ok
+test_native_blob_down_minimums_are_bound_to_identity_raw_hash (__main__.HeteroXpuServiceTests.test_native_blob_down_minimums_are_bound_to_identity_raw_hash) ... ok
+test_native_init_uses_selected_builder_and_reports_operator_readiness (__main__.HeteroXpuServiceTests.test_native_init_uses_selected_builder_and_reports_operator_readiness) ... ok
+test_native_metadata_only_stats_blob_without_opening_payload_or_core (__main__.HeteroXpuServiceTests.test_native_metadata_only_stats_blob_without_opening_payload_or_core) ... ok
+test_native_operator_model_mismatch_fails_before_core_factory (__main__.HeteroXpuServiceTests.test_native_operator_model_mismatch_fails_before_core_factory) ... ok
+test_non_arc_full_name_and_cpu_fallback_are_refused (__main__.HeteroXpuServiceTests.test_non_arc_full_name_and_cpu_fallback_are_refused) ... ok
+test_nonce_identity_and_exact_init_schema_errors_are_framed (__main__.HeteroXpuServiceTests.test_nonce_identity_and_exact_init_schema_errors_are_framed) ... ok
+test_rows_change_releases_and_recompiles_only_one_static_shape (__main__.HeteroXpuServiceTests.test_rows_change_releases_and_recompiles_only_one_static_shape) ... ok
+test_stdio_loop_uses_only_binary_writer_for_frames (__main__.HeteroXpuServiceTests.test_stdio_loop_uses_only_binary_writer_for_frames) ... ok
+test_unknown_operation_and_init_size_limit_use_error_frames (__main__.HeteroXpuServiceTests.test_unknown_operation_and_init_size_limit_use_error_frames) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.111s
+
+OK

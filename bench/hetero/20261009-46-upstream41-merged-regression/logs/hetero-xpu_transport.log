@@ -1,0 +1,20 @@
+test_bad_response_kills_only_owned_child_and_marks_worker_unusable (__main__.HeteroXpuTransportTests.test_bad_response_kills_only_owned_child_and_marks_worker_unusable) ... ok
+test_concurrent_request_is_rejected_while_first_finishes (__main__.HeteroXpuTransportTests.test_concurrent_request_is_rejected_while_first_finishes) ... ok
+test_constructing_worker_does_not_spawn_or_create_stderr (__main__.HeteroXpuTransportTests.test_constructing_worker_does_not_spawn_or_create_stderr) ... ok
+test_default_cli_and_import_only_validate_schema (__main__.HeteroXpuTransportTests.test_default_cli_and_import_only_validate_schema) ... ok
+test_echo_roundtrip_is_sequential_and_checks_response_bit (__main__.HeteroXpuTransportTests.test_echo_roundtrip_is_sequential_and_checks_response_bit) ... ok
+test_eof_and_invalid_lengths_are_rejected (__main__.HeteroXpuTransportTests.test_eof_and_invalid_lengths_are_rejected) ... ok
+test_exit_before_response_is_reaped_and_not_reused (__main__.HeteroXpuTransportTests.test_exit_before_response_is_reaped_and_not_reused) ... ok
+test_generic_request_frame_and_response_encoder_roundtrip (__main__.HeteroXpuTransportTests.test_generic_request_frame_and_response_encoder_roundtrip) ... ok
+test_header_is_20_bytes_and_short_read_write_are_completed (__main__.HeteroXpuTransportTests.test_header_is_20_bytes_and_short_read_write_are_completed) ... ok
+test_json_cli_validation_never_spawns (__main__.HeteroXpuTransportTests.test_json_cli_validation_never_spawns) ... ok
+test_magic_version_kind_and_request_id_mismatches_rejected_from_header (__main__.HeteroXpuTransportTests.test_magic_version_kind_and_request_id_mismatches_rejected_from_header) ... ok
+test_oversize_header_is_rejected_before_payload_read (__main__.HeteroXpuTransportTests.test_oversize_header_is_rejected_before_payload_read) ... ok
+test_start_and_close_are_serialized_until_owned_popen_is_published (__main__.HeteroXpuTransportTests.test_start_and_close_are_serialized_until_owned_popen_is_published) ... ok
+test_stderr_path_is_exclusive_and_existing_file_is_preserved (__main__.HeteroXpuTransportTests.test_stderr_path_is_exclusive_and_existing_file_is_preserved) ... ok
+test_timeout_includes_blocked_stdin_write_and_only_kills_owned_popen (__main__.HeteroXpuTransportTests.test_timeout_includes_blocked_stdin_write_and_only_kills_owned_popen) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.572s
+
+OK

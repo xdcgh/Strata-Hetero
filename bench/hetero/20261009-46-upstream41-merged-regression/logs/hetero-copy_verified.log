@@ -1,0 +1,23 @@
+test_cli_enforces_buffer_range (__main__.VerifiedCopyTests.test_cli_enforces_buffer_range) ... ok
+test_cli_rejects_relative_receipt_before_build_or_copy (__main__.VerifiedCopyTests.test_cli_rejects_relative_receipt_before_build_or_copy) ... ok
+test_default_hardware_inventory_maps_e_and_f_without_guessing (__main__.VerifiedCopyTests.test_default_hardware_inventory_maps_e_and_f_without_guessing) ... ok
+test_existing_target_is_preserved (__main__.VerifiedCopyTests.test_existing_target_is_preserved) ... ok
+test_fresh_readback_mismatch_does_not_publish_final (__main__.VerifiedCopyTests.test_fresh_readback_mismatch_does_not_publish_final) ... ok
+test_inconsistent_prior_expected_digest_is_rejected (__main__.VerifiedCopyTests.test_inconsistent_prior_expected_digest_is_rejected) ... ok
+test_insufficient_free_space_is_rejected (__main__.VerifiedCopyTests.test_insufficient_free_space_is_rejected) ... ok
+test_interrupted_stream_receipt_keeps_partial_hash_and_byte_count (__main__.VerifiedCopyTests.test_interrupted_stream_receipt_keeps_partial_hash_and_byte_count) ... ok
+test_no_replace_publication_preserves_racing_existing_target (__main__.VerifiedCopyTests.test_no_replace_publication_preserves_racing_existing_target) ... ok
+test_non_windows_copy_mode_refuses_before_payload_io (__main__.VerifiedCopyTests.test_non_windows_copy_mode_refuses_before_payload_io) ... ok
+test_receipt_path_failures_precede_plan_and_copy (__main__.VerifiedCopyTests.test_receipt_path_failures_precede_plan_and_copy) ... ok
+test_receipt_with_failed_hash_match_is_rejected_before_copy (__main__.VerifiedCopyTests.test_receipt_with_failed_hash_match_is_rejected_before_copy) ... ok
+test_short_writes_are_completed_and_hashed_by_written_chunks (__main__.VerifiedCopyTests.test_short_writes_are_completed_and_hashed_by_written_chunks) ... ok
+test_small_copy_uses_fresh_destination_readback_and_exclusive_receipt (__main__.VerifiedCopyTests.test_small_copy_uses_fresh_destination_readback_and_exclusive_receipt) ... ok
+test_source_change_during_copy_fails_and_preserves_partial (__main__.VerifiedCopyTests.test_source_change_during_copy_fails_and_preserves_partial) ... ok
+test_stream_digest_failure_preserves_temporary_file (__main__.VerifiedCopyTests.test_stream_digest_failure_preserves_temporary_file) ... ok
+test_unsupported_publication_platform_is_explicitly_rejected (__main__.VerifiedCopyTests.test_unsupported_publication_platform_is_explicitly_rejected) ... ok
+test_validate_only_is_metadata_only_and_does_not_write (__main__.VerifiedCopyTests.test_validate_only_is_metadata_only_and_does_not_write) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.147s
+
+OK

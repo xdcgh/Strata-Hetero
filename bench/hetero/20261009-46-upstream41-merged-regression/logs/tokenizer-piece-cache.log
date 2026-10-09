@@ -1,0 +1,7 @@
+test_same_ids_cold_warm_and_off (__main__.PieceCache.test_same_ids_cold_warm_and_off) ... ok
+test_the_cache_is_bounded (__main__.PieceCache.test_the_cache_is_bounded) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.016s
+
+OK

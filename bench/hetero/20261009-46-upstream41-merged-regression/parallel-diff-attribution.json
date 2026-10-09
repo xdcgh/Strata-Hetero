@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-46-upstream41-merged-regression",
+  "status": "observed_worktree_diffs_are_outside_run46",
+  "before_status": [
+    "?? bench/hetero/20261009-43-vision-stage-openvino/",
+    "?? bench/hetero/20261009-46-upstream41-merged-regression/"
+  ],
+  "paths": [
+    "bench/hetero/20261009-35-cpu-worker-affinity/run_cpu_affinity_sweep.py",
+    "bench/hetero/20261009-35-cpu-worker-affinity/sweep-execution-contract-v2.json",
+    "bench/hetero/20261009-35-cpu-worker-affinity/sweep-execution-plan-v2.json",
+    "bench/hetero/20261009-35-cpu-worker-affinity/sweep-preparation-review.json",
+    "bench/hetero/20261009-35-cpu-worker-affinity/test_cpu_affinity_sweep.py"
+  ],
+  "note": "At run46 preparation start these tracked paths were not modified. They appeared during the test window as a separate parallel run35 task. Run46 executed pure test commands only, did not write these paths, and has no tracked code edits attributable to its tests.",
+  "run46_test_source_path": "bench/hetero/20261009-46-upstream41-merged-regression/run-regression.ps1",
+  "run46_test_source_untracked": true,
+  "recorded_utc": "2026-10-09T12:24:48.1389173Z"
+}

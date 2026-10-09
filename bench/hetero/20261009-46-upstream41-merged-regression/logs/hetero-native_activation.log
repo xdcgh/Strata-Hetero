@@ -1,0 +1,11 @@
+test_closed_form_zero_gate_expert_and_shape_rejection (__main__.ActivationTests.test_closed_form_zero_gate_expert_and_shape_rejection) ... ok
+test_metadata_main_never_imports_array_runtime (__main__.ActivationTests.test_metadata_main_never_imports_array_runtime) ... ok
+test_nonfinite_bad_dimensions_and_scale_overflow_fail_closed (__main__.ActivationTests.test_nonfinite_bad_dimensions_and_scale_overflow_fail_closed) ... ok
+test_q81_affine_correction_matches_stored_sum_native_dot (__main__.ActivationTests.test_q81_affine_correction_matches_stored_sum_native_dot) ... ok
+test_q8k_matches_independent_scalar_source_for_signed_ties_and_halfway (__main__.ActivationTests.test_q8k_matches_independent_scalar_source_for_signed_ties_and_halfway) ... ok
+test_zero_blocks_and_q5_1_minimum_layout (__main__.ActivationTests.test_zero_blocks_and_q5_1_minimum_layout) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.048s
+
+OK
