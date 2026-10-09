@@ -1,0 +1,16 @@
+{
+  "status": "root_prepared_inputs_rehashed_and_recipe_replayed",
+  "proof": [
+    {
+      "rows": 6,
+      "bytes": 61440,
+      "sha256": "399013518c8e91a0001d196a2f50ae8d1bf2fdc5cffba1d15ccee5dee4983932"
+    },
+    {
+      "rows": 10,
+      "bytes": 102400,
+      "sha256": "bb5f68678399b69dbcc104073b1d78d95791734764354dd249e3029b4bb7f893"
+    }
+  ],
+  "kernel_executed": false
+}

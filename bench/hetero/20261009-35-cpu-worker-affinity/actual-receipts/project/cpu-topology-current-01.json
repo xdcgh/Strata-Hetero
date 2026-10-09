@@ -1,0 +1,846 @@
+{
+  "platform": "windows",
+  "api": {
+    "api": "GetSystemCpuSetInformation",
+    "bytes": 512,
+    "process_mask_source": "GetProcessAffinityMask_primary_group_only",
+    "process_default_cpu_set_source": "GetProcessDefaultCpuSets",
+    "process_default_cpu_set_count": 0,
+    "api_source": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemcpusetinformation",
+    "structure_source": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-system_cpu_set_information",
+    "process_default_sets_source": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessdefaultcpusets"
+  },
+  "logical_processors": [
+    {
+      "cpu_set_id": 256,
+      "group": 0,
+      "logical_processor_index": 0,
+      "core_index": 0,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 1,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 2,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 0
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 0
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 0
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 0
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 257,
+      "group": 0,
+      "logical_processor_index": 1,
+      "core_index": 1,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 1,
+      "flags_byte": 0,
+      "parked": false,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 2,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 1
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 1
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 1
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 1
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 258,
+      "group": 0,
+      "logical_processor_index": 2,
+      "core_index": 2,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 1,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 2
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 2
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 2
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 2
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 259,
+      "group": 0,
+      "logical_processor_index": 3,
+      "core_index": 3,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 1,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 3
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 3
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 3
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 3
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 260,
+      "group": 0,
+      "logical_processor_index": 4,
+      "core_index": 4,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 1,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 4
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 4
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 4
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 4
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 261,
+      "group": 0,
+      "logical_processor_index": 5,
+      "core_index": 5,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 1,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 5
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 5
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 5
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 5
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 262,
+      "group": 0,
+      "logical_processor_index": 6,
+      "core_index": 6,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 1,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 6
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 6
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 6
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 6
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 263,
+      "group": 0,
+      "logical_processor_index": 7,
+      "core_index": 7,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 1,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 7
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 7
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 7
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 7
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 264,
+      "group": 0,
+      "logical_processor_index": 8,
+      "core_index": 8,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 1,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 8
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 8
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 8
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 8
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 265,
+      "group": 0,
+      "logical_processor_index": 9,
+      "core_index": 9,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 1,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 9
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 9
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 9
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 9
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 266,
+      "group": 0,
+      "logical_processor_index": 10,
+      "core_index": 10,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 1,
+      "flags_byte": 0,
+      "parked": false,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 2,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 10
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 10
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 10
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 10
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 267,
+      "group": 0,
+      "logical_processor_index": 11,
+      "core_index": 11,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 1,
+      "flags_byte": 0,
+      "parked": false,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 2,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 11
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 11
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 11
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 11
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 268,
+      "group": 0,
+      "logical_processor_index": 12,
+      "core_index": 12,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 1,
+      "flags_byte": 0,
+      "parked": false,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 2,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 12
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 12
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 12
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 12
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 269,
+      "group": 0,
+      "logical_processor_index": 13,
+      "core_index": 13,
+      "last_level_cache_index": 0,
+      "numa_node_index": 0,
+      "efficiency_class": 1,
+      "flags_byte": 0,
+      "parked": false,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 2,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 13
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 13
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 13
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 13
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 270,
+      "group": 0,
+      "logical_processor_index": 14,
+      "core_index": 14,
+      "last_level_cache_index": 14,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 0,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 14
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 14
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 14
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 14
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    },
+    {
+      "cpu_set_id": 271,
+      "group": 0,
+      "logical_processor_index": 15,
+      "core_index": 15,
+      "last_level_cache_index": 14,
+      "numa_node_index": 0,
+      "efficiency_class": 0,
+      "flags_byte": 1,
+      "parked": true,
+      "allocated": false,
+      "allocated_to_target_process": false,
+      "realtime": false,
+      "scheduling_class": 0,
+      "allocation_tag": 0,
+      "core_identity": {
+        "group": 0,
+        "core_index": 15
+      },
+      "logical_identity": {
+        "group": 0,
+        "logical_processor_index": 15
+      },
+      "process_affinity_mask_allows": true,
+      "process_default_cpu_set_allows": true,
+      "allowed_cpuset": true,
+      "allowed_status": "allowed_by_known_masks",
+      "logical_processor": {
+        "group": 0,
+        "logical_processor_index": 15
+      },
+      "processor_group": 0,
+      "physical_core": {
+        "group": 0,
+        "core_index": 15
+      },
+      "numa_node": 0,
+      "core_type": "unknown",
+      "classify_confidence": "unknown",
+      "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+    }
+  ],
+  "pool_affinity_candidates": {
+    "status": "candidate_only_no_performance_measurement",
+    "classification_basis": "windows EfficiencyClass ordering (higher class first; P/E names unverified)",
+    "classification_confidence": "unknown",
+    "core_type_claims": "unknown; no P/E/LP labels inferred",
+    "candidate_coverage": "all_known_allowed_processors",
+    "implementation_reference": "src/kernels/cpu/pool.cpp topology order; candidates are not measured best settings",
+    "pool-affinity-all": {
+      "host_core_candidate": {
+        "group": 0,
+        "logical_processor_index": 0
+      },
+      "worker_candidates": [
+        {
+          "group": 0,
+          "logical_processor_index": 1
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 10
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 11
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 12
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 13
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 2
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 3
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 4
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 5
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 6
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 7
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 8
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 9
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 14
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 15
+        }
+      ]
+    },
+    "pool-affinity-auto": {
+      "host_core_candidate": {
+        "group": 0,
+        "logical_processor_index": 0
+      },
+      "worker_candidates": [
+        {
+          "group": 0,
+          "logical_processor_index": 1
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 10
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 11
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 12
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 13
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 2
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 3
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 4
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 5
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 6
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 7
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 8
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 9
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 14
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 15
+        }
+      ]
+    },
+    "pool-affinity-p-cores": {
+      "host_core_candidate": {
+        "group": 0,
+        "logical_processor_index": 0
+      },
+      "worker_candidates": [
+        {
+          "group": 0,
+          "logical_processor_index": 1
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 10
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 11
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 12
+        },
+        {
+          "group": 0,
+          "logical_processor_index": 13
+        }
+      ]
+    }
+  },
+  "collected_utc": "2026-10-09T11:35:33.853957+00:00",
+  "python": "3.14.8",
+  "mutation_policy": "read-only; no affinity, priority, power, or process state changed"
+}

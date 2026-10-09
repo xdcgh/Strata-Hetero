@@ -1,0 +1,1208 @@
+{
+  "status": "saved_array_replay_completed",
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "frozen_code_sha256": {
+    "tools/hetero_vision_qwen3vl.py": "7888d8d1c7c1be3fa919aaed5691038467d4b1d53d884747da279c6fffec482e",
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/client.py": "ea0dbe8745be86496b9bcf3c05631835882a89e4b2f3a3a0f7134d6b451633fe",
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py": "8da72cbc7c2128ff272821a67796b07ea972e6a61ede8480d2f79e0b03b33fc7",
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/analyse.py": "a161378939fc7c00d12dcb452dda0e5e1405c4a0fecacfdde5245fd5d319e336"
+  },
+  "source_sha256": {
+    "ggml/src/ggml-cpu/ops.cpp": "e5e7edb89540af66fc9cb4d245fce7aaa411d08876a032520114223dff93b42c",
+    "ggml/src/ggml-cpu/vec.h": "8817801355b20079de39fd4c67c7453ca2033cdb69fc5bd1f71bb66f12f57318",
+    "ggml/src/ggml-cpu/vec.cpp": "a946fee202dfe4528453865a6402d13a004e31ea73e88c3586793bbcc05994f7",
+    "ggml/src/ggml-cpu/ggml-cpu.c": "2f0a37f6c00c230a783cf078ee0c99f248095c501dff56b8ee47fb356dae3538",
+    "ggml/src/ggml-cpu/ggml-cpu-impl.h": "5240f35bd176728c8464a5c86f864627da6b9a85ebcf2712dbdee8792914bf61",
+    "ggml/src/ggml-cpu/simd-mappings.h": "5b22a5f41350fe6321462d19c8b40328bf6fb96e50e56f55abef18f09d94d649",
+    "ggml/src/ggml-cpu/llamafile/sgemm.cpp": "c624fd44dbdf86797823cfabce16a3a7dda519c9f0558e6516ec987cafbba259",
+    "ggml/src/ggml-impl.h": "aed6398b8efd0bc1167ced34037abe14620b54374d067333f50952cd65ada2f2",
+    "ggml/src/ggml-cpu/CMakeLists.txt": "43350e8170e9e6d3f7d346dc8f53a5743d7ab04b84a6e75d243841880d6ff301",
+    "tools/mtmd/models/qwen3vl.cpp": "ae7a9472feb4322abdf20621237e3e7448d207bc0427c315d869300df63ab1b4",
+    "tools/mtmd/clip.cpp": "13f10801842caed2e77018da8546a31e4fd248a82a56761039957cfe6e43fd2d"
+  },
+  "core_created": false,
+  "gguf_read": false,
+  "numpy_version": "2.5.3",
+  "python": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+  "pid": 11336,
+  "started_utc": "2026-10-09T12:26:17.898385+00:00",
+  "encoder_run": false,
+  "receipt_sha256": {
+    "export": "9293d413d80a89bea202d9c79c480fb3e8c07ca79e8fae740ca52cfca0ff4e01",
+    "native": "005b73df9b3182252256d89e6b71f9a3e005a1bb01d01d78fd74e952c75230fc",
+    "ov": "c8370f4b7f82cebd4b58df75fe4b2c4294416b66ff716d639a50fdb95104049a",
+    "inventory": "94320d1390e67d39ad455f3085592d45592f352618e445d75c721f9ba827f657"
+  },
+  "weights": {
+    "weight": {
+      "path": "E:\\Strata-Hetero-data\\vision-payloads\\20261009-30-native-vision-export\\v.blk.1.ln1.weight.npy",
+      "shape": [
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "d8355c32e8aa9ada315ae9e4323ee44fd4845a3ab4639b6e67449aa7e70494d8",
+      "file_sha256": "f3a108941f8bf7b4540ef2353d181f3d29556807d64f78aafe18542b8a1988c0",
+      "file_bytes": 4736,
+      "raw_sha256": "d8355c32e8aa9ada315ae9e4323ee44fd4845a3ab4639b6e67449aa7e70494d8",
+      "raw_bytes": 4608,
+      "raw_offset": 61022880,
+      "storage_type": "F32"
+    },
+    "bias": {
+      "path": "E:\\Strata-Hetero-data\\vision-payloads\\20261009-30-native-vision-export\\v.blk.1.ln1.bias.npy",
+      "shape": [
+        1152
+      ],
+      "dtype": "float32",
+      "decoded_sha256": "27685159c47b1f8fb417316207c9a133f830ea0ac301a1a1381da2fa74807cc7",
+      "file_sha256": "500302bb41d3592b6c4c39930e4ceca43a506555e05a316579ca48f39789a54a",
+      "file_bytes": 4736,
+      "raw_sha256": "27685159c47b1f8fb417316207c9a133f830ea0ac301a1a1381da2fa74807cc7",
+      "raw_bytes": 4608,
+      "raw_offset": 61018272,
+      "storage_type": "F32"
+    }
+  },
+  "epsilon": 9.999999974752427e-07,
+  "epsilon_f32_bits": "0x358637bd",
+  "tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "preflight_memory": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 117524742144,
+    "physical_used_bytes": 19438505984,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 23198187520,
+    "commit_available_bytes": 122354995200,
+    "commit_total_pages": 5663620,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 122354995200,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "rows": [
+    {
+      "fixture": "gray-96",
+      "native_inputs": {
+        "block.0": {
+          "stage": "block.0",
+          "selector": "layer_out-0",
+          "target_name": "layer_out-0",
+          "actual_dtype": "F32",
+          "type_id": 0,
+          "ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "selector_ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "selector_nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/block.0.f32",
+          "bytes": 165888,
+          "raw_sha256": "5d934bc5f561189ba37a4a8ec52e7b33630116e045259211959acebdab6183c2"
+        },
+        "ln1.1": {
+          "stage": "ln1.1",
+          "selector": "ln1-1",
+          "target_name": "ln1-1",
+          "actual_dtype": "F32",
+          "type_id": 0,
+          "ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "selector_ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "selector_nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/ln1.1.f32",
+          "bytes": 165888,
+          "raw_sha256": "84bfbbe0e3fac4af0aed14c8f6160cf36e9bb6dbd099136e0d04e59efba0c9a6"
+        }
+      },
+      "ov_inputs": {
+        "block.0": {
+          "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-block.0.npy",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "e8f0fe545046862dff20edc9847361847daf05125488aa761e34133209dadf93",
+          "file_sha256": "57400d9ab7034cf190288dea6d99d65161944bba47a1920e75ad01fe4926578a",
+          "file_bytes": 166016
+        },
+        "ln1.1": {
+          "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.tap-ln1.1.npy",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "8f0f273680694d2bed4560f36ec7baef1c1df07447c91e0e56c245880cc59292",
+          "file_sha256": "a181117af47b702688eaa3357ea087c5a83112020a017576add637c90dbc03db",
+          "file_bytes": 166016
+        }
+      },
+      "comparisons": {
+        "source_native_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.0,
+          "relative_rmse": 0.0,
+          "max_row_norm_relative_error": 0.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": true,
+          "different_f32_elements": 0
+        },
+        "port_native_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 9.5367431640625e-07,
+          "relative_rmse": 8.792625228528418e-08,
+          "max_row_norm_relative_error": 1.3963955218822167e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 17718
+        },
+        "source_ov_input_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.004142284393310547,
+          "relative_rmse": 0.0006481316465911256,
+          "max_row_norm_relative_error": 9.132814410354312e-05,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41465
+        },
+        "port_ov_input_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.004142284393310547,
+          "relative_rmse": 0.0006481330982193466,
+          "max_row_norm_relative_error": 9.131680016937442e-05,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41465
+        },
+        "port_ov_input_vs_saved_ov": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.1920928955078125e-06,
+          "relative_rmse": 1.1652620433219374e-07,
+          "max_row_norm_relative_error": 1.9674096021372482e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 29274
+        },
+        "source_ov_input_vs_saved_ov": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.430511474609375e-06,
+          "relative_rmse": 9.1981565813312e-08,
+          "max_row_norm_relative_error": 2.314766241175975e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 24782
+        },
+        "saved_ov_ln1_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.0041425228118896484,
+          "relative_rmse": 0.0006481323844757102,
+          "max_row_norm_relative_error": 9.132410362154203e-05,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41469
+        },
+        "saved_ov_block0_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.0015783309936523438,
+          "relative_rmse": 0.0002785581795404393,
+          "max_row_norm_relative_error": 9.897820341532533e-05,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41468
+        }
+      },
+      "outputs": {
+        "source-native-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gray-96-source-native-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "0e54bcb27992ee00649b4e591b23647476b1ca10903f8654abe94ec17f52451e",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "84bfbbe0e3fac4af0aed14c8f6160cf36e9bb6dbd099136e0d04e59efba0c9a6"
+        },
+        "port-native-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gray-96-port-native-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "345aba0d4afba80a86f729ac933f7cd5a664fd43c63124d209a37e97f5b8b378",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "4c497fc906bbdaec409482c894a749daff4855575973e4825b54d15aaeef6492"
+        },
+        "source-ov-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gray-96-source-ov-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "463540f8392f58fe145f1984bd660cde16dddf4abfda26b169826a15ec2244b8",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "de265691409f961c9f9cbfa4c3c1f5ffc4320ed0b29bf6598918376d672dcda3"
+        },
+        "port-ov-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gray-96-port-ov-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "69eda0d8c1dbb68bcb5049c1288417d921e3841e534d5fb93cbab3e50ba68784",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "f41761066232178cf369f3e00b74cb1d915046f7658c6329a6f3d7ca1b551c1a"
+        },
+        "calculated-source-native-mean-variance-scale": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gray-96-calculated-source-native-mean-variance-scale.npy",
+          "file_bytes": 560,
+          "file_sha256": "2206648f2774e52eb2193264f9b813a39275c9ce1f297b3dd31e4cc68f75f8e2",
+          "shape": [
+            36,
+            3
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "aa6b8f8dc5ba039479afcb2bb17971098fbeaa3e497de483d4e653cbf453360e"
+        }
+      }
+    },
+    {
+      "fixture": "quadrants-96",
+      "native_inputs": {
+        "block.0": {
+          "stage": "block.0",
+          "selector": "layer_out-0",
+          "target_name": "layer_out-0",
+          "actual_dtype": "F32",
+          "type_id": 0,
+          "ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "selector_ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "selector_nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/block.0.f32",
+          "bytes": 165888,
+          "raw_sha256": "63a9d951242000727eb6db01004c7007515d9903c5b015550c75c66e1aaa444b"
+        },
+        "ln1.1": {
+          "stage": "ln1.1",
+          "selector": "ln1-1",
+          "target_name": "ln1-1",
+          "actual_dtype": "F32",
+          "type_id": 0,
+          "ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "selector_ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "selector_nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/ln1.1.f32",
+          "bytes": 165888,
+          "raw_sha256": "e1602bd6ef642068fd72e71ec837ecf1a890d8083bafe10eaaa9d65c6a191dd2"
+        }
+      },
+      "ov_inputs": {
+        "block.0": {
+          "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-block.0.npy",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "bcc3e80d783be5ea2e804e56d3cc92e5d8c5652fe2ad36ff37b1182ba8b284f5",
+          "file_sha256": "db327859a926e4f052cf7690062d0e33c7fb58310e13bb0c669d73caebdfc4fe",
+          "file_bytes": 166016
+        },
+        "ln1.1": {
+          "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.tap-ln1.1.npy",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "0b27414714b56c68d9b14a6b2fb3df884b311370549cce3ee612bc8226b124ec",
+          "file_sha256": "e553bbbe7a8e09202d205052ab08fbadce79e0248c1c70701e30d95be0779437",
+          "file_bytes": 166016
+        }
+      },
+      "comparisons": {
+        "source_native_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.0,
+          "relative_rmse": 0.0,
+          "max_row_norm_relative_error": 0.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": true,
+          "different_f32_elements": 0
+        },
+        "port_native_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.9073486328125e-06,
+          "relative_rmse": 6.637724844858985e-08,
+          "max_row_norm_relative_error": 1.224483372447895e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 12452
+        },
+        "source_ov_input_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.010753631591796875,
+          "relative_rmse": 0.000468071770927784,
+          "max_row_norm_relative_error": 0.00035215361828974185,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false,
+          "bit_identical": false,
+          "different_f32_elements": 41469
+        },
+        "port_ov_input_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.010751724243164062,
+          "relative_rmse": 0.0004680684034753681,
+          "max_row_norm_relative_error": 0.0003520814886320164,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false,
+          "bit_identical": false,
+          "different_f32_elements": 41469
+        },
+        "port_ov_input_vs_saved_ov": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 3.814697265625e-06,
+          "relative_rmse": 8.767346697401404e-08,
+          "max_row_norm_relative_error": 2.0775525852825038e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 25637
+        },
+        "source_ov_input_vs_saved_ov": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 5.7220458984375e-06,
+          "relative_rmse": 9.402368819480444e-08,
+          "max_row_norm_relative_error": 2.4067564621882635e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 25977
+        },
+        "saved_ov_ln1_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.01074981689453125,
+          "relative_rmse": 0.00046806808978170933,
+          "max_row_norm_relative_error": 0.0003519875497470482,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false,
+          "bit_identical": false,
+          "different_f32_elements": 41470
+        },
+        "saved_ov_block0_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.004882335662841797,
+          "relative_rmse": 0.0004456294045544763,
+          "max_row_norm_relative_error": 0.00015319763115016841,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41470
+        }
+      },
+      "outputs": {
+        "source-native-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\quadrants-96-source-native-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "e438aa052d4149f09b3c9c1085b894163d0ea4d6c80ef0159d1f71023b01302b",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "e1602bd6ef642068fd72e71ec837ecf1a890d8083bafe10eaaa9d65c6a191dd2"
+        },
+        "port-native-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\quadrants-96-port-native-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "437b7352e2dd915a893df49ca225767d971320920d787a27e2e15b1ba62f82a3",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "b799a01a048a1d8f4d827c9a6e7d195d0cbc912d3e615d14abe40148400a95ba"
+        },
+        "source-ov-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\quadrants-96-source-ov-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "779a4035803524e281e8510986212d53b46b957d9c88a21d45ffcb26a586563e",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "e1820bfa9d035a342b098a656b39e7a53d6b408973546d49b02382e0616b237f"
+        },
+        "port-ov-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\quadrants-96-port-ov-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "bea824c20a77195cc898d749b7eb4aeb66e5dc533d22028428c403546eab0194",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "04d55b6fc1fdf40f34477866495bf8101180f088d499603abac5e4aaa2b2fe75"
+        },
+        "calculated-source-native-mean-variance-scale": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\quadrants-96-calculated-source-native-mean-variance-scale.npy",
+          "file_bytes": 560,
+          "file_sha256": "8207c7ceb31834331437d8917f1c298ab35be6552236af85d0af3f2b81c6250f",
+          "shape": [
+            36,
+            3
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "b478bc523d29ebc75484878291060b8a6bc282426cae021b8b90823c2f66d57c"
+        }
+      }
+    },
+    {
+      "fixture": "checkerboard-96",
+      "native_inputs": {
+        "block.0": {
+          "stage": "block.0",
+          "selector": "layer_out-0",
+          "target_name": "layer_out-0",
+          "actual_dtype": "F32",
+          "type_id": 0,
+          "ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "selector_ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "selector_nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/block.0.f32",
+          "bytes": 165888,
+          "raw_sha256": "bbc4aa527c995459606f349f40ffa36527209ee6f409d85f4fc18c080baf0b0b"
+        },
+        "ln1.1": {
+          "stage": "ln1.1",
+          "selector": "ln1-1",
+          "target_name": "ln1-1",
+          "actual_dtype": "F32",
+          "type_id": 0,
+          "ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "selector_ne": [
+            1152,
+            36,
+            1,
+            1
+          ],
+          "selector_nb": [
+            4,
+            4608,
+            165888,
+            165888
+          ],
+          "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/ln1.1.f32",
+          "bytes": 165888,
+          "raw_sha256": "5277f26906a75fc4385261886ffe13004b7926d868220eb432986880053a9c5a"
+        }
+      },
+      "ov_inputs": {
+        "block.0": {
+          "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-block.0.npy",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "2597b65ebad9640d1ae093837476136c0d4892e0f13e12242feb3224abb7358c",
+          "file_sha256": "76ef9dd2ca0e15b0c535dd4d610634386df7b8da8ce3ad94014b219230b6997c",
+          "file_bytes": 166016
+        },
+        "ln1.1": {
+          "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.tap-ln1.1.npy",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "2d67ba003215d7f769f35e46aed27461700017cf30df8375450056b8310d9560",
+          "file_sha256": "2305ded3b70f260a41214a40836d0f88c8afb23324e579f6f9ef4d93965e3012",
+          "file_bytes": 166016
+        }
+      },
+      "comparisons": {
+        "source_native_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.0,
+          "relative_rmse": 0.0,
+          "max_row_norm_relative_error": 0.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": true,
+          "different_f32_elements": 0
+        },
+        "port_native_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 9.5367431640625e-07,
+          "relative_rmse": 6.349527354258328e-08,
+          "max_row_norm_relative_error": 1.0951297504555978e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 13306
+        },
+        "source_ov_input_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.007890462875366211,
+          "relative_rmse": 0.0006092710743022742,
+          "max_row_norm_relative_error": 0.00020281897148316424,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41472
+        },
+        "port_ov_input_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.007890462875366211,
+          "relative_rmse": 0.0006092708278608445,
+          "max_row_norm_relative_error": 0.00020282954278725274,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41472
+        },
+        "port_ov_input_vs_saved_ov": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 9.5367431640625e-07,
+          "relative_rmse": 7.933342625991383e-08,
+          "max_row_norm_relative_error": 1.2933520951409506e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 22291
+        },
+        "source_ov_input_vs_saved_ov": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 9.5367431640625e-07,
+          "relative_rmse": 6.970723281813407e-08,
+          "max_row_norm_relative_error": 1.1618450483205631e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 18267
+        },
+        "saved_ov_ln1_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.007889986038208008,
+          "relative_rmse": 0.0006092718433991579,
+          "max_row_norm_relative_error": 0.00020270816379553856,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41472
+        },
+        "saved_ov_block0_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.005634307861328125,
+          "relative_rmse": 0.0006045237099764051,
+          "max_row_norm_relative_error": 0.0001018720796027402,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 41467
+        }
+      },
+      "outputs": {
+        "source-native-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\checkerboard-96-source-native-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "31b2c498d4398e29a0d46eb0a3b7ba99f9e6c85fedbefbc83af08f2d6b9ce672",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "5277f26906a75fc4385261886ffe13004b7926d868220eb432986880053a9c5a"
+        },
+        "port-native-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\checkerboard-96-port-native-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "38e6feb694d9ec32b3dfbb7b30279ced4cd928415624ab183403f89ec4640b46",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "7697209aabe0a57b7fedcfc0dee945e7737ba794325239ddb1b66cd140dd0a14"
+        },
+        "source-ov-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\checkerboard-96-source-ov-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "7ffdc0253719126925bed00a651a0d4ec974c9e28f2431ca12f9c94add24c7da",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "f014bf275cfa5c0ae6ce9de32fa8e43aef3b61b491aa7c330e29287262f576b6"
+        },
+        "port-ov-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\checkerboard-96-port-ov-input.npy",
+          "file_bytes": 166016,
+          "file_sha256": "2c8df3e3c237d4c263ae20a36817c777e61db8d2caa07c537fba39523cd0bb3e",
+          "shape": [
+            36,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "a9620fb19b1a09bf54b95fd9c184ee37e0fd9679fbe19b624566cdb095ea9b1d"
+        },
+        "calculated-source-native-mean-variance-scale": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\checkerboard-96-calculated-source-native-mean-variance-scale.npy",
+          "file_bytes": 560,
+          "file_sha256": "dd11baf5f91222b348fa17b0dd151704ac53fb1bfffd1242b20fd146ec63f568",
+          "shape": [
+            36,
+            3
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "be2617dbb2abb296d498b228ccee01c077f76cdc2ce56fd0cd6f6aacc443075a"
+        }
+      }
+    },
+    {
+      "fixture": "gradient-192x96",
+      "native_inputs": {
+        "block.0": {
+          "stage": "block.0",
+          "selector": "layer_out-0",
+          "target_name": "layer_out-0",
+          "actual_dtype": "F32",
+          "type_id": 0,
+          "ne": [
+            1152,
+            72,
+            1,
+            1
+          ],
+          "nb": [
+            4,
+            4608,
+            331776,
+            331776
+          ],
+          "selector_ne": [
+            1152,
+            72,
+            1,
+            1
+          ],
+          "selector_nb": [
+            4,
+            4608,
+            331776,
+            331776
+          ],
+          "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/block.0.f32",
+          "bytes": 331776,
+          "raw_sha256": "b38fbb6e1ed36229571854025ba5eea933f4c66516846d72f4a18dde9820973d"
+        },
+        "ln1.1": {
+          "stage": "ln1.1",
+          "selector": "ln1-1",
+          "target_name": "ln1-1",
+          "actual_dtype": "F32",
+          "type_id": 0,
+          "ne": [
+            1152,
+            72,
+            1,
+            1
+          ],
+          "nb": [
+            4,
+            4608,
+            331776,
+            331776
+          ],
+          "selector_ne": [
+            1152,
+            72,
+            1,
+            1
+          ],
+          "selector_nb": [
+            4,
+            4608,
+            331776,
+            331776
+          ],
+          "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/ln1.1.f32",
+          "bytes": 331776,
+          "raw_sha256": "84b301d0d9b82c2cd3dda50f5344ad078e9a0b6cca268cd9223f95f8934dbab6"
+        }
+      },
+      "ov_inputs": {
+        "block.0": {
+          "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-block.0.npy",
+          "shape": [
+            72,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "417dada9db429aec16fc99d814597b1f3e49f4364581ce4dc9f201227ee0841f",
+          "file_sha256": "22fdafe88dda07f59cbad47ae5044dab5dec5a92bffa3b41291a0e095fd44792",
+          "file_bytes": 331904
+        },
+        "ln1.1": {
+          "path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-openvino\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.tap-ln1.1.npy",
+          "shape": [
+            72,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "e05bfb07d0184523a9c0be2515d01516822b4b381d358c2115684abe8e59efe8",
+          "file_sha256": "491711a74f0e5e12003266d6638465227fb67e19852233fdc99945ff90abcd34",
+          "file_bytes": 331904
+        }
+      },
+      "comparisons": {
+        "source_native_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.0,
+          "relative_rmse": 0.0,
+          "max_row_norm_relative_error": 0.0,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": true,
+          "different_f32_elements": 0
+        },
+        "port_native_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.9073486328125e-06,
+          "relative_rmse": 7.29190526120802e-08,
+          "max_row_norm_relative_error": 1.382719384439894e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 29023
+        },
+        "source_ov_input_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.01616382598876953,
+          "relative_rmse": 0.0011574362438536532,
+          "max_row_norm_relative_error": 0.0007452487888881913,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false,
+          "bit_identical": false,
+          "different_f32_elements": 82941
+        },
+        "port_ov_input_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.01616382598876953,
+          "relative_rmse": 0.0011574360436840576,
+          "max_row_norm_relative_error": 0.0007452329950072863,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false,
+          "bit_identical": false,
+          "different_f32_elements": 82937
+        },
+        "port_ov_input_vs_saved_ov": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.86102294921875e-06,
+          "relative_rmse": 9.718195460967859e-08,
+          "max_row_norm_relative_error": 1.745544607956421e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 54757
+        },
+        "source_ov_input_vs_saved_ov": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.86102294921875e-06,
+          "relative_rmse": 8.846809534712148e-08,
+          "max_row_norm_relative_error": 2.3561738328039146e-07,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 49287
+        },
+        "saved_ov_ln1_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.01616382598876953,
+          "relative_rmse": 0.0011574361266922031,
+          "max_row_norm_relative_error": 0.0007452480201263784,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": false,
+          "bit_identical": false,
+          "different_f32_elements": 82942
+        },
+        "saved_ov_block0_vs_native": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 0.006959676742553711,
+          "relative_rmse": 0.0007530927053757844,
+          "max_row_norm_relative_error": 0.0002319034318494671,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true,
+          "bit_identical": false,
+          "different_f32_elements": 82941
+        }
+      },
+      "outputs": {
+        "source-native-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gradient-192x96-source-native-input.npy",
+          "file_bytes": 331904,
+          "file_sha256": "6ebd66ff4d890dc1403f92dd936260d2e71c22a4b356559888769ce13101c191",
+          "shape": [
+            72,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "84b301d0d9b82c2cd3dda50f5344ad078e9a0b6cca268cd9223f95f8934dbab6"
+        },
+        "port-native-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gradient-192x96-port-native-input.npy",
+          "file_bytes": 331904,
+          "file_sha256": "3ef335ccc76309d163170041485174fb7266cc33a834987e418d677f2f0dc2dc",
+          "shape": [
+            72,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "e1b778a14abcccadd62e2e907567dacfc8e964e16543e6bd7a38aa3840eaae3d"
+        },
+        "source-ov-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gradient-192x96-source-ov-input.npy",
+          "file_bytes": 331904,
+          "file_sha256": "6dd766d3e95e3b7768dc81fa5a954079179140e220a311ca6bf86fc2d302d9b2",
+          "shape": [
+            72,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "6377ad28194dc37a4d3c7c2e8fa4c7a784cdd909afa511ca5c33fe0e70bf7094"
+        },
+        "port-ov-input": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gradient-192x96-port-ov-input.npy",
+          "file_bytes": 331904,
+          "file_sha256": "6c57955ce4b62d43e1001fa5b1e576d4b59aa6d65b6a7728e6eead0201cd33ca",
+          "shape": [
+            72,
+            1152
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "814686f5cf4a98fb8379706abc5170c0df7a26a84c550bcb8af15fdd58f46c83"
+        },
+        "calculated-source-native-mean-variance-scale": {
+          "path": "E:\\Strata-Hetero-data\\vision-replays\\20261009-44-ln1-source\\gradient-192x96-calculated-source-native-mean-variance-scale.npy",
+          "file_bytes": 992,
+          "file_sha256": "267e0af5887e6d8ff440e4306dda8db8550886dfa690ae5ec042f9adbe23ff27",
+          "shape": [
+            72,
+            3
+          ],
+          "dtype": "float32",
+          "decoded_sha256": "c0ddc3d97587eed37caab408b9a78308aac590901f5a79ba41736cb812b725ce"
+        }
+      }
+    }
+  ],
+  "native_mean_variance_intermediates_captured": false,
+  "source_norm_replay_scope": "Source AVX2 F32/double order with NumPy sqrt/div/mul/add; no native norm invoked.",
+  "port_replay_scope": "Current graph algebra with NumPy F32 reductions; not an exact compiled OpenVINO reduction/fusion emulator.",
+  "original_reference_replaced": false,
+  "gate_relaxed": false,
+  "npu_accepted": false,
+  "finished_utc": "2026-10-09T12:26:18.079699+00:00",
+  "replay_script_sha256": "ac1080db8a7dc51875c0d938c5b9ae8f2c682ea9d7d2b94660e0e97de84c84e5"
+}

@@ -1,0 +1,749 @@
+{
+  "schema_version": 1,
+  "status": "cpu35_sweep_complete_all_runnable_cases_pass",
+  "run_id": "20261009-35-cpu-worker-affinity",
+  "run_summary_path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\outputs\\run-summary.json",
+  "run_summary_sha256": "12b62d3ee696e6ed203b0128e7e05f0de6b4f89aa50851ea4b8daea9144807a8",
+  "resource_samples_path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\outputs\\resource-samples.jsonl",
+  "resource_samples_sha256": "437da0fe67b2fbf9104b3661a73577c7118458b39c36efc59cc493663f267592",
+  "resource_sample_count": 257,
+  "physical_available_min_bytes": 117442531328,
+  "commit_available_min_bytes": 122269052928,
+  "all_resource_gates_pass": true,
+  "cases": 128,
+  "default_gate_cases": 2,
+  "runnable_pool_cases": 126,
+  "strict_pcore_not_run": 18,
+  "per_affinity_counts": {
+    "default": 2,
+    "none": 36,
+    "all": 36,
+    "auto": 36,
+    "p-cores": 18
+  },
+  "per_affinity": {
+    "none": {
+      "cases": 36,
+      "all_bitwise_pass": true,
+      "all_finite": true,
+      "all_exits_zero": true,
+      "all_receipts_validated": true,
+      "host_pin_applied_counts": {
+        "False": 36,
+        "True": 0
+      },
+      "worker_pin_success_available": [
+        false
+      ],
+      "unpinned_overflow_cases": 0
+    },
+    "all": {
+      "cases": 36,
+      "all_bitwise_pass": true,
+      "all_finite": true,
+      "all_exits_zero": true,
+      "all_receipts_validated": true,
+      "host_pin_applied_counts": {
+        "False": 0,
+        "True": 36
+      },
+      "worker_pin_success_available": [
+        false
+      ],
+      "unpinned_overflow_cases": 6
+    },
+    "auto": {
+      "cases": 36,
+      "all_bitwise_pass": true,
+      "all_finite": true,
+      "all_exits_zero": true,
+      "all_receipts_validated": true,
+      "host_pin_applied_counts": {
+        "False": 0,
+        "True": 36
+      },
+      "worker_pin_success_available": [
+        false
+      ],
+      "unpinned_overflow_cases": 6
+    },
+    "p-cores": {
+      "cases": 18,
+      "all_bitwise_pass": true,
+      "all_finite": true,
+      "all_exits_zero": true,
+      "all_receipts_validated": true,
+      "host_pin_applied_counts": {
+        "False": 0,
+        "True": 18
+      },
+      "worker_pin_success_available": [
+        false
+      ],
+      "unpinned_overflow_cases": 0
+    }
+  },
+  "all_128_exits_zero": true,
+  "all_128_bitwise_pass": true,
+  "all_128_finite": true,
+  "all_128_native_receipts_validated": true,
+  "process_identity_terminal_review": {
+    "identities_checked": 128,
+    "live_exact_owned_processes": 0,
+    "all_owned_processes_terminal": true,
+    "states": [
+      {
+        "pid": 10304,
+        "create_time": 1791548868.215204,
+        "state": "exited"
+      },
+      {
+        "pid": 23568,
+        "create_time": 1791548868.265269,
+        "state": "exited"
+      },
+      {
+        "pid": 3884,
+        "create_time": 1791548868.3180106,
+        "state": "exited"
+      },
+      {
+        "pid": 7100,
+        "create_time": 1791548868.3620465,
+        "state": "exited"
+      },
+      {
+        "pid": 15944,
+        "create_time": 1791548868.4067004,
+        "state": "exited"
+      },
+      {
+        "pid": 9812,
+        "create_time": 1791548868.4507713,
+        "state": "exited"
+      },
+      {
+        "pid": 22540,
+        "create_time": 1791548868.4961424,
+        "state": "exited"
+      },
+      {
+        "pid": 11432,
+        "create_time": 1791548868.545244,
+        "state": "exited"
+      },
+      {
+        "pid": 5540,
+        "create_time": 1791548868.5980752,
+        "state": "exited"
+      },
+      {
+        "pid": 23904,
+        "create_time": 1791548868.642348,
+        "state": "exited"
+      },
+      {
+        "pid": 5604,
+        "create_time": 1791548868.690616,
+        "state": "exited"
+      },
+      {
+        "pid": 19368,
+        "create_time": 1791548868.7378027,
+        "state": "exited"
+      },
+      {
+        "pid": 17112,
+        "create_time": 1791548868.7824728,
+        "state": "exited"
+      },
+      {
+        "pid": 20088,
+        "create_time": 1791548868.8362343,
+        "state": "exited"
+      },
+      {
+        "pid": 23996,
+        "create_time": 1791548868.8905582,
+        "state": "exited"
+      },
+      {
+        "pid": 5192,
+        "create_time": 1791548868.9388196,
+        "state": "exited"
+      },
+      {
+        "pid": 24208,
+        "create_time": 1791548868.9846904,
+        "state": "exited"
+      },
+      {
+        "pid": 9548,
+        "create_time": 1791548869.0285065,
+        "state": "exited"
+      },
+      {
+        "pid": 8556,
+        "create_time": 1791548869.073996,
+        "state": "exited"
+      },
+      {
+        "pid": 21724,
+        "create_time": 1791548869.1203666,
+        "state": "exited"
+      },
+      {
+        "pid": 23256,
+        "create_time": 1791548869.17128,
+        "state": "exited"
+      },
+      {
+        "pid": 23828,
+        "create_time": 1791548869.21595,
+        "state": "exited"
+      },
+      {
+        "pid": 22100,
+        "create_time": 1791548869.2613935,
+        "state": "exited"
+      },
+      {
+        "pid": 21340,
+        "create_time": 1791548869.3061488,
+        "state": "pid_gone_or_reused_by_other_identity"
+      },
+      {
+        "pid": 4512,
+        "create_time": 1791548869.351696,
+        "state": "exited"
+      },
+      {
+        "pid": 9136,
+        "create_time": 1791548869.3999052,
+        "state": "exited"
+      },
+      {
+        "pid": 20232,
+        "create_time": 1791548869.4478447,
+        "state": "exited"
+      },
+      {
+        "pid": 18564,
+        "create_time": 1791548869.493403,
+        "state": "exited"
+      },
+      {
+        "pid": 932,
+        "create_time": 1791548869.5381851,
+        "state": "exited"
+      },
+      {
+        "pid": 5868,
+        "create_time": 1791548869.5842528,
+        "state": "exited"
+      },
+      {
+        "pid": 7840,
+        "create_time": 1791548869.6401873,
+        "state": "exited"
+      },
+      {
+        "pid": 12472,
+        "create_time": 1791548869.6893215,
+        "state": "exited"
+      },
+      {
+        "pid": 19868,
+        "create_time": 1791548869.7381501,
+        "state": "exited"
+      },
+      {
+        "pid": 16484,
+        "create_time": 1791548869.8167045,
+        "state": "exited"
+      },
+      {
+        "pid": 24100,
+        "create_time": 1791548869.9411664,
+        "state": "exited"
+      },
+      {
+        "pid": 2272,
+        "create_time": 1791548870.0570958,
+        "state": "exited"
+      },
+      {
+        "pid": 24504,
+        "create_time": 1791548870.1562457,
+        "state": "exited"
+      },
+      {
+        "pid": 14232,
+        "create_time": 1791548870.274484,
+        "state": "exited"
+      },
+      {
+        "pid": 22700,
+        "create_time": 1791548870.362603,
+        "state": "exited"
+      },
+      {
+        "pid": 20504,
+        "create_time": 1791548870.4070196,
+        "state": "exited"
+      },
+      {
+        "pid": 11576,
+        "create_time": 1791548870.4548616,
+        "state": "exited"
+      },
+      {
+        "pid": 24464,
+        "create_time": 1791548870.5034597,
+        "state": "exited"
+      },
+      {
+        "pid": 3400,
+        "create_time": 1791548870.5527415,
+        "state": "exited"
+      },
+      {
+        "pid": 2228,
+        "create_time": 1791548870.5991805,
+        "state": "exited"
+      },
+      {
+        "pid": 23512,
+        "create_time": 1791548870.6514452,
+        "state": "pid_gone_or_reused_by_other_identity"
+      },
+      {
+        "pid": 23804,
+        "create_time": 1791548870.6970603,
+        "state": "exited"
+      },
+      {
+        "pid": 11688,
+        "create_time": 1791548870.740116,
+        "state": "exited"
+      },
+      {
+        "pid": 19944,
+        "create_time": 1791548870.7933767,
+        "state": "exited"
+      },
+      {
+        "pid": 11336,
+        "create_time": 1791548870.8403275,
+        "state": "exited"
+      },
+      {
+        "pid": 13548,
+        "create_time": 1791548870.892804,
+        "state": "exited"
+      },
+      {
+        "pid": 20332,
+        "create_time": 1791548870.9439638,
+        "state": "exited"
+      },
+      {
+        "pid": 20608,
+        "create_time": 1791548870.990209,
+        "state": "exited"
+      },
+      {
+        "pid": 17496,
+        "create_time": 1791548871.0354135,
+        "state": "exited"
+      },
+      {
+        "pid": 11908,
+        "create_time": 1791548871.0822172,
+        "state": "exited"
+      },
+      {
+        "pid": 11296,
+        "create_time": 1791548871.132357,
+        "state": "exited"
+      },
+      {
+        "pid": 23608,
+        "create_time": 1791548871.1807628,
+        "state": "exited"
+      },
+      {
+        "pid": 24312,
+        "create_time": 1791548871.2384336,
+        "state": "exited"
+      },
+      {
+        "pid": 8444,
+        "create_time": 1791548871.28914,
+        "state": "exited"
+      },
+      {
+        "pid": 11940,
+        "create_time": 1791548871.335386,
+        "state": "exited"
+      },
+      {
+        "pid": 9772,
+        "create_time": 1791548871.3797736,
+        "state": "exited"
+      },
+      {
+        "pid": 23292,
+        "create_time": 1791548871.4320116,
+        "state": "exited"
+      },
+      {
+        "pid": 22576,
+        "create_time": 1791548871.481552,
+        "state": "exited"
+      },
+      {
+        "pid": 23628,
+        "create_time": 1791548871.5346112,
+        "state": "exited"
+      },
+      {
+        "pid": 19400,
+        "create_time": 1791548871.5827348,
+        "state": "exited"
+      },
+      {
+        "pid": 11632,
+        "create_time": 1791548871.626571,
+        "state": "exited"
+      },
+      {
+        "pid": 18148,
+        "create_time": 1791548871.6737294,
+        "state": "exited"
+      },
+      {
+        "pid": 13296,
+        "create_time": 1791548871.7245803,
+        "state": "exited"
+      },
+      {
+        "pid": 15116,
+        "create_time": 1791548871.7760565,
+        "state": "exited"
+      },
+      {
+        "pid": 20744,
+        "create_time": 1791548871.825014,
+        "state": "exited"
+      },
+      {
+        "pid": 10220,
+        "create_time": 1791548871.9246025,
+        "state": "exited"
+      },
+      {
+        "pid": 18184,
+        "create_time": 1791548871.9967346,
+        "state": "exited"
+      },
+      {
+        "pid": 19188,
+        "create_time": 1791548872.06294,
+        "state": "exited"
+      },
+      {
+        "pid": 4104,
+        "create_time": 1791548872.1617837,
+        "state": "exited"
+      },
+      {
+        "pid": 4364,
+        "create_time": 1791548872.2354028,
+        "state": "exited"
+      },
+      {
+        "pid": 11728,
+        "create_time": 1791548872.341054,
+        "state": "exited"
+      },
+      {
+        "pid": 24080,
+        "create_time": 1791548872.3836443,
+        "state": "exited"
+      },
+      {
+        "pid": 24484,
+        "create_time": 1791548872.4277909,
+        "state": "exited"
+      },
+      {
+        "pid": 7916,
+        "create_time": 1791548872.4770937,
+        "state": "exited"
+      },
+      {
+        "pid": 8948,
+        "create_time": 1791548872.5228348,
+        "state": "exited"
+      },
+      {
+        "pid": 12916,
+        "create_time": 1791548872.56866,
+        "state": "exited"
+      },
+      {
+        "pid": 23312,
+        "create_time": 1791548872.6173656,
+        "state": "exited"
+      },
+      {
+        "pid": 23016,
+        "create_time": 1791548872.6579316,
+        "state": "exited"
+      },
+      {
+        "pid": 23140,
+        "create_time": 1791548872.6998956,
+        "state": "exited"
+      },
+      {
+        "pid": 3712,
+        "create_time": 1791548872.7426164,
+        "state": "exited"
+      },
+      {
+        "pid": 20772,
+        "create_time": 1791548872.7897403,
+        "state": "exited"
+      },
+      {
+        "pid": 11588,
+        "create_time": 1791548872.8387115,
+        "state": "exited"
+      },
+      {
+        "pid": 2388,
+        "create_time": 1791548872.8870523,
+        "state": "exited"
+      },
+      {
+        "pid": 3308,
+        "create_time": 1791548872.9316504,
+        "state": "exited"
+      },
+      {
+        "pid": 23564,
+        "create_time": 1791548872.9782133,
+        "state": "exited"
+      },
+      {
+        "pid": 6100,
+        "create_time": 1791548873.0245976,
+        "state": "exited"
+      },
+      {
+        "pid": 15040,
+        "create_time": 1791548873.0721025,
+        "state": "exited"
+      },
+      {
+        "pid": 10532,
+        "create_time": 1791548873.128833,
+        "state": "exited"
+      },
+      {
+        "pid": 19628,
+        "create_time": 1791548873.1864417,
+        "state": "exited"
+      },
+      {
+        "pid": 20616,
+        "create_time": 1791548873.2323196,
+        "state": "exited"
+      },
+      {
+        "pid": 23256,
+        "create_time": 1791548873.2797694,
+        "state": "exited"
+      },
+      {
+        "pid": 23828,
+        "create_time": 1791548873.3243973,
+        "state": "exited"
+      },
+      {
+        "pid": 22100,
+        "create_time": 1791548873.3727326,
+        "state": "exited"
+      },
+      {
+        "pid": 20796,
+        "create_time": 1791548873.4241717,
+        "state": "exited"
+      },
+      {
+        "pid": 10644,
+        "create_time": 1791548873.4719915,
+        "state": "exited"
+      },
+      {
+        "pid": 24132,
+        "create_time": 1791548873.523284,
+        "state": "exited"
+      },
+      {
+        "pid": 10944,
+        "create_time": 1791548873.5695956,
+        "state": "exited"
+      },
+      {
+        "pid": 18504,
+        "create_time": 1791548873.616269,
+        "state": "exited"
+      },
+      {
+        "pid": 15300,
+        "create_time": 1791548873.6626673,
+        "state": "exited"
+      },
+      {
+        "pid": 5868,
+        "create_time": 1791548873.710554,
+        "state": "exited"
+      },
+      {
+        "pid": 10700,
+        "create_time": 1791548873.7601917,
+        "state": "exited"
+      },
+      {
+        "pid": 23516,
+        "create_time": 1791548873.8336787,
+        "state": "exited"
+      },
+      {
+        "pid": 19868,
+        "create_time": 1791548873.916355,
+        "state": "exited"
+      },
+      {
+        "pid": 21108,
+        "create_time": 1791548874.0126364,
+        "state": "exited"
+      },
+      {
+        "pid": 18348,
+        "create_time": 1791548874.069642,
+        "state": "exited"
+      },
+      {
+        "pid": 16108,
+        "create_time": 1791548874.1581855,
+        "state": "exited"
+      },
+      {
+        "pid": 22216,
+        "create_time": 1791548874.2455647,
+        "state": "exited"
+      },
+      {
+        "pid": 20756,
+        "create_time": 1791548874.288866,
+        "state": "exited"
+      },
+      {
+        "pid": 22700,
+        "create_time": 1791548874.331876,
+        "state": "exited"
+      },
+      {
+        "pid": 16500,
+        "create_time": 1791548874.381729,
+        "state": "exited"
+      },
+      {
+        "pid": 18532,
+        "create_time": 1791548874.4308019,
+        "state": "exited"
+      },
+      {
+        "pid": 24464,
+        "create_time": 1791548874.483716,
+        "state": "exited"
+      },
+      {
+        "pid": 12300,
+        "create_time": 1791548874.5364473,
+        "state": "exited"
+      },
+      {
+        "pid": 23960,
+        "create_time": 1791548874.5804317,
+        "state": "exited"
+      },
+      {
+        "pid": 24556,
+        "create_time": 1791548874.6260197,
+        "state": "exited"
+      },
+      {
+        "pid": 24124,
+        "create_time": 1791548874.6695645,
+        "state": "exited"
+      },
+      {
+        "pid": 16776,
+        "create_time": 1791548874.714228,
+        "state": "exited"
+      },
+      {
+        "pid": 22824,
+        "create_time": 1791548874.7595553,
+        "state": "exited"
+      },
+      {
+        "pid": 3620,
+        "create_time": 1791548874.809227,
+        "state": "exited"
+      },
+      {
+        "pid": 21000,
+        "create_time": 1791548874.8538864,
+        "state": "exited"
+      },
+      {
+        "pid": 4832,
+        "create_time": 1791548874.9045343,
+        "state": "exited"
+      },
+      {
+        "pid": 23704,
+        "create_time": 1791548874.949839,
+        "state": "exited"
+      },
+      {
+        "pid": 4912,
+        "create_time": 1791548874.9986155,
+        "state": "exited"
+      },
+      {
+        "pid": 24264,
+        "create_time": 1791548875.0463912,
+        "state": "exited"
+      }
+    ]
+  },
+  "candidate_binary_sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+  "candidate_source_sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+  "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+  "claim_limits": {
+    "worker_pin_success": "unavailable in current ExpertPool; no worker pin success claim",
+    "p_e_labels": "not verified",
+    "model_route_or_throughput": "not measured",
+    "execution_scope": "standalone native CPU expert parity/affinity microcases only"
+  },
+  "csv_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\cpu-worker-affinity-results.csv",
+  "csv_sha256": "de3160d33ecf262fab1fdc95f3dca6a068c2d743f5f78152558da2365c8890bf",
+  "outputs_root": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\outputs"
+}

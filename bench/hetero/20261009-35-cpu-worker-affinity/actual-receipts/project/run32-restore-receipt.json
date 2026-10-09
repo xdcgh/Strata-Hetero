@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "run32_files_restored_to_dec4043_executed_baseline",
+  "created_utc": null,
+  "restored_revision": "dec404386f3c1a4726377e640b63484d286403ec",
+  "files": [
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-32-cpu-pool-parity\\run_pool_parity.py",
+      "preserved_modified_draft": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\run32-plan-only-draft-01.py",
+      "draft_sha256": "4ea8fb099d018692edb494e220d56d0afc3016e4faa6ff2496ba558c6313b9ca",
+      "restored_commit": "dec404386f3c1a4726377e640b63484d286403ec",
+      "restored_sha256": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-32-cpu-pool-parity\\test_runner_fixtures.py",
+      "preserved_modified_draft": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\run32-plan-only-test-draft-01.py",
+      "draft_sha256": "12c20b7189137b04680956fb21e906953868bca17d7c49f5d8a69a6e57672bc3",
+      "restored_commit": "dec404386f3c1a4726377e640b63484d286403ec",
+      "restored_sha256": "549561d05046bf80780038e485bad4c64219d2fb6bc0515b34693390c3b0e29f"
+    }
+  ],
+  "executed_source_snapshot": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-32-cpu-pool-parity\\receipts\\executed-runner-12case.py",
+  "executed_source_snapshot_sha256": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+  "no_other_run32_files_changed": true
+}

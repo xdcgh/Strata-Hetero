@@ -1,0 +1,8 @@
+{
+  "authorized_utc": "2026-10-09T12:17:30.495440+00:00",
+  "scope": "Prepare only two seeded LE F32 inputs rows6 and10 at new E root, no C++ kernel or affinity",
+  "runner_sha256": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843",
+  "contract_sha256": "35411fa33b7a36e819fa0813724c1dcb8d46da6cfcf2ef2f0755bbf0a1b7d2b6",
+  "root_host_tests_passed": 7,
+  "sweep_execution_authorized": false
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-09T12:30:27.522616+00:00",
+  "status": "root128_output_hashes_finite_and_reference_bits_verified",
+  "cases": 128,
+  "excluded_pcores": 18,
+  "global_samples_passed": 257,
+  "whole_model_gain": null,
+  "worker_pin_success": null,
+  "summary_sha256": "12b62d3ee696e6ed203b0128e7e05f0de6b4f89aa50851ea4b8daea9144807a8"
+}

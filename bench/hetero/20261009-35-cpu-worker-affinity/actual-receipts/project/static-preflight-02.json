@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "status": "static_preflight_pass_no_kernel",
+  "run_id": "20261009-35-cpu-worker-affinity",
+  "checked_utc": "2026-10-09T12:12:10.739093+00:00",
+  "runner_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\run_cpu_affinity_sweep.py",
+  "runner_sha256": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843",
+  "source_hashes": {
+    "runner": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843",
+    "native_harness_source": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+    "cpu_pool_header": "4255fd01ae6e55a650b2e81316202c5b9206e0ae2271cd9fa81edc3b27d33c1a",
+    "cpu_pool_source": "e54f0c2fe6a297c4aa49a3a9efabab3166d8644f05385b9f7e2fa5e5d34f8eff",
+    "windows_affinity_helper": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+    "topology_collector": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66",
+    "resource_sampler": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+    "file_identity_helper": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+    "run32_executed_source": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8"
+  },
+  "static_receipts": {
+    "inputs_manifest": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+    "extraction_receipt": "e4b8083e5f8f39f04affcb99e4a292bdad92ecf132462499561bbaddbd9dac9d",
+    "identity": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+    "build_receipt": "04ab427e91c7f395e665f8f1662f770626ae594383b789011b590b8fa53e4e27",
+    "run32_frozen_source": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+    "topology": "dbb2f655d6f790ce6306e258f83611163459963b2257f7b1c00292c18f3c2dd0",
+    "binary_sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+    "binary_stat": {
+      "size_bytes": 2158592,
+      "mtime_ns": 1791536842767201200,
+      "ctime_ns": 1791536842587799900,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1407374883611045
+      },
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe"
+    }
+  },
+  "candidate_binary_path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+  "candidate_binary_sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+  "selected_blob": {
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+    "bytes": 3072000,
+    "sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+    "identity": {
+      "size_bytes": 3072000,
+      "mtime_ns": 1791520543244546300,
+      "ctime_ns": 1791520543243549700,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 4222124650674796
+      },
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin"
+    }
+  },
+  "frozen_outputs": {
+    "1": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "identity": {
+        "size_bytes": 10240,
+        "mtime_ns": 1791521100827354400,
+        "ctime_ns": 1791521100827354400,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1970324836990686
+        },
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+        "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3"
+      }
+    },
+    "2": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-002.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "identity": {
+        "size_bytes": 20480,
+        "mtime_ns": 1791521102519356300,
+        "ctime_ns": 1791521102519356300,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1970324836990687
+        },
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-002.f32",
+        "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8"
+      }
+    },
+    "4": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-004.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "identity": {
+        "size_bytes": 40960,
+        "mtime_ns": 1791521105385314900,
+        "ctime_ns": 1791521105385314900,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1970324836990688
+        },
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-004.f32",
+        "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4"
+      }
+    },
+    "16": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "identity": {
+        "size_bytes": 163840,
+        "mtime_ns": 1791521111110209100,
+        "ctime_ns": 1791521111110209100,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1970324836990690
+        },
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+        "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e"
+      }
+    }
+  },
+  "required_input_rows": [
+    1,
+    2,
+    4,
+    6,
+    10,
+    16
+  ],
+  "missing_inputs_rows_not_read": [
+    6,
+    10
+  ],
+  "preparation_authorized": false,
+  "execution_authorized": false,
+  "kernel_started": false,
+  "affinity_mutated": false,
+  "data_root_exists_at_check": false,
+  "inputs_root_exists_at_check": false,
+  "output_root_exists_at_check": false,
+  "contract_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\sweep-execution-contract-v2.json",
+  "contract_sha256": "0cadf820a9d703336b93d9b0ce85228687a2f9909d415bfedad652003d0a2aa6"
+}

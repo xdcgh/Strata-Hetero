@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "phase": "Both0.1.41 matchedmodel quality27formal pass and terminal; nativeArcIPC45formal pass; nativevision20SVE/132stage verified; CPUOVdiagnostic negative under analysis; readytointegrateupstreamsource",
+  "phase": "v0.1.41 source merged and tested; nativeArcIPC and CPUaffinity parity verified; vision native stage and CPUdiagnostic/replay complete, port numerical gap unresolved",
   "branch": "codex/45-upstream41-runtime",
-  "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
+  "upstream_base_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
   "validated": [
     "Independent checkout created; historical working tree unchanged",
@@ -65,7 +65,12 @@
     "Root independently reparsed upstream41run44 all27formal actualtokenIDs/SSEtext/storedUTF8 bytes againstH4; allmatch and strictqualitypass; exactcleanup697samples allpass min63.980physical/44.727commitGiB",
     "Run40 prefillfirstrequest cancelled24/27input and0output due liveTailreader bug; 521samples allvalid/all12/4gatespass; originalfailedrun terminal and preserved, newboundedreader10hostfixturespass",
     "Root all27 candidate41 actualIDs/SSEtext/storedUTF8 match latestupstream41 and H4;651resource samples pass, bothmodel owners cleanlyterminal",
-    "Actualnative visionstage20SVE fullbytes equal frozen23;132stage hashes/finite verified and repeatstable, eachimage under16MiB; CPUOVdiagnosticcompleted negative, originaloracleunchanged"
+    "Actualnative visionstage20SVE fullbytes equal frozen23;132stage hashes/finite verified and repeatstable, eachimage under16MiB; CPUOVdiagnosticcompleted negative, originaloracleunchanged",
+    "Mergedupstream41source1676895 into codex45; keyengine sourcefiles byteequal previouslyvalidatedffeb, branchpushed",
+    "Root read commandledger:23pure testcommands exitzero;792unit run791pass1skip0fail plus10PSfixtures; runnerpreflight/finalizationfailures retained withouttestsrepeated",
+    "CPU35 actual2default+126pool alloutputs bitidentical/finite/exitzero; root independent128rehash+refcheck and257allresourcegatespass;18 strictPcore overflows NOT RUN, workerpinunknown",
+    "Root all288 CPUvisiondiagnostic formalNPYs file+decodedSHA/shape/finite checked;264stage comparisons153negative, all24 projectionsinstrumentchanged; originalnativeoracle preserved",
+    "Sourceboundnormreplay onnativeblock0 reproducesnativeLN1.1bits; portnormonnativeinputpasses, upstreaminputdifferences dominate sampledLN1.1error; firstblockcauseunresolved"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -75,7 +80,7 @@
     "Repeated exclamation token may be consistent with non-finite logits or no valid argmax candidate; actual runtime logits must be checked before inferring cause",
     "Debug synchronization or different request history may affect mapped-PLE batched-prefill behavior; require matched controls before attributing cause"
   ],
-  "rollback_sha": "de8722991b4961ddb810f73c7c8f48ae106eef02",
+  "rollback_sha": "1b5c4ce",
   "pushed_plan_checkpoint_sha": "be9ecba3491309a8fe67721ab313477e4e96d836",
   "coordination": {
     "other_chat": "01a10fd4-a020-7370-8d07-9433ef55b45b",
@@ -90,17 +95,17 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Merge testedupstream33into new45 branch, runrequiredpure regressions; diagnosefirstCPUvisionstagedivergence; runCPUaffinitysweep afterfrozenpreflight; fulloriginalRAM/storage/KV/Arc/modelintegration/calibrator/performance/context/concurrency remainrequired.",
-  "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
+  "next_experiment": "Continuefulloriginalscope: fullmodelCPUworker/affinity end-to-end gain and pinvisibility; nativeArc fullboundary CPUcomparison/sharedRAM contention/model dispatch; memory/storage/KV/parallelstartup and calibrated runtimeintegration; boundedvisionblock0 arithmetic analysis; formalperf andnatural128K/256K/512K/1M/quality/concurrency matrix. No unmeasuredroutepromoted.",
+  "completion_status": "active; originalfullscope stillrequired, no modelperformancepromotedfrommicrocases",
   "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T12:14:27.103977+00:00",
-  "current_run": "upstream41 source integration",
+  "last_checkpoint_utc": "2026-10-09T12:36:59.965080+00:00",
+  "current_run": null,
   "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
     "tag": "v0.1.41",
-    "status": "matched_models_quality_passed_source_merge_next",
+    "status": "merged_into_mainworktree_1676895_modelpair_and_puretests_verified",
     "review": "bench\\hetero\\20261009-25-upstream-0-1-41-review\\review.json",
     "merge_sha": "ffeb748d190ddeedff23587ce848596d4db0c752"
   },

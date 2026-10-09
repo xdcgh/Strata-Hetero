@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "prepared_for_root_review_only",
+  "run_id": "20261009-35-cpu-worker-affinity",
+  "runner_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\run_cpu_affinity_sweep.py",
+  "runner_sha256": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843",
+  "contract_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\sweep-execution-contract-v2.json",
+  "contract_sha256": "0cadf820a9d703336b93d9b0ce85228687a2f9909d415bfedad652003d0a2aa6",
+  "plan_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\sweep-execution-plan-v2.json",
+  "plan_sha256": "f7ba4624fa88dafcbf7a96874c36f3f7d2676dc013ab73f2a7bbce27552db688",
+  "topology_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-35-cpu-worker-affinity\\cpu-topology-current-01.json",
+  "topology_sha256": "dbb2f655d6f790ce6306e258f83611163459963b2257f7b1c00292c18f3c2dd0",
+  "run32_executed_source_sha256": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+  "native_binary_sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+  "native_harness_source_sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+  "unit_fixtures": {
+    "passed": 7,
+    "suite": "bench.hetero.20261009-35-cpu-worker-affinity.test_cpu_affinity_sweep"
+  },
+  "planned_counts": {
+    "default_reference_gates": 2,
+    "runnable_pool_cases": 126,
+    "strict_pcore_overflow_not_run": 18,
+    "total_runnable": 128,
+    "plan_entries": 146
+  },
+  "candidate_counts": {
+    "all": 15,
+    "auto": 15,
+    "p-cores": 5
+  },
+  "data_root_exists": false,
+  "output_root_exists": false,
+  "input_preparation_authorized": false,
+  "execution_authorized": false,
+  "native_kernel_or_affinity_run": false,
+  "limitations": [
+    "CPU IDs remain numeric candidates; no P/E/LP label claim",
+    "worker pin success is not exposed by current ExpertPool and remains unavailable",
+    "rows 6/10 inputs and defaults have not been created or executed",
+    "no throughput/model claim"
+  ],
+  "different_cwd_plan_cli_exit": 0,
+  "static_preflight_pending": false,
+  "run32_restore_receipt": "bench\\hetero\\20261009-35-cpu-worker-affinity\\run32-restore-receipt.json",
+  "run32_restore_receipt_sha256": "8990701d65b0235a2f2348898e68fb2abe60fcd689a0cd904739ad106ce7d848",
+  "static_preflight_path": "bench\\hetero\\20261009-35-cpu-worker-affinity\\static-preflight-02.json",
+  "static_preflight_sha256": "646316e856c6558f98384d84eb02dc048e46f7718ba3d70d006fd6fc53a043b8",
+  "static_preflight_status": "static_preflight_pass_no_kernel",
+  "static_preflight_binary_sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+  "static_preflight_blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+  "static_preflight_frozen_rows": [
+    1,
+    2,
+    4,
+    16
+  ],
+  "static_preflight_missing_rows_not_read": [
+    6,
+    10
+  ],
+  "data_root_exists_after_check": false,
+  "inputs_root_exists_after_check": false,
+  "output_root_exists_after_check": false
+}

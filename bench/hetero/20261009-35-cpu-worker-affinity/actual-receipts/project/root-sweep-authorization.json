@@ -1,0 +1,9 @@
+{
+  "authorized_utc": "2026-10-09T12:27:24.095751+00:00",
+  "scope": "Once:2 default gates plus126 runnable pool cases;18 overflow NOT RUN;warm1/formal5;no model/GPU",
+  "runner_sha256": "d58d49968636939518459b7cd6e9be055b4fa9cc02fcc19b071713a820e9e431",
+  "contract_sha256": "c84552a64213df9cc0d3a4a68c189fc90eb76934f61d31c4019031aea1724a78",
+  "root_fixture_count": 8,
+  "root_inputs_recipe_verified": true,
+  "whole_model_cpu_gain_accepted": false
+}

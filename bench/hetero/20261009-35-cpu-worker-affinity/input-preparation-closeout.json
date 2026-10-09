@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "rows_6_10_prepared_and_readback_verified",
+  "run_id": "20261009-35-cpu-worker-affinity",
+  "closed_utc": "2026-10-09T12:24:17.144207+00:00",
+  "runner_current_sha256": "d58d49968636939518459b7cd6e9be055b4fa9cc02fcc19b071713a820e9e431",
+  "test_sha256": "90f0a12c3d5e66163eb0c3dae0b69af40e919596836468a2043a9d255bf7dc86",
+  "contract_sha256": "933f882f2784fb492c977c24e97f43ab662e44ed1622bac8e307f2671a5f6b92",
+  "plan_sha256": "cfc8becf71d14ee9ea3e2b9e092cbac8b4a8901fdfa11a7aff02cd98f72c3d91",
+  "preparation_receipt_sha256": "0561f7d8e198839bc4c81693ac5bf8d5ed4234650afc84352ceb3cf58cf30df1",
+  "readback_verification_sha256": "277203170f1a36b88ed3d8a3773a4db8d003372c2678530bc96ae2fac269543a",
+  "input_hashes": {
+    "6": "399013518c8e91a0001d196a2f50ae8d1bf2fdc5cffba1d15ccee5dee4983932",
+    "10": "bb5f68678399b69dbcc104073b1d78d95791734764354dd249e3029b4bb7f893"
+  },
+  "sizes": {
+    "6": 61440,
+    "10": 102400
+  },
+  "roots": {
+    "data_root_exists": true,
+    "inputs_root_exists": true,
+    "outputs_root_exists": false
+  },
+  "execution_authorized": false,
+  "preparation_authorized_now": false,
+  "no_cpp_kernel_or_affinity": true,
+  "incident_receipt_sha256": "63ce4b3e0f157ff0b591318ce0edc8ad80b3296f98ef5eb5d3a31f5f299bc32a",
+  "source_provenance_sha256": "80338a033e72574d13af00279763ac8974471b06894332a7c6ef9f0fe845004e"
+}

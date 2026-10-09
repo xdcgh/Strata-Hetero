@@ -1,0 +1,19 @@
+{
+  "schema": "strata-hetero-native-cpu-run-v1",
+  "created_utc": "2026-10-09T12:27:51Z",
+  "status": "success",
+  "source": {"strata_head": "9eb9960ec750b0db97634ea0dfafaed48b015a2a", "ggml_pin": "3cf03257f219afbe7334045ff7c6a06ac68c627d", "native_harness_source_sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64", "sha256_header_sha256": "5bbdfb8733ec347de4c5ca990ce412cc1241854c5920f81a47ac331d32bc19d8", "harness_cmake_sha256": "cc4a4c59b9af0b1af902199bc99cb75f93396eb8ae2a4210d6103cbd0cc6c75a"},
+  "execution": {"mode": "actual_native_quantized_cpu_expert_pool", "native_kernel_called": true, "engine_pool_called": true, "threads": 5, "gpu_executed": false, "model_cli_executed": false},
+  "parameters": {"rows": 2, "hidden": 2560, "intermediate": 640, "gu_type": 12, "down_type": 7, "warmup": 1, "repeat": 5},
+  "reference_controls": {"STRATA_KQ256": "0 (process-local)", "STRATA_NO_Q8K_AVX2": "unset (model-default Q8_K activation path, process-local)", "q8k_avx2_available": true, "q8k_avx2_selected": true, "activation_quantizer": "q8k_quant_avx2", "down_activation_quantizer": "ggml Q8_1 from_float", "STRATA_IQ_MT_MIN": "not used by Q4_K/Q5_1 path"},
+  "pool": {"requested_background_workers": 4, "actual_background_workers": 4, "host_works": true, "effective_compute_participants": 5, "pin": true, "affinity": "all", "topology_scope": "planned_only", "planned_topology_affinity": "all", "planned_host_cpu_id": 0, "host_pin_applied": true, "planned_worker_cpu_ids": [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15], "unpinned_worker_overflow": 0, "planned_pinned_worker_ids": [1, 10, 11, 12], "worker_pin_success_available": false, "topology_basis": "upstream OS class heuristic; P/E labels are not independently verified"},
+  "pool_timing_ns": {"activation_quant": [4500, 1200, 1100, 1200, 1200], "pool_call": [86800, 68800, 66300, 65300, 64500], "gate_up": [47800, 34700, 32700, 32500, 32300], "hidden_quant": [1100, 400, 500, 500, 400], "down": [37700, 33500, 33000, 32300, 31700], "wait_park": [0, 0, 0, 0, 0], "drain": [86800, 68600, 66200, 65300, 64500], "repark": [0, 0, 0, 0, 0]},
+  "pool_timing_scope": "gate_up/hidden_quant/down are included in pool_call; wait_park/drain/repark are pool host phase counters",
+  "layout": {"gu_row_bytes": 1440, "down_row_bytes": 480, "up_offset_bytes": 921600, "down_offset_bytes": 1843200, "blob_bytes": 3072000, "activation_bytes": 2920, "hidden_quantized_bytes": 720},
+  "blob": {"path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin", "bytes": 3072000, "sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f"},
+  "input": {"path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-002.f32", "bytes": 20480, "format": "token-major raw little-endian float32", "sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19"},
+  "timing_scope": "formal total includes native input quantization plus ExpertPool gate/up, hidden quantization and down; pool_call is separately timed; file I/O, allocation, SHA-256, and output serialization are excluded",
+  "timings_ns": {"warmup_iterations": 1, "formal_iterations": [91300, 70000, 67400, 66500, 65700], "min": 65700, "median": 67400},
+  "output": {"path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\outputs\\pool-all-w04-r002\\output.f32", "bytes": 20480, "format": "token-major raw little-endian float32", "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8"},
+  "claim_limit": "standalone native expert CPU-pool microbenchmark; not model throughput or GPU performance"
+}

@@ -1,0 +1,7 @@
+rows,best_pool_affinity,best_pool_workers,best_pool_median_ns,best_pinned_affinity,best_pinned_workers,best_pinned_median_ns,same_workers_none_median_ns,best_none_workers,best_none_median_ns,default_gate_median_ns,worker_pin_success_available
+1,none,16,21400,all,10,23200,26800,16,21400,,False
+2,auto,16,40200,auto,16,40200,43200,16,43200,,False
+4,none,16,67200,auto,16,74200,67200,16,67200,,False
+6,none,16,97500,all,16,120700,97500,16,97500,685100,False
+10,none,16,165000,all,10,201100,355500,16,165000,1175600,False
+16,none,16,263900,all,16,267800,263900,16,263900,,False

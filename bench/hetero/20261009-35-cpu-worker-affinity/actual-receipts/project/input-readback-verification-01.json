@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "status": "input_readback_pass",
+  "run_id": "20261009-35-cpu-worker-affinity",
+  "verified_utc": "2026-10-09T12:19:39.637733+00:00",
+  "verification_command_scope": "readback only; no prepare call, no C++ binary, no kernel, no affinity change",
+  "preparation_receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs-preparation.json",
+  "preparation_receipt_sha256": "0561f7d8e198839bc4c81693ac5bf8d5ed4234650afc84352ceb3cf58cf30df1",
+  "root_authorization_path": "bench\\hetero\\20261009-35-cpu-worker-affinity\\root-input-preparation-authorization.json",
+  "root_authorization_sha256": "96378b66d30649f88158f9ec5c03c57b05c425994015dde3656e8353c92ae79d",
+  "authorized_runner_sha256": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843",
+  "runner_sha256_at_prepare_time": "2a0b881db3f371c8088e56ee96476fa4dcdaafd7cbeac50f6b04db62eba46d6b",
+  "current_runner_sha256": "d58d49968636939518459b7cd6e9be055b4fa9cc02fcc19b071713a820e9e431",
+  "contract_sha256": "35411fa33b7a36e819fa0813724c1dcb8d46da6cfcf2ef2f0755bbf0a1b7d2b6",
+  "preparation_gate_recorded_in_receipt": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 117370781696,
+    "physical_used_bytes": 19592466432,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 23351398400,
+    "commit_available_bytes": 122201784320,
+    "commit_total_pages": 5701025,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 122201784320,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "readback_gate_sample": {
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 117276143616,
+      "physical_used_bytes": 19687104512,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 23445102592,
+      "commit_available_bytes": 122108080128,
+      "commit_total_pages": 5723902,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 122108080128,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "errors": [],
+    "phys_commit_ok": true
+  },
+  "inputs": [
+    {
+      "rows": 6,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs\\input-006.f32",
+      "bytes": 61440,
+      "sha256": "399013518c8e91a0001d196a2f50ae8d1bf2fdc5cffba1d15ccee5dee4983932",
+      "shape": [
+        6,
+        2560
+      ],
+      "dtype": "<f4",
+      "finite": true,
+      "seed": 48,
+      "exact_recipe_match": true,
+      "stat_before": {
+        "size_bytes": 61440,
+        "mtime_ns": 1791548312262255000,
+        "ctime_ns": 1791548312262255000,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1407374883622037
+        }
+      },
+      "stat_after": {
+        "size_bytes": 61440,
+        "mtime_ns": 1791548312262255000,
+        "ctime_ns": 1791548312262255000,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1407374883622037
+        }
+      }
+    },
+    {
+      "rows": 10,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs\\input-010.f32",
+      "bytes": 102400,
+      "sha256": "bb5f68678399b69dbcc104073b1d78d95791734764354dd249e3029b4bb7f893",
+      "shape": [
+        10,
+        2560
+      ],
+      "dtype": "<f4",
+      "finite": true,
+      "seed": 52,
+      "exact_recipe_match": true,
+      "stat_before": {
+        "size_bytes": 102400,
+        "mtime_ns": 1791548312264121400,
+        "ctime_ns": 1791548312264121400,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1407374883622038
+        }
+      },
+      "stat_after": {
+        "size_bytes": 102400,
+        "mtime_ns": 1791548312264121400,
+        "ctime_ns": 1791548312264121400,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1407374883622038
+        }
+      }
+    }
+  ],
+  "actual_test_invocation": "The first attempt occurred inside test_cpu_affinity_sweep; its prepare test called sweep.main with the root-confirmed prepare arguments against the live authorized contract. It created only these exact seeded input files, then the test failed because it expected SystemExit. This incident is preserved separately.",
+  "output_root_exists": false,
+  "no_kernel_or_cpp_child_started": true
+}

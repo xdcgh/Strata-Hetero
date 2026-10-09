@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "source_contract_and_authorization_preserved",
+  "captured_utc": "2026-10-09T12:23:36.652432+00:00",
+  "root_authorization_path": "bench\\hetero\\20261009-35-cpu-worker-affinity\\root-input-preparation-authorization.json",
+  "root_authorization_sha256": "96378b66d30649f88158f9ec5c03c57b05c425994015dde3656e8353c92ae79d",
+  "authorized_runner_path": "bench\\hetero\\20261009-35-cpu-worker-affinity\\input-preparation-authorized-runner.py",
+  "authorized_runner_sha256": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843",
+  "runner_at_successful_prepare_invocation": "bench\\hetero\\20261009-35-cpu-worker-affinity\\input-preparation-executed-runner.py",
+  "runner_at_successful_prepare_sha256": "2a0b881db3f371c8088e56ee96476fa4dcdaafd7cbeac50f6b04db62eba46d6b",
+  "contract_at_successful_prepare_path": "bench\\hetero\\20261009-35-cpu-worker-affinity\\input-preparation-executed-contract.json",
+  "contract_at_successful_prepare_sha256": "35411fa33b7a36e819fa0813724c1dcb8d46da6cfcf2ef2f0755bbf0a1b7d2b6",
+  "source_difference": "Before the successful call, disk reserve lookup was corrected to use nested resource_gate.minimum_free_disk_bytes after the first invocation failed before writes. Input RNG, path and output-byte logic matched the authorized source; the authorized and executed source hashes are both preserved.",
+  "actual_invocation_context": "The successful prepare_inputs call occurred from a unit-test invocation of sweep.main using the root-confirmed prepare arguments and live authorized contract; the fixture leak and failed test assertion are documented in input-preparation-test-incident-01.json.",
+  "kernel_started": false,
+  "affinity_mutated": false,
+  "execution_authorized": false
+}

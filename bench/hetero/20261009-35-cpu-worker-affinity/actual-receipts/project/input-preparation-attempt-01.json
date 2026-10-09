@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "failed_before_any_e_write",
+  "failed_utc": "2026-10-09T12:18:14.153921+00:00",
+  "command": [
+    "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "-B",
+    "bench\\hetero\\20261009-35-cpu-worker-affinity\\run_cpu_affinity_sweep.py",
+    "--contract",
+    "bench\\hetero\\20261009-35-cpu-worker-affinity\\sweep-execution-contract-v2.json",
+    "--prepare",
+    "--root-prepare-confirmed"
+  ],
+  "runner_sha256": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843",
+  "contract_sha256": "35411fa33b7a36e819fa0813724c1dcb8d46da6cfcf2ef2f0755bbf0a1b7d2b6",
+  "authorization_expected_runner_sha256": "30e59ba6f6483c31b91aecbf99f1e374edc800dced2794cae394b412f6120843",
+  "observed_error": "KeyError: minimum_free_disk_bytes",
+  "exit_code": 2,
+  "failure_stage": "fresh 12/4 GiB passed; E free-space reserve key lookup failed before mkdir/file creation",
+  "post_failure_paths": {
+    "data_root": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity",
+      "exists": false
+    },
+    "inputs_root": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs",
+      "exists": false
+    },
+    "preparation_receipt": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs-preparation.json",
+      "exists": false
+    },
+    "output_root": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\outputs",
+      "exists": false
+    }
+  },
+  "post_failure_resource_sample": {
+    "captured_at_utc": "2026-10-09T12:18:14.154203+00:00",
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 117373579264,
+      "physical_used_bytes": 19589668864,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 22841044992,
+      "commit_available_bytes": 122712137728,
+      "commit_total_pages": 5576427,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 122712137728,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "errors": []
+  }
+}

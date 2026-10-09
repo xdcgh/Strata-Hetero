@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "status": "offline_case_timing_summary",
+  "run_id": "20261009-35-cpu-worker-affinity",
+  "run_summary_sha256": "12b62d3ee696e6ed203b0128e7e05f0de6b4f89aa50851ea4b8daea9144807a8",
+  "aggregate_scope": "Native harness timings_ns.median from five formal iterations; descriptive selection only; no performance-acceptance threshold.",
+  "overall_including_quantization": "timings_ns covers input activation quantization plus CPU FFN operation. pool_timing_ns.pool_call is nested/supporting detail.",
+  "worker_pin_success": "unknown/unavailable; do not infer from requested affinity, host_pin_applied, or successful output.",
+  "role_labels": "No P/E/LP claims; candidate IDs remain numeric OS observations.",
+  "rows": [
+    {
+      "rows": 1,
+      "formal_repeats": 5,
+      "best_pool_case": {
+        "affinity": "none",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 21400,
+        "formal_ns": [
+          7374900,
+          24900,
+          21200,
+          21400,
+          19100
+        ],
+        "output_sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+        "receipt_sha256": "444b1667ebd0e5272a24b29729c4023fe5cc2dca35198f334965b6a3a4135613"
+      },
+      "best_pinned_case": {
+        "affinity": "all",
+        "requested_background_workers": 10,
+        "effective_participants": 11,
+        "median_ns": 23200,
+        "formal_ns": [
+          27600,
+          25600,
+          23200,
+          19800,
+          19700
+        ],
+        "host_pin_applied": true,
+        "worker_pin_success_available": false,
+        "receipt_sha256": "4a69ec029e62563721b00873e6f5305d12aacf9278fba64b6c3a55424a156039"
+      },
+      "best_none_case": {
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 21400,
+        "formal_ns": [
+          7374900,
+          24900,
+          21200,
+          21400,
+          19100
+        ],
+        "receipt_sha256": "444b1667ebd0e5272a24b29729c4023fe5cc2dca35198f334965b6a3a4135613"
+      },
+      "same_worker_none_comparison_for_best_pinned": {
+        "requested_background_workers": 10,
+        "median_ns": 26800,
+        "formal_ns": [
+          28600,
+          26800,
+          26000,
+          28400,
+          24900
+        ],
+        "receipt_sha256": "8a79e6169be1dbaaa651f38661405b6133e9d56a80ef6482ba1f1659ad9583a6"
+      },
+      "single_thread_default_gate": null,
+      "frozen_native_reference_sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "timing_limit": "descriptive isolated native expert microcase medians only; no model/throughput acceptance"
+    },
+    {
+      "rows": 2,
+      "formal_repeats": 5,
+      "best_pool_case": {
+        "affinity": "auto",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 40200,
+        "formal_ns": [
+          42600,
+          40200,
+          39700,
+          40100,
+          40400
+        ],
+        "output_sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+        "receipt_sha256": "242e009374461221806aa5942b66f3f170499f59bd0f73a6df14d3d2adc25f99"
+      },
+      "best_pinned_case": {
+        "affinity": "auto",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 40200,
+        "formal_ns": [
+          42600,
+          40200,
+          39700,
+          40100,
+          40400
+        ],
+        "host_pin_applied": true,
+        "worker_pin_success_available": false,
+        "receipt_sha256": "242e009374461221806aa5942b66f3f170499f59bd0f73a6df14d3d2adc25f99"
+      },
+      "best_none_case": {
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 43200,
+        "formal_ns": [
+          20111900,
+          3248300,
+          43200,
+          36600,
+          34700
+        ],
+        "receipt_sha256": "8106938e1e11545823934bfdaf824ac3c4e5923ac87d4145a8cfa993307cc824"
+      },
+      "same_worker_none_comparison_for_best_pinned": {
+        "requested_background_workers": 16,
+        "median_ns": 43200,
+        "formal_ns": [
+          20111900,
+          3248300,
+          43200,
+          36600,
+          34700
+        ],
+        "receipt_sha256": "8106938e1e11545823934bfdaf824ac3c4e5923ac87d4145a8cfa993307cc824"
+      },
+      "single_thread_default_gate": null,
+      "frozen_native_reference_sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "timing_limit": "descriptive isolated native expert microcase medians only; no model/throughput acceptance"
+    },
+    {
+      "rows": 4,
+      "formal_repeats": 5,
+      "best_pool_case": {
+        "affinity": "none",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 67200,
+        "formal_ns": [
+          15791900,
+          67500,
+          67200,
+          64500,
+          63900
+        ],
+        "output_sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+        "receipt_sha256": "50c81b05ec0e1dda5d2af263f4b0c227aef1d1d0b598c476f3937c3242269695"
+      },
+      "best_pinned_case": {
+        "affinity": "auto",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 74200,
+        "formal_ns": [
+          11988300,
+          91600,
+          71700,
+          70900,
+          74200
+        ],
+        "host_pin_applied": true,
+        "worker_pin_success_available": false,
+        "receipt_sha256": "132850046a0eb9f1a8b45c9ec4b2a1d6c11504260067358057687f81c3d689a6"
+      },
+      "best_none_case": {
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 67200,
+        "formal_ns": [
+          15791900,
+          67500,
+          67200,
+          64500,
+          63900
+        ],
+        "receipt_sha256": "50c81b05ec0e1dda5d2af263f4b0c227aef1d1d0b598c476f3937c3242269695"
+      },
+      "same_worker_none_comparison_for_best_pinned": {
+        "requested_background_workers": 16,
+        "median_ns": 67200,
+        "formal_ns": [
+          15791900,
+          67500,
+          67200,
+          64500,
+          63900
+        ],
+        "receipt_sha256": "50c81b05ec0e1dda5d2af263f4b0c227aef1d1d0b598c476f3937c3242269695"
+      },
+      "single_thread_default_gate": null,
+      "frozen_native_reference_sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "timing_limit": "descriptive isolated native expert microcase medians only; no model/throughput acceptance"
+    },
+    {
+      "rows": 6,
+      "formal_repeats": 5,
+      "best_pool_case": {
+        "affinity": "none",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 97500,
+        "formal_ns": [
+          109500,
+          98600,
+          97500,
+          96400,
+          95400
+        ],
+        "output_sha256": "aeb9b0e4b9c425cf57d8714b126d6eae1aacbca66699b8c83b410dd101233cfc",
+        "receipt_sha256": "11a555e78afd24d56c1b63ebec90b83de3844eb83778a6ba967928a858fbe8c2"
+      },
+      "best_pinned_case": {
+        "affinity": "all",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 120700,
+        "formal_ns": [
+          5646100,
+          143200,
+          120700,
+          110400,
+          109600
+        ],
+        "host_pin_applied": true,
+        "worker_pin_success_available": false,
+        "receipt_sha256": "9d5f6b5df9aad6d50649398f6bfeac214efc66744d30a7c1d2cfd01ff23579c4"
+      },
+      "best_none_case": {
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 97500,
+        "formal_ns": [
+          109500,
+          98600,
+          97500,
+          96400,
+          95400
+        ],
+        "receipt_sha256": "11a555e78afd24d56c1b63ebec90b83de3844eb83778a6ba967928a858fbe8c2"
+      },
+      "same_worker_none_comparison_for_best_pinned": {
+        "requested_background_workers": 16,
+        "median_ns": 97500,
+        "formal_ns": [
+          109500,
+          98600,
+          97500,
+          96400,
+          95400
+        ],
+        "receipt_sha256": "11a555e78afd24d56c1b63ebec90b83de3844eb83778a6ba967928a858fbe8c2"
+      },
+      "single_thread_default_gate": {
+        "median_ns": 685100,
+        "formal_ns": [
+          709300,
+          707600,
+          674400,
+          672800,
+          685100
+        ],
+        "output_sha256": "aeb9b0e4b9c425cf57d8714b126d6eae1aacbca66699b8c83b410dd101233cfc",
+        "receipt_sha256": "c06017664b3959bf7ad6ed34f52ddd3e25e86c1354a33d657b8d16a07112c5c6"
+      },
+      "frozen_native_reference_sha256": null,
+      "timing_limit": "descriptive isolated native expert microcase medians only; no model/throughput acceptance"
+    },
+    {
+      "rows": 10,
+      "formal_repeats": 5,
+      "best_pool_case": {
+        "affinity": "none",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 165000,
+        "formal_ns": [
+          15668000,
+          167400,
+          165000,
+          152000,
+          151600
+        ],
+        "output_sha256": "bc4fe766c3e58d51b8423c801267278aefcf8e2991eec8ee90dc18a498b590ce",
+        "receipt_sha256": "d78eb6c55eec8b1c31ea3b1f012842ae931dcf3d243ec1a8412fd3a7c7364a8b"
+      },
+      "best_pinned_case": {
+        "affinity": "all",
+        "requested_background_workers": 10,
+        "effective_participants": 11,
+        "median_ns": 201100,
+        "formal_ns": [
+          207100,
+          200000,
+          196800,
+          203900,
+          201100
+        ],
+        "host_pin_applied": true,
+        "worker_pin_success_available": false,
+        "receipt_sha256": "0ce9941adaa0d1068e13f89366cff74f67e66e4ed2359adfb2fa85e61cb1bcaa"
+      },
+      "best_none_case": {
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 165000,
+        "formal_ns": [
+          15668000,
+          167400,
+          165000,
+          152000,
+          151600
+        ],
+        "receipt_sha256": "d78eb6c55eec8b1c31ea3b1f012842ae931dcf3d243ec1a8412fd3a7c7364a8b"
+      },
+      "same_worker_none_comparison_for_best_pinned": {
+        "requested_background_workers": 10,
+        "median_ns": 355500,
+        "formal_ns": [
+          418200,
+          343300,
+          355500,
+          438100,
+          199200
+        ],
+        "receipt_sha256": "d427b92ec969e1f405d41efccc7441e593b1eafa7100309de75204d3317186f3"
+      },
+      "single_thread_default_gate": {
+        "median_ns": 1175600,
+        "formal_ns": [
+          1173100,
+          1175600,
+          1176200,
+          1169700,
+          1178500
+        ],
+        "output_sha256": "bc4fe766c3e58d51b8423c801267278aefcf8e2991eec8ee90dc18a498b590ce",
+        "receipt_sha256": "c150ef166aaa6c54619d404c082022c6cf5b5c3e3b7456aaf9f616cd17c269c8"
+      },
+      "frozen_native_reference_sha256": null,
+      "timing_limit": "descriptive isolated native expert microcase medians only; no model/throughput acceptance"
+    },
+    {
+      "rows": 16,
+      "formal_repeats": 5,
+      "best_pool_case": {
+        "affinity": "none",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 263900,
+        "formal_ns": [
+          341300,
+          263900,
+          252600,
+          256000,
+          270100
+        ],
+        "output_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+        "receipt_sha256": "942fae888c831d51fcce6ab1121ad799380f4091e2f586b83e1b78c1a4697f03"
+      },
+      "best_pinned_case": {
+        "affinity": "all",
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 267800,
+        "formal_ns": [
+          20355200,
+          267800,
+          268200,
+          262400,
+          264200
+        ],
+        "host_pin_applied": true,
+        "worker_pin_success_available": false,
+        "receipt_sha256": "06ae9708669a50dbbf13f2fb371cfe7adc7e6e19664edb0a1082e40a7c935ec5"
+      },
+      "best_none_case": {
+        "requested_background_workers": 16,
+        "effective_participants": 17,
+        "median_ns": 263900,
+        "formal_ns": [
+          341300,
+          263900,
+          252600,
+          256000,
+          270100
+        ],
+        "receipt_sha256": "942fae888c831d51fcce6ab1121ad799380f4091e2f586b83e1b78c1a4697f03"
+      },
+      "same_worker_none_comparison_for_best_pinned": {
+        "requested_background_workers": 16,
+        "median_ns": 263900,
+        "formal_ns": [
+          341300,
+          263900,
+          252600,
+          256000,
+          270100
+        ],
+        "receipt_sha256": "942fae888c831d51fcce6ab1121ad799380f4091e2f586b83e1b78c1a4697f03"
+      },
+      "single_thread_default_gate": null,
+      "frozen_native_reference_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "timing_limit": "descriptive isolated native expert microcase medians only; no model/throughput acceptance"
+    }
+  ]
+}

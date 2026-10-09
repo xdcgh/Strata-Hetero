@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "source_sha256": {
+    "ggml/src/ggml-cpu/ops.cpp": "e5e7edb89540af66fc9cb4d245fce7aaa411d08876a032520114223dff93b42c",
+    "ggml/src/ggml-cpu/vec.h": "8817801355b20079de39fd4c67c7453ca2033cdb69fc5bd1f71bb66f12f57318",
+    "ggml/src/ggml-cpu/vec.cpp": "a946fee202dfe4528453865a6402d13a004e31ea73e88c3586793bbcc05994f7",
+    "ggml/src/ggml-cpu/ggml-cpu.c": "2f0a37f6c00c230a783cf078ee0c99f248095c501dff56b8ee47fb356dae3538",
+    "ggml/src/ggml-cpu/ggml-cpu-impl.h": "5240f35bd176728c8464a5c86f864627da6b9a85ebcf2712dbdee8792914bf61",
+    "ggml/src/ggml-cpu/simd-mappings.h": "5b22a5f41350fe6321462d19c8b40328bf6fb96e50e56f55abef18f09d94d649",
+    "ggml/src/ggml-cpu/llamafile/sgemm.cpp": "c624fd44dbdf86797823cfabce16a3a7dda519c9f0558e6516ec987cafbba259",
+    "ggml/src/ggml-impl.h": "aed6398b8efd0bc1167ced34037abe14620b54374d067333f50952cd65ada2f2",
+    "ggml/src/ggml-cpu/CMakeLists.txt": "43350e8170e9e6d3f7d346dc8f53a5743d7ab04b84a6e75d243841880d6ff301",
+    "tools/mtmd/models/qwen3vl.cpp": "ae7a9472feb4322abdf20621237e3e7448d207bc0427c315d869300df63ab1b4",
+    "tools/mtmd/clip.cpp": "13f10801842caed2e77018da8546a31e4fd248a82a56761039957cfe6e43fd2d"
+  },
+  "source_root": "E:/Strata-Hetero-data/source/llama-3cf0325",
+  "native_build_compile_commands_sha256": "0bdc36605bdc4e11db8616259c233105c763b2b43fae31c3a4e752671c39b709",
+  "actual_build_commands": [
+    {
+      "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+      "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -std:c11 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\ggml-cpu.c.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.c",
+      "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/ggml-cpu.c",
+      "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.obj"
+    },
+    {
+      "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+      "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\vec.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\vec.cpp",
+      "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/vec.cpp",
+      "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.obj"
+    },
+    {
+      "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+      "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\ops.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ops.cpp",
+      "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/ops.cpp",
+      "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.obj"
+    },
+    {
+      "directory": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39",
+      "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DGGML_AVX2 -DGGML_BMI2 -DGGML_F16C -DGGML_FMA -DGGML_SCHED_MAX_COPIES=4 -DGGML_USE_CPU_REPACK -DGGML_USE_LLAMAFILE -D_CRT_SECURE_NO_WARNINGS -D_XOPEN_SOURCE=600 -D__BMI2__ -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\.. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\. -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu -IE:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\..\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MT /utf-8 /bigobj /arch:AVX2 /wd4005 /wd4244 /wd4267 /wd4305 /wd4566 /wd4996 /wd4702 /Follama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu\\llamafile\\sgemm.cpp.obj /Fdllama\\ggml\\src\\CMakeFiles\\ggml-cpu.dir\\ggml-cpu.pdb /FS -c E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\llamafile\\sgemm.cpp",
+      "file": "E:/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cpu/llamafile/sgemm.cpp",
+      "output": "E:/Strata-Hetero-data/build/vision-stage-taps-cpu-20261009-39/llama/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/llamafile/sgemm.cpp.obj"
+    }
+  ],
+  "pointers": [
+    {
+      "file": "tools/mtmd/models/qwen3vl.cpp",
+      "start": 70,
+      "end": 82,
+      "purpose": "ln1 uses preceding residual/block output; combined QKV linear+bias follow",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "tools/mtmd/models/qwen3vl.cpp",
+      "start": 124,
+      "end": 141,
+      "purpose": "ln2/up/GELU/down plus second residual produce block output",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "start": 591,
+      "end": 613,
+      "purpose": "normal norm -> F32 affine multiply -> F32 affine add",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/ops.cpp",
+      "start": 3827,
+      "end": 3870,
+      "purpose": "contiguous norm F32 mean/variance/epsilon/sqrtf/reciprocal/scale order",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/vec.h",
+      "start": 15,
+      "end": 15,
+      "purpose": "ggml_float is double",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/vec.h",
+      "start": 1495,
+      "end": 1505,
+      "purpose": "sequential double sum -> F32 sum",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/vec.cpp",
+      "start": 455,
+      "end": 529,
+      "purpose": "AVX2 F32 8-lane variance reduction plus double group accumulation -> double mean variance",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/ggml-cpu-impl.h",
+      "start": 45,
+      "end": 54,
+      "purpose": "MSVC AVX2 implies FMA/F16C feature macros",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/vec.h",
+      "start": 703,
+      "end": 758,
+      "purpose": "F32 centered-value scaling",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/CMakeLists.txt",
+      "start": 62,
+      "end": 68,
+      "purpose": "Accelerate compiler macro is Apple-only; cache option alone does not select Windows kernel",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "start": 395,
+      "end": 400,
+      "purpose": "BF16 type selects BF16 activation conversion/dot type",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "start": 1255,
+      "end": 1408,
+      "purpose": "native matmul optional pre-conversion SGEMM -> activation conversion -> optional post-conversion SGEMM -> fallback",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "start": 3575,
+      "end": 3580,
+      "purpose": "F32 activation row scalar BF16 conversion",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-impl.h",
+      "start": 623,
+      "end": 638,
+      "purpose": "BF16 nearest-even conversion/quiet NaN",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/llamafile/sgemm.cpp",
+      "start": 3893,
+      "end": 3919,
+      "purpose": "AVX2 BF16-input tinyBLAS dispatch",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/llamafile/sgemm.cpp",
+      "start": 141,
+      "end": 143,
+      "purpose": "AVX2 FMA update in SGEMM",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/llamafile/sgemm.cpp",
+      "start": 252,
+      "end": 272,
+      "purpose": "F32 lane-reduction order in SGEMM",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/llamafile/sgemm.cpp",
+      "start": 347,
+      "end": 355,
+      "purpose": "BF16 values expand exactly to F32 before arithmetic",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/vec.cpp",
+      "start": 139,
+      "end": 260,
+      "purpose": "BF16 fallback F32 lane multiply/add/reduction, double scalar remainder, F32 store",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/vec.h",
+      "start": 46,
+      "end": 47,
+      "purpose": "CPU F16 GELU table path enabled",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/vec.h",
+      "start": 962,
+      "end": 1009,
+      "purpose": "tanh GELU and F32 input-tail/F16-index/F16-result order",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "start": 3886,
+      "end": 3893,
+      "purpose": "65,536-entry LUT from F16 input -> F32 GELU -> F16 rounded stored result",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "start": 616,
+      "end": 697,
+      "purpose": "up matmul/bias -> ungated GELU -> down matmul/bias",
+      "root_kind": "pinned_native_source"
+    },
+    {
+      "file": "tools/hetero_vision_qwen3vl.py",
+      "start": 482,
+      "end": 490,
+      "purpose": "current F32 norm graph algebra",
+      "root_kind": "workspace"
+    },
+    {
+      "file": "ggml/src/ggml-cpu/simd-mappings.h",
+      "start": 58,
+      "end": 65,
+      "purpose": "MSVC F16C conversion uses _mm_cvtps_ph immediate 0, nearest-even F16 rounding",
+      "root_kind": "pinned_native_source"
+    }
+  ],
+  "dtype_rounding_order": {
+    "mean": "sequential F64 sum of 1152 F32 values -> F32 sum -> F32 division by 1152",
+    "variance": "F32 x-mean -> F32 square -> group8 F32 reduction ((q4+q0)+(q6+q2))+((q5+q1)+(q7+q3)); sequential F64 group sum / F64(1152) -> F32",
+    "normalization": "F32 variance+epsilon -> F32 sqrtf -> F32 reciprocal -> F32 centered*scale -> F32 *weight -> F32 +bias",
+    "current_port": "F32 ReduceMean -> centered F32 -> F32 ReduceMean(centered squared) -> F32 centered/sqrt(var+eps) -> F32 affine; NumPy reduction order is only an algebra replay",
+    "gelu": "F32 tail branch; interior F32 input -> F16 nearest-even index -> precomputed F16 nearest-even source-tanh-GELU output -> exact F32 expansion"
+  },
+  "known_limits": [
+    "Native mean/variance/scale tensors were not captured; replay-calculated stats are labeled unobserved.",
+    "Actual OpenVINO ReduceMean/fusion order is not emulated; replay uses NumPy F32 reductions.",
+    "Linear runtime SGEMM-versus-dot/repack dispatch and FFN intermediates were not tapped; no cause inside block.0 is claimed.",
+    "No extra captures, native/helper/Core/device run, source math edit or threshold/reference change."
+  ],
+  "workspace_root": "C:/Users/DC/Documents/ChatGPT/Strata-Hetero"
+}

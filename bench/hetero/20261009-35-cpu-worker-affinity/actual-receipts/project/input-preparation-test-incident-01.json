@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "test_fixture_side_effect_preserved",
+  "recorded_utc": "2026-10-09T12:19:54.012350+00:00",
+  "test_command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B -m unittest bench.hetero.20261009-35-cpu-worker-affinity.test_cpu_affinity_sweep",
+  "test_exit_code": 1,
+  "suite_result": "7 passed, 1 failed: test_prepare_and_run_reject_without_contract_authorization expected SystemExit but called prepare against the live authorized contract",
+  "side_effect": "The test invoked sweep.main with --prepare --root-prepare-confirmed while input_preparation_authorized was true; it created only the two authorized seeded input files, then the test assertion failed.",
+  "runner_sha256_at_invocation": "2a0b881db3f371c8088e56ee96476fa4dcdaafd7cbeac50f6b04db62eba46d6b",
+  "root_authorization_sha256": "96378b66d30649f88158f9ec5c03c57b05c425994015dde3656e8353c92ae79d",
+  "contract_sha256_at_invocation": "35411fa33b7a36e819fa0813724c1dcb8d46da6cfcf2ef2f0755bbf0a1b7d2b6",
+  "preparation_receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs-preparation.json",
+  "preparation_receipt_sha256": "0561f7d8e198839bc4c81693ac5bf8d5ed4234650afc84352ceb3cf58cf30df1",
+  "readback_verification_sha256": "277203170f1a36b88ed3d8a3773a4db8d003372c2678530bc96ae2fac269543a",
+  "no_cpp_binary_or_kernel_started": true,
+  "no_affinity_mutation": true,
+  "output_root_exists": false
+}
