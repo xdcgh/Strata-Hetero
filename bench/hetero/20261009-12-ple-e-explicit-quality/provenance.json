@@ -1,0 +1,72 @@
+{
+  "prepared_utc": "2026-10-09T04:32:36.595277+00:00",
+  "run_id": "20261009-12-ple-e-explicit-quality",
+  "arm": "E",
+  "status": "prepared_not_launched",
+  "base_h4_run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+  "base_h4_config_sha256": "fa27117900dd16bae7f5af7ced1149448fce7296f035906a726ddbc9d59082ee",
+  "engine_cpp_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+  "engine_version": "0.1.40.4",
+  "engine_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+  "engine_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+  "server_python_checkout_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+  "server_file_sha256": "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+  "shared_controls": {
+    "model_id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "pack": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+    "native_model_shard_1": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "native_dense_gguf_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "resident_budget_gib": 20,
+    "max_context": 32768,
+    "kv": "int8",
+    "pool_workers": 10,
+    "spec": 4,
+    "prompt_cache": 0,
+    "adapt_swaps": 0,
+    "pcie_frac": 0,
+    "ple_io": "direct",
+    "expert_file_io": "buffered (STRATA_UNBUFFERED_LOAD=0)",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 1,
+      "seed": 42
+    },
+    "quality_prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+    "quality_prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+    "capture_actual_engine_token_ids": true
+  },
+  "placement_contrast": {
+    "flag": "--ple-gguf",
+    "path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "physical_device": "E: Micron 2450 NVMe",
+    "file_bytes": 49859583136,
+    "sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+    "copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json"
+  },
+  "comparison_contract": {
+    "native_dense_paths_same": true,
+    "native_dense_contains_original_F_shard_2_in_both_arms": true,
+    "prompt_set_same_as_H4": true,
+    "no_performance_or_model_quality_claim_yet": true,
+    "normalized_controls_sha256": "3c2f29ae46293c96537791071be18b04ae6ecdf0c740cf9e6f7c749c8a99751b",
+    "only_runtime_setting_difference": "--ple-gguf path; log path is run-specific",
+    "normalization": "Canonical complete config JSON; remove log only and replace the one --ple-gguf value with a fixed sentinel. All repeated dense paths and executable are retained."
+  },
+  "source_review": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\source-review.json",
+  "input_identity_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-12-ple-e-explicit-quality\\fresh-identities.json",
+  "launch_admission": {
+    "status": "not_run_prepared_only",
+    "must_be_fresh_at_launch": true
+  },
+  "process_receipt": null,
+  "acceptance_status": "prepared_not_launched",
+  "root_review": {
+    "reviewed_utc": "2026-10-09T04:39:55.874791+00:00",
+    "correction": "Initially prepared from upstream03; now uses the integrated H4 binary and identical frozen Python bridge bytes. Never launched."
+  }
+}

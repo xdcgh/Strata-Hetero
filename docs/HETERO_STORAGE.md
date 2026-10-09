@@ -22,7 +22,11 @@ The standalone profiler has a 30-second drain bound. On a hard timeout it retain
 
 The host fixture uses its own new 64 KiB file and deterministic fake readers/clocks. It checks real direct-read bytes at the last block, underlying EOF completion, alignment rejection, QD limits, submission-inclusive timing, bounded sampling/seed trace, read-tail exclusion, malformed/overflow arguments, failed/uncompleted records, no reader in validate-only mode and output preservation. Its temporary directory is checked by canonical identity and only its own files are removed. This is correctness evidence, not an E/F performance result.
 
-Actual physical-device sweeps are pending until the other chat's timed inference completes. The orchestration, workload placement planner, exact external PLE extraction, parallel model startup and application-level striping remain to be implemented and measured. Startup and active lookup are different workloads and cannot share one unqualified disk score.
+On 2026-10-09, `20261009-09-storage-profile` completed 96 read-only, unbuffered E/F arms: four block sizes, six queue depths and sequential/random modes, with three measured repetitions each. Both drives used the same verified 49,859,583,136-byte shard. Random 4 KiB QD1 measured 13,344.89 IOPS on E versus 5,558.96 on F; the best sampled 1 MiB sequential arms measured 3,441.16 MiB/s on E at QD4 versus 442.23 on F at QD64. The sampled repeat P95/P99 summary averages are not pooled latency percentiles. These are standalone device measurements, not model gains.
+
+The original F shard remains intact. `20261009-08-ple-copy/copy-receipt.json` records streaming source SHA and independent owned-part readback SHA, followed by final-file identity verification on E. The 49.86 GB GGUF also contains tensors beyond the 28.80 GB PLE table. An external copy requires explicit matching `--native-dense-gguf` arguments for the original four F shards: default dense-source discovery otherwise appends the distinct E path and the duplicate split number is rejected. The PLE row tensor is opened separately. The prepared F/E arms differ only in `--ple-gguf` placement and their run log paths.
+
+The workload placement planner, parallel model startup and application-level striping still require implementation and model measurements. Startup and active lookup are different workloads and cannot share one unqualified disk score.
 
 ## Placement experiments
 

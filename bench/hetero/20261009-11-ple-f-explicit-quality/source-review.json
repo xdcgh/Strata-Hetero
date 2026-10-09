@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T04:32:36.590988+00:00",
+  "status": "source_reviewed_configurable_prepared_not_launched",
+  "source_revision": "2d1b5fdff1cb2812a1708fede0a4d2c2b68483fd",
+  "scope": "Read-only source review for explicit --native-dense-gguf controls and external --ple-gguf placement. No runtime or model was launched.",
+  "findings": [
+    {
+      "file": "src/program/generate.cpp",
+      "lines": "1625,1664",
+      "finding": "--ple-gguf assigns one path; --native-dense-gguf appends each repeated argument to a vector."
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "lines": "2155-2161",
+      "finding": "--native expands the original split shards; without --ple-gguf, GgufModel finds per_layer_token_embd.weight and selects its containing shard."
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "lines": "2178-2190",
+      "finding": "Only when native_dense_gguf is empty, it defaults to native_shards and appends a non-strata-ple PLE path unless that exact path string is already present. An E-copy path differs from F shard 2, so defaulting would append it."
+    },
+    {
+      "file": "src/core/native_dense.cpp",
+      "lines": "89-100,113-123",
+      "finding": "NativeDense eligibility is a dense projection suffix allowlist plus optional blk.1.ple_key.weight; per_layer_token_embd.weight is not a native-dense tensor. served_names collects served names for pack skipping."
+    },
+    {
+      "file": "src/core/native_dense.cpp",
+      "lines": "268-274",
+      "finding": "A repeated eligible tensor name during native dense loading is an error, not silently deduplicated."
+    },
+    {
+      "file": "include/strata/artifact/gguf_reader.hpp",
+      "lines": "438-445",
+      "finding": "Duplicate tensor names inside one GGUF file are rejected on open."
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "lines": "2812-2815",
+      "finding": "The PLE table is opened separately from o.ple_gguf. With an explicit shared native-dense list, only this PLE table source path varies between arms."
+    },
+    {
+      "file": "src/core/native_dense.cpp",
+      "lines": "135-151",
+      "finding": "weight_bytes_for uses a seen tensor-name set and skips duplicates for sizing; its source comment explicitly says load refuses them."
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "lines": "3206-3208",
+      "finding": "The sizing helper is called before native dense loading, so its duplicate-name skip is not proof the later NativeDense::load accepts duplicate shards."
+    },
+    {
+      "file": "src/core/native_dense.cpp",
+      "lines": "190-228,268-274",
+      "finding": "Actual load validates unique split.no and rejects duplicate eligible tensor names; runtime does not silently de-duplicate repeated source paths."
+    },
+    {
+      "file": "src/core/native_dense.cpp",
+      "lines": "89-100",
+      "finding": "The PLE row table key per_layer_token_embd.weight is outside NativeDense eligible names; optional blk.1.ple_key.weight is a distinct tensor from the PLE table."
+    }
+  ],
+  "conclusion": {
+    "explicit_native_dense_list_required": true,
+    "shared_native_dense_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "only_intended_placement_contrast": "--ple-gguf original F shard 2 vs byte-identical E shard 2 copy",
+    "default_list_risk": "The default native-dense list starts as four F model shards. A distinct external E shard-2 path is appended unless metadata identifies a standalone strata-ple file; the E copy is byte-identical to the original Qwen shard-2 model file. The paired F2/E2 split.no values therefore collide in NativeDense::load. weight_bytes_for may skip duplicate names while sizing, but that does not prevent the later load error.",
+    "same_file_F_arm_note": "F shard 2 appears once in the shared native-dense list and as the F PLE reader path. per_layer_token_embd.weight is not NativeDense eligible, so the table itself is read by the separate PLE reader rather than uploaded a second time as a dense tensor.",
+    "duplicate_handling": "The parser appends repeated native-dense arguments. The exact-string std::find avoids only a path string already in the vector; no canonical-file identity de-dup is performed. Runtime load rejects duplicate split numbers and duplicate eligible tensor names. GGUF parsing rejects duplicate names within a single file."
+  },
+  "evidence": {
+    "engine_sha256": "7ca324c2792ef4deda57eb77f1b2b38c4c10ac77d0a890acbeb283dd559eeb2f",
+    "copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json",
+    "current_input_identities_revalidated_by_stat_fstat": true,
+    "payload_rehash_performed": false
+  },
+  "root_config_review": {
+    "initial_prepared_binary_sha256": "7ca324c2792ef4deda57eb77f1b2b38c4c10ac77d0a890acbeb283dd559eeb2f",
+    "approved_engine_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+    "approved_engine_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+    "cpp_source_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "identical_complete_config_controls_sha256": "3c2f29ae46293c96537791071be18b04ae6ecdf0c740cf9e6f7c749c8a99751b",
+    "status": "prepared_not_launched"
+  }
+}

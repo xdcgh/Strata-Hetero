@@ -6,6 +6,8 @@ from unittest import mock
 from pathlib import Path
 
 from hetero_compare_quality import (
+    _arg_map,
+    EvidenceError,
     _load_request_entries,
     _buffer_override_error,
     _prompt_identity_check,
@@ -52,6 +54,19 @@ def request_row(text, ids=(73, 2), finish="stop"):
 
 
 class CompareQualityFixtureTests(unittest.TestCase):
+    def test_repeatable_dense_sources_preserve_every_path_and_order(self):
+        parsed = _arg_map(["--native-dense-gguf", "shard1", "--native-dense-gguf", "shard2",
+                           "--native-dense-gguf", "shard3", "--native-dense-gguf", "shard4"])
+        self.assertEqual(parsed["--native-dense-gguf"], ["shard1", "shard2", "shard3", "shard4"])
+        other = _arg_map(["--native-dense-gguf", "different-first", "--native-dense-gguf", "shard4"])
+        self.assertNotEqual(parsed, other)
+
+    def test_repeated_scalar_or_missing_dense_path_is_incomplete(self):
+        with self.assertRaises(EvidenceError):
+            _arg_map(["--resident-budget-gib", "20", "--resident-budget-gib", "40"])
+        with self.assertRaises(EvidenceError):
+            _arg_map(["--native-dense-gguf", "--ple-io", "direct"])
+
     @staticmethod
     def _write_launch_admission(root: Path, receipt_name="admission-02.json"):
         import hashlib

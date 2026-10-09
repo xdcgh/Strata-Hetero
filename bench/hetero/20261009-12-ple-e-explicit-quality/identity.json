@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "source": {
+    "sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c"
+  },
+  "config": {
+    "sha256": "bb50829589597d9d994ccd111f197559dd5347fe53eeca006751f54b634ee972",
+    "scope": "quality-ple-placement",
+    "prompt_cache": 0,
+    "deterministic_placement": true,
+    "resident_budget_gib": 20,
+    "expert_file_io": "explicit buffered",
+    "capture_actual_engine_token_ids": true,
+    "native_dense_gguf_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "ple_gguf_path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "only_runtime_difference": "--ple-gguf path, excluding run-specific log path"
+  },
+  "model": {
+    "id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "native_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "integrity_manifest": "../20261008-00-admission/model-integrity-02.json",
+    "integrity_status": "prior full-SHA receipts retained; current stat/fstat identities captured in fresh-identities.json and must be revalidated before launch",
+    "historical_manifest": "../20261006-00-inventory/historical-manifest.json"
+  },
+  "engine": {
+    "version": "0.1.40.4",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+    "sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494"
+  },
+  "server_python": {
+    "checkout_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "server_file_sha256": "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+    "quality_capture_opt_in": true,
+    "scope": "same reviewed Python bridge in all arms; C++ inputs identified separately"
+  },
+  "acceptance_status": "prepared_not_launched"
+}

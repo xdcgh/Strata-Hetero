@@ -87,11 +87,19 @@ def _arg_map(args: Any) -> dict[str, Any]:
         if not key.startswith("--"):
             raise EvidenceError("config args contains a non-option token")
         if i + 1 < len(args) and not args[i + 1].startswith("--"):
-            result[key] = args[i + 1]
+            value: Any = args[i + 1]
             i += 2
         else:
-            result[key] = True
+            value = True
             i += 1
+        if key == "--native-dense-gguf":
+            if value is True:
+                raise EvidenceError("--native-dense-gguf requires a path")
+            result.setdefault(key, []).append(value)
+        else:
+            if key in result:
+                raise EvidenceError(f"repeated non-list option in config args: {key}")
+            result[key] = value
     return result
 
 
