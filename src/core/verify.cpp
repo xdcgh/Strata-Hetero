@@ -54,6 +54,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <exception>
+#include <limits>
 #include <immintrin.h>
 
 namespace strata::core {
@@ -2074,6 +2075,51 @@ bool Verifier::run(int T, const int32_t* tokens, int64_t pos0, PoolMultiFn pool,
                     reported = true;
                     std::fprintf(stderr, "strata dbg: verify window at position %lld, row %d: %lld of %lld logits non-finite "
                                          "(token out %d)\n", (long long) pos0, t, (long long) bad, (long long) n_vocab_, out[t]);
+                }
+            }
+        }
+    }
+    // Read only after sampling has already returned ID 0 and the window is synced.
+    // Unlike STRATA_DBG_NAN, this never adds a synchronization inside prefill GEMMs.
+    // It is diagnostic evidence, not a change to the model's arithmetic or sampling.
+    if (static const bool zero_diag = [] {
+            const char* v = std::getenv("STRATA_DIAG_ZERO_LOGITS");
+            return v != nullptr && std::strcmp(v, "1") == 0;
+        }(); zero_diag) {
+        static std::atomic<uint64_t> sampled{0};
+        bool has_zero = false;
+        for (int t = 0; t < T; ++t) has_zero |= out[t] == 0;
+        if (has_zero && sampled.fetch_add(1, std::memory_order_relaxed) < 16) {
+            constexpr size_t max_bytes = 64ull << 20;
+            if (T <= 0 || n_vocab_ <= 0 || (uint64_t) n_vocab_ > max_bytes / (sizeof(float) * (size_t) T)) {
+                std::fprintf(stderr, "strata zero-logits diag: unavailable: window dimensions exceed readback bound\n");
+            } else {
+                std::vector<float> h((size_t) T * (size_t) n_vocab_);
+                const cudaError_t read = cudaMemcpy(h.data(), head_logits_, h.size() * sizeof(float), cudaMemcpyDeviceToHost);
+                if (read != cudaSuccess) {
+                    std::fprintf(stderr, "strata zero-logits diag: unavailable: %s\n", cudaGetErrorString(read));
+                } else {
+                    for (int t = 0; t < T; ++t) {
+                        if (out[t] != 0) continue;
+                        int64_t nan = 0, pos_inf = 0, neg_inf = 0, zeros = 0, finite = 0, best_id = -1;
+                        float lo = 0, hi = 0;
+                        const float* row = h.data() + (size_t) t * (size_t) n_vocab_;
+                        for (int64_t v = 0; v < n_vocab_; ++v) {
+                            const float x = row[v];
+                            if (std::isnan(x)) { ++nan; continue; }
+                            if (std::isinf(x)) { (x > 0 ? pos_inf : neg_inf)++; continue; }
+                            if (finite++ == 0) { lo = hi = x; best_id = v; }
+                            else { lo = std::min(lo, x); if (x > hi) { hi = x; best_id = v; } }
+                            zeros += x == 0;
+                        }
+                        std::fprintf(stderr,
+                            "strata zero-logits diag: position %lld row %d selected 0; vocab %lld finite %lld nan %lld posinf %lld neginf %lld zeros %lld; finite_argmax %lld range %.9g %.9g; id0 %.9g id19 %.9g\n",
+                            (long long) pos0, t, (long long) n_vocab_, (long long) finite, (long long) nan,
+                            (long long) pos_inf, (long long) neg_inf, (long long) zeros, (long long) best_id,
+                            finite ? (double) lo : std::numeric_limits<double>::quiet_NaN(),
+                            finite ? (double) hi : std::numeric_limits<double>::quiet_NaN(),
+                            (double) row[0], n_vocab_ > 19 ? (double) row[19] : std::numeric_limits<double>::quiet_NaN());
+                    }
                 }
             }
         }
