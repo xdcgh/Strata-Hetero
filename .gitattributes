@@ -19,3 +19,5 @@ bench/hetero/**/*.patch -whitespace
 
 # copies of real packs' native_experts.txt, parsed byte for byte by tests/core/expert_layout_test.cpp
 tests/data/native_experts/** -text
+# Preserve upstream measurement bytes without changing the CSV. Each row has upstream trailing whitespace.
+bench/results/2026-10-07-community-arc-b65-v01402/results.csv -text -whitespace
