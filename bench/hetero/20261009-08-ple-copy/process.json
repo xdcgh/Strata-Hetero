@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "pid": 9548,
+  "start_utc": "2026-10-09T03:46:14.3471847Z",
+  "exe": "C:\\Python314\\python.exe",
+  "argv": [
+    "-u",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_copy_verified.py",
+    "--copy",
+    "--source",
+    "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "--destination",
+    "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "--run-id",
+    "20261009-08-ple-copy",
+    "--receipt",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json"
+  ],
+  "source": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+  "destination": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+  "role": "owned verified shard copy, no model compute"
+}

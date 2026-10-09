@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-10-09T03:56:59.9262982Z",
+  "attempt": 1,
+  "stage": "hardware_manifest_preflight",
+  "error": "Harness lookup used top-level copy.expected_size_bytes; field is nested under copy.plan; fresh stat itself showed both files at 49,859,583,136 bytes.",
+  "file_read_started": false,
+  "profile_started": false,
+  "source_unchanged": true,
+  "destination_unchanged": true
+}

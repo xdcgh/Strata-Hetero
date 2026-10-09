@@ -1,0 +1,1217 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "created_utc": "2026-10-09T12:11:58.9379+08:00",
+  "run_id": "20261009-09-storage-profile",
+  "scope": "same 49,859,583,136-byte verified shard read-only via unbuffered DirectFile on E: Micron 2450 NVMe and F: Realtek RTL9201 USB; standalone storage profile only, no model inference or speedup claim.",
+  "hardware_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\hardware-manifest.json",
+  "hardware_manifest_present": true,
+  "execution_summary": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\execution-summary-02.json",
+  "runner_progress_journal": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\runner-progress-02.jsonl",
+  "runner_wall_seconds": 373.2070391999996,
+  "runner_exit_code_counts": {
+    "0": 96
+  },
+  "arm_count": 96,
+  "successful_arm_count": 96,
+  "failed_arms": [],
+  "missing_outputs": [],
+  "devices": {
+    "E": {
+      "physical_disk_number": 1,
+      "model": "Micron_2450_MTFDKBA512TFK",
+      "bus": "NVMe",
+      "filesystem": "NTFS"
+    },
+    "F": {
+      "physical_disk_number": 3,
+      "model": "Realtek RTL9201",
+      "bus": "USB",
+      "filesystem": "exFAT"
+    }
+  },
+  "input_integrity": {
+    "size_bytes": 49859583136,
+    "prior_verified_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+    "copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json",
+    "source_stream_and_destination_readback_hashes_match": true,
+    "current_source_and_destination_file_id_size_time_match_receipt": true,
+    "current_file_stats": [
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "matches_copy_receipt_identity": true,
+        "stat": {
+          "size_bytes": 49859583136,
+          "mtime_ns": 1791268992000000000,
+          "ctime_ns": 1791267636110000000,
+          "device": 2894736058,
+          "file_index": 790292857216
+        }
+      },
+      {
+        "path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "matches_copy_receipt_identity": true,
+        "stat": {
+          "size_bytes": 49859583136,
+          "mtime_ns": 1791517696428560800,
+          "ctime_ns": 1791517574432878600,
+          "device": 6117023165593423684,
+          "file_index": 5629499534227261
+        }
+      }
+    ],
+    "full_file_rehash_performed_during_profile": false
+  },
+  "parameters": {
+    "block_bytes": [
+      4096,
+      16384,
+      65536,
+      1048576
+    ],
+    "queue_depths": [
+      1,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "patterns": [
+      "sequential",
+      "random"
+    ],
+    "duration_ms": 1000,
+    "warmup_ms": 250,
+    "repeats": 3,
+    "seed": 20261009,
+    "arms_per_device": 48,
+    "device_order": [
+      "E",
+      "F"
+    ],
+    "concurrency": 1
+  },
+  "io_contract": {
+    "read_only": true,
+    "cache_policy": "unbuffered",
+    "windows_flags": "FILE_FLAG_NO_BUFFERING | FILE_FLAG_OVERLAPPED | FILE_FLAG_RANDOM_ACCESS",
+    "latency_scope": "submit-call start to host observation after wait return; includes queueing and completion reaping, not device-only service time"
+  },
+  "aggregation": {
+    "n": 3,
+    "mean": "arithmetic mean over three per-repeat phase values",
+    "standard_deviation": "sample standard deviation (n-1) over three valid repeats",
+    "warmup": "summarized separately; warmup latency percentiles are null because no latency samples are collected during warmup",
+    "latency_percentiles": "native p50/p95/p99 are reservoir-sampled per measured repeat; summary averages the three per-repeat percentiles and is not a pooled percentile",
+    "sample_cap_per_repeat": 65536,
+    "failed_or_incomplete_arm_performance": "null/blank, never zero-filled"
+  },
+  "systemwide_resources": {
+    "sample_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\resource-root-02.jsonl",
+    "sample_count": 411,
+    "status": "available",
+    "sample_interval_seconds": 1,
+    "minimum_free_physical_gib": 107.35737991333008,
+    "minimum_free_commit_gib": 113.99401473999023,
+    "maximum_system_cpu_percent": 26.6,
+    "resource_error_count": 37,
+    "resource_alert_count": 37,
+    "resource_errors": [
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      },
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      }
+    ],
+    "resource_alerts": [
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown",
+      "owner_process_tree_unknown"
+    ],
+    "physical_disk_counter_deltas": {
+      "PhysicalDrive1": {
+        "read_bytes_delta_systemwide": 306480693248,
+        "write_bytes_delta_systemwide": 57700352,
+        "mapping_scope": "not_inferred"
+      },
+      "PhysicalDrive3": {
+        "read_bytes_delta_systemwide": 52345729024,
+        "write_bytes_delta_systemwide": 0,
+        "mapping_scope": "not_inferred"
+      }
+    },
+    "counter_scope": "systemwide counters include OS/other process I/O; deltas cannot be attributed solely to these profiling reads"
+  },
+  "arm_artifacts": [
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd1-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5122
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd1-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5075
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd4-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5105
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd4-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5112
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd8-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5121
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd8-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5119
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd16-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5116
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd16-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5127
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd32-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5137
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd32-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5126
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd64-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5138
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b4096-qd64-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5136
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd1-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5116
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd1-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5099
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd4-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5105
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd4-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5101
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd8-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5097
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd8-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5095
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd16-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5135
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd16-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5115
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd32-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5152
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd32-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5096
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd64-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5144
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b16384-qd64-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5105
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd1-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5082
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd1-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5063
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd4-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5081
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd4-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5079
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd8-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5100
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd8-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5086
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd16-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5125
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd16-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5098
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd32-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5116
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd32-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5087
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd64-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5099
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b65536-qd64-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5102
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd1-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5062
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd1-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5047
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd4-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5036
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd4-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5035
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd8-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5042
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd8-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5038
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd16-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5075
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd16-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5066
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd32-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5063
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd32-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5068
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd64-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5087
+    },
+    {
+      "device": "E",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\E\\b1048576-qd64-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5068
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd1-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5044
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd1-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5060
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd4-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5079
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd4-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5077
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd8-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5090
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd8-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5100
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd16-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5097
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd16-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5106
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd32-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5101
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd32-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5081
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd64-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5104
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b4096-qd64-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5098
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd1-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5041
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd1-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5044
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd4-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5093
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd4-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5069
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd8-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5076
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd8-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5083
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd16-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5102
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd16-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5087
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd32-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5086
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd32-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5074
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd64-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5064
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b16384-qd64-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5072
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd1-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5042
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd1-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5044
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd4-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5059
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd4-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5060
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd8-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5040
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd8-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5045
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd16-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5066
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd16-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5060
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd32-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5059
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd32-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5059
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd64-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5067
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b65536-qd64-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5072
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd1-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5001
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd1-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5006
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd4-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5023
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd4-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5025
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd8-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5028
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd8-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5036
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd16-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5044
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd16-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5041
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd32-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5038
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd32-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5030
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd64-sequential.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5046
+    },
+    {
+      "device": "F",
+      "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\F\\b1048576-qd64-random.json",
+      "native_status": "ok",
+      "arm_status": "ok",
+      "exit_code": 0,
+      "repeats_observed": 3,
+      "output_file_bytes": 5050
+    }
+  ],
+  "artifacts": {
+    "summary_csv": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\summary.csv",
+    "raw_native_json": "E/F b<block>-qd<qd>-<pattern>.json files",
+    "resource_samples": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\resource-root-02.jsonl",
+    "runner_progress": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\runner-progress-02.jsonl",
+    "process_identity": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\root-runner-process-02.json",
+    "preflight_failure_records": [
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\preflight-failure-02.json",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\preflight-failure-03.json",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\preflight-failures.json"
+    ],
+    "process_identity_review": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\process-identity-review.json"
+  },
+  "runner_process_identity": {
+    "record_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\root-runner-process-02.json",
+    "pid": 15976,
+    "start_utc": "2026-10-09T04:02:18.3360977Z",
+    "exe": "C:\\Python314\\python.exe",
+    "helper": "E:\\Strata-Hetero-data\\probes\\storage-profile-20261009-runner-02.py",
+    "role": "owned96arm storage profiler attempt02",
+    "record_kind": "startup snapshot only; no claim of current liveness"
+  },
+  "sampler_identity": {
+    "pid": 13096,
+    "resource_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\resource-root-02.jsonl",
+    "stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\STOP-root-02",
+    "status": "stopped after terminal"
+  }
+}

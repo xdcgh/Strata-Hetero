@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-10-09T03:57:34.0386340Z",
+  "attempt": 2,
+  "stage": "process_quiescence_preflight",
+  "error": "Broad command-line matcher matched the current PowerShell orchestration command because it contained the profile executable name; no profile process started and no input file was read.",
+  "file_read_started": false,
+  "profile_started": false,
+  "source_unchanged": true,
+  "destination_unchanged": true
+}

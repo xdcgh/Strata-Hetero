@@ -1,0 +1,12 @@
+{
+  "observed_utc": "2026-10-09T04:10:52.0395207Z",
+  "attempt": 1,
+  "stage": "native-json-aggregation",
+  "error_type": "TypeError",
+  "error": "phase_aggregate returned scalar mean/sample_sd/count tuple, but the CSV row builder indexed the scalar as a sequence",
+  "profile_processes_started": false,
+  "profile_data_changed": false,
+  "summary_csv_exists": false,
+  "storage_profile_json_exists": false,
+  "profiler_runs_remain": 0
+}

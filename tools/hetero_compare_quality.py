@@ -10,7 +10,7 @@ import math
 import os
 import re
 import sys
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from typing import Any, Iterable
 
 import hetero_quality as quality
@@ -173,6 +173,110 @@ def _verified_file_hash(path_text: Any, recorded_hash: Any, label: str,
             "bytes": size, "matches_record": digest.casefold() == recorded_hash.casefold()}
 
 
+def _provenance_child(root: Path, value: Any, label: str) -> Path:
+    if not isinstance(value, str) or not value:
+        raise EvidenceError(f"{label} path missing")
+    relative = Path(value)
+    win_relative = PureWindowsPath(value)
+    if (relative.is_absolute() or relative.drive or win_relative.is_absolute() or win_relative.drive or
+            ".." in relative.parts or ".." in win_relative.parts):
+        raise EvidenceError(f"{label} path must be a relative path within the run")
+    candidate = root
+    for part in relative.parts:
+        candidate = candidate / part
+        if candidate.is_symlink():
+            raise EvidenceError(f"{label} symlink rejected")
+    resolved_root = root.resolve()
+    resolved = candidate.resolve(strict=True)
+    if resolved_root not in resolved.parents or not resolved.is_file():
+        raise EvidenceError(f"{label} path escapes the run or is not a regular file")
+    return resolved
+
+
+def _checked_receipt(root: Path, name: Any, recorded_hash: Any, label: str) -> tuple[Path, str, dict[str, Any]]:
+    path = _provenance_child(root, name, label)
+    digest, _ = sha256_file(path)
+    if not isinstance(recorded_hash, str) or not re.fullmatch(r"[0-9a-fA-F]{64}", recorded_hash):
+        raise EvidenceError(f"{label} recorded SHA-256 missing/invalid")
+    if digest.casefold() != recorded_hash.casefold():
+        raise EvidenceError(f"{label} SHA-256 does not match provenance")
+    value = _json_load(path)
+    if not isinstance(value, dict):
+        raise EvidenceError(f"{label} JSON must be an object")
+    return path, digest, value
+
+
+def _verify_admission_evidence(root: Path) -> dict[str, Any]:
+    provenance_path = root / "provenance.json"
+    if provenance_path.is_symlink():
+        return {"status": "unknown", "errors": ["provenance symlink rejected"], "mode": "provenance"}
+    provenance = None
+    provenance_digest = None
+    if provenance_path.is_file():
+        try:
+            provenance = _json_load(provenance_path)
+            provenance_digest, _ = sha256_file(provenance_path)
+        except Exception as exc:
+            return {"status": "unknown", "errors": [f"provenance unreadable: {type(exc).__name__}"],
+                    "mode": "provenance"}
+        if not isinstance(provenance, dict):
+            return {"status": "unknown", "errors": ["provenance JSON must be an object"], "mode": "provenance"}
+    has_launch_field = isinstance(provenance, dict) and "launch_admission" in provenance
+    launch = provenance.get("launch_admission") if has_launch_field else None
+    if not has_launch_field:
+        # Legacy runs without an explicit checked launch receipt continue to use admission.json.
+        try:
+            admission_path = _provenance_child(root, "admission.json", "legacy admission")
+            digest, _ = sha256_file(admission_path)
+            admission = _json_load(admission_path)
+            ok = admission.get("pass") is True and admission.get("status") == "pass"
+            return {"status": "pass" if ok else "unknown", "mode": "legacy_admission",
+                    "provenance_path": str(provenance_path) if provenance_path.is_file() else None,
+                    "provenance_sha256": provenance_digest,
+                    "selected_receipt": "admission.json", "selected_receipt_path": str(admission_path),
+                    "selected_receipt_sha256": digest, "sha256_scope": "exact stored receipt file bytes",
+                    "admission_status": admission.get("status"), "admission_pass": admission.get("pass"),
+                    "errors": [] if ok else ["legacy admission receipt does not prove pass"]}
+        except Exception as exc:
+            return {"status": "unknown", "mode": "legacy_admission",
+                    "errors": [f"legacy admission proof missing/invalid: {type(exc).__name__}: {exc}"]}
+    if not isinstance(launch, dict):
+        return {"status": "unknown", "mode": "launch_admission_provenance",
+                "errors": ["launch_admission provenance must be an object"]}
+    if launch.get("status") != "pass":
+        return {"status": "unknown", "mode": "launch_admission_provenance",
+                "errors": ["launch_admission provenance status is not pass"]}
+    try:
+        admission_path, admission_hash, admission = _checked_receipt(
+            root, launch.get("receipt"), launch.get("receipt_sha256"), "launch admission")
+        process_path, process_hash, process = _checked_receipt(
+            root, launch.get("launch_process_receipt"), launch.get("process_receipt_sha256"),
+            "launch process receipt")
+        admission_ok = admission.get("pass") is True and admission.get("status") == "pass"
+        process_pid = process.get("launcher_pid")
+        process_run = process.get("run")
+        process_ok = (type(process_pid) is int and process_pid > 0 and
+                      isinstance(process_run, str) and Path(process_run).resolve() == root.resolve() and
+                      isinstance(process.get("config"), str) and
+                      Path(process["config"]).resolve() == (root / "config.json").resolve())
+        if not admission_ok or not process_ok:
+            raise EvidenceError("selected admission or launch process receipt does not prove a valid pass/launch")
+        return {"status": "pass", "mode": "launch_admission_provenance",
+                "provenance_path": str(provenance_path), "provenance_sha256": provenance_digest,
+                "selected_receipt": launch["receipt"], "selected_receipt_path": str(admission_path),
+                "selected_receipt_sha256": admission_hash, "recorded_receipt_sha256": launch["receipt_sha256"],
+                "launch_process_receipt": launch["launch_process_receipt"],
+                "launch_process_receipt_path": str(process_path), "launch_process_receipt_sha256": process_hash,
+                "recorded_process_receipt_sha256": launch["process_receipt_sha256"],
+                "sha256_scope": "each digest covers exact stored JSON file bytes",
+                "admission_status": admission.get("status"), "admission_pass": admission.get("pass"),
+                "process_receipt_structurally_valid": process_ok, "launcher_pid": process_pid,
+                "errors": []}
+    except Exception as exc:
+        return {"status": "unknown", "mode": "launch_admission_provenance",
+                "errors": [f"launch admission provenance proof invalid: {type(exc).__name__}: {exc}"]}
+
+
 def _load_run_controls(root: Path) -> dict[str, Any]:
     try:
         config = _json_load(root / "config.json")
@@ -306,14 +410,8 @@ def _load_run_controls(root: Path) -> dict[str, Any]:
         errors.append("run log does not prove the 20 GiB resident complement")
     if mtp_load_line is None: errors.append("MTP draft layer load is unproven in engine log")
     if not ready_seen: errors.append("server ready marker missing")
-    admission_path = root / "admission.json"
-    admission_ok = False
-    if admission_path.is_file():
-        try:
-            admission = _json_load(admission_path)
-            admission_ok = admission.get("pass") is True and admission.get("status") == "pass"
-        except Exception:
-            pass
+    admission_evidence = _verify_admission_evidence(root)
+    admission_ok = admission_evidence.get("status") == "pass"
     if not admission_ok: errors.append("admission receipt does not prove pass")
     return {"root": str(root), "status": "pass" if not errors else "incomplete",
             "errors": errors, "engine_path": config_exe, "engine_version": engine.get("version"),
@@ -336,6 +434,7 @@ def _load_run_controls(root: Path) -> dict[str, Any]:
             "resident_ram_actual_gib": resident_actual_gib, "mtp_load_proven": mtp_load_line is not None,
             "mtp_load_log_evidence": mtp_load_line,
             "server_ready_proven": ready_seen, "admission_pass_proven": admission_ok,
+            "admission_evidence": admission_evidence,
             "config_sha256_actual": raw_config_hash}
 
 
@@ -894,14 +993,28 @@ def compare_runs(baseline_root: Path, candidate_root: Path, manifest_path: Path)
     all_artifact_equal = True
     all_quality_pass = True
     any_incomplete = bool(baseline["missing_prompt_ids"] or candidate["missing_prompt_ids"] or control_errors)
+    expected_pairs = len(prompts) * 3
+    observed_pairs = 0
+    required_pairs_complete = True
+    prompt_pair_counts: dict[str, dict[str, int]] = {}
     for prompt_id in prompts:
         b = baseline["prompts"].get(prompt_id)
         c = candidate["prompts"].get(prompt_id)
         if b is None or c is None:
             any_incomplete = True
-            prompt_comparisons[prompt_id] = {"status": "incomplete", "errors": ["prompt side missing"]}
+            required_pairs_complete = False
+            prompt_pair_counts[prompt_id] = {"expected_pairs": 3, "observed_pairs": 0}
+            prompt_comparisons[prompt_id] = {"status": "incomplete", "expected_pairs": 3,
+                                             "observed_pairs": 0, "errors": ["prompt side missing"]}
             continue
         b_formals, c_formals = b.get("formals", []), c.get("formals", [])
+        prompt_required_complete = len(b_formals) >= 3 and len(c_formals) >= 3
+        prompt_observed_pairs = sum(1 for i in range(3) if i < len(b_formals) and i < len(c_formals))
+        prompt_pair_counts[prompt_id] = {"expected_pairs": 3, "observed_pairs": prompt_observed_pairs}
+        observed_pairs += prompt_observed_pairs
+        if not prompt_required_complete:
+            required_pairs_complete = False
+            any_incomplete = True
         metadata_fields = ("prompt_file", "prompt_sha256", "prompt_bytes", "repeats", "warmup",
                            "max_tokens", "concurrency", "seed", "reasoning_effort")
         base_meta, cand_meta = b.get("metadata") or {}, c.get("metadata") or {}
@@ -961,9 +1074,17 @@ def compare_runs(baseline_root: Path, candidate_root: Path, manifest_path: Path)
                           "candidate_quality": (cf.get("quality") or {}).get("quality_status"),
                           "errors": pair_errors})
         prompt_comparisons[prompt_id] = {"request_controls": "matched" if metadata_matches is True else "different" if metadata_matches is False else "not_observed",
+                                         "expected_pairs": 3, "observed_pairs": prompt_observed_pairs,
                                          "status": "pass" if pairs and all(p.get("status") == "pass" for p in pairs)
                                          else "incomplete" if any(p.get("status") == "incomplete" for p in pairs)
                                          else "mismatch", "formals": pairs}
+    pairs_complete = required_pairs_complete and observed_pairs == expected_pairs
+    if not pairs_complete:
+        any_incomplete = True
+        all_token_equal = False
+        all_text_equal = False
+        all_artifact_equal = False
+        all_quality_pass = False
     controls_match = not control_errors and not unexpected_differences and base_control.get("normalized_controls_sha256") == cand_control.get("normalized_controls_sha256")
     if not controls_match: any_incomplete = True
     accepted = (not any_incomplete and controls_match and all_token_equal and all_text_equal and all_quality_pass and
@@ -985,7 +1106,10 @@ def compare_runs(baseline_root: Path, candidate_root: Path, manifest_path: Path)
             "overall": {"all_actual_token_ids_equal": all_token_equal,
                         "all_model_text_from_sse_equal": all_text_equal,
                         "all_artifact_byte_hashes_equal": all_artifact_equal,
-                        "all_quality_pass": all_quality_pass}}
+                        "all_quality_pass": all_quality_pass,
+                        "expected_pairs": expected_pairs, "observed_pairs": observed_pairs,
+                        "required_pairs_complete": pairs_complete,
+                        "required_pairs_by_prompt": prompt_pair_counts}}
 
 
 def main(argv: list[str] | None = None) -> int:

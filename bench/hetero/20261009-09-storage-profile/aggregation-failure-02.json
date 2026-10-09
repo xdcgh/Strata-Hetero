@@ -1,0 +1,11 @@
+{
+  "observed_utc": "2026-10-09T04:11:31.3431182Z",
+  "attempt": 2,
+  "stage": "native-json-summary-generation",
+  "error_type": "NameError",
+  "error": "summary script omitted standard-library os import during current input file identity check after parsing all 96 raw profile JSONs",
+  "profile_data_changed": false,
+  "profiler_runs_started": 0,
+  "summary_csv_exists": false,
+  "storage_profile_json_exists": false
+}

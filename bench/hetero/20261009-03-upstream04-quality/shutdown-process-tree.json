@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-09T03:45:51.3782184Z",
+  "status": "server_process_tree_stopped",
+  "shutdown_unload_receipt": "shutdown-unload.json",
+  "process_actions": [
+    {
+      "pid": 17692,
+      "role": "owned server child/listener 127.0.0.1:8081",
+      "action": "Stop-Process -Force after exact parent/cmdline verification",
+      "result": "exited"
+    },
+    {
+      "pid": 15564,
+      "role": "owned process.json launcher",
+      "action": "waited after server child exit",
+      "result": "exited"
+    },
+    {
+      "pid": 21860,
+      "role": "engine child",
+      "action": "exited after loopback unload",
+      "result": "exited before server child termination"
+    },
+    {
+      "pid": 18908,
+      "role": "owned resource sampler",
+      "action": "observed resource/STOP and exited",
+      "result": "exited"
+    }
+  ],
+  "listener_8081_released": true,
+  "remaining_owned_pids": [],
+  "nvidia_smi_after_cleanup": "246, 0",
+  "resource_stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\resource\\STOP"
+}

@@ -1,0 +1,8 @@
+{
+  "pid": 15976,
+  "start_utc": "2026-10-09T04:02:18.3360977Z",
+  "exe": "C:\\Python314\\python.exe",
+  "role": "owned96arm storage profiler attempt02",
+  "helper": "E:\\Strata-Hetero-data\\probes\\storage-profile-20261009-runner-02.py",
+  "failure01": "empty precreated output directories, preserved traceback"
+}

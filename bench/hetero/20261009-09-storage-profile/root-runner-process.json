@@ -1,0 +1,7 @@
+{
+  "pid": 5172,
+  "start_utc": "2026-10-09T04:00:15.2648399Z",
+  "exe": "C:\\Python314\\python.exe",
+  "role": "root owned96-arm read-only storage profiler",
+  "helper": "E:\\Strata-Hetero-data\\probes\\storage-profile-20261009-runner.py"
+}

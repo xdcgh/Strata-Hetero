@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-09T03:44:28.7077684Z",
+  "status": "unloaded",
+  "run_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality",
+  "process_lineage": {
+    "launcher_pid": 15564,
+    "launcher_create_time_unix": 1791516228.6344988,
+    "process_json_start_utc": "2026-10-09T03:23:48.6344988Z",
+    "start_delta_ms": 0,
+    "server_pid": 17692,
+    "server_parent_pid": 15564,
+    "engine_pid": 21860,
+    "engine_parent_pid": 17692,
+    "engine_command_exact": true
+  },
+  "listener": {
+    "host": "127.0.0.1",
+    "port": 8081,
+    "owner_pid": 17692,
+    "ownership_confirmed": true
+  },
+  "inflight_busy_before_unload": false,
+  "loopback_unload": {
+    "http_status": 200,
+    "response_status": "unloaded",
+    "api_key_required": false
+  },
+  "loaded_after_unload": false,
+  "resources_after_unload": {
+    "observed_at_utc": "2026-10-09T03:44:27.815Z",
+    "free_physical_gib": 108.084,
+    "free_commit_gib": 114.667,
+    "errors": [],
+    "alerts": []
+  }
+}

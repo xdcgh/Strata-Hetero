@@ -2,6 +2,7 @@ import hashlib
 import json
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 from hetero_compare_quality import (
@@ -9,6 +10,7 @@ from hetero_compare_quality import (
     _buffer_override_error,
     _prompt_identity_check,
     _resources_for_run,
+    _verify_admission_evidence,
     _verified_file_hash,
     compare_runs,
     analyze_run,
@@ -50,6 +52,84 @@ def request_row(text, ids=(73, 2), finish="stop"):
 
 
 class CompareQualityFixtureTests(unittest.TestCase):
+    @staticmethod
+    def _write_launch_admission(root: Path, receipt_name="admission-02.json"):
+        import hashlib
+        admission = {"status": "pass", "pass": True, "reasons": []}
+        admission_path = root / "admission-02.json"
+        admission_path.write_text(json.dumps(admission), encoding="utf-8")
+        process = {"schema_version": 1, "launcher_pid": 1234,
+                   "run": str(root.resolve()), "config": str((root / "config.json").resolve()),
+                   "argv": ["fixture"], "role": "fixture process"}
+        process_path = root / "process.json"
+        process_path.write_text(json.dumps(process), encoding="utf-8")
+        provenance = {"launch_admission": {"receipt": receipt_name,
+                                            "receipt_sha256": hashlib.sha256(admission_path.read_bytes()).hexdigest(),
+                                            "status": "pass", "launch_process_receipt": "process.json",
+                                            "process_receipt_sha256": hashlib.sha256(process_path.read_bytes()).hexdigest()}}
+        (root / "provenance.json").write_text(json.dumps(provenance), encoding="utf-8")
+
+    def test_explicit_provenance_selects_checked_retry_admission_not_initial_failure(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "admission.json").write_text(json.dumps({"status": "blocked", "pass": False}), encoding="utf-8")
+            self._write_launch_admission(root)
+            result = _verify_admission_evidence(root)
+            self.assertEqual(result["status"], "pass")
+            self.assertEqual(result["selected_receipt"], "admission-02.json")
+            self.assertEqual(result["mode"], "launch_admission_provenance")
+            self.assertTrue(result["process_receipt_structurally_valid"])
+            self.assertEqual(result["sha256_scope"], "each digest covers exact stored JSON file bytes")
+
+    def test_provenance_with_bad_process_hash_is_unknown(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self._write_launch_admission(root)
+            (root / "process.json").write_text("{}", encoding="utf-8")
+            result = _verify_admission_evidence(root)
+            self.assertEqual(result["status"], "unknown")
+            self.assertIn("SHA-256 does not match provenance", result["errors"][0])
+
+    def test_tampered_retry_admission_invalidates_launch_proof(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self._write_launch_admission(root)
+            (root / "admission-02.json").write_text(json.dumps({"status": "blocked", "pass": False}), encoding="utf-8")
+            result = _verify_admission_evidence(root)
+            self.assertEqual(result["status"], "unknown")
+            self.assertIn("SHA-256 does not match provenance", result["errors"][0])
+
+    def test_provenance_path_escape_is_rejected_without_legacy_fallback(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td) / "run"
+            root.mkdir()
+            outside = Path(td) / "admission-02.json"
+            outside.write_text(json.dumps({"status": "pass", "pass": True}), encoding="utf-8")
+            (root / "admission.json").write_text(json.dumps({"status": "pass", "pass": True}), encoding="utf-8")
+            self._write_launch_admission(root, receipt_name="../admission-02.json")
+            result = _verify_admission_evidence(root)
+            self.assertEqual(result["status"], "unknown")
+            self.assertIn("relative path within the run", result["errors"][0])
+
+    def test_legacy_run_without_launch_admission_uses_legacy_receipt(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "provenance.json").write_text(json.dumps({"prepared": True}), encoding="utf-8")
+            (root / "admission.json").write_text(json.dumps({"status": "pass", "pass": True}), encoding="utf-8")
+            result = _verify_admission_evidence(root)
+            self.assertEqual(result["status"], "pass")
+            self.assertEqual(result["mode"], "legacy_admission")
+            self.assertEqual(result["selected_receipt"], "admission.json")
+
+    def test_present_but_null_launch_provenance_does_not_fallback(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "provenance.json").write_text(json.dumps({"launch_admission": None}), encoding="utf-8")
+            (root / "admission.json").write_text(json.dumps({"status": "pass", "pass": True}), encoding="utf-8")
+            result = _verify_admission_evidence(root)
+            self.assertEqual(result["status"], "unknown")
+            self.assertEqual(result["mode"], "launch_admission_provenance")
+
     def test_buffer_override_gate_is_scoped_to_distinct_ab_candidate(self):
         base = {"root": r"C:\runs\05", "allowed_env_override": {"STRATA_UNBUFFERED_LOAD": None}}
         self.assertIsNone(_buffer_override_error(base, dict(base)))
@@ -264,12 +344,99 @@ class CompareQualityFixtureTests(unittest.TestCase):
             partial = compare_runs(root / "run-baseline", root / "run-candidate", manifest)
             self.assertEqual(partial["prompt_comparisons"]["p0"]["request_controls"], "not_observed")
             self.assertFalse(any("request controls differ" in x for x in partial["controls"]["unexpected_differences"]))
+            self.assertFalse(partial["accepted"])
+            self.assertEqual(partial["overall"]["expected_pairs"], 27)
+            self.assertEqual(partial["overall"]["observed_pairs"], 0)
+            self.assertFalse(partial["overall"]["all_actual_token_ids_equal"])
+            self.assertFalse(partial["overall"]["all_model_text_from_sse_equal"])
+            self.assertFalse(partial["overall"]["all_artifact_byte_hashes_equal"])
+            self.assertFalse(partial["overall"]["all_quality_pass"])
             result = analyze_run(root / "run-baseline", manifest, {x["id"]: x for x in prompts})
             self.assertEqual(len(result["missing_prompt_ids"]), 9)
             output.write_text("keep", encoding="utf-8")
             args.remove("--validate-only")
             self.assertEqual(main(args), 2)
             self.assertEqual(output.read_text(encoding="utf-8"), "keep")
+
+    def _make_compare_manifest(self, root: Path) -> Path:
+        prompt_dir = root / "prompts"
+        prompt_dir.mkdir(exist_ok=True)
+        prompts = []
+        for i in range(9):
+            raw = f"prompt-{i}".encode()
+            path = prompt_dir / f"p{i}.txt"
+            path.write_bytes(raw)
+            prompts.append({"id": f"p{i}", "file": str(path), "sha256": hashlib.sha256(raw).hexdigest(),
+                            "quality": {"kind": "exact_text", "expected": "ok"}})
+        implementation = root / "tokenizer.py"
+        asset = root / "tokenizer.model"
+        implementation.write_bytes(b"fixture tokenizer implementation")
+        asset.write_bytes(b"fixture tokenizer asset")
+        tokenizer = {"implementation_source": {"path": str(implementation),
+                                                "sha256": hashlib.sha256(implementation.read_bytes()).hexdigest(),
+                                                "bytes": implementation.stat().st_size},
+                     "assets": [{"path": str(asset), "sha256": hashlib.sha256(asset.read_bytes()).hexdigest(),
+                                 "bytes": asset.stat().st_size}]}
+        manifest = root / "manifest.json"
+        manifest.write_text(json.dumps({"schema": "strata-hetero-quality-prompts-v1",
+                                        "prompts": prompts, "tokenizer": tokenizer}), encoding="utf-8")
+        return manifest
+
+    @staticmethod
+    def _comparison_control(root: Path, candidate: bool = False):
+        normalized = {"fixture": "same-controls"}
+        return {"root": str(root), "status": "pass", "errors": [],
+                "normalized_controls": normalized, "normalized_controls_sha256": "same",
+                "model_identity": {"id": "fixture-model"},
+                "server_python": {"checkout_sha": "fixture"},
+                "effective_file_tier_mode": "buffered",
+                "allowed_env_override": {"STRATA_UNBUFFERED_LOAD": "0" if candidate else None},
+                "strict_env_value_sha256": {}}
+
+    @staticmethod
+    def _comparison_run(root: Path, available_prompts: int):
+        prompts = {}
+        metadata = {"prompt_file": "p", "prompt_sha256": "sha", "prompt_bytes": 1,
+                    "repeats": 3, "warmup": 1, "max_tokens": 16, "concurrency": 1,
+                    "seed": 17, "reasoning_effort": "medium"}
+        for prompt_index in range(available_prompts):
+            prompt_id = f"p{prompt_index}"
+            formals = [{"status": "pass", "token_ids": [prompt_index, repeat, 2], "include_stop": True,
+                        "model_text_sha256": f"text-{prompt_index}-{repeat}",
+                        "artifact_text_sha256": f"artifact-{prompt_index}-{repeat}",
+                        "quality": {"quality_status": "pass"}}
+                       for repeat in range(3)]
+            prompts[prompt_id] = {"metadata": metadata, "formals": formals}
+        return {"root": str(root), "prompts": prompts,
+                "missing_prompt_ids": [f"p{i}" for i in range(available_prompts, 9)],
+                "unexpected_prompt_ids": []}
+
+    def test_three_of_nine_is_not_vacuous_and_full_27_pair_fixture_stays_positive(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            manifest = self._make_compare_manifest(root)
+            base_root, cand_root = root / "baseline", root / "candidate"
+            base_root.mkdir(); cand_root.mkdir()
+            for available, expected_observed, expected_accept in ((3, 9, False), (9, 27, True)):
+                base_result = self._comparison_run(base_root, available)
+                cand_result = self._comparison_run(cand_root, available)
+                with mock.patch("hetero_compare_quality.analyze_run", side_effect=[base_result, cand_result]), \
+                        mock.patch("hetero_compare_quality._load_run_controls",
+                                   side_effect=[self._comparison_control(base_root),
+                                                self._comparison_control(cand_root, candidate=True)]):
+                    result = compare_runs(base_root, cand_root, manifest)
+                self.assertEqual(result["overall"]["expected_pairs"], 27)
+                self.assertEqual(result["overall"]["observed_pairs"], expected_observed)
+                self.assertEqual(result["accepted"], expected_accept)
+                if available == 3:
+                    self.assertFalse(result["overall"]["all_actual_token_ids_equal"])
+                    self.assertFalse(result["overall"]["all_model_text_from_sse_equal"])
+                    self.assertFalse(result["overall"]["all_quality_pass"])
+                else:
+                    self.assertTrue(result["overall"]["required_pairs_complete"])
+                    self.assertTrue(result["overall"]["all_actual_token_ids_equal"])
+                    self.assertTrue(result["overall"]["all_model_text_from_sse_equal"])
+                    self.assertTrue(result["overall"]["all_quality_pass"])
 
 
 if __name__ == "__main__":

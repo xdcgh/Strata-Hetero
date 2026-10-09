@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-09-storage-profile",
+  "created_utc": "2026-10-09T03:58:41.4419009Z",
+  "measurement_scope": "CPU-only direct-read storage profile of one byte-identical shard on two physical volumes; no model inference or model speedup claim",
+  "tool": {
+    "path": "E:\\Strata-Hetero-data\\build\\host-upstream-merge-03\\strata-storage-profile.exe",
+    "sha256": "948c02b51c8768264f761e15a1d17ab3d9b4828cea10088c0a437388056318d1",
+    "build_type": "Release",
+    "generator": "Ninja",
+    "cmake_source_root": "C:/Users/DC/Documents/ChatGPT/Strata-Hetero",
+    "cmake_project_directory": "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/tools/hetero_host",
+    "source_file_sha256": {
+      "tools\\hetero_host\\CMakeLists.txt": "9c39626836dc9449700f081985fef247de6186d89c533715be5d0b9acd08b494",
+      "src\\platform\\direct_file.cpp": "a8b53d6bcc38d365d00a1d73e0bb9f088607e285c12708d96164666f57d25f74",
+      "src\\hetero\\storage_profile.cpp": "fa5793bffccd86c3db59e9dd9761a66b43799b5f70ce74e7fda475a26e2d84a9",
+      "include\\strata\\platform\\direct_file.hpp": "dab7672210ce090411ab9fe6757438cddf059769ff8f35a8f15bc146bb938223"
+    }
+  },
+  "input": {
+    "source_F": {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "size_bytes": 49859583136,
+      "mtime_ns": 1791268992000000000,
+      "ctime_ns": 1791267636110000000,
+      "device": 2894736058,
+      "file_index": 790292857216,
+      "fstat": {
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791268992000000000,
+        "device": 2894736058,
+        "file_index": 790292857216
+      }
+    },
+    "destination_E": {
+      "path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "size_bytes": 49859583136,
+      "mtime_ns": 1791517696428560800,
+      "ctime_ns": 1791517574432878600,
+      "device": 6117023165593423684,
+      "file_index": 5629499534227261,
+      "fstat": {
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791517696428560800,
+        "device": 6117023165593423684,
+        "file_index": 5629499534227261
+      }
+    },
+    "bytes": 49859583136,
+    "prior_copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json",
+    "prior_verified_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+    "source_stream_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+    "destination_readback_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+    "current_stat_matches_copy_receipt": true,
+    "full_shard_rehash_performed_now": false
+  },
+  "physical_device_map": [
+    {
+      "drive": "E:",
+      "disk_number": 1,
+      "partition_number": 2,
+      "disk_model": "Micron_2450_MTFDKBA512TFK",
+      "bus_type": "NVMe",
+      "serial_number": "0000_0000_0000_0001_00A0_7521_3341_E6F5.",
+      "disk_health": "Healthy",
+      "volume_label": "Micron-512GB",
+      "filesystem": "NTFS",
+      "volume_size_bytes": 512093057024,
+      "volume_free_bytes": 127458107392
+    },
+    {
+      "drive": "F:",
+      "disk_number": 3,
+      "partition_number": 1,
+      "disk_model": "Realtek RTL9201",
+      "bus_type": "USB",
+      "serial_number": "0000000000000000",
+      "disk_health": "Healthy",
+      "volume_label": "San",
+      "filesystem": "exFAT",
+      "volume_size_bytes": 1920366280704,
+      "volume_free_bytes": 141857128448
+    }
+  ],
+  "read_contract": {
+    "mode": "unbuffered direct reads",
+    "windows_flags": "FILE_FLAG_NO_BUFFERING | FILE_FLAG_OVERLAPPED | FILE_FLAG_RANDOM_ACCESS",
+    "linux_flag": "O_DIRECT",
+    "read_only": true,
+    "writes_to_input": false,
+    "cache_policy": "unbuffered",
+    "windows_file_cache_bypassed": true,
+    "device_internal_cache": "not disabled or measured"
+  },
+  "parameters": {
+    "block_bytes": [
+      4096,
+      16384,
+      65536,
+      1048576
+    ],
+    "queue_depths": [
+      1,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "patterns": [
+      "sequential",
+      "random"
+    ],
+    "duration_ms": 1000,
+    "warmup_ms": 250,
+    "repeats": 3,
+    "seed": 20261009,
+    "arms_per_device": 48,
+    "device_order": [
+      "E",
+      "F"
+    ],
+    "arm_order": "block size, queue depth, sequential then random",
+    "concurrency": "one profiler process at a time"
+  },
+  "resource_observer": {
+    "counter_paths": [
+      "\\Processor(_Total)\\% Processor Time",
+      "\\Memory\\Available Bytes",
+      "\\Memory\\Commit Limit",
+      "\\Memory\\Committed Bytes",
+      "\\PhysicalDisk(1 E:)\\Disk Read Bytes/sec",
+      "\\PhysicalDisk(1 E:)\\Disk Write Bytes/sec",
+      "\\PhysicalDisk(1 E:)\\Avg. Disk Read Queue Length",
+      "\\PhysicalDisk(1 E:)\\Avg. Disk Write Queue Length",
+      "\\PhysicalDisk(3 F:)\\Disk Read Bytes/sec",
+      "\\PhysicalDisk(3 F:)\\Disk Write Bytes/sec",
+      "\\PhysicalDisk(3 F:)\\Avg. Disk Read Queue Length",
+      "\\PhysicalDisk(3 F:)\\Avg. Disk Write Queue Length"
+    ],
+    "sample_interval_seconds": 1,
+    "scope": "Windows PhysicalDisk, CPU, RAM and commit are systemwide counters. They include OS and any unrelated I/O and do not prove sole attribution.",
+    "ram_gate_gib": 12,
+    "commit_gate_gib": 4,
+    "initial_available_ram_gib": 112.556,
+    "initial_available_commit_gib": 119.41,
+    "initial_cpu_percent": 8.783997736158378,
+    "initial_disk_counters": {
+      "1 E:": {
+        "disk read bytes/sec": 0.0,
+        "avg. disk write queue length": 0.0023001768280683974,
+        "disk write bytes/sec": 1919287.9548427595,
+        "avg. disk read queue length": 0.0
+      },
+      "3 F:": {
+        "disk read bytes/sec": 0.0,
+        "avg. disk write queue length": 0.0,
+        "disk write bytes/sec": 0.0,
+        "avg. disk read queue length": 0.0
+      }
+    },
+    "gpu_snapshot": "NVIDIA GeForce RTX 4090 D, 246, 0",
+    "model_or_cuda_processes": []
+  },
+  "environment": {
+    "wsl_shutdown": {
+      "action": "wsl.exe --shutdown before profiler start",
+      "observed_utc": "2026-10-09T03:58:36.2415113Z",
+      "exit_code": 0,
+      "running_distros_after": [],
+      "vmmem_running_after": false
+    },
+    "comfy_mcp_observed_before_shutdown": "idle under 0.2% CPU; no ComfyUI process was observed; not attributed as active GPU work"
+  }
+}

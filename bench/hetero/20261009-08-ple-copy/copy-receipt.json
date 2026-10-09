@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "payload_read": true,
+  "files_written": true,
+  "plan": {
+    "source": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "source_identity": {
+      "size_bytes": 49859583136,
+      "mtime_ns": 1791268992000000000,
+      "ctime_ns": 1791267636110000000,
+      "file_id": {
+        "volume": 2894736058,
+        "index": 790292857216
+      },
+      "fstat": {
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791268992000000000,
+        "volume": 2894736058,
+        "index": 790292857216
+      }
+    },
+    "destination": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "destination_parent": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl",
+    "expected_size_bytes": 49859583136,
+    "expected_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+    "prior_integrity_receipt": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+      "run_id": "run-20261008-02-model-hash",
+      "status": "pass",
+      "matches_expected": true
+    },
+    "prior_full_hash_scope_note": "The source SHA is taken from the prior passing full-shard integrity receipt. Plan validation checks current source identity only and does not read/hash source payload bytes.",
+    "destination_drive_mapping": {
+      "status": "mapped_in_inventory",
+      "inventory_collected_at_utc": "2026-10-06T15:16:59.668142+00:00",
+      "root": "E:\\",
+      "label": "Micron-512GB",
+      "filesystem": "NTFS",
+      "physical_disks": [
+        {
+          "disk_number": 1,
+          "model": "Micron_2450_MTFDKBA512TFK",
+          "bus_type": "NVMe",
+          "partition_number": 2,
+          "partition_bytes": 512093061120
+        }
+      ],
+      "scope": "as recorded in the supplied inventory; not a live physical-device query"
+    },
+    "space_gate": {
+      "free_bytes_at_plan": 177328762880,
+      "source_bytes": 49859583136,
+      "required_free_bytes": 62744485024,
+      "minimum_free_after_copy_bytes": 12884901888,
+      "pass": true
+    }
+  },
+  "run_id": "20261009-08-ple-copy",
+  "copy_method": "sequential_bounded_buffer",
+  "buffer_bytes": 8388608,
+  "temporary_path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf.part.20261009-08-ple-copy",
+  "source_stream_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+  "destination_readback_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+  "destination_readback_path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf.part.20261009-08-ple-copy",
+  "part_identity_before_readback": {
+    "size_bytes": 49859583136,
+    "mtime_ns": 1791517696428560800,
+    "ctime_ns": 1791517574432878600,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 5629499534227261
+    },
+    "fstat": {
+      "size_bytes": 49859583136,
+      "mtime_ns": 1791517696428560800,
+      "volume": 6117023165593423684,
+      "index": 5629499534227261
+    }
+  },
+  "part_identity_after_readback": {
+    "size_bytes": 49859583136,
+    "mtime_ns": 1791517696428560800,
+    "ctime_ns": 1791517574432878600,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 5629499534227261
+    },
+    "fstat": {
+      "size_bytes": 49859583136,
+      "mtime_ns": 1791517696428560800,
+      "volume": 6117023165593423684,
+      "index": 5629499534227261
+    }
+  },
+  "source_identity_after": {
+    "size_bytes": 49859583136,
+    "mtime_ns": 1791268992000000000,
+    "ctime_ns": 1791267636110000000,
+    "file_id": {
+      "volume": 2894736058,
+      "index": 790292857216
+    },
+    "fstat": {
+      "size_bytes": 49859583136,
+      "mtime_ns": 1791268992000000000,
+      "volume": 2894736058,
+      "index": 790292857216
+    }
+  },
+  "destination_identity": {
+    "size_bytes": 49859583136,
+    "mtime_ns": 1791517696428560800,
+    "ctime_ns": 1791517574432878600,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 5629499534227261
+    },
+    "fstat": {
+      "size_bytes": 49859583136,
+      "mtime_ns": 1791517696428560800,
+      "volume": 6117023165593423684,
+      "index": 5629499534227261
+    }
+  },
+  "partial_preserved": false,
+  "copy_error": null,
+  "publication_platform": "nt",
+  "requested_platform_override": null,
+  "source_identity_before": {
+    "size_bytes": 49859583136,
+    "mtime_ns": 1791268992000000000,
+    "ctime_ns": 1791267636110000000,
+    "file_id": {
+      "volume": 2894736058,
+      "index": 790292857216
+    },
+    "fstat": {
+      "size_bytes": 49859583136,
+      "mtime_ns": 1791268992000000000,
+      "volume": 2894736058,
+      "index": 790292857216
+    }
+  },
+  "copied_bytes": 49859583136,
+  "destination_readback_bytes": 49859583136,
+  "free_bytes_before_rename": 127468077056,
+  "final_is_same_verified_file": true,
+  "final_identity_check_scope": "file ID, size and mtime match the verified temporary file; final path was not rehashed",
+  "claims": {
+    "source_stream_sha256_matches_prior_expected": true,
+    "fresh_part_readback_matches_prior_expected": true,
+    "final_path_is_same_verified_file": true,
+    "source_identity_stable_during_copy": true,
+    "claim_scope": "This run copied only the selected shard. Its prior expected SHA came from the passing integrity receipt; the source stream and owned temporary copy were freshly hashed in this run. After no-replace publication, final path identity (file ID, size, mtime) was checked against the verified temporary file; final path bytes were not rehashed."
+  },
+  "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json"
+}

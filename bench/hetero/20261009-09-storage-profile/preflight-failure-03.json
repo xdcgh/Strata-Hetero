@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-10-09T03:58:15.6590147Z",
+  "attempt": 3,
+  "stage": "hardware_manifest_generation",
+  "error": "CMake cache lookup omitted CMAKE_GENERATOR from a filtered set, then called Split on null. No profile was started and no input file was read.",
+  "file_read_started": false,
+  "profile_started": false,
+  "source_unchanged": true,
+  "destination_unchanged": true
+}

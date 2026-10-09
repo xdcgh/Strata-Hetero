@@ -11,7 +11,10 @@
     "scope": "same reviewed Python bridge in all arms; C++ inputs identified separately"
   },
   "matched_controls": "same verified model/pack/MTP/profile/context/KV/CPUworkers=10/resident20/noadaptive/noPCIe/promptcache0/seed42; all expert reads explicitly buffered",
-  "tokenizer_manifest_current_match": false,
-  "latest_engine_changes": "v0.1.40.4 defaults including CPU-share may differ from frozen82; record live logs, do not compare speeds until task matched",
-  "model_quality_acceptance": false
+  "latest_engine_changes": "v0.1.40.4 may differ from frozen82; CPU prefill share is opt-in and remains unset/zero in these controls",
+  "model_quality_acceptance": false,
+  "frozen_prompt_manifest_implementation_still_matches": false,
+  "quality_prompt_manifest": "../20261009-06-quality-prompts/manifest.json",
+  "quality_prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "quality_prompt_counts_refreshed": true
 }

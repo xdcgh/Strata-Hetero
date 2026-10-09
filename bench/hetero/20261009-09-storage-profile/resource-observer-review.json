@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T04:12:50.304850+00:00",
+  "resource_stream": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-09-storage-profile\\resource-root-02.jsonl",
+  "sample_count": 411,
+  "scope": "systemwide CPU, RAM/commit and per-PhysicalDisk counters; these measurements include unrelated OS/process activity and are not sole attribution to storage-profile.exe",
+  "valid_sections_missing_counts": {},
+  "global_resource_gate": {
+    "physical_ram_gib_required": 12,
+    "minimum_available_physical_gib": 107.35737991333008,
+    "commit_gib_required": 4,
+    "minimum_available_commit_gib": 113.99401473999023,
+    "all_samples_above_gates": true
+  },
+  "sampler_errors": {
+    "process_tree:NoSuchProcess": 37
+  },
+  "sampler_alerts": {
+    "owner_process_tree_unknown": 37
+  },
+  "interpretation": "37 samples reported process_tree:NoSuchProcess and owner_process_tree_unknown while systemwide CPU/memory/disk counters were still present. Process-tree identity was unavailable for those instants, so no process-specific I/O attribution is made. No physical/commit gate failure is recorded."
+}
