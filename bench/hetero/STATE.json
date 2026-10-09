@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "Native CPU pool bitwise parity passed; CPU vision port numericnegative; measuredcostselector implemented; isolated0.1.41 merged/pushed andmatchedbuilds pending",
+  "phase": "Nativeactivation NumPy/CPU/Arc sampledquality passed; upstream0.1.41 CUDAcompiled; matchedHetero compileactive; CPUaffinity andboundedvisionstage toolsinpreparation",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -52,7 +52,10 @@
     "Realnative CPU pool12cases rows1/16/256 default+workers1/4/10none byteidenticalfrozen9cd reference; allownedprocessesterminal",
     "CPUvisionport4arms compiled/inferred exactCPU,F32/ACCURACY;24finite/repeat-stableformal outputs fail1e-3RMSE/rownorm; preservednegative,noNPUenabled",
     "MeasuredcompletionETAselector9purefixturespass; queues/weightreadiness/operator/identity/contention/modelgates enforced; engineintegrationstillpending",
-    "Isolatedpinned0.1.41 mergeffeb748 pushed;770puretests run769pass1skip; newmatchingCUDA builds authorized, no modelbaselineyet"
+    "Isolatedpinned0.1.41 mergeffeb748 pushed;770puretests run769pass1skip; newmatchingCUDA builds authorized, no modelbaselineyet",
+    "NativeQ4K/Q5_1 activationcontract algebra rows1/16/256 all9formal pass originalnativeCPU tolerances",
+    "SameOpenVINO nativeactivationgraphCPU andArcGPU.0 rows1/16/256 each9formalpass; maxrelativeRMSE6.92e-4, noIPC/wholemodelgainclaimed",
+    "Pinnedupstreamfb58 ReleaseSM89CUDA buildcompleted; source/SDK/ggml stable; sampler412pass; exeSHAa6e2763ffce668e213f12380389223674621c47e4e5cb94c0f724e6ea8e686fc"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -77,12 +80,12 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Reviewmatched0.1.41CUDA builds thenqualifyfreshmodelcontrols; runisolatedCPUaffinitysweep aftercompilersdone; boundednativevisiontaps diagnosefirstnumericgap; nativeactivation/Arc arithmetic andtransport; integratecostplanner/calibration andcompleteoriginallong-context/performance matrix.",
+  "next_experiment": "Finish/reviewHetero0.1.41matchedbinary thenfreshgatedqualitybaseline; CPUaffinitysweepaftercompilerterminal; nativeactivationIPCworker+transport/crossover/contention; boundednativevisionstageparity; measuredplannerintegration/calibration andremainingfulloriginalmatrix.",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T09:58:50.469133+00:00",
-  "current_run": null,
+  "last_checkpoint_utc": "2026-10-09T10:36:35.887349+00:00",
+  "current_run": "cuda-hetero41-01",
   "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
@@ -90,5 +93,15 @@
     "status": "isolated_merge_pushed_build_pending",
     "review": "bench\\hetero\\20261009-25-upstream-0-1-41-review\\review.json",
     "merge_sha": "ffeb748d190ddeedff23587ce848596d4db0c752"
+  },
+  "current_build_owner": {
+    "controller_pid": 20748,
+    "build_cmd_pid": 19412,
+    "cmake_pid": 11144,
+    "ninja_pid": 20176,
+    "sampler_launcher_pid": 21424,
+    "sampler_child_pid": 6028,
+    "worktree": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41",
+    "note": "verifiedactiveCUDAcompile; repollsamehandle,notrestartonobservationtimeout"
   }
 }
