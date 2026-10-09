@@ -6,6 +6,8 @@ bench/hetero/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-a
 # Raw model/wire artifacts may intentionally contain blank lines or trailing spaces.
 bench/hetero/**/requests/** -whitespace
 bench/hetero/**/*.sse.txt -whitespace
+# Native tool output is retained byte for byte, including its intentional padding.
+bench/hetero/**/*.log -whitespace
 
 # launchers keep their platform line endings wherever the repository is cloned
 *.sh text eol=lf

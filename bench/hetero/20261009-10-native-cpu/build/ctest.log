@@ -1,0 +1,9 @@
+Test project E:/Strata-Hetero-data/build/native-cpu-harness-20261009-01
+    Start 1: hetero_native_expert_metadata_fixture
+1/2 Test #1: hetero_native_expert_metadata_fixture ...   Passed    0.06 sec
+    Start 2: hetero_native_expert_cli_fixtures
+2/2 Test #2: hetero_native_expert_cli_fixtures .......   Passed    0.13 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   0.23 sec
