@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "tool_chunk_id": "9149e8",
+  "observer_exit_code": 1,
+  "preserved_utc": "2026-10-09T12:03:06.148730+00:00",
+  "live_root_record_from_failed_observer": {
+    "pid": 17672,
+    "parent_pid": 18772,
+    "create_time": 1791547201.4159744,
+    "executable": "e:\\strata-hetero-data\\venv\\scripts\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/client.py",
+      "--run-native"
+    ]
+  },
+  "error": "AssertionError: exact list equality failed only at argv0 E:\\ spelling versus expected E:/ spelling; PowerShell then raised Outer native controller binding failed with exit 1.",
+  "native_client_was_not_restarted": true,
+  "native_final_receipt_preserved": true,
+  "outer_os_exit_directly_observed": false
+}

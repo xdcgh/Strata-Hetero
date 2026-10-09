@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-09T12:03:06.148730+00:00",
+  "terminal_owned_processes": [
+    {
+      "pid": 17672,
+      "exists": false
+    },
+    {
+      "pid": 22580,
+      "exists": false
+    },
+    {
+      "pid": 3628,
+      "exists": false
+    }
+  ],
+  "memory": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 118231228416,
+    "physical_used_bytes": 18732019712,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 21891575808,
+    "commit_available_bytes": 123661606912,
+    "commit_total_pages": 5344623,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 123661606912,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "errors": [],
+  "core_created": false,
+  "no_retry": true
+}

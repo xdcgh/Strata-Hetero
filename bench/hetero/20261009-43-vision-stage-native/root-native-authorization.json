@@ -1,0 +1,9 @@
+{
+  "authorized_utc": "2026-10-09T11:57:41.504088+00:00",
+  "scope": "Native CPU stage oracle only, 20 commands, original frozen SVE required",
+  "openvino_run_authorized": false,
+  "cpu_affinity_sweep_authorized": false,
+  "runner_sha256": "ea0dbe8745be86496b9bcf3c05631835882a89e4b2f3a3a0f7134d6b451633fe",
+  "contract_sha256": "7c0bc7f5bdf72892112e47f9889e38c292fd3eddc75b90e3995a46d476a17f17",
+  "root_host_tests_passed": 5
+}

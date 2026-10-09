@@ -1,0 +1,25 @@
+# Native/OpenVINO stage-runner preparation
+
+Status: prepared, not run. The contract has `execution_authorized=false`; no native helper, GGUF read, OpenVINO/Core, GPU/NPU or benchmark was started. The shared guard alone is root reviewed and frozen; root must approve the concrete vision contract after run 40/41 is terminal before vision execution.
+
+`client.py` defaults to a JSON/code-binding plan. Its future native sequence uses the new run-39 CPU helper with `--threads 10 --max-tokens 256 --flash-attn off --enable-stage-taps` and the same mmproj/text-GGUF1/PNG identities as the frozen run-23 native oracle. It hashes and verifies stable path/FD identities for the helper, mmproj and text shard only after explicit run authorization. The text shard must also match its recorded size/mtime/ctime/volume/file-ID tuple.
+
+The sequence is fixed:
+
+1. Normal `ENC` for each of four fixtures: validate layout/finite values and the entire SVE file SHA against frozen run 23 before enabling any captures.
+2. For each fixture, one normal-`ENC` warmup followed by three `ENC_TAPS` formal calls in exclusive new directories. Each formal's full final SVE SHA must still equal the original frozen hash; a changed output aborts acceptance and preserves the raw failure.
+3. Revalidate all 11 unique stage selectors, actual F32/type ID, four target and selector `ne`/`nb`, contiguous QKV-parent layout, exact paths/size, raw SHA, finite values and per-capture/aggregate ledger. All three formal stage payloads stay below the unchanged 16 MiB/image cap. There is no warmup stage capture.
+
+There are 20 native commands: four baseline checks, four warmups and twelve formal captures. The native helper is direct `Popen`; its root PID/executable/full argv/creation time is the actual runtime. The adapter explicitly requires its recorded `command_line == helper_argv` and never calls the C-Python-child wait for that native root. Commands/responses, process identities, resource samples, partial results, final receipts and cleanup outcomes stay in the new owned E run directory.
+
+`ov_driver.py` defaults to a plan of the existing CPU comparer with the 11 output aliases. Its future run requires the complete accepted native-stage receipt first. The E-venv launcher **must** bind its actual C-Python descendant through the reviewed shared guard and call `await_actual_child`; the frozen run-31 issue is not repeated. Completed diagnostic outputs are checked against the original per-policy/fixture decoded projection hashes. Any changed projection fingerprint is an explicit instrumentation finding, and never replaces the frozen native run-23 reference or widens a numerical gate.
+
+`analyse.py` is a separate explicit post-run reader. It rechecks accepted native SVE fingerprints, native raw-stage hashes and diagnostic projection/tap NPY identities, then preserves all 264 comparisons (2 policies ×4 fixtures ×3 formal ×11 stages). It uses the unchanged worker quality thresholds and reports the earliest failing stage in forward order, while retaining every later negative result. No alternate model/reference is used.
+
+Safety uses the shared agent-42 `OwnedServiceTree`/`ResourceMonitor` API. Root reviewed its actual IPC execution and froze `bench/hetero/20261009-42-native-q4k-q5_1-ipc/executed-client.py` at SHA `49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83`. `root_reviewed=true` applies only to this guard and does not authorize vision execution. Descendants are reaped before launcher cleanup; identities use PID, creation time, executable and full argv. Global memory must remain known >=12 GiB RAM/>=4 GiB commit, sampled at one second during blocking calls. Controllers and host checks use the main venv, which already supplies psutil; only the OpenVINO worker uses the Intel venv. The outer controller's actual C-Python identity is also recorded; external invocation must bind that interpreter tree explicitly.
+
+The contract binds the run-39 helper SHA `f01aa1f...`, selected mmproj SHA `b1a82259...`, frozen text-GGUF1 stat/hash, all four PNGs, native full SVE hashes, both original OpenVINO decoded fingerprints and relevant code/build receipts. Run outputs are new E directories. No original asset, oracle, receipt or array is overwritten; no array binary is placed in Git.
+
+Five host-only fixtures cover no-runtime default/authorization-before-guard, exact native direct-root full argv, synthetic 11-stage manifest axes/hash/budget/missing/duplicate guards, exact frozen-native SHA rejection, and explicit OpenVINO fingerprint-change reporting without reference substitution. Synthetic F32 files are owned temporary fixtures. Vision runtime acceptance remains pending root review; these tests do not prove native/Core execution.
+
+Run-39 build closure is already complete: synthetic C++ fixture pass, new helper built but not started, original oracle bytes unchanged, all four compile/execution/config/build exits zero, and cache/actual commands/log/resource/source/tool hashes preserved under run 39. No commit/push was created by this agent.

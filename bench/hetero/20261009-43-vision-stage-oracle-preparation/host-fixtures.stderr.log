@@ -1,0 +1,10 @@
+test_default_is_plan_only_and_run_requires_root_authorization_before_guard_or_inputs (__main__.StageClientFixtures.test_default_is_plan_only_and_run_requires_root_authorization_before_guard_or_inputs) ... ok
+test_manifest_all_axes_hashes_and_budget_with_synthetic_f32_only (__main__.StageClientFixtures.test_manifest_all_axes_hashes_and_budget_with_synthetic_f32_only) ... ok
+test_native_direct_root_requires_exact_full_argv_without_a_cpython_child (__main__.StageClientFixtures.test_native_direct_root_requires_exact_full_argv_without_a_cpython_child) ... ok
+test_native_reference_sha_is_exact_not_tolerance_or_new_reference (__main__.StageClientFixtures.test_native_reference_sha_is_exact_not_tolerance_or_new_reference) ... ok
+test_ov_alias_projection_changes_are_explicit_and_native_reference_never_replaced (__main__.StageClientFixtures.test_ov_alias_projection_changes_are_explicit_and_native_reference_never_replaced) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.267s
+
+OK

@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-09T12:03:26.835236+00:00",
+  "status": "native_frozen_sve_and_132_stage_hashes_independently_verified",
+  "sve_count": 20,
+  "formal_captures": 12,
+  "stage_files": 132,
+  "image_stage_bytes": {
+    "gray-96": 6469632,
+    "quadrants-96": 6469632,
+    "checkerboard-96": 6469632,
+    "gradient-192x96": 12939264
+  },
+  "helper_exit": 0,
+  "openvino_run": false,
+  "checks": [
+    {
+      "fixture": "gray-96",
+      "iteration": "baseline-normal",
+      "final_sve_sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940"
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "baseline-normal",
+      "final_sve_sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99"
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "baseline-normal",
+      "final_sve_sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976"
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "baseline-normal",
+      "final_sve_sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b"
+    },
+    {
+      "fixture": "gray-96",
+      "iteration": "warmup",
+      "final_sve_sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940"
+    },
+    {
+      "fixture": "gray-96",
+      "iteration": "formal-1",
+      "final_sve_sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "gray-96",
+      "iteration": "formal-2",
+      "final_sve_sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "gray-96",
+      "iteration": "formal-3",
+      "final_sve_sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "warmup",
+      "final_sve_sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99"
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "formal-1",
+      "final_sve_sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "formal-2",
+      "final_sve_sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "formal-3",
+      "final_sve_sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "warmup",
+      "final_sve_sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976"
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "formal-1",
+      "final_sve_sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "formal-2",
+      "final_sve_sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "formal-3",
+      "final_sve_sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "capture_bytes": 2156544
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "warmup",
+      "final_sve_sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b"
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "formal-1",
+      "final_sve_sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "capture_bytes": 4313088
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "formal-2",
+      "final_sve_sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "capture_bytes": 4313088
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "formal-3",
+      "final_sve_sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "capture_bytes": 4313088
+    }
+  ]
+}

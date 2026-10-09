@@ -1,0 +1,5108 @@
+{
+  "schema_version": 1,
+  "status": "native_stage_fingerprint_pass",
+  "results": [
+    {
+      "fixture": "gray-96",
+      "iteration": "baseline-normal",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gray-96-baseline-normal.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 89.0
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "baseline-normal",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\quadrants-96-baseline-normal.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 79.0
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "baseline-normal",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\checkerboard-96-baseline-normal.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 92.0
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "baseline-normal",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gradient-192x96-baseline-normal.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 151.0
+    },
+    {
+      "fixture": "gray-96",
+      "iteration": "warmup",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gray-96-warmup.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 78.0
+    },
+    {
+      "fixture": "gray-96",
+      "iteration": "formal-1",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gray-96-formal-1.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 98.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/gray-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 2156544,
+        "image_byte_cap": 16777216,
+        "capture_number": 1,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "1e6d7ed280341af62341fe0864f78466bbf981999881ff8322162c4eb4c1017d"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "59d9468f6776876807af42359da7b5a5d34fc1f2b2a7626826c2a62b2ebc04dc"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "1201299f73cdd43ab56fdca65ee8ef45f0c4d2b89d4be70c6f7a21c0d00cb0ae"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "a6490a3d79ca5cf11712126f46b1c04719ead5913ef8b1df627e3405bab04b21"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "5d934bc5f561189ba37a4a8ec52e7b33630116e045259211959acebdab6183c2"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "84bfbbe0e3fac4af0aed14c8f6160cf36e9bb6dbd099136e0d04e59efba0c9a6"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "cbf000b5a5683b93f01ed66b0efe5250a63d377fb1fc2a51c878ee8d98d4885d"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "bf18ca663cb3e4c141b46d47e80f280fc818d95f717bb64249cc58738307a416"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "a0ee1bbac95d4ec792e1cfacd6bed5e2fa8d81c3a1eb8857064aae1bf002884d"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "5b6773e37fbbca83d10e126a9823ed4f8944a72b61e5c6891b3d2cc66498c570"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-1-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "5b6773e37fbbca83d10e126a9823ed4f8944a72b61e5c6891b3d2cc66498c570"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "gray-96",
+      "iteration": "formal-2",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gray-96-formal-2.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 99.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/gray-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 4313088,
+        "image_byte_cap": 16777216,
+        "capture_number": 2,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "1e6d7ed280341af62341fe0864f78466bbf981999881ff8322162c4eb4c1017d"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "59d9468f6776876807af42359da7b5a5d34fc1f2b2a7626826c2a62b2ebc04dc"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "1201299f73cdd43ab56fdca65ee8ef45f0c4d2b89d4be70c6f7a21c0d00cb0ae"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "a6490a3d79ca5cf11712126f46b1c04719ead5913ef8b1df627e3405bab04b21"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "5d934bc5f561189ba37a4a8ec52e7b33630116e045259211959acebdab6183c2"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "84bfbbe0e3fac4af0aed14c8f6160cf36e9bb6dbd099136e0d04e59efba0c9a6"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "cbf000b5a5683b93f01ed66b0efe5250a63d377fb1fc2a51c878ee8d98d4885d"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "bf18ca663cb3e4c141b46d47e80f280fc818d95f717bb64249cc58738307a416"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "a0ee1bbac95d4ec792e1cfacd6bed5e2fa8d81c3a1eb8857064aae1bf002884d"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "5b6773e37fbbca83d10e126a9823ed4f8944a72b61e5c6891b3d2cc66498c570"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-2-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "5b6773e37fbbca83d10e126a9823ed4f8944a72b61e5c6891b3d2cc66498c570"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "gray-96",
+      "iteration": "formal-3",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gray-96-formal-3.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 102.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/gray-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 6469632,
+        "image_byte_cap": 16777216,
+        "capture_number": 3,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "1e6d7ed280341af62341fe0864f78466bbf981999881ff8322162c4eb4c1017d"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "59d9468f6776876807af42359da7b5a5d34fc1f2b2a7626826c2a62b2ebc04dc"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "1201299f73cdd43ab56fdca65ee8ef45f0c4d2b89d4be70c6f7a21c0d00cb0ae"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "a6490a3d79ca5cf11712126f46b1c04719ead5913ef8b1df627e3405bab04b21"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "5d934bc5f561189ba37a4a8ec52e7b33630116e045259211959acebdab6183c2"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "84bfbbe0e3fac4af0aed14c8f6160cf36e9bb6dbd099136e0d04e59efba0c9a6"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "cbf000b5a5683b93f01ed66b0efe5250a63d377fb1fc2a51c878ee8d98d4885d"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "bf18ca663cb3e4c141b46d47e80f280fc818d95f717bb64249cc58738307a416"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "a0ee1bbac95d4ec792e1cfacd6bed5e2fa8d81c3a1eb8857064aae1bf002884d"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "5b6773e37fbbca83d10e126a9823ed4f8944a72b61e5c6891b3d2cc66498c570"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gray-96-formal-3-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "5b6773e37fbbca83d10e126a9823ed4f8944a72b61e5c6891b3d2cc66498c570"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "warmup",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\quadrants-96-warmup.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 76.0
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "formal-1",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\quadrants-96-formal-1.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 109.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/quadrants-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 2156544,
+        "image_byte_cap": 16777216,
+        "capture_number": 1,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "54a88978b37de4b1218e4aad37edd9f6bdf0e5e7d59d1dd305f948e22f9b209c"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "9bccaaaa6cdb0b43e9fcbd6ae9205eb0b7023d4513132082bdfc0b3e768998df"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "df22a7adf02f24de5dd82b3c475651c26257486adbdd26849b2f192883e7555c"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "6c12cc0f923c630074665173521d2e1e44703066136b880d90a4d7e863d50718"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "63a9d951242000727eb6db01004c7007515d9903c5b015550c75c66e1aaa444b"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "e1602bd6ef642068fd72e71ec837ecf1a890d8083bafe10eaaa9d65c6a191dd2"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "e2f3a1c401588389a03d430659a1b66b9c7a9a0e93f3b4ac425afab9322bf963"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "bc6090081039a9d206c31a6952ef8865392aaa65d6bb555f54efb3ace2a4f4d8"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "8ca519a9d3af76fe4df71aa47db6ca64f233877e4d188d43e545197fc24df4bb"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "12c6a963d857f66b090aa1c15ad909f90546b5036b131446a6f485373e4aa2ed"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-1-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "12c6a963d857f66b090aa1c15ad909f90546b5036b131446a6f485373e4aa2ed"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "formal-2",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\quadrants-96-formal-2.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 99.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/quadrants-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 4313088,
+        "image_byte_cap": 16777216,
+        "capture_number": 2,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "54a88978b37de4b1218e4aad37edd9f6bdf0e5e7d59d1dd305f948e22f9b209c"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "9bccaaaa6cdb0b43e9fcbd6ae9205eb0b7023d4513132082bdfc0b3e768998df"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "df22a7adf02f24de5dd82b3c475651c26257486adbdd26849b2f192883e7555c"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "6c12cc0f923c630074665173521d2e1e44703066136b880d90a4d7e863d50718"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "63a9d951242000727eb6db01004c7007515d9903c5b015550c75c66e1aaa444b"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "e1602bd6ef642068fd72e71ec837ecf1a890d8083bafe10eaaa9d65c6a191dd2"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "e2f3a1c401588389a03d430659a1b66b9c7a9a0e93f3b4ac425afab9322bf963"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "bc6090081039a9d206c31a6952ef8865392aaa65d6bb555f54efb3ace2a4f4d8"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "8ca519a9d3af76fe4df71aa47db6ca64f233877e4d188d43e545197fc24df4bb"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "12c6a963d857f66b090aa1c15ad909f90546b5036b131446a6f485373e4aa2ed"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-2-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "12c6a963d857f66b090aa1c15ad909f90546b5036b131446a6f485373e4aa2ed"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "quadrants-96",
+      "iteration": "formal-3",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\quadrants-96-formal-3.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 124.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/quadrants-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 6469632,
+        "image_byte_cap": 16777216,
+        "capture_number": 3,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "54a88978b37de4b1218e4aad37edd9f6bdf0e5e7d59d1dd305f948e22f9b209c"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "9bccaaaa6cdb0b43e9fcbd6ae9205eb0b7023d4513132082bdfc0b3e768998df"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "df22a7adf02f24de5dd82b3c475651c26257486adbdd26849b2f192883e7555c"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "6c12cc0f923c630074665173521d2e1e44703066136b880d90a4d7e863d50718"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "63a9d951242000727eb6db01004c7007515d9903c5b015550c75c66e1aaa444b"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "e1602bd6ef642068fd72e71ec837ecf1a890d8083bafe10eaaa9d65c6a191dd2"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "e2f3a1c401588389a03d430659a1b66b9c7a9a0e93f3b4ac425afab9322bf963"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "bc6090081039a9d206c31a6952ef8865392aaa65d6bb555f54efb3ace2a4f4d8"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "8ca519a9d3af76fe4df71aa47db6ca64f233877e4d188d43e545197fc24df4bb"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "12c6a963d857f66b090aa1c15ad909f90546b5036b131446a6f485373e4aa2ed"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/quadrants-96-formal-3-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "12c6a963d857f66b090aa1c15ad909f90546b5036b131446a6f485373e4aa2ed"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "warmup",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\checkerboard-96-warmup.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 95.0
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "formal-1",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\checkerboard-96-formal-1.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 104.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/checkerboard-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 2156544,
+        "image_byte_cap": 16777216,
+        "capture_number": 1,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "bc3f985b7385b1b624a56f2e2f5384f124a75851101c32731c2b012b3b1de515"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "c3e0aef1f1fcc52e174234651b77b60e6c0db872c037e0436b2e6b42240aabf3"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "53ee3ac34f7592e228583e2dddb0c9270ff8a63f921ec55ba6dd77b5e34b02ee"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "f06761a50cdb378606cda6c75575c737f9436c6e3462edf50cd7293077440a9c"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "bbc4aa527c995459606f349f40ffa36527209ee6f409d85f4fc18c080baf0b0b"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "5277f26906a75fc4385261886ffe13004b7926d868220eb432986880053a9c5a"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "1209ff826ee72b9387753795dec547c51db009ff10284340350b9dbebe79c1f1"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "9a211c5d669c4228435c5a9f79c5cd4ef35e45749cc134b4c20a74993423ad38"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "471fc56f347ea507f4b653d0e2e440111dbf0d11a5c32341df86c0b4dc9865f7"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "ba6daa9ee7d92e098b9e14d14fc93675fdad36d2d203b9c23a14e4ca4a2791fd"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-1-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "ba6daa9ee7d92e098b9e14d14fc93675fdad36d2d203b9c23a14e4ca4a2791fd"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "formal-2",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\checkerboard-96-formal-2.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 111.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/checkerboard-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 4313088,
+        "image_byte_cap": 16777216,
+        "capture_number": 2,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "bc3f985b7385b1b624a56f2e2f5384f124a75851101c32731c2b012b3b1de515"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "c3e0aef1f1fcc52e174234651b77b60e6c0db872c037e0436b2e6b42240aabf3"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "53ee3ac34f7592e228583e2dddb0c9270ff8a63f921ec55ba6dd77b5e34b02ee"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "f06761a50cdb378606cda6c75575c737f9436c6e3462edf50cd7293077440a9c"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "bbc4aa527c995459606f349f40ffa36527209ee6f409d85f4fc18c080baf0b0b"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "5277f26906a75fc4385261886ffe13004b7926d868220eb432986880053a9c5a"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "1209ff826ee72b9387753795dec547c51db009ff10284340350b9dbebe79c1f1"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "9a211c5d669c4228435c5a9f79c5cd4ef35e45749cc134b4c20a74993423ad38"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "471fc56f347ea507f4b653d0e2e440111dbf0d11a5c32341df86c0b4dc9865f7"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "ba6daa9ee7d92e098b9e14d14fc93675fdad36d2d203b9c23a14e4ca4a2791fd"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-2-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "ba6daa9ee7d92e098b9e14d14fc93675fdad36d2d203b9c23a14e4ca4a2791fd"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "checkerboard-96",
+      "iteration": "formal-3",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\checkerboard-96-formal-3.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 142.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/checkerboard-96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3.sve",
+        "capture_bytes": 2156544,
+        "image_total_bytes": 6469632,
+        "image_byte_cap": 16777216,
+        "capture_number": 3,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/patch_merge.f32",
+            "bytes": 165888,
+            "raw_sha256": "bc3f985b7385b1b624a56f2e2f5384f124a75851101c32731c2b012b3b1de515"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/positioned.f32",
+            "bytes": 165888,
+            "raw_sha256": "c3e0aef1f1fcc52e174234651b77b60e6c0db872c037e0436b2e6b42240aabf3"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/ln1.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "53ee3ac34f7592e228583e2dddb0c9270ff8a63f921ec55ba6dd77b5e34b02ee"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              497664,
+              497664
+            ],
+            "selector_ne": [
+              72,
+              16,
+              36,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              497664
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/qkv.0.f32",
+            "bytes": 497664,
+            "raw_sha256": "f06761a50cdb378606cda6c75575c737f9436c6e3462edf50cd7293077440a9c"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/block.0.f32",
+            "bytes": 165888,
+            "raw_sha256": "bbc4aa527c995459606f349f40ffa36527209ee6f409d85f4fc18c080baf0b0b"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/ln1.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "5277f26906a75fc4385261886ffe13004b7926d868220eb432986880053a9c5a"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/block.1.f32",
+            "bytes": 165888,
+            "raw_sha256": "1209ff826ee72b9387753795dec547c51db009ff10284340350b9dbebe79c1f1"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/ln1.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "9a211c5d669c4228435c5a9f79c5cd4ef35e45749cc134b4c20a74993423ad38"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/block.26.f32",
+            "bytes": 165888,
+            "raw_sha256": "471fc56f347ea507f4b653d0e2e440111dbf0d11a5c32341df86c0b4dc9865f7"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              1152,
+              36,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/post_norm.f32",
+            "bytes": 165888,
+            "raw_sha256": "ba6daa9ee7d92e098b9e14d14fc93675fdad36d2d203b9c23a14e4ca4a2791fd"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "selector_ne": [
+              4608,
+              9,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              165888,
+              165888
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/checkerboard-96-formal-3-taps/merged.f32",
+            "bytes": 165888,
+            "raw_sha256": "ba6daa9ee7d92e098b9e14d14fc93675fdad36d2d203b9c23a14e4ca4a2791fd"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "warmup",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gradient-192x96-warmup.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 151.0
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "formal-1",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gradient-192x96-formal-1.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 177.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/gradient-192x96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1.sve",
+        "capture_bytes": 4313088,
+        "image_total_bytes": 4313088,
+        "image_byte_cap": 16777216,
+        "capture_number": 1,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/patch_merge.f32",
+            "bytes": 331776,
+            "raw_sha256": "8cd2bf65480ecfe72512cd7f1fa5380ca6e4ce6e97c6e0acc37907cd776ae2ce"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/positioned.f32",
+            "bytes": 331776,
+            "raw_sha256": "cd1b3884bb3906cd489a644f04f56f2b0a77276a20ea1f13c9f0e6c67ae6d4c2"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/ln1.0.f32",
+            "bytes": 331776,
+            "raw_sha256": "c07b0429eb3b0904988cd70e308966d126b568bbb24e7c04ed83a1630f3e0d41"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              995328,
+              995328
+            ],
+            "selector_ne": [
+              72,
+              16,
+              72,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              995328
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/qkv.0.f32",
+            "bytes": 995328,
+            "raw_sha256": "1eee9ff8663b7f3dd5de6b176e4ba45e07f2aa9e0a85c9781d294a50cedf31d1"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/block.0.f32",
+            "bytes": 331776,
+            "raw_sha256": "b38fbb6e1ed36229571854025ba5eea933f4c66516846d72f4a18dde9820973d"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/ln1.1.f32",
+            "bytes": 331776,
+            "raw_sha256": "84b301d0d9b82c2cd3dda50f5344ad078e9a0b6cca268cd9223f95f8934dbab6"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/block.1.f32",
+            "bytes": 331776,
+            "raw_sha256": "07d954d393490ff03322d675f1b8455d3d6f25ae6bdeb07bd6e719f19b5c3070"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/ln1.26.f32",
+            "bytes": 331776,
+            "raw_sha256": "596573594ab6953452720f2ce1cd809666ae4ba84cfee2656d44440e24073b6a"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/block.26.f32",
+            "bytes": 331776,
+            "raw_sha256": "cf5409b64a013ab082a41eae9f7974bfdf3b05ee359eaa9665f7510f50eb5480"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/post_norm.f32",
+            "bytes": 331776,
+            "raw_sha256": "378c499931f3c381aa6e17f6d373f89ef14ec07724e285a77f70956025784998"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              18,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              4608,
+              18,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-1-taps/merged.f32",
+            "bytes": 331776,
+            "raw_sha256": "378c499931f3c381aa6e17f6d373f89ef14ec07724e285a77f70956025784998"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "formal-2",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gradient-192x96-formal-2.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 195.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/gradient-192x96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2.sve",
+        "capture_bytes": 4313088,
+        "image_total_bytes": 8626176,
+        "image_byte_cap": 16777216,
+        "capture_number": 2,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/patch_merge.f32",
+            "bytes": 331776,
+            "raw_sha256": "8cd2bf65480ecfe72512cd7f1fa5380ca6e4ce6e97c6e0acc37907cd776ae2ce"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/positioned.f32",
+            "bytes": 331776,
+            "raw_sha256": "cd1b3884bb3906cd489a644f04f56f2b0a77276a20ea1f13c9f0e6c67ae6d4c2"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/ln1.0.f32",
+            "bytes": 331776,
+            "raw_sha256": "c07b0429eb3b0904988cd70e308966d126b568bbb24e7c04ed83a1630f3e0d41"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              995328,
+              995328
+            ],
+            "selector_ne": [
+              72,
+              16,
+              72,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              995328
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/qkv.0.f32",
+            "bytes": 995328,
+            "raw_sha256": "1eee9ff8663b7f3dd5de6b176e4ba45e07f2aa9e0a85c9781d294a50cedf31d1"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/block.0.f32",
+            "bytes": 331776,
+            "raw_sha256": "b38fbb6e1ed36229571854025ba5eea933f4c66516846d72f4a18dde9820973d"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/ln1.1.f32",
+            "bytes": 331776,
+            "raw_sha256": "84b301d0d9b82c2cd3dda50f5344ad078e9a0b6cca268cd9223f95f8934dbab6"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/block.1.f32",
+            "bytes": 331776,
+            "raw_sha256": "07d954d393490ff03322d675f1b8455d3d6f25ae6bdeb07bd6e719f19b5c3070"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/ln1.26.f32",
+            "bytes": 331776,
+            "raw_sha256": "596573594ab6953452720f2ce1cd809666ae4ba84cfee2656d44440e24073b6a"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/block.26.f32",
+            "bytes": 331776,
+            "raw_sha256": "cf5409b64a013ab082a41eae9f7974bfdf3b05ee359eaa9665f7510f50eb5480"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/post_norm.f32",
+            "bytes": 331776,
+            "raw_sha256": "378c499931f3c381aa6e17f6d373f89ef14ec07724e285a77f70956025784998"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              18,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              4608,
+              18,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-2-taps/merged.f32",
+            "bytes": 331776,
+            "raw_sha256": "378c499931f3c381aa6e17f6d373f89ef14ec07724e285a77f70956025784998"
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "gradient-192x96",
+      "iteration": "formal-3",
+      "sve_path": "E:\\Strata-Hetero-data\\vision-stage-oracle\\20261009-43-native\\gradient-192x96-formal-3.sve",
+      "native_frozen_sha_pass": true,
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 190.0,
+      "manifest": {
+        "schema_version": 1,
+        "status": "stages_captured",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "image": "E:/Strata-Hetero-data/vision-fixtures/20261009-22-vision-oracle-cpu/gradient-192x96.png",
+        "sve_output": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3.sve",
+        "capture_bytes": 4313088,
+        "image_total_bytes": 12939264,
+        "image_byte_cap": 16777216,
+        "capture_number": 3,
+        "stages": [
+          {
+            "stage": "patch_merge",
+            "selector": "patch_bias",
+            "target_name": "patch_bias",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/patch_merge.f32",
+            "bytes": 331776,
+            "raw_sha256": "8cd2bf65480ecfe72512cd7f1fa5380ca6e4ce6e97c6e0acc37907cd776ae2ce"
+          },
+          {
+            "stage": "positioned",
+            "selector": "inp_pos_emb",
+            "target_name": "inp_pos_emb",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/positioned.f32",
+            "bytes": 331776,
+            "raw_sha256": "cd1b3884bb3906cd489a644f04f56f2b0a77276a20ea1f13c9f0e6c67ae6d4c2"
+          },
+          {
+            "stage": "ln1.0",
+            "selector": "ln1-0",
+            "target_name": "ln1-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/ln1.0.f32",
+            "bytes": 331776,
+            "raw_sha256": "c07b0429eb3b0904988cd70e308966d126b568bbb24e7c04ed83a1630f3e0d41"
+          },
+          {
+            "stage": "qkv.0",
+            "selector": "Qcur-0",
+            "target_name": "node_35",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              3456,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              13824,
+              995328,
+              995328
+            ],
+            "selector_ne": [
+              72,
+              16,
+              72,
+              1
+            ],
+            "selector_nb": [
+              4,
+              288,
+              13824,
+              995328
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/qkv.0.f32",
+            "bytes": 995328,
+            "raw_sha256": "1eee9ff8663b7f3dd5de6b176e4ba45e07f2aa9e0a85c9781d294a50cedf31d1"
+          },
+          {
+            "stage": "block.0",
+            "selector": "layer_out-0",
+            "target_name": "layer_out-0",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/block.0.f32",
+            "bytes": 331776,
+            "raw_sha256": "b38fbb6e1ed36229571854025ba5eea933f4c66516846d72f4a18dde9820973d"
+          },
+          {
+            "stage": "ln1.1",
+            "selector": "ln1-1",
+            "target_name": "ln1-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/ln1.1.f32",
+            "bytes": 331776,
+            "raw_sha256": "84b301d0d9b82c2cd3dda50f5344ad078e9a0b6cca268cd9223f95f8934dbab6"
+          },
+          {
+            "stage": "block.1",
+            "selector": "layer_out-1",
+            "target_name": "layer_out-1",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/block.1.f32",
+            "bytes": 331776,
+            "raw_sha256": "07d954d393490ff03322d675f1b8455d3d6f25ae6bdeb07bd6e719f19b5c3070"
+          },
+          {
+            "stage": "ln1.26",
+            "selector": "ln1-26",
+            "target_name": "ln1-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/ln1.26.f32",
+            "bytes": 331776,
+            "raw_sha256": "596573594ab6953452720f2ce1cd809666ae4ba84cfee2656d44440e24073b6a"
+          },
+          {
+            "stage": "block.26",
+            "selector": "layer_out-26",
+            "target_name": "layer_out-26",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/block.26.f32",
+            "bytes": 331776,
+            "raw_sha256": "cf5409b64a013ab082a41eae9f7974bfdf3b05ee359eaa9665f7510f50eb5480"
+          },
+          {
+            "stage": "post_norm",
+            "selector": "norm_b-27",
+            "target_name": "norm_b-27",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              1152,
+              72,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              4608,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/post_norm.f32",
+            "bytes": 331776,
+            "raw_sha256": "378c499931f3c381aa6e17f6d373f89ef14ec07724e285a77f70956025784998"
+          },
+          {
+            "stage": "merged",
+            "selector": "norm_b-27 (reshaped)",
+            "target_name": "norm_b-27 (reshaped)",
+            "actual_dtype": "F32",
+            "type_id": 0,
+            "ne": [
+              4608,
+              18,
+              1,
+              1
+            ],
+            "nb": [
+              4,
+              18432,
+              331776,
+              331776
+            ],
+            "selector_ne": [
+              4608,
+              18,
+              1,
+              1
+            ],
+            "selector_nb": [
+              4,
+              18432,
+              331776,
+              331776
+            ],
+            "path": "E:/Strata-Hetero-data/vision-stage-oracle/20261009-43-native/gradient-192x96-formal-3-taps/merged.f32",
+            "bytes": 331776,
+            "raw_sha256": "378c499931f3c381aa6e17f6d373f89ef14ec07724e285a77f70956025784998"
+          }
+        ]
+      }
+    }
+  ],
+  "helper_started": true,
+  "core_created": false,
+  "controller_identity": {
+    "pid": 22580,
+    "parent_pid": 17672,
+    "create_time": 1791547201.454042,
+    "executable": "c:\\python314\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/client.py",
+      "--run-native"
+    ]
+  },
+  "input_identities": [
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+      "bytes": 5069824,
+      "sha256": "f01aa1f111931e4f24c2003d65bd3ab853370c7c1b7f7a8f62900d6b2c7a7c6d",
+      "current_stat": {
+        "size_bytes": 5069824,
+        "mtime_ns": 1791543415114209000,
+        "ctime_ns": 1791543414847765200,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1407374883621546
+        }
+      }
+    },
+    {
+      "path": "E:/Strata-Hetero-data/models/vision-ed59f92/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+      "size_bytes": 907543008,
+      "sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+      "current_stat": {
+        "size_bytes": 907543008,
+        "mtime_ns": 1791523393257725200,
+        "ctime_ns": 1791523318557938500,
+        "file_id": {
+          "volume": 6117023165593423684,
+          "index": 1970324836990804
+        }
+      }
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "size_bytes": 10946624,
+      "sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+      "mtime_ns": 1791267636000000000,
+      "ctime_ns": 1791267635050000000,
+      "volume": 2894736058,
+      "file_index": 790292856832,
+      "stat_stable_while_hashed": true,
+      "identity_receipt": "bench/hetero/20261008-00-admission/model-integrity-02.json",
+      "current_stat": {
+        "size_bytes": 10946624,
+        "mtime_ns": 1791267636000000000,
+        "ctime_ns": 1791267635050000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292856832
+        }
+      }
+    }
+  ],
+  "native_direct_root_binding": {
+    "full_argv_verified": true,
+    "identity": {
+      "pid": 3628,
+      "parent_pid": 22580,
+      "create_time": 1791547202.3237853,
+      "executable": "e:\\strata-hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+        "--mmproj",
+        "E:/Strata-Hetero-data/models/vision-ed59f92/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+        "--model",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--threads",
+        "10",
+        "--max-tokens",
+        "256",
+        "--flash-attn",
+        "off",
+        "--enable-stage-taps"
+      ]
+    }
+  },
+  "pid": 3628,
+  "created_utc": "2026-10-09T12:00:02.323786+00:00",
+  "argv": [
+    "E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+    "--mmproj",
+    "E:/Strata-Hetero-data/models/vision-ed59f92/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "--model",
+    "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "--threads",
+    "10",
+    "--max-tokens",
+    "256",
+    "--flash-attn",
+    "off",
+    "--enable-stage-taps"
+  ],
+  "tree": {
+    "launcher": {
+      "pid": 3628,
+      "parent_pid": 22580,
+      "create_time": 1791547202.3237853,
+      "executable": "e:\\strata-hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+        "--mmproj",
+        "E:/Strata-Hetero-data/models/vision-ed59f92/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+        "--model",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--threads",
+        "10",
+        "--max-tokens",
+        "256",
+        "--flash-attn",
+        "off",
+        "--enable-stage-taps"
+      ]
+    },
+    "descendants": [
+      {
+        "pid": 3572,
+        "parent_pid": 3628,
+        "create_time": 1791547202.330282,
+        "executable": "c:\\windows\\system32\\conhost.exe",
+        "command_line": [
+          "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+          "0x4"
+        ]
+      }
+    ],
+    "actual_service_child": null,
+    "live_service_children": 0
+  },
+  "exit_code": 0,
+  "final_tree": {
+    "launcher": {
+      "pid": 3628,
+      "parent_pid": 22580,
+      "create_time": 1791547202.3237853,
+      "executable": "e:\\strata-hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+        "--mmproj",
+        "E:/Strata-Hetero-data/models/vision-ed59f92/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+        "--model",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--threads",
+        "10",
+        "--max-tokens",
+        "256",
+        "--flash-attn",
+        "off",
+        "--enable-stage-taps"
+      ]
+    },
+    "descendants": [
+      {
+        "pid": 3572,
+        "parent_pid": 3628,
+        "create_time": 1791547202.330282,
+        "executable": "c:\\windows\\system32\\conhost.exe",
+        "command_line": [
+          "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+          "0x4"
+        ]
+      }
+    ],
+    "actual_service_child": null,
+    "live_service_children": 0
+  },
+  "descendant_cleanup": {
+    "descendant_cleanup": [
+      {
+        "identity": {
+          "pid": 3572,
+          "parent_pid": 3628,
+          "create_time": 1791547202.330282,
+          "executable": "c:\\windows\\system32\\conhost.exe",
+          "command_line": [
+            "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+            "0x4"
+          ]
+        },
+        "action": "exited_during_cleanup"
+      }
+    ],
+    "remaining_owned_descendants": [],
+    "terminal": true
+  },
+  "root_cleanup": null,
+  "monitor_cleanup": null
+}

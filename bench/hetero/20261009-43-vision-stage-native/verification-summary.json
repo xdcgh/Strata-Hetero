@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "status": "native_stage_fingerprint_pass",
+  "verified_utc": "2026-10-09T12:01:56.958836+00:00",
+  "single_native_launch": true,
+  "retry": false,
+  "openvino_created": false,
+  "npu_run": false,
+  "formal_capture_count": 12,
+  "stage_file_count": 132,
+  "commands": 20,
+  "baselines": 4,
+  "normal_warmups": 4,
+  "formals": 12,
+  "all_final_full_sve_sha_match_frozen23": true,
+  "frozen_sve_sha256": {
+    "gray-96": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+    "quadrants-96": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+    "checkerboard-96": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+    "gradient-192x96": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b"
+  },
+  "tap_bytes_per_image": {
+    "gray-96": 6469632,
+    "quadrants-96": 6469632,
+    "checkerboard-96": 6469632,
+    "gradient-192x96": 12939264
+  },
+  "tap_byte_cap_per_image": 16777216,
+  "actual_cpython_controller": {
+    "pid": 22580,
+    "parent_pid": 17672,
+    "create_time": 1791547201.454042,
+    "executable": "c:\\python314\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/client.py",
+      "--run-native"
+    ]
+  },
+  "native_direct_root": {
+    "full_argv_verified": true,
+    "identity": {
+      "pid": 3628,
+      "parent_pid": 22580,
+      "create_time": 1791547202.3237853,
+      "executable": "e:\\strata-hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\build\\vision-stage-taps-cpu-20261009-39\\bin\\strata-vision.exe",
+        "--mmproj",
+        "E:/Strata-Hetero-data/models/vision-ed59f92/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+        "--model",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--threads",
+        "10",
+        "--max-tokens",
+        "256",
+        "--flash-attn",
+        "off",
+        "--enable-stage-taps"
+      ]
+    }
+  },
+  "launcher_pid": 17672,
+  "native_helper_exit_code": 0,
+  "terminal_pids_observed_gone": [
+    17672,
+    22580,
+    3628
+  ],
+  "remaining_owned_descendants": [],
+  "resource_samples": 5,
+  "all_global_memory_gates_pass": true,
+  "minimum_physical_available_bytes": 117230411776,
+  "minimum_commit_available_bytes": 122467995648,
+  "first_resource_utc": "2026-10-09T12:00:01.583802+00:00",
+  "last_resource_utc": "2026-10-09T12:00:05.712633+00:00",
+  "last_native_event_utc": "2026-10-09T12:00:06.493952+00:00",
+  "native_receipt_sha256": "005b73df9b3182252256d89e6b71f9a3e005a1bb01d01d78fd74e952c75230fc",
+  "executed_client_sha256": "ea0dbe8745be86496b9bcf3c05631835882a89e4b2f3a3a0f7134d6b451633fe",
+  "executed_contract_sha256": "7c0bc7f5bdf72892112e47f9889e38c292fd3eddc75b90e3995a46d476a17f17",
+  "outer_observer_error_preserved": {
+    "tool_chunk_id": "9149e8",
+    "exit_code": 1,
+    "reason": "argv0 slash spelling; live root exe was verified before lexical assertion, then wrapper observer exited; native client was not rerun",
+    "actual_controller_argv_tail_verified_postrun_from_worker_self_record": true,
+    "outer_launcher_os_exit_code_directly_observed": false
+  },
+  "scope": "Native stages only; no OpenVINO authorization or execution."
+}

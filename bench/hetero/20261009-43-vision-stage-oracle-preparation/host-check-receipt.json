@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "host_preparation_passed",
+  "execution_authorized": false,
+  "guard_review_only": true,
+  "native_helper_started": false,
+  "gguf_read": false,
+  "core_created": false,
+  "checks": [
+    {
+      "label": "native-default",
+      "argv": [
+        "E:/Strata-Hetero-data/venv/Scripts/python.exe",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-43-vision-stage-oracle-preparation\\client.py"
+      ],
+      "start_utc": "2026-10-09T11:55:24.330692+00:00",
+      "end_utc": "2026-10-09T11:55:24.433714+00:00",
+      "exit_code": 0
+    },
+    {
+      "label": "ov-default",
+      "argv": [
+        "E:/Strata-Hetero-data/venv/Scripts/python.exe",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-43-vision-stage-oracle-preparation\\ov_driver.py"
+      ],
+      "start_utc": "2026-10-09T11:55:24.433799+00:00",
+      "end_utc": "2026-10-09T11:55:24.540854+00:00",
+      "exit_code": 0
+    },
+    {
+      "label": "host-fixtures",
+      "argv": [
+        "E:/Strata-Hetero-data/venv/Scripts/python.exe",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-43-vision-stage-oracle-preparation\\test_client.py",
+        "-v"
+      ],
+      "start_utc": "2026-10-09T11:55:24.540941+00:00",
+      "end_utc": "2026-10-09T11:55:25.003509+00:00",
+      "exit_code": 0
+    }
+  ],
+  "pure_fixture_count": 5,
+  "ast_parsed": [
+    "client.py",
+    "ov_driver.py",
+    "analyse.py",
+    "test_client.py"
+  ],
+  "source_sha256": {
+    "client.py": "ea0dbe8745be86496b9bcf3c05631835882a89e4b2f3a3a0f7134d6b451633fe",
+    "ov_driver.py": "93381aa30ff0de243e4a62e2d48bb74a27539abbf6f1449cdc885ceb62da4a19",
+    "analyse.py": "a161378939fc7c00d12dcb452dda0e5e1405c4a0fecacfdde5245fd5d319e336",
+    "test_client.py": "d38dfde4717bf380579eb4029db74739ff312739fbe6995ee0b0dffb9199b54b",
+    "execution-contract.json": "9229db83666b79dcd8c7a7e8e293cd0cebb8448463dd8b67c5363cc21d656b2a",
+    "README.md": "29b2f480d88bc931b872b816d13b6c0f5e72a52c1cf6f7d78b4bc661a7848775",
+    "preparation.json": "53e3b7e4c536af22f4b73b00c5b0d9ece4ad7215767adca8655e049c1bbf22a1"
+  },
+  "actual_host_interpreter": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "controller_venv": "E:/Strata-Hetero-data/venv/Scripts/python.exe"
+}

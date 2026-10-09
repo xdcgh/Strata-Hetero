@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-10-09T12:00:01.4024144Z",
+  "launcher_pid": 17672,
+  "argv": [
+    "E:/Strata-Hetero-data/venv/Scripts/python.exe",
+    "-u",
+    "-B",
+    "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/bench/hetero/20261009-43-vision-stage-oracle-preparation/client.py",
+    "--run-native"
+  ],
+  "scope": "native stage only; no OV",
+  "contract_sha256": "7c0bc7f5bdf72892112e47f9889e38c292fd3eddc75b90e3995a46d476a17f17"
+}

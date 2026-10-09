@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "plan_only",
+  "execution_authorized": false,
+  "native_commands": 20,
+  "baseline_native_checks": 4,
+  "warmups": 4,
+  "formal_tap_captures": 12,
+  "selectors": [
+    "patch_merge",
+    "positioned",
+    "ln1.0",
+    "ln1.1",
+    "ln1.26",
+    "qkv.0",
+    "block.0",
+    "block.1",
+    "block.26",
+    "post_norm",
+    "merged"
+  ],
+  "max_tap_bytes_per_image": 16777216,
+  "helper_started": false,
+  "gguf_read": false,
+  "core_created": false,
+  "guard_binding": {
+    "shared_agent42_api": "Reviewed run42 frozen OwnedServiceTree/ResourceMonitor",
+    "bind_fields": [
+      "pid",
+      "creation_time",
+      "executable",
+      "argv",
+      "parent_relation"
+    ],
+    "actual_cpython_child_required_for_ov": true,
+    "native_helper_direct_executable": true,
+    "failed_gate_action": "Stop/reap verified actual descendant tree before launcher; preserve terminal identities.",
+    "reviewed_binding": {
+      "module_file": "bench/hetero/20261009-42-native-q4k-q5_1-ipc/executed-client.py",
+      "sha256": "49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83",
+      "root_reviewed": true,
+      "review_scope": "Shared owned-process guard only; vision execution is not authorized."
+    }
+  },
+  "ov_fingerprint_changes_are_explicit": true
+}
