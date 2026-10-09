@@ -1,0 +1,71 @@
+{
+  "schema": "native-q4k-q5_1-original-blob-binding-v1",
+  "status": "pass",
+  "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+  "scope": "one extracted 3,072,000-byte native expert blob; no GGUF shard read",
+  "blob_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+  "blob_bytes": 3072000,
+  "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+  "blob_stat_before": {
+    "size_bytes": 3072000,
+    "mtime_ns": 1791520543244546300,
+    "ctime_ns": 1791520543243549700,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 4222124650674796
+    }
+  },
+  "blob_stat_after": {
+    "size_bytes": 3072000,
+    "mtime_ns": 1791520543244546300,
+    "ctime_ns": 1791520543243549700,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 4222124650674796
+    }
+  },
+  "identity_path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+  "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "selection": {
+    "layer": 28,
+    "expert": 288
+  },
+  "quantized_source_types": {
+    "gate": "Q4_K",
+    "up": "Q4_K",
+    "down": "Q5_1"
+  },
+  "segments": {
+    "gate": {
+      "offset_bytes": 0,
+      "bytes": 921600,
+      "sha256": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+      "identity_sha256": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba"
+    },
+    "up": {
+      "offset_bytes": 921600,
+      "bytes": 921600,
+      "sha256": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+      "identity_sha256": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf"
+    },
+    "down": {
+      "offset_bytes": 1843200,
+      "bytes": 1228800,
+      "sha256": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4",
+      "identity_sha256": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+    }
+  },
+  "down_offset_bytes": 1843200,
+  "q5_1_minimums": {
+    "shape": [
+      2560,
+      20
+    ],
+    "dtype": "float32",
+    "sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1",
+    "finite": true
+  },
+  "openvino_imported": false,
+  "core_created": false,
+  "device_touched": false
+}

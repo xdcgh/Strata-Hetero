@@ -184,6 +184,21 @@ class HeteroXpuServiceTests(unittest.TestCase):
         return self.init_frame(rows=rows, nonce=nonce,
                                identity_sha=hashlib.sha256(self.identity_raw).hexdigest(), request_id=request_id)
 
+    def native_identity(self, *, down_sha=None, types=None):
+        identity = dict(self.identity)
+        identity["source"] = {
+            "quantized_source_types": types or {"gate": "Q4_K", "up": "Q4_K", "down": "Q5_1"},
+            "raw_selected_payload_bytes": {"gate": 921600, "up": 921600, "down": 1228800},
+            "raw_selected_payload_sha256": {"gate": "a" * 64, "up": "b" * 64,
+                                            "down": down_sha or "c" * 64},
+        }
+        return identity
+
+    @staticmethod
+    def native_header():
+        return {"hidden": 2560, "intermediate": 640, "tensors": {
+            "gate": {"shape": [640, 2560]}, "up": {"shape": [640, 2560]}, "down": {"shape": [2560, 640]}}}
+
     def test_module_and_default_cli_validate_only_without_openvino_or_core(self):
         stdout = io.StringIO()
         real_import = builtins.__import__
@@ -206,6 +221,110 @@ class HeteroXpuServiceTests(unittest.TestCase):
         self.assertFalse(result["core_created"])
         self.assertFalse(result["weights_loaded"])
         self.assertFalse(result["file_written"])
+
+    def test_native_metadata_only_stats_blob_without_opening_payload_or_core(self):
+        blob = self.root / "native-expert.bin"
+        with blob.open("wb") as stream:
+            stream.truncate(service_mod.NATIVE_BLOB_BYTES)
+        identity = self.native_identity()
+        header = self.native_header()
+        real_open = Path.open
+
+        def reject_blob_read(path, *args, **kwargs):
+            if path == blob:
+                raise AssertionError("metadata-only opened native payload")
+            return real_open(path, *args, **kwargs)
+
+        stdout = io.StringIO()
+        with mock.patch.object(service_mod, "_load_metadata", return_value=(identity, header, "f" * 64)), \
+             mock.patch.object(service_mod, "_create_openvino_runtime", side_effect=AssertionError("Core forbidden")), \
+             mock.patch.object(Path, "open", reject_blob_read), contextlib.redirect_stdout(stdout):
+            rc = service_mod.main(["--operator", service_mod.OPERATOR_NATIVE, "--native-blob", str(blob),
+                                   "--weights", str(self.weights_path), "--identity", str(self.identity_path)])
+        self.assertEqual(rc, 0)
+        result = json.loads(stdout.getvalue())
+        self.assertEqual(result["operator_signature"], service_mod.NATIVE_SIGNATURE)
+        self.assertFalse(result["native_blob_payload_read"])
+        self.assertFalse(result["core_created"])
+
+    def test_native_blob_down_minimums_are_bound_to_identity_raw_hash(self):
+        raw = bytes(service_mod.NATIVE_BLOB_BYTES)
+        blob = self.root / "native-zero-fixture.bin"
+        blob.write_bytes(raw)
+        identity = self.native_identity(down_sha=hashlib.sha256(raw[1843200:]).hexdigest())
+        identity["source"]["raw_selected_payload_sha256"] = {
+            "gate": hashlib.sha256(raw[:921600]).hexdigest(),
+            "up": hashlib.sha256(raw[921600:1843200]).hexdigest(),
+            "down": hashlib.sha256(raw[1843200:]).hexdigest(),
+        }
+        metadata = service_mod._validate_native_blob_metadata(blob, identity, self.native_header())
+        bound = service_mod._load_native_blob_binding(blob, identity, self.native_header(), metadata)
+        self.assertEqual(bound["metadata"]["down_offset_bytes"], 1843200)
+        self.assertEqual(bound["metadata"]["segment_sha256_actual"]["down"], identity["source"]["raw_selected_payload_sha256"]["down"])
+        self.assertEqual(bound["minimums"].shape, (2560, 20))
+        self.assertTrue(np.isfinite(bound["minimums"]).all())
+        bad = self.native_identity(down_sha="d" * 64)
+        bad["source"]["raw_selected_payload_sha256"].update(identity["source"]["raw_selected_payload_sha256"])
+        bad["source"]["raw_selected_payload_sha256"]["down"] = "d" * 64
+        with self.assertRaisesRegex(service_mod.ServiceError, "raw_selected_payload_sha256"):
+            service_mod._load_native_blob_binding(blob, bad, self.native_header(), metadata)
+
+    def test_native_operator_model_mismatch_fails_before_core_factory(self):
+        identity = self.native_identity(types={"gate": "Q4_K", "up": "Q4_K", "down": "Q4_K"})
+        factory = mock.Mock(side_effect=AssertionError("Core must not be created"))
+        stderr = io.StringIO()
+        with mock.patch.object(service_mod, "_redirect_stdout_keep_protocol", return_value=io.BytesIO()), \
+             mock.patch.object(service_mod, "_load_metadata", return_value=(identity, self.native_header(), "f" * 64)), \
+             contextlib.redirect_stderr(stderr):
+            rc = service_mod.main(["--serve", "--operator", service_mod.OPERATOR_NATIVE,
+                                   "--native-blob", str(self.root / "not-needed.bin"),
+                                   "--weights", str(self.weights_path), "--identity", str(self.identity_path),
+                                   "--device", "GPU.0", "--precision", "f32"], runtime_factory=factory)
+        self.assertEqual(rc, 2)
+        self.assertIn("exact Q4_K gate/up and Q5_1 down", stderr.getvalue())
+        factory.assert_not_called()
+
+    def test_native_init_uses_selected_builder_and_reports_operator_readiness(self):
+        weights = {"gate": np.zeros((2, 3), np.float32), "up": np.ones((2, 3), np.float32),
+                   "down": np.ones((3, 2), np.float32)}
+        native_header = self.native_header()
+        raw = bytes(service_mod.NATIVE_BLOB_BYTES)
+        blob = self.root / "native-init-fixture.bin"
+        blob.write_bytes(raw)
+        identity = self.native_identity()
+        identity["source"]["raw_selected_payload_sha256"] = {
+            "gate": hashlib.sha256(raw[:921600]).hexdigest(),
+            "up": hashlib.sha256(raw[921600:1843200]).hexdigest(),
+            "down": hashlib.sha256(raw[1843200:]).hexdigest(),
+        }
+        identity_raw = json.dumps(identity, separators=(",", ":")).encode("utf-8")
+        self.identity_path.write_bytes(identity_raw)
+        metadata = service_mod._validate_native_blob_metadata(blob, identity, native_header)
+        binding = service_mod._load_native_blob_binding(blob, identity, native_header, metadata)
+        minimums = binding["minimums"]
+        calls = []
+
+        def builder(got_weights, got_minimums, identity, rows):
+            calls.append((got_weights, got_minimums, rows))
+            return {"rows": rows, "precision": "f32"}, {
+                "status": "constructed_uncompiled", "compiled": False, "inference_run": False,
+                "operator": service_mod.NATIVE_SIGNATURE, "native_runtime_parity": "validated-by-separate-gate"}
+
+        native_service = service_mod.ArcWorkerService(
+            weights_path=self.weights_path, identity_path=self.identity_path, identity=identity,
+            identity_sha256=hashlib.sha256(identity_raw).hexdigest(), header_info=native_header,
+            core=self.core, ov_api=self.ov, worker_api=self.worker_api, operator=service_mod.OPERATOR_NATIVE,
+            native_binding=binding, preloaded_weights=weights, native_model_builder=builder)
+        init = self.init_frame(rows=2, identity_sha=hashlib.sha256(identity_raw).hexdigest())
+        _, status, _, body = self.decode_result(native_service.handle_frame(init))
+        ready = json.loads(body)
+        self.assertEqual(status, 0)
+        self.assertEqual(ready["operator"], service_mod.OPERATOR_NATIVE)
+        self.assertEqual(ready["operator_signature"], service_mod.NATIVE_SIGNATURE)
+        self.assertTrue(ready["weights_ready"])
+        self.assertEqual(ready["native_blob_binding"]["blob_sha256"], hashlib.sha256(raw).hexdigest())
+        self.assertIs(calls[0][1], minimums)
+        self.assertEqual(self.worker_api.model_calls, [])
 
     def test_init_returns_ready_nonce_identity_and_reuses_same_static_graph(self):
         nonce = "abcdef0123456789abcdef0123456789"

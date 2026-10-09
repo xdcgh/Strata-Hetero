@@ -27,6 +27,12 @@ INFER_KIND = 2
 MAX_INIT_JSON_BYTES = 64 * 1024
 MAX_ERROR_JSON_BYTES = 4096
 RESULT_PREFIX = struct.Struct("<IQ")  # status:u32, worker_wall_ns:u64
+OPERATOR_F32 = "f32"
+OPERATOR_NATIVE = "native-q4k-q5_1"
+NATIVE_SIGNATURE = "Q4_K_Q8_K_SILU_Q5_1_Q8_1"
+NATIVE_DIMENSIONS = {"hidden": 2560, "intermediate": 640}
+NATIVE_SEGMENTS = {"gate": (0, 921600), "up": (921600, 921600), "down": (1843200, 1228800)}
+NATIVE_BLOB_BYTES = sum(size for _, size in NATIVE_SEGMENTS.values())
 
 
 class ServiceError(RuntimeError):
@@ -96,9 +102,30 @@ class ArcWorkerService:
 
     def __init__(self, *, weights_path: Path, identity_path: Path, identity: dict[str, Any],
                  identity_sha256: str, header_info: dict[str, Any], core: Any, ov_api: Any,
-                 worker_api=xpu_worker, device: str = "GPU.0", precision: str = "f32") -> None:
+                 worker_api=xpu_worker, device: str = "GPU.0", precision: str = "f32",
+                 operator: str = OPERATOR_F32, native_binding: dict[str, Any] | None = None,
+                 preloaded_weights: dict[str, Any] | None = None, native_model_builder=None) -> None:
         if device != "GPU.0" or precision != "f32":
             raise ServiceError("service is restricted to exact GPU.0 with f32 precision")
+        if operator not in (OPERATOR_F32, OPERATOR_NATIVE):
+            raise ServiceError(f"unsupported operator: {operator}")
+        if operator == OPERATOR_NATIVE and (native_binding is None or preloaded_weights is None):
+            raise ServiceError("native operator requires hash-bound blob and preloaded verified F32 weights")
+        if operator == OPERATOR_NATIVE:
+            source = identity.get("source", {})
+            binding_meta = native_binding.get("metadata", {})
+            expected_raw = source.get("raw_selected_payload_sha256")
+            if (source.get("quantized_source_types") != {"gate": "Q4_K", "up": "Q4_K", "down": "Q5_1"} or
+                    not isinstance(expected_raw, dict) or binding_meta.get("segment_sha256_expected") != expected_raw or
+                    binding_meta.get("segment_sha256_actual") != expected_raw or binding_meta.get("down_offset_bytes") != 1843200 or
+                    binding_meta.get("bytes") != NATIVE_BLOB_BYTES or binding_meta.get("operator_signature") != NATIVE_SIGNATURE or
+                    (header_info.get("hidden"), header_info.get("intermediate")) != (2560, 640)):
+                raise ServiceError("native service binding does not match the identity's selected raw payload hashes")
+            minimums = native_binding.get("minimums")
+            expected_minimum_shape = (2560, 640 // 32)
+            if (type(minimums) is not worker_api.np.ndarray or minimums.dtype != worker_api.np.float32 or
+                    minimums.shape != expected_minimum_shape or not worker_api.np.isfinite(minimums).all()):
+                raise ServiceError("native Q5_1 minimum blocks are not bound finite F32 values")
         self.weights_path = Path(weights_path).resolve()
         self.identity_path = Path(identity_path).resolve()
         self.identity = identity
@@ -109,8 +136,12 @@ class ArcWorkerService:
         self.worker = worker_api
         self.device = device
         self.precision = precision
+        self.operator = operator
+        self.native_binding = native_binding
+        self.native_blob_path = Path(native_binding["metadata"]["path"]) if native_binding else None
+        self.native_model_builder = native_model_builder
         self.hidden = int(header_info["hidden"])
-        self._weights = None
+        self._weights = preloaded_weights
         self._device_info: dict[str, Any] | None = None
         self._model = None
         self._compiled = None
@@ -153,6 +184,18 @@ class ArcWorkerService:
             raise ServiceError(f"fixed identity file is invalid: {exc}") from exc
         if current != self.identity:
             raise ServiceError("fixed identity file content changed after startup validation")
+        if self.operator == OPERATOR_NATIVE:
+            self._verify_native_blob_stat()
+
+    def _verify_native_blob_stat(self) -> None:
+        expected = self.native_binding["metadata"]
+        if self.native_blob_path.is_symlink() or not self.native_blob_path.is_file():
+            raise ServiceError("fixed native blob path is missing or a symlink")
+        stat = self.native_blob_path.stat()
+        fid = expected["file_id"]
+        if (stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns, stat.st_dev, stat.st_ino) != (
+                expected["bytes"], expected["mtime_ns"], expected["ctime_ns"], fid["volume"], fid["index"]):
+            raise ServiceError("fixed native blob path identity changed after raw binding")
 
     def _verify_weights_stat(self) -> None:
         info = self.header_info
@@ -206,7 +249,20 @@ class ArcWorkerService:
                 self.ov.Type.f32 if name == "INFERENCE_PRECISION_HINT" else hint.ExecutionMode.ACCURACY)
 
         start = time.perf_counter_ns()
-        model = self.worker.make_ffn_model(self._weights, rows, "f32")
+        operator_info = {}
+        if self.operator == OPERATOR_F32:
+            model = self.worker.make_ffn_model(self._weights, rows, "f32")
+            operator_signature = "F32_MATMUL_SILU_F32"
+        else:
+            builder = self.native_model_builder
+            if builder is None:
+                builder = importlib.import_module("tools.hetero_native_openvino").build_model
+            model, operator_info = builder(self._weights, self.native_binding["minimums"], self.identity, rows)
+            if (not isinstance(operator_info, dict) or operator_info.get("status") != "constructed_uncompiled" or
+                    operator_info.get("compiled") is not False or operator_info.get("inference_run") is not False or
+                    operator_info.get("operator") != NATIVE_SIGNATURE):
+                raise ServiceError("native operator builder returned an unsupported or noisy-fallback result")
+            operator_signature = operator_info["operator"]
         compiled = self.core.compile_model(model, self.device, compile_properties)
         compile_ns = time.perf_counter_ns() - start
 
@@ -239,7 +295,11 @@ class ArcWorkerService:
             "compile_ns": compile_ns, "openvino_version": str(self.ov.__version__),
             "weights_loaded_and_hash_verified": True,
             "weights_sha256": self.identity["weights_sha256"],
+            "operator": self.operator, "operator_signature": operator_signature, "weights_ready": True,
         }
+        if self.operator == OPERATOR_NATIVE:
+            record["native_blob_binding"] = self.native_binding["metadata"]
+            record["native_operator_build"] = {k: v for k, v in operator_info.items() if k != "minimums"}
         return record, compile_ns
 
     def _handle_init(self, frame: transport.Frame) -> bytes:
@@ -372,6 +432,73 @@ def _load_metadata(weights_path: Path, identity_path: Path) -> tuple[dict[str, A
     return identity, header, _sha256(raw)
 
 
+def _validate_native_blob_metadata(blob_path: Path, identity: dict[str, Any], header: dict[str, Any]) -> dict[str, Any]:
+    """Validate fixed Q4_K/Q5_1 metadata with stat only; never read the blob payload."""
+    source = identity.get("source")
+    types = source.get("quantized_source_types") if isinstance(source, dict) else None
+    if types != {"gate": "Q4_K", "up": "Q4_K", "down": "Q5_1"}:
+        raise ServiceError("native-q4k-q5_1 requires exact Q4_K gate/up and Q5_1 down source types")
+    if (header.get("hidden"), header.get("intermediate")) != (2560, 640):
+        raise ServiceError("native-q4k-q5_1 is restricted to hidden=2560/intermediate=640")
+    expected_shapes = {"gate": [640, 2560], "up": [640, 2560], "down": [2560, 640]}
+    if any(header.get("tensors", {}).get(k, {}).get("shape") != shape for k, shape in expected_shapes.items()):
+        raise ServiceError("decoded F32 NPZ header dimensions do not match the native blob layout")
+    sizes = source.get("raw_selected_payload_bytes")
+    hashes = source.get("raw_selected_payload_sha256")
+    if sizes != {name: size for name, (_, size) in NATIVE_SEGMENTS.items()}:
+        raise ServiceError("native source payload byte counts do not match the fixed Q4_K/Q5_1 layout")
+    if not isinstance(hashes, dict) or set(hashes) != {"gate", "up", "down"}:
+        raise ServiceError("native identity must contain all three selected raw payload hashes")
+    if any(not isinstance(hashes[k], str) or re.fullmatch(r"[0-9a-f]{64}", hashes[k]) is None for k in hashes):
+        raise ServiceError("native raw payload hashes must be lowercase SHA-256")
+    if not isinstance(blob_path, Path) or blob_path.is_symlink() or not blob_path.is_file():
+        raise ServiceError("native blob path is missing, not a regular file, or a symlink")
+    stat = blob_path.stat()
+    if stat.st_size != NATIVE_BLOB_BYTES:
+        raise ServiceError(f"native blob must be exactly {NATIVE_BLOB_BYTES} bytes, got {stat.st_size}")
+    return {"path": str(blob_path.resolve()), "bytes": stat.st_size, "mtime_ns": stat.st_mtime_ns, "ctime_ns": stat.st_ctime_ns,
+            "file_id": {"volume": stat.st_dev, "index": stat.st_ino}, "layout": NATIVE_SEGMENTS,
+            "segment_sha256_expected": dict(hashes), "payload_read": False}
+
+
+def _load_native_blob_binding(blob_path: Path, identity: dict[str, Any], header: dict[str, Any],
+                              metadata: dict[str, Any]) -> dict[str, Any]:
+    """On explicit --serve only: hash all fixed raw slices and derive Q5_1 minima from those exact down bytes."""
+    before = blob_path.stat()
+    expected_id = metadata["file_id"]
+    if (before.st_size, before.st_mtime_ns, before.st_ctime_ns, before.st_dev, before.st_ino) != (
+            metadata["bytes"], metadata["mtime_ns"], metadata["ctime_ns"], expected_id["volume"], expected_id["index"]):
+        raise ServiceError("native blob identity changed after metadata validation")
+    with blob_path.open("rb", buffering=0) as stream:
+        opened = os.fstat(stream.fileno())
+        if (opened.st_size, opened.st_mtime_ns, opened.st_dev, opened.st_ino) != (
+                before.st_size, before.st_mtime_ns, before.st_dev, before.st_ino):
+            raise ServiceError("native blob path/fd identity differs before read")
+        raw = stream.read(NATIVE_BLOB_BYTES + 1)
+        final_fd = os.fstat(stream.fileno())
+    after = blob_path.stat()
+    fields = ("st_size", "st_mtime_ns", "st_dev", "st_ino")
+    if len(raw) != NATIVE_BLOB_BYTES or any(getattr(before, f) != getattr(after, f) for f in fields) or before.st_ctime_ns != after.st_ctime_ns:
+        raise ServiceError("native blob size or path identity changed during read")
+    if any(getattr(final_fd, f) != getattr(before, f) for f in fields):
+        raise ServiceError("native blob fd identity changed during read")
+    expected = identity["source"]["raw_selected_payload_sha256"]
+    parts = {name: raw[offset:offset + size] for name, (offset, size) in NATIVE_SEGMENTS.items()}
+    hashes = {name: _sha256(part) for name, part in parts.items()}
+    for name in ("gate", "up", "down"):
+        if hashes[name] != expected[name]:
+            raise ServiceError(f"native blob {name} bytes do not match identity.source.raw_selected_payload_sha256")
+    activation = importlib.import_module("tools.hetero_native_activation")
+    minimums = activation.q5_1_minimums(parts["down"], header["hidden"], header["intermediate"])
+    minima_bytes = minimums.astype("<f4", copy=False).tobytes(order="C")
+    binding = dict(metadata)
+    binding.update({"payload_read": True, "blob_sha256": _sha256(raw), "segment_sha256_actual": hashes,
+                    "down_offset_bytes": 1843200, "operator_signature": activation.OPERATOR,
+                    "q5_1_minimums_shape": list(minimums.shape),
+                    "q5_1_minimums_sha256_le_f32": _sha256(minima_bytes)})
+    return {"metadata": binding, "minimums": minimums}
+
+
 def _create_openvino_runtime():
     """This lazy import is reachable only after explicit --serve and stdout redirection."""
     ov = importlib.import_module("openvino")
@@ -394,8 +521,11 @@ def build_parser() -> argparse.ArgumentParser:
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--validate-only", action="store_true", help="default: inspect identity and NPZ headers only")
     mode.add_argument("--serve", action="store_true", help="explicitly start the Arc GPU.0 child service")
-    parser.add_argument("--weights", type=Path, required=True, help="fixed NPZ path with gate/up/down F32 arrays")
+    parser.add_argument("--weights", type=Path, required=True, help="fixed NPZ path with decoded gate/up/down F32 matrices")
     parser.add_argument("--identity", type=Path, required=True, help="fixed identity JSON path")
+    parser.add_argument("--operator", choices=(OPERATOR_F32, OPERATOR_NATIVE), default=OPERATOR_F32,
+                        help="f32 keeps the original path; native mode requires --native-blob")
+    parser.add_argument("--native-blob", type=Path, help="fixed [Q4_K gate][Q4_K up][Q5_1 down] native expert blob")
     parser.add_argument("--device", choices=("GPU.0",), help="serve mode requires exact GPU.0")
     parser.add_argument("--precision", choices=("f32",), help="serve mode requires f32")
     return parser
@@ -413,27 +543,53 @@ def main(argv: list[str] | None = None, *, runtime_factory: Callable[[], tuple[A
     try:
         parser = build_parser()
         args = parser.parse_args(raw_argv)
+        if args.operator == OPERATOR_NATIVE and args.native_blob is None:
+            parser.error("--operator native-q4k-q5_1 requires --native-blob")
+        if args.operator == OPERATOR_F32 and args.native_blob is not None:
+            parser.error("--native-blob requires --operator native-q4k-q5_1")
         if args.serve:
             if args.device != "GPU.0" or args.precision != "f32":
                 parser.error("--serve requires explicit --device GPU.0 --precision f32")
             if not args.weights.is_absolute() or not args.identity.is_absolute():
                 parser.error("--serve requires absolute --weights and --identity paths")
+            if args.native_blob is not None and not args.native_blob.is_absolute():
+                parser.error("--serve requires an absolute --native-blob path")
         identity, header, identity_sha = _load_metadata(args.weights, args.identity)
+        native_metadata = None
+        if args.operator == OPERATOR_NATIVE:
+            native_metadata = _validate_native_blob_metadata(args.native_blob, identity, header)
         if not args.serve:
-            print(json.dumps({
+            result = {
                 "status": "validated_only", "identity_sha256": identity_sha,
                 "weights_header_info": header, "openvino_imported": False,
                 "core_created": False, "device_queried": False, "weights_loaded": False,
                 "file_written": False, "worker_started": False,
-            }, indent=2, ensure_ascii=True))
+            }
+            if native_metadata is not None:
+                result.update({"operator": OPERATOR_NATIVE, "operator_signature": NATIVE_SIGNATURE,
+                               "native_blob": native_metadata, "native_blob_payload_read": False})
+            print(json.dumps(result, indent=2, ensure_ascii=True))
             return 0
         if protocol_out is None:
             raise ServiceError("serve mode has no preserved binary stdout descriptor")
+        native_binding = None
+        preloaded_weights = None
+        if args.operator == OPERATOR_NATIVE:
+            native_binding = _load_native_blob_binding(args.native_blob, identity, header, native_metadata)
+            preloaded_weights = xpu_worker.load_verified_weights(args.weights, identity, header)
+            current = args.weights.stat()
+            if (current.st_size, current.st_mtime_ns, current.st_dev, current.st_ino) != (
+                    header["size_bytes"], header["mtime_ns"], header["file_id"]["volume"], header["file_id"]["index"]):
+                raise ServiceError("verified NPZ path identity changed before Core creation")
+            current_blob = _validate_native_blob_metadata(args.native_blob, identity, header)
+            if any(current_blob[k] != native_binding["metadata"][k] for k in ("bytes", "mtime_ns", "ctime_ns", "file_id")):
+                raise ServiceError("native blob path identity changed before Core creation")
         factory = _create_openvino_runtime if runtime_factory is None else runtime_factory
         ov, core = factory()
         service = ArcWorkerService(weights_path=args.weights, identity_path=args.identity,
                                    identity=identity, identity_sha256=identity_sha,
-                                   header_info=header, core=core, ov_api=ov)
+                                   header_info=header, core=core, ov_api=ov, operator=args.operator,
+                                   native_binding=native_binding, preloaded_weights=preloaded_weights)
         return serve_stdio(service, sys.stdin.buffer, protocol_out)
     except SystemExit:
         raise

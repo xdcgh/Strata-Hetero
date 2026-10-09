@@ -1,0 +1,21 @@
+{
+  "reviewed_utc": "2026-10-09T10:48:24.352753+00:00",
+  "status": "reviewed_pure_tests_pass_no_native_ipc_yet",
+  "root_tests": {
+    "count": 63,
+    "failed": 0,
+    "command": "venv-intel python -m unittest tools.test_hetero_xpu_service tools.test_hetero_xpu_transport tools.test_hetero_native_activation tools.test_hetero_vision_qwen3vl tools.test_hetero_vision_preparation"
+  },
+  "actual_default_native_metadata": {
+    "exit": 0,
+    "core_created": false,
+    "worker_started": false,
+    "native_blob_payload_read": false
+  },
+  "sources": {
+    "tools/hetero_xpu_service.py": "069d77d31e7b19a7d119ff14819694ce479a9393e7273c6217fb12e636d991d2",
+    "tools/test_hetero_xpu_service.py": "563c0856c38fa8655d88a936d7c7b861eb8119f40747595aae5f403bf84959af",
+    "tools/hetero_native_activation.py": "31323455274a50236a6274464e51fc622c717f09bead8ab96337e133ce0dacaf",
+    "tools/hetero_native_openvino.py": "ddb26d786b4db2aff0f8360ed21d165fa65a399c8b4f27ac338bdea4ed60327a"
+  }
+}
