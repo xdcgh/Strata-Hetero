@@ -1,0 +1,93 @@
+cmake_minimum_required(VERSION 3.24)
+project(strata_hetero_native_cpu LANGUAGES C CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+if(MSVC)
+  # Match STRATA_PORTABLE's static runtime in the linked CPU/ggml libraries.
+  set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded")
+endif()
+
+get_filename_component(STRATA_ROOT "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
+set(HETERO_NATIVE_GGML_DIR "" CACHE PATH "Optional existing llama.cpp checkout at the pinned ggml revision")
+if(HETERO_NATIVE_GGML_DIR)
+  set(STRATA_GGML_DIR "${HETERO_NATIVE_GGML_DIR}" CACHE PATH "Pinned llama.cpp source" FORCE)
+endif()
+
+# This harness shares only Strata's CPU kernel target. Keep every accelerator backend off in this project.
+set(STRATA_ENABLE_CUDA OFF CACHE BOOL "" FORCE)
+set(STRATA_ENABLE_HIP OFF CACHE BOOL "" FORCE)
+set(STRATA_HIP_GFX906 OFF CACHE BOOL "" FORCE)
+set(STRATA_ENABLE_SYCL OFF CACHE BOOL "" FORCE)
+set(STRATA_PREFILL_MMQ OFF CACHE BOOL "" FORCE)
+set(STRATA_MMQ_KQUANTS OFF CACHE BOOL "" FORCE)
+set(STRATA_ORCA_Q4KS_MMQ OFF CACHE BOOL "" FORCE)
+set(STRATA_NATIVE_EXPERTS ON CACHE BOOL "" FORCE)
+set(STRATA_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(STRATA_PORTABLE ON CACHE BOOL "" FORCE)
+set(STRATA_ISA_FLOOR "" CACHE STRING "" FORCE)
+
+set(HETERO_GGML_PIN "3cf03257f219afbe7334045ff7c6a06ac68c627d")
+if(STRATA_GGML_DIR)
+  execute_process(
+    COMMAND git -C "${STRATA_GGML_DIR}" rev-parse HEAD
+    RESULT_VARIABLE _ggml_git_rc
+    OUTPUT_VARIABLE _ggml_head
+    ERROR_VARIABLE _ggml_git_err
+    OUTPUT_STRIP_TRAILING_WHITESPACE)
+  if(NOT _ggml_git_rc EQUAL 0 OR NOT "${_ggml_head}" STREQUAL "${HETERO_GGML_PIN}")
+    message(FATAL_ERROR "STRATA_GGML_DIR must be pinned at ${HETERO_GGML_PIN}: ${_ggml_git_err}${_ggml_head}")
+  endif()
+endif()
+
+execute_process(
+  COMMAND git -C "${STRATA_ROOT}" rev-parse HEAD
+  RESULT_VARIABLE _strata_git_rc
+  OUTPUT_VARIABLE HETERO_STRATA_SOURCE_HEAD
+  ERROR_VARIABLE _strata_git_err
+  OUTPUT_STRIP_TRAILING_WHITESPACE)
+if(NOT _strata_git_rc EQUAL 0)
+  message(FATAL_ERROR "Cannot identify Strata source revision: ${_strata_git_err}")
+endif()
+
+set(HETERO_NATIVE_SOURCE "${STRATA_ROOT}/src/hetero/native_expert_bench.cpp")
+set(HETERO_NATIVE_SHA_HEADER "${CMAKE_CURRENT_LIST_DIR}/sha256.hpp")
+set(HETERO_NATIVE_CMAKE "${CMAKE_CURRENT_LIST_FILE}")
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  "${HETERO_NATIVE_SOURCE}" "${HETERO_NATIVE_SHA_HEADER}")
+file(SHA256 "${HETERO_NATIVE_SOURCE}" HETERO_NATIVE_SOURCE_SHA256)
+file(SHA256 "${HETERO_NATIVE_SHA_HEADER}" HETERO_NATIVE_SHA_HEADER_SHA256)
+file(SHA256 "${HETERO_NATIVE_CMAKE}" HETERO_NATIVE_CMAKE_SHA256)
+
+# Root CMakeLists configures the pinned ggml CPU backend with CUDA and OpenMP disabled.
+add_subdirectory("${STRATA_ROOT}" "${CMAKE_BINARY_DIR}/strata-root" EXCLUDE_FROM_ALL)
+if(NOT TARGET strata_kernels_cpu)
+  message(FATAL_ERROR "Strata did not define strata_kernels_cpu; refusing any stub implementation")
+endif()
+
+add_executable(hetero_native_expert "${HETERO_NATIVE_SOURCE}")
+target_include_directories(hetero_native_expert PRIVATE
+  "${STRATA_ROOT}/include"
+  "${CMAKE_CURRENT_LIST_DIR}")
+target_link_libraries(hetero_native_expert PRIVATE strata_kernels_cpu)
+target_compile_definitions(hetero_native_expert PRIVATE
+  "HETERO_STRATA_SOURCE_HEAD=\"${HETERO_STRATA_SOURCE_HEAD}\""
+  "HETERO_GGML_PIN=\"${HETERO_GGML_PIN}\""
+  "HETERO_NATIVE_SOURCE_SHA256=\"${HETERO_NATIVE_SOURCE_SHA256}\""
+  "HETERO_NATIVE_SHA_HEADER_SHA256=\"${HETERO_NATIVE_SHA_HEADER_SHA256}\""
+  "HETERO_NATIVE_CMAKE_SHA256=\"${HETERO_NATIVE_CMAKE_SHA256}\"")
+
+add_executable(hetero_native_expert_metadata_fixture "${STRATA_ROOT}/src/hetero/native_expert_fixture.cpp")
+target_include_directories(hetero_native_expert_metadata_fixture PRIVATE
+  "${STRATA_ROOT}/include"
+  "${CMAKE_CURRENT_LIST_DIR}")
+target_link_libraries(hetero_native_expert_metadata_fixture PRIVATE strata_kernels_cpu)
+
+enable_testing()
+add_test(NAME hetero_native_expert_metadata_fixture COMMAND hetero_native_expert_metadata_fixture)
+add_test(NAME hetero_native_expert_cli_fixtures
+  COMMAND "${CMAKE_COMMAND}"
+    "-DEXECUTABLE=$<TARGET_FILE:hetero_native_expert>"
+    "-DFIXTURE_DIR=${CMAKE_CURRENT_BINARY_DIR}/cli-fixtures"
+    -P "${CMAKE_CURRENT_LIST_DIR}/cli_fixtures.cmake")
