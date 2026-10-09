@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "live_quality_preflight_pass_before_chat_requests",
+  "created_utc": "2026-10-09T08:09:35.989018+00:00",
+  "quality_script_sha256": "ecd2836a2888a21414a8bba2dfd4ed9a5b2a4215dcb73fca769ad1ac7c77f1ee",
+  "verified_shell": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "read_only_command": "-CheckReady -RootReadyConfirmed -LauncherPid18928 -SamplerPid16948",
+  "chat_requests_sent": 0,
+  "model_requests_before_run": 0,
+  "identity_bound": true,
+  "manifest_full_prompt_paths_counts_available": true,
+  "gates": {
+    "physical_gib": 86.214,
+    "commit_gib": 47.145
+  },
+  "source_corrections": [
+    "Return and bind identity/provenance/config from validated contract at script scope",
+    "Use full validated prompt manifest instead of reduced identity-check summary",
+    "Add StrictMode and explicit read-only live preflight before generation"
+  ],
+  "failed_sources_preserved": "quality/executed-controllers/controller-01.ps1 andcontroller-02.ps1; original stderr/receipts retained",
+  "scope": "controller defects; no model restart or failed model request"
+}

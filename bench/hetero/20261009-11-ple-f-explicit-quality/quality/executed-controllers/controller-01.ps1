@@ -1,15 +1,11 @@
-#Requires -Version 7.0
 param(
     [switch]$Run,
-    [switch]$CheckReady,
     [int]$LauncherPid,
     [int]$SamplerPid,
     [switch]$RootReadyConfirmed
 )
 
 $ErrorActionPreference = 'Stop'
-Set-StrictMode -Version 2.0
-if ($Run -and $CheckReady) { throw 'Use either -CheckReady or -Run.' }
 $repo = 'C:\Users\DC\Documents\ChatGPT\Strata-Hetero'
 $runDir = Join-Path $repo 'bench\hetero\20261009-11-ple-f-explicit-quality'
 $configPath = Join-Path $runDir 'config.json'
@@ -108,9 +104,7 @@ print(json.dumps({"status":"pass","prompt_count":len(checks),"prompts":checks,"t
         $config.args[$pleIndex+1] -notlike 'F:\Strata-data\models\*' -or $nativePaths.Count -ne 4 -or
         @($nativePaths | Where-Object { $_ -like 'E:\*' -or $_ -notlike 'F:\Strata-data\models\*' }).Count -gt 0 -or
         $config.args[([array]::IndexOf($config.args,'--ple-io')+1)] -ne 'direct') { throw 'quality F arm does not retain the explicit original F-only placement config' }
-    $fullManifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
-    return [pscustomobject]@{manifest=$fullManifest;identity=$identity;provenance=$provenance;config=$config;
-        manifest_sha256=$manifestHash;config_sha256=(Get-Sha256 $configPath);
+    return [pscustomobject]@{manifest=$manifestInfo;manifest_sha256=$manifestHash;config_sha256=(Get-Sha256 $configPath);
         engine_sha256=$provenance.engine_sha256;server_file_sha256=$provenance.server_file_sha256}
 }
 
@@ -225,10 +219,7 @@ function Test-RunReady {
 }
 
 $contract = Test-QualityContract
-$identity = $contract.identity
-$provenance = $contract.provenance
-$config = $contract.config
-if (-not $Run -and -not $CheckReady) {
+if (-not $Run) {
     [ordered]@{status='prepared_quality_validated';run_started=$false;prompt_count=9;formal_per_prompt=3;warmups_per_prompt=1;
         caps='128 for eight non-code tasks, 256 for smoke_python_function';manifest_sha256=$contract.manifest_sha256;
         expected_h4_configured_status='passed'} | ConvertTo-Json -Compress
@@ -239,16 +230,6 @@ $samplerReceiptText = Get-Content -LiteralPath (Join-Path $runDir 'sampler-proce
 $samplerReceiptDoc = [System.Text.Json.JsonDocument]::Parse($samplerReceiptText)
 $qualitySamplerCreateUtc = $samplerReceiptDoc.RootElement.GetProperty('actual_child_create_utc').GetString()
 $ready = Get-ReadyBindings 'quality entry' 0
-if ($CheckReady) {
-    $sample = Get-LatestResourceGate 'read-only quality preflight'
-    if ($ready.status.activity.requests -ne 0) { throw 'Read-only preflight requires zero model requests.' }
-    [ordered]@{status='live_quality_preflight_pass';chat_requests_sent=0;prompt_count=$contract.manifest.prompts.Count;
-        model_requests=$ready.status.activity.requests;engine_pid=$ready.engine.ProcessId;
-        physical_gib=$sample.ram_gate.available_gib;commit_gib=$sample.commit_gate.available_gib;
-        manifest_has_prompt_paths=@($contract.manifest.prompts | Where-Object { -not $_.file }).Count -eq 0;
-        identity_bound=$identity.engine.path -eq $ready.engine.ExecutablePath} | ConvertTo-Json -Compress
-    exit 0
-}
 $readyBindingPath = Join-Path $runDir 'quality\ready-binding.json'
 if (Test-Path -LiteralPath $readyBindingPath) { throw 'quality ready binding exists; refusing a second run' }
     $readyBinding = [ordered]@{run_id='20261009-11-ple-f-explicit-quality';checked_utc=[DateTime]::UtcNow.ToString('o');
