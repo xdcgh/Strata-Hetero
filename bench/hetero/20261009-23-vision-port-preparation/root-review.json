@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_preparation_only",
+  "reviewed_utc": "2026-10-09T07:23:46.557612+00:00",
+  "pure_test_count": 15,
+  "default_square_and_rectangular_metadata_only_checked": true,
+  "source_review": "Static graph compared against pinned qwen3vl/qwen2vl; identified policies preserve explicit numerical differences",
+  "real_runtime_parity": "not_run",
+  "production_route_enabled": false,
+  "module_sha256": "8ba61c9ed897352649d2a6194262af9b718181325e8b74cb627d314cd752c2a3"
+}

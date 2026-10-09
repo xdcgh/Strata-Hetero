@@ -1,0 +1,282 @@
+{
+  "schema": "strata-vision-oracle-results-integrity-v1",
+  "created_utc": "2026-10-09T07:17:37.9238664Z",
+  "repository_evidence_files": [
+    {
+      "path": "client-process.json",
+      "size_bytes": 304,
+      "sha256": "956d4a1ef88e5f1b2c4086740230fde53f65d1268cd6fee9c4c920f0163b0611"
+    },
+    {
+      "path": "client-stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "client-stdout.json",
+      "size_bytes": 23647,
+      "sha256": "0f4bf62656941da902ab417086fd590578ef27f2de0a103703bbe08833a54a67"
+    },
+    {
+      "path": "cpu-build-configure.log",
+      "size_bytes": 2577,
+      "sha256": "a36d627918639fc37a4d824ed1101983ccfc293718aa2cd04fd2b53808f03be5"
+    },
+    {
+      "path": "cpu-build-receipt.json",
+      "size_bytes": 8282,
+      "sha256": "a4217621093ae8eaeffdd1ae40ba7012644a60466e8ab419fe2af97f330935fa"
+    },
+    {
+      "path": "cpu-build.log",
+      "size_bytes": 26316,
+      "sha256": "b242349541e20495909170b168d52cfb385fa9cde8a4017387159ab9ce73c335"
+    },
+    {
+      "path": "encoder-progress.jsonl",
+      "size_bytes": 32053,
+      "sha256": "a7c56294c4076f9efafa1abca35a68078495fe430ebcacca2839c462738bf365"
+    },
+    {
+      "path": "helper.stderr.log",
+      "size_bytes": 373,
+      "sha256": "a13796dcf4a202ec0376a5c0036207e47848b83574a20f5a9e3cac5c18bb0fdb"
+    },
+    {
+      "path": "oracle-summary.json",
+      "size_bytes": 3634,
+      "sha256": "23c389baef09b8ca6c70c4334aa5bb76b95458d88337f9ed12c4dfbb02ca8bf9"
+    },
+    {
+      "path": "postrun-process-check.json",
+      "size_bytes": 284,
+      "sha256": "0e2db04b5eec770d336892b14d38d39b6e9f6e5115ad8d6420c83d90ae2fa1d2"
+    },
+    {
+      "path": "preflight.json",
+      "size_bytes": 2549,
+      "sha256": "4e25ea2aa616e2b10f1c03ce47856351fcaca2abf1d88d6cc7761cf930d12158"
+    },
+    {
+      "path": "sve-output-index.json",
+      "size_bytes": 8311,
+      "sha256": "cc53ce6bcfdcf8d0755c1c54cf4578c5fe9543d8080ae23bc9e511e3ce3fbc10"
+    },
+    {
+      "path": "vision-oracle-receipt.json",
+      "size_bytes": 31031,
+      "sha256": "8fbd49fca4fc3a8a75f9374ad9756fd1c45957f3e5b8bf2cb8eeb18422e0edfb"
+    }
+  ],
+  "raw_outputs_external_to_repository": [
+    {
+      "image": "gray-96",
+      "iteration": "warmup",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gray-96-warmup.sve",
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 88.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-1",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gray-96-formal-1.sve",
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 91.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-2",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gray-96-formal-2.sve",
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 90.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-3",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gray-96-formal-3.sve",
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 78.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "warmup",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\quadrants-96-warmup.sve",
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 78.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-1",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\quadrants-96-formal-1.sve",
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 81.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-2",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\quadrants-96-formal-2.sve",
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 81.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-3",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\quadrants-96-formal-3.sve",
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 86.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "warmup",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\checkerboard-96-warmup.sve",
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 88.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-1",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\checkerboard-96-formal-1.sve",
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 82.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-2",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\checkerboard-96-formal-2.sve",
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 87.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-3",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\checkerboard-96-formal-3.sve",
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 78.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "warmup",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gradient-192x96-warmup.sve",
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 174.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-1",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gradient-192x96-formal-1.sve",
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 151.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-2",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gradient-192x96-formal-2.sve",
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 151.0,
+      "finite_check": "passed by client SVE1 parser"
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-3",
+      "path": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu\\run-20261009T071503Z\\gradient-192x96-formal-3.sve",
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "reported_encoder_ms": 151.0,
+      "finite_check": "passed by client SVE1 parser"
+    }
+  ],
+  "raw_sve_copied_to_repository": false
+}

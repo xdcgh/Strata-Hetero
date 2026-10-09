@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-10-09T07:15:48.4418937Z",
+  "owned_helper_pid": 15344,
+  "owned_helper_creation_utc": "2026-10-09T07:15:04.260792+00:00",
+  "pid_current_processes": [],
+  "owned_pid_is_live_helper": false,
+  "vision_named_processes": [],
+  "tcp8081_listeners": []
+}

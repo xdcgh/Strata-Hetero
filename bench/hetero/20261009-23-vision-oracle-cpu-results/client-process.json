@@ -1,0 +1,12 @@
+{
+  "started_utc": "2026-10-09T07:15:03.3538139Z",
+  "finished_utc": "2026-10-09T07:15:07.0323048Z",
+  "duration_seconds": 3.6784909,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-B",
+    "bench/hetero/20261009-22-vision-oracle-cpu/oracle_client.py",
+    "--run"
+  ]
+}

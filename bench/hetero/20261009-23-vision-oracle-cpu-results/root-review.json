@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-09T07:22:17.755607+00:00",
+  "status": "native_cpu_oracle_reviewed",
+  "receipt_sha256": "8fbd49fca4fc3a8a75f9374ad9756fd1c45957f3e5b8bf2cb8eeb18422e0edfb",
+  "external_sve_checks": [
+    {
+      "image": "gray-96",
+      "iteration": "warmup",
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-1",
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-2",
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-3",
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "warmup",
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-1",
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-2",
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-3",
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "warmup",
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-1",
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-2",
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-3",
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "shape": [
+        9,
+        2560
+      ]
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "warmup",
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "shape": [
+        18,
+        2560
+      ]
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-1",
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "shape": [
+        18,
+        2560
+      ]
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-2",
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "shape": [
+        18,
+        2560
+      ]
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-3",
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "shape": [
+        18,
+        2560
+      ]
+    }
+  ],
+  "repository_integrity_files_checked": 13,
+  "warmup_formal_hashes_match": true,
+  "resource_gates_passed": 34,
+  "process_create_utc_authoritative": "2026-10-09T07:15:04.260792+00:00",
+  "summary_create_time_correction": "oracle-summary lost sub-second precision; original client GetProcessTimes receipt is authoritative",
+  "native_encoder_verified_for_aligned_fixtures_only": true,
+  "openvino_cpu_parity": "not_run",
+  "npu_acceptance": false
+}

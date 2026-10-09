@@ -1,0 +1,51 @@
+{
+  "schema": "strata-vision-oracle-cpu-preparation-v1",
+  "status": "prepared_not_run",
+  "created_utc": "2026-10-09",
+  "scope": "deterministic small PNG fixtures, bounded SVE1 parser/client, and pure synthetic tests only",
+  "fixture_manifest": {
+    "path": "fixture-manifest.json",
+    "sha256": "80a9f0f46f8c9b3d552e9d9fcc16c638766b8b0d4997e0b9e41dbc76a5455630",
+    "fixture_count": 4,
+    "external_storage": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu"
+  },
+  "client": {
+    "path": "oracle_client.py",
+    "sha256": "17fd4ae4856ef1e144574c7ba52c18ec8d0aa8d2f429d4697cd0c3ecd3f7846b",
+    "lines": 230,
+    "default_mode": "validate_only",
+    "run_flag": "--run",
+    "fixture_generator_sha256": "832f86f556cd521adc54862a55b48a6c282f273a6c2e4240103664c1f23ae44b",
+    "pure_test_path": "test_oracle_client.py",
+    "pure_test_sha256": "1aa6f736fb37fd816f3249d60892516148e935743cd2a716ee215f6846328b97"
+  },
+  "built_helper": {
+    "path": "E:\\Strata-Hetero-data\\build\\vision-oracle-cpu-20261009-20\\bin\\strata-vision.exe",
+    "sha256": "7285dd08f24c3985fd6b97aaff7d9917b65e5ea8b263ae5567985d0dc04ba612"
+  },
+  "input_identities": {
+    "mmproj_path": "E:\\Strata-Hetero-data\\models\\vision-ed59f92\\mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "mmproj_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+    "mmproj_payload_read_during_preparation": false,
+    "vocab_only_model_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "model_payload_read_during_preparation": false,
+    "model_sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+    "model_size_bytes": 10946624,
+    "model_integrity_receipt": "bench/hetero/20261008-00-admission/model-integrity-02.json",
+    "run_mode_model_verification": "fresh SHA-256 plus stable pre/post stat identity"
+  },
+  "execution": {
+    "helper_started": false,
+    "gguf_opened": false,
+    "openvino_core_created": false,
+    "device_touched": false,
+    "gpu_executed": false
+  },
+  "tests": {
+    "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B -m unittest -v bench.hetero.20261009-22-vision-oracle-cpu.test_oracle_client",
+    "passed": 5,
+    "failed": 0,
+    "helper_spawned": false
+  },
+  "no_commit": true
+}

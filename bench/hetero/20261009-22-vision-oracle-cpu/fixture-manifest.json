@@ -1,0 +1,53 @@
+{
+  "schema": "strata-vision-fixtures-v1",
+  "created_utc": "2026-10-09T06:57:27.057173+00:00",
+  "generator": "make_fixtures.py deterministic Pillow RGB pixels; PNG optimize=False compress_level=9",
+  "python": "3.14.8",
+  "pillow": "12.3.0",
+  "fixtures": [
+    {
+      "name": "gray-96",
+      "path": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu\\gray-96.png",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "format": "PNG",
+      "size_bytes": 196,
+      "sha256": "ff4593f146942e4220f1bf8a67619dd97ce23816285716d8a61b90d408a3592f",
+      "pixel_rule": "constant RGB(128,128,128)"
+    },
+    {
+      "name": "quadrants-96",
+      "path": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu\\quadrants-96.png",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "format": "PNG",
+      "size_bytes": 212,
+      "sha256": "8fc2fdcfc4d530a9f1492ba76831e7500d1204239eb06738f2d174c183ae5d63",
+      "pixel_rule": "four 48x48 RGB quadrants: red, green, blue, yellow"
+    },
+    {
+      "name": "checkerboard-96",
+      "path": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu\\checkerboard-96.png",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "format": "PNG",
+      "size_bytes": 237,
+      "sha256": "53d0436943b19c283c57aeda49d8ea74a9ed7cc8f08539b37c7b080299c9da23",
+      "pixel_rule": "12x12 alternating black/white checkerboard"
+    },
+    {
+      "name": "gradient-192x96",
+      "path": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu\\gradient-192x96.png",
+      "width": 192,
+      "height": 96,
+      "mode": "RGB",
+      "format": "PNG",
+      "size_bytes": 398,
+      "sha256": "4c29aee8d357dfb9fae0a2afea14aa819c19ad76246015a8791f781518d9116d",
+      "pixel_rule": "RGB=(floor(x*255/191),floor(y*255/95),(x+3*y) mod 256)"
+    }
+  ]
+}

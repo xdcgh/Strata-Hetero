@@ -1,0 +1,20 @@
+test_bilinear_align_corners_plane_endpoints_and_singletons (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_bilinear_align_corners_plane_endpoints_and_singletons) ... ok
+test_cli_rejects_gguf_before_file_access (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_cli_rejects_gguf_before_file_access) ... ok
+test_decoded_identity_shape_hash_dtype_and_bf16_gates (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_decoded_identity_shape_hash_dtype_and_bf16_gates) ... ok
+test_entire_static_graph_with_tiny_host_evaluator_and_closed_form_projection (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_entire_static_graph_with_tiny_host_evaluator_and_closed_form_projection) ... ok
+test_gelu_variant_is_tanh_and_cpu_rounding_is_separate (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_gelu_variant_is_tanh_and_cpu_rounding_is_separate) ... ok
+test_invalid_build_is_rejected_before_openvino_import (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_invalid_build_is_rejected_before_openvino_import) ... ok
+test_linear_weight_direction_for_nonsquare_gguf_tensor (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_linear_weight_direction_for_nonsquare_gguf_tensor) ... ok
+test_mapped_array_is_rejected_before_payload_hash (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_mapped_array_is_rejected_before_payload_hash) ... ok
+test_merge_order_rectangular_grid_and_source_cont_permute (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_merge_order_rectangular_grid_and_source_cont_permute) ... ok
+test_metadata_only_cli_does_not_import_array_or_device_runtime (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_metadata_only_cli_does_not_import_array_or_device_runtime) ... ok
+test_missing_semantics_and_deepstack_are_rejected (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_missing_semantics_and_deepstack_are_rejected) ... ok
+test_nonzero_uniform_attention_ffn_residuals_and_both_norms (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_nonzero_uniform_attention_ffn_residuals_and_both_norms) ... ok
+test_positions_match_merge_coordinates_and_four_source_axes (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_positions_match_merge_coordinates_and_four_source_axes) ... ok
+test_unsupported_merge_and_incomplete_norm_fail (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_unsupported_merge_and_incomplete_norm_fail) ... ok
+test_vision_rope_matches_scalar_pinned_source_translation (tools.test_hetero_vision_qwen3vl.VisionPreparationTests.test_vision_rope_matches_scalar_pinned_source_translation) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.089s
+
+OK

@@ -1,0 +1,141 @@
+﻿{
+    "schema":  "strata-vision-oracle-build-evidence-v1",
+    "status":  "built_not_run",
+    "created_utc":  "2026-10-09T06:52:15.7605808Z",
+    "target":  "strata-vision",
+    "target_source_closure":  [
+                                  "tools/vision/strata_vision.cpp",
+                                  "pinned llama.cpp tools/mtmd/mtmd",
+                                  "pinned llama library",
+                                  "pinned ggml CPU backend"
+                              ],
+    "source":  {
+                   "repo":  "C:/Users/DC/Documents/ChatGPT/Strata-Hetero",
+                   "preparation_snapshot_head":  "5eb3abfd6d9ef1c4c233845ca7653885bdec479e",
+                   "build_head":  "d215c252fd1a0e9b1ca4c5ef4c2d522874868103",
+                   "build_branch":  "codex/09-upstream-0-1-40-4",
+                   "before_after_file_hashes_match":  true,
+                   "files":  [
+                                 {
+                                     "path":  "tools/vision/CMakeLists.txt",
+                                     "git_blob":  "d6518c71daf05076f919701148970b827d42d0af",
+                                     "sha256_before":  "2f513c4b8346d146863723c059246678ec84043fd61f663b3728abb01964fa53",
+                                     "sha256_after":  "2f513c4b8346d146863723c059246678ec84043fd61f663b3728abb01964fa53"
+                                 },
+                                 {
+                                     "path":  "tools/vision/strata_vision.cpp",
+                                     "git_blob":  "d8ef58fe873edbb075611b9b74cae568f8fb29d3",
+                                     "sha256_before":  "3ff6a05b7305862529d68f039f95fd9e3e44cca89a66b29b3aa6c09b3a10fb89",
+                                     "sha256_after":  "3ff6a05b7305862529d68f039f95fd9e3e44cca89a66b29b3aa6c09b3a10fb89"
+                                 }
+                             ],
+                   "only_evidence_directory_untracked_at_receipt":  true
+               },
+    "pinned_llama":  {
+                         "path":  "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+                         "head":  "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+                         "expected_head":  "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+                         "working_tree_clean":  true
+                     },
+    "cmake_cache_flags":  {
+                              "CMAKE_BUILD_TYPE":  "Release",
+                              "CMAKE_GENERATOR":  "Ninja",
+                              "CMAKE_MAKE_PROGRAM":  "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+                              "LLAMA_BUILD_COMMON":  "OFF",
+                              "LLAMA_BUILD_MTMD":  "ON",
+                              "LLAMA_BUILD_TOOLS":  "OFF",
+                              "LLAMA_BUILD_TESTS":  "OFF",
+                              "LLAMA_BUILD_EXAMPLES":  "OFF",
+                              "LLAMA_BUILD_SERVER":  "OFF",
+                              "LLAMA_BUILD_APP":  "OFF",
+                              "STRATA_PORTABLE":  "ON",
+                              "STRATA_VISION_CUDA":  "OFF",
+                              "GGML_CUDA":  "OFF",
+                              "GGML_HIP":  "OFF",
+                              "GGML_SYCL":  "OFF",
+                              "GGML_VULKAN":  "OFF",
+                              "GGML_OPENCL":  "OFF",
+                              "GGML_NATIVE":  "OFF",
+                              "GGML_OPENMP":  "OFF",
+                              "GGML_AVX2":  "ON",
+                              "GGML_FMA":  "ON",
+                              "GGML_F16C":  "ON",
+                              "GGML_BMI2":  "ON"
+                          },
+    "toolchain":  {
+                      "cmake_path":  "E:/Strata-Hetero-data/venv/Lib/site-packages/cmake/data/bin/cmake.exe",
+                      "cmake_version":  "4.4.3",
+                      "ninja_path":  "E:/Strata-Hetero-data/venv/Scripts/ninja.exe",
+                      "ninja_version":  "1.13.2.git.kitware.jobserver-pipe-1",
+                      "msvc_environment_script":  "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Auxiliary/Build/vcvars64.bat",
+                      "compiler_identification":  "MSVC 19.51.36260.0"
+                  },
+    "configure":  {
+                      "attempt":  "configure-retry04",
+                      "exit_code":  0,
+                      "cmake_reported_configure_duration":  "2.6s",
+                      "log":  "configure-retry04.log",
+                      "exit_file":  "configure-retry04.exit.txt",
+                      "cache_present":  true,
+                      "ninja_file_present":  true
+                  },
+    "build":  {
+                  "attempt":  "build-retry04",
+                  "exit_code":  0,
+                  "ninja_completed_step":  131,
+                  "log":  "build-retry04.log",
+                  "exit_file":  "build-retry04.exit.txt"
+              },
+    "binary":  {
+                   "path":  "E:\\Strata-Hetero-data\\build\\vision-oracle-cpu-20261009-20\\bin\\strata-vision.exe",
+                   "size_bytes":  5030400,
+                   "sha256":  "7285dd08f24c3985fd6b97aaff7d9917b65e5ea8b263ae5567985d0dc04ba612"
+               },
+    "resource_monitor":  {
+                             "implementation":  "tools.hetero_resources.windows_memory_global (GlobalMemoryStatusEx + PSAPI GetPerformanceInfo)",
+                             "sample_count":  38,
+                             "samples_file":  "resource-samples.jsonl",
+                             "minimum_available_physical_bytes":  117867278336,
+                             "minimum_available_physical_gib":  109.772,
+                             "minimum_available_commit_bytes":  123512512512,
+                             "minimum_available_commit_gib":  115.03,
+                             "required_physical_gib":  12,
+                             "required_commit_gib":  4,
+                             "all_samples_above_threshold":  true
+                         },
+    "execution":  {
+                      "helper_started":  false,
+                      "mmproj_loaded":  false,
+                      "model_loaded":  false,
+                      "openvino_core_created":  false,
+                      "gpu_executed":  false
+                  },
+    "successful_attempt_logs":  [
+                                    "configure-retry04.log",
+                                    "configure-retry04.exit.txt",
+                                    "build-retry04.log",
+                                    "build-retry04.exit.txt"
+                                ],
+    "preserved_failed_attempt_files":  [
+                                           "preflight-failure-first.json",
+                                           "preflight-failure.json",
+                                           "resource-sampler-failure-first.json",
+                                           "runner-first-failure.json",
+                                           "configure.log",
+                                           "configure.exit.txt",
+                                           "build.log",
+                                           "build.exit.txt",
+                                           "configure-retry01.log",
+                                           "configure-retry01.exit.txt",
+                                           "build-retry01.log",
+                                           "build-retry01.exit.txt",
+                                           "configure-retry02.log",
+                                           "configure-retry02.exit.txt",
+                                           "build-retry02.log",
+                                           "build-retry02.exit.txt",
+                                           "configure-retry03.log",
+                                           "configure-retry03.exit.txt",
+                                           "cmd-smoke.log",
+                                           "cmd-flow-diagnostic.log"
+                                       ]
+}

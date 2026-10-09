@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "pure_fixtures_pass",
+  "created_utc": "2026-10-09T07:20:00.2369398Z",
+  "command": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe -m unittest tools.test_hetero_vision_qwen3vl -v",
+  "exit_code": 0,
+  "test_count": 15,
+  "real_gguf_payload_read": false,
+  "installed_openvino_imported": false,
+  "fake_openvino_host_evaluator_used": true,
+  "real_graph_constructed": false,
+  "core_created": false,
+  "device_queried": false,
+  "compiled": false,
+  "inference_run": false,
+  "production_route_enabled": false,
+  "npu_accepted": false,
+  "code_sha256": {
+    "fixtures": "f2ff996852a67cb469d8875a5dac7240f2f6a89836086d84b1b022d1ad2046c5",
+    "module": "8ba61c9ed897352649d2a6194262af9b718181325e8b74cb627d314cd752c2a3"
+  }
+}

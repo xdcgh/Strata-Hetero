@@ -1,0 +1,114 @@
+{
+  "schema": "strata-vision-oracle-results-summary-v1",
+  "status": "completed",
+  "client_exit_code": 0,
+  "client_elapsed_seconds": 3.6784909,
+  "helper_pid": 15344,
+  "helper_create_utc": "2026-10-09T07:15:04.0000000+00:00",
+  "helper_exit_code": 0,
+  "helper_binary_sha256": "7285dd08f24c3985fd6b97aaff7d9917b65e5ea8b263ae5567985d0dc04ba612",
+  "mmproj_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "model_identity": {
+    "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "size_bytes": 10946624,
+    "sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+    "mtime_ns": 1791267636000000000,
+    "ctime_ns": 1791267635050000000,
+    "volume": 2894736058,
+    "file_index": 790292856832,
+    "stat_stable_while_hashed": true,
+    "identity_receipt": "bench/hetero/20261008-00-admission/model-integrity-02.json"
+  },
+  "startup_wall_ms": 1070.354,
+  "pre_ready_builtin_cpu_encoder_warmup_performed": false,
+  "helper_stderr_note": "strata-vision says CPU mode skips built-in pre-READY warm-up; client performed one warm-up plus three formal ENC requests per fixture",
+  "fixture_count": 4,
+  "image_rows": [
+    {
+      "image": "checkerboard-96",
+      "n_tokens": 9,
+      "grid": [
+        3,
+        3
+      ],
+      "formal_reported_encoder_ms": [
+        82.0,
+        87.0,
+        78.0
+      ],
+      "formal_median_reported_encoder_ms": 82.0,
+      "formal_unique_sha_count": 1,
+      "warmup_hash_matches_formal": true
+    },
+    {
+      "image": "gradient-192x96",
+      "n_tokens": 18,
+      "grid": [
+        6,
+        3
+      ],
+      "formal_reported_encoder_ms": [
+        151.0,
+        151.0,
+        151.0
+      ],
+      "formal_median_reported_encoder_ms": 151.0,
+      "formal_unique_sha_count": 1,
+      "warmup_hash_matches_formal": true
+    },
+    {
+      "image": "gray-96",
+      "n_tokens": 9,
+      "grid": [
+        3,
+        3
+      ],
+      "formal_reported_encoder_ms": [
+        91.0,
+        90.0,
+        78.0
+      ],
+      "formal_median_reported_encoder_ms": 90.0,
+      "formal_unique_sha_count": 1,
+      "warmup_hash_matches_formal": true
+    },
+    {
+      "image": "quadrants-96",
+      "n_tokens": 9,
+      "grid": [
+        3,
+        3
+      ],
+      "formal_reported_encoder_ms": [
+        81.0,
+        81.0,
+        86.0
+      ],
+      "formal_median_reported_encoder_ms": 81.0,
+      "formal_unique_sha_count": 1,
+      "warmup_hash_matches_formal": true
+    }
+  ],
+  "total_enc_calls": 16,
+  "warmup_calls": 4,
+  "formal_calls": 12,
+  "all_resource_gates_pass": true,
+  "resource_gate_count": 34,
+  "minimum_physical_gib": 109.457,
+  "minimum_commit_gib": 114.235,
+  "required_physical_gib": 12,
+  "required_commit_gib": 4,
+  "all_sve1_shapes_body_sizes_and_finite_checks_passed": true,
+  "postrun_process_check": "postrun-process-check.json",
+  "raw_output_index": "sve-output-index.json",
+  "raw_outputs_remain_on_E_drive": true,
+  "not_run": [
+    "OpenVINO Core",
+    "GPU",
+    "Strata engine",
+    "model request/API"
+  ],
+  "h21_terminal_preflight": "preflight.json (terminal receipt SHA and fresh process/listener checks)",
+  "build_evidence": "cpu-build-receipt.json, cpu-build-configure.log, cpu-build.log",
+  "encoder_scope_note": "Helper stderr reports CPU mode skips built-in pre-READY image warmup and suggests >=1024 tokens for grounding; this run validates SVE encoding on the fixed small fixtures, not grounding-token quality."
+}

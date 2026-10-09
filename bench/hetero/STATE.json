@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "H21 same-binary diagnostic-off correctness failed and terminal; CPU vision oracle completed pending root review",
+  "phase": "CPU vision oracle reviewed; static vision port pure fixtures pass; F/E controlled PLE quality preparation",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -42,7 +42,8 @@
     "Real sampled PLE host parity:45formal gathers Direct/pageable/locked RAM matched SHA and finite values; not GPU/model parity",
     "Bounded zero-ID head diagnostic H18 passed27formal exactIDs but no readback branch fired; score statistics unavailable",
     "Actual Arc pipe worker completed45 F32 comparisons; serialized transfer-inclusive latency measured; native quantized equivalence and model gain not accepted",
-    "H21 same-binary diagnostic-off:21formal passed;16K threeformal128 ID0 loops and later threecap8 arithmetic ID0 loops; full-RAM route rejected; exact owned cleanup terminal"
+    "H21 same-binary diagnostic-off:21formal passed;16K threeformal128 ID0 loops and later threecap8 arithmetic ID0 loops; full-RAM route rejected; exact owned cleanup terminal",
+    "Native CPU vision oracle:four aligned PNGs16 finite exact SVE outputs, all warm/formal hashes stable;34memory gates pass; owned helper exited; root verified raw hashes; OpenVINO/NPU parity pending"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -71,7 +72,7 @@
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T07:17:23.831507+00:00",
-  "current_run": "20261009-22-vision-oracle-cpu",
+  "last_checkpoint_utc": "2026-10-09T07:23:46.557048+00:00",
+  "current_run": null,
   "current_model_owner": null
 }

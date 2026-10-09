@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "scope": "Source files only; no model file or tensor payload read",
+  "source_root": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "source_status_clean": true,
+  "hashes": {
+    "tools/mtmd/models/qwen3vl.cpp": "ae7a9472feb4322abdf20621237e3e7448d207bc0427c315d869300df63ab1b4",
+    "tools/mtmd/models/qwen2vl.cpp": "6c624c7d17f050124909c7dfe2df7df0a1872f80ac8620ef9a1c0305cec30f29",
+    "tools/mtmd/clip.cpp": "13f10801842caed2e77018da8546a31e4fd248a82a56761039957cfe6e43fd2d",
+    "tools/mtmd/clip-model.h": "6dcb7fc7a057be3bc6bfdfae405401d55eb6a7d4eac8d26b87bada3b68e5ab5e",
+    "tools/mtmd/clip-impl.h": "f68aa9e323af3e6af381c587e676aa73173c9fba77d6f4117e91a36863454eff",
+    "tools/mtmd/mtmd-image.cpp": "5f305827cdb3255bd8d30e103ed7855725bcb52870c8edb02df2f3b2f5267b7a",
+    "tools/mtmd/mtmd.cpp": "16ca200494443e760c215a71ebfbabf8d294ab662b6458c03592bbcea6b4eff3",
+    "ggml/src/ggml.c": "28f8e72ba3f96e044c78b7a6f75511a9afdc61d5ef5a14de00969f2faa55fff1",
+    "ggml/src/ggml-cpu/ops.cpp": "e5e7edb89540af66fc9cb4d245fce7aaa411d08876a032520114223dff93b42c",
+    "ggml/src/ggml-cpu/vec.h": "8817801355b20079de39fd4c67c7453ca2033cdb69fc5bd1f71bb66f12f57318",
+    "ggml/src/ggml-cpu/ggml-cpu.c": "2f0a37f6c00c230a783cf078ee0c99f248095c501dff56b8ee47fb356dae3538"
+  },
+  "model_asset_payload_read": false,
+  "model_hash_reverified": false,
+  "openvino_imported": false,
+  "device_queried": false,
+  "inference_run": false
+}

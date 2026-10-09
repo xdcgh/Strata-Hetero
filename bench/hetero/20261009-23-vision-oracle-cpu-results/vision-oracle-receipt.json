@@ -1,0 +1,832 @@
+{
+  "schema": "strata-vision-oracle-run-v1",
+  "status": "completed",
+  "argv": [
+    "E:\\Strata-Hetero-data\\build\\vision-oracle-cpu-20261009-20\\bin\\strata-vision.exe",
+    "--mmproj",
+    "E:\\Strata-Hetero-data\\models\\vision-ed59f92\\mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "--model",
+    "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "--threads",
+    "10",
+    "--max-tokens",
+    "256",
+    "--flash-attn",
+    "off"
+  ],
+  "helper_sha256": "7285dd08f24c3985fd6b97aaff7d9917b65e5ea8b263ae5567985d0dc04ba612",
+  "mmproj_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "model_identity": {
+    "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "size_bytes": 10946624,
+    "sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+    "mtime_ns": 1791267636000000000,
+    "ctime_ns": 1791267635050000000,
+    "volume": 2894736058,
+    "file_index": 790292856832,
+    "stat_stable_while_hashed": true,
+    "identity_receipt": "bench/hetero/20261008-00-admission/model-integrity-02.json"
+  },
+  "pid": 15344,
+  "process_create_utc": "2026-10-09T07:15:04.260792+00:00",
+  "exit_code": 0,
+  "startup_wall_ns": 1070353700,
+  "resource_gates": [
+    {
+      "label": "before-startup",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 118619668480,
+      "commit_available_bytes": 123918209024,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "before-helper-startup",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 118610395136,
+      "commit_available_bytes": 123910729728,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gray-96:warmup:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117599428608,
+      "commit_available_bytes": 122729037824,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gray-96:warmup:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117590925312,
+      "commit_available_bytes": 122720944128,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gray-96:formal-1:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117590642688,
+      "commit_available_bytes": 122720944128,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gray-96:formal-1:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117584293888,
+      "commit_available_bytes": 122722197504,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gray-96:formal-2:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117582909440,
+      "commit_available_bytes": 122721087488,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gray-96:formal-2:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117578551296,
+      "commit_available_bytes": 122717405184,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gray-96:formal-3:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117578551296,
+      "commit_available_bytes": 122717405184,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gray-96:formal-3:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117577973760,
+      "commit_available_bytes": 122714628096,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "quadrants-96:warmup:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117576790016,
+      "commit_available_bytes": 122713571328,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "quadrants-96:warmup:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117577240576,
+      "commit_available_bytes": 122713669632,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "quadrants-96:formal-1:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117577170944,
+      "commit_available_bytes": 122713669632,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "quadrants-96:formal-1:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117571469312,
+      "commit_available_bytes": 122703671296,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "quadrants-96:formal-2:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117572038656,
+      "commit_available_bytes": 122703671296,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "quadrants-96:formal-2:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117570920448,
+      "commit_available_bytes": 122702925824,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "quadrants-96:formal-3:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117571289088,
+      "commit_available_bytes": 122702929920,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "quadrants-96:formal-3:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117555335168,
+      "commit_available_bytes": 122683322368,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "checkerboard-96:warmup:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117554860032,
+      "commit_available_bytes": 122682269696,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "checkerboard-96:warmup:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117539983360,
+      "commit_available_bytes": 122666741760,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "checkerboard-96:formal-1:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117538598912,
+      "commit_available_bytes": 122664562688,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "checkerboard-96:formal-1:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117529681920,
+      "commit_available_bytes": 122658467840,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "checkerboard-96:formal-2:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117528305664,
+      "commit_available_bytes": 122659069952,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "checkerboard-96:formal-2:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117542903808,
+      "commit_available_bytes": 122675728384,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "checkerboard-96:formal-3:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117562023936,
+      "commit_available_bytes": 122699943936,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "checkerboard-96:formal-3:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117564084224,
+      "commit_available_bytes": 122702065664,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gradient-192x96:warmup:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117560127488,
+      "commit_available_bytes": 122702065664,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gradient-192x96:warmup:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117586571264,
+      "commit_available_bytes": 122723135488,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gradient-192x96:formal-1:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117586366464,
+      "commit_available_bytes": 122722025472,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gradient-192x96:formal-1:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117587169280,
+      "commit_available_bytes": 122722082816,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gradient-192x96:formal-2:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117587169280,
+      "commit_available_bytes": 122722082816,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gradient-192x96:formal-2:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117587685376,
+      "commit_available_bytes": 122721570816,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gradient-192x96:formal-3:before-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117587693568,
+      "commit_available_bytes": 122721570816,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "label": "gradient-192x96:formal-3:after-ENC",
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "physical_available_bytes": 117589512192,
+      "commit_available_bytes": 122715299840,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "repeat_comparison": {
+    "gray-96": {
+      "warmup_sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "formal_sha256": [
+        "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+        "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+        "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940"
+      ],
+      "distinct_formal_hashes": 1,
+      "all_formals_identical": true
+    },
+    "quadrants-96": {
+      "warmup_sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "formal_sha256": [
+        "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+        "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+        "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99"
+      ],
+      "distinct_formal_hashes": 1,
+      "all_formals_identical": true
+    },
+    "checkerboard-96": {
+      "warmup_sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "formal_sha256": [
+        "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+        "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+        "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976"
+      ],
+      "distinct_formal_hashes": 1,
+      "all_formals_identical": true
+    },
+    "gradient-192x96": {
+      "warmup_sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "formal_sha256": [
+        "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+        "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+        "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b"
+      ],
+      "distinct_formal_hashes": 1,
+      "all_formals_identical": true
+    }
+  },
+  "results": [
+    {
+      "image": "gray-96",
+      "iteration": "warmup",
+      "before_gate": {
+        "label": "gray-96:warmup:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117599428608,
+        "commit_available_bytes": 122729037824,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "gray-96:warmup:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117590925312,
+        "commit_available_bytes": 122720944128,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 88202300,
+      "client_wall_ns_through_sve_validation": 93836000,
+      "response": "OK 9 3 3 88",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 88.0
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-1",
+      "before_gate": {
+        "label": "gray-96:formal-1:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117590642688,
+        "commit_available_bytes": 122720944128,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "gray-96:formal-1:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117584293888,
+        "commit_available_bytes": 122722197504,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 91638000,
+      "client_wall_ns_through_sve_validation": 99105600,
+      "response": "OK 9 3 3 91",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 91.0
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-2",
+      "before_gate": {
+        "label": "gray-96:formal-2:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117582909440,
+        "commit_available_bytes": 122721087488,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "gray-96:formal-2:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117578551296,
+        "commit_available_bytes": 122717405184,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 90807400,
+      "client_wall_ns_through_sve_validation": 97040000,
+      "response": "OK 9 3 3 90",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 90.0
+    },
+    {
+      "image": "gray-96",
+      "iteration": "formal-3",
+      "before_gate": {
+        "label": "gray-96:formal-3:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117578551296,
+        "commit_available_bytes": 122717405184,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "gray-96:formal-3:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117577973760,
+        "commit_available_bytes": 122714628096,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 77925000,
+      "client_wall_ns_through_sve_validation": 83396200,
+      "response": "OK 9 3 3 78",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "93dd252886e5227c8f6ed7a90220dbb294e0659f00b8c98b1b8cc28142840940",
+      "reported_encoder_ms": 78.0
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "warmup",
+      "before_gate": {
+        "label": "quadrants-96:warmup:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117576790016,
+        "commit_available_bytes": 122713571328,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "quadrants-96:warmup:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117577240576,
+        "commit_available_bytes": 122713669632,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 78139500,
+      "client_wall_ns_through_sve_validation": 90433400,
+      "response": "OK 9 3 3 78",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 78.0
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-1",
+      "before_gate": {
+        "label": "quadrants-96:formal-1:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117577170944,
+        "commit_available_bytes": 122713669632,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "quadrants-96:formal-1:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117571469312,
+        "commit_available_bytes": 122703671296,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 81770800,
+      "client_wall_ns_through_sve_validation": 91805700,
+      "response": "OK 9 3 3 81",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 81.0
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-2",
+      "before_gate": {
+        "label": "quadrants-96:formal-2:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117572038656,
+        "commit_available_bytes": 122703671296,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "quadrants-96:formal-2:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117570920448,
+        "commit_available_bytes": 122702925824,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 81153900,
+      "client_wall_ns_through_sve_validation": 88115800,
+      "response": "OK 9 3 3 81",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 81.0
+    },
+    {
+      "image": "quadrants-96",
+      "iteration": "formal-3",
+      "before_gate": {
+        "label": "quadrants-96:formal-3:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117571289088,
+        "commit_available_bytes": 122702929920,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "quadrants-96:formal-3:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117555335168,
+        "commit_available_bytes": 122683322368,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 86208100,
+      "client_wall_ns_through_sve_validation": 96464800,
+      "response": "OK 9 3 3 86",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "6171fdb270532367bc0f42b856664b6a44ab23804bd6fc187d46dc5a1503fd99",
+      "reported_encoder_ms": 86.0
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "warmup",
+      "before_gate": {
+        "label": "checkerboard-96:warmup:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117554860032,
+        "commit_available_bytes": 122682269696,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "checkerboard-96:warmup:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117539983360,
+        "commit_available_bytes": 122666741760,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 88541600,
+      "client_wall_ns_through_sve_validation": 96480500,
+      "response": "OK 9 3 3 88",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 88.0
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-1",
+      "before_gate": {
+        "label": "checkerboard-96:formal-1:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117538598912,
+        "commit_available_bytes": 122664562688,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "checkerboard-96:formal-1:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117529681920,
+        "commit_available_bytes": 122658467840,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 82207000,
+      "client_wall_ns_through_sve_validation": 91215100,
+      "response": "OK 9 3 3 82",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 82.0
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-2",
+      "before_gate": {
+        "label": "checkerboard-96:formal-2:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117528305664,
+        "commit_available_bytes": 122659069952,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "checkerboard-96:formal-2:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117542903808,
+        "commit_available_bytes": 122675728384,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 87010500,
+      "client_wall_ns_through_sve_validation": 92699500,
+      "response": "OK 9 3 3 87",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 87.0
+    },
+    {
+      "image": "checkerboard-96",
+      "iteration": "formal-3",
+      "before_gate": {
+        "label": "checkerboard-96:formal-3:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117562023936,
+        "commit_available_bytes": 122699943936,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "checkerboard-96:formal-3:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117564084224,
+        "commit_available_bytes": 122702065664,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 78330200,
+      "client_wall_ns_through_sve_validation": 83809400,
+      "response": "OK 9 3 3 78",
+      "n_tokens": 9,
+      "nx": 3,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 92180,
+      "sha256": "847510812ae4e763299342eee36d4c805ad585c8335b7b2aa70cfc4f97d64976",
+      "reported_encoder_ms": 78.0
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "warmup",
+      "before_gate": {
+        "label": "gradient-192x96:warmup:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117560127488,
+        "commit_available_bytes": 122702065664,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "gradient-192x96:warmup:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117586571264,
+        "commit_available_bytes": 122723135488,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 174417700,
+      "client_wall_ns_through_sve_validation": 182857300,
+      "response": "OK 18 6 3 174",
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 174.0
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-1",
+      "before_gate": {
+        "label": "gradient-192x96:formal-1:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117586366464,
+        "commit_available_bytes": 122722025472,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "gradient-192x96:formal-1:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117587169280,
+        "commit_available_bytes": 122722082816,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 151386200,
+      "client_wall_ns_through_sve_validation": 158409100,
+      "response": "OK 18 6 3 151",
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 151.0
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-2",
+      "before_gate": {
+        "label": "gradient-192x96:formal-2:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117587169280,
+        "commit_available_bytes": 122722082816,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "gradient-192x96:formal-2:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117587685376,
+        "commit_available_bytes": 122721570816,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 151068700,
+      "client_wall_ns_through_sve_validation": 158290900,
+      "response": "OK 18 6 3 151",
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 151.0
+    },
+    {
+      "image": "gradient-192x96",
+      "iteration": "formal-3",
+      "before_gate": {
+        "label": "gradient-192x96:formal-3:before-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117587693568,
+        "commit_available_bytes": 122721570816,
+        "errors": [],
+        "passed": true
+      },
+      "after_gate": {
+        "label": "gradient-192x96:formal-3:after-ENC",
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "physical_available_bytes": 117589512192,
+        "commit_available_bytes": 122715299840,
+        "errors": [],
+        "passed": true
+      },
+      "client_rtt_ns_write_to_response_line": 151850300,
+      "client_wall_ns_through_sve_validation": 158939600,
+      "response": "OK 18 6 3 151",
+      "n_tokens": 18,
+      "nx": 6,
+      "ny": 3,
+      "n_embd": 2560,
+      "size_bytes": 184340,
+      "sha256": "b29ac80206cbde24ebc9aa23c4b4b215a8fc7f2dc98d6cf58739b79e2bce0f1b",
+      "reported_encoder_ms": 151.0
+    }
+  ]
+}

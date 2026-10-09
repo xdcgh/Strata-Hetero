@@ -1,0 +1,56 @@
+{
+  "schema": "strata-vision-oracle-contract-v1",
+  "status": "prepared_not_run",
+  "helper": {
+    "path": "E:\\Strata-Hetero-data\\build\\vision-oracle-cpu-20261009-20\\bin\\strata-vision.exe",
+    "sha256": "7285dd08f24c3985fd6b97aaff7d9917b65e5ea8b263ae5567985d0dc04ba612",
+    "argv": [
+      "E:\\Strata-Hetero-data\\build\\vision-oracle-cpu-20261009-20\\bin\\strata-vision.exe",
+      "--mmproj",
+      "E:\\Strata-Hetero-data\\models\\vision-ed59f92\\mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+      "--model",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "--threads",
+      "10",
+      "--max-tokens",
+      "256",
+      "--flash-attn",
+      "off"
+    ],
+    "mmproj_expected_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+    "cpu_selection": "No --gpu flag; helper hides CUDA devices before backend initialization. No --cpu flag exists.",
+    "warmup": "The helper performs its built-in largest-square warmup before READY; client then sends one warmup ENC and three formal ENC requests per fixture.",
+    "model_expected_sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+    "model_expected_size_bytes": 10946624,
+    "model_integrity_receipt": "bench/hetero/20261008-00-admission/model-integrity-02.json"
+  },
+  "protocol": {
+    "startup_ready_line": "READY 2560",
+    "startup_timeout_seconds": 180,
+    "encode_response": "OK <n_tokens> <nx> <ny> <milliseconds>",
+    "encode_timeout_seconds": 120,
+    "quit_line": "QUIT",
+    "quit_timeout_seconds": 10,
+    "sve1_header": "five little-endian int32: magic 0x31455653, n_tokens, nx, ny, n_embd",
+    "validation": "n_tokens == nx*ny, n_embd == 2560, exact body bytes, finite little-endian F32, bounded output size, per-file SHA-256",
+    "outputs": "new timestamped run directory; each SVE output path is checked absent before ENC; stderr is an exclusive new file",
+    "response_line_max_bytes": 16384,
+    "reader_queue_max_lines": 8,
+    "successful_quit_exit_code": 0
+  },
+  "client": {
+    "path": "oracle_client.py",
+    "default_behavior": "validate-only; verifies fixture and built-helper hashes without spawning helper or reading model/mmproj",
+    "explicit_run_flag": "--run",
+    "child": "owned subprocess.Popen argv list, shell=false, hidden new process group, Idle priority, stderr file",
+    "fresh_resource_gate": "tools.hetero_resources.memory_snapshot; >=12 GiB available physical and >=4 GiB available commit",
+    "timeout_stop_scope": "Terminate/wait/kill applies only to the exact Popen-owned helper process. strata-vision is a direct native process and does not launch child processes; no PID/name-based process killing is used.",
+    "resource_gate_checkpoints": "startup before/after input identity, then immediately before helper spawn and before/after every ENC; missing physical/commit telemetry fails closed",
+    "durable_progress_file": "exclusive progress.jsonl; fsync after each event including complete raw response lines and resource gates",
+    "terminal_receipts": "exclusive oracle-receipt.json on success; exclusive failed-oracle-receipt.json with phase/argv/PID/CreateTime/exit code/partial results on failure"
+  },
+  "fixture_manifest": "fixture-manifest.json",
+  "fixture_storage": "E:\\Strata-Hetero-data\\vision-fixtures\\20261009-22-vision-oracle-cpu",
+  "run_storage_root": "E:\\Strata-Hetero-data\\vision-oracle-runs\\20261009-22-vision-oracle-cpu",
+  "tests": "test_oracle_client.py uses only synthetic tiny SVE1 byte fixtures and validates no-spawn default mode"
+}
