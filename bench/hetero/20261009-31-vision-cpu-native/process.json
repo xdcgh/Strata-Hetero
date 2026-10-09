@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "started",
+  "scope": "Exact CPU native vision comparison only",
+  "launch_utc": "2026-10-09T09:33:06.4667578Z",
+  "pid": 19424,
+  "process_create_utc": "2026-10-09T09:33:06.4741047Z",
+  "python": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+  "argv": [
+    "-u",
+    "tools\\hetero_vision_cpu_compare.py",
+    "--run",
+    "--export-receipt",
+    "E:\\Strata-Hetero-data\\vision-payloads\\20261009-30-native-vision-export\\export-receipt.json",
+    "--output-dir",
+    "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native"
+  ],
+  "checkout_head": "47fded1cfc6f50b8fa861e0c545925a7e25b34fd",
+  "source_hashes": [
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_cpu_compare.py",
+      "sha256": "a693024cac7cae76e7774f2930999a89bd9343ff9b43ff29ecf53a3c5298f343"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_qwen3vl.py",
+      "sha256": "8ba61c9ed897352649d2a6194262af9b718181325e8b74cb627d314cd752c2a3"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_vision_payload.py",
+      "sha256": "3e8537a8ea3ce1cdf403392dbd7bad0eebea44b2b91323a9750e395ce7fb6440"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-31-vision-cpu-native\\run-owned.ps1",
+      "sha256": "c4e771c3887f4c06dc2f33b50ce44dcb70e64217134e59b79a517cdaef10c235"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+      "sha256": "16a377d348c3a0c8d3a58d222d96807065dd0dcd9438c6025900c842ec836603"
+    },
+    {
+      "path": "C:\\Python314\\python.exe",
+      "sha256": "434b361fe0c5960d404974feed493db47f2603a1ace2574312104fbed0182c6f"
+    }
+  ],
+  "device": "CPU",
+  "required_precision": "f32",
+  "required_execution_mode": "ACCURACY",
+  "warmups_per_image": 1,
+  "formal_repeats_per_image": 3,
+  "external_monitor_interval_seconds": 1,
+  "external_monitor_source": "PowerShell-owned process handle plus tools.hetero_resources.memory_snapshot",
+  "stop_scope": "Only this exact Start-Process-owned handle",
+  "npu_authorized": false,
+  "vision_api_authorized": false
+}

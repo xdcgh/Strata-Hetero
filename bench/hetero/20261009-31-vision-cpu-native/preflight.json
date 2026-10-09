@@ -1,0 +1,25 @@
+{
+  "memory": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 118637748224,
+    "physical_used_bytes": 18325499904,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 21555539968,
+    "commit_available_bytes": 123997642752,
+    "commit_total_pages": 5262583,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 123997642752,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "errors": [],
+  "observed_utc": "2026-10-09T09:33:06.4096822Z"
+}

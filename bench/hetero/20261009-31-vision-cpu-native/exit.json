@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "pid": 19424,
+  "process_create_utc": "2026-10-09T09:33:06.4741047Z",
+  "launch_utc": "2026-10-09T09:33:06.4667578Z",
+  "ended_utc": "2026-10-09T09:33:27.4904471Z",
+  "exit_code": 1,
+  "stop_reason": "process_terminal",
+  "owned_process_only": true,
+  "npu_run": false,
+  "vision_api_run": false
+}

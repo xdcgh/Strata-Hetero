@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-10-09T09:43:36.8997835Z",
+  "owned_pid": 19424,
+  "owned_creation_utc": "2026-10-09T09:33:06.4741047Z",
+  "worker_exit_code": 1,
+  "stop_reason": "process_terminal",
+  "pid_present": false,
+  "original_process_has_exited": true,
+  "stderr_bytes": 0,
+  "runtime_scope": "CPU",
+  "npu_run": false,
+  "vision_api_run": false
+}

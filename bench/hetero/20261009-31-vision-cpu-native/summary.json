@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "status": "cpu_port_numerical_negative",
+  "exit_code": 1,
+  "runtime_scope": "CPU construction, compile and inference accepted; numerical parity failed",
+  "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "cpu_full_name": "Intel(R) Core(TM) Ultra 9 285H",
+  "core_created": true,
+  "compiled": true,
+  "inference_run": true,
+  "arm_count": 4,
+  "group_count": 8,
+  "warmup_count": 8,
+  "formal_count": 24,
+  "all_formals_shape_and_finite": true,
+  "all_formals_pass": false,
+  "policy_quality_pass": {
+    "graph_f32": false,
+    "cpu_vec_dot_rounding": false
+  },
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "all_repeat_hashes_identical": true,
+  "all_warmup_hashes_match_finite_formals": true,
+  "stdout_matches_terminal_receipt": true,
+  "saved_formal_outputs": 24,
+  "internal_gate_count": 416,
+  "all_internal_gates_pass": true,
+  "internal_minimum_ram_gib": 105.23400497436523,
+  "internal_minimum_commit_gib": 110.1423454284668,
+  "external_sample_count": 21,
+  "all_external_gates_pass": true,
+  "external_minimum_ram_gib": 105.23400497436523,
+  "external_minimum_commit_gib": 110.1423454284668,
+  "external_max_sample_gap_ms": 1017.0482000000011,
+  "sampled_peak_owner_rss_bytes": 4182016,
+  "sampled_peak_owner_private_bytes": 835584,
+  "groups": [
+    {
+      "policy": "graph_f32",
+      "height": 96,
+      "width": 96,
+      "fixture": "gray-96",
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "pass": false,
+      "formal_count": 3,
+      "repeat_identical": true,
+      "warmup_matches_formal": true,
+      "formal_median_inference_ms": 56.74150000049849,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0015252791345119476,
+        "relative_rmse": 0.0058107135742594095,
+        "max_row_norm_relative_error": 0.005023935233065579,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "graph_f32",
+      "height": 96,
+      "width": 96,
+      "fixture": "quadrants-96",
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "pass": false,
+      "formal_count": 3,
+      "repeat_identical": true,
+      "warmup_matches_formal": true,
+      "formal_median_inference_ms": 57.1090000012191,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.003727346658706665,
+        "relative_rmse": 0.01070238337683776,
+        "max_row_norm_relative_error": 0.007562897082514739,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "graph_f32",
+      "height": 96,
+      "width": 96,
+      "fixture": "checkerboard-96",
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "pass": false,
+      "formal_count": 3,
+      "repeat_identical": true,
+      "warmup_matches_formal": true,
+      "formal_median_inference_ms": 72.52990000051796,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.003530740737915039,
+        "relative_rmse": 0.009345087555877374,
+        "max_row_norm_relative_error": 0.010729685950026163,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "graph_f32",
+      "height": 96,
+      "width": 192,
+      "fixture": "gradient-192x96",
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "pass": false,
+      "formal_count": 3,
+      "repeat_identical": true,
+      "warmup_matches_formal": true,
+      "formal_median_inference_ms": 101.11940000206232,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.007518649101257324,
+        "relative_rmse": 0.013770050188562784,
+        "max_row_norm_relative_error": 0.03990409432024495,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "height": 96,
+      "width": 96,
+      "fixture": "gray-96",
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "pass": false,
+      "formal_count": 3,
+      "repeat_identical": true,
+      "warmup_matches_formal": true,
+      "formal_median_inference_ms": 72.95620000149938,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0005248803645372391,
+        "relative_rmse": 0.002716617358050091,
+        "max_row_norm_relative_error": 0.0018324736925253724,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "height": 96,
+      "width": 96,
+      "fixture": "quadrants-96",
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "pass": false,
+      "formal_count": 3,
+      "repeat_identical": true,
+      "warmup_matches_formal": true,
+      "formal_median_inference_ms": 66.08629999755067,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.001855611801147461,
+        "relative_rmse": 0.007605849568159044,
+        "max_row_norm_relative_error": 0.006740396569781272,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "height": 96,
+      "width": 96,
+      "fixture": "checkerboard-96",
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "pass": false,
+      "formal_count": 3,
+      "repeat_identical": true,
+      "warmup_matches_formal": true,
+      "formal_median_inference_ms": 58.586399998603156,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.002581581473350525,
+        "relative_rmse": 0.006859533981875682,
+        "max_row_norm_relative_error": 0.00674521971439599,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "height": 96,
+      "width": 192,
+      "fixture": "gradient-192x96",
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "pass": false,
+      "formal_count": 3,
+      "repeat_identical": true,
+      "warmup_matches_formal": true,
+      "formal_median_inference_ms": 95.31240000069374,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0021672844886779785,
+        "relative_rmse": 0.006805496821232395,
+        "max_row_norm_relative_error": 0.012991695808096459,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      }
+    }
+  ],
+  "retry_performed": false,
+  "tolerances_changed": false,
+  "npu_run": false,
+  "npu_accepted": false,
+  "vision_api_run": false,
+  "performance_accepted": false
+}

@@ -1,0 +1,1152 @@
+{
+  "schema_version": 1,
+  "status": "compared",
+  "asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "inventory_sha256": "94320d1390e67d39ad455f3085592d45592f352618e445d75c721f9ba827f657",
+  "fixture_manifest_sha256": "80a9f0f46f8c9b3d552e9d9fcc16c638766b8b0d4997e0b9e41dbc76a5455630",
+  "tensor_count": 334,
+  "fixture_count": 4,
+  "asset_opened": false,
+  "payload_read": false,
+  "files_written": true,
+  "core_created": true,
+  "compiled": true,
+  "inference_run": true,
+  "npu_accepted": false,
+  "export_receipt_sha256": "9293d413d80a89bea202d9c79c480fb3e8c07ca79e8fae740ca52cfca0ff4e01",
+  "native_index_sha256": "cc53ce6bcfdcf8d0755c1c54cf4578c5fe9543d8080ae23bc9e511e3ce3fbc10",
+  "native_receipt_sha256": "8fbd49fca4fc3a8a75f9374ad9756fd1c45957f3e5b8bf2cb8eeb18422e0edfb",
+  "device_requested": "CPU",
+  "arithmetic_policies": [
+    "graph_f32",
+    "cpu_vec_dot_rounding"
+  ],
+  "compile_properties_required": {
+    "INFERENCE_PRECISION_HINT": "f32",
+    "EXECUTION_MODE_HINT": "ACCURACY"
+  },
+  "quality_contract": "hetero_xpu_worker.DEFAULT_TOLERANCES, unchanged; no tolerance override flags",
+  "native_sve_read": true,
+  "exported_arrays_read": true,
+  "native_parity": "FAIL",
+  "output_taps": [],
+  "warmups_per_image": 1,
+  "formal_repeats_per_image": 3,
+  "arms": [
+    {
+      "policy": "graph_f32",
+      "height": 96,
+      "width": 96,
+      "status": "compared",
+      "pass": false,
+      "images": [
+        {
+          "fixture": "gray-96",
+          "formal": [
+            {
+              "iteration": 1,
+              "inference_ms": 56.74150000049849,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0015252791345119476,
+                "relative_rmse": 0.0058107135742594095,
+                "max_row_norm_relative_error": 0.005023935233065579,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-gray-96-formal-1.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+                "file_sha256": "37c93c3b884fa23ee5aeebf0b78c603d8b7f35c0115f748010c494975c78815a",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 2,
+              "inference_ms": 56.12789999941015,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0015252791345119476,
+                "relative_rmse": 0.0058107135742594095,
+                "max_row_norm_relative_error": 0.005023935233065579,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-gray-96-formal-2.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+                "file_sha256": "37c93c3b884fa23ee5aeebf0b78c603d8b7f35c0115f748010c494975c78815a",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 3,
+              "inference_ms": 57.99230000047828,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0015252791345119476,
+                "relative_rmse": 0.0058107135742594095,
+                "max_row_norm_relative_error": 0.005023935233065579,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-gray-96-formal-3.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+                "file_sha256": "37c93c3b884fa23ee5aeebf0b78c603d8b7f35c0115f748010c494975c78815a",
+                "file_bytes": 92288
+              }
+            }
+          ],
+          "pass": false,
+          "warmup": {
+            "inference_ms": 78.15780000237282,
+            "output_sha256": "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e"
+          },
+          "repeat_hashes": [
+            "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+            "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e",
+            "d22fe2bfc90b280838f3d287e086c526d29272260a388fda171937fe603a2e1e"
+          ],
+          "repeat_identical": true
+        },
+        {
+          "fixture": "quadrants-96",
+          "formal": [
+            {
+              "iteration": 1,
+              "inference_ms": 57.1090000012191,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.003727346658706665,
+                "relative_rmse": 0.01070238337683776,
+                "max_row_norm_relative_error": 0.007562897082514739,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-quadrants-96-formal-1.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+                "file_sha256": "bf15663fa3fd2b7e8fe7bd02bee1797c9708d2daa267acd03e3be278136117ee",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 2,
+              "inference_ms": 56.28640000213636,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.003727346658706665,
+                "relative_rmse": 0.01070238337683776,
+                "max_row_norm_relative_error": 0.007562897082514739,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-quadrants-96-formal-2.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+                "file_sha256": "bf15663fa3fd2b7e8fe7bd02bee1797c9708d2daa267acd03e3be278136117ee",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 3,
+              "inference_ms": 59.11719999858178,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.003727346658706665,
+                "relative_rmse": 0.01070238337683776,
+                "max_row_norm_relative_error": 0.007562897082514739,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-quadrants-96-formal-3.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+                "file_sha256": "bf15663fa3fd2b7e8fe7bd02bee1797c9708d2daa267acd03e3be278136117ee",
+                "file_bytes": 92288
+              }
+            }
+          ],
+          "pass": false,
+          "warmup": {
+            "inference_ms": 56.29600000247592,
+            "output_sha256": "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83"
+          },
+          "repeat_hashes": [
+            "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+            "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83",
+            "d3164e7433d6a57dd7644900cfcf2afe38854bac0af7b6df57f015e914121c83"
+          ],
+          "repeat_identical": true
+        },
+        {
+          "fixture": "checkerboard-96",
+          "formal": [
+            {
+              "iteration": 1,
+              "inference_ms": 91.57720000075642,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.003530740737915039,
+                "relative_rmse": 0.009345087555877374,
+                "max_row_norm_relative_error": 0.010729685950026163,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-checkerboard-96-formal-1.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+                "file_sha256": "9cc5cc6ef46c471d4d4a5a8863be86561235c26711466750705069aabfd25a90",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 2,
+              "inference_ms": 72.52990000051796,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.003530740737915039,
+                "relative_rmse": 0.009345087555877374,
+                "max_row_norm_relative_error": 0.010729685950026163,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-checkerboard-96-formal-2.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+                "file_sha256": "9cc5cc6ef46c471d4d4a5a8863be86561235c26711466750705069aabfd25a90",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 3,
+              "inference_ms": 67.19259999954375,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.003530740737915039,
+                "relative_rmse": 0.009345087555877374,
+                "max_row_norm_relative_error": 0.010729685950026163,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x96-checkerboard-96-formal-3.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+                "file_sha256": "9cc5cc6ef46c471d4d4a5a8863be86561235c26711466750705069aabfd25a90",
+                "file_bytes": 92288
+              }
+            }
+          ],
+          "pass": false,
+          "warmup": {
+            "inference_ms": 60.734900001989445,
+            "output_sha256": "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260"
+          },
+          "repeat_hashes": [
+            "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+            "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260",
+            "622d881fb36f87812cc31684a629cda62473d92b05da5e3516f945883e38a260"
+          ],
+          "repeat_identical": true
+        }
+      ],
+      "graph": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+        "identity_kind": "gguf_decoded",
+        "shape_plan": {
+          "input": [
+            1,
+            3,
+            96,
+            96
+          ],
+          "input_dtype": "float32",
+          "input_layout": "NCHW_RGB_normalized",
+          "patch_grid": [
+            6,
+            6
+          ],
+          "patches": 36,
+          "heads": 16,
+          "head_dim": 72,
+          "merger_grid": [
+            3,
+            3
+          ],
+          "output": [
+            9,
+            2560
+          ],
+          "output_layout": "token_major_row_major_merger_grid"
+        },
+        "arithmetic_policy": "graph_f32",
+        "gelu_variant": "ggml_tanh",
+        "openvino_imported": true,
+        "device_queried": false,
+        "compiled": false,
+        "inference_run": false,
+        "decoded_array_hashes_verified": true,
+        "asset_payload_reverified": false,
+        "output_taps": [],
+        "native_parity": "NOT_RUN",
+        "npu_accepted": false,
+        "native_arithmetic_unknowns": [
+          "GEMM dispatch and reductions",
+          "transcendental rounding",
+          "device precision"
+        ]
+      },
+      "compile_attempted": true,
+      "compile_seconds": 1.1508555000000342,
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_inference_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "inference_attempted": true
+    },
+    {
+      "policy": "graph_f32",
+      "height": 96,
+      "width": 192,
+      "status": "compared",
+      "pass": false,
+      "images": [
+        {
+          "fixture": "gradient-192x96",
+          "formal": [
+            {
+              "iteration": 1,
+              "inference_ms": 112.50750000181142,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.007518649101257324,
+                "relative_rmse": 0.013770050188562784,
+                "max_row_norm_relative_error": 0.03990409432024495,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x192-gradient-192x96-formal-1.npy",
+                "shape": [
+                  18,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+                "file_sha256": "4087ce3bbed547e65b4dcd08835f04d70f7b60bd528039f3320ff6ea64edbc39",
+                "file_bytes": 184448
+              }
+            },
+            {
+              "iteration": 2,
+              "inference_ms": 101.11940000206232,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.007518649101257324,
+                "relative_rmse": 0.013770050188562784,
+                "max_row_norm_relative_error": 0.03990409432024495,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x192-gradient-192x96-formal-2.npy",
+                "shape": [
+                  18,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+                "file_sha256": "4087ce3bbed547e65b4dcd08835f04d70f7b60bd528039f3320ff6ea64edbc39",
+                "file_bytes": 184448
+              }
+            },
+            {
+              "iteration": 3,
+              "inference_ms": 92.3488999978872,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.007518649101257324,
+                "relative_rmse": 0.013770050188562784,
+                "max_row_norm_relative_error": 0.03990409432024495,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\graph_f32-96x192-gradient-192x96-formal-3.npy",
+                "shape": [
+                  18,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+                "file_sha256": "4087ce3bbed547e65b4dcd08835f04d70f7b60bd528039f3320ff6ea64edbc39",
+                "file_bytes": 184448
+              }
+            }
+          ],
+          "pass": false,
+          "warmup": {
+            "inference_ms": 119.64900000020862,
+            "output_sha256": "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3"
+          },
+          "repeat_hashes": [
+            "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+            "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3",
+            "5fa4393117ee5d76ce96a12f3a6639ed231ba84f689cc00f3bb0be6b4ca676d3"
+          ],
+          "repeat_identical": true
+        }
+      ],
+      "graph": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+        "identity_kind": "gguf_decoded",
+        "shape_plan": {
+          "input": [
+            1,
+            3,
+            96,
+            192
+          ],
+          "input_dtype": "float32",
+          "input_layout": "NCHW_RGB_normalized",
+          "patch_grid": [
+            6,
+            12
+          ],
+          "patches": 72,
+          "heads": 16,
+          "head_dim": 72,
+          "merger_grid": [
+            3,
+            6
+          ],
+          "output": [
+            18,
+            2560
+          ],
+          "output_layout": "token_major_row_major_merger_grid"
+        },
+        "arithmetic_policy": "graph_f32",
+        "gelu_variant": "ggml_tanh",
+        "openvino_imported": true,
+        "device_queried": false,
+        "compiled": false,
+        "inference_run": false,
+        "decoded_array_hashes_verified": true,
+        "asset_payload_reverified": false,
+        "output_taps": [],
+        "native_parity": "NOT_RUN",
+        "npu_accepted": false,
+        "native_arithmetic_unknowns": [
+          "GEMM dispatch and reductions",
+          "transcendental rounding",
+          "device precision"
+        ]
+      },
+      "compile_attempted": true,
+      "compile_seconds": 1.0588898000023619,
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_inference_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "inference_attempted": true
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "height": 96,
+      "width": 96,
+      "status": "compared",
+      "pass": false,
+      "images": [
+        {
+          "fixture": "gray-96",
+          "formal": [
+            {
+              "iteration": 1,
+              "inference_ms": 85.1105000001553,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0005248803645372391,
+                "relative_rmse": 0.002716617358050091,
+                "max_row_norm_relative_error": 0.0018324736925253724,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-gray-96-formal-1.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+                "file_sha256": "e72c035143312e86f48cf1d407a2f0674fc8f18b3734cd4961d7131274208d80",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 2,
+              "inference_ms": 72.46899999881862,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0005248803645372391,
+                "relative_rmse": 0.002716617358050091,
+                "max_row_norm_relative_error": 0.0018324736925253724,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-gray-96-formal-2.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+                "file_sha256": "e72c035143312e86f48cf1d407a2f0674fc8f18b3734cd4961d7131274208d80",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 3,
+              "inference_ms": 72.95620000149938,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0005248803645372391,
+                "relative_rmse": 0.002716617358050091,
+                "max_row_norm_relative_error": 0.0018324736925253724,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-gray-96-formal-3.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+                "file_sha256": "e72c035143312e86f48cf1d407a2f0674fc8f18b3734cd4961d7131274208d80",
+                "file_bytes": 92288
+              }
+            }
+          ],
+          "pass": false,
+          "warmup": {
+            "inference_ms": 93.55200000209152,
+            "output_sha256": "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764"
+          },
+          "repeat_hashes": [
+            "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+            "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764",
+            "d0191b0829d7207e1aa448412785f61f5e123b777ff7a37040a2cd99c0647764"
+          ],
+          "repeat_identical": true
+        },
+        {
+          "fixture": "quadrants-96",
+          "formal": [
+            {
+              "iteration": 1,
+              "inference_ms": 78.60199999777251,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.001855611801147461,
+                "relative_rmse": 0.007605849568159044,
+                "max_row_norm_relative_error": 0.006740396569781272,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-1.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+                "file_sha256": "39b961d7c2a1cbf030f67cff2b3ff3de407774e96157728fe2d3422a5cb287a2",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 2,
+              "inference_ms": 66.08629999755067,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.001855611801147461,
+                "relative_rmse": 0.007605849568159044,
+                "max_row_norm_relative_error": 0.006740396569781272,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-2.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+                "file_sha256": "39b961d7c2a1cbf030f67cff2b3ff3de407774e96157728fe2d3422a5cb287a2",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 3,
+              "inference_ms": 59.56729999888921,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.001855611801147461,
+                "relative_rmse": 0.007605849568159044,
+                "max_row_norm_relative_error": 0.006740396569781272,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-quadrants-96-formal-3.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+                "file_sha256": "39b961d7c2a1cbf030f67cff2b3ff3de407774e96157728fe2d3422a5cb287a2",
+                "file_bytes": 92288
+              }
+            }
+          ],
+          "pass": false,
+          "warmup": {
+            "inference_ms": 79.03339999757009,
+            "output_sha256": "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140"
+          },
+          "repeat_hashes": [
+            "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+            "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140",
+            "ba44035babb3001e851517024e2b5d6f417f8afb0b2809f94ec9928b53551140"
+          ],
+          "repeat_identical": true
+        },
+        {
+          "fixture": "checkerboard-96",
+          "formal": [
+            {
+              "iteration": 1,
+              "inference_ms": 58.545100000628736,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.002581581473350525,
+                "relative_rmse": 0.006859533981875682,
+                "max_row_norm_relative_error": 0.00674521971439599,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-1.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+                "file_sha256": "1ba3c3866b8da3ad0e17c563c212d3d52e2bc1da9e574c43b760d86fe9e9d5b6",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 2,
+              "inference_ms": 58.586399998603156,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.002581581473350525,
+                "relative_rmse": 0.006859533981875682,
+                "max_row_norm_relative_error": 0.00674521971439599,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-2.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+                "file_sha256": "1ba3c3866b8da3ad0e17c563c212d3d52e2bc1da9e574c43b760d86fe9e9d5b6",
+                "file_bytes": 92288
+              }
+            },
+            {
+              "iteration": 3,
+              "inference_ms": 59.35510000199429,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.002581581473350525,
+                "relative_rmse": 0.006859533981875682,
+                "max_row_norm_relative_error": 0.00674521971439599,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x96-checkerboard-96-formal-3.npy",
+                "shape": [
+                  9,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+                "file_sha256": "1ba3c3866b8da3ad0e17c563c212d3d52e2bc1da9e574c43b760d86fe9e9d5b6",
+                "file_bytes": 92288
+              }
+            }
+          ],
+          "pass": false,
+          "warmup": {
+            "inference_ms": 59.65860000287648,
+            "output_sha256": "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1"
+          },
+          "repeat_hashes": [
+            "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+            "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1",
+            "aba0a1e8f4e5664ead67215589bf188fddc93c738e87ef8cb4ecb3c8d28d15c1"
+          ],
+          "repeat_identical": true
+        }
+      ],
+      "graph": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+        "identity_kind": "gguf_decoded",
+        "shape_plan": {
+          "input": [
+            1,
+            3,
+            96,
+            96
+          ],
+          "input_dtype": "float32",
+          "input_layout": "NCHW_RGB_normalized",
+          "patch_grid": [
+            6,
+            6
+          ],
+          "patches": 36,
+          "heads": 16,
+          "head_dim": 72,
+          "merger_grid": [
+            3,
+            3
+          ],
+          "output": [
+            9,
+            2560
+          ],
+          "output_layout": "token_major_row_major_merger_grid"
+        },
+        "arithmetic_policy": "cpu_vec_dot_rounding",
+        "gelu_variant": "ggml_cpu_f16_lut_math_rounding",
+        "openvino_imported": true,
+        "device_queried": false,
+        "compiled": false,
+        "inference_run": false,
+        "decoded_array_hashes_verified": true,
+        "asset_payload_reverified": false,
+        "output_taps": [],
+        "native_parity": "NOT_RUN",
+        "npu_accepted": false,
+        "native_arithmetic_unknowns": [
+          "GEMM dispatch and reductions",
+          "transcendental rounding",
+          "device precision"
+        ]
+      },
+      "compile_attempted": true,
+      "compile_seconds": 1.2566740999973263,
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_inference_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "inference_attempted": true
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "height": 96,
+      "width": 192,
+      "status": "compared",
+      "pass": false,
+      "images": [
+        {
+          "fixture": "gradient-192x96",
+          "formal": [
+            {
+              "iteration": 1,
+              "inference_ms": 95.31240000069374,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0021672844886779785,
+                "relative_rmse": 0.006805496821232395,
+                "max_row_norm_relative_error": 0.012991695808096459,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-1.npy",
+                "shape": [
+                  18,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+                "file_sha256": "4a33d24bffaa68e7394b05fed3fe00a269c73a7b48921fa9dee969097464fbec",
+                "file_bytes": 184448
+              }
+            },
+            {
+              "iteration": 2,
+              "inference_ms": 94.21429999929387,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0021672844886779785,
+                "relative_rmse": 0.006805496821232395,
+                "max_row_norm_relative_error": 0.012991695808096459,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-2.npy",
+                "shape": [
+                  18,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+                "file_sha256": "4a33d24bffaa68e7394b05fed3fe00a269c73a7b48921fa9dee969097464fbec",
+                "file_bytes": 184448
+              }
+            },
+            {
+              "iteration": 3,
+              "inference_ms": 95.57850000055623,
+              "quality": {
+                "shape_ok": true,
+                "finite": true,
+                "max_abs_error": 0.0021672844886779785,
+                "relative_rmse": 0.006805496821232395,
+                "max_row_norm_relative_error": 0.012991695808096459,
+                "tolerances": {
+                  "max_abs": 0.01,
+                  "relative_rmse": 0.001,
+                  "row_norm_relative": 0.001
+                },
+                "pass": false
+              },
+              "taps": {},
+              "output": {
+                "path": "E:\\Strata-Hetero-data\\vision-compare\\20261009-31-cpu-native\\cpu_vec_dot_rounding-96x192-gradient-192x96-formal-3.npy",
+                "shape": [
+                  18,
+                  2560
+                ],
+                "dtype": "float32",
+                "decoded_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+                "file_sha256": "4a33d24bffaa68e7394b05fed3fe00a269c73a7b48921fa9dee969097464fbec",
+                "file_bytes": 184448
+              }
+            }
+          ],
+          "pass": false,
+          "warmup": {
+            "inference_ms": 105.52090000055614,
+            "output_sha256": "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9"
+          },
+          "repeat_hashes": [
+            "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+            "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9",
+            "6a13b70d62aab2dccd3505d3236b12279618c07aca533253d43db77d82f90dc9"
+          ],
+          "repeat_identical": true
+        }
+      ],
+      "graph": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "asset_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+        "identity_kind": "gguf_decoded",
+        "shape_plan": {
+          "input": [
+            1,
+            3,
+            96,
+            192
+          ],
+          "input_dtype": "float32",
+          "input_layout": "NCHW_RGB_normalized",
+          "patch_grid": [
+            6,
+            12
+          ],
+          "patches": 72,
+          "heads": 16,
+          "head_dim": 72,
+          "merger_grid": [
+            3,
+            6
+          ],
+          "output": [
+            18,
+            2560
+          ],
+          "output_layout": "token_major_row_major_merger_grid"
+        },
+        "arithmetic_policy": "cpu_vec_dot_rounding",
+        "gelu_variant": "ggml_cpu_f16_lut_math_rounding",
+        "openvino_imported": true,
+        "device_queried": false,
+        "compiled": false,
+        "inference_run": false,
+        "decoded_array_hashes_verified": true,
+        "asset_payload_reverified": false,
+        "output_taps": [],
+        "native_parity": "NOT_RUN",
+        "npu_accepted": false,
+        "native_arithmetic_unknowns": [
+          "GEMM dispatch and reductions",
+          "transcendental rounding",
+          "device precision"
+        ]
+      },
+      "compile_attempted": true,
+      "compile_seconds": 1.2402204999998503,
+      "execution_devices": [
+        "CPU"
+      ],
+      "reported_inference_precision": "<Type: 'float32'>",
+      "reported_execution_mode": "ExecutionMode.ACCURACY",
+      "inference_attempted": true
+    }
+  ],
+  "claim_limit": "CPU/native encoder comparison; no production route or performance acceptance",
+  "core_creation_attempted": true,
+  "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "cpu_full_name": "Intel(R) Core(TM) Ultra 9 285H",
+  "compile_property_policy": {
+    "requested": {
+      "INFERENCE_PRECISION_HINT": "f32",
+      "EXECUTION_MODE_HINT": "ACCURACY"
+    },
+    "submitted": {
+      "INFERENCE_PRECISION_HINT": "f32",
+      "EXECUTION_MODE_HINT": "ACCURACY"
+    },
+    "omitted": {}
+  },
+  "policy_quality_pass": {
+    "graph_f32": false,
+    "cpu_vec_dot_rounding": false
+  },
+  "all_quality_pass": false,
+  "last_stage": "comparison-complete"
+}

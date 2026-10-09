@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "status": "root_verified_cpu_port_numeric_failure_terminal",
+  "reviewed_utc": "2026-10-09T09:52:19.356150+00:00",
+  "formal_outputs_rehashed": 24,
+  "rows": [
+    {
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "relative_rmse": 0.0058107135742594095,
+      "max_abs": 0.0015252791345119476,
+      "file_sha256": "37c93c3b884fa23ee5aeebf0b78c603d8b7f35c0115f748010c494975c78815a"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "relative_rmse": 0.0058107135742594095,
+      "max_abs": 0.0015252791345119476,
+      "file_sha256": "37c93c3b884fa23ee5aeebf0b78c603d8b7f35c0115f748010c494975c78815a"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "relative_rmse": 0.0058107135742594095,
+      "max_abs": 0.0015252791345119476,
+      "file_sha256": "37c93c3b884fa23ee5aeebf0b78c603d8b7f35c0115f748010c494975c78815a"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "relative_rmse": 0.01070238337683776,
+      "max_abs": 0.003727346658706665,
+      "file_sha256": "bf15663fa3fd2b7e8fe7bd02bee1797c9708d2daa267acd03e3be278136117ee"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "relative_rmse": 0.01070238337683776,
+      "max_abs": 0.003727346658706665,
+      "file_sha256": "bf15663fa3fd2b7e8fe7bd02bee1797c9708d2daa267acd03e3be278136117ee"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "relative_rmse": 0.01070238337683776,
+      "max_abs": 0.003727346658706665,
+      "file_sha256": "bf15663fa3fd2b7e8fe7bd02bee1797c9708d2daa267acd03e3be278136117ee"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "relative_rmse": 0.009345087555877374,
+      "max_abs": 0.003530740737915039,
+      "file_sha256": "9cc5cc6ef46c471d4d4a5a8863be86561235c26711466750705069aabfd25a90"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "relative_rmse": 0.009345087555877374,
+      "max_abs": 0.003530740737915039,
+      "file_sha256": "9cc5cc6ef46c471d4d4a5a8863be86561235c26711466750705069aabfd25a90"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "relative_rmse": 0.009345087555877374,
+      "max_abs": 0.003530740737915039,
+      "file_sha256": "9cc5cc6ef46c471d4d4a5a8863be86561235c26711466750705069aabfd25a90"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "relative_rmse": 0.013770050188562784,
+      "max_abs": 0.007518649101257324,
+      "file_sha256": "4087ce3bbed547e65b4dcd08835f04d70f7b60bd528039f3320ff6ea64edbc39"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "relative_rmse": 0.013770050188562784,
+      "max_abs": 0.007518649101257324,
+      "file_sha256": "4087ce3bbed547e65b4dcd08835f04d70f7b60bd528039f3320ff6ea64edbc39"
+    },
+    {
+      "policy": "graph_f32",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "relative_rmse": 0.013770050188562784,
+      "max_abs": 0.007518649101257324,
+      "file_sha256": "4087ce3bbed547e65b4dcd08835f04d70f7b60bd528039f3320ff6ea64edbc39"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 1,
+      "relative_rmse": 0.002716617358050091,
+      "max_abs": 0.0005248803645372391,
+      "file_sha256": "e72c035143312e86f48cf1d407a2f0674fc8f18b3734cd4961d7131274208d80"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 2,
+      "relative_rmse": 0.002716617358050091,
+      "max_abs": 0.0005248803645372391,
+      "file_sha256": "e72c035143312e86f48cf1d407a2f0674fc8f18b3734cd4961d7131274208d80"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gray-96",
+      "iteration": 3,
+      "relative_rmse": 0.002716617358050091,
+      "max_abs": 0.0005248803645372391,
+      "file_sha256": "e72c035143312e86f48cf1d407a2f0674fc8f18b3734cd4961d7131274208d80"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 1,
+      "relative_rmse": 0.007605849568159044,
+      "max_abs": 0.001855611801147461,
+      "file_sha256": "39b961d7c2a1cbf030f67cff2b3ff3de407774e96157728fe2d3422a5cb287a2"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 2,
+      "relative_rmse": 0.007605849568159044,
+      "max_abs": 0.001855611801147461,
+      "file_sha256": "39b961d7c2a1cbf030f67cff2b3ff3de407774e96157728fe2d3422a5cb287a2"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "quadrants-96",
+      "iteration": 3,
+      "relative_rmse": 0.007605849568159044,
+      "max_abs": 0.001855611801147461,
+      "file_sha256": "39b961d7c2a1cbf030f67cff2b3ff3de407774e96157728fe2d3422a5cb287a2"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 1,
+      "relative_rmse": 0.006859533981875682,
+      "max_abs": 0.002581581473350525,
+      "file_sha256": "1ba3c3866b8da3ad0e17c563c212d3d52e2bc1da9e574c43b760d86fe9e9d5b6"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 2,
+      "relative_rmse": 0.006859533981875682,
+      "max_abs": 0.002581581473350525,
+      "file_sha256": "1ba3c3866b8da3ad0e17c563c212d3d52e2bc1da9e574c43b760d86fe9e9d5b6"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "checkerboard-96",
+      "iteration": 3,
+      "relative_rmse": 0.006859533981875682,
+      "max_abs": 0.002581581473350525,
+      "file_sha256": "1ba3c3866b8da3ad0e17c563c212d3d52e2bc1da9e574c43b760d86fe9e9d5b6"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 1,
+      "relative_rmse": 0.006805496821232395,
+      "max_abs": 0.0021672844886779785,
+      "file_sha256": "4a33d24bffaa68e7394b05fed3fe00a269c73a7b48921fa9dee969097464fbec"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 2,
+      "relative_rmse": 0.006805496821232395,
+      "max_abs": 0.0021672844886779785,
+      "file_sha256": "4a33d24bffaa68e7394b05fed3fe00a269c73a7b48921fa9dee969097464fbec"
+    },
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "fixture": "gradient-192x96",
+      "iteration": 3,
+      "relative_rmse": 0.006805496821232395,
+      "max_abs": 0.0021672844886779785,
+      "file_sha256": "4a33d24bffaa68e7394b05fed3fe00a269c73a7b48921fa9dee969097464fbec"
+    }
+  ],
+  "cpu_runtime_compile_infer_success": true,
+  "npu_accepted": false,
+  "tolerance_changes": false,
+  "reason": "relativeRMSE and row-norm exceed original1e-3 despitefinite/shape/repeat/maxabs passing",
+  "resource_note": "systemwide12/4gates valid; ownerRSS wasvenvlauncher only anddoesnot measureactualCPython worker peak",
+  "next": "boundednative-vs-port stage taps; retainnegative anddo notloosen gates"
+}
