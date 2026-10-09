@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-44-upstream41-direct-quality-resume",
+  "status": "owned_model_and_sampler_terminal",
+  "utc": "2026-10-09T11:40:21.6337254Z",
+  "post_unload_loaded": false,
+  "model_processes": [
+    {
+      "create_utc": "2026-10-09T11:27:56.0374710Z",
+      "pid": 7240,
+      "parent_pid": 15440,
+      "status": "terminal_after_unload_and_child_first_cleanup",
+      "exe": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe"
+    },
+    {
+      "create_utc": "2026-10-09T11:27:55.5209790Z",
+      "pid": 15440,
+      "parent_pid": 11828,
+      "status": "terminal",
+      "exe": "C:\\Python314\\python.exe"
+    },
+    {
+      "create_utc": "2026-10-09T11:27:55.4872070Z",
+      "pid": 11828,
+      "status": "terminal",
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe"
+    }
+  ],
+  "sampler": {
+    "launcher_pid": 9416,
+    "stop_file": "resource\\STOP",
+    "terminal_record": {
+      "schema_version": 1,
+      "record_type": "sampler_stopped",
+      "observed_at_utc": "2026-10-09T11:39:32.642Z",
+      "monotonic_seconds": 31598.2508209,
+      "reason": "stop_file_exists"
+    },
+    "launcher_and_child_terminal": true,
+    "actual_child_pid": 20968
+  },
+  "listener8081_released": true,
+  "strata_engine_count": 0,
+  "compiler_process_count": 0,
+  "run44_nonobserver_pids_remaining": 0,
+  "sampler_was_not_killed": true
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-44-upstream41-direct-quality-resume",
+  "status": "terminal_all_run44_owned_processes_released",
+  "utc": "2026-10-09T11:40:21.6595971Z",
+  "resource_samples": 697,
+  "minimum_ram_gib": 63.98,
+  "minimum_commit_gib": 44.727,
+  "all_resource_gates_pass": true,
+  "sampler_terminal": true,
+  "engine_server_launcher_terminal": true,
+  "listener8081_released": true,
+  "strata_engine_count": 0,
+  "compiler_process_count": 0,
+  "run44_process_count": 0,
+  "quality_matrix_status": "nine_prompt_matrix_complete"
+}

@@ -1,0 +1,289 @@
+{
+  "status": "pass",
+  "method": "stat/file-ID only; original payload hashes retained; no model/runtime payload read",
+  "files": [
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "role": "original F model shard; shared native dense source in both arms",
+      "stat": {
+        "size_bytes": 10946624,
+        "mtime_ns": 1791267636000000000,
+        "ctime_ns": 1791267635050000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292856832
+        }
+      },
+      "prior_full_sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+      "matches_prepared_identity": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "role": "PLE table source identity; selected by one arm only",
+      "stat": {
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791268992000000000,
+        "ctime_ns": 1791267636110000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857216
+        }
+      },
+      "prior_full_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+      "matches_prepared_identity": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "role": "original F model shard; shared native dense source in both arms",
+      "stat": {
+        "size_bytes": 49376141504,
+        "mtime_ns": 1791270330000000000,
+        "ctime_ns": 1791269021380000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857600
+        }
+      },
+      "prior_full_sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3",
+      "matches_prepared_identity": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "role": "original F model shard; shared native dense source in both arms",
+      "stat": {
+        "size_bytes": 12087983520,
+        "mtime_ns": 1791270664000000000,
+        "ctime_ns": 1791270360920000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 790292857984
+        }
+      },
+      "prior_full_sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a",
+      "matches_prepared_identity": true
+    }
+  ],
+  "runtime_identity_files": [
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\compat-bf16.json",
+      "stat": {
+        "size_bytes": 22055,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271316980000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 248241979712
+        }
+      },
+      "prior_full_sha256": "25478177bdf65784e7f16e96f5c18911fe44dd317c8a29198aeaf227074c4a18",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\conversions.json",
+      "stat": {
+        "size_bytes": 172496,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271316980000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 248241979584
+        }
+      },
+      "prior_full_sha256": "09f5568fe921c6c6dcb0af632452a5eea654dac369036d27d3813aaef45e00d1",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\dense.bin",
+      "stat": {
+        "size_bytes": 1485688320,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271289730000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 248241979392
+        }
+      },
+      "prior_full_sha256": "f53174059b262ed342b82e143af62056081948ef5e5f1903a1a70eeb73fa4a23",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\index.txt",
+      "stat": {
+        "size_bytes": 93560,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271316980000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 248241979488
+        }
+      },
+      "prior_full_sha256": "cfc07e91c4d9b8e8c999fd1f70fa364e584748e70fa377b30e0fc85426f52711",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\native_experts.txt",
+      "stat": {
+        "size_bytes": 5795,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271317710000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 248241979936
+        }
+      },
+      "prior_full_sha256": "5ed2c4a55910616db1efe16f0c989e9bec80cc8b9e95bf1c42f886aadfffd2d6",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+      "stat": {
+        "size_bytes": 9993,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271317680000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 249729909120
+        }
+      },
+      "prior_full_sha256": "12827f24b742ea4e80cdc12dbcf9622227056b9f797252a3149263d4f9aaadce",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\merges.txt",
+      "stat": {
+        "size_bytes": 3600844,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271317550000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 249729908832
+        }
+      },
+      "prior_full_sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\token_type.json",
+      "stat": {
+        "size_bytes": 744960,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271317560000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 249729908928
+        }
+      },
+      "prior_full_sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\tokenizer.json",
+      "stat": {
+        "size_bytes": 554,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271317560000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 249729909024
+        }
+      },
+      "prior_full_sha256": "87be2ac47d8bc7393b7435df6ccd276740019a393941a2585d5edce59f450c54",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "pack",
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\vocab.json",
+      "stat": {
+        "size_bytes": 5737005,
+        "mtime_ns": 1791271318000000000,
+        "ctime_ns": 1791271317460000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 249729908736
+        }
+      },
+      "prior_full_sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "mtp_runtime",
+      "path": "F:\\Strata-data\\mtp\\rt\\dense.bin",
+      "stat": {
+        "size_bytes": 116099072,
+        "mtime_ns": 1791271756000000000,
+        "ctime_ns": 1791271753450000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 250632732768
+        }
+      },
+      "prior_full_sha256": "c724dc0b0822ada5d2977bf5bde821605feabaa64ea2e0045b67ca656329070a",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "mtp_runtime",
+      "path": "F:\\Strata-data\\mtp\\rt\\dense.txt",
+      "stat": {
+        "size_bytes": 1880,
+        "mtime_ns": 1791271756000000000,
+        "ctime_ns": 1791271754910000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 250632732864
+        }
+      },
+      "prior_full_sha256": "8773c81ebb0986e37fe94a8a9933e87be48b1fabc6889a0106bcdab179d1c2ac",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "mtp_runtime",
+      "path": "F:\\Strata-data\\mtp\\rt\\draft_vocab.bin",
+      "stat": {
+        "size_bytes": 425196,
+        "mtime_ns": 1791271756000000000,
+        "ctime_ns": 1791271755020000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 250632732960
+        }
+      },
+      "prior_full_sha256": "b1e1d3a7a9e4bf862dcd5923ce661fb59bbd07907e594df5cf86a62ac235cb91",
+      "matches_prior_stat": true
+    },
+    {
+      "category": "mtp_runtime",
+      "path": "F:\\Strata-data\\mtp\\rt\\experts.bin",
+      "stat": {
+        "size_bytes": 707788800,
+        "mtime_ns": 1791271754000000000,
+        "ctime_ns": 1791271752530000000,
+        "file_id": {
+          "volume": 2894736058,
+          "index": 250632732672
+        }
+      },
+      "prior_full_sha256": "09398406be61f1f54c93861f449e48b8df0bfccbc9ec9b2b7636775a6ea9244f",
+      "matches_prior_stat": true
+    }
+  ],
+  "ple_table_selection_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+  "ple_table_identity_matches_shared_F_shard": true,
+  "engine_sha256": "a6e2763ffce668e213f12380389223674621c47e4e5cb94c0f724e6ea8e686fc",
+  "server_file_sha256": "0ca2dd70485e5e03b0a6fcb5dfc1ee1a8863d2dc44947257e342ae608326b026",
+  "config_sha256": "a46761007969d341c38b87d223bbd1b60257555afbcaaa5af9e55330ba97a515",
+  "manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "expert_profile": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+    "size_bytes": 196632,
+    "sha256": "8f59b4aa8873209dff11c11e37bcda9529a1335b724a1afeea37bf6388975baf"
+  }
+}

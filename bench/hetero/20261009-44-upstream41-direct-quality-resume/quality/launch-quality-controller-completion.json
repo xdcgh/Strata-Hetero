@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-44-upstream41-direct-quality-resume",
+  "status": "complete_run_controller_exited_successfully",
+  "controller_pid": 1612,
+  "controller_create_utc": "2026-10-09T11:27:50.2667860Z",
+  "controller_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "controller_script_sha256": "7ed63e6079a4e1f962b29fa8b61d211a47ca3bba0cdcfcf43c7717157c3ca653",
+  "controller_exit_code": 0,
+  "matrix_stage_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-44-upstream41-direct-quality-resume\\quality\\F-nine-prompt-stage.json",
+  "matrix_stage_sha256": "4b9394bd22c0f700b554d63aecf60c787436646b43875d19485bf5ec3b002566",
+  "preflight_status": "live_quality_preflight_pass",
+  "preflight_chat_requests_sent": 0,
+  "preflight_model_requests": 0,
+  "prompt_count": 9,
+  "warmups": 9,
+  "formal_requests": 27,
+  "prompts": [
+    {
+      "prompt_tokens": [
+        27,
+        27,
+        27
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea"
+      ],
+      "actual_token_ids_sha256": [
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea"
+      ],
+      "id": "smoke_arithmetic",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "prompt_tokens": [
+        32,
+        32,
+        32
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c"
+      ],
+      "actual_token_ids_sha256": [
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c"
+      ],
+      "id": "smoke_unicode",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "prompt_tokens": [
+        50,
+        50,
+        50
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec"
+      ],
+      "actual_token_ids_sha256": [
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec"
+      ],
+      "id": "smoke_json_arithmetic",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "prompt_tokens": [
+        39,
+        39,
+        39
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb"
+      ],
+      "actual_token_ids_sha256": [
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb"
+      ],
+      "id": "smoke_python_function",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "prompt_tokens": [
+        114,
+        114,
+        114
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "id": "smoke_three_key_retrieval",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "prompt_tokens": [
+        1036,
+        1036,
+        1036
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "id": "long_1k",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "prompt_tokens": [
+        4109,
+        4109,
+        4109
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "id": "long_4k",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "prompt_tokens": [
+        16396,
+        16396,
+        16396
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "id": "long_16k",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "prompt_tokens": [
+        30712,
+        30712,
+        30712
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_token_ids_valid": true,
+      "h4_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_token_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "id": "long_30k7",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    }
+  ],
+  "sampler_stop_requested": false,
+  "server_left_live_for_root_review": true,
+  "completed_utc": "2026-10-09T11:35:48.1612271Z"
+}

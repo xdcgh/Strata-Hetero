@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-44-upstream41-direct-quality-resume",
+  "status": "exact_owned_cleanup_preflight_pass",
+  "utc": "2026-10-09T11:39:12.5637891Z",
+  "api_status": {
+    "loaded": true,
+    "in_flight": 0,
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "requests": 36,
+    "engine": "0.1.41"
+  },
+  "listener_pid": 15440,
+  "verified_process_ids": [
+    11828,
+    15440,
+    7240,
+    9416,
+    20968
+  ]
+}

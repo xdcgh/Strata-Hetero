@@ -1,0 +1,1 @@
+{"status":"pass","sample_count":697,"terminal_count":1,"min_ram_gib":63.98,"min_commit_gib":44.727,"all_gates_pass":true,"terminal":{"schema_version":1,"record_type":"sampler_stopped","observed_at_utc":"2026-10-09T11:39:32.642Z","monotonic_seconds":31598.2508209,"reason":"stop_file_exists"}}

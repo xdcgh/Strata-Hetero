@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-44-upstream41-direct-quality-resume",
+  "status": "live_started_once",
+  "pid": 1612,
+  "parent_pid": 7796,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "create_utc": "2026-10-09T11:27:50.2667860Z",
+  "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-44-upstream41-direct-quality-resume\\launch-quality-controller.ps1",
+  "controller_script": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-44-upstream41-direct-quality-resume\\launch-quality-controller.ps1",
+  "controller_script_sha256": "7ed63e6079a4e1f962b29fa8b61d211a47ca3bba0cdcfcf43c7717157c3ca653",
+  "pwsh_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-44-upstream41-direct-quality-resume\\logs\\launch-quality-controller.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-44-upstream41-direct-quality-resume\\logs\\launch-quality-controller.stderr.log",
+  "recorded_after_start_utc": "2026-10-09T11:28:27.9829616Z",
+  "receipt_delay_reason": "Initial outer receipt writer hit PowerShell bare true parser error after spawning the controller; attached to exact existing PID without restart."
+}
