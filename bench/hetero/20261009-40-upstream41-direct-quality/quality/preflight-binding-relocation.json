@@ -1,0 +1,9 @@
+{
+  "status": "preflight_binding_preserved_under_distinct_name",
+  "original_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\quality\\ready-binding.json",
+  "preserved_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\quality\\preflight-ready-binding.json",
+  "sha256": "cdeb5b62b7fb4f136efaaadbb7a17bc34bae63d5ff2d65fa600c62a8f97868ec",
+  "reason": "Root-only preparation receipt used the path reserved by the unexecuted quality controller; preserve preflight bytes before it creates its actual run binding",
+  "model_requests_before_move": 0,
+  "utc": "2026-10-09T11:07:47.3735650Z"
+}

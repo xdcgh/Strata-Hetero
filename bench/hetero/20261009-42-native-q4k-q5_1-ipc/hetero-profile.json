@@ -1,0 +1,296 @@
+{
+  "acceptance": [],
+  "ema": 0.2,
+  "expires_utc": "2026-10-10T11:32:28.176464+00:00",
+  "identity": {
+    "engine": {
+      "model_route_enabled": false,
+      "operator": "native-q4k-q5_1",
+      "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+      "phase_interpretation": "prefill helper only; no model phase timing was measured",
+      "profile_acceptance_required_for_helper_dispatch": true,
+      "raw_profile_rank": 0,
+      "scope": "isolated single-expert IPC helper measurement; not whole-model execution or model routing"
+    },
+    "hardware": {
+      "device_discovery_receipt": {
+        "captured_at_utc": "2026-10-08T11:42:42.431021+00:00",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-11-intel-device-discovery-02.json",
+        "sha256": "0726ab1bc891209877ec3781b52c4eed64a184099d937cd5f5a180c6cafe6b70"
+      },
+      "host_hardware_manifest": {
+        "captured_at_utc": "2026-10-06T15:16:59.668142+00:00",
+        "cpu": [
+          {
+            "cores": 16,
+            "logical_processors": 16,
+            "max_clock_mhz": 3700,
+            "name": "Intel(R) Core(TM) Ultra 9 285H"
+          }
+        ],
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261006-00-inventory\\hardware_manifest.json",
+        "sha256": "f7fe4e6cd58545c975043cb60d12071b676986767935ea6451c21725f35333eb"
+      },
+      "selected_device": {
+        "device_id": "GPU.0",
+        "execution_devices": [
+          "GPU.0"
+        ],
+        "full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)"
+      }
+    },
+    "model": {
+      "expert": 288,
+      "extraction_receipt_sha256": "e4b8083e5f8f39f04affcb99e4a292bdad92ecf132462499561bbaddbd9dac9d",
+      "gguf_py_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+      "hidden": 2560,
+      "intermediate": 640,
+      "layer": 28,
+      "name": "Qwen3.8-Flash-Next Unsloth UD-Q4_K_XL",
+      "native_blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+      "quantization": "UD-Q4_K_XL",
+      "raw_selected_payload_sha256": {
+        "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4",
+        "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+        "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf"
+      },
+      "source_shard": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "source_tensor_types": {
+        "down": "Q5_1",
+        "gate": "Q4_K",
+        "up": "Q4_K"
+      },
+      "weights_sha256": {
+        "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568",
+        "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+        "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5"
+      }
+    },
+    "runtime": {
+      "client_interpreter_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "client_python_version": "3.14.8",
+      "numpy_version": "2.5.3",
+      "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+      "precision_policy": {
+        "EXECUTION_MODE_HINT": "ACCURACY",
+        "INFERENCE_PRECISION_HINT": "f32"
+      },
+      "precision_reported": "<Type: 'float32'>",
+      "precision_requested": "f32",
+      "psutil_version": "7.2.2",
+      "source_hashes": {
+        "activation_source_sha256": "31323455274a50236a6274464e51fc622c717f09bead8ab96337e133ce0dacaf",
+        "native_graph_source_sha256": "ddb26d786b4db2aff0f8360ed21d165fa65a399c8b4f27ac338bdea4ed60327a",
+        "protocol_source_sha256": "537a15a7284919741bb8e33a910ec5452644169c81fa6fd9edeaa69cbe5fcb91",
+        "resource_source_sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+        "runner_source_sha256": "49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83",
+        "service_source_sha256": "069d77d31e7b19a7d119ff14819694ce479a9393e7273c6217fb12e636d991d2",
+        "verify_source_sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+        "worker_api_source_sha256": "068bb1324a7eb6d3c36f0538031ef0bf3e0476e0bbadf80762691be541541d72"
+      },
+      "worker_interpreter_path": "C:\\Python314\\python.exe",
+      "worker_launcher_path": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe"
+    }
+  },
+  "observations": [
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        1122400,
+        1040600,
+        1129400,
+        1034200,
+        978900
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 1
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    },
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        1184300,
+        1194600,
+        1154100,
+        1082600,
+        1082500
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 2
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    },
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        966600,
+        946100,
+        1298500,
+        952800,
+        864000
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 4
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    },
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        1540100,
+        1678200,
+        1386700,
+        1175900,
+        1176700
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 8
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    },
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        1459000,
+        1268100,
+        1167900,
+        1134800,
+        1178800
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 16
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    },
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        1977900,
+        2095300,
+        2262600,
+        1791100,
+        1899300
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 32
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    },
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        4444100,
+        3827300,
+        4607000,
+        3811800,
+        4325200
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 64
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    },
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        9454000,
+        10103500,
+        11518600,
+        9602800,
+        10049400
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 128
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    },
+    {
+      "backend": "arc:gpu.0",
+      "contention_multiplier": null,
+      "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+      "full_job_ns": [
+        19446200,
+        19540500,
+        20885100,
+        20480700,
+        21377100
+      ],
+      "job": {
+        "operator": "native-q4k-q5_1:Q4_K,Q4_K,Q5_1:H2560:I640:signature=Q4_K_Q8_K_SILU_Q5_1_Q8_1:weights_sha256=e6a230b7261b89414a0efbdcc0ca93a53bcd9f96db47fa4ad595e15f80bb29b4:device=GPU.0:f32:ACCURACY",
+        "phase": "prefill",
+        "rows": 256
+      },
+      "quality_pass": true,
+      "scope": "input_ready_to_output_ready",
+      "shared_memory_resources": [
+        "system_ram"
+      ]
+    }
+  ],
+  "schema": "strata-hetero-profile-v1"
+}

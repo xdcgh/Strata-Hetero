@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "status": "failed_stopped_before_prompt_matrix",
+  "phase": "quality-entry-resource-sample-parse",
+  "controller_pid": 7364,
+  "controller_create_utc": "2026-10-09T11:08:17.5682500Z",
+  "controller_exit_code": 1,
+  "error": "ParentContainsErrorRecordException: C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\run-quality-after-ready.ps1:126\r\nLine |\r\n 126 |      $doc = [System.Text.Json.JsonDocument]::Parse([string]$line)\r\n     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n     | Exception calling \"Parse\" with \"1\" argument(s): \"'{' is invalid after a single JSON value. Expected end of data.\r\n     | LineNumber: 0 | BytePositionInLine: 3453.\"\r\n",
+  "stdout_bytes": 0,
+  "stderr_sha256": "544f76f5575303e00989b92fe2f29943cce39a954259c9bda9a0a55adf4772f5",
+  "last_resource_line_chars": 3447,
+  "last_resource_line_starts": "{\"schema_version\":1,\"record_type\":\"resource_sample\",\"observed_at_utc\":\"2026-10-09T11:08:52.049Z\",\"monotonic_seconds\":29757.6574605,\"sample_gap_seconds\":1.0000648999994155,\"sampler_elapsed_seconds\":0.1361974999999802,\"owner_pid\":20332,\"cpu\":",
+  "last_resource_line_sha256": "8cd254b305445a576e01191bda2ffcfdbf02ba227906e4f75b272891c70a6697",
+  "quality_progress_exists": true,
+  "ready_binding_exists": true,
+  "request_entries_present": 1,
+  "no_retry": true,
+  "model_controller_not_stopped": true,
+  "recorded_utc": "2026-10-09T11:08:52.7312714Z"
+}

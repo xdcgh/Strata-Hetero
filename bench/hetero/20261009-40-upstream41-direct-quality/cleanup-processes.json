@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "status": "owned_server_and_sampler_terminal",
+  "utc": "2026-10-09T11:12:23.2605517Z",
+  "unload_loaded": false,
+  "model_processes": [
+    {
+      "result": "already_absent_after_unload",
+      "pid": 21868
+    },
+    {
+      "pid": 16740,
+      "create_utc": "2026-10-09T11:03:41.9252340Z",
+      "result": "stopped_after_exact_revalidation",
+      "exe": "C:\\Python314\\python.exe"
+    },
+    {
+      "result": "already_absent_after_unload",
+      "pid": 20332
+    }
+  ],
+  "sampler_stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\resource\\STOP",
+  "sampler_child_pid": 22516,
+  "sampler_launcher_pid": 17532,
+  "sampler_terminal_record_seen": true,
+  "sampler_launcher_exited": true,
+  "other_processes_terminated": false
+}

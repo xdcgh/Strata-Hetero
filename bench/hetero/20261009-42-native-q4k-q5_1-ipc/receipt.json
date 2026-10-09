@@ -1,0 +1,3058 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "run_id": "20261009-42-native-q4k-q5_1-ipc",
+  "started_utc": "2026-10-09T11:22:51.961234+00:00",
+  "contract": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\execution-contract.json",
+  "operator": "native-q4k-q5_1",
+  "rows": [
+    {
+      "rows": 1,
+      "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+      "native_cpu_reference_sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "nonce": "ca5cf67fc9da46785b559f90cacd96f2",
+      "init": {
+        "request_id": 1,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 1,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 758411300,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 1,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "ca5cf67fc9da46785b559f90cacd96f2",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 2504150400,
+        "wire_rtt_ns": 2504083300,
+        "worker_wall_ns": 2265507400
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 2,
+        "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+        "output_sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+        "input_bytes": 10240,
+        "output_bytes": 10240,
+        "client_rtt_ns_after_output_copy": 2064700,
+        "input_encode_ns": 23200,
+        "wire_rtt_ns_before_output_copy": 2004600,
+        "output_owned_copy_ns": 36900,
+        "worker_wall_ns": 1480600,
+        "rtt_minus_worker_ns_descriptive": 584100,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 4.2780302464962006e-06,
+          "relative_rmse": 0.00021016330954546657,
+          "max_row_norm_relative_error": 6.032197295386443e-06,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 3,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "output_sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "input_bytes": 10240,
+          "output_bytes": 10240,
+          "client_rtt_ns_after_output_copy": 1122400,
+          "input_encode_ns": 5000,
+          "wire_rtt_ns_before_output_copy": 1102100,
+          "output_owned_copy_ns": 15300,
+          "worker_wall_ns": 841300,
+          "rtt_minus_worker_ns_descriptive": 281100,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 4,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "output_sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "input_bytes": 10240,
+          "output_bytes": 10240,
+          "client_rtt_ns_after_output_copy": 1040600,
+          "input_encode_ns": 3400,
+          "wire_rtt_ns_before_output_copy": 1021500,
+          "output_owned_copy_ns": 15700,
+          "worker_wall_ns": 801400,
+          "rtt_minus_worker_ns_descriptive": 239200,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 5,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "output_sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "input_bytes": 10240,
+          "output_bytes": 10240,
+          "client_rtt_ns_after_output_copy": 1129400,
+          "input_encode_ns": 5800,
+          "wire_rtt_ns_before_output_copy": 1109500,
+          "output_owned_copy_ns": 14100,
+          "worker_wall_ns": 805400,
+          "rtt_minus_worker_ns_descriptive": 324000,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 6,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "output_sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "input_bytes": 10240,
+          "output_bytes": 10240,
+          "client_rtt_ns_after_output_copy": 1034200,
+          "input_encode_ns": 10400,
+          "wire_rtt_ns_before_output_copy": 1003900,
+          "output_owned_copy_ns": 19900,
+          "worker_wall_ns": 711700,
+          "rtt_minus_worker_ns_descriptive": 322500,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 7,
+          "input_sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+          "output_sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "input_bytes": 10240,
+          "output_bytes": 10240,
+          "client_rtt_ns_after_output_copy": 978900,
+          "input_encode_ns": 9100,
+          "wire_rtt_ns_before_output_copy": 953400,
+          "output_owned_copy_ns": 16400,
+          "worker_wall_ns": 725800,
+          "rtt_minus_worker_ns_descriptive": 253100,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-001.f32",
+        "bytes": 10240,
+        "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 10240,
+          "mtime_ns": 1791544974557195200,
+          "ctime_ns": 1791544974557195200,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 28710447624554786
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-001.f32",
+          "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445"
+        }
+      }
+    },
+    {
+      "rows": 2,
+      "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+      "native_cpu_reference_sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "nonce": "d2ca40474154d7595c0d8f855756cea6",
+      "init": {
+        "request_id": 8,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 2,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 1543237100,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 2,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "d2ca40474154d7595c0d8f855756cea6",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 1548026000,
+        "wire_rtt_ns": 1547953400,
+        "worker_wall_ns": 1547540900
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 9,
+        "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+        "output_sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+        "input_bytes": 20480,
+        "output_bytes": 20480,
+        "client_rtt_ns_after_output_copy": 1797200,
+        "input_encode_ns": 15400,
+        "wire_rtt_ns_before_output_copy": 1730600,
+        "output_owned_copy_ns": 51200,
+        "worker_wall_ns": 1270800,
+        "rtt_minus_worker_ns_descriptive": 526400,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.3820827007293701e-05,
+          "relative_rmse": 0.0008226254965136196,
+          "max_row_norm_relative_error": 2.5955679183542494e-05,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 10,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "output_sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+          "input_bytes": 20480,
+          "output_bytes": 20480,
+          "client_rtt_ns_after_output_copy": 1184300,
+          "input_encode_ns": 5200,
+          "wire_rtt_ns_before_output_copy": 1157900,
+          "output_owned_copy_ns": 21200,
+          "worker_wall_ns": 871000,
+          "rtt_minus_worker_ns_descriptive": 313300,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.3820827007293701e-05,
+            "relative_rmse": 0.0008226254965136196,
+            "max_row_norm_relative_error": 2.5955679183542494e-05,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 11,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "output_sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+          "input_bytes": 20480,
+          "output_bytes": 20480,
+          "client_rtt_ns_after_output_copy": 1194600,
+          "input_encode_ns": 17000,
+          "wire_rtt_ns_before_output_copy": 1160200,
+          "output_owned_copy_ns": 17400,
+          "worker_wall_ns": 831900,
+          "rtt_minus_worker_ns_descriptive": 362700,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.3820827007293701e-05,
+            "relative_rmse": 0.0008226254965136196,
+            "max_row_norm_relative_error": 2.5955679183542494e-05,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 12,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "output_sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+          "input_bytes": 20480,
+          "output_bytes": 20480,
+          "client_rtt_ns_after_output_copy": 1154100,
+          "input_encode_ns": 18100,
+          "wire_rtt_ns_before_output_copy": 1114400,
+          "output_owned_copy_ns": 21600,
+          "worker_wall_ns": 822700,
+          "rtt_minus_worker_ns_descriptive": 331400,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.3820827007293701e-05,
+            "relative_rmse": 0.0008226254965136196,
+            "max_row_norm_relative_error": 2.5955679183542494e-05,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 13,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "output_sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+          "input_bytes": 20480,
+          "output_bytes": 20480,
+          "client_rtt_ns_after_output_copy": 1082600,
+          "input_encode_ns": 3200,
+          "wire_rtt_ns_before_output_copy": 1062000,
+          "output_owned_copy_ns": 17400,
+          "worker_wall_ns": 819800,
+          "rtt_minus_worker_ns_descriptive": 262800,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.3820827007293701e-05,
+            "relative_rmse": 0.0008226254965136196,
+            "max_row_norm_relative_error": 2.5955679183542494e-05,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 14,
+          "input_sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+          "output_sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+          "input_bytes": 20480,
+          "output_bytes": 20480,
+          "client_rtt_ns_after_output_copy": 1082500,
+          "input_encode_ns": 11800,
+          "wire_rtt_ns_before_output_copy": 1055100,
+          "output_owned_copy_ns": 15600,
+          "worker_wall_ns": 755800,
+          "rtt_minus_worker_ns_descriptive": 326700,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.3820827007293701e-05,
+            "relative_rmse": 0.0008226254965136196,
+            "max_row_norm_relative_error": 2.5955679183542494e-05,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-002.f32",
+        "bytes": 20480,
+        "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 20480,
+          "mtime_ns": 1791544976136727300,
+          "ctime_ns": 1791544976136727300,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883621548
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-002.f32",
+          "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b"
+        }
+      }
+    },
+    {
+      "rows": 4,
+      "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+      "native_cpu_reference_sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "nonce": "5c96b2d44d533275b0518dbf615a3ea9",
+      "init": {
+        "request_id": 15,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 4,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 1004872300,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 4,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "5c96b2d44d533275b0518dbf615a3ea9",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 1009761600,
+        "wire_rtt_ns": 1009697200,
+        "worker_wall_ns": 1009067700
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 16,
+        "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+        "output_sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+        "input_bytes": 40960,
+        "output_bytes": 40960,
+        "client_rtt_ns_after_output_copy": 1672200,
+        "input_encode_ns": 12500,
+        "wire_rtt_ns_before_output_copy": 1583000,
+        "output_owned_copy_ns": 76700,
+        "worker_wall_ns": 917400,
+        "rtt_minus_worker_ns_descriptive": 754800,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.5365425497293472e-05,
+          "relative_rmse": 0.0007141930669261404,
+          "max_row_norm_relative_error": 0.0001248755892342781,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 17,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "output_sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+          "input_bytes": 40960,
+          "output_bytes": 40960,
+          "client_rtt_ns_after_output_copy": 966600,
+          "input_encode_ns": 14300,
+          "wire_rtt_ns_before_output_copy": 930600,
+          "output_owned_copy_ns": 21700,
+          "worker_wall_ns": 557300,
+          "rtt_minus_worker_ns_descriptive": 409300,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.5365425497293472e-05,
+            "relative_rmse": 0.0007141930669261404,
+            "max_row_norm_relative_error": 0.0001248755892342781,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 18,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "output_sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+          "input_bytes": 40960,
+          "output_bytes": 40960,
+          "client_rtt_ns_after_output_copy": 946100,
+          "input_encode_ns": 5200,
+          "wire_rtt_ns_before_output_copy": 904600,
+          "output_owned_copy_ns": 36300,
+          "worker_wall_ns": 550400,
+          "rtt_minus_worker_ns_descriptive": 395700,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.5365425497293472e-05,
+            "relative_rmse": 0.0007141930669261404,
+            "max_row_norm_relative_error": 0.0001248755892342781,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 19,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "output_sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+          "input_bytes": 40960,
+          "output_bytes": 40960,
+          "client_rtt_ns_after_output_copy": 1298500,
+          "input_encode_ns": 13300,
+          "wire_rtt_ns_before_output_copy": 1245900,
+          "output_owned_copy_ns": 39300,
+          "worker_wall_ns": 679100,
+          "rtt_minus_worker_ns_descriptive": 619400,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.5365425497293472e-05,
+            "relative_rmse": 0.0007141930669261404,
+            "max_row_norm_relative_error": 0.0001248755892342781,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 20,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "output_sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+          "input_bytes": 40960,
+          "output_bytes": 40960,
+          "client_rtt_ns_after_output_copy": 952800,
+          "input_encode_ns": 14300,
+          "wire_rtt_ns_before_output_copy": 913200,
+          "output_owned_copy_ns": 25300,
+          "worker_wall_ns": 600000,
+          "rtt_minus_worker_ns_descriptive": 352800,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.5365425497293472e-05,
+            "relative_rmse": 0.0007141930669261404,
+            "max_row_norm_relative_error": 0.0001248755892342781,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 21,
+          "input_sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+          "output_sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+          "input_bytes": 40960,
+          "output_bytes": 40960,
+          "client_rtt_ns_after_output_copy": 864000,
+          "input_encode_ns": 5300,
+          "wire_rtt_ns_before_output_copy": 835800,
+          "output_owned_copy_ns": 22900,
+          "worker_wall_ns": 503500,
+          "rtt_minus_worker_ns_descriptive": 360500,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.5365425497293472e-05,
+            "relative_rmse": 0.0007141930669261404,
+            "max_row_norm_relative_error": 0.0001248755892342781,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-004.f32",
+        "bytes": 40960,
+        "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 40960,
+          "mtime_ns": 1791544977183957900,
+          "ctime_ns": 1791544977183957900,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883621549
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-004.f32",
+          "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20"
+        }
+      }
+    },
+    {
+      "rows": 8,
+      "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+      "native_cpu_reference_sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "nonce": "81d3713e940e9f0947fd0b7f2e60c132",
+      "init": {
+        "request_id": 22,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 8,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 1553317200,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 8,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "81d3713e940e9f0947fd0b7f2e60c132",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 1558897300,
+        "wire_rtt_ns": 1558839700,
+        "worker_wall_ns": 1558277500
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 23,
+        "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+        "output_sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+        "input_bytes": 81920,
+        "output_bytes": 81920,
+        "client_rtt_ns_after_output_copy": 2602100,
+        "input_encode_ns": 20800,
+        "wire_rtt_ns_before_output_copy": 2528900,
+        "output_owned_copy_ns": 52400,
+        "worker_wall_ns": 1894500,
+        "rtt_minus_worker_ns_descriptive": 707600,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.4233402907848358e-05,
+          "relative_rmse": 0.0006074609212682623,
+          "max_row_norm_relative_error": 0.00015249027362021218,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 24,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "output_sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+          "input_bytes": 81920,
+          "output_bytes": 81920,
+          "client_rtt_ns_after_output_copy": 1540100,
+          "input_encode_ns": 6100,
+          "wire_rtt_ns_before_output_copy": 1501600,
+          "output_owned_copy_ns": 32400,
+          "worker_wall_ns": 1058500,
+          "rtt_minus_worker_ns_descriptive": 481600,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.4233402907848358e-05,
+            "relative_rmse": 0.0006074609212682623,
+            "max_row_norm_relative_error": 0.00015249027362021218,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 25,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "output_sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+          "input_bytes": 81920,
+          "output_bytes": 81920,
+          "client_rtt_ns_after_output_copy": 1678200,
+          "input_encode_ns": 10100,
+          "wire_rtt_ns_before_output_copy": 1635000,
+          "output_owned_copy_ns": 33100,
+          "worker_wall_ns": 1317400,
+          "rtt_minus_worker_ns_descriptive": 360800,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.4233402907848358e-05,
+            "relative_rmse": 0.0006074609212682623,
+            "max_row_norm_relative_error": 0.00015249027362021218,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 26,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "output_sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+          "input_bytes": 81920,
+          "output_bytes": 81920,
+          "client_rtt_ns_after_output_copy": 1386700,
+          "input_encode_ns": 23200,
+          "wire_rtt_ns_before_output_copy": 1320400,
+          "output_owned_copy_ns": 43100,
+          "worker_wall_ns": 815600,
+          "rtt_minus_worker_ns_descriptive": 571100,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.4233402907848358e-05,
+            "relative_rmse": 0.0006074609212682623,
+            "max_row_norm_relative_error": 0.00015249027362021218,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 27,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "output_sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+          "input_bytes": 81920,
+          "output_bytes": 81920,
+          "client_rtt_ns_after_output_copy": 1175900,
+          "input_encode_ns": 20300,
+          "wire_rtt_ns_before_output_copy": 1127600,
+          "output_owned_copy_ns": 28000,
+          "worker_wall_ns": 815000,
+          "rtt_minus_worker_ns_descriptive": 360900,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.4233402907848358e-05,
+            "relative_rmse": 0.0006074609212682623,
+            "max_row_norm_relative_error": 0.00015249027362021218,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 28,
+          "input_sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+          "output_sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+          "input_bytes": 81920,
+          "output_bytes": 81920,
+          "client_rtt_ns_after_output_copy": 1176700,
+          "input_encode_ns": 23300,
+          "wire_rtt_ns_before_output_copy": 1126100,
+          "output_owned_copy_ns": 27300,
+          "worker_wall_ns": 812900,
+          "rtt_minus_worker_ns_descriptive": 363800,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.4233402907848358e-05,
+            "relative_rmse": 0.0006074609212682623,
+            "max_row_norm_relative_error": 0.00015249027362021218,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-008.f32",
+        "bytes": 81920,
+        "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 81920,
+          "mtime_ns": 1791544978810259800,
+          "ctime_ns": 1791544978809265800,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883621550
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-008.f32",
+          "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36"
+        }
+      }
+    },
+    {
+      "rows": 16,
+      "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+      "native_cpu_reference_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "nonce": "ec3bdfb7b701c829da4041128e7ad830",
+      "init": {
+        "request_id": 29,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 16,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 91226000,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 16,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "ec3bdfb7b701c829da4041128e7ad830",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 95440600,
+        "wire_rtt_ns": 95379200,
+        "worker_wall_ns": 94873000
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 30,
+        "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+        "output_sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+        "input_bytes": 163840,
+        "output_bytes": 163840,
+        "client_rtt_ns_after_output_copy": 2544700,
+        "input_encode_ns": 28500,
+        "wire_rtt_ns_before_output_copy": 2438200,
+        "output_owned_copy_ns": 78000,
+        "worker_wall_ns": 1349800,
+        "rtt_minus_worker_ns_descriptive": 1194900,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.92360021173954e-05,
+          "relative_rmse": 0.0005186173727708898,
+          "max_row_norm_relative_error": 0.00014491795441569952,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 31,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "output_sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "input_bytes": 163840,
+          "output_bytes": 163840,
+          "client_rtt_ns_after_output_copy": 1459000,
+          "input_encode_ns": 17800,
+          "wire_rtt_ns_before_output_copy": 1374500,
+          "output_owned_copy_ns": 66700,
+          "worker_wall_ns": 775600,
+          "rtt_minus_worker_ns_descriptive": 683400,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 32,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "output_sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "input_bytes": 163840,
+          "output_bytes": 163840,
+          "client_rtt_ns_after_output_copy": 1268100,
+          "input_encode_ns": 14600,
+          "wire_rtt_ns_before_output_copy": 1181300,
+          "output_owned_copy_ns": 72200,
+          "worker_wall_ns": 700200,
+          "rtt_minus_worker_ns_descriptive": 567900,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 33,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "output_sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "input_bytes": 163840,
+          "output_bytes": 163840,
+          "client_rtt_ns_after_output_copy": 1167900,
+          "input_encode_ns": 9900,
+          "wire_rtt_ns_before_output_copy": 1106100,
+          "output_owned_copy_ns": 51900,
+          "worker_wall_ns": 656700,
+          "rtt_minus_worker_ns_descriptive": 511200,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 34,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "output_sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "input_bytes": 163840,
+          "output_bytes": 163840,
+          "client_rtt_ns_after_output_copy": 1134800,
+          "input_encode_ns": 10000,
+          "wire_rtt_ns_before_output_copy": 1042000,
+          "output_owned_copy_ns": 82800,
+          "worker_wall_ns": 637000,
+          "rtt_minus_worker_ns_descriptive": 497800,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 35,
+          "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+          "output_sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "input_bytes": 163840,
+          "output_bytes": 163840,
+          "client_rtt_ns_after_output_copy": 1178800,
+          "input_encode_ns": 9800,
+          "wire_rtt_ns_before_output_copy": 1100500,
+          "output_owned_copy_ns": 68500,
+          "worker_wall_ns": 671200,
+          "rtt_minus_worker_ns_descriptive": 507600,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-016.f32",
+        "bytes": 163840,
+        "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 163840,
+          "mtime_ns": 1791544978957941600,
+          "ctime_ns": 1791544978957941600,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883621551
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-016.f32",
+          "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9"
+        }
+      }
+    },
+    {
+      "rows": 32,
+      "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+      "native_cpu_reference_sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "nonce": "dc50b01d33db283113d18b69da870cda",
+      "init": {
+        "request_id": 36,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 32,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 1444347300,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 32,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "dc50b01d33db283113d18b69da870cda",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 1448764900,
+        "wire_rtt_ns": 1448704200,
+        "worker_wall_ns": 1448115000
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 37,
+        "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+        "output_sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+        "input_bytes": 327680,
+        "output_bytes": 327680,
+        "client_rtt_ns_after_output_copy": 3122500,
+        "input_encode_ns": 73200,
+        "wire_rtt_ns_before_output_copy": 2936300,
+        "output_owned_copy_ns": 113000,
+        "worker_wall_ns": 1593500,
+        "rtt_minus_worker_ns_descriptive": 1529000,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.0420178771018982e-05,
+          "relative_rmse": 0.0005787282142474964,
+          "max_row_norm_relative_error": 0.00013579797289159628,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 38,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "output_sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+          "input_bytes": 327680,
+          "output_bytes": 327680,
+          "client_rtt_ns_after_output_copy": 1977900,
+          "input_encode_ns": 22300,
+          "wire_rtt_ns_before_output_copy": 1846900,
+          "output_owned_copy_ns": 108700,
+          "worker_wall_ns": 1165000,
+          "rtt_minus_worker_ns_descriptive": 812900,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0420178771018982e-05,
+            "relative_rmse": 0.0005787282142474964,
+            "max_row_norm_relative_error": 0.00013579797289159628,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 39,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "output_sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+          "input_bytes": 327680,
+          "output_bytes": 327680,
+          "client_rtt_ns_after_output_copy": 2095300,
+          "input_encode_ns": 68300,
+          "wire_rtt_ns_before_output_copy": 1904200,
+          "output_owned_copy_ns": 122800,
+          "worker_wall_ns": 1015300,
+          "rtt_minus_worker_ns_descriptive": 1080000,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0420178771018982e-05,
+            "relative_rmse": 0.0005787282142474964,
+            "max_row_norm_relative_error": 0.00013579797289159628,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 40,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "output_sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+          "input_bytes": 327680,
+          "output_bytes": 327680,
+          "client_rtt_ns_after_output_copy": 2262600,
+          "input_encode_ns": 76700,
+          "wire_rtt_ns_before_output_copy": 2071600,
+          "output_owned_copy_ns": 114300,
+          "worker_wall_ns": 1410300,
+          "rtt_minus_worker_ns_descriptive": 852300,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0420178771018982e-05,
+            "relative_rmse": 0.0005787282142474964,
+            "max_row_norm_relative_error": 0.00013579797289159628,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 41,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "output_sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+          "input_bytes": 327680,
+          "output_bytes": 327680,
+          "client_rtt_ns_after_output_copy": 1791100,
+          "input_encode_ns": 14200,
+          "wire_rtt_ns_before_output_copy": 1682100,
+          "output_owned_copy_ns": 94800,
+          "worker_wall_ns": 983600,
+          "rtt_minus_worker_ns_descriptive": 807500,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0420178771018982e-05,
+            "relative_rmse": 0.0005787282142474964,
+            "max_row_norm_relative_error": 0.00013579797289159628,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 42,
+          "input_sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+          "output_sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+          "input_bytes": 327680,
+          "output_bytes": 327680,
+          "client_rtt_ns_after_output_copy": 1899300,
+          "input_encode_ns": 94600,
+          "wire_rtt_ns_before_output_copy": 1706600,
+          "output_owned_copy_ns": 98100,
+          "worker_wall_ns": 992700,
+          "rtt_minus_worker_ns_descriptive": 906600,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.0420178771018982e-05,
+            "relative_rmse": 0.0005787282142474964,
+            "max_row_norm_relative_error": 0.00013579797289159628,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-032.f32",
+        "bytes": 327680,
+        "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 327680,
+          "mtime_ns": 1791544980464592200,
+          "ctime_ns": 1791544980464478900,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883621552
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-032.f32",
+          "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9"
+        }
+      }
+    },
+    {
+      "rows": 64,
+      "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+      "native_cpu_reference_sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "nonce": "394e98575f2f896f85b712f0e5435587",
+      "init": {
+        "request_id": 43,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 64,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 1006633700,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 64,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "394e98575f2f896f85b712f0e5435587",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 1013127600,
+        "wire_rtt_ns": 1013071000,
+        "worker_wall_ns": 1012549100
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 44,
+        "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+        "output_sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+        "input_bytes": 655360,
+        "output_bytes": 655360,
+        "client_rtt_ns_after_output_copy": 4555800,
+        "input_encode_ns": 185600,
+        "wire_rtt_ns_before_output_copy": 4049100,
+        "output_owned_copy_ns": 321100,
+        "worker_wall_ns": 1901200,
+        "rtt_minus_worker_ns_descriptive": 2654600,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 2.3138709366321564e-05,
+          "relative_rmse": 0.0006521309578641237,
+          "max_row_norm_relative_error": 0.0001817225429015063,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 45,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "output_sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+          "input_bytes": 655360,
+          "output_bytes": 655360,
+          "client_rtt_ns_after_output_copy": 4444100,
+          "input_encode_ns": 164500,
+          "wire_rtt_ns_before_output_copy": 3951700,
+          "output_owned_copy_ns": 327900,
+          "worker_wall_ns": 1960000,
+          "rtt_minus_worker_ns_descriptive": 2484100,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.3138709366321564e-05,
+            "relative_rmse": 0.0006521309578641237,
+            "max_row_norm_relative_error": 0.0001817225429015063,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 46,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "output_sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+          "input_bytes": 655360,
+          "output_bytes": 655360,
+          "client_rtt_ns_after_output_copy": 3827300,
+          "input_encode_ns": 110300,
+          "wire_rtt_ns_before_output_copy": 3399300,
+          "output_owned_copy_ns": 317700,
+          "worker_wall_ns": 1390700,
+          "rtt_minus_worker_ns_descriptive": 2436600,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.3138709366321564e-05,
+            "relative_rmse": 0.0006521309578641237,
+            "max_row_norm_relative_error": 0.0001817225429015063,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 47,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "output_sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+          "input_bytes": 655360,
+          "output_bytes": 655360,
+          "client_rtt_ns_after_output_copy": 4607000,
+          "input_encode_ns": 135400,
+          "wire_rtt_ns_before_output_copy": 4145000,
+          "output_owned_copy_ns": 326600,
+          "worker_wall_ns": 2083400,
+          "rtt_minus_worker_ns_descriptive": 2523600,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.3138709366321564e-05,
+            "relative_rmse": 0.0006521309578641237,
+            "max_row_norm_relative_error": 0.0001817225429015063,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 48,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "output_sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+          "input_bytes": 655360,
+          "output_bytes": 655360,
+          "client_rtt_ns_after_output_copy": 3811800,
+          "input_encode_ns": 142800,
+          "wire_rtt_ns_before_output_copy": 3330400,
+          "output_owned_copy_ns": 338600,
+          "worker_wall_ns": 1351100,
+          "rtt_minus_worker_ns_descriptive": 2460700,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.3138709366321564e-05,
+            "relative_rmse": 0.0006521309578641237,
+            "max_row_norm_relative_error": 0.0001817225429015063,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 49,
+          "input_sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+          "output_sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+          "input_bytes": 655360,
+          "output_bytes": 655360,
+          "client_rtt_ns_after_output_copy": 4325200,
+          "input_encode_ns": 54600,
+          "wire_rtt_ns_before_output_copy": 3960000,
+          "output_owned_copy_ns": 310600,
+          "worker_wall_ns": 2040400,
+          "rtt_minus_worker_ns_descriptive": 2284800,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.3138709366321564e-05,
+            "relative_rmse": 0.0006521309578641237,
+            "max_row_norm_relative_error": 0.0001817225429015063,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-064.f32",
+        "bytes": 655360,
+        "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 655360,
+          "mtime_ns": 1791544981558051200,
+          "ctime_ns": 1791544981558051200,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883621553
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-064.f32",
+          "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34"
+        }
+      }
+    },
+    {
+      "rows": 128,
+      "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+      "native_cpu_reference_sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "nonce": "fc525aa14712f13166704ead89ce4170",
+      "init": {
+        "request_id": 50,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 128,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 1556435200,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 128,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "fc525aa14712f13166704ead89ce4170",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 1560978800,
+        "wire_rtt_ns": 1560925800,
+        "worker_wall_ns": 1560300500
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 51,
+        "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+        "output_sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+        "input_bytes": 1310720,
+        "output_bytes": 1310720,
+        "client_rtt_ns_after_output_copy": 10627600,
+        "input_encode_ns": 614100,
+        "wire_rtt_ns_before_output_copy": 9180700,
+        "output_owned_copy_ns": 832800,
+        "worker_wall_ns": 4334100,
+        "rtt_minus_worker_ns_descriptive": 6293500,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 4.1542574763298035e-05,
+          "relative_rmse": 0.000665951757270185,
+          "max_row_norm_relative_error": 0.0001674657547378106,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 52,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "output_sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+          "input_bytes": 1310720,
+          "output_bytes": 1310720,
+          "client_rtt_ns_after_output_copy": 9454000,
+          "input_encode_ns": 322200,
+          "wire_rtt_ns_before_output_copy": 8462100,
+          "output_owned_copy_ns": 669700,
+          "worker_wall_ns": 3563300,
+          "rtt_minus_worker_ns_descriptive": 5890700,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.1542574763298035e-05,
+            "relative_rmse": 0.000665951757270185,
+            "max_row_norm_relative_error": 0.0001674657547378106,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 53,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "output_sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+          "input_bytes": 1310720,
+          "output_bytes": 1310720,
+          "client_rtt_ns_after_output_copy": 10103500,
+          "input_encode_ns": 311100,
+          "wire_rtt_ns_before_output_copy": 9154100,
+          "output_owned_copy_ns": 638300,
+          "worker_wall_ns": 4028800,
+          "rtt_minus_worker_ns_descriptive": 6074700,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.1542574763298035e-05,
+            "relative_rmse": 0.000665951757270185,
+            "max_row_norm_relative_error": 0.0001674657547378106,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 54,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "output_sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+          "input_bytes": 1310720,
+          "output_bytes": 1310720,
+          "client_rtt_ns_after_output_copy": 11518600,
+          "input_encode_ns": 344600,
+          "wire_rtt_ns_before_output_copy": 10530600,
+          "output_owned_copy_ns": 643400,
+          "worker_wall_ns": 4342700,
+          "rtt_minus_worker_ns_descriptive": 7175900,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.1542574763298035e-05,
+            "relative_rmse": 0.000665951757270185,
+            "max_row_norm_relative_error": 0.0001674657547378106,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 55,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "output_sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+          "input_bytes": 1310720,
+          "output_bytes": 1310720,
+          "client_rtt_ns_after_output_copy": 9602800,
+          "input_encode_ns": 325900,
+          "wire_rtt_ns_before_output_copy": 8635800,
+          "output_owned_copy_ns": 641100,
+          "worker_wall_ns": 3667100,
+          "rtt_minus_worker_ns_descriptive": 5935700,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.1542574763298035e-05,
+            "relative_rmse": 0.000665951757270185,
+            "max_row_norm_relative_error": 0.0001674657547378106,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 56,
+          "input_sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+          "output_sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+          "input_bytes": 1310720,
+          "output_bytes": 1310720,
+          "client_rtt_ns_after_output_copy": 10049400,
+          "input_encode_ns": 320700,
+          "wire_rtt_ns_before_output_copy": 9105600,
+          "output_owned_copy_ns": 623100,
+          "worker_wall_ns": 3745200,
+          "rtt_minus_worker_ns_descriptive": 6304200,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.1542574763298035e-05,
+            "relative_rmse": 0.000665951757270185,
+            "max_row_norm_relative_error": 0.0001674657547378106,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-128.f32",
+        "bytes": 1310720,
+        "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 1310720,
+          "mtime_ns": 1791544983257998300,
+          "ctime_ns": 1791544983257998300,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883621554
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-128.f32",
+          "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862"
+        }
+      }
+    },
+    {
+      "rows": 256,
+      "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+      "native_cpu_reference_sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "nonce": "49ce7436881506817d2063fc8bd6f3fd",
+      "init": {
+        "request_id": 57,
+        "ready": {
+          "schema": "strata-xpu-ready-v1",
+          "status": "ready",
+          "rows": 256,
+          "device": "GPU.0",
+          "device_full_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+          "available_devices": [
+            "CPU",
+            "GPU.0",
+            "GPU.1",
+            "NPU"
+          ],
+          "execution_devices": [
+            "GPU.0"
+          ],
+          "precision_requested": "f32",
+          "reported_precision": "<Type: 'float32'>",
+          "precision_policy": {
+            "precision_policy_status": "match",
+            "precision_policy_matches": true
+          },
+          "compile_property_policy": {
+            "requested": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "submitted": {
+              "INFERENCE_PRECISION_HINT": "f32",
+              "EXECUTION_MODE_HINT": "ACCURACY"
+            },
+            "omitted": {}
+          },
+          "compile_ns": 223767700,
+          "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+          "weights_loaded_and_hash_verified": true,
+          "weights_sha256": {
+            "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+            "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+            "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+          },
+          "operator": "native-q4k-q5_1",
+          "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+          "weights_ready": true,
+          "native_blob_binding": {
+            "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "bytes": 3072000,
+            "mtime_ns": 1791520543244546300,
+            "ctime_ns": 1791520543243549700,
+            "file_id": {
+              "volume": 6117023165593423684,
+              "index": 4222124650674796
+            },
+            "layout": {
+              "gate": [
+                0,
+                921600
+              ],
+              "up": [
+                921600,
+                921600
+              ],
+              "down": [
+                1843200,
+                1228800
+              ]
+            },
+            "segment_sha256_expected": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "payload_read": true,
+            "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "segment_sha256_actual": {
+              "gate": "a78ba17356a02786fce1f1c1245a8b3369dba401de88c4c5e50b4d9c274c30ba",
+              "up": "d55165b8387b23e10d087e212f4cb21837134430629fcfc1fc1d082cd89afdaf",
+              "down": "6bc4f5f3c31a17045362cc22a207766dbbd114ede6d32556de84fa2137d2c7e4"
+            },
+            "down_offset_bytes": 1843200,
+            "operator_signature": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "q5_1_minimums_shape": [
+              2560,
+              20
+            ],
+            "q5_1_minimums_sha256_le_f32": "2287a8f3731001598df97fc5ec76906b9048de3b78396c273ecc9771ec264ac1"
+          },
+          "native_operator_build": {
+            "schema_version": 1,
+            "status": "constructed_uncompiled",
+            "rows": 256,
+            "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+            "core_created": false,
+            "compiled": false,
+            "inference_run": false,
+            "raw_minimum_binding_owned_by_caller": true,
+            "native_runtime_parity": "NOT_RUN",
+            "production_route_enabled": false
+          },
+          "cached_graph_reused": false,
+          "nonce": "49ce7436881506817d2063fc8bd6f3fd",
+          "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21"
+        },
+        "client_rtt_ns": 228833500,
+        "wire_rtt_ns": 228772600,
+        "worker_wall_ns": 228248000
+      },
+      "warmup": {
+        "label": "warmup",
+        "request_id": 58,
+        "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+        "output_sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+        "input_bytes": 2621440,
+        "output_bytes": 2621440,
+        "client_rtt_ns_after_output_copy": 21004500,
+        "input_encode_ns": 717100,
+        "wire_rtt_ns_before_output_copy": 18859000,
+        "output_owned_copy_ns": 1428400,
+        "worker_wall_ns": 7995000,
+        "rtt_minus_worker_ns_descriptive": 13009500,
+        "numerical_quality_vs_native_cpu": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 7.037073373794556e-05,
+          "relative_rmse": 0.0006915594487259341,
+          "max_row_norm_relative_error": 0.0001416532932196892,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        }
+      },
+      "formals": [
+        {
+          "label": "formal-01",
+          "request_id": 59,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "output_sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "input_bytes": 2621440,
+          "output_bytes": 2621440,
+          "client_rtt_ns_after_output_copy": 19446200,
+          "input_encode_ns": 727800,
+          "wire_rtt_ns_before_output_copy": 17296400,
+          "output_owned_copy_ns": 1422000,
+          "worker_wall_ns": 6095200,
+          "rtt_minus_worker_ns_descriptive": 13351000,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-02",
+          "request_id": 60,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "output_sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "input_bytes": 2621440,
+          "output_bytes": 2621440,
+          "client_rtt_ns_after_output_copy": 19540500,
+          "input_encode_ns": 751400,
+          "wire_rtt_ns_before_output_copy": 17332700,
+          "output_owned_copy_ns": 1456400,
+          "worker_wall_ns": 6125300,
+          "rtt_minus_worker_ns_descriptive": 13415200,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-03",
+          "request_id": 61,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "output_sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "input_bytes": 2621440,
+          "output_bytes": 2621440,
+          "client_rtt_ns_after_output_copy": 20885100,
+          "input_encode_ns": 919600,
+          "wire_rtt_ns_before_output_copy": 18555300,
+          "output_owned_copy_ns": 1410200,
+          "worker_wall_ns": 7262200,
+          "rtt_minus_worker_ns_descriptive": 13622900,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-04",
+          "request_id": 62,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "output_sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "input_bytes": 2621440,
+          "output_bytes": 2621440,
+          "client_rtt_ns_after_output_copy": 20480700,
+          "input_encode_ns": 715400,
+          "wire_rtt_ns_before_output_copy": 18279000,
+          "output_owned_copy_ns": 1486300,
+          "worker_wall_ns": 6419800,
+          "rtt_minus_worker_ns_descriptive": 14060900,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "label": "formal-05",
+          "request_id": 63,
+          "input_sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+          "output_sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "input_bytes": 2621440,
+          "output_bytes": 2621440,
+          "client_rtt_ns_after_output_copy": 21377100,
+          "input_encode_ns": 1410100,
+          "wire_rtt_ns_before_output_copy": 18544500,
+          "output_owned_copy_ns": 1422500,
+          "worker_wall_ns": 7088500,
+          "rtt_minus_worker_ns_descriptive": 14288600,
+          "numerical_quality_vs_native_cpu": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "status": "complete",
+      "stored_output": {
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-256.f32",
+        "bytes": 2621440,
+        "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+        "readback_verified": true,
+        "stat": {
+          "size_bytes": 2621440,
+          "mtime_ns": 1791544983744401600,
+          "ctime_ns": 1791544983744401600,
+          "file_id": {
+            "volume": 6117023165593423684,
+            "index": 1407374883621555
+          },
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-42-native-q4k-q5_1-ipc\\output-256.f32",
+          "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d"
+        }
+      }
+    }
+  ],
+  "resource_gate_initial": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 118010454016,
+    "physical_used_bytes": 18952794112,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 22619070464,
+    "commit_available_bytes": 122934112256,
+    "commit_total_pages": 5522234,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 122934112256,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "timing_contract": "Client end-to-end RTT starts before F32LE input serialization and ends after response receipt plus owned contiguous F32 output copy; worker_wall_ns is separate service-local duration; their subtraction is descriptive only. INIT/compile excluded.",
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "model_route_claim": false,
+  "identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "identity_weights_sha256": {
+    "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+    "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+    "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+  },
+  "weights_header": {
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+    "size_bytes": 19661538,
+    "mtime_ns": 1791515299026387800,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 562949953527697
+    },
+    "tensors": {
+      "gate": {
+        "shape": [
+          640,
+          2560
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57"
+      },
+      "up": {
+        "shape": [
+          640,
+          2560
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5"
+      },
+      "down": {
+        "shape": [
+          2560,
+          640
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+      }
+    },
+    "hidden": 2560,
+    "intermediate": 640,
+    "tensor_payload_bytes": 19660800,
+    "max_tensor_payload_bytes": 536870912,
+    "payload_hashes_verified": false,
+    "tensor_arrays_materialized": false
+  },
+  "verified_inputs": {
+    "1": {
+      "size_bytes": 10240,
+      "mtime_ns": 1791520543262303100,
+      "ctime_ns": 1791520543262303100,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 3940649673963438
+      }
+    },
+    "2": {
+      "size_bytes": 20480,
+      "mtime_ns": 1791520543267609800,
+      "ctime_ns": 1791520543267609800,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 5066549580806450
+      }
+    },
+    "4": {
+      "size_bytes": 40960,
+      "mtime_ns": 1791520543272615900,
+      "ctime_ns": 1791520543272615900,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 5066549580806451
+      }
+    },
+    "8": {
+      "size_bytes": 81920,
+      "mtime_ns": 1791520543278822400,
+      "ctime_ns": 1791520543278822400,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 12384898975283510
+      }
+    },
+    "16": {
+      "size_bytes": 163840,
+      "mtime_ns": 1791520543285860700,
+      "ctime_ns": 1791520543285860700,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 11821949021862199
+      }
+    },
+    "32": {
+      "size_bytes": 327680,
+      "mtime_ns": 1791520543290861000,
+      "ctime_ns": 1791520543290861000,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 3377699720542510
+      }
+    },
+    "64": {
+      "size_bytes": 655360,
+      "mtime_ns": 1791520543297950800,
+      "ctime_ns": 1791520543297950800,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 20829148276603205
+      }
+    },
+    "128": {
+      "size_bytes": 1310720,
+      "mtime_ns": 1791520543308726300,
+      "ctime_ns": 1791520543307578000,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 16888498602654026
+      }
+    },
+    "256": {
+      "size_bytes": 2621440,
+      "mtime_ns": 1791520543321554100,
+      "ctime_ns": 1791520543320553400,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 7881299347913035
+      }
+    }
+  },
+  "verified_native_cpu_references": {
+    "1": {
+      "size_bytes": 10240,
+      "mtime_ns": 1791521100827354400,
+      "ctime_ns": 1791521100827354400,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990686
+      }
+    },
+    "2": {
+      "size_bytes": 20480,
+      "mtime_ns": 1791521102519356300,
+      "ctime_ns": 1791521102519356300,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990687
+      }
+    },
+    "4": {
+      "size_bytes": 40960,
+      "mtime_ns": 1791521105385314900,
+      "ctime_ns": 1791521105385314900,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990688
+      }
+    },
+    "8": {
+      "size_bytes": 81920,
+      "mtime_ns": 1791521108266074300,
+      "ctime_ns": 1791521108266074300,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990689
+      }
+    },
+    "16": {
+      "size_bytes": 163840,
+      "mtime_ns": 1791521111110209100,
+      "ctime_ns": 1791521111110209100,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990690
+      }
+    },
+    "32": {
+      "size_bytes": 327680,
+      "mtime_ns": 1791521114006907600,
+      "ctime_ns": 1791521114005614000,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990691
+      }
+    },
+    "64": {
+      "size_bytes": 655360,
+      "mtime_ns": 1791521116958964500,
+      "ctime_ns": 1791521116958964500,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990692
+      }
+    },
+    "128": {
+      "size_bytes": 1310720,
+      "mtime_ns": 1791521119885249000,
+      "ctime_ns": 1791521119883240000,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 7881299347914443
+      }
+    },
+    "256": {
+      "size_bytes": 2621440,
+      "mtime_ns": 1791521122925830900,
+      "ctime_ns": 1791521122923827500,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990694
+      }
+    }
+  },
+  "native_blob_stat": {
+    "size_bytes": 3072000,
+    "mtime_ns": 1791520543244546300,
+    "ctime_ns": 1791520543243549700,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 4222124650674796
+    }
+  },
+  "worker_start": {
+    "argv": [
+      "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+      "-u",
+      "-B",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+      "--serve",
+      "--weights",
+      "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+      "--identity",
+      "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+      "--device",
+      "GPU.0",
+      "--precision",
+      "f32",
+      "--operator",
+      "native-q4k-q5_1",
+      "--native-blob",
+      "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin"
+    ],
+    "launcher_pid": 19104,
+    "launcher_identity": {
+      "pid": 19104,
+      "parent_pid": 21152,
+      "create_time": 1791544971.9830475,
+      "executable": "e:\\strata-hetero-data\\venv-intel\\scripts\\python.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+        "-u",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+        "--serve",
+        "--weights",
+        "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+        "--identity",
+        "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+        "--device",
+        "GPU.0",
+        "--precision",
+        "f32",
+        "--operator",
+        "native-q4k-q5_1",
+        "--native-blob",
+        "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin"
+      ]
+    },
+    "actual_service_child": {
+      "pid": 18872,
+      "parent_pid": 19104,
+      "create_time": 1791544972.0002408,
+      "executable": "c:\\python314\\python.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+        "-u",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+        "--serve",
+        "--weights",
+        "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+        "--identity",
+        "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+        "--device",
+        "GPU.0",
+        "--precision",
+        "f32",
+        "--operator",
+        "native-q4k-q5_1",
+        "--native-blob",
+        "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin"
+      ]
+    }
+  },
+  "worker_launcher_reaped": {
+    "pid": 19104,
+    "returncode": 0
+  },
+  "process_tree_cleanup": {
+    "descendant_cleanup": [
+      {
+        "identity": {
+          "pid": 18872,
+          "parent_pid": 19104,
+          "create_time": 1791544972.0002408,
+          "executable": "c:\\python314\\python.exe",
+          "command_line": [
+            "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+            "-u",
+            "-B",
+            "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+            "--serve",
+            "--weights",
+            "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+            "--identity",
+            "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+            "--device",
+            "GPU.0",
+            "--precision",
+            "f32",
+            "--operator",
+            "native-q4k-q5_1",
+            "--native-blob",
+            "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin"
+          ]
+        },
+        "action": "exited_during_cleanup"
+      },
+      {
+        "identity": {
+          "pid": 16484,
+          "parent_pid": 19104,
+          "create_time": 1791544971.9890864,
+          "executable": "c:\\windows\\system32\\conhost.exe",
+          "command_line": [
+            "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+            "0x4"
+          ]
+        },
+        "action": "exited_during_cleanup"
+      }
+    ],
+    "remaining_owned_descendants": [],
+    "terminal": true
+  },
+  "finished_utc": "2026-10-09T11:23:03.959627+00:00",
+  "outputs_complete": true
+}

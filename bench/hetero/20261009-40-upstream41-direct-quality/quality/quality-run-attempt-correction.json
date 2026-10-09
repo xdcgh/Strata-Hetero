@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "corrects_preliminary_interpretation_no_overwrite",
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "original_failure_receipt": "quality-run-attempt-failure.json",
+  "original_failure_receipt_sha256": "1143e815e977e56496d87fcc1278fa377e54720bc407a2b03b017ebbe5d27011",
+  "finding": "progress confirms the smoke_arithmetic benchmark runner started; metadata and prompt snapshot were written. The HTTP request may have been dispatched, but there is no captured requests.json/formal response or completed quality result.",
+  "request_id": "smoke_arithmetic",
+  "runner_launcher_pid": 5292,
+  "runner_child_pid": 21160,
+  "runner_pids_current_state": [
+    {
+      "pid": 5292,
+      "exe": null,
+      "currently_present": false
+    },
+    {
+      "pid": 21160,
+      "exe": null,
+      "currently_present": false
+    }
+  ],
+  "runner_output_files": [
+    {
+      "name": "metadata.json",
+      "sha256": "8e3269e7321123d975469383ddc8f0d329fc798bcdf3684c6f8b293ef23300c6",
+      "last_write_utc": "2026-10-09T11:08:19.8287082Z",
+      "bytes": 15648
+    },
+    {
+      "name": "prompt.txt",
+      "sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+      "last_write_utc": "2026-10-09T11:08:19.7936843Z",
+      "bytes": 48
+    }
+  ],
+  "metadata_keys": [
+    "run_id",
+    "created_utc",
+    "base_url",
+    "endpoint",
+    "prompt_file",
+    "prompt_sha256",
+    "prompt_bytes",
+    "repeats",
+    "warmup",
+    "max_tokens",
+    "concurrency",
+    "seed",
+    "reasoning_effort",
+    "length_cap_timing_allowed",
+    "model_requested",
+    "identity",
+    "identity_verification",
+    "live_identity",
+    "identity_comparison",
+    "acceptance_status",
+    "artifact_writer"
+  ],
+  "progress": [
+    "{\"utc\":\"2026-10-09T11:08:19.3163410Z\",\"event\":{\"phase\":\"start\",\"status\":\"pass\"}}",
+    "{\"utc\":\"2026-10-09T11:08:19.7308752Z\",\"event\":{\"actual_child_exe\":\"C:\\\\Python314\\\\python.exe\",\"launcher_pid\":5292,\"launcher_exe\":\"E:\\\\Strata-Hetero-data\\\\venv\\\\Scripts\\\\python.exe\",\"actual_child_parent_pid\":5292,\"actual_child_pid\":21160,\"max_tokens\":128,\"phase\":\"smoke_arithmetic\",\"launcher_create_utc\":\"2026-10-09T11:08:19.6363980Z\",\"actual_child_create_utc\":\"2026-10-09T11:08:19.6758200Z\",\"event\":\"runner_started\"}}",
+    "{\"utc\":\"2026-10-09T11:08:21.2986380Z\",\"event\":{\"partial_prompts\":0,\"error_type\":\"MethodInvocationException\",\"error\":\"Exception calling \\\"Parse\\\" with \\\"1\\\" argument(s): \\\"'{' is invalid after a single JSON value. Expected end of data. LineNumber: 0 | BytePositionInLine: 3453.\\\"\",\"phase\":\"failed\"}}"
+  ],
+  "runner_stdout_bytes": 0,
+  "runner_stderr_bytes": 0,
+  "next_action": "fail-stop; no retry/restart; parent review current model request state",
+  "recorded_utc": "2026-10-09T11:09:34.8601828Z"
+}

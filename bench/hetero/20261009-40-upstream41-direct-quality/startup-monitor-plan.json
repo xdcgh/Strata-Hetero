@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_running; invokes only after run-owned launch receipts exist",
+  "sampling_source": "run-owned tools/hetero_resources.py, 1-second system GlobalMemoryStatusEx/PSAPI samples; process RSS is not used as a proxy for machine-wide available memory",
+  "fresh_sample_max_age_seconds": 5,
+  "hard_floors": {
+    "available_physical_gib": 12,
+    "available_commit_gib": 4
+  },
+  "monitor_start_order": [
+    "launch script performs fresh admission (12 GiB physical, 4 GiB commit, 46000 MiB VRAM)",
+    "launch script creates server launcher and immediately starts resource sampler tracking the exact launcher PID",
+    "capture launcher and sampler launcher/actual C Python PIDs, executable paths, parents and full-precision UTC creation times from same CIM snapshot",
+    "capture actual C Python server child PID/executable/parent/create time and verify 8081 listener belongs to that server child",
+    "capture engine child PID/executable/parent/create time and exact configured command line under that server child",
+    "until loaded readiness, consume latest sample at <=5 s age and fail on unknown/stale/error/alert or below either floor; do not send quality request until ready check passes"
+  ],
+  "threshold_response": [
+    "preserve the triggering sample and process snapshot",
+    "revalidate exact PID + executable + full-precision CreateTime + parent/command-line ownership for this run",
+    "terminate only this run owned engine/server process tree, children before parent",
+    "do not kill or stop the read-only sampler; leave it collecting while cleanup is reviewed",
+    "do not terminate unrelated processes; never act on PID alone"
+  ],
+  "ownership_gates": [
+    "quality controller already binds launch/sampler receipts and checks the exact C Python sampler child",
+    "quality Get-ReadyBindings verifies launcher -> C Python server child -> engine child exact argv and loopback listener ownership",
+    "startup readiness needs same exact process-tree snapshot before polling memory and status",
+    "sampler tracked PID is launcher; its global RAM/commit readings are machine-wide gates, not launcher RSS"
+  ],
+  "no_launch_performed": true,
+  "executable_watch_script": "startup-watch.ps1",
+  "script_sha256": "ef1503979359781db97f082d272c4f64b1223aa8ad355b83a7fde8d80d8daa4c",
+  "fixture_result_sha256": "e99cada31e8209766198edbd6525cf7f4eb331dee9ddaed940603d1232c09cab",
+  "verification": "actual Exact, Stop-ExactTree, Get-LatestSample and evidence-path functions extracted and exercised with mocked CIM/Stop-Process",
+  "unknown_or_stale_gate_action": "stop exact revalidated owned engine/server tree and preserve sampler"
+}

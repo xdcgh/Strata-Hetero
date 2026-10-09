@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "scope": "CPU-only artifact/metadata preflight; no worker, OpenVINO import, Core, or device access",
+  "started_utc": "2026-10-09T11:18:11.927394+00:00",
+  "python_executable": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+  "python_pid": 10864,
+  "contract_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\execution-contract.json",
+  "contract_sha256": "4dfce361bf7c56cb943c54411dcf03d68da945fc334a395092a8efb4ca593940",
+  "client_sha256": "3104c114c843689f5d5503cb3d5407dd18ad4bfc8736869b1dd6af49a7434934",
+  "model_payload_read": false,
+  "native_blob_payload_read": false,
+  "npz_tensor_payload_loaded": false,
+  "openvino_module_loaded": false,
+  "core_created": false,
+  "worker_started": false,
+  "process_tree_observer": "not attached in this CPU-only preflight; sampler still uses actual global memory_snapshot",
+  "resource_sample_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\preflight-02\\resource-samples.jsonl",
+  "resource_first_sample": {
+    "record_type": "resource_sample",
+    "observed_at_utc": "2026-10-09T11:18:11.978393+00:00",
+    "owner_pid": 10864,
+    "physical_available_bytes": 117981974528,
+    "commit_available_bytes": 122911141888,
+    "memory_source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_service_tree": null
+  },
+  "identity_weights_sha256": {
+    "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+    "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+    "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+  },
+  "npz_header": {
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+    "size_bytes": 19661538,
+    "mtime_ns": 1791515299026387800,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 562949953527697
+    },
+    "tensors": {
+      "gate": {
+        "shape": [
+          640,
+          2560
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57"
+      },
+      "up": {
+        "shape": [
+          640,
+          2560
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5"
+      },
+      "down": {
+        "shape": [
+          2560,
+          640
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+      }
+    },
+    "hidden": 2560,
+    "intermediate": 640,
+    "tensor_payload_bytes": 19660800,
+    "max_tensor_payload_bytes": 536870912,
+    "payload_hashes_verified": false,
+    "tensor_arrays_materialized": false
+  },
+  "verified_inputs": {
+    "1": {
+      "sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98",
+      "bytes": 10240,
+      "shape": [
+        1,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    },
+    "2": {
+      "sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19",
+      "bytes": 20480,
+      "shape": [
+        2,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    },
+    "4": {
+      "sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529",
+      "bytes": 40960,
+      "shape": [
+        4,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    },
+    "8": {
+      "sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f",
+      "bytes": 81920,
+      "shape": [
+        8,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    },
+    "16": {
+      "sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+      "bytes": 163840,
+      "shape": [
+        16,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    },
+    "32": {
+      "sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75",
+      "bytes": 327680,
+      "shape": [
+        32,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    },
+    "64": {
+      "sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf",
+      "bytes": 655360,
+      "shape": [
+        64,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    },
+    "128": {
+      "sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6",
+      "bytes": 1310720,
+      "shape": [
+        128,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    },
+    "256": {
+      "sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b",
+      "bytes": 2621440,
+      "shape": [
+        256,
+        2560
+      ],
+      "finite": true,
+      "caller_sha256_field_present": true
+    }
+  },
+  "verified_native_cpu_references": {
+    "1": {
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "bytes": 10240,
+      "shape": [
+        1,
+        2560
+      ],
+      "finite": true
+    },
+    "2": {
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "bytes": 20480,
+      "shape": [
+        2,
+        2560
+      ],
+      "finite": true
+    },
+    "4": {
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "bytes": 40960,
+      "shape": [
+        4,
+        2560
+      ],
+      "finite": true
+    },
+    "8": {
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "bytes": 81920,
+      "shape": [
+        8,
+        2560
+      ],
+      "finite": true
+    },
+    "16": {
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "bytes": 163840,
+      "shape": [
+        16,
+        2560
+      ],
+      "finite": true
+    },
+    "32": {
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "bytes": 327680,
+      "shape": [
+        32,
+        2560
+      ],
+      "finite": true
+    },
+    "64": {
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "bytes": 655360,
+      "shape": [
+        64,
+        2560
+      ],
+      "finite": true
+    },
+    "128": {
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "bytes": 1310720,
+      "shape": [
+        128,
+        2560
+      ],
+      "finite": true
+    },
+    "256": {
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "bytes": 2621440,
+      "shape": [
+        256,
+        2560
+      ],
+      "finite": true
+    }
+  },
+  "identity_file_stat": {
+    "size_bytes": 3589,
+    "mtime_ns": 1791515299026387800,
+    "ctime_ns": 1791515299026387800,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 562949953527698
+    }
+  },
+  "native_blob_stat_only": {
+    "size_bytes": 3072000,
+    "mtime_ns": 1791520543244546300,
+    "ctime_ns": 1791520543243549700,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 4222124650674796
+    }
+  },
+  "finished_utc": "2026-10-09T11:18:12.002405+00:00"
+}

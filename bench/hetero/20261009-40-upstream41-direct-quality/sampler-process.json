@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "sampler_launcher_pid": 17532,
+  "sampler_launcher_exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "sampler_launcher_create_utc": "2026-10-09T11:03:41.9343850Z",
+  "configured_python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "actual_child_pid": 22516,
+  "actual_child_parent_pid": 17532,
+  "actual_child_exe": "C:\\Python314\\python.exe",
+  "actual_child_create_utc": "2026-10-09T11:03:41.9714470Z",
+  "argv": [
+    "-u",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+    "--output",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\resource\\samples.jsonl",
+    "--pid",
+    "20332",
+    "--interval",
+    "1",
+    "--max-seconds",
+    "10800",
+    "--minimum-commit-gib",
+    "4",
+    "--stop-file",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\resource\\STOP"
+  ],
+  "owner_pid": 20332,
+  "output": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\resource\\samples.jsonl"
+}

@@ -1,0 +1,1 @@
+{"record_type": "resource_sample", "observed_at_utc": "2026-10-09T11:18:11.978393+00:00", "owner_pid": 10864, "physical_available_bytes": 117981974528, "commit_available_bytes": 122911141888, "memory_source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit", "errors": [], "gate_ok": true, "owned_service_tree": null}

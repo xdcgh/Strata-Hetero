@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "failed_stopped",
+  "phase": "run-quality-after-ready",
+  "utc": "2026-10-09T11:08:21.3004249Z",
+  "error_type": "MethodInvocationException",
+  "error": "Exception calling \"Parse\" with \"1\" argument(s): \"'{' is invalid after a single JSON value. Expected end of data. LineNumber: 0 | BytePositionInLine: 3453.\"",
+  "completed_prompts": []
+}

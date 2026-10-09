@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "scope": "CPU-only artifact/metadata preflight; no worker, OpenVINO import, Core, or device access",
+  "started_utc": "2026-10-09T11:17:49.269411+00:00",
+  "python_executable": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe",
+  "python_pid": 11204,
+  "contract_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\execution-contract.json",
+  "contract_sha256": "4dfce361bf7c56cb943c54411dcf03d68da945fc334a395092a8efb4ca593940",
+  "client_sha256": "3104c114c843689f5d5503cb3d5407dd18ad4bfc8736869b1dd6af49a7434934",
+  "model_payload_read": false,
+  "native_blob_payload_read": false,
+  "npz_tensor_payload_loaded": false,
+  "openvino_module_loaded": false,
+  "core_created": false,
+  "worker_started": false,
+  "resource_sample_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\preflight-01\\resource-samples.jsonl",
+  "failure": {
+    "type": "ModuleNotFoundError",
+    "message": "No module named 'psutil'"
+  },
+  "finished_utc": "2026-10-09T11:17:49.333779+00:00"
+}

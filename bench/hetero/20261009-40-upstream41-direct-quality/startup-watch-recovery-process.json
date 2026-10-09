@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "status": "started_after_launch_controller_assertion_failure",
+  "purpose": "resume authorized startup memory/resource watch; model launch not repeated",
+  "pid": 11732,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "create_utc": "2026-10-09T11:04:15.2856420Z",
+  "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\startup-watch.ps1 -Monitor -TimeoutSeconds 900",
+  "watch_script": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\startup-watch.ps1",
+  "watch_sha256": "ef1503979359781db97f082d272c4f64b1223aa8ad355b83a7fde8d80d8daa4c",
+  "pwsh_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "server_launcher_pid": 20332,
+  "sampler_launcher_pid": 17532,
+  "server_child_pid": 16740,
+  "engine_pid": 21868,
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\logs\\startup-watch-recovery.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\logs\\startup-watch-recovery.stderr.log"
+}

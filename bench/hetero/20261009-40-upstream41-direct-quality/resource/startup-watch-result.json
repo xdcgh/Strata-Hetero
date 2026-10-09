@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "status": "startup_ready",
+  "utc": "2026-10-09T11:05:40.8486774Z",
+  "sample": {
+    "schema_version": 1,
+    "record_type": "resource_sample",
+    "observed_at_utc": "2026-10-09T11:05:40.049Z",
+    "monotonic_seconds": 29565.6576873,
+    "sample_gap_seconds": 1.0002733000001172,
+    "sampler_elapsed_seconds": 0.11744360000011511,
+    "owner_pid": 20332,
+    "cpu": {
+      "percent": 9.6,
+      "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+    },
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 90723758080,
+      "physical_used_bytes": 46239490048,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 96472174592,
+      "commit_available_bytes": 49081008128,
+      "commit_total_pages": 23552777,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 49081008128,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "ram_gate": {
+      "status": "pass",
+      "available_gib": 84.493,
+      "required_gib": 12
+    },
+    "commit_gate": {
+      "status": "pass",
+      "available_gib": 45.71,
+      "required_gib": 4.0,
+      "source": "PSAPI GetPerformanceInfo"
+    },
+    "owner_process_tree": [
+      {
+        "pid": 20332,
+        "parent_pid": 10912,
+        "name": "python.exe",
+        "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "rss_bytes": 4169728,
+        "io_read_bytes": 185,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.015625,
+        "cpu_system_seconds": 0.0,
+        "errors": []
+      },
+      {
+        "pid": 13412,
+        "parent_pid": 20332,
+        "name": "conhost.exe",
+        "executable_path": "C:\\Windows\\System32\\conhost.exe",
+        "rss_bytes": 20004864,
+        "io_read_bytes": 16607,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.03125,
+        "errors": []
+      },
+      {
+        "pid": 16740,
+        "parent_pid": 20332,
+        "name": "python.exe",
+        "executable_path": "C:\\Python314\\python.exe",
+        "rss_bytes": 219451392,
+        "io_read_bytes": 15410311,
+        "io_write_bytes": 2236,
+        "cpu_user_seconds": 0.46875,
+        "cpu_system_seconds": 0.265625,
+        "errors": []
+      },
+      {
+        "pid": 21868,
+        "parent_pid": 16740,
+        "name": "strata.exe",
+        "executable_path": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe",
+        "rss_bytes": 23358492672,
+        "io_read_bytes": 2319472600,
+        "io_write_bytes": 5002,
+        "cpu_user_seconds": 22.109375,
+        "cpu_system_seconds": 33.5,
+        "errors": []
+      }
+    ],
+    "disk_io": {
+      "PhysicalDrive0": {
+        "read_bytes": 13955730944,
+        "write_bytes": 10218369024,
+        "read_count": 381216,
+        "write_count": 578790,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive1": {
+        "read_bytes": 330982054400,
+        "write_bytes": 66005686784,
+        "read_count": 10551237,
+        "write_count": 408896,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive2": {
+        "read_bytes": 701775360,
+        "write_bytes": 4497408,
+        "read_count": 5309,
+        "write_count": 876,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive3": {
+        "read_bytes": 563093091840,
+        "write_bytes": 0,
+        "read_count": 7514840,
+        "write_count": 0,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      }
+    },
+    "nvidia": {
+      "source": "nvidia-smi",
+      "telemetry_known": true,
+      "devices": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "memory_used_mib": 44294,
+          "memory_free_mib": 4335,
+          "utilization_percent": 58.0,
+          "power_watts": 17.3,
+          "temperature_c": 30.0,
+          "telemetry_known": true,
+          "optional": {
+            "clocks.current.graphics": 210,
+            "clocks.current.memory": 405,
+            "pcie.link.gen.current": 1,
+            "pcie.link.width.current": 8
+          }
+        }
+      ]
+    },
+    "alerts": [],
+    "errors": []
+  },
+  "launcher_pid": 20332,
+  "server_child_pid": 16740,
+  "engine_pid": 21868,
+  "engine_exe": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe",
+  "engine_create_utc": "2026-10-09T11:03:42.5691260Z",
+  "sampler_child_pid": 22516,
+  "sampler_child_exe": "C:\\Python314\\python.exe",
+  "sampler_child_create_utc": "2026-10-09T11:03:41.9714470Z",
+  "sampler_stop_requested": false
+}

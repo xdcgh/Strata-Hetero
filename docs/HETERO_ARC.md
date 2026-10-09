@@ -43,4 +43,20 @@ The subsequent actual-expert experiments use the verified original layer 28/expe
 
 These results close the sampled native-operator numerical gap for the selected expert and shapes. They do not establish equivalence for other quantizations or experts, transport-inclusive latency, CPU/Arc contention, full-model token/logit parity or the required 8% model gain. No production helper is enabled. Extend the worker to this identified contract and measure the complete route before changing scheduling defaults.
 
-The service now accepts explicit `--operator native-q4k-q5_1 --native-blob <path>` while retaining its F32 default. Metadata validation checks only NPZ headers, identity metadata and the original blob's file metadata. Explicit serve verifies the three raw slices against the selected expert identity, derives Q5_1 minima from those bytes and hash-loads decoded weights before creating Core. The existing exact GPU.0/F32/ACCURACY checks and SXPU framing remain in force. INIT reports the operator, blob binding and weight readiness. Sixteen service fixtures passed; root also passed the 63 related service, transport, activation and vision fixtures. The default CLI was checked against the real asset metadata without loading tensor payloads or creating Core. Actual native IPC comparison and transfer-inclusive timings remain pending in this checkpoint.
+The service now accepts explicit `--operator native-q4k-q5_1 --native-blob <path>` while retaining its F32 default. Metadata validation checks only NPZ headers, identity metadata and the original blob's file metadata. Explicit serve verifies the three raw slices against the selected expert identity, derives Q5_1 minima from those bytes and hash-loads decoded weights before creating Core. The existing exact GPU.0/F32/ACCURACY checks and SXPU framing remain in force. INIT reports the operator, blob binding and weight readiness. Sixteen service fixtures passed; root also passed the 63 related service, transport, activation and vision fixtures. The default CLI was checked against the real asset metadata without loading tensor payloads or creating Core.
+
+`20261009-42-native-q4k-q5_1-ipc` subsequently ran one identified Arc worker with one warmup and five formals per row count. All 45 formals pass the frozen native CPU reference at unchanged 0.01 maximum-absolute and 0.001 relative-RMSE/row-norm limits. Root independently rehashed the nine retained output files and recomputed those errors in float64; RMSE is 0.000210..0.000823. Each row's five output hashes match its retained output. The service graph actually compiled and inferred on GPU.0 under F32/ACCURACY. Its nested builder record is a snapshot taken before Core compilation, rather than the later service execution status.
+
+| Rows | Native-contract client median RTT ms | Worker median ms |
+|---:|---:|---:|
+| 1 | 1.0406 | 0.8014 |
+| 2 | 1.1541 | 0.8227 |
+| 4 | 0.9528 | 0.5573 |
+| 8 | 1.3867 | 0.8156 |
+| 16 | 1.1788 | 0.6712 |
+| 32 | 1.9779 | 1.0153 |
+| 64 | 4.3252 | 1.9600 |
+| 128 | 10.0494 | 3.7452 |
+| 256 | 20.4807 | 6.4198 |
+
+Client timing includes serialization, pipe exchange, validation before the output copy and the owned copy. INIT/compile and warmup are separate. It must be compared with a CPU route covering the same complete boundary before declaring a crossover. Twelve global samples pass the memory floors; the exact launcher, actual C Python service child and conhost are terminal. Eight host fixtures and a real small-artifact preflight preceded execution; the failed interpreter preflight is retained. A standalone profile successfully reloads these nine hash-bound observations, with no fabricated CPU cost and no model acceptance. It rejects the Arc route until model evidence exists. Shared-RAM contention, multi-expert/model integration and the required 8% model gain remain unmeasured; no automatic helper is enabled.

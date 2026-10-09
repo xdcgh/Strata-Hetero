@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-10-09T11:10:31.548263+00:00",
+  "loaded": true,
+  "engine": "0.1.41",
+  "activity": {
+    "requests": 1,
+    "in_flight": 0,
+    "last_request_at": 1791544101
+  },
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero"
+}

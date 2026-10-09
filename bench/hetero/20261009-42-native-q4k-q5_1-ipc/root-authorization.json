@@ -1,0 +1,12 @@
+{
+  "authorized_utc": "2026-10-09T11:22:36.075806+00:00",
+  "status": "root_reviewed_8_fixtures_and_smallartifact_preflight",
+  "run": "single native IPC: 9 row shapes, warm1, formal5, frozen native reference",
+  "runner_sha256": "49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83",
+  "prior_contract_sha256": "b3c6a3ec8939500e6c6f4df81513b08080f17174f093e53f7f68e675ab9632bf",
+  "executed_contract_sha256": "69fb26ea65dd9ae228dde8e3edd2a13265eb4c7329fe2cdc518ac9b19131b6e6",
+  "physical_floor_gib": 12,
+  "commit_floor_gib": 4,
+  "model_route_enabled": false,
+  "concurrent_model_or_compiler_permitted": false
+}

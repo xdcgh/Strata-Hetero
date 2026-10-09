@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "status": "sidecar_amendment_only_original_process_json_unchanged",
+  "field": "process.json.engine_path",
+  "original_value": null,
+  "corrected_value_from_config": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe",
+  "identity_engine_path": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe",
+  "config_sha256": "5af276df128a94eba912a475ac158c5f7184d2d22f78a46dba1c8d64310a2057",
+  "engine_sha256": "a6e2763ffce668e213f12380389223674621c47e4e5cb94c0f724e6ea8e686fc",
+  "launch_script_sha256": "108039fab6c479d3528834533e45115ae794ac9e65c510ee8a739aa057c8fee6",
+  "cause": "process receipt construction resolved function-scope variable $config.exe instead of the outer $contract.config.exe; frozen config, identity, binary and actual engine process agree, so only sidecar binding is amended.",
+  "actual_live_tree": [
+    {
+      "pid": 20332,
+      "parent_pid": 10912,
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "create_utc": "2026-10-09T11:03:41.8868720Z"
+    },
+    {
+      "pid": 16740,
+      "parent_pid": 20332,
+      "exe": "C:\\Python314\\python.exe",
+      "create_utc": "2026-10-09T11:03:41.9252340Z"
+    },
+    {
+      "pid": 21868,
+      "parent_pid": 16740,
+      "exe": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe",
+      "create_utc": "2026-10-09T11:03:42.5691260Z",
+      "command_line": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io direct --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf --ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+    }
+  ],
+  "recorded_utc": "2026-10-09T11:05:13.6352905Z"
+}

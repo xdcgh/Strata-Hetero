@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "mode": "-CheckReady; zero model requests",
+  "pid": 15640,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "create_utc": "2026-10-09T11:05:53.7488290Z",
+  "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\run-quality-after-ready.ps1 -CheckReady -RootReadyConfirmed -LauncherPid 20332 -SamplerPid 17532",
+  "script_sha256": "f135f742799712b8b8265057f1d08e9a3d88032caad09c552fd5c353422b1399",
+  "launcher_pid": 20332,
+  "sampler_launcher_pid": 17532,
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\logs\\quality-checkready.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-40-upstream41-direct-quality\\logs\\quality-checkready.stderr.log"
+}

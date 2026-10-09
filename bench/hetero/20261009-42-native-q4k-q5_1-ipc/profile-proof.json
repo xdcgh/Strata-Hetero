@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "profile_roundtrip_and_guards_verified",
+  "profile_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\hetero-profile.json",
+  "profile_sha256": "af338a70b8392dbe1b35f03116c567a6c7444a74eb114709db1dc50959ffd875",
+  "identity_sha256": "5eff793aa6011088b4b1a1b6967c633bd86a913f98a6f5d24623fd10dcec024f",
+  "observation_count": 9,
+  "acceptance_count": 0,
+  "evidence_sha256": "6f8290bcc6e7e361d22a03af5560fa0322ddfce33a6757432f77fe49180b588b",
+  "evidence_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\receipt.json",
+  "shared_system_ram_contention_multiplier": null,
+  "decisions": {
+    "matching_identity_and_unexpired": {
+      "backend": "cpu:primary",
+      "completion_eta_ns": null,
+      "reason": "primary_cost_unavailable",
+      "rejected": {
+        "arc:gpu.0": "model_acceptance_missing"
+      }
+    },
+    "identity_mismatch": {
+      "backend": "cpu:primary",
+      "completion_eta_ns": null,
+      "reason": "profile_identity_mismatch",
+      "rejected": {}
+    },
+    "expired_profile": {
+      "backend": "cpu:primary",
+      "completion_eta_ns": null,
+      "reason": "profile_expired",
+      "rejected": {}
+    }
+  },
+  "primary_cost_claim": "none; no CPU timing or cost observation was fabricated",
+  "route_effect": "Arc helper rejected for model_acceptance_missing; CPU primary remains selected; no installation/configuration/app profile modification",
+  "measured_scope": "isolated nine-shape single-expert IPC prefill-helper observations only; no model-level phase timing or whole-model quality/performance acceptance",
+  "expires_utc": "2026-10-10T11:32:28.176464+00:00"
+}

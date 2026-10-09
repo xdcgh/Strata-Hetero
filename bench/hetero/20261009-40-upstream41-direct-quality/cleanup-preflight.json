@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-40-upstream41-direct-quality",
+  "status": "owned_cleanup_authorized_preflight_pass",
+  "verified_utc": "2026-10-09T11:12:19.4226669Z",
+  "in_flight_zero_confirmed_by_root": true,
+  "owned_listener_pid": 16740,
+  "processes": [
+    {
+      "pid": 20332,
+      "create_utc": "2026-10-09T11:03:41.8868720Z",
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe"
+    },
+    {
+      "pid": 16740,
+      "create_utc": "2026-10-09T11:03:41.9252340Z",
+      "exe": "C:\\Python314\\python.exe",
+      "parent": 20332
+    },
+    {
+      "argv": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io direct --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf --ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "pid": 21868,
+      "create_utc": "2026-10-09T11:03:42.5691260Z",
+      "exe": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe",
+      "parent": 16740
+    },
+    {
+      "pid": 17532,
+      "create_utc": "2026-10-09T11:03:41.9343850Z",
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe"
+    },
+    {
+      "pid": 22516,
+      "create_utc": "2026-10-09T11:03:41.9714470Z",
+      "exe": "C:\\Python314\\python.exe",
+      "parent": 17532
+    }
+  ]
+}
