@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T08:01:33.8260323Z",
+  "status": "controller_environment_corrected_no_model_restart",
+  "shell_path": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "shell_version": "7.6.5",
+  "shell_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "quality_script_sha256": "d61b826df1d83d15c72a56c53973671318b3b23f8b2fb659d59433fe84520e5c",
+  "old_controller_failure": "Windows PowerShell5 lacked System.Text.Json; failed before any benchmark prompt; raw logs retained",
+  "requires_version": "7.0",
+  "model_requests": 0,
+  "in_flight": 0,
+  "model_loaded": true,
+  "authorized_next_step": "invoke quality once with this exact verified pwsh7 runtime; no model restart"
+}
