@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "pid": 3060,
+    "parent_pid": 15512,
+    "create_time": 1791550906.5585036,
+    "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+      "--version"
+    ]
+  },
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "--version"
+  ],
+  "popen_owned_handle": true
+}

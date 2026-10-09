@@ -1,0 +1,195 @@
+diff --git a/include/strata/kernels/cpu/pool.hpp b/include/strata/kernels/cpu/pool.hpp
+index 6796e39..678b2de 100644
+--- a/include/strata/kernels/cpu/pool.hpp
++++ b/include/strata/kernels/cpu/pool.hpp
+@@ -80,6 +80,20 @@ struct CpuTopology {
+     int host_core = -1;             ///< Logical core reserved for host thread
+ };
+ 
++/// One startup observation from a pool-owned worker. OS core labels are not inferred here.
++struct WorkerAffinityReport {
++    int worker = -1;
++    int requested_core = -1;
++    bool ready = false;
++    bool pin_requested = false;
++    bool pin_applied = false;
++    bool mask_observed = false;
++    bool mask_matches_request = false;
++    uint16_t observed_group = 0;
++    uint64_t observed_mask = 0;
++    int startup_processor = -1;
++};
++
+ /// Which core the host thread - the layer loop that spins on the GPU's flags - takes when `skip_first` reserves one
+ /// (--host-core first|last, STRATA_HOST_CORE).  `First` is the layout the pool has always used.  `Last` (eddoursul's
+ /// fork, F12) puts the host on the last physical core and lets the workers have the first: Windows sends a GPU's
+@@ -168,6 +182,9 @@ public:
+     int e_cores() const { return topo_.e_cores; }
+     PoolAffinity affinity() const { return affinity_; }
+ 
++    /// Nonblocking snapshot. Pending workers remain unknown; reports are immutable after startup publication.
++    std::vector<WorkerAffinityReport> worker_affinity() const;
++
+     /// Publish `n` jobs, then block until every one has been claimed AND every worker has parked.
+     /// `jobs` must outlive the call (it does, and the workers never touch it afterwards).
+     void run(ExpertJob* jobs, int n);
+@@ -262,6 +279,11 @@ private:
+     static constexpr int32_t kParked = -1, kSleeping = -2, kBetween = -3, kIdle = -10, kWaitParked = -11,
+                              kWaitDone = -12;
+     std::unique_ptr<std::atomic<int32_t>[]> wstate_;
++    struct AffinityState {
++        WorkerAffinityReport report;
++        std::atomic<bool> ready{false};
++    };
++    std::unique_ptr<AffinityState[]> affinity_state_;
+     std::atomic<int32_t> hstate_{kIdle};
+     std::atomic<int64_t> hstate_ms_{0};
+     alignas(64) std::atomic<uint64_t> head_{0};   // epoch << 32 | njobs << 16 | next index (issue #29)
+diff --git a/src/hetero/native_expert_bench.cpp b/src/hetero/native_expert_bench.cpp
+index 46e60ff..0482f98 100644
+--- a/src/hetero/native_expert_bench.cpp
++++ b/src/hetero/native_expert_bench.cpp
+@@ -393,6 +393,7 @@ struct PoolRunInfo {
+     cpu::CpuTopology topology;
+     int workers = 0, actual_workers = 0, unpinned_overflow = 0;
+     bool pin = false, host_pinned = false;
++    std::vector<cpu::WorkerAffinityReport> worker_affinity;
+     std::vector<uint64_t> activation_ns, pool_ns, gu_ns, hidden_q_ns, down_ns;
+     std::vector<uint64_t> wait_park_ns, drain_ns, repark_ns;
+ };
+@@ -563,7 +564,20 @@ std::string run_json(const Args& args, const NativeFmt& fmt, uint64_t blob_bytes
+                 s << pool_info->topology.worker_cores[(size_t) i];
+             }
+         }
+-        s << "], \"worker_pin_success_available\": false"
++        s << "], \"worker_pin_success_available\": true, \"worker_affinity_observations\": [";
++        for (size_t i = 0; i < pool_info->worker_affinity.size(); ++i) {
++            if (i) s << ", ";
++            const auto& r = pool_info->worker_affinity[i];
++            s << "{\"worker\":" << r.worker << ",\"requested_core\":" << r.requested_core
++              << ",\"ready\":" << (r.ready ? "true" : "false")
++              << ",\"pin_requested\":" << (r.pin_requested ? "true" : "false")
++              << ",\"pin_applied\":" << (r.pin_applied ? "true" : "false")
++              << ",\"mask_observed\":" << (r.mask_observed ? "true" : "false")
++              << ",\"mask_matches_request\":" << (r.mask_matches_request ? "true" : "false")
++              << ",\"observed_group\":" << r.observed_group << ",\"observed_mask\":" << r.observed_mask
++              << ",\"startup_processor\":" << r.startup_processor << '}';
++        }
++        s << ']'
+           << ", \"topology_basis\": \"upstream OS class heuristic; P/E labels are not independently verified\"},\n"
+           << "  \"pool_timing_ns\": {";
+         const std::vector<uint64_t>* arrays[] = {&pool_info->activation_ns, &pool_info->pool_ns, &pool_info->gu_ns,
+@@ -757,6 +771,7 @@ int run(const Args& args, RunContext& context) {
+         validate_finite_outputs(args, buffers);
+     }
+     context.phase = "output_serialization";
++    if (pool) pool_info.worker_affinity = pool->worker_affinity();
+     std::vector<uint8_t> encoded = encode_output_le(args, buffers);
+     const std::string output_sha = sha256(encoded.data(), encoded.size());
+     const std::string receipt_json = run_json(args, fmt, blob_size, blob_sha, input_size, input_sha,
+diff --git a/src/kernels/cpu/pool.cpp b/src/kernels/cpu/pool.cpp
+index 16e3fb2..b94364e 100644
+--- a/src/kernels/cpu/pool.cpp
++++ b/src/kernels/cpu/pool.cpp
+@@ -448,6 +448,7 @@ ExpertPool::ExpertPool(int n_workers, bool pin, bool host_works, PoolAffinity af
+     if (n_ < 1) n_ = 1;
+     scratch_.resize((size_t) n_);
+     wstate_.reset(new std::atomic<int32_t>[(size_t) n_]);
++    affinity_state_.reset(new AffinityState[(size_t) n_]);
+     for (int i = 0; i < n_; ++i) wstate_[(size_t) i].store(kParked);
+     hstate_ms_.store(now_ms());
+     g_diag_pool.store(this);
+@@ -457,13 +458,46 @@ ExpertPool::ExpertPool(int n_workers, bool pin, bool host_works, PoolAffinity af
+     threads_.reserve((size_t) n_);
+     for (int i = 0; i < n_; ++i) {
+         const int core = pin ? (i < (int) topo_.worker_cores.size() ? topo_.worker_cores[(size_t) i] : -1) : -1;
+-        threads_.emplace_back([this, i, core] {
+-            pin_this_thread(core, i);
++        threads_.emplace_back([this, i, core, pin] {
++            WorkerAffinityReport observed;
++            observed.worker = i;
++            observed.requested_core = core;
++            observed.pin_requested = pin;
++            observed.pin_applied = core >= 0 && pin_this_thread(core, i);
++#if defined(_WIN32)
++            GROUP_AFFINITY actual{};
++            if (GetThreadGroupAffinity(GetCurrentThread(), &actual)) {
++                observed.mask_observed = true;
++                observed.observed_group = actual.Group;
++                observed.observed_mask = static_cast<uint64_t>(actual.Mask);
++                observed.mask_matches_request = core >= 0 &&
++                    actual.Group == static_cast<WORD>(core / 64) && actual.Mask == (KAFFINITY(1) << (core & 63));
++            }
++            PROCESSOR_NUMBER processor{};
++            GetCurrentProcessorNumberEx(&processor);
++            observed.startup_processor = static_cast<int>(processor.Group) * 64 + processor.Number;
++#endif
++            observed.ready = true;
++            affinity_state_[(size_t) i].report = observed;
++            affinity_state_[(size_t) i].ready.store(true, std::memory_order_release);
+             worker(i);
+         });
+     }
+ }
+ 
++std::vector<WorkerAffinityReport> ExpertPool::worker_affinity() const {
++    std::vector<WorkerAffinityReport> reports;
++    reports.reserve(static_cast<size_t>(n_));
++    for (int i = 0; i < n_; ++i) {
++        WorkerAffinityReport value;
++        value.worker = i;
++        if (affinity_state_[static_cast<size_t>(i)].ready.load(std::memory_order_acquire))
++            value = affinity_state_[static_cast<size_t>(i)].report;
++        reports.push_back(value);
++    }
++    return reports;
++}
++
+ ExpertPool::~ExpertPool() {
+     const ExpertPool* self = this;
+     g_diag_pool.compare_exchange_strong(self, nullptr);
+diff --git a/src/program/generate.cpp b/src/program/generate.cpp
+index 405620c..26a4d8c 100644
+--- a/src/program/generate.cpp
++++ b/src/program/generate.cpp
+@@ -5110,6 +5110,25 @@ int main(int argc, char** argv) {
+     std::fprintf(stderr, "strata generate: %d expert-pool workers%s%s\n", pool.workers(),
+                  pool.host_works() ? " + the host thread" : "",
+                  o.no_pool ? " (UNUSED: --no-pool)" : "");
++    {
++        const auto observed = pool.worker_affinity();
++        int applied = 0, verified = 0, pending = 0, failed = 0, unknown = 0, overflow = 0, unrequested = 0;
++        for (const auto& r : observed) {
++            if (!r.ready) { ++pending; continue; }
++            if (!r.pin_requested) { ++unrequested; continue; }
++            if (r.requested_core < 0) { ++overflow; continue; }
++            if (r.pin_applied) ++applied; else ++failed;
++            if (r.pin_applied && r.mask_observed && r.mask_matches_request) ++verified;
++            else if (r.pin_applied) ++unknown;
++            std::fprintf(stderr, "strata cpu affinity: worker=%d requested=%d applied=%d mask_known=%d group=%u mask=0x%llx matches=%d startup_processor=%d\n",
++                         r.worker, r.requested_core, int(r.pin_applied), int(r.mask_observed),
++                         unsigned(r.observed_group), static_cast<unsigned long long>(r.observed_mask),
++                         int(r.mask_matches_request), r.startup_processor);
++        }
++        std::printf("INFO pool_pin_applied=%d pool_pin_verified=%d pool_pin_pending=%d pool_pin_failed=%d pool_pin_unknown=%d pool_pin_overflow=%d pool_pin_unrequested=%d\n",
++                    applied, verified, pending, failed, unknown, overflow, unrequested);
++        std::fflush(stdout);
++    }
+ 
+     // **THE MISALIGNMENT WARNING THAT STOOD HERE IS GONE, BECAUSE THE MISALIGNMENT IS FIXED.**
+     //
+diff --git a/tools/hetero_native_cpu/CMakeLists.txt b/tools/hetero_native_cpu/CMakeLists.txt
+index afe93bd..bda806d 100644
+--- a/tools/hetero_native_cpu/CMakeLists.txt
++++ b/tools/hetero_native_cpu/CMakeLists.txt
+@@ -85,6 +85,10 @@ target_include_directories(hetero_native_expert_metadata_fixture PRIVATE
+ target_link_libraries(hetero_native_expert_metadata_fixture PRIVATE strata_kernels_cpu)
+ 
+ enable_testing()
++add_executable(hetero_worker_affinity_observation "${STRATA_ROOT}/src/hetero/worker_affinity_observation_test.cpp")
++target_link_libraries(hetero_worker_affinity_observation PRIVATE strata_kernels_cpu)
++add_test(NAME hetero_worker_affinity_observation COMMAND hetero_worker_affinity_observation)
++set_tests_properties(hetero_worker_affinity_observation PROPERTIES TIMEOUT 15)
+ add_test(NAME hetero_native_expert_metadata_fixture COMMAND hetero_native_expert_metadata_fixture)
+ add_test(NAME hetero_native_expert_cli_fixtures
+   COMMAND "${CMAKE_COMMAND}"

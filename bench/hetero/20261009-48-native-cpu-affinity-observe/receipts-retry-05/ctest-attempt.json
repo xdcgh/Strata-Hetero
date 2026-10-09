@@ -1,0 +1,24 @@
+{
+  "name": "ctest",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "--test-dir",
+    "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48",
+    "--output-on-failure",
+    "--parallel",
+    "1"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "started_utc": "2026-10-09T13:03:24.331960+00:00",
+  "resource_before": {
+    "time_utc": "2026-10-09T13:03:24.331923+00:00",
+    "label": "ctest:prelaunch",
+    "physical_available_bytes": 117004595200,
+    "commit_available_bytes": 122466447360,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "environment_stripped_gpu_or_test_controls": true
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "status": "complete_all_cases_verified",
+  "run_id": "20261009-49-cpu-affinity-observations",
+  "reviewed_utc": "2026-10-09T13:13:18.554337+00:00",
+  "source": {
+    "runner_sha256": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+    "contract_sha256": "116d9c9986751b4217c0b6a956608f1d6c27386d59f4fd7d65ac929ce685332f",
+    "telemetry_preflight_sha256": "a0e97d7064a8e376f7cc89dbac89d56f11297027063d3770ae2171bde031e3b7",
+    "binary_sha256": "b9749260920b26135258692a8205261832078cd19e417476e448da8982c3c889",
+    "native_source_sha256": "d7a1666673792be7f618f89f41fedf916ccb8d12a7b1e5d36dc29ef37e8e05ae",
+    "build_receipt_sha256": "f5b6577743eecab11995149fe0d5ddb09170c4bccefd218d3e7ec2d98710d8b8",
+    "external_run_summary_sha256": "270ce8c961e09070f04bc0ccadb823ed31eae6ab35936951a500304f3c82890e"
+  },
+  "counts": {
+    "default_cases": 3,
+    "pool_cases": 12,
+    "cases": 15,
+    "formal_iterations": 75,
+    "failed": 0,
+    "strict_pcore_overflow": 0
+  },
+  "quality": {
+    "all_finite": true,
+    "all_15_outputs_bitwise_equal_frozen_native_cpu_reference": true,
+    "all_native_receipts_validated": true,
+    "rows": [
+      1,
+      16,
+      256
+    ],
+    "warmup": 1,
+    "formal_repeats": 5
+  },
+  "affinity_observations": {
+    "requested_modes": [
+      "none",
+      "all",
+      "auto",
+      "p-cores"
+    ],
+    "rows_by_mode": {
+      "none": [
+        1,
+        16,
+        256
+      ],
+      "all": [
+        1,
+        16,
+        256
+      ],
+      "auto": [
+        1,
+        16,
+        256
+      ],
+      "p-cores": [
+        1,
+        16,
+        256
+      ]
+    },
+    "worker_count": 4,
+    "none_all_requested_and_applied_false": true,
+    "pinned_modes_all_worker_set_calls_succeeded": true,
+    "actual_masks_equal_requested_group_and_single_cpu_bit": true,
+    "startup_processor_recorded": true,
+    "p_e_labels": "unverified; numeric OS candidate policy only"
+  },
+  "processes": {
+    "unique_owned_children": 15,
+    "all_exit_code_zero": true,
+    "all_terminal_exact_pid_create_time_checks": true,
+    "cases": [
+      {
+        "pid": 18644,
+        "create_time": 1791551540.634349,
+        "exit_code": 0,
+        "case": "default-r001"
+      },
+      {
+        "pid": 24344,
+        "create_time": 1791551540.678924,
+        "exit_code": 0,
+        "case": "default-r016"
+      },
+      {
+        "pid": 10700,
+        "create_time": 1791551540.7352967,
+        "exit_code": 0,
+        "case": "default-r256"
+      },
+      {
+        "pid": 7892,
+        "create_time": 1791551541.0296996,
+        "exit_code": 0,
+        "case": "pool-none-w04-r001"
+      },
+      {
+        "pid": 13144,
+        "create_time": 1791551541.075592,
+        "exit_code": 0,
+        "case": "pool-none-w04-r016"
+      },
+      {
+        "pid": 2000,
+        "create_time": 1791551541.123788,
+        "exit_code": 0,
+        "case": "pool-none-w04-r256"
+      },
+      {
+        "pid": 20076,
+        "create_time": 1791551541.2618396,
+        "exit_code": 0,
+        "case": "pool-all-w04-r001"
+      },
+      {
+        "pid": 12536,
+        "create_time": 1791551541.3119917,
+        "exit_code": 0,
+        "case": "pool-all-w04-r016"
+      },
+      {
+        "pid": 15300,
+        "create_time": 1791551541.361822,
+        "exit_code": 0,
+        "case": "pool-all-w04-r256"
+      },
+      {
+        "pid": 6052,
+        "create_time": 1791551541.5085893,
+        "exit_code": 0,
+        "case": "pool-auto-w04-r001"
+      },
+      {
+        "pid": 20040,
+        "create_time": 1791551541.5563223,
+        "exit_code": 0,
+        "case": "pool-auto-w04-r016"
+      },
+      {
+        "pid": 13412,
+        "create_time": 1791551541.611701,
+        "exit_code": 0,
+        "case": "pool-auto-w04-r256"
+      },
+      {
+        "pid": 18624,
+        "create_time": 1791551541.7537904,
+        "exit_code": 0,
+        "case": "pool-p-cores-w04-r001"
+      },
+      {
+        "pid": 11364,
+        "create_time": 1791551541.8048575,
+        "exit_code": 0,
+        "case": "pool-p-cores-w04-r016"
+      },
+      {
+        "pid": 24452,
+        "create_time": 1791551541.8594413,
+        "exit_code": 0,
+        "case": "pool-p-cores-w04-r256"
+      }
+    ],
+    "other_processes_touched": false
+  },
+  "resources": {
+    "sample_count": 31,
+    "all_samples_pass_12GiB_physical_4GiB_commit": true,
+    "physical_min_bytes": 117094391808,
+    "commit_min_bytes": 122563923968,
+    "final_snapshot": {
+      "physical_available_bytes": 117051121664,
+      "commit_available_bytes": 122515636224,
+      "errors": []
+    }
+  },
+  "claim_limit": "Native CPU numerical parity and per-worker Windows affinity observation for this harness only; no model scheduling, throughput, or P/E-label claim.",
+  "csv_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\run49-case-summary.csv",
+  "external_summary_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\run-summary.json",
+  "failed_prelaunch_attempt_preserved": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\attempt-01-prelaunch-failure.json"
+}

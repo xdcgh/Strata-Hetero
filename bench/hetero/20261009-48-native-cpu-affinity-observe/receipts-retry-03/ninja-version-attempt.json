@@ -1,0 +1,20 @@
+{
+  "name": "ninja-version",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "--version"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "started_utc": "2026-10-09T13:02:29.800669+00:00",
+  "resource_before": {
+    "time_utc": "2026-10-09T13:02:29.800637+00:00",
+    "label": "ninja-version:prelaunch",
+    "physical_available_bytes": 117188882432,
+    "commit_available_bytes": 122663636992,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "environment_stripped_gpu_or_test_controls": true
+}

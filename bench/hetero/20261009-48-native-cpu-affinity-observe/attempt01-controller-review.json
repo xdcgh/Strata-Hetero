@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "attempt01-preserved",
+  "runner_source_path": "bench\\hetero\\20261009-48-native-cpu-affinity-observe\\run_cpu48_build-failed-attempt01.py",
+  "runner_source_sha256": "62bb303e93b6e1047e0eb7340dcad63bfce9a6eb207c8703a2fd99dd0030dec4",
+  "failed_build_receipt_sha256": "9891edcf41044ee66070c8d43124c470bfd4550958d595bb084e72395f02266c",
+  "failure_reason": "relative argv0 cmd.exe was realpathed relative to repo instead of resolved through PATH; vcvars process was reaped; configure/build/compiler were not started",
+  "build_dir_exists": false,
+  "no_old_build_modified": true
+}

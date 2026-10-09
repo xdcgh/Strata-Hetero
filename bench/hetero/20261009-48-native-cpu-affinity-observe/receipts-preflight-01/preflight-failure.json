@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "attempt": 1,
+  "error": "BuildError: vcvars environment setup failed: exit=1, resource={'time_utc': '2026-10-09T13:00:29.150011+00:00', 'label': 'vcvars-environment:finished', 'physical_available_bytes': 117154635776, 'commit_available_bytes': 122616991744, 'source': 'GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit', 'errors': [], 'gate_ok': True, 'owned_process_tree': [{'pid': 10960, 'parent_pid': 20200, 'create_time': 1791550829.1253555, 'executable': 'c:\\\\windows\\\\system32\\\\cmd.exe', 'command_line': ['C:\\\\Windows\\\\System32\\\\cmd.exe', '/d', '/s', '/c', 'call \"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\18\\\\BuildTools\\\\VC\\\\Auxiliary\\\\Build\\\\vcvars64.bat\" >nul && set']}]}",
+  "failed_utc": "2026-10-09T13:00:29.151247+00:00",
+  "configure_or_build_run": false
+}

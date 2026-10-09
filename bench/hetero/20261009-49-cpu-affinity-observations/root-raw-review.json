@@ -1,0 +1,7 @@
+{
+  "status": "root15_raw_outputs_and36_pinned_worker_mask_reads_verified",
+  "cases": 15,
+  "pinned_observations": 36,
+  "worker_type_labels_verified": false,
+  "model_gain_measured": false
+}

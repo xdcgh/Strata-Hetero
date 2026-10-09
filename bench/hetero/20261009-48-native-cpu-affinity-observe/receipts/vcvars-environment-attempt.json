@@ -1,0 +1,23 @@
+{
+  "name": "vcvars-environment",
+  "argv": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "call \"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul && set"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "started_utc": "2026-10-09T12:57:51.342097+00:00",
+  "resource_before": {
+    "time_utc": "2026-10-09T12:57:51.341867+00:00",
+    "label": "vcvars-environment:prelaunch",
+    "physical_available_bytes": 117152870400,
+    "commit_available_bytes": 122615504896,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "environment_stripped_gpu_or_test_controls": true
+}

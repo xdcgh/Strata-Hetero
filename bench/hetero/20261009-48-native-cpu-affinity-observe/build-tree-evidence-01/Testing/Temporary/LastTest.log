@@ -1,0 +1,50 @@
+Start testing: Oct 09 21:03 中国标准时间
+----------------------------------------------------------
+1/3 Testing: hetero_worker_affinity_observation
+1/3 Test: hetero_worker_affinity_observation
+Command: "E:/Strata-Hetero-data/build/native-cpu-affinity-observe-20261009-48/hetero_worker_affinity_observation.exe"
+Directory: E:/Strata-Hetero-data/build/native-cpu-affinity-observe-20261009-48
+"hetero_worker_affinity_observation" start time: Oct 09 21:03 中国标准时间
+Output:
+----------------------------------------------------------
+Worker startup affinity observations verified
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"hetero_worker_affinity_observation" end time: Oct 09 21:03 中国标准时间
+"hetero_worker_affinity_observation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: hetero_native_expert_metadata_fixture
+2/3 Test: hetero_native_expert_metadata_fixture
+Command: "E:/Strata-Hetero-data/build/native-cpu-affinity-observe-20261009-48/hetero_native_expert_metadata_fixture.exe"
+Directory: E:/Strata-Hetero-data/build/native-cpu-affinity-observe-20261009-48
+"hetero_native_expert_metadata_fixture" start time: Oct 09 21:03 中国标准时间
+Output:
+----------------------------------------------------------
+{"status":"fixture_pass","native_kernel_called":false,"blob_bytes":3072000}
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"hetero_native_expert_metadata_fixture" end time: Oct 09 21:03 中国标准时间
+"hetero_native_expert_metadata_fixture" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: hetero_native_expert_cli_fixtures
+3/3 Test: hetero_native_expert_cli_fixtures
+Command: "E:/Strata-Hetero-data/venv/Lib/site-packages/cmake/data/bin/cmake.exe" "-DEXECUTABLE=E:/Strata-Hetero-data/build/native-cpu-affinity-observe-20261009-48/hetero_native_expert.exe" "-DFIXTURE_DIR=E:/Strata-Hetero-data/build/native-cpu-affinity-observe-20261009-48/cli-fixtures" "-P" "C:/Users/DC/Documents/ChatGPT/Strata-Hetero/tools/hetero_native_cpu/cli_fixtures.cmake"
+Directory: E:/Strata-Hetero-data/build/native-cpu-affinity-observe-20261009-48
+"hetero_native_expert_cli_fixtures" start time: Oct 09 21:03 中国标准时间
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"hetero_native_expert_cli_fixtures" end time: Oct 09 21:03 中国标准时间
+"hetero_native_expert_cli_fixtures" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 09 21:03 中国标准时间

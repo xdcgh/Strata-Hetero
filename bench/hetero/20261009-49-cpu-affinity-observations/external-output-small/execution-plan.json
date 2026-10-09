@@ -1,0 +1,1449 @@
+{
+  "plan": {
+    "schema_version": 1,
+    "run_id": "20261009-49-cpu-affinity-observations",
+    "status": "plan_only",
+    "execution_authorized": true,
+    "input_preparation_authorized": false,
+    "scope": "Rows 1/16/256 exact byte parity plus four-worker affinity-observation microcases for one real Q4_K/Q5_1 expert; CPU only, no model throughput claim.",
+    "rows": [
+      1,
+      16,
+      256
+    ],
+    "workers": [
+      4
+    ],
+    "affinities": [
+      "none",
+      "all",
+      "auto",
+      "p-cores"
+    ],
+    "default_reference_gates": 3,
+    "planned_pool_cases": 12,
+    "strict_pcore_overflow_not_run": 0,
+    "planned_case_count_including_gates": 15,
+    "plan_entry_count_including_exclusions": 15,
+    "all_auto_all_worker16_overflow_cases": 0,
+    "cases": [
+      {
+        "case_id": "default-r001",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\native-receipt.json",
+        "phase": "default_reference_gate",
+        "status": "planned",
+        "rows": 1,
+        "workers": null,
+        "affinity": null,
+        "host_participates": false,
+        "effective_compute_participants": 1,
+        "reference_policy": "frozen_native_output_and_same_candidate_default"
+      },
+      {
+        "case_id": "default-r016",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\native-receipt.json",
+        "phase": "default_reference_gate",
+        "status": "planned",
+        "rows": 16,
+        "workers": null,
+        "affinity": null,
+        "host_participates": false,
+        "effective_compute_participants": 1,
+        "reference_policy": "frozen_native_output_and_same_candidate_default"
+      },
+      {
+        "case_id": "default-r256",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\native-receipt.json",
+        "phase": "default_reference_gate",
+        "status": "planned",
+        "rows": 256,
+        "workers": null,
+        "affinity": null,
+        "host_participates": false,
+        "effective_compute_participants": 1,
+        "reference_policy": "frozen_native_output_and_same_candidate_default"
+      },
+      {
+        "case_id": "pool-none-w04-r001",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 1,
+        "workers": 4,
+        "affinity": "none",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": false,
+        "candidate_worker_count": null,
+        "candidate_cpu_set_ids": [],
+        "candidate_native_cpu_ids": [],
+        "planned_host_cpu_set_id": null,
+        "planned_host_native_cpu_id": null,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-none-w04-r016",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 16,
+        "workers": 4,
+        "affinity": "none",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": false,
+        "candidate_worker_count": null,
+        "candidate_cpu_set_ids": [],
+        "candidate_native_cpu_ids": [],
+        "planned_host_cpu_set_id": null,
+        "planned_host_native_cpu_id": null,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-none-w04-r256",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 256,
+        "workers": 4,
+        "affinity": "none",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": false,
+        "candidate_worker_count": null,
+        "candidate_cpu_set_ids": [],
+        "candidate_native_cpu_ids": [],
+        "planned_host_cpu_set_id": null,
+        "planned_host_native_cpu_id": null,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-all-w04-r001",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 1,
+        "workers": 4,
+        "affinity": "all",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 15,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          270,
+          271
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-all-w04-r016",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 16,
+        "workers": 4,
+        "affinity": "all",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 15,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          270,
+          271
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-all-w04-r256",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 256,
+        "workers": 4,
+        "affinity": "all",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 15,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          270,
+          271
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-auto-w04-r001",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 1,
+        "workers": 4,
+        "affinity": "auto",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 15,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          270,
+          271
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-auto-w04-r016",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 16,
+        "workers": 4,
+        "affinity": "auto",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 15,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          270,
+          271
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-auto-w04-r256",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 256,
+        "workers": 4,
+        "affinity": "auto",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 15,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          270,
+          271
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-p-cores-w04-r001",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 1,
+        "workers": 4,
+        "affinity": "p-cores",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 5,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-p-cores-w04-r016",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 16,
+        "workers": 4,
+        "affinity": "p-cores",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 5,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      },
+      {
+        "case_id": "pool-p-cores-w04-r256",
+        "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\output.f32",
+        "receipt_path": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\native-receipt.json",
+        "phase": "pool_matrix",
+        "status": "planned",
+        "rows": 256,
+        "workers": 4,
+        "affinity": "p-cores",
+        "host_participates": true,
+        "effective_compute_participants": 5,
+        "pin_expected": true,
+        "candidate_worker_count": 5,
+        "candidate_cpu_set_ids": [
+          257,
+          266,
+          267,
+          268,
+          269
+        ],
+        "candidate_native_cpu_ids": [
+          1,
+          10,
+          11,
+          12,
+          13
+        ],
+        "planned_host_cpu_set_id": 256,
+        "planned_host_native_cpu_id": 0,
+        "planned_unpinned_overflow": 0,
+        "worker_pin_success_evidence": false,
+        "reason": null,
+        "reference_policy": "frozen_native_output"
+      }
+    ],
+    "payload_read": false,
+    "kernel_execution": false,
+    "affinity_mutation": false,
+    "output_root_created": false,
+    "planned_output_root": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs",
+    "planned_data_root": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity",
+    "cpu_type_labels": "unknown; numeric CPU Set IDs, group/logical indices, and EfficiencyClass only"
+  },
+  "current_topology": {
+    "platform": "windows",
+    "api": {
+      "api": "GetSystemCpuSetInformation",
+      "bytes": 512,
+      "process_mask_source": "GetProcessAffinityMask_primary_group_only",
+      "process_default_cpu_set_source": "GetProcessDefaultCpuSets",
+      "process_default_cpu_set_count": 0,
+      "api_source": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemcpusetinformation",
+      "structure_source": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-system_cpu_set_information",
+      "process_default_sets_source": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessdefaultcpusets"
+    },
+    "logical_processors": [
+      {
+        "cpu_set_id": 256,
+        "group": 0,
+        "logical_processor_index": 0,
+        "core_index": 0,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 1,
+        "flags_byte": 0,
+        "parked": false,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 2,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 0
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 0
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 0
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 0
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 257,
+        "group": 0,
+        "logical_processor_index": 1,
+        "core_index": 1,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 1,
+        "flags_byte": 0,
+        "parked": false,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 2,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 1
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 1
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 1
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 1
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 258,
+        "group": 0,
+        "logical_processor_index": 2,
+        "core_index": 2,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 1,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 2
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 2
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 2
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 2
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 259,
+        "group": 0,
+        "logical_processor_index": 3,
+        "core_index": 3,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 1,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 3
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 3
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 3
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 3
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 260,
+        "group": 0,
+        "logical_processor_index": 4,
+        "core_index": 4,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 1,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 4
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 4
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 4
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 4
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 261,
+        "group": 0,
+        "logical_processor_index": 5,
+        "core_index": 5,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 1,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 5
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 5
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 5
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 5
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 262,
+        "group": 0,
+        "logical_processor_index": 6,
+        "core_index": 6,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 1,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 6
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 6
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 6
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 6
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 263,
+        "group": 0,
+        "logical_processor_index": 7,
+        "core_index": 7,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 1,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 7
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 7
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 7
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 7
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 264,
+        "group": 0,
+        "logical_processor_index": 8,
+        "core_index": 8,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 0,
+        "parked": false,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 1,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 8
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 8
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 8
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 8
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 265,
+        "group": 0,
+        "logical_processor_index": 9,
+        "core_index": 9,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 1,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 9
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 9
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 9
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 9
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 266,
+        "group": 0,
+        "logical_processor_index": 10,
+        "core_index": 10,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 1,
+        "flags_byte": 0,
+        "parked": false,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 2,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 10
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 10
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 10
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 10
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 267,
+        "group": 0,
+        "logical_processor_index": 11,
+        "core_index": 11,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 1,
+        "flags_byte": 0,
+        "parked": false,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 2,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 11
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 11
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 11
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 11
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 268,
+        "group": 0,
+        "logical_processor_index": 12,
+        "core_index": 12,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 1,
+        "flags_byte": 0,
+        "parked": false,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 2,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 12
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 12
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 12
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 12
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 269,
+        "group": 0,
+        "logical_processor_index": 13,
+        "core_index": 13,
+        "last_level_cache_index": 0,
+        "numa_node_index": 0,
+        "efficiency_class": 1,
+        "flags_byte": 0,
+        "parked": false,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 2,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 13
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 13
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 13
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 13
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 270,
+        "group": 0,
+        "logical_processor_index": 14,
+        "core_index": 14,
+        "last_level_cache_index": 14,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 0,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 14
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 14
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 14
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 14
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      },
+      {
+        "cpu_set_id": 271,
+        "group": 0,
+        "logical_processor_index": 15,
+        "core_index": 15,
+        "last_level_cache_index": 14,
+        "numa_node_index": 0,
+        "efficiency_class": 0,
+        "flags_byte": 1,
+        "parked": true,
+        "allocated": false,
+        "allocated_to_target_process": false,
+        "realtime": false,
+        "scheduling_class": 0,
+        "allocation_tag": 0,
+        "core_identity": {
+          "group": 0,
+          "core_index": 15
+        },
+        "logical_identity": {
+          "group": 0,
+          "logical_processor_index": 15
+        },
+        "process_affinity_mask_allows": true,
+        "process_default_cpu_set_allows": true,
+        "allowed_cpuset": true,
+        "allowed_status": "allowed_by_known_masks",
+        "logical_processor": {
+          "group": 0,
+          "logical_processor_index": 15
+        },
+        "processor_group": 0,
+        "physical_core": {
+          "group": 0,
+          "core_index": 15
+        },
+        "numa_node": 0,
+        "core_type": "unknown",
+        "classify_confidence": "unknown",
+        "efficiency_class_source": "SYSTEM_CPU_SET_INFORMATION.CpuSet.EfficiencyClass"
+      }
+    ],
+    "pool_affinity_candidates": {
+      "status": "candidate_only_no_performance_measurement",
+      "classification_basis": "windows EfficiencyClass ordering (higher class first; P/E names unverified)",
+      "classification_confidence": "unknown",
+      "core_type_claims": "unknown; no P/E/LP labels inferred",
+      "candidate_coverage": "all_known_allowed_processors",
+      "implementation_reference": "src/kernels/cpu/pool.cpp topology order; candidates are not measured best settings",
+      "pool-affinity-all": {
+        "host_core_candidate": {
+          "group": 0,
+          "logical_processor_index": 0
+        },
+        "worker_candidates": [
+          {
+            "group": 0,
+            "logical_processor_index": 1
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 10
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 11
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 12
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 13
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 2
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 3
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 4
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 5
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 6
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 7
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 8
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 9
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 14
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 15
+          }
+        ]
+      },
+      "pool-affinity-auto": {
+        "host_core_candidate": {
+          "group": 0,
+          "logical_processor_index": 0
+        },
+        "worker_candidates": [
+          {
+            "group": 0,
+            "logical_processor_index": 1
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 10
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 11
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 12
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 13
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 2
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 3
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 4
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 5
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 6
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 7
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 8
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 9
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 14
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 15
+          }
+        ]
+      },
+      "pool-affinity-p-cores": {
+        "host_core_candidate": {
+          "group": 0,
+          "logical_processor_index": 0
+        },
+        "worker_candidates": [
+          {
+            "group": 0,
+            "logical_processor_index": 1
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 10
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 11
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 12
+          },
+          {
+            "group": 0,
+            "logical_processor_index": 13
+          }
+        ]
+      }
+    },
+    "collected_utc": "2026-10-09T13:12:20.604262+00:00",
+    "python": "3.14.8",
+    "mutation_policy": "read-only; no affinity, priority, power, or process state changed"
+  },
+  "static_identity": {
+    "inputs_manifest": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+    "extraction_receipt": "e4b8083e5f8f39f04affcb99e4a292bdad92ecf132462499561bbaddbd9dac9d",
+    "identity": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+    "build_receipt": "f5b6577743eecab11995149fe0d5ddb09170c4bccefd218d3e7ec2d98710d8b8",
+    "run32_frozen_source": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+    "topology": "dbb2f655d6f790ce6306e258f83611163459963b2257f7b1c00292c18f3c2dd0",
+    "binary_sha256": "b9749260920b26135258692a8205261832078cd19e417476e448da8982c3c889",
+    "binary_stat": {
+      "size_bytes": 2162176,
+      "mtime_ns": 1791551003968771100,
+      "ctime_ns": 1791551003872856500,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1407374883623379
+      },
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48\\hetero_native_expert.exe"
+    }
+  },
+  "source_hashes": {
+    "runner": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+    "native_harness_source": "d7a1666673792be7f618f89f41fedf916ccb8d12a7b1e5d36dc29ef37e8e05ae",
+    "cpu_pool_header": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+    "cpu_pool_source": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+    "windows_affinity_helper": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+    "topology_collector": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66",
+    "resource_sampler": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+    "file_identity_helper": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+    "run32_executed_source": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+    "worker_affinity_test_source": "af5a3edc8b8879f551aefe40de94812e96ac633a388bd58aac1e7630b395e975",
+    "native_cmake": "945fc33641785c099ca5c809c562cb0ae48c970b95788078082ac71eebe5efeb"
+  },
+  "prepared_input_receipt": "E:\\Strata-Hetero-data\\experts\\20261009-35-cpu-worker-affinity\\inputs-preparation.json"
+}

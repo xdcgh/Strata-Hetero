@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "run_id": "20261009-49-cpu-affinity-observations",
+  "repo_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "runner_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\run_cpu_affinity_observations.py",
+  "runner_sha256": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+  "contract_sha256": "116d9c9986751b4217c0b6a956608f1d6c27386d59f4fd7d65ac929ce685332f",
+  "source_hashes_checked": {
+    "runner": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+    "native_harness_source": "d7a1666673792be7f618f89f41fedf916ccb8d12a7b1e5d36dc29ef37e8e05ae",
+    "cpu_pool_header": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+    "cpu_pool_source": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+    "windows_affinity_helper": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+    "topology_collector": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66",
+    "resource_sampler": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+    "file_identity_helper": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+    "run32_executed_source": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+    "worker_affinity_test_source": "af5a3edc8b8879f551aefe40de94812e96ac633a388bd58aac1e7630b395e975",
+    "native_cmake": "945fc33641785c099ca5c809c562cb0ae48c970b95788078082ac71eebe5efeb"
+  },
+  "static_receipts": {
+    "inputs_manifest": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+    "extraction_receipt": "e4b8083e5f8f39f04affcb99e4a292bdad92ecf132462499561bbaddbd9dac9d",
+    "identity": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+    "build_receipt": "f5b6577743eecab11995149fe0d5ddb09170c4bccefd218d3e7ec2d98710d8b8",
+    "run32_frozen_source": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+    "topology": "dbb2f655d6f790ce6306e258f83611163459963b2257f7b1c00292c18f3c2dd0",
+    "binary_sha256": "b9749260920b26135258692a8205261832078cd19e417476e448da8982c3c889",
+    "binary_stat": {
+      "size_bytes": 2162176,
+      "mtime_ns": 1791551003968771100,
+      "ctime_ns": 1791551003872856500,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1407374883623379
+      },
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48\\hetero_native_expert.exe"
+    }
+  },
+  "plan_counts": {
+    "default_reference_gates": 3,
+    "planned_pool_cases": 12,
+    "planned_case_count_including_gates": 15,
+    "strict_pcore_overflow_not_run": 0
+  },
+  "telemetry_fixture_checks": [
+    {
+      "case_id": "default-r001",
+      "valid": true
+    },
+    {
+      "case_id": "default-r016",
+      "valid": true
+    },
+    {
+      "case_id": "default-r256",
+      "valid": true
+    },
+    {
+      "case_id": "pool-none-w04-r001",
+      "valid": true
+    },
+    {
+      "case_id": "pool-all-w04-r001",
+      "valid": true
+    },
+    {
+      "case_id": "pool-auto-w04-r001",
+      "valid": true
+    },
+    {
+      "case_id": "pool-p-cores-w04-r001",
+      "valid": true
+    },
+    {
+      "wrong_mask_rejected": true
+    },
+    {
+      "missing_worker_rejected": true
+    }
+  ],
+  "binary_spawned": false,
+  "payload_read": false,
+  "kernel_or_affinity_execution": false
+}

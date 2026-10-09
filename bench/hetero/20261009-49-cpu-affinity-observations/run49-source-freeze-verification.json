@@ -1,0 +1,1289 @@
+{
+  "schema_version": 1,
+  "status": "source_and_binary_identities_verified",
+  "created_utc": "2026-10-09T13:17:57.485242+00:00",
+  "repo_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd",
+  "ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "run49_runner_sha256": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+  "run49_contract_sha256": "116d9c9986751b4217c0b6a956608f1d6c27386d59f4fd7d65ac929ce685332f",
+  "source_files": {
+    "runner": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\run_cpu_affinity_observations.py",
+      "sha256_expected": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+      "sha256_current": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+      "matches": true
+    },
+    "native_harness_source": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_bench.cpp",
+      "sha256_expected": "d7a1666673792be7f618f89f41fedf916ccb8d12a7b1e5d36dc29ef37e8e05ae",
+      "sha256_current": "d7a1666673792be7f618f89f41fedf916ccb8d12a7b1e5d36dc29ef37e8e05ae",
+      "matches": true
+    },
+    "cpu_pool_header": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "sha256_expected": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+      "sha256_current": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+      "matches": true
+    },
+    "cpu_pool_source": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool.cpp",
+      "sha256_expected": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+      "sha256_current": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+      "matches": true
+    },
+    "windows_affinity_helper": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool_affinity_win.hpp",
+      "sha256_expected": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+      "sha256_current": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+      "matches": true
+    },
+    "topology_collector": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_cpu_topology.py",
+      "sha256_expected": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66",
+      "sha256_current": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66",
+      "matches": true
+    },
+    "resource_sampler": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "sha256_expected": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+      "sha256_current": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+      "matches": true
+    },
+    "file_identity_helper": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_verify_existing.py",
+      "sha256_expected": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+      "sha256_current": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+      "matches": true
+    },
+    "run32_executed_source": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-32-cpu-pool-parity\\receipts\\executed-runner-12case.py",
+      "sha256_expected": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+      "sha256_current": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+      "matches": true
+    },
+    "worker_affinity_test_source": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\worker_affinity_observation_test.cpp",
+      "sha256_expected": "af5a3edc8b8879f551aefe40de94812e96ac633a388bd58aac1e7630b395e975",
+      "sha256_current": "af5a3edc8b8879f551aefe40de94812e96ac633a388bd58aac1e7630b395e975",
+      "matches": true
+    },
+    "native_cmake": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "sha256_expected": "945fc33641785c099ca5c809c562cb0ae48c970b95788078082ac71eebe5efeb",
+      "sha256_current": "945fc33641785c099ca5c809c562cb0ae48c970b95788078082ac71eebe5efeb",
+      "matches": true
+    }
+  },
+  "binaries": [
+    {
+      "label": "new_b974",
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48\\hetero_native_expert.exe",
+      "bytes": 2162176,
+      "sha256": "b9749260920b26135258692a8205261832078cd19e417476e448da8982c3c889",
+      "copied": false,
+      "kernel_executed_during_hash": false
+    },
+    {
+      "label": "old_a3d",
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+      "bytes": 2158592,
+      "sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+      "copied": false,
+      "kernel_executed_during_hash": false
+    }
+  ],
+  "build_receipt_sha256": "f5b6577743eecab11995149fe0d5ddb09170c4bccefd218d3e7ec2d98710d8b8",
+  "payload_policy": "no F32 payload copied or rehashed in this closeout; excluded payload identity remains the already recorded native receipts/case results",
+  "excluded_f32_files": [
+    {
+      "relative_source": "default-r001/output.f32",
+      "bytes": 10240,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "default-r016/output.f32",
+      "bytes": 163840,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "default-r256/output.f32",
+      "bytes": 2621440,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-all-w04-r001/output.f32",
+      "bytes": 10240,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-all-w04-r016/output.f32",
+      "bytes": 163840,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-all-w04-r256/output.f32",
+      "bytes": 2621440,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-auto-w04-r001/output.f32",
+      "bytes": 10240,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-auto-w04-r016/output.f32",
+      "bytes": 163840,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-auto-w04-r256/output.f32",
+      "bytes": 2621440,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-none-w04-r001/output.f32",
+      "bytes": 10240,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-none-w04-r016/output.f32",
+      "bytes": 163840,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-none-w04-r256/output.f32",
+      "bytes": 2621440,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-p-cores-w04-r001/output.f32",
+      "bytes": 10240,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-p-cores-w04-r016/output.f32",
+      "bytes": 163840,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    },
+    {
+      "relative_source": "pool-p-cores-w04-r256/output.f32",
+      "bytes": 2621440,
+      "copy_status": "excluded_float_payload",
+      "sha256_source": "not_recomputed; see native-receipt/case-result bound by output manifest"
+    }
+  ],
+  "copied_artifacts": [
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r001\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r001/attempt.json",
+      "bytes": 2118,
+      "sha256": "3e0c5deb5df03d4ca2e3e9535aee12b82ddc6fab4b774136916b3b85a08f8fb8",
+      "readback_sha256": "3e0c5deb5df03d4ca2e3e9535aee12b82ddc6fab4b774136916b3b85a08f8fb8",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r001\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r001/case-result.json",
+      "bytes": 4372,
+      "sha256": "f649fd15e04c70c9ea8b85d3595a4b431ef0ac93c51dc6c7318d31bdd802fa35",
+      "readback_sha256": "f649fd15e04c70c9ea8b85d3595a4b431ef0ac93c51dc6c7318d31bdd802fa35",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r001\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r001/native-receipt.json",
+      "bytes": 2605,
+      "sha256": "83fa004ec0248892ce745468eaa424ca613c303bae051456b4be20cc9d59099c",
+      "readback_sha256": "83fa004ec0248892ce745468eaa424ca613c303bae051456b4be20cc9d59099c",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r001\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r001/process-start.json",
+      "bytes": 1999,
+      "sha256": "0da2a26d9ec831c5cce5957c1a28d3299e58622bbd27e33696369d829f34cbc2",
+      "readback_sha256": "0da2a26d9ec831c5cce5957c1a28d3299e58622bbd27e33696369d829f34cbc2",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r001\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r001/process.json",
+      "bytes": 2034,
+      "sha256": "2ee705c8f71822095684fac9e08785b23fa3b5ab32b82e4666a8d3f98f0c6926",
+      "readback_sha256": "2ee705c8f71822095684fac9e08785b23fa3b5ab32b82e4666a8d3f98f0c6926",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r001\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r001/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r001\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r001\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r001/stdout.log",
+      "bytes": 266,
+      "sha256": "c4c73c41881492674b2d887360a08505c8cd1bb2b03415f91bc5964050ecda32",
+      "readback_sha256": "c4c73c41881492674b2d887360a08505c8cd1bb2b03415f91bc5964050ecda32",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r016\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r016/attempt.json",
+      "bytes": 2120,
+      "sha256": "ca344d647771877208a7020389465fc4c8357b23a21429bba16889de941bb9e6",
+      "readback_sha256": "ca344d647771877208a7020389465fc4c8357b23a21429bba16889de941bb9e6",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r016\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r016/case-result.json",
+      "bytes": 4377,
+      "sha256": "11f9d51772bd6c557eb4c1e79623e1af19aa05b5816716633c50a52e1aeeef9e",
+      "readback_sha256": "11f9d51772bd6c557eb4c1e79623e1af19aa05b5816716633c50a52e1aeeef9e",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r016\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r016/native-receipt.json",
+      "bytes": 2615,
+      "sha256": "2eeebff0119215b56402a6f96915a9e2c93a944535b382062400218329fa94f2",
+      "readback_sha256": "2eeebff0119215b56402a6f96915a9e2c93a944535b382062400218329fa94f2",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r016\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r016/process-start.json",
+      "bytes": 2001,
+      "sha256": "a102b8db3304c8be6baa420ec15a553324ad6ee592d580dad1d75cfc8839e263",
+      "readback_sha256": "a102b8db3304c8be6baa420ec15a553324ad6ee592d580dad1d75cfc8839e263",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r016\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r016/process.json",
+      "bytes": 2036,
+      "sha256": "8abf1d056ea624e19993e9f32630f2e9a129b714c007208b581389e05cbfbd82",
+      "readback_sha256": "8abf1d056ea624e19993e9f32630f2e9a129b714c007208b581389e05cbfbd82",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r016\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r016/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r016\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r016\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r016/stdout.log",
+      "bytes": 266,
+      "sha256": "5fd7fe17b758fb0fd6a4e787a24021e4b0601a629a19d40e0d0c95e10f31c842",
+      "readback_sha256": "5fd7fe17b758fb0fd6a4e787a24021e4b0601a629a19d40e0d0c95e10f31c842",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r256\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r256/attempt.json",
+      "bytes": 2122,
+      "sha256": "ce5dffff963c841f23f8e977d4ca6402f508988e7968a44368ac6f03c7c0a6f8",
+      "readback_sha256": "ce5dffff963c841f23f8e977d4ca6402f508988e7968a44368ac6f03c7c0a6f8",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r256\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r256/case-result.json",
+      "bytes": 4383,
+      "sha256": "7c254c9bef2ab751c7831a7f8292db9e4b965d95a0b4ee0b805956be8d40febb",
+      "readback_sha256": "7c254c9bef2ab751c7831a7f8292db9e4b965d95a0b4ee0b805956be8d40febb",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r256\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r256/native-receipt.json",
+      "bytes": 2625,
+      "sha256": "a88647acaf98ba47cc478ef0d14ea249c347631d4fc770eda48e69d4f52a3bec",
+      "readback_sha256": "a88647acaf98ba47cc478ef0d14ea249c347631d4fc770eda48e69d4f52a3bec",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r256\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r256/process-start.json",
+      "bytes": 2004,
+      "sha256": "ea36f635cebccacc6355282691d514c46df4fa925ba425fd600f2ba7d1920669",
+      "readback_sha256": "ea36f635cebccacc6355282691d514c46df4fa925ba425fd600f2ba7d1920669",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r256\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r256/process.json",
+      "bytes": 2039,
+      "sha256": "527fb65a319632c74ca0fdd0b800e900d744097090ee66c95bbe5ba55f45a04c",
+      "readback_sha256": "527fb65a319632c74ca0fdd0b800e900d744097090ee66c95bbe5ba55f45a04c",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r256\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r256/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\default-r256\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\default-r256\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/default-r256/stdout.log",
+      "bytes": 266,
+      "sha256": "b8deeda83afcc63d97bdda871bac9183e979d28fd2cf0e2b3e716f67d8da646d",
+      "readback_sha256": "b8deeda83afcc63d97bdda871bac9183e979d28fd2cf0e2b3e716f67d8da646d",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\execution-plan.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\execution-plan.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/execution-plan.json",
+      "bytes": 44265,
+      "sha256": "91fdc4bbebf6118ec10f4fbaaf76fc13bd1df46926e2d5894fb1f5a455360c39",
+      "readback_sha256": "91fdc4bbebf6118ec10f4fbaaf76fc13bd1df46926e2d5894fb1f5a455360c39",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r001\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r001/attempt.json",
+      "bytes": 2781,
+      "sha256": "a32ea32c1c249077c1372f3710b3b79658d3b609ca7b76275243675aaf270d47",
+      "readback_sha256": "a32ea32c1c249077c1372f3710b3b79658d3b609ca7b76275243675aaf270d47",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r001\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r001/case-result.json",
+      "bytes": 7192,
+      "sha256": "e65efa2072d8b439e61758481af6f5eeb39136f4c8f155ef484c619cf9b8d110",
+      "readback_sha256": "e65efa2072d8b439e61758481af6f5eeb39136f4c8f155ef484c619cf9b8d110",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r001\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r001/native-receipt.json",
+      "bytes": 4466,
+      "sha256": "56ba0ff2b2abc6113424f0274ee038920b8db7ad5bc196364987326986828757",
+      "readback_sha256": "56ba0ff2b2abc6113424f0274ee038920b8db7ad5bc196364987326986828757",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r001\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r001/process-start.json",
+      "bytes": 2158,
+      "sha256": "b4b5904094dcdd2d193f28a488ec6e8aaccd253a7119b33084b03f97399af058",
+      "readback_sha256": "b4b5904094dcdd2d193f28a488ec6e8aaccd253a7119b33084b03f97399af058",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r001\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r001/process.json",
+      "bytes": 2193,
+      "sha256": "5401d2112c2ca670a1d2d632a4176bf7387fd7b30e39b9fcd71db273eacb9cb2",
+      "readback_sha256": "5401d2112c2ca670a1d2d632a4176bf7387fd7b30e39b9fcd71db273eacb9cb2",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r001\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r001/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r001\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r001\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r001/stdout.log",
+      "bytes": 276,
+      "sha256": "173164d85b6a16db045662b6267487753c985460ddae2f203ad22c84fdf2c254",
+      "readback_sha256": "173164d85b6a16db045662b6267487753c985460ddae2f203ad22c84fdf2c254",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r016\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r016/attempt.json",
+      "bytes": 2783,
+      "sha256": "54ad83f301570f788b6d39e34bf78a5f9ee66c358b913febe572ac923ba5cc88",
+      "readback_sha256": "54ad83f301570f788b6d39e34bf78a5f9ee66c358b913febe572ac923ba5cc88",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r016\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r016/case-result.json",
+      "bytes": 7197,
+      "sha256": "119004fa12de0a97ad3088b8871a7a27de68bda8140250981054d91a5979e146",
+      "readback_sha256": "119004fa12de0a97ad3088b8871a7a27de68bda8140250981054d91a5979e146",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r016\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r016/native-receipt.json",
+      "bytes": 4508,
+      "sha256": "4c15cacf8c12a5da53e83e778772d07b666ba33677ee08062fdf57013afa2780",
+      "readback_sha256": "4c15cacf8c12a5da53e83e778772d07b666ba33677ee08062fdf57013afa2780",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r016\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r016/process-start.json",
+      "bytes": 2160,
+      "sha256": "2f2d9e23a5b03179995486108da2f20dc14798c361f80de6782a8f145790d624",
+      "readback_sha256": "2f2d9e23a5b03179995486108da2f20dc14798c361f80de6782a8f145790d624",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r016\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r016/process.json",
+      "bytes": 2195,
+      "sha256": "4f7430541c80b97ca3c8f935d144bdc800b71eb79f36fbeef54d38843718041f",
+      "readback_sha256": "4f7430541c80b97ca3c8f935d144bdc800b71eb79f36fbeef54d38843718041f",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r016\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r016/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r016\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r016\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r016/stdout.log",
+      "bytes": 276,
+      "sha256": "30a4b18ea54c8c8fb425aa56db8cccae987316916600d5b7f16665c41f55aaab",
+      "readback_sha256": "30a4b18ea54c8c8fb425aa56db8cccae987316916600d5b7f16665c41f55aaab",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r256\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r256/attempt.json",
+      "bytes": 2785,
+      "sha256": "0e3308c9ad9d86245f83198b8533729c5dbaf87095f51b6860dc2ffa8f47384b",
+      "readback_sha256": "0e3308c9ad9d86245f83198b8533729c5dbaf87095f51b6860dc2ffa8f47384b",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r256\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r256/case-result.json",
+      "bytes": 7201,
+      "sha256": "d98543b54c2ca07083f4f554d572275ef13e1314feeabdb48870cb86b8e7a4bd",
+      "readback_sha256": "d98543b54c2ca07083f4f554d572275ef13e1314feeabdb48870cb86b8e7a4bd",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r256\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r256/native-receipt.json",
+      "bytes": 4551,
+      "sha256": "acbf86994c3593f34efea53816694dd0ccea11dd36dc77c72b0a3dc6c8d6801b",
+      "readback_sha256": "acbf86994c3593f34efea53816694dd0ccea11dd36dc77c72b0a3dc6c8d6801b",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r256\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r256/process-start.json",
+      "bytes": 2161,
+      "sha256": "3a538b34b79a3f494e8f36db12c1a4290384ab69ddf0ee778220d987f10133a0",
+      "readback_sha256": "3a538b34b79a3f494e8f36db12c1a4290384ab69ddf0ee778220d987f10133a0",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r256\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r256/process.json",
+      "bytes": 2196,
+      "sha256": "a464418062b91a8b0753480219be9898069def3dad176cf392b71b076ee0363d",
+      "readback_sha256": "a464418062b91a8b0753480219be9898069def3dad176cf392b71b076ee0363d",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r256\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r256/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-all-w04-r256\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-all-w04-r256\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-all-w04-r256/stdout.log",
+      "bytes": 276,
+      "sha256": "1e145ef48c61364ff9c4d94b122873c180d8021b4ec41fccc1dbe773aef0d384",
+      "readback_sha256": "1e145ef48c61364ff9c4d94b122873c180d8021b4ec41fccc1dbe773aef0d384",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r001\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r001/attempt.json",
+      "bytes": 2788,
+      "sha256": "da9c110133e3e029eb77a0c80388645e971902af214577312c5027f67ecec0e1",
+      "readback_sha256": "da9c110133e3e029eb77a0c80388645e971902af214577312c5027f67ecec0e1",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r001\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r001/case-result.json",
+      "bytes": 7207,
+      "sha256": "29ed51638d2b0f7a3e296a151eed1ea7784ea714b4ec28aa6e78fa2c2b614cf3",
+      "readback_sha256": "29ed51638d2b0f7a3e296a151eed1ea7784ea714b4ec28aa6e78fa2c2b614cf3",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r001\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r001/native-receipt.json",
+      "bytes": 4470,
+      "sha256": "d229fb80a3b68c0e098766b7bd364437e4a8a1e947a5bbaa46e24b3acfc27677",
+      "readback_sha256": "d229fb80a3b68c0e098766b7bd364437e4a8a1e947a5bbaa46e24b3acfc27677",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r001\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r001/process-start.json",
+      "bytes": 2163,
+      "sha256": "8e676993c938ed5df84c4f85a32d3334dac5c4b16beefc321a2653770aa2924b",
+      "readback_sha256": "8e676993c938ed5df84c4f85a32d3334dac5c4b16beefc321a2653770aa2924b",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r001\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r001/process.json",
+      "bytes": 2198,
+      "sha256": "4b15cf1e09bde069a927bd788d1d57c3bfd0df8696d255c777484ddd3ec91339",
+      "readback_sha256": "4b15cf1e09bde069a927bd788d1d57c3bfd0df8696d255c777484ddd3ec91339",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r001\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r001/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r001\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r001\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r001/stdout.log",
+      "bytes": 278,
+      "sha256": "4da08b1c86e1b629144b36c63ccf2a18159d45c57af8e5d8eedb959c32e8ed16",
+      "readback_sha256": "4da08b1c86e1b629144b36c63ccf2a18159d45c57af8e5d8eedb959c32e8ed16",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r016\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r016/attempt.json",
+      "bytes": 2790,
+      "sha256": "920e39bddaeb4394dc272bca0bab9a76a76a9c0a2447eae007ce82552bd682b0",
+      "readback_sha256": "920e39bddaeb4394dc272bca0bab9a76a76a9c0a2447eae007ce82552bd682b0",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r016\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r016/case-result.json",
+      "bytes": 7213,
+      "sha256": "c50352486f5432ca7618bb74a2db5ac967e147da0ea7f3eec28d0de47f5276e3",
+      "readback_sha256": "c50352486f5432ca7618bb74a2db5ac967e147da0ea7f3eec28d0de47f5276e3",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r016\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r016/native-receipt.json",
+      "bytes": 4512,
+      "sha256": "f143d29fea164a39f17c991f144d89fa41661761777f35892ee7707b1408ace3",
+      "readback_sha256": "f143d29fea164a39f17c991f144d89fa41661761777f35892ee7707b1408ace3",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r016\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r016/process-start.json",
+      "bytes": 2166,
+      "sha256": "e4e4d9e41e11697ecc28557ad489da454869c4220af758e60361e1ff42de8d4b",
+      "readback_sha256": "e4e4d9e41e11697ecc28557ad489da454869c4220af758e60361e1ff42de8d4b",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r016\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r016/process.json",
+      "bytes": 2201,
+      "sha256": "b609698d81bbbe89bea1c37af78809f8b5a75ae79c98f148f521b1d039846faf",
+      "readback_sha256": "b609698d81bbbe89bea1c37af78809f8b5a75ae79c98f148f521b1d039846faf",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r016\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r016/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r016\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r016\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r016/stdout.log",
+      "bytes": 278,
+      "sha256": "383f1785661e0d7e02280b8edb022c548b6c8319ebb7f52533cc25a6da9d6d62",
+      "readback_sha256": "383f1785661e0d7e02280b8edb022c548b6c8319ebb7f52533cc25a6da9d6d62",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r256\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r256/attempt.json",
+      "bytes": 2792,
+      "sha256": "240dcbd093d83fcaa251ed0ece625c73da69b6583598e398c0a39d6f4977adf4",
+      "readback_sha256": "240dcbd093d83fcaa251ed0ece625c73da69b6583598e398c0a39d6f4977adf4",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r256\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r256/case-result.json",
+      "bytes": 7217,
+      "sha256": "bc6509669bba323d12ce880083c7324d149536094b47d0e448e53516056d1b37",
+      "readback_sha256": "bc6509669bba323d12ce880083c7324d149536094b47d0e448e53516056d1b37",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r256\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r256/native-receipt.json",
+      "bytes": 4555,
+      "sha256": "c2cd44eb448deecd89d7e157a482d10c54cdb7417f8603d4ef34d1ff12a14ff7",
+      "readback_sha256": "c2cd44eb448deecd89d7e157a482d10c54cdb7417f8603d4ef34d1ff12a14ff7",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r256\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r256/process-start.json",
+      "bytes": 2167,
+      "sha256": "ae304fce051de3cfdaec184b032f77fd71ecc8711065998bfde3b887177847e3",
+      "readback_sha256": "ae304fce051de3cfdaec184b032f77fd71ecc8711065998bfde3b887177847e3",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r256\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r256/process.json",
+      "bytes": 2202,
+      "sha256": "2ff59aef59e3d511d66666bfbd8805eb191b0777dc29210d41aeeb20689c204c",
+      "readback_sha256": "2ff59aef59e3d511d66666bfbd8805eb191b0777dc29210d41aeeb20689c204c",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r256\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r256/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-auto-w04-r256\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-auto-w04-r256\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-auto-w04-r256/stdout.log",
+      "bytes": 278,
+      "sha256": "c541f2f41d538ebcd43673e94b080188b7d23b321029abd77bbc34ab32010c39",
+      "readback_sha256": "c541f2f41d538ebcd43673e94b080188b7d23b321029abd77bbc34ab32010c39",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r001\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r001/attempt.json",
+      "bytes": 2481,
+      "sha256": "dc030c361debed3c5bf126733ab03f5e83910e2d260a611d402a305a739b4150",
+      "readback_sha256": "dc030c361debed3c5bf126733ab03f5e83910e2d260a611d402a305a739b4150",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r001\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r001/case-result.json",
+      "bytes": 6878,
+      "sha256": "92e27543da2ad37b480b496a09fc178d90c6f2d42fed78b327ce882d45ebcaff",
+      "readback_sha256": "92e27543da2ad37b480b496a09fc178d90c6f2d42fed78b327ce882d45ebcaff",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r001\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r001/native-receipt.json",
+      "bytes": 4478,
+      "sha256": "cd1913d0268e25f130f3a3566b009c605b8980c7b23458f767f1786466ee35a1",
+      "readback_sha256": "cd1913d0268e25f130f3a3566b009c605b8980c7b23458f767f1786466ee35a1",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r001\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r001/process-start.json",
+      "bytes": 2163,
+      "sha256": "124d917b304769ca8180400ac6c274575ab6446118ffe5d26070b4595440a1b7",
+      "readback_sha256": "124d917b304769ca8180400ac6c274575ab6446118ffe5d26070b4595440a1b7",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r001\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r001/process.json",
+      "bytes": 2198,
+      "sha256": "b1570e6efb070d1b8d12e6bc1bf24ad73875ce3d9235ac6927b946a777c65576",
+      "readback_sha256": "b1570e6efb070d1b8d12e6bc1bf24ad73875ce3d9235ac6927b946a777c65576",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r001\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r001/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r001\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r001\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r001/stdout.log",
+      "bytes": 278,
+      "sha256": "55825a50e10a518b8f1c8f7123d01a016e8f5c4c6a87a9c67dcb6106158e0600",
+      "readback_sha256": "55825a50e10a518b8f1c8f7123d01a016e8f5c4c6a87a9c67dcb6106158e0600",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r016\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r016/attempt.json",
+      "bytes": 2483,
+      "sha256": "0f20ee94147be91509cc4e80bb0c854405ee72dc1e28f2dde7715239affe815e",
+      "readback_sha256": "0f20ee94147be91509cc4e80bb0c854405ee72dc1e28f2dde7715239affe815e",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r016\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r016/case-result.json",
+      "bytes": 6883,
+      "sha256": "72eb569b4b8244375c0eb1c534fd8a4636eda9e4d18edf1f3265b56738eba2cc",
+      "readback_sha256": "72eb569b4b8244375c0eb1c534fd8a4636eda9e4d18edf1f3265b56738eba2cc",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r016\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r016/native-receipt.json",
+      "bytes": 4519,
+      "sha256": "0924b664c90f9bc40d01e01492d3e9a2653bdf7b34d9c7040c5b897bbe68de58",
+      "readback_sha256": "0924b664c90f9bc40d01e01492d3e9a2653bdf7b34d9c7040c5b897bbe68de58",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r016\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r016/process-start.json",
+      "bytes": 2165,
+      "sha256": "3ce1c98a18da41766da7cebcec7a9592970e6180f1883a9377174913c273696a",
+      "readback_sha256": "3ce1c98a18da41766da7cebcec7a9592970e6180f1883a9377174913c273696a",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r016\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r016/process.json",
+      "bytes": 2200,
+      "sha256": "b3ddcc374e5f5fca1ce408f42618bb1b1173c78dff7f471a0da550441dc68b4a",
+      "readback_sha256": "b3ddcc374e5f5fca1ce408f42618bb1b1173c78dff7f471a0da550441dc68b4a",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r016\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r016/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r016\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r016\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r016/stdout.log",
+      "bytes": 278,
+      "sha256": "4fc5ea0ad9b3a345658275832e500b2b6a9073afbcadff13fd247ba061401289",
+      "readback_sha256": "4fc5ea0ad9b3a345658275832e500b2b6a9073afbcadff13fd247ba061401289",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r256\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r256/attempt.json",
+      "bytes": 2485,
+      "sha256": "fb984968f06230f203b51a4767fe4b45b0a23b5f02478d35c967aca710652367",
+      "readback_sha256": "fb984968f06230f203b51a4767fe4b45b0a23b5f02478d35c967aca710652367",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r256\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r256/case-result.json",
+      "bytes": 6886,
+      "sha256": "7db90bfbc394e3981247bc981adbf4e17bbfb9e52f09cf61f8464f68b93c6082",
+      "readback_sha256": "7db90bfbc394e3981247bc981adbf4e17bbfb9e52f09cf61f8464f68b93c6082",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r256\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r256/native-receipt.json",
+      "bytes": 4561,
+      "sha256": "d9a425c20abec479ce70b92740e47a4fd414fc34b02cc84fa76083a7e4d20c2e",
+      "readback_sha256": "d9a425c20abec479ce70b92740e47a4fd414fc34b02cc84fa76083a7e4d20c2e",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r256\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r256/process-start.json",
+      "bytes": 2166,
+      "sha256": "0df91476ca9e2bcfc92ac722e08cb320b14aef733eb05edb168b3b92b8ac9ed9",
+      "readback_sha256": "0df91476ca9e2bcfc92ac722e08cb320b14aef733eb05edb168b3b92b8ac9ed9",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r256\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r256/process.json",
+      "bytes": 2201,
+      "sha256": "37c78f6806710feca9de4b1207b014076b0fe46d3cf3a1b3970c0ffa1832a7fb",
+      "readback_sha256": "37c78f6806710feca9de4b1207b014076b0fe46d3cf3a1b3970c0ffa1832a7fb",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r256\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r256/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-none-w04-r256\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-none-w04-r256\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-none-w04-r256/stdout.log",
+      "bytes": 278,
+      "sha256": "3cbb20a5a00c586f5bbe3704487860c940bab38d3894f9944fc29eda4163a0eb",
+      "readback_sha256": "3cbb20a5a00c586f5bbe3704487860c940bab38d3894f9944fc29eda4163a0eb",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r001\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r001/attempt.json",
+      "bytes": 2606,
+      "sha256": "2709221b26bfbe0b897041efc5ffed6c5ee57cbd6385de7e314a43a046233c48",
+      "readback_sha256": "2709221b26bfbe0b897041efc5ffed6c5ee57cbd6385de7e314a43a046233c48",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r001\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r001/case-result.json",
+      "bytes": 6961,
+      "sha256": "49407b9c119e6cd4c8c7a793edc886a900f33fee385ef853f00f7531551bee54",
+      "readback_sha256": "49407b9c119e6cd4c8c7a793edc886a900f33fee385ef853f00f7531551bee54",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r001\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r001/native-receipt.json",
+      "bytes": 4446,
+      "sha256": "9cde1949ff1edce92478a1653d83a6f6f7928869fdff8fbd5c6a2dc76327e355",
+      "readback_sha256": "9cde1949ff1edce92478a1653d83a6f6f7928869fdff8fbd5c6a2dc76327e355",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r001\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r001/process-start.json",
+      "bytes": 2182,
+      "sha256": "e7adca643465881cf964a9c662f1fb53eef106ac54980ee21f89da2fa089250f",
+      "readback_sha256": "e7adca643465881cf964a9c662f1fb53eef106ac54980ee21f89da2fa089250f",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r001\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r001/process.json",
+      "bytes": 2217,
+      "sha256": "e53061caad6e916859b14bdcc36ed46f21e96e6ba57b74af69d31149b2aa0bee",
+      "readback_sha256": "e53061caad6e916859b14bdcc36ed46f21e96e6ba57b74af69d31149b2aa0bee",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r001\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r001/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r001\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r001\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r001/stdout.log",
+      "bytes": 284,
+      "sha256": "213ebb7a29d6e532ede018d400244623ef7af3f2d1e168358c531cf059c62a17",
+      "readback_sha256": "213ebb7a29d6e532ede018d400244623ef7af3f2d1e168358c531cf059c62a17",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r016\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r016/attempt.json",
+      "bytes": 2608,
+      "sha256": "5cfe880af066461d8361c10fae093c99482d5fdfea04d0899cadf64067cf6ee7",
+      "readback_sha256": "5cfe880af066461d8361c10fae093c99482d5fdfea04d0899cadf64067cf6ee7",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r016\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r016/case-result.json",
+      "bytes": 6966,
+      "sha256": "82765e4e8f2c19cfc4fa7a1a8be1ef72cebfbeeb4ef917673641448904aa4657",
+      "readback_sha256": "82765e4e8f2c19cfc4fa7a1a8be1ef72cebfbeeb4ef917673641448904aa4657",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r016\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r016/native-receipt.json",
+      "bytes": 4488,
+      "sha256": "1a7ce44c571a4dd343d8d430e26752f2a64365f0bf25fcdd7fda6849fc37bee9",
+      "readback_sha256": "1a7ce44c571a4dd343d8d430e26752f2a64365f0bf25fcdd7fda6849fc37bee9",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r016\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r016/process-start.json",
+      "bytes": 2184,
+      "sha256": "c54f6eeba211e2f76cfaf9e721d9bfe1d252ea9550e58e98c8643229a6837345",
+      "readback_sha256": "c54f6eeba211e2f76cfaf9e721d9bfe1d252ea9550e58e98c8643229a6837345",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r016\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r016/process.json",
+      "bytes": 2219,
+      "sha256": "2fa0bb938a21a31699250c2ee5c38790e265ae7ab01cc7712f23607c6caed2df",
+      "readback_sha256": "2fa0bb938a21a31699250c2ee5c38790e265ae7ab01cc7712f23607c6caed2df",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r016\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r016/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r016\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r016\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r016/stdout.log",
+      "bytes": 284,
+      "sha256": "93bda799d1f1295471e2f615a02d49944d0e404da03d90b75a1188c370f28a77",
+      "readback_sha256": "93bda799d1f1295471e2f615a02d49944d0e404da03d90b75a1188c370f28a77",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\attempt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r256\\attempt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r256/attempt.json",
+      "bytes": 2610,
+      "sha256": "c237e070b1df155c0aea59cd7055d07cc2d042b301cf5b7f9a5fe69461a7f0f4",
+      "readback_sha256": "c237e070b1df155c0aea59cd7055d07cc2d042b301cf5b7f9a5fe69461a7f0f4",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\case-result.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r256\\case-result.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r256/case-result.json",
+      "bytes": 6971,
+      "sha256": "f4d95bb6e803fb24283e7793c333e705d72fe5f79d072867c686c04789488ee8",
+      "readback_sha256": "f4d95bb6e803fb24283e7793c333e705d72fe5f79d072867c686c04789488ee8",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\native-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r256\\native-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r256/native-receipt.json",
+      "bytes": 4531,
+      "sha256": "5e1e8433f81f4436abf4340ebc8e6495cbce323b35065c8a3c1a756077be52d4",
+      "readback_sha256": "5e1e8433f81f4436abf4340ebc8e6495cbce323b35065c8a3c1a756077be52d4",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\process-start.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r256\\process-start.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r256/process-start.json",
+      "bytes": 2186,
+      "sha256": "784c8f0302d4594938dfb80a5e85bab592edb1a35acac8991e64ad139a87660b",
+      "readback_sha256": "784c8f0302d4594938dfb80a5e85bab592edb1a35acac8991e64ad139a87660b",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\process.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r256\\process.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r256/process.json",
+      "bytes": 2221,
+      "sha256": "a27f5f49b7b98a470e0d8ec45dd4af9df9d27d475af90192a9717f2c1faa1bf3",
+      "readback_sha256": "a27f5f49b7b98a470e0d8ec45dd4af9df9d27d475af90192a9717f2c1faa1bf3",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\stderr.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r256\\stderr.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r256/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "readback_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\pool-p-cores-w04-r256\\stdout.log",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\pool-p-cores-w04-r256\\stdout.log",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/pool-p-cores-w04-r256/stdout.log",
+      "bytes": 284,
+      "sha256": "ef19cd8976d156edba7b9f6adbd6f3dca2144de5194f267e7712be62691fcf79",
+      "readback_sha256": "ef19cd8976d156edba7b9f6adbd6f3dca2144de5194f267e7712be62691fcf79",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\resource-samples.jsonl",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\resource-samples.jsonl",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/resource-samples.jsonl",
+      "bytes": 10763,
+      "sha256": "cfb143c31ff7c8e79caca0a5d7d66dd974e5bd2ce168fbeb9cba975c55d5c110",
+      "readback_sha256": "cfb143c31ff7c8e79caca0a5d7d66dd974e5bd2ce168fbeb9cba975c55d5c110",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "E:\\Strata-Hetero-data\\experts\\20261009-49-cpu-affinity-observations\\outputs\\run-summary.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\external-output-small\\run-summary.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/external-output-small/run-summary.json",
+      "bytes": 111541,
+      "sha256": "270ce8c961e09070f04bc0ccadb823ed31eae6ab35936951a500304f3c82890e",
+      "readback_sha256": "270ce8c961e09070f04bc0ccadb823ed31eae6ab35936951a500304f3c82890e",
+      "scope": "E run49 JSON/log/resource/plan receipt; raw F32 excluded"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\run_cpu_affinity_observations.py",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\runner--run_cpu_affinity_observations.py",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/runner--run_cpu_affinity_observations.py",
+      "bytes": 43213,
+      "sha256": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+      "readback_sha256": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_bench.cpp",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\native_harness_source--native_expert_bench.cpp",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/native_harness_source--native_expert_bench.cpp",
+      "bytes": 45295,
+      "sha256": "d7a1666673792be7f618f89f41fedf916ccb8d12a7b1e5d36dc29ef37e8e05ae",
+      "readback_sha256": "d7a1666673792be7f618f89f41fedf916ccb8d12a7b1e5d36dc29ef37e8e05ae",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\cpu_pool_header--pool.hpp",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/cpu_pool_header--pool.hpp",
+      "bytes": 19269,
+      "sha256": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+      "readback_sha256": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool.cpp",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\cpu_pool_source--pool.cpp",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/cpu_pool_source--pool.cpp",
+      "bytes": 41611,
+      "sha256": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+      "readback_sha256": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool_affinity_win.hpp",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\windows_affinity_helper--pool_affinity_win.hpp",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/windows_affinity_helper--pool_affinity_win.hpp",
+      "bytes": 2860,
+      "sha256": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+      "readback_sha256": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_cpu_topology.py",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\topology_collector--hetero_cpu_topology.py",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/topology_collector--hetero_cpu_topology.py",
+      "bytes": 20672,
+      "sha256": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66",
+      "readback_sha256": "b7e1e38a68d578ab6b88ef3305d5c4912abbe6a3123afbdf25fcb36f05f72d66",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\resource_sampler--hetero_resources.py",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/resource_sampler--hetero_resources.py",
+      "bytes": 26316,
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+      "readback_sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_verify_existing.py",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\file_identity_helper--hetero_verify_existing.py",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/file_identity_helper--hetero_verify_existing.py",
+      "bytes": 14788,
+      "sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+      "readback_sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-32-cpu-pool-parity\\receipts\\executed-runner-12case.py",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\run32_executed_source--executed-runner-12case.py",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/run32_executed_source--executed-runner-12case.py",
+      "bytes": 17668,
+      "sha256": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+      "readback_sha256": "d3cff4f2bcba5b2cab1afc14ff860523274b8ce9578f83991a08eab125ed29f8",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\worker_affinity_observation_test.cpp",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\worker_affinity_test_source--worker_affinity_observation_test.cpp",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/worker_affinity_test_source--worker_affinity_observation_test.cpp",
+      "bytes": 1931,
+      "sha256": "af5a3edc8b8879f551aefe40de94812e96ac633a388bd58aac1e7630b395e975",
+      "readback_sha256": "af5a3edc8b8879f551aefe40de94812e96ac633a388bd58aac1e7630b395e975",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\sources\\native_cmake--CMakeLists.txt",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/sources/native_cmake--CMakeLists.txt",
+      "bytes": 4652,
+      "sha256": "945fc33641785c099ca5c809c562cb0ae48c970b95788078082ac71eebe5efeb",
+      "readback_sha256": "945fc33641785c099ca5c809c562cb0ae48c970b95788078082ac71eebe5efeb",
+      "scope": "source freeze copy verified against run49 contract"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\run_cpu_affinity_observations.py",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\executed-runner.py",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/executed-runner.py",
+      "bytes": 43213,
+      "sha256": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+      "readback_sha256": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+      "scope": "executed runner exact bytes"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\run49-contract.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\executed-contract.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/executed-contract.json",
+      "bytes": 18771,
+      "sha256": "116d9c9986751b4217c0b6a956608f1d6c27386d59f4fd7d65ac929ce685332f",
+      "readback_sha256": "116d9c9986751b4217c0b6a956608f1d6c27386d59f4fd7d65ac929ce685332f",
+      "scope": "executed run49 contract exact bytes"
+    },
+    {
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-retry-05\\build-receipt.json",
+      "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\source-freeze\\build-receipt.json",
+      "relative_destination": "bench/hetero/20261009-49-cpu-affinity-observations/source-freeze/build-receipt.json",
+      "bytes": 87763,
+      "sha256": "f5b6577743eecab11995149fe0d5ddb09170c4bccefd218d3e7ec2d98710d8b8",
+      "readback_sha256": "f5b6577743eecab11995149fe0d5ddb09170c4bccefd218d3e7ec2d98710d8b8",
+      "scope": "run48 binary/source/CTest provenance"
+    }
+  ]
+}

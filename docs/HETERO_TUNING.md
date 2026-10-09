@@ -8,6 +8,10 @@ The native CPU pool affinity experiment `20261009-35-cpu-worker-affinity` comple
 
 The first input preparation failed before writing because a disk-floor key was read at the wrong contract level. During fixture validation, a test using the live authorized contract then created the two approved seeded inputs. Its producer source differed from the first authorization hash; original source/contract and failed test evidence are retained, and root independently replays the seed recipe and verifies both outputs. The fixture now uses a temporary disabled contract and fails if real preparation or execution is reached. No input was regenerated and no kernel ran during those preparations. The subsequent sweep has its own explicit source/contract binding and authorization.
 
+`ExpertPool::worker_affinity()` now provides an immutable startup observation per worker, published with release/acquire independently of job/park counters. It separates pending, globally requested pinning, unpinned overflow, API application and actual Windows group/mask readback; the startup processor is a point-in-time observation. Readback failure does not imply verified placement. Worker numerical kernels and phase/epoch scheduling remain unchanged. Native harness receipts contain these records; the engine's added startup INFO fields still require its separate CUDA build/runtime verification.
+
+The separate CPU-only observation build passes three CTests, including an owned two-thread pin/readback fixture. Actual expert run49 then passes 15 cases and 75 formals at rows 1/16/256: all outputs are bit-identical to the original frozen native CPU references. Root independently checks all output bytes and the 36 pinned worker observations: call success, known readback and matching group/single-bit mask. The unpinned cases request/apply no affinity. All 31 resource samples pass. This closes the sampled worker-pin visibility gap without assigning P/E/LP labels or claiming a model gain; run35's older unavailable-pin reports remain intact.
+
 ## Inspect and validate before using the model
 
 ```powershell

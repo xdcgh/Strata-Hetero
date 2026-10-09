@@ -1,0 +1,10 @@
+{
+  "name": "vcvars-environment",
+  "status": "failed",
+  "error": "BuildError: owned command process identity mismatch: {'pid': 7936, 'parent_pid': 20588, 'create_time': 1791550671.3476107, 'executable': 'c:\\\\windows\\\\system32\\\\cmd.exe', 'command_line': ['cmd.exe', '/d', '/s', '/c', 'call \"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\18\\\\BuildTools\\\\VC\\\\Auxiliary\\\\Build\\\\vcvars64.bat\" >nul && set']}",
+  "pid": 7936,
+  "exit_code": 1,
+  "seen_processes": [],
+  "cleanup": [],
+  "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts\\vcvars-environment.log"
+}

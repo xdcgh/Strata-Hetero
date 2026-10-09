@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "previous_source_snapshots_match_run35_freeze",
+  "git_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd",
+  "ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "files": [
+    {
+      "path": "include/strata/kernels/cpu/pool.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\previous-source\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "snapshot_format": "git_blob_crlf_worktree",
+      "sha256": "4255fd01ae6e55a650b2e81316202c5b9206e0ae2271cd9fa81edc3b27d33c1a",
+      "run35_frozen_sha256": "4255fd01ae6e55a650b2e81316202c5b9206e0ae2271cd9fa81edc3b27d33c1a",
+      "matches_frozen": true,
+      "git_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd"
+    },
+    {
+      "path": "src/kernels/cpu/pool.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\previous-source\\src\\kernels\\cpu\\pool.cpp",
+      "snapshot_format": "git_blob_crlf_worktree",
+      "sha256": "e54f0c2fe6a297c4aa49a3a9efabab3166d8644f05385b9f7e2fa5e5d34f8eff",
+      "run35_frozen_sha256": "e54f0c2fe6a297c4aa49a3a9efabab3166d8644f05385b9f7e2fa5e5d34f8eff",
+      "matches_frozen": true,
+      "git_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd"
+    },
+    {
+      "path": "src/kernels/cpu/pool_affinity_win.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\previous-source\\src\\kernels\\cpu\\pool_affinity_win.hpp",
+      "snapshot_format": "git_blob_crlf_worktree",
+      "sha256": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+      "run35_frozen_sha256": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+      "matches_frozen": true,
+      "git_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd"
+    },
+    {
+      "path": "src/hetero/native_expert_bench.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\previous-source\\src\\hetero\\native_expert_bench.cpp",
+      "snapshot_format": "git_blob_lf",
+      "sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+      "run35_frozen_sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+      "matches_frozen": true,
+      "git_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd"
+    },
+    {
+      "path": "src/program/generate.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\previous-source\\src\\program\\generate.cpp",
+      "snapshot_format": "git_blob_lf",
+      "sha256": "9cc12532768a1d69fb5f3b9eb42b6bda4747cc70c5fa74cc92d5c759e9448ef6",
+      "run35_frozen_sha256": null,
+      "matches_frozen": true,
+      "git_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd"
+    },
+    {
+      "path": "tools/hetero_native_cpu/CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\previous-source\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "snapshot_format": "git_blob_lf",
+      "sha256": "cc4a4c59b9af0b1af902199bc99cb75f93396eb8ae2a4210d6103cbd0cc6c75a",
+      "run35_frozen_sha256": null,
+      "matches_frozen": true,
+      "git_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\previous-source\\CMakeLists.txt",
+      "snapshot_format": "git_blob_lf",
+      "sha256": "350b151bce78d612a9a1d02ed8ba499ee5a22eaeb27d4d9f8d5e957c305370b2",
+      "run35_frozen_sha256": null,
+      "matches_frozen": true,
+      "git_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd"
+    }
+  ],
+  "new_test_absent_at_previous_head": "src/hetero/worker_affinity_observation_test.cpp"
+}

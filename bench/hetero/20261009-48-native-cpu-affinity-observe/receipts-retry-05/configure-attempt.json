@@ -1,0 +1,40 @@
+{
+  "name": "configure",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "-S",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu",
+    "-B",
+    "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48",
+    "-G",
+    "Ninja",
+    "-DCMAKE_MAKE_PROGRAM=E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DSTRATA_ENABLE_CUDA=OFF",
+    "-DSTRATA_ENABLE_HIP=OFF",
+    "-DSTRATA_HIP_GFX906=OFF",
+    "-DSTRATA_ENABLE_SYCL=OFF",
+    "-DSTRATA_PREFILL_MMQ=OFF",
+    "-DSTRATA_MMQ_KQUANTS=OFF",
+    "-DSTRATA_ORCA_Q4KS_MMQ=OFF",
+    "-DSTRATA_NATIVE_EXPERTS=ON",
+    "-DSTRATA_BUILD_TESTS=OFF",
+    "-DSTRATA_PORTABLE=ON",
+    "-DSTRATA_ISA_FLOOR=",
+    "-DSTRATA_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "-DHETERO_NATIVE_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "started_utc": "2026-10-09T13:03:03.793618+00:00",
+  "resource_before": {
+    "time_utc": "2026-10-09T13:03:03.793585+00:00",
+    "label": "configure:prelaunch",
+    "physical_available_bytes": 117110112256,
+    "commit_available_bytes": 122607333376,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "environment_stripped_gpu_or_test_controls": true
+}

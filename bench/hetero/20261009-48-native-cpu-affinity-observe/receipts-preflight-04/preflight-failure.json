@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "attempt": 4,
+  "error": "BuildError: compiler-preflight exited 2 or failed its postcommand gate",
+  "failed_utc": "2026-10-09T13:01:46.676442+00:00",
+  "configure_or_build_run": false
+}

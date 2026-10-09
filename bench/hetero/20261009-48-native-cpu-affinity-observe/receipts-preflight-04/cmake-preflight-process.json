@@ -1,0 +1,47 @@
+{
+  "name": "cmake-preflight",
+  "status": "success",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "--version"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "exit_code": 0,
+  "finished_utc": "2026-10-09T13:01:46.593008+00:00",
+  "resource_after": {
+    "time_utc": "2026-10-09T13:01:46.591083+00:00",
+    "label": "cmake-preflight:finished",
+    "physical_available_bytes": 117208940544,
+    "commit_available_bytes": 122686451712,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 3060,
+        "parent_pid": 15512,
+        "create_time": 1791550906.5585036,
+        "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "process_tree": [
+    {
+      "pid": 3060,
+      "parent_pid": 15512,
+      "create_time": 1791550906.5585036,
+      "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+        "--version"
+      ]
+    }
+  ],
+  "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-preflight-04\\cmake-preflight.log",
+  "log_bytes": 90,
+  "log_sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+}

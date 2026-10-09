@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "error": "KeyError: 'source'",
+  "failed_utc": "2026-10-09T13:02:43.886341+00:00",
+  "build_dir": "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48",
+  "old_build_dir_touched": false,
+  "no_retry": true
+}

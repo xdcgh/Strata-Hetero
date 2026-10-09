@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "pid": 8616,
+    "parent_pid": 11792,
+    "create_time": 1791550983.740477,
+    "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+      "--version"
+    ]
+  },
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "--version"
+  ],
+  "popen_owned_handle": true
+}

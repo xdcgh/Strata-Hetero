@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "samples": 35,
+  "phys_min": 116900651008,
+  "commit_min": 122366267392,
+  "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-retry-05\\resource-samples.jsonl"
+}

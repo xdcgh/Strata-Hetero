@@ -1,0 +1,50 @@
+{
+  "name": "ninja-version",
+  "status": "success",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "--version"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "exit_code": 0,
+  "finished_utc": "2026-10-09T13:02:43.851510+00:00",
+  "accepted_exit_codes": [
+    0
+  ],
+  "resource_after": {
+    "time_utc": "2026-10-09T13:02:43.849696+00:00",
+    "label": "ninja-version:finished",
+    "physical_available_bytes": 117182550016,
+    "commit_available_bytes": 122661314560,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 18740,
+        "parent_pid": 20592,
+        "create_time": 1791550963.8349893,
+        "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "process_tree": [
+    {
+      "pid": 18740,
+      "parent_pid": 20592,
+      "create_time": 1791550963.8349893,
+      "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+        "--version"
+      ]
+    }
+  ],
+  "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-retry-04\\ninja-version.log",
+  "log_bytes": 37,
+  "log_sha256": "cc30d39e321dcb24ca5c4c5d5b7730e25ab769876a825616360194c634824754"
+}

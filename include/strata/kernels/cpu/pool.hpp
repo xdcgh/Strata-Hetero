@@ -80,6 +80,20 @@ struct CpuTopology {
     int host_core = -1;             ///< Logical core reserved for host thread
 };
 
+/// One startup observation from a pool-owned worker. OS core labels are not inferred here.
+struct WorkerAffinityReport {
+    int worker = -1;
+    int requested_core = -1;
+    bool ready = false;
+    bool pin_requested = false;
+    bool pin_applied = false;
+    bool mask_observed = false;
+    bool mask_matches_request = false;
+    uint16_t observed_group = 0;
+    uint64_t observed_mask = 0;
+    int startup_processor = -1;
+};
+
 /// Which core the host thread - the layer loop that spins on the GPU's flags - takes when `skip_first` reserves one
 /// (--host-core first|last, STRATA_HOST_CORE).  `First` is the layout the pool has always used.  `Last` (eddoursul's
 /// fork, F12) puts the host on the last physical core and lets the workers have the first: Windows sends a GPU's
@@ -167,6 +181,9 @@ public:
     int p_threads() const { return topo_.p_threads; }
     int e_cores() const { return topo_.e_cores; }
     PoolAffinity affinity() const { return affinity_; }
+
+    /// Nonblocking snapshot. Pending workers remain unknown; reports are immutable after startup publication.
+    std::vector<WorkerAffinityReport> worker_affinity() const;
 
     /// Publish `n` jobs, then block until every one has been claimed AND every worker has parked.
     /// `jobs` must outlive the call (it does, and the workers never touch it afterwards).
@@ -262,6 +279,11 @@ private:
     static constexpr int32_t kParked = -1, kSleeping = -2, kBetween = -3, kIdle = -10, kWaitParked = -11,
                              kWaitDone = -12;
     std::unique_ptr<std::atomic<int32_t>[]> wstate_;
+    struct AffinityState {
+        WorkerAffinityReport report;
+        std::atomic<bool> ready{false};
+    };
+    std::unique_ptr<AffinityState[]> affinity_state_;
     std::atomic<int32_t> hstate_{kIdle};
     std::atomic<int64_t> hstate_ms_{0};
     alignas(64) std::atomic<uint64_t> head_{0};   // epoch << 32 | njobs << 16 | next index (issue #29)

@@ -1,0 +1,59 @@
+{
+  "argv": [
+    "C:\\Windows\\System32\\cmd.exe",
+    "/d",
+    "/c",
+    "call \"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul & set & exit /b 0"
+  ],
+  "process_identity": {
+    "pid": 13304,
+    "parent_pid": 24228,
+    "create_time": 1791550859.5091317,
+    "executable": "c:\\windows\\system32\\cmd.exe",
+    "command_line": [
+      "C:\\Windows\\System32\\cmd.exe",
+      "/d",
+      "/c",
+      "call \"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul & set & exit /b 0"
+    ]
+  },
+  "exit_code": 0,
+  "resource_before": {
+    "time_utc": "2026-10-09T13:00:59.507869+00:00",
+    "label": "vcvars-environment:prelaunch",
+    "physical_available_bytes": 117206994944,
+    "commit_available_bytes": 122683404288,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "resource_after": {
+    "time_utc": "2026-10-09T13:00:59.533008+00:00",
+    "label": "vcvars-environment:finished",
+    "physical_available_bytes": 117204705280,
+    "commit_available_bytes": 122680070144,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 13304,
+        "parent_pid": 24228,
+        "create_time": 1791550859.5091317,
+        "executable": "c:\\windows\\system32\\cmd.exe",
+        "command_line": [
+          "C:\\Windows\\System32\\cmd.exe",
+          "/d",
+          "/c",
+          "call \"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" >nul & set & exit /b 0"
+        ]
+      }
+    ]
+  },
+  "stdout_bytes": 5512,
+  "stdout_sha256": "4ee30f89b7bd3ee2a6af11a5785d35c15f26684bad344161ced100b69bca32d4",
+  "stderr_bytes": 155,
+  "stderr_sha256": "c33268cff18e1c5c0822d5fe110cdfbde571274e3f13d69f33e2e9d0b08d71ae",
+  "stdout_environment_values_persisted": false
+}

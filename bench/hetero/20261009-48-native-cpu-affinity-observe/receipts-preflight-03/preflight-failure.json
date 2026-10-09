@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "attempt": 3,
+  "error": "BuildError: vcvars did not establish the required x64 MSVC environment markers: missing=['VCToolsInstallDir', 'VSCMD_VER', 'VSCMD_ARG_TGT_ARCH'], target=None",
+  "failed_utc": "2026-10-09T13:00:59.539409+00:00",
+  "configure_or_build_run": false
+}

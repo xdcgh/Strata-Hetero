@@ -448,6 +448,7 @@ ExpertPool::ExpertPool(int n_workers, bool pin, bool host_works, PoolAffinity af
     if (n_ < 1) n_ = 1;
     scratch_.resize((size_t) n_);
     wstate_.reset(new std::atomic<int32_t>[(size_t) n_]);
+    affinity_state_.reset(new AffinityState[(size_t) n_]);
     for (int i = 0; i < n_; ++i) wstate_[(size_t) i].store(kParked);
     hstate_ms_.store(now_ms());
     g_diag_pool.store(this);
@@ -457,11 +458,44 @@ ExpertPool::ExpertPool(int n_workers, bool pin, bool host_works, PoolAffinity af
     threads_.reserve((size_t) n_);
     for (int i = 0; i < n_; ++i) {
         const int core = pin ? (i < (int) topo_.worker_cores.size() ? topo_.worker_cores[(size_t) i] : -1) : -1;
-        threads_.emplace_back([this, i, core] {
-            pin_this_thread(core, i);
+        threads_.emplace_back([this, i, core, pin] {
+            WorkerAffinityReport observed;
+            observed.worker = i;
+            observed.requested_core = core;
+            observed.pin_requested = pin;
+            observed.pin_applied = core >= 0 && pin_this_thread(core, i);
+#if defined(_WIN32)
+            GROUP_AFFINITY actual{};
+            if (GetThreadGroupAffinity(GetCurrentThread(), &actual)) {
+                observed.mask_observed = true;
+                observed.observed_group = actual.Group;
+                observed.observed_mask = static_cast<uint64_t>(actual.Mask);
+                observed.mask_matches_request = core >= 0 &&
+                    actual.Group == static_cast<WORD>(core / 64) && actual.Mask == (KAFFINITY(1) << (core & 63));
+            }
+            PROCESSOR_NUMBER processor{};
+            GetCurrentProcessorNumberEx(&processor);
+            observed.startup_processor = static_cast<int>(processor.Group) * 64 + processor.Number;
+#endif
+            observed.ready = true;
+            affinity_state_[(size_t) i].report = observed;
+            affinity_state_[(size_t) i].ready.store(true, std::memory_order_release);
             worker(i);
         });
     }
+}
+
+std::vector<WorkerAffinityReport> ExpertPool::worker_affinity() const {
+    std::vector<WorkerAffinityReport> reports;
+    reports.reserve(static_cast<size_t>(n_));
+    for (int i = 0; i < n_; ++i) {
+        WorkerAffinityReport value;
+        value.worker = i;
+        if (affinity_state_[static_cast<size_t>(i)].ready.load(std::memory_order_acquire))
+            value = affinity_state_[static_cast<size_t>(i)].report;
+        reports.push_back(value);
+    }
+    return reports;
 }
 
 ExpertPool::~ExpertPool() {

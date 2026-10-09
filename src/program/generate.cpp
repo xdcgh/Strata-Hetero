@@ -5110,6 +5110,25 @@ int main(int argc, char** argv) {
     std::fprintf(stderr, "strata generate: %d expert-pool workers%s%s\n", pool.workers(),
                  pool.host_works() ? " + the host thread" : "",
                  o.no_pool ? " (UNUSED: --no-pool)" : "");
+    {
+        const auto observed = pool.worker_affinity();
+        int applied = 0, verified = 0, pending = 0, failed = 0, unknown = 0, overflow = 0, unrequested = 0;
+        for (const auto& r : observed) {
+            if (!r.ready) { ++pending; continue; }
+            if (!r.pin_requested) { ++unrequested; continue; }
+            if (r.requested_core < 0) { ++overflow; continue; }
+            if (r.pin_applied) ++applied; else ++failed;
+            if (r.pin_applied && r.mask_observed && r.mask_matches_request) ++verified;
+            else if (r.pin_applied) ++unknown;
+            std::fprintf(stderr, "strata cpu affinity: worker=%d requested=%d applied=%d mask_known=%d group=%u mask=0x%llx matches=%d startup_processor=%d\n",
+                         r.worker, r.requested_core, int(r.pin_applied), int(r.mask_observed),
+                         unsigned(r.observed_group), static_cast<unsigned long long>(r.observed_mask),
+                         int(r.mask_matches_request), r.startup_processor);
+        }
+        std::printf("INFO pool_pin_applied=%d pool_pin_verified=%d pool_pin_pending=%d pool_pin_failed=%d pool_pin_unknown=%d pool_pin_overflow=%d pool_pin_unrequested=%d\n",
+                    applied, verified, pending, failed, unknown, overflow, unrequested);
+        std::fflush(stdout);
+    }
 
     // **THE MISALIGNMENT WARNING THAT STOOD HERE IS GONE, BECAUSE THE MISALIGNMENT IS FIXED.**
     //

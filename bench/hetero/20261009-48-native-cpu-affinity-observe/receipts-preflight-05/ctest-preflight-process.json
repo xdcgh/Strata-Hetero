@@ -1,0 +1,50 @@
+{
+  "name": "ctest-preflight",
+  "status": "success",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "--version"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "exit_code": 0,
+  "finished_utc": "2026-10-09T13:02:07.171580+00:00",
+  "accepted_exit_codes": [
+    0
+  ],
+  "resource_after": {
+    "time_utc": "2026-10-09T13:02:07.169135+00:00",
+    "label": "ctest-preflight:finished",
+    "physical_available_bytes": 117157363712,
+    "commit_available_bytes": 122632343552,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 10952,
+        "parent_pid": 5600,
+        "create_time": 1791550927.1255405,
+        "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "process_tree": [
+    {
+      "pid": 10952,
+      "parent_pid": 5600,
+      "create_time": 1791550927.1255405,
+      "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+        "--version"
+      ]
+    }
+  ],
+  "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-preflight-05\\ctest-preflight.log",
+  "log_bytes": 90,
+  "log_sha256": "1c3f216562e2dffaab6038c5a1ba3df2a491bcefaa9260946ece2176a04ccce4"
+}

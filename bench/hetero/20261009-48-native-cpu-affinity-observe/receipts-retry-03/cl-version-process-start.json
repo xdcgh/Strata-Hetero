@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "pid": 18940,
+    "parent_pid": 8416,
+    "create_time": 1791550949.8257723,
+    "executable": "c:\\program files (x86)\\microsoft visual studio\\18\\buildtools\\vc\\tools\\msvc\\14.51.36231\\bin\\hostx64\\x64\\cl.exe",
+    "command_line": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+      "/Bv"
+    ]
+  },
+  "argv": [
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "/Bv"
+  ],
+  "popen_owned_handle": true
+}

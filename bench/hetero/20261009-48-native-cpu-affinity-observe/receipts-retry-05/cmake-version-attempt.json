@@ -1,0 +1,20 @@
+{
+  "name": "cmake-version",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "--version"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "started_utc": "2026-10-09T13:03:03.698366+00:00",
+  "resource_before": {
+    "time_utc": "2026-10-09T13:03:03.698335+00:00",
+    "label": "cmake-version:prelaunch",
+    "physical_available_bytes": 117108645888,
+    "commit_available_bytes": 122600128512,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "environment_stripped_gpu_or_test_controls": true
+}

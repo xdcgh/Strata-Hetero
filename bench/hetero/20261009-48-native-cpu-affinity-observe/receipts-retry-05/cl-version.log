@@ -1,0 +1,14 @@
+Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+编译器扫描遍数:
+ C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe:        版本 19.51.36260.0
+ C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\c1.dll:        版本 19.51.36260.0
+ C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\c1xx.dll:      版本 19.51.36260.0
+ C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\c2.dll:        版本 19.51.36260.0
+ C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\c1xx.dll:      版本 19.51.36260.0
+ C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\link.exe:      版本 14.51.36260.0
+ C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\mspdb140.dll:  版本 14.51.36260.0
+ C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\2052\clui.dll: 版本 19.51.36260.0
+
+cl: 命令行 error D8003 :缺少源文件名

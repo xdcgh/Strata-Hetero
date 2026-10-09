@@ -1,0 +1,20 @@
+{
+  "name": "cl-version",
+  "argv": [
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "/Bv"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "started_utc": "2026-10-09T13:02:43.855012+00:00",
+  "resource_before": {
+    "time_utc": "2026-10-09T13:02:43.854982+00:00",
+    "label": "cl-version:prelaunch",
+    "physical_available_bytes": 117183832064,
+    "commit_available_bytes": 122662051840,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "environment_stripped_gpu_or_test_controls": true
+}

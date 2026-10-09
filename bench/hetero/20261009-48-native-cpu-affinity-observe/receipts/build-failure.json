@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "error": "BuildError: owned command process identity mismatch: {'pid': 7936, 'parent_pid': 20588, 'create_time': 1791550671.3476107, 'executable': 'c:\\\\windows\\\\system32\\\\cmd.exe', 'command_line': ['cmd.exe', '/d', '/s', '/c', 'call \"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\18\\\\BuildTools\\\\VC\\\\Auxiliary\\\\Build\\\\vcvars64.bat\" >nul && set']}",
+  "failed_utc": "2026-10-09T12:57:51.368797+00:00",
+  "build_dir": "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48",
+  "old_build_dir_touched": false,
+  "no_retry": true
+}

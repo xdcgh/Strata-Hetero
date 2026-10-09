@@ -1,0 +1,47 @@
+{
+  "name": "compiler-preflight",
+  "status": "failed",
+  "argv": [
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "/Bv"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "exit_code": 2,
+  "finished_utc": "2026-10-09T13:01:46.661791+00:00",
+  "resource_after": {
+    "time_utc": "2026-10-09T13:01:46.660751+00:00",
+    "label": "compiler-preflight:finished",
+    "physical_available_bytes": 117208510464,
+    "commit_available_bytes": 122682048512,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 9232,
+        "parent_pid": 15512,
+        "create_time": 1791550906.6306057,
+        "executable": "c:\\program files (x86)\\microsoft visual studio\\18\\buildtools\\vc\\tools\\msvc\\14.51.36231\\bin\\hostx64\\x64\\cl.exe",
+        "command_line": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+          "/Bv"
+        ]
+      }
+    ]
+  },
+  "process_tree": [
+    {
+      "pid": 9232,
+      "parent_pid": 15512,
+      "create_time": 1791550906.6306057,
+      "executable": "c:\\program files (x86)\\microsoft visual studio\\18\\buildtools\\vc\\tools\\msvc\\14.51.36231\\bin\\hostx64\\x64\\cl.exe",
+      "command_line": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+        "/Bv"
+      ]
+    }
+  ],
+  "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-preflight-04\\compiler-preflight.log",
+  "log_bytes": 1291,
+  "log_sha256": "a2c2c785f5e98d40d3261a0532e0abfe794e648b0593ba1a732ec9137e234899"
+}

@@ -1,0 +1,62 @@
+{
+  "name": "ctest",
+  "status": "success",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "--test-dir",
+    "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48",
+    "--output-on-failure",
+    "--parallel",
+    "1"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "exit_code": 0,
+  "finished_utc": "2026-10-09T13:03:24.746127+00:00",
+  "accepted_exit_codes": [
+    0
+  ],
+  "resource_after": {
+    "time_utc": "2026-10-09T13:03:24.741282+00:00",
+    "label": "ctest:finished",
+    "physical_available_bytes": 117027627008,
+    "commit_available_bytes": 122491555840,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 23360,
+        "parent_pid": 11792,
+        "create_time": 1791551004.3338127,
+        "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+          "--test-dir",
+          "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48",
+          "--output-on-failure",
+          "--parallel",
+          "1"
+        ]
+      }
+    ]
+  },
+  "process_tree": [
+    {
+      "pid": 23360,
+      "parent_pid": 11792,
+      "create_time": 1791551004.3338127,
+      "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+        "--test-dir",
+        "E:\\Strata-Hetero-data\\build\\native-cpu-affinity-observe-20261009-48",
+        "--output-on-failure",
+        "--parallel",
+        "1"
+      ]
+    }
+  ],
+  "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-retry-05\\ctest.log",
+  "log_bytes": 520,
+  "log_sha256": "9835677d564136485fe60009ec60aad74b614f63044221f3c5588a02575a4575"
+}

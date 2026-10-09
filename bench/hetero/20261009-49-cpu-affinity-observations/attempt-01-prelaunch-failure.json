@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "failed_before_any_child_or_case",
+  "run_id": "20261009-49-cpu-affinity-observations",
+  "timestamp_utc": "2026-10-09T13:12:17.147961+00:00",
+  "command": [
+    "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\run_cpu_affinity_observations.py",
+    "--contract",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-cpu-affinity-observations\\run49-contract.json",
+    "--run",
+    "--root-start-confirmed",
+    "--models-terminal-confirmed"
+  ],
+  "error": "FileNotFoundError WinError 3 before first case: dedicated output-root parent did not exist",
+  "runner_sha256": "e075d90491a9fcd98dfceed937d02ca6c47b2e1751bfff5e66e3fb0cef5536aa",
+  "contract_sha256": "116d9c9986751b4217c0b6a956608f1d6c27386d59f4fd7d65ac929ce685332f",
+  "child_started": false,
+  "payload_read": false,
+  "output_written": false
+}
