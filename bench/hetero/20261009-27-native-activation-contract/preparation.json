@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "pure_fixtures_pass_real_parity_not_run",
+  "created_utc": "2026-10-09T07:46:07.002425+00:00",
+  "test_count": 6,
+  "test_command": "E:\\Strata-Hetero-data\\venv-intel\\Scripts\\python.exe -B -m unittest tools.test_hetero_native_activation -v",
+  "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+  "ggml_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "code_hashes": {
+    "tools/hetero_native_activation.py": "31323455274a50236a6274464e51fc622c717f09bead8ab96337e133ce0dacaf",
+    "tools/test_hetero_native_activation.py": "55b0344d17aa73a001ba42906f238f780d26ffbbaae38d4b9a29ddc0f0683851"
+  },
+  "reference_sources": {
+    "ggml-quants.c": "quantize_row_q8_K_ref2768; signed first absolute maximum, nearest_int and F32 reciprocal",
+    "ggml-cpu/arch/x86/quants.c": "quantize_row_q8_1 400; RN-even quants and separately stored F16 d/s",
+    "src/kernels/cpu/native_expert.cpp": "native_quant_act/native_quant_h use identified vec_dot_type"
+  },
+  "asset_read": false,
+  "core_created": false,
+  "device_touched": false,
+  "native_parity": "not_run",
+  "production_route_enabled": false
+}
