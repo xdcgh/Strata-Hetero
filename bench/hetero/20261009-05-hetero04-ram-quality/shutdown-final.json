@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-05-hetero04-ram-quality",
+  "terminal_status": "quality_failed_then_owned_cleanup_complete",
+  "quality_failure": {
+    "prompt_id": "smoke_three_key_retrieval",
+    "root_classifier_statuses": [
+      "generation_degenerate_bang_loop",
+      "generation_degenerate_bang_loop",
+      "generation_degenerate_bang_loop"
+    ],
+    "formal_count": 3,
+    "finish_reasons": [
+      "length",
+      "length",
+      "length"
+    ],
+    "completion_tokens": [
+      128,
+      128,
+      128
+    ],
+    "analysis_receipts": {
+      "original_stop_report": "quality/h5-stop-smoke_three_key_retrieval.json",
+      "root_assessment": "quality/root-assessment-bang-tail.json",
+      "offline_raw_id_diff": "quality/root-observed-failure.json"
+    },
+    "h4_h5_token_id_first_difference_by_formal": [
+      {
+        "index_zero_based": 65,
+        "ordinal_one_based": 66,
+        "baseline_id": 19,
+        "h5_id": 0
+      },
+      {
+        "index_zero_based": 65,
+        "ordinal_one_based": 66,
+        "baseline_id": 19,
+        "h5_id": 0
+      },
+      {
+        "index_zero_based": 65,
+        "ordinal_one_based": 66,
+        "baseline_id": 19,
+        "h5_id": 0
+      }
+    ],
+    "h4_h5_visible_text_first_difference_by_formal": [
+      {
+        "index_zero_based": 92,
+        "ordinal_one_based": 93,
+        "baseline_character": "4",
+        "h5_character": "!"
+      },
+      {
+        "index_zero_based": 92,
+        "ordinal_one_based": 93,
+        "baseline_character": "4",
+        "h5_character": "!"
+      },
+      {
+        "index_zero_based": 92,
+        "ordinal_one_based": 93,
+        "baseline_character": "4",
+        "h5_character": "!"
+      }
+    ],
+    "h5_trailing_token_id_zero_run_by_formal": [
+      63,
+      63,
+      63
+    ],
+    "h5_visible_bang_tail_by_formal": [
+      63,
+      63,
+      63
+    ],
+    "interpretation": "Correct visible prefix is followed by a degenerate tail: raw ID 0 repeats 63 times and visible ! repeats 63 times in each formal. The first raw ID divergence is one-based token 66; visible text first diverges at one-based character 93. Cause is not established.",
+    "longer_prompts_started": false,
+    "formal_outputs_preserved": true
+  },
+  "resource": {
+    "samples_in_failure_scope": 1380,
+    "minimum_physical_available_gib": 38.205,
+    "minimum_commit_available_gib": 18.427,
+    "any_alerts": false,
+    "any_errors": false,
+    "memory_cause_attributed": false
+  },
+  "identity": {
+    "engine_version": "0.1.40.4",
+    "engine_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+    "engine_binary_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+    "engine_source_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "source_matches_provenance": true,
+    "binary_recheck_pass": true
+  },
+  "cleanup": {
+    "preflight_receipt": "cleanup-preflight-02.json",
+    "unload_receipt": "shutdown-unload-01.json",
+    "unload_status": "unloaded",
+    "loaded_after_unload": false,
+    "in_flight_after_unload": 0,
+    "engine_pid": 13536,
+    "engine_absent_after_unload": true,
+    "sampler_pid": 22320,
+    "sampler_stop_receipt": "sampler-stop-01.json",
+    "sampler_stop_reason": "stop_file_exists",
+    "sampler_stopped": true,
+    "sampler_children_stopped": true,
+    "sampler_child_pids": [
+      3192
+    ],
+    "bridge_pid": 19760,
+    "bridge_stop_receipt": "shutdown-bridge-stop-01.json",
+    "bridge_stopped": true,
+    "launcher_pid": 17588,
+    "launcher_exited_naturally": true,
+    "port_8081_listener_absent": true,
+    "terminal": true
+  },
+  "provenance": {
+    "launch_admission_receipt": "admission.json",
+    "launch_admission_sha256": "95811de6aee832c658cf95d9726de66698db7eef01f0932ed984041301965c55",
+    "launch_process_receipt": "process.json",
+    "launch_process_sha256": "c3d8d722ee6d81b5c22fa3d2a7dfb12f272b05bf5648b47c2c54b0d57b4c051d",
+    "status": "pass"
+  },
+  "evidence_sha256": {
+    "quality/root-assessment-bang-tail.json": "fe6953dc8a105e8616503193065996c03ec50fbd0f15767e741bd0f2b3e618de",
+    "quality/root-observed-failure.json": "239417171d06820cfb4f3e4c6f7f2762f7e5c244829729b843a4179471b5b3f9",
+    "quality/h5-stop-smoke_three_key_retrieval.json": "69aae6dccd6b656ba2598b41df28a7abc55c860bc8761e01eae2f119a70923d8",
+    "requests/smoke_three_key_retrieval/requests.json": "cb91272a242c082bbd76103c1041ecd4460df0b3d1957f5bf1177eef34821126",
+    "requests/smoke_three_key_retrieval/formal-0000.sse.txt": "78e1b6719a2caeba5a0ede1644b3c9ede111cc43d1a59b81cdb4f35f982f9f32",
+    "requests/smoke_three_key_retrieval/formal-0000.text.txt": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02"
+  }
+}

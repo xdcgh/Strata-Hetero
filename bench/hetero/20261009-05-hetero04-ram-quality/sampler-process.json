@@ -1,0 +1,24 @@
+{
+  "sampler_launcher_pid": 22320,
+  "start_utc": "2026-10-09T04:46:33.8469183Z",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-u",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+    "--output",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\samples.jsonl",
+    "--pid",
+    "17588",
+    "--interval",
+    "1",
+    "--max-seconds",
+    "10800",
+    "--minimum-commit-gib",
+    "4",
+    "--stop-file",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\STOP"
+  ]
+}

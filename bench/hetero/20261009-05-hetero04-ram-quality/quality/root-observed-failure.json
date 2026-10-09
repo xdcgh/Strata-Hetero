@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-05-hetero04-ram-quality",
+  "status": "root_observed_correct_prefix_then_degenerate_tail",
+  "scope": "offline comparison of saved H4/H5 actual engine SSE IDs and visible text; no API/model access",
+  "prompt_id": "smoke_three_key_retrieval",
+  "h4_run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+  "h5_run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality",
+  "quality_assessment_source": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\quality\\root-assessment-bang-tail.json",
+    "sha256": "fe6953dc8a105e8616503193065996c03ec50fbd0f15767e741bd0f2b3e618de",
+    "recorded_quality_statuses": [
+      "generation_degenerate_bang_loop",
+      "generation_degenerate_bang_loop",
+      "generation_degenerate_bang_loop"
+    ]
+  },
+  "formal_pairs": [
+    {
+      "formal_index": 0,
+      "baseline": {
+        "id_count": 84,
+        "ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "sse_sha256": "0b9319b934a4965fc6194ea03e31cbd5432c79442d349e9264b27e46c70cd4b0",
+        "text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e"
+      },
+      "h5": {
+        "finish_reason": "length",
+        "sse_valid_for_complete_stop": false,
+        "raw_id_count": 128,
+        "sse_sha256": "78e1b6719a2caeba5a0ede1644b3c9ede111cc43d1a59b81cdb4f35f982f9f32",
+        "text_file_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+        "sse_visible_text_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+        "id0_trailing_run": 63,
+        "visible_text_character_count": 155,
+        "visible_text_trailing_bang_run": 63
+      },
+      "first_raw_token_id_difference": {
+        "index_zero_based": 65,
+        "ordinal_one_based": 66,
+        "baseline_id": 19,
+        "h5_id": 0
+      },
+      "first_sse_visible_character_difference": {
+        "index_zero_based": 92,
+        "ordinal_one_based": 93,
+        "baseline_character": "4",
+        "h5_character": "!"
+      }
+    },
+    {
+      "formal_index": 1,
+      "baseline": {
+        "id_count": 84,
+        "ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "sse_sha256": "1106c3d4a6279b933ea907e6180c860cf81dc17d8866746382f48e2bd26d7ce2",
+        "text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e"
+      },
+      "h5": {
+        "finish_reason": "length",
+        "sse_valid_for_complete_stop": false,
+        "raw_id_count": 128,
+        "sse_sha256": "0d59597659eab8196ca826a9ced5e946dfa989029959baa8741a6c8a2936b7d0",
+        "text_file_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+        "sse_visible_text_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+        "id0_trailing_run": 63,
+        "visible_text_character_count": 155,
+        "visible_text_trailing_bang_run": 63
+      },
+      "first_raw_token_id_difference": {
+        "index_zero_based": 65,
+        "ordinal_one_based": 66,
+        "baseline_id": 19,
+        "h5_id": 0
+      },
+      "first_sse_visible_character_difference": {
+        "index_zero_based": 92,
+        "ordinal_one_based": 93,
+        "baseline_character": "4",
+        "h5_character": "!"
+      }
+    },
+    {
+      "formal_index": 2,
+      "baseline": {
+        "id_count": 84,
+        "ids_sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "sse_sha256": "f95150340109844fb59ba844ee7727ae12d7fb1d04648c2e450d2fc6fd300ccc",
+        "text_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e"
+      },
+      "h5": {
+        "finish_reason": "length",
+        "sse_valid_for_complete_stop": false,
+        "raw_id_count": 128,
+        "sse_sha256": "a2bee043f639a25882af6e2c065a6b54fc2bb7ff3405c846c18906ed5eee06aa",
+        "text_file_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+        "sse_visible_text_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+        "id0_trailing_run": 63,
+        "visible_text_character_count": 155,
+        "visible_text_trailing_bang_run": 63
+      },
+      "first_raw_token_id_difference": {
+        "index_zero_based": 65,
+        "ordinal_one_based": 66,
+        "baseline_id": 19,
+        "h5_id": 0
+      },
+      "first_sse_visible_character_difference": {
+        "index_zero_based": 92,
+        "ordinal_one_based": 93,
+        "baseline_character": "4",
+        "h5_character": "!"
+      }
+    }
+  ],
+  "resource_scope_during_h5_fifth_prompt": {
+    "sample_count": 1380,
+    "ram_min_gib": 38.205,
+    "commit_min_gib": 18.427,
+    "any_alerts": false,
+    "any_errors": false,
+    "cause_attribution": "not established by this receipt; observed RAM/commit gates remained pass in available samples"
+  },
+  "no_longer_prompts_started": true,
+  "cleanup_authorized_by_current_root_message": true
+}

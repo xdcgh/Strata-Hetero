@@ -1,0 +1,82 @@
+{
+  "observed_utc": "2026-10-09T04:53:00.706635+00:00",
+  "status": {
+    "service": "strata",
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "loaded": true,
+    "auto_load": true,
+    "structured_output": {
+      "formats": [
+        "json_object",
+        "json_schema"
+      ],
+      "method": "prompt_and_validate",
+      "constrained_decoding": false,
+      "stream_buffered": true
+    },
+    "engine": "0.1.40.4",
+    "started": 1791521481,
+    "uptime_s": 99,
+    "cache_max_tokens": 32768,
+    "context": {
+      "native": 32768,
+      "max_positions": 32768
+    },
+    "concurrency": {
+      "serving": 1,
+      "requested": 1
+    },
+    "dialects": [
+      "/v1/chat/completions",
+      "/v1/messages",
+      "/v1/responses"
+    ],
+    "vision": {
+      "enabled": false,
+      "available": false,
+      "error": null
+    },
+    "activity": {
+      "requests": 0,
+      "in_flight": 0,
+      "last_request_at": null
+    },
+    "last_timings": null,
+    "vram": {
+      "elastic": false
+    },
+    "machine": {
+      "at": 1791521580,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "used_mib": 44803.0,
+        "total_mib": 49140.0,
+        "util_pct": 0,
+        "temp_c": 30,
+        "power_w": 7.251
+      },
+      "ram": {
+        "used_gib": 71.2,
+        "total_gib": 127.6
+      }
+    }
+  },
+  "resource_sample": {
+    "observed_at_utc": "2026-10-09T04:52:59.956Z",
+    "owner_pid": 17588,
+    "ram_gate": {
+      "status": "pass",
+      "available_gib": 56.396,
+      "required_gib": 12
+    },
+    "commit_gate": {
+      "status": "pass",
+      "available_gib": 19.168,
+      "required_gib": 4.0,
+      "source": "PSAPI GetPerformanceInfo"
+    },
+    "alerts": [],
+    "errors": []
+  },
+  "root_ready_confirmed": true
+}

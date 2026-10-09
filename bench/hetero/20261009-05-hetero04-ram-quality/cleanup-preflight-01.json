@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-10-09T05:10:05.7124658+00:00",
+  "run_id": "20261009-05-hetero04-ram-quality",
+  "checks": {
+    "launcher_pid_exact": true,
+    "launcher_time_delta_ms": 0.0007,
+    "launcher_exe_exact": true,
+    "launcher_cmd_exact": true,
+    "bridge_pid_exact": true,
+    "bridge_parent_exact": true,
+    "bridge_exe_exact": true,
+    "bridge_config_cmd_exact": true,
+    "engine_pid_exact": true,
+    "engine_parent_exact": true,
+    "engine_exe_exact": true,
+    "engine_cmd_exact": true,
+    "engine_binary_recheck_pass": true,
+    "source_commit_exact": false,
+    "listener_owned": true,
+    "live_model_exact": true,
+    "live_engine_exact": true,
+    "loaded": true,
+    "in_flight_zero": true,
+    "sampler_pid_exact": true,
+    "sampler_time_delta_ms": 0.0003,
+    "sampler_cmd_exact": true,
+    "sampler_worker_exact": true,
+    "resource_owner_exact": true,
+    "resource_ram_pass": true,
+    "resource_commit_pass": true,
+    "resource_no_alerts": true,
+    "resource_stop_absent": true
+  },
+  "launcher": {
+    "pid": 17588,
+    "creation_utc": "2026-10-09T04:46:33.8141110+00:00",
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\config.json --port 8081",
+    "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe"
+  },
+  "bridge": {
+    "pid": 19760,
+    "parent_pid": 17588,
+    "creation_date": "2026-10-09T12:46:33.8479440+08:00",
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\config.json --port 8081",
+    "executable_path": "C:\\Python314\\python.exe"
+  },
+  "engine": {
+    "pid": 13536,
+    "parent_pid": 19760,
+    "creation_date": "2026-10-09T12:46:34.3277700+08:00",
+    "command_line": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io ram --ple-ram-reserve-gib 12",
+    "executable_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+    "identity_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+    "current_git_head": "4212d8cb6dedaca9b6880049f317fb78c235fa1e"
+  },
+  "listener": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 8081,
+      "OwningProcess": 19760
+    }
+  ],
+  "status": {
+    "service": "strata",
+    "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "loaded": true,
+    "auto_load": true,
+    "structured_output": {
+      "formats": [
+        "json_object",
+        "json_schema"
+      ],
+      "method": "prompt_and_validate",
+      "constrained_decoding": false,
+      "stream_buffered": true
+    },
+    "engine": "0.1.40.4",
+    "started": 1791521481,
+    "uptime_s": 1124,
+    "cache_max_tokens": 32768,
+    "context": {
+      "native": 32768,
+      "max_positions": 32768
+    },
+    "concurrency": {
+      "serving": 1,
+      "requested": 1
+    },
+    "dialects": [
+      "/v1/chat/completions",
+      "/v1/messages",
+      "/v1/responses"
+    ],
+    "vision": {
+      "enabled": false,
+      "available": false,
+      "error": null
+    },
+    "activity": {
+      "requests": 20,
+      "in_flight": 0,
+      "last_request_at": 1791521660
+    },
+    "last_timings": {
+      "cache_n": 0,
+      "prompt_n": 114,
+      "prompt_ms": 1040.4,
+      "prompt_per_token_ms": 9.126,
+      "prompt_per_second": 109.6,
+      "predicted_n": 128,
+      "predicted_ms": 5075.0,
+      "predicted_per_token_ms": 39.648,
+      "predicted_per_second": 25.2,
+      "draft_n": 51,
+      "draft_n_accepted": 48,
+      "at": 1791521660
+    },
+    "vram": {
+      "elastic": false
+    },
+    "machine": {
+      "at": 1791522605,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4090 D",
+        "used_mib": 44943.0,
+        "total_mib": 49140.0,
+        "util_pct": 0,
+        "temp_c": 30,
+        "power_w": 7.433
+      },
+      "ram": {
+        "used_gib": 79.0,
+        "total_gib": 127.6
+      }
+    }
+  },
+  "sampler": {
+    "pid": 22320,
+    "child_pid": 3192,
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py --output C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\samples.jsonl --pid 17588 --interval 1 --max-seconds 10800 --minimum-commit-gib 4 --stop-file C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\STOP",
+    "child_command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py --output C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\samples.jsonl --pid 17588 --interval 1 --max-seconds 10800 --minimum-commit-gib 4 --stop-file C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\STOP"
+  },
+  "latest_resource_sample": {
+    "schema_version": 1,
+    "record_type": "resource_sample",
+    "observed_at_utc": "2026-10-09T05:10:04.956Z",
+    "monotonic_seconds": 8231.664358,
+    "sample_gap_seconds": 0.99952839999969,
+    "sampler_elapsed_seconds": 0.12387940000007802,
+    "owner_pid": 17588,
+    "cpu": {
+      "percent": 6.5,
+      "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+    },
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 52094730240,
+      "physical_used_bytes": 84868517888,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 124712837120,
+      "commit_available_bytes": 20840345600,
+      "commit_total_pages": 30447470,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 20840345600,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "ram_gate": {
+      "status": "pass",
+      "available_gib": 48.517,
+      "required_gib": 12
+    },
+    "commit_gate": {
+      "status": "pass",
+      "available_gib": 19.409,
+      "required_gib": 4.0,
+      "source": "PSAPI GetPerformanceInfo"
+    },
+    "owner_process_tree": [
+      {
+        "pid": 17588,
+        "parent_pid": 2560,
+        "name": "python.exe",
+        "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "rss_bytes": 4243456,
+        "io_read_bytes": 185,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0,
+        "errors": []
+      },
+      {
+        "pid": 6880,
+        "parent_pid": 17588,
+        "name": "conhost.exe",
+        "executable_path": "C:\\Windows\\System32\\conhost.exe",
+        "rss_bytes": 11227136,
+        "io_read_bytes": 16607,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.09375,
+        "cpu_system_seconds": 0.125,
+        "errors": []
+      },
+      {
+        "pid": 19760,
+        "parent_pid": 17588,
+        "name": "python.exe",
+        "executable_path": "C:\\Python314\\python.exe",
+        "rss_bytes": 218566656,
+        "io_read_bytes": 15493184,
+        "io_write_bytes": 10819,
+        "cpu_user_seconds": 2.375,
+        "cpu_system_seconds": 2.625,
+        "errors": []
+      },
+      {
+        "pid": 13536,
+        "parent_pid": 19760,
+        "name": "strata.exe",
+        "executable_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+        "rss_bytes": 62442496000,
+        "io_read_bytes": 2319523128,
+        "io_write_bytes": 22854,
+        "cpu_user_seconds": 483.59375,
+        "cpu_system_seconds": 80.96875,
+        "errors": []
+      }
+    ],
+    "disk_io": {
+      "PhysicalDrive0": {
+        "read_bytes": 9192188928,
+        "write_bytes": 4870371328,
+        "read_count": 250715,
+        "write_count": 293999,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive1": {
+        "read_bytes": 319427377152,
+        "write_bytes": 56999788032,
+        "read_count": 9693473,
+        "write_count": 189812,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive2": {
+        "read_bytes": 558167040,
+        "write_bytes": 1892352,
+        "read_count": 4153,
+        "write_count": 362,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive3": {
+        "read_bytes": 332611509760,
+        "write_bytes": 0,
+        "read_count": 4958197,
+        "write_count": 0,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      }
+    },
+    "nvidia": {
+      "source": "nvidia-smi",
+      "telemetry_known": true,
+      "devices": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "memory_used_mib": 44432,
+          "memory_free_mib": 4197,
+          "utilization_percent": 0.0,
+          "power_watts": 7.43,
+          "temperature_c": 30.0,
+          "telemetry_known": true,
+          "optional": {
+            "clocks.current.graphics": 210,
+            "clocks.current.memory": 405,
+            "pcie.link.gen.current": 1,
+            "pcie.link.width.current": 8
+          }
+        }
+      ]
+    },
+    "alerts": [],
+    "errors": []
+  },
+  "ready_for_cleanup": false,
+  "failed_checks": [
+    {
+      "Key": "source_commit_exact",
+      "Value": false,
+      "Name": "source_commit_exact"
+    }
+  ]
+}

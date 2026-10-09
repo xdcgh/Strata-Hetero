@@ -1,5 +1,5 @@
 {
-  "prepared_utc": "2026-10-09T03:15:51.928985+00:00",
+  "prepared_utc": "2026-10-09T11:15:51.928985+08:00",
   "engine_cpp": {
     "sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
     "binary_sha256": "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494"
@@ -16,5 +16,13 @@
   "frozen_prompt_manifest_implementation_still_matches": false,
   "quality_prompt_manifest": "../20261009-06-quality-prompts/manifest.json",
   "quality_prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
-  "quality_prompt_counts_refreshed": true
+  "quality_prompt_counts_refreshed": true,
+  "launch_admission": {
+    "receipt": "admission.json",
+    "receipt_sha256": "95811de6aee832c658cf95d9726de66698db7eef01f0932ed984041301965c55",
+    "status": "pass",
+    "launch_process_receipt": "process.json",
+    "process_receipt_sha256": "c3d8d722ee6d81b5c22fa3d2a7dfb12f272b05bf5648b47c2c54b0d57b4c051d",
+    "scope": "launched immediately after fresh pass and commit check; exact saved JSON bytes"
+  }
 }

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-05-hetero04-ram-quality",
+  "status": "stopped_after_incomplete_formal_task",
+  "failed_prompt": "smoke_three_key_retrieval",
+  "root_ready_signal_used": true,
+  "request_controls": {
+    "warmup": 1,
+    "formals": 3,
+    "max_tokens": 128,
+    "seed": 42,
+    "reasoning_effort": "none",
+    "concurrency": 1
+  },
+  "formal_requests": [
+    {
+      "index": 0,
+      "status": "truncated_by_length",
+      "finish_reason": "length",
+      "prompt_tokens": 114,
+      "completion_tokens": 128,
+      "cache_n": 0,
+      "transport_error": null
+    },
+    {
+      "index": 1,
+      "status": "truncated_by_length",
+      "finish_reason": "length",
+      "prompt_tokens": 114,
+      "completion_tokens": 128,
+      "cache_n": 0,
+      "transport_error": null
+    },
+    {
+      "index": 2,
+      "status": "truncated_by_length",
+      "finish_reason": "length",
+      "prompt_tokens": 114,
+      "completion_tokens": 128,
+      "cache_n": 0,
+      "transport_error": null
+    }
+  ],
+  "quality_statuses": [
+    "not_assessed_incomplete_run",
+    "not_assessed_incomplete_run",
+    "not_assessed_incomplete_run"
+  ],
+  "failure_reason": "All three formal completions hit the fixed 128-token cap (finish_reason=length). Quality could not be assessed; this is not classified as a content mismatch.",
+  "raw_outputs_preserved": true,
+  "actual_engine_token_ids_in_sse": "saved in each SSE final diagnostic, but final stop is length and the strict-completion parser correctly rejects them for accepted evidence",
+  "skipped_longer_prompts": [
+    "long_1k",
+    "long_4k",
+    "long_16k",
+    "long_30k7"
+  ],
+  "latest_resource_sample": {
+    "observed_at_utc": "2026-10-09T04:54:58.956Z",
+    "physical_ram_gate": {
+      "status": "pass",
+      "available_gib": 47.841,
+      "required_gib": 12
+    },
+    "system_commit_gate": {
+      "status": "pass",
+      "available_gib": 18.723,
+      "required_gib": 4.0,
+      "source": "PSAPI GetPerformanceInfo"
+    },
+    "alerts": [],
+    "errors": []
+  },
+  "resource_gates_caused_stop": false,
+  "cleanup_authorized": false
+}

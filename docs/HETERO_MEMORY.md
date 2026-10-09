@@ -36,6 +36,8 @@ The 20 GiB full-table arm passed five short tasks, but failed a 1,036-token natu
 
 ## Measurement matrix
 
+The latest integrated `e87d74c` full-table run `20261009-05-hetero04-ram-quality` reached ready with all 28,800,138,240 table bytes locked, a 20 GiB pinned expert complement and the same 12,213 cached GPU experts as the direct control. It passed the first four smoke tasks and matched their 12 formal token sequences. The fifth, 114-token three-key retrieval, failed all three formals: a correct prefix diverged at output token 66, followed by 63 token-ID-0 / visible `!` tokens. The 128-token cap remained fixed. Four longer prompts were stopped. Exact failure request windows retained at least 47.578 GiB physical availability and 18.427 GiB system commit headroom with no sampler alerts or errors; whole-startup/lifetime minima are recorded separately. The instance was unloaded and its owned processes stopped. This is an uninstrumented correctness failure, not evidence of memory exhaustion, and removal of the prototype's separate prewarm did not establish a repair. GPU-free row/gather parity and runtime synchronization isolation are next; no full-table speedup or daily default is accepted.
+
 | Arm | Expert budget | PLE | What must be recorded |
 |---|---|---|---|
 | Current upstream | Matched reference | Direct, existing row cache | Initial/warm startup, PLE wait, full prefill and output rates, file reads |

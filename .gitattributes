@@ -8,6 +8,8 @@ bench/hetero/**/requests/** -whitespace
 bench/hetero/**/*.sse.txt -whitespace
 # Native tool output is retained byte for byte, including its intentional padding.
 bench/hetero/**/*.log -whitespace
+# Executed benchmark helpers are retained as evidence with their original bytes.
+bench/hetero/**/*.ps1 -whitespace
 
 # launchers keep their platform line endings wherever the repository is cloned
 *.sh text eol=lf

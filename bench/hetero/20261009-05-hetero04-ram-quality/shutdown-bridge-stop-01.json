@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-05-hetero04-ram-quality",
+  "stopped_at_utc": "2026-10-09T05:11:25.8880687+00:00",
+  "checks": {
+    "launcher_exact": true,
+    "bridge_exact": true,
+    "listener_owned_by_bridge": true,
+    "engine_absent": true,
+    "model_unloaded": true,
+    "sampler_and_child_stopped": true,
+    "sampler_stop_file_exists": true
+  },
+  "bridge_before": {
+    "pid": 19760,
+    "parent_pid": 17588,
+    "creation_date": "2026-10-09T12:46:33.8479440+08:00",
+    "executable_path": "C:\\Python314\\python.exe",
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\config.json --port 8081"
+  },
+  "launcher_before": {
+    "pid": 17588,
+    "creation_utc": "2026-10-09T04:46:33.8141110+00:00",
+    "start_delta_ms": 0.0007,
+    "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\config.json --port 8081"
+  },
+  "termination": "Stop-Process on exact verified run-owned bridge PID 19760 after POST /v1/unload",
+  "launcher_natural_exit_wait_seconds": 30,
+  "launcher_exited_naturally": true,
+  "bridge_absent": true,
+  "listener_absent": true,
+  "engine_absent": true,
+  "sampler_absent": true,
+  "final_listener": [],
+  "launcher_after": null
+}

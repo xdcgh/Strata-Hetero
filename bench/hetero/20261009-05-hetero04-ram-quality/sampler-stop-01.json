@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-05-hetero04-ram-quality",
+  "stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\STOP",
+  "stop_file_bytes": 46,
+  "stopped_at_utc": "2026-10-09T05:11:09.2911966+00:00",
+  "sampler_pid": 22320,
+  "sampler_creation_date": "2026-10-09T12:46:33.8469180+08:00",
+  "sampler_executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "sampler_command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py --output C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\samples.jsonl --pid 17588 --interval 1 --max-seconds 10800 --minimum-commit-gib 4 --stop-file C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\STOP",
+  "children_before": [
+    {
+      "pid": 3192,
+      "parent_pid": 22320,
+      "creation_date": "2026-10-09T12:46:33.8776620+08:00",
+      "executable_path": "C:\\Python314\\python.exe",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py --output C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\samples.jsonl --pid 17588 --interval 1 --max-seconds 10800 --minimum-commit-gib 4 --stop-file C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\resource\\STOP"
+    }
+  ],
+  "sampler_stopped": true,
+  "sampler_children_stopped": true,
+  "last_resource_record_type": "sampler_stopped",
+  "last_resource_sample": {
+    "schema_version": 1,
+    "record_type": "sampler_stopped",
+    "observed_at_utc": "2026-10-09T05:11:08.956Z",
+    "monotonic_seconds": 8295.6643523,
+    "reason": "stop_file_exists"
+  }
+}

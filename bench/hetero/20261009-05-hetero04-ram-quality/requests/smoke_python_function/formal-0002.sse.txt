@@ -1,0 +1,36 @@
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"role": "assistant", "content": ""}, "finish_reason": null}]}
+
+: keep-alive
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "```"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "python"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "\ndef"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": " add"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "_two"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "(x"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "):"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "\n   "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": " return"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": " x"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": " +"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": " "}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "2"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "\n```"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-36c0ecbf525443229266500e", "object": "chat.completion.chunk", "created": 1791521632, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 39, "completion_tokens": 18, "total_tokens": 57, "prompt_tokens_details": {"cached_tokens": 0}}, "timings": {"cache_n": 0, "prompt_n": 39, "prompt_ms": 392.0, "prompt_per_token_ms": 10.051, "prompt_per_second": 99.5, "predicted_n": 18, "predicted_ms": 683.9, "predicted_per_token_ms": 37.994, "predicted_per_second": 26.3, "draft_n": 15, "draft_n_accepted": 14}, "strata_diagnostics": {"actual_generated_token_ids": [71093, 12305, 198, 727, 884, 22517, 2007, 1590, 198, 262, 460, 830, 478, 220, 17, 198, 71093, 248046], "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs", "include_stop": true}}
+
+data: [DONE]
+

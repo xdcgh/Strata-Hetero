@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "exact saved warmup+formal client request intervals, matched on Windows monotonic QPC clock; distinct from whole model lifetime",
+  "windows": [
+    {
+      "file": "warmups.json",
+      "index": 0,
+      "start": 7261.6473546,
+      "end": 7271.3739597
+    },
+    {
+      "file": "requests.json",
+      "index": 0,
+      "start": 7271.3759385,
+      "end": 7276.2958971
+    },
+    {
+      "file": "requests.json",
+      "index": 1,
+      "start": 7276.2983386,
+      "end": 7281.4371711
+    },
+    {
+      "file": "requests.json",
+      "index": 2,
+      "start": 7281.440028,
+      "end": 7287.5699567
+    }
+  ],
+  "request_windows": {
+    "samples": 26,
+    "minimum_physical_gib": 47.578,
+    "minimum_commit_gib": 18.427,
+    "any_alerts": false,
+    "any_errors": false
+  },
+  "whole_sampler_lifetime": {
+    "samples": 1475,
+    "minimum_physical_gib": 38.205,
+    "minimum_commit_gib": 18.427,
+    "any_alerts": false,
+    "any_errors": false
+  },
+  "client_and_resource_clock_note": "Python monotonic ns/seconds on the same Windows host",
+  "source_sha256": {
+    "warmups.json": "8c7517802f4b2473939fdb6e047391694d1e2956f033e32ae309f6bf3763eea4",
+    "requests.json": "cb91272a242c082bbd76103c1041ecd4460df0b3d1957f5bf1177eef34821126"
+  },
+  "correction": "root-observed-failure.json named its resource block during the fifth prompt but counted the full sampler stream. Raw diagnostics and earlier receipt remain intact."
+}

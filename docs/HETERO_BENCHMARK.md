@@ -42,6 +42,8 @@ The first candidate natural-text attempt used an output cap of 1,024 rather than
 
 The integrated direct control was unloaded and its exact owned bridge, launcher and sampler stopped; port 8081 was released. This is bounded direct-mode task/token parity. Full-table RAM, logits, performance without token capture, larger contexts, Pelican, RULER and concurrent throughput still need their own measurements.
 
+The subsequent latest full-table RAM run `20261009-05-hetero04-ram-quality` passed four smoke tasks (12 matching formals), then failed the short three-key retrieval in all three formals. All three have a 65-token matching prefix, then 63 repeated ID-0 / `!` tokens and a length cap. The updated quality classifier catches degeneration after a correct prefix before generic truncation can mask it. Raw reports remain intact; `root-assessment-bang-tail.json` and `root-partial-vs-h4.json` add the reviewed classification. The latter requires 27 pairs but observes 15, so it remains incomplete and unaccepted. No longer natural prompts were started, and the failed instance was unloaded. This confirms a remaining RAM-mode regression on the latest merged binary; its cause is unresolved.
+
 ## Run contract
 
 Store `hardware_manifest.json`, `storage_profile.json`, `baseline.json`, `results.json`, `results.csv`, `resource/`, `logs/`, `comparison.md` and `DECISIONS.md` under `bench/hetero/<run>/`. When an item is not measured, record its status and reason, not a zero value. Keep raw model outputs and engine/client times. Timed-out, truncated, cache-contaminated or admission-failed samples stay in the evidence and are excluded from accepted speedups.

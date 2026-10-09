@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_executed",
+  "prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "warmup": 1,
+  "formal_repeats": 3,
+  "seed": 42,
+  "concurrency": 1,
+  "minimum_physical_gib": 12,
+  "minimum_commit_gib": 4,
+  "tasks": [
+    {
+      "prompt_id": "smoke_arithmetic",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_unicode",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_json_arithmetic",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "smoke_python_function",
+      "max_tokens": 256
+    },
+    {
+      "prompt_id": "smoke_three_key_retrieval",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_1k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_4k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_16k",
+      "max_tokens": 128
+    },
+    {
+      "prompt_id": "long_30k7",
+      "max_tokens": 128
+    }
+  ],
+  "cap_authority": "explicit matched experiment contract; do not replace caps with manifest max_output_tokens",
+  "comparison_runs": [
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality"
+  ]
+}

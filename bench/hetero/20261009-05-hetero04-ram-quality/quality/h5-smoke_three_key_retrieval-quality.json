@@ -1,0 +1,218 @@
+{
+  "schema": "strata-hetero-quality-report-v1",
+  "created_utc": "2026-10-09T04:54:21.313717+00:00",
+  "prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "responses_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests",
+  "response_count": 15,
+  "results": [
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_arithmetic\\formal-0000.text.txt",
+      "response_text_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "prompt_id": "smoke_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 1,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_arithmetic\\formal-0001.text.txt",
+      "response_text_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "prompt_id": "smoke_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 1,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_arithmetic\\formal-0002.text.txt",
+      "response_text_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "prompt_id": "smoke_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 1,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_json_arithmetic\\formal-0000.text.txt",
+      "response_text_sha256": "28618f0a6a8912a3902c2264fb6d7fc15bef94a71989c305962451d880c38f84",
+      "prompt_id": "smoke_json_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 38,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "nonfinite_json_numeric_check": "pass",
+      "result_is_json_number": true,
+      "result_matches_expected": true,
+      "expression_matches_expected": true
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_json_arithmetic\\formal-0001.text.txt",
+      "response_text_sha256": "28618f0a6a8912a3902c2264fb6d7fc15bef94a71989c305962451d880c38f84",
+      "prompt_id": "smoke_json_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 38,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "nonfinite_json_numeric_check": "pass",
+      "result_is_json_number": true,
+      "result_matches_expected": true,
+      "expression_matches_expected": true
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_json_arithmetic\\formal-0002.text.txt",
+      "response_text_sha256": "28618f0a6a8912a3902c2264fb6d7fc15bef94a71989c305962451d880c38f84",
+      "prompt_id": "smoke_json_arithmetic",
+      "run_status": "completed",
+      "response_bytes_utf8": 38,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "nonfinite_json_numeric_check": "pass",
+      "result_is_json_number": true,
+      "result_matches_expected": true,
+      "expression_matches_expected": true
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_python_function\\formal-0000.text.txt",
+      "response_text_sha256": "4e21cb1ab59503c123be0ce032b0321ea3c7ab128cd8ab99d2df3f02e42af0cd",
+      "prompt_id": "smoke_python_function",
+      "run_status": "completed",
+      "response_bytes_utf8": 46,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "status": "ast_valid",
+      "function": "add_two",
+      "arguments": [
+        "x"
+      ],
+      "execution": "not_run; generated code is parsed only",
+      "quality_status": "pass"
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_python_function\\formal-0001.text.txt",
+      "response_text_sha256": "4e21cb1ab59503c123be0ce032b0321ea3c7ab128cd8ab99d2df3f02e42af0cd",
+      "prompt_id": "smoke_python_function",
+      "run_status": "completed",
+      "response_bytes_utf8": 46,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "status": "ast_valid",
+      "function": "add_two",
+      "arguments": [
+        "x"
+      ],
+      "execution": "not_run; generated code is parsed only",
+      "quality_status": "pass"
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_python_function\\formal-0002.text.txt",
+      "response_text_sha256": "4e21cb1ab59503c123be0ce032b0321ea3c7ab128cd8ab99d2df3f02e42af0cd",
+      "prompt_id": "smoke_python_function",
+      "run_status": "completed",
+      "response_bytes_utf8": 46,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "status": "ast_valid",
+      "function": "add_two",
+      "arguments": [
+        "x"
+      ],
+      "execution": "not_run; generated code is parsed only",
+      "quality_status": "pass"
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_three_key_retrieval\\formal-0000.text.txt",
+      "response_text_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+      "prompt_id": "smoke_three_key_retrieval",
+      "run_status": "truncated_by_length",
+      "response_bytes_utf8": 155,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "not_assessed_incomplete_run",
+      "generation_stability": "not_assessed"
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_three_key_retrieval\\formal-0001.text.txt",
+      "response_text_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+      "prompt_id": "smoke_three_key_retrieval",
+      "run_status": "truncated_by_length",
+      "response_bytes_utf8": 155,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "not_assessed_incomplete_run",
+      "generation_stability": "not_assessed"
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_three_key_retrieval\\formal-0002.text.txt",
+      "response_text_sha256": "3abde268f026e5b6d3a50ddb19a90079bf91ba767dcd4a12ff14ec46578a9c02",
+      "prompt_id": "smoke_three_key_retrieval",
+      "run_status": "truncated_by_length",
+      "response_bytes_utf8": 155,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "not_assessed_incomplete_run",
+      "generation_stability": "not_assessed"
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_unicode\\formal-0000.text.txt",
+      "response_text_sha256": "31424702b74d34014fea83082783ab8bce472fd7259f259afa23c6604064d475",
+      "prompt_id": "smoke_unicode",
+      "run_status": "completed",
+      "response_bytes_utf8": 26,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_unicode\\formal-0001.text.txt",
+      "response_text_sha256": "31424702b74d34014fea83082783ab8bce472fd7259f259afa23c6604064d475",
+      "prompt_id": "smoke_unicode",
+      "run_status": "completed",
+      "response_bytes_utf8": 26,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    },
+    {
+      "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-05-hetero04-ram-quality\\requests\\smoke_unicode\\formal-0002.text.txt",
+      "response_text_sha256": "31424702b74d34014fea83082783ab8bce472fd7259f259afa23c6604064d475",
+      "prompt_id": "smoke_unicode",
+      "run_status": "completed",
+      "response_bytes_utf8": 26,
+      "canonical_visible_text_reencoded_tokens": null,
+      "actual_emitted_token_ids": null,
+      "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+      "quality_status": "pass",
+      "exact_match": true
+    }
+  ],
+  "canonical_reencoded_output_token_agreement": {
+    "status": "actual_ids_unavailable",
+    "canonical_visible_text_counts": "per-result count only when tokenizer is supplied",
+    "actual_emitted_token_ids": "unavailable in saved response text; do not infer or claim agreement"
+  }
+}

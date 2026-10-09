@@ -1,0 +1,22 @@
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"role": "assistant", "content": ""}, "finish_reason": null}]}
+
+: keep-alive
+
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "你好"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "，"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "世界"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "！"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "🌏"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": " e"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {"content": "́"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-bbc980fe05d84b59aaace207", "object": "chat.completion.chunk", "created": 1791521612, "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero", "choices": [{"index": 0, "delta": {}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 32, "completion_tokens": 10, "total_tokens": 42, "prompt_tokens_details": {"cached_tokens": 0}}, "timings": {"cache_n": 0, "prompt_n": 32, "prompt_ms": 354.1, "prompt_per_token_ms": 11.066, "prompt_per_second": 90.4, "predicted_n": 10, "predicted_ms": 302.3, "predicted_per_token_ms": 30.23, "predicted_per_second": 33.1, "draft_n": 9, "draft_n_accepted": 7}, "strata_diagnostics": {"actual_generated_token_ids": [109266, 3709, 96748, 6115, 9008, 234, 237, 378, 52033, 248046], "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs", "include_stop": true}}
+
+data: [DONE]
+
