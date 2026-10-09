@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "CPU vision oracle reviewed; static vision port pure fixtures pass; F/E controlled PLE quality preparation",
+  "phase": "F PLE placement ready and root verified; frozen nine-task quality authorized",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -64,7 +64,7 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "H21 exact owned processes and8081 listener absent; CPU-only vision oracle completed pending root review; old service/ComfyUI restoration still due after experiments",
+    "gpu_state_at_quota_resume": "F PLE placement owned model ready with fresh gates and exact process/listener binding; H21 terminal",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
@@ -72,9 +72,16 @@
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T07:34:18.816001+00:00",
-  "current_run": null,
-  "current_model_owner": null,
+  "last_checkpoint_utc": "2026-10-09T07:57:51.835782+00:00",
+  "current_run": "20261009-11-ple-f-explicit-quality",
+  "current_model_owner": {
+    "launcher_pid": 18928,
+    "bridge_pid": 18636,
+    "engine_pid": 6880,
+    "sampler_launcher_pid": 16948,
+    "sampler_child_pid": 6028,
+    "port": 8081
+  },
   "upstream_pending_integration": {
     "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
     "tag": "v0.1.41",

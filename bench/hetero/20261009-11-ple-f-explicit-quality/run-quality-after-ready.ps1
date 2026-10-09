@@ -294,7 +294,10 @@ try {
                 $runner.Refresh()
                 $actualLive = Get-CimInstance Win32_Process -Filter "ProcessId = $($runnerChildCim.ProcessId)" -ErrorAction SilentlyContinue
                 if ($runner.HasExited -and -not $actualLive) { break }
-                if (-not $runner.HasExited -and -not $actualLive) { throw "${id}: C Python benchmark child exited but venv launcher is still active" }
+                if (-not $runner.HasExited -and -not $actualLive) {
+                    if (-not $runner.WaitForExit(5000)) { throw "${id}: benchmark child exited but its owned launcher did not finish within 5s" }
+                    break
+                }
                 $null = Get-LatestResourceGate "during $id"
                 $null = Get-ReadyBindings "during $id" 1
                 $diag = Get-DiagnosticSlice $diagOffset; $diagOffset = $diag.end_offset
