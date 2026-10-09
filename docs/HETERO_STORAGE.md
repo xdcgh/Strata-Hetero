@@ -26,6 +26,8 @@ On 2026-10-09, `20261009-09-storage-profile` completed 96 read-only, unbuffered 
 
 The original F shard remains intact. `20261009-08-ple-copy/copy-receipt.json` records streaming source SHA and independent owned-part readback SHA, followed by final-file identity verification on E. The 49.86 GB GGUF also contains tensors beyond the 28.80 GB PLE table. An external copy requires explicit matching `--native-dense-gguf` arguments for the original four F shards: default dense-source discovery otherwise appends the distinct E path and the duplicate split number is rejected. The PLE row tensor is opened separately. The prepared F/E arms differ only in `--ple-gguf` placement and their run log paths.
 
+The explicit F placement control completed all nine tasks/27 formals on 2026-10-09, with actual emitted IDs and reconstructed SSE text matching H4. All native dense inputs remain the original four F shards. Exact owned unload/process/listener cleanup is terminal. E is prepared with the same complete normalized controls and its independently verified copy selected only for PLE. No model placement speedup is accepted yet; controller environment/scope failures occurred before any chat request and remain separate evidence from the successful quality matrix.
+
 The workload placement planner, parallel model startup and application-level striping still require implementation and model measurements. Startup and active lookup are different workloads and cannot share one unqualified disk score.
 
 ## Placement experiments

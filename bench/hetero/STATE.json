@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "F PLE placement ready and root verified; frozen nine-task quality authorized",
+  "phase": "F PLE placement passed27formal exactIDs/text and terminal; E matched placement prepared",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -43,7 +43,8 @@
     "Bounded zero-ID head diagnostic H18 passed27formal exactIDs but no readback branch fired; score statistics unavailable",
     "Actual Arc pipe worker completed45 F32 comparisons; serialized transfer-inclusive latency measured; native quantized equivalence and model gain not accepted",
     "H21 same-binary diagnostic-off:21formal passed;16K threeformal128 ID0 loops and later threecap8 arithmetic ID0 loops; full-RAM route rejected; exact owned cleanup terminal",
-    "Native CPU vision oracle:four aligned PNGs16 finite exact SVE outputs, all warm/formal hashes stable;34memory gates pass; owned helper exited; root verified raw hashes; OpenVINO/NPU parity pending"
+    "Native CPU vision oracle:four aligned PNGs16 finite exact SVE outputs, all warm/formal hashes stable;34memory gates pass; owned helper exited; root verified raw hashes; OpenVINO/NPU parity pending",
+    "Explicit F PLE placement:all9tasks27formal exactIDs and reconstructedSSEtext matchH4; warm1 formal3 fixedcaps/cache0; rootreviewed and exactownedcleanup terminal"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -64,7 +65,7 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "F PLE placement owned model ready with fresh gates and exact process/listener binding; H21 terminal",
+    "gpu_state_at_quota_resume": "F placement terminal; noexperiment modelowner/listener; E pairprepared; oldservice/ComfyUI restoration remainsdueafterexperiment work",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
@@ -72,16 +73,9 @@
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T07:57:51.835782+00:00",
-  "current_run": "20261009-11-ple-f-explicit-quality",
-  "current_model_owner": {
-    "launcher_pid": 18928,
-    "bridge_pid": 18636,
-    "engine_pid": 6880,
-    "sampler_launcher_pid": 16948,
-    "sampler_child_pid": 6028,
-    "port": 8081
-  },
+  "last_checkpoint_utc": "2026-10-09T08:29:01.496796+00:00",
+  "current_run": null,
+  "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
     "tag": "v0.1.41",

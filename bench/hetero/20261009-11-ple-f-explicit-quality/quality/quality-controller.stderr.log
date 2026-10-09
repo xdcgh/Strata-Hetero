@@ -1,0 +1,9 @@
+Unable to find type [System.Text.Json.JsonDocument].
+At C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261009-11-ple-f-explicit-quality\run-quality-after-ready.
+ps1:209 char:19
++     $samplerDoc = [System.Text.Json.JsonDocument]::Parse($samplerRece ...
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Text.Json.JsonDocument:TypeName) [], ParentContainsErrorRecord 
+   Exception
+    + FullyQualifiedErrorId : TypeNotFound
+ 

@@ -1,0 +1,62 @@
+{
+  "schema": "run11-live-process-observation-v1",
+  "observed_utc": "2026-10-09T07:49:04.4349535Z",
+  "status": "launched_waiting_for_root_ready_verification",
+  "process_json_sha256": "0f77e8f59b008868887bf7ed4ffaca1204c491b12b62245ff489928f2e620771",
+  "sampler_process_json_sha256": "4050aab948367bf76e88e540c3419b87f11cbed584fb17768ab830198024235f",
+  "observed_processes": [
+    {
+      "pid": 18928,
+      "ppid": 13172,
+      "name": "python.exe",
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "create_utc": "2026-10-09T07:48:01.5153060Z",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\config.json --port 8081 "
+    },
+    {
+      "pid": 18636,
+      "ppid": 18928,
+      "name": "python.exe",
+      "exe": "C:\\Python314\\python.exe",
+      "create_utc": "2026-10-09T07:48:01.5535770Z",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py --engine strata --config C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\config.json --port 8081 "
+    },
+    {
+      "pid": 16948,
+      "ppid": 13172,
+      "name": "python.exe",
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "create_utc": "2026-10-09T07:48:01.5634120Z",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py --output C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\resource\\samples.jsonl --pid 18928 --interval 1 --max-seconds 10800 --minimum-commit-gib 4 --stop-file C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\resource\\STOP "
+    },
+    {
+      "pid": 6028,
+      "ppid": 16948,
+      "name": "python.exe",
+      "exe": "C:\\Python314\\python.exe",
+      "create_utc": "2026-10-09T07:48:01.5960390Z",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -X utf8 -B C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py --output C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\resource\\samples.jsonl --pid 18928 --interval 1 --max-seconds 10800 --minimum-commit-gib 4 --stop-file C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\resource\\STOP "
+    },
+    {
+      "pid": 6880,
+      "ppid": 18636,
+      "name": "strata.exe",
+      "exe": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe",
+      "create_utc": "2026-10-09T07:48:02.0739230Z",
+      "command_line": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io direct --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf --ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+    }
+  ],
+  "engine_expected_command": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io direct --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf --ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+  "engine_actual_command": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io direct --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf --ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+  "engine_command_matches": true,
+  "listener": [],
+  "resource_samples": 63,
+  "latest_ram_available_gib": 101.149,
+  "latest_commit_available_gib": 68.656,
+  "latest_vram_free_mib": 4903,
+  "latest_vram_used_mib": 43726,
+  "latest_sample_alerts": [],
+  "latest_sample_errors": [],
+  "root_ready_confirmed": false,
+  "note": "Process status observation only; no /v1/status API call and no quality runner."
+}

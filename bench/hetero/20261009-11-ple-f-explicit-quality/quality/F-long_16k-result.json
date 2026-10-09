@@ -1,0 +1,41 @@
+{
+  "prompt_id": "long_16k",
+  "prompt_sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+  "local_chat_tokens": 16396,
+  "max_tokens": 128,
+  "warmups": 1,
+  "formal": 3,
+  "runner_exit": 0,
+  "quality_statuses": [
+    "pass",
+    "pass",
+    "pass"
+  ],
+  "actual_sse_token_ids_valid": true,
+  "actual_token_id_hashes": [
+    "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+    "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+    "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+  ],
+  "h4_token_id_hashes": [
+    "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+    "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+    "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+  ],
+  "actual_token_ids_match_h4": [
+    true,
+    true,
+    true
+  ],
+  "formal_prompt_tokens": [
+    16396,
+    16396,
+    16396
+  ],
+  "cache_n": [
+    0,
+    0,
+    0
+  ],
+  "diagnostic_observed": false
+}

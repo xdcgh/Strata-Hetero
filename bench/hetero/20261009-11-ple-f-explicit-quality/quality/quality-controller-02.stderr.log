@@ -1,0 +1,5 @@
+Exception: C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261009-11-ple-f-explicit-quality\run-quality-after-ready.ps1:162
+Line |
+ 162 |  бн not $engine) { throw "${When}: exact Hetero engine child is absent" }
+     |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | quality entry: exact Hetero engine child is absent

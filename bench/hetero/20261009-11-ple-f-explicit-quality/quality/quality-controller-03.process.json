@@ -1,0 +1,25 @@
+{
+  "schema": "run11-quality-controller-process-v1",
+  "controller_id": "03",
+  "run_id": "20261009-11-ple-f-explicit-quality",
+  "pid": 7756,
+  "parent_pid": 19868,
+  "executable": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "create_utc": "2026-10-09T08:10:24.9340210Z",
+  "argv": [
+    "-NoProfile",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\run-quality-after-ready.ps1",
+    "-Run",
+    "-RootReadyConfirmed",
+    "-LauncherPid",
+    "18928",
+    "-SamplerPid",
+    "16948"
+  ],
+  "script_sha256": "ecd2836a2888a21414a8bba2dfd4ed9a5b2a4215dcb73fca769ad1ac7c77f1ee",
+  "pwsh_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "started_utc": "2026-10-09T08:10:24.9247218Z",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\quality\\quality-controller-03.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\quality\\quality-controller-03.stderr.log"
+}

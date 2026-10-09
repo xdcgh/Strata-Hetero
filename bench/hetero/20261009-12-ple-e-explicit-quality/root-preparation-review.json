@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T08:32:42.304967+00:00",
+  "status": "root_prepared_reviewed_not_launched",
+  "scripts_sha256": {
+    "launch-owned.ps1": "d572a1ddb2e985fc491e2e7da2d5e102edfc85d79857a3f0c09aabb47ad1c04f",
+    "run-quality-after-ready.ps1": "ce881c9c86b2469bd35c26e54c7eee0823a23de26f551231a02747cbaa18f445"
+  },
+  "default_validation": "bothpass;4originalF dense+1verifiedE PLEstat plus14runtime identities; no launch/API/WSL action",
+  "f_control_terminal_receipt_sha256": "52cdf8583a080e485e6ae19e41488be9787ad1e2f8d0e37b011e8c2e26e727a3",
+  "controls_normalized_sha256": "3c2f29ae46293c96537791071be18b04ae6ecdf0c740cf9e6f7c749c8a99751b",
+  "native_dense_sources": "F original four shards in unchanged order; no E duplicate dense shard",
+  "ple_source": "independently verifiedE copy selectedonlyby--ple-gguf",
+  "next_step": "fresh admission then startonce; root liveCheckReady required before quality"
+}

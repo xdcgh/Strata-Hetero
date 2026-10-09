@@ -1,0 +1,10 @@
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+{"run":"C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality","status":"nine_prompt_matrix_complete","prompt_count":9,"formal_requests":27,"warmup_requests":9,"sampler_stop_requested":false,"sampler_remains_owned_for_root_cleanup":true}

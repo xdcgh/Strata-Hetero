@@ -1,0 +1,48 @@
+{
+    "schema_version":  1,
+    "run_id":  "20261009-11-ple-f-explicit-quality",
+    "launcher_pid":  18928,
+    "start_utc":  "2026-10-09T07:48:01.5153060Z",
+    "python":  "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "executable":  "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "launcher_exe":  "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "launcher_create_utc":  "2026-10-09T07:48:01.5153060Z",
+    "argv":  [
+                 "-u",
+                 "-X",
+                 "utf8",
+                 "-B",
+                 "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py",
+                 "--engine",
+                 "strata",
+                 "--config",
+                 "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\config.json",
+                 "--port",
+                 "8081"
+             ],
+    "actual_server_child_pid":  18636,
+    "actual_server_child_parent_pid":  18928,
+    "actual_server_child_exe":  "C:\\Python314\\python.exe",
+    "actual_server_child_create_utc":  "2026-10-09T07:48:01.5535770Z",
+    "config":  "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\config.json",
+    "config_sha256":  "b6469b45383a5dfa361221f22bacc964120c3a7accf4b6adaafb7e599c042abd",
+    "engine_path":  null,
+    "engine_sha256":  "fc3bab3f2797b51407cf3afabaf4ac7fd198cc07bbf88e62cc40b5a639ab2494",
+    "engine_source_sha":  "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "server_file_sha256":  "e0210a9a12ccf423e29b4d85f2ef4963b9850f0a4fce84bc36705dac3d131f5b",
+    "identity":  "identity.json",
+    "provenance":  "provenance.json",
+    "expert_profile":  {
+                           "path":  "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+                           "size_bytes":  196632,
+                           "sha256":  "8f59b4aa8873209dff11c11e37bcda9529a1335b724a1afeea37bf6388975baf"
+                       },
+    "admission_receipt":  "admission.json",
+    "admission_sha256":  "24ab2ea4550fe62fdf04ae5d7e924c4e8effb7abcd485ef0583a5a3026631d81",
+    "identity_recheck":  "identity-recheck.json",
+    "sampler_receipt":  "sampler-process.json",
+    "role":  "owned PLE F quality server",
+    "inherited_strata_names_cleared":  [
+
+                                       ]
+}
