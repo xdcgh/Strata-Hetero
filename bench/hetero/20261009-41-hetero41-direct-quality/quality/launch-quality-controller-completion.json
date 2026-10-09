@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-41-hetero41-direct-quality",
+  "status": "nine_prompt_matrix_complete_candidate_left_live",
+  "controller_pid": 6260,
+  "controller_create_utc": "2026-10-09T11:41:17.8225760Z",
+  "controller_exit_code": 0,
+  "stage_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\quality\\F-nine-prompt-stage.json",
+  "stage_sha256": "88a10e0a925c71a9b84bd62837da3527cb103d1a6fb16a1c2124064af559a9d3",
+  "preflight": {
+    "status": "live_quality_preflight_pass",
+    "chat_requests_sent": 0,
+    "prompt_count": 9,
+    "model_requests": 0,
+    "engine_pid": 22684,
+    "physical_gib": 84.558,
+    "commit_gib": 45.75,
+    "manifest_has_prompt_paths": true,
+    "identity_bound": true
+  },
+  "engine": {
+    "parent_pid": 16956,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe",
+    "sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+    "source_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+    "create_utc": "2026-10-09T11:41:24.0422700Z",
+    "pid": 22684
+  },
+  "server_launcher": {
+    "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "create_utc": "2026-10-09T11:41:23.3572970Z",
+    "pid": 7552
+  },
+  "server_child": {
+    "create_utc": "2026-10-09T11:41:23.3920970Z",
+    "exe": "C:\\Python314\\python.exe",
+    "parent_pid": 7552,
+    "pid": 16956
+  },
+  "sampler_launcher": {
+    "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "create_utc": "2026-10-09T11:41:23.4152770Z",
+    "pid": 18496
+  },
+  "sampler_child": {
+    "create_utc": "2026-10-09T11:41:23.4516070Z",
+    "exe": "C:\\Python314\\python.exe",
+    "parent_pid": 18496,
+    "pid": 15408
+  },
+  "quality": {
+    "prompt_count": 9,
+    "warmups": 9,
+    "formal_requests": 27,
+    "all_strict_quality_pass": true,
+    "all_formal_actual_ids_match_h4": true,
+    "cache_n_all_zero": true
+  },
+  "prompts": [
+    {
+      "id": "smoke_arithmetic",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 27,
+      "max_tokens": 128,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea"
+      ],
+      "h4_ids_sha256": [
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea"
+      ],
+      "actual_ids_valid": true
+    },
+    {
+      "id": "smoke_unicode",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 32,
+      "max_tokens": 128,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c"
+      ],
+      "h4_ids_sha256": [
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+        "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c"
+      ],
+      "actual_ids_valid": true
+    },
+    {
+      "id": "smoke_json_arithmetic",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 50,
+      "max_tokens": 128,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec"
+      ],
+      "h4_ids_sha256": [
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+        "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec"
+      ],
+      "actual_ids_valid": true
+    },
+    {
+      "id": "smoke_python_function",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 39,
+      "max_tokens": 256,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb"
+      ],
+      "h4_ids_sha256": [
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+        "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb"
+      ],
+      "actual_ids_valid": true
+    },
+    {
+      "id": "smoke_three_key_retrieval",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 114,
+      "max_tokens": 128,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "h4_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_ids_valid": true
+    },
+    {
+      "id": "long_1k",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 1036,
+      "max_tokens": 128,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "h4_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_ids_valid": true
+    },
+    {
+      "id": "long_4k",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 4109,
+      "max_tokens": 128,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "h4_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_ids_valid": true
+    },
+    {
+      "id": "long_16k",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 16396,
+      "max_tokens": 128,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "h4_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_ids_valid": true
+    },
+    {
+      "id": "long_30k7",
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "chat_tokens": 30712,
+      "max_tokens": 128,
+      "actual_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "actual_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "h4_ids_sha256": [
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+      ],
+      "actual_ids_valid": true
+    }
+  ],
+  "latest_resource": {
+    "commit_gib": 45.505,
+    "ram_gib": 64.759,
+    "age_seconds": 0.352,
+    "observed_at_utc": "2026-10-09T11:49:08.531Z"
+  },
+  "sampler_stop_requested": false,
+  "candidate_left_live_for_root_review": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "live_quality_preflight_pass",
+  "chat_requests_sent": 0,
+  "prompt_count": 9,
+  "model_requests": 0,
+  "engine_pid": 22684,
+  "physical_gib": 84.558,
+  "commit_gib": 45.75,
+  "manifest_has_prompt_paths": true,
+  "identity_bound": true
+}

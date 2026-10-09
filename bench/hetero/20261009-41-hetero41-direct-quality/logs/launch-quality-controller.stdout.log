@@ -1,0 +1,10 @@
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+{"schema_version":1,"run_id":"20261009-41-hetero41-direct-quality","status":"nine_prompt_matrix_complete","completed_utc":"2026-10-09T11:48:34.7873412Z","launch_attempts":1,"startup_watch_status":"startup_ready","checkready_status":"live_quality_preflight_pass","model_requests_before_quality":0,"stage_status":"nine_prompt_matrix_complete","prompt_count":9,"formal_requests":27,"warmup_requests":9,"sampler_stop_requested":false,"model_left_live_for_root_review":true}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "watcher_functions_extracted": [
+    "Exact",
+    "Stop-ExactTree",
+    "Assert-NewEvidencePaths",
+    "Get-LatestSample"
+  ],
+  "cases": [
+    "fractional UTC receipt string preserved",
+    "fractional UTC sample string preserved",
+    "exact process identity match",
+    "child-first natural parent exit accepted",
+    "reused PID with changed CreateTime rejected before parent stop",
+    "existing evidence rejected without overwrite"
+  ],
+  "real_processes_stopped": 0,
+  "hardware_or_model_calls": 0,
+  "utc": "2026-10-09T11:01:21.9318776Z"
+}

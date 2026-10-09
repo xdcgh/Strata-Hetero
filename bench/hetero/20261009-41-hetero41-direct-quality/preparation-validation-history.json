@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "corrected_prelaunch_validator_assumption",
+  "attempts": [
+    {
+      "iteration": 1,
+      "result": "failed",
+      "run": "20261009-40-upstream41-direct-quality",
+      "phase": "launch-owned.ps1 default validation",
+      "error": "provenance is not the prepared run11 F arm",
+      "cause": "copied F11 validator treated placement arm F as the same field as the v1.41 engine identity arm label; the prepared provenance correctly uses arm upstream41/hetero41 while retaining original F placement",
+      "correction": "validator now verifies ple_io=direct and exact placement_contrast.path on original F: model path; no provenance identity was falsified",
+      "rerun": "PowerShell 7 default validation pass for both launch scripts and both quality controllers; no Start/Run, WSL shutdown, admission, API, or model request occurred"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-41-hetero41-direct-quality",
+  "status": "prepared_static_validations_passed",
+  "start_performed": false,
+  "quality_run_performed": false,
+  "commands": [
+    "verified pwsh7 -NoProfile -File launch-owned.ps1 (no -Start)",
+    "verified pwsh7 -NoProfile -File run-quality-after-ready.ps1 (no -CheckReady/-Run)",
+    "verified pwsh7 -NoProfile -File startup-watch.ps1 (no -Monitor)"
+  ],
+  "parser": [
+    "launch-owned.ps1",
+    "run-quality-after-ready.ps1",
+    "startup-watch.ps1"
+  ],
+  "launch_validator": "prepared_validated; start_performed=false",
+  "quality_validator": "prepared_quality_validated; run_started=false; prompt_count=9; warmup1/formal3; no requests",
+  "watcher_validator": "startup_watch_prepared; monitor_started=false",
+  "prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "jsonl_reader_sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d",
+  "jsonl_fixture_sha256": "40f2b4eb1c6c15fa3d2d5d2213e75758e51dc53c9aeef25c220fae7991c80827",
+  "jsonl_fixture_count": 10,
+  "normalized_config_sha256": "d12c461a9c02cd943433a8f0a5d694eaa7cf4f8a86417bdc207ddfd1b92a4d1a",
+  "recorded_utc": "2026-10-09T11:41:17.759323+00:00",
+  "jsonl_fixture_result_sha256": "e51d1bb91e0c9568c3324d85c39123491c3d593f710f496a55c5af8ed30f66c9",
+  "coordinator_parser": "passed; coordinator not executed",
+  "coordinator_sha256": "01b609826db20251886a297e1f411fce438693a23e0c07c099c7ac428c0df850",
+  "quality_controller_sha256": "dcb68b86b81c0d2a7db92cc0ec7343d72123c8b48e2a2f76d6a383b32932a078",
+  "startup_watch_sha256": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7"
+}

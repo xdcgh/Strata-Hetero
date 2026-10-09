@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": "root code review before any model launch",
+  "recorded_utc": "2026-10-09T11:01:31.129879+00:00",
+  "original_draft": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\startup-watch.before-root-review-fix.ps1",
+    "sha256": "30cfcc7aceb763ed3e178681c3cbd8d3c70468c85f769a2c3d24780ebe697620"
+  },
+  "findings_fixed": [
+    "PowerShell ConvertFrom-Json coerced ISO creation/observation timestamps to DateTime; all watcher receipt/sample JSON now use -DateKind String to preserve fractional UTC exactly.",
+    "Evidence-path preflight now separately parenthesizes Test-Path calls and is factored as Assert-NewEvidencePaths.",
+    "After stopping engine, server/launcher PID absence is recorded as natural child-first exit; a still-live PID must exactly match identity, otherwise termination stops and refuses PID reuse."
+  ],
+  "verification": "fake host-only fixture invokes function bodies extracted from this startup-watch.ps1; no actual process stop or hardware/model call."
+}

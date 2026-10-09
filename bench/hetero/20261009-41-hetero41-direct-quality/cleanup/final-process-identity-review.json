@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-41-hetero41-direct-quality",
+  "status": "post-cleanup-independent-process-identity-check-passed",
+  "checked_utc": "2026-10-09T11:52:29.7007604Z",
+  "processes": [
+    {
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "pid": 7552,
+      "role": "server launcher",
+      "terminal": true,
+      "create_utc": "2026-10-09T11:41:23.3572970Z"
+    },
+    {
+      "exe": "C:\\Python314\\python.exe",
+      "pid": 16956,
+      "role": "server C Python child",
+      "terminal": true,
+      "create_utc": "2026-10-09T11:41:23.3920970Z"
+    },
+    {
+      "exe": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe",
+      "pid": 22684,
+      "role": "engine",
+      "terminal": true,
+      "create_utc": "2026-10-09T11:41:24.0422700Z"
+    },
+    {
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "pid": 18496,
+      "role": "sampler launcher",
+      "terminal": true,
+      "create_utc": "2026-10-09T11:41:23.4152770Z"
+    },
+    {
+      "exe": "C:\\Python314\\python.exe",
+      "pid": 15408,
+      "role": "sampler C Python child",
+      "terminal": true,
+      "create_utc": "2026-10-09T11:41:23.4516070Z"
+    },
+    {
+      "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "pid": 6260,
+      "role": "launch/quality coordinator",
+      "terminal": true,
+      "create_utc": "2026-10-09T11:41:17.8225760Z"
+    }
+  ],
+  "listener_8081_count": 0,
+  "strata_executable_count": 0,
+  "compiler_process_count": 0,
+  "xpu_worker_command_count": 0
+}

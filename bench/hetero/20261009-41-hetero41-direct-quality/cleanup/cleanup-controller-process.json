@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-41-hetero41-direct-quality",
+  "pid": 20708,
+  "parent_pid": 8712,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "create_utc": "2026-10-09T11:52:08.4502550Z",
+  "script_sha256": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+  "mode": "exact owned run41 cleanup -Execute",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\cleanup\\cleanup-controller.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\cleanup\\cleanup-controller.stderr.log",
+  "started_utc": "2026-10-09T11:52:08.7421359Z"
+}
