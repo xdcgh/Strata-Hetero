@@ -72,6 +72,12 @@ class HeteroQualityTests(unittest.TestCase):
         capped_loop = quality.evaluate_text(p, "!" * 128, run_status="truncated_by_length")
         self.assertEqual(capped_loop["quality_status"], "generation_degenerate_bang_loop")
         self.assertEqual(capped_loop["generation_stability"], "fail_single_character_bang_loop")
+        mixed_loop = quality.evaluate_text(p, '{"key": "correct prefix", "next": "' + "!" * 63,
+                                           run_status="truncated_by_length")
+        self.assertEqual(mixed_loop["quality_status"], "generation_degenerate_bang_loop")
+        self.assertEqual(mixed_loop["generation_stability"], "fail_single_character_bang_loop")
+        self.assertEqual(quality.evaluate_text(p, "Partial result!", run_status="truncated_by_length")["quality_status"],
+                         "not_assessed_incomplete_run")
         self.assertEqual(quality.evaluate_text(p, "4", run_status="truncated_by_length")["quality_status"],
                          "not_assessed_incomplete_run")
         self.assertEqual(quality.evaluate_text(p, "4")["quality_status"], "pass")

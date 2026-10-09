@@ -348,7 +348,9 @@ def prepare_prompt_set(output_dir: Path, corpus_path: Path, source_manifest_path
 
 def _has_bang_loop(text: str) -> bool:
     compact = "".join(text.split())
-    return len(compact) >= 8 and set(compact) == {"!"}
+    # A request may begin correctly before degenerating. Detect its long bang
+    # suffix before the generic cap/timeout classification masks the failure.
+    return (len(compact) >= 8 and set(compact) == {"!"}) or compact.endswith("!" * 32)
 
 
 def _eval_python_ast(text: str, expected: dict[str, Any]) -> dict[str, Any]:
