@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T04:41:46.084446+00:00",
+  "scope": "Read-only inventory. Pinned GGUFReader maps files and parses metadata/tensor directories; only metadata/index fields are read and ReaderTensor.data payload views are never accessed.",
+  "pinned_gguf_py": {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py",
+    "revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "package_file_sha256": "495f86fe509eddef80b22e0d861de14d51ce5df01c5a584c63ddc302166eda8b",
+    "reader_implementation": "GGUFReader uses a read-only numpy.memmap and parses GGUF metadata/tensor directory; this inventory read only field metadata and tensor descriptors and never accessed ReaderTensor.data."
+  },
+  "selected_model": {
+    "name": "Qwen3.8-Flash-Next Unsloth UD-Q4_K_XL",
+    "model_dir": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL",
+    "integrity_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+    "full_payload_hashes_recomputed": false,
+    "files": [
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "bytes": 10946624,
+        "architecture": "qwen4exp",
+        "tensor_count": 0,
+        "vision_candidate_tensor_count": 0,
+        "vision_candidate_tensors": [],
+        "vision_related_metadata_keys": [
+          "qwen4exp.ple.image_token_id"
+        ],
+        "prior_full_sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+        "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+        "stat_fstat_unchanged_during_header_scan": true,
+        "current_identity_matches_prior_integrity_receipt": true,
+        "current_stat_fstat": {
+          "size_bytes": 10946624,
+          "mtime_ns": 1791267636000000000,
+          "ctime_ns": 1791267635050000000,
+          "device": 2894736058,
+          "file_index": 790292856832,
+          "fstat_size_bytes": 10946624,
+          "fstat_mtime_ns": 1791267636000000000,
+          "fstat_device": 2894736058,
+          "fstat_file_index": 790292856832
+        },
+        "payload_accessed": false,
+        "payload_sha256_recomputed": false,
+        "identity_reference": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json"
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "bytes": 49859583136,
+        "architecture": null,
+        "tensor_count": 297,
+        "vision_candidate_tensor_count": 0,
+        "vision_candidate_tensors": [],
+        "vision_related_metadata_keys": [],
+        "prior_full_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+        "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+        "stat_fstat_unchanged_during_header_scan": true,
+        "current_identity_matches_prior_integrity_receipt": true,
+        "current_stat_fstat": {
+          "size_bytes": 49859583136,
+          "mtime_ns": 1791268992000000000,
+          "ctime_ns": 1791267636110000000,
+          "device": 2894736058,
+          "file_index": 790292857216,
+          "fstat_size_bytes": 49859583136,
+          "fstat_mtime_ns": 1791268992000000000,
+          "fstat_device": 2894736058,
+          "fstat_file_index": 790292857216
+        },
+        "payload_accessed": false,
+        "payload_sha256_recomputed": false,
+        "identity_reference": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json"
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+        "bytes": 49376141504,
+        "architecture": null,
+        "tensor_count": 752,
+        "vision_candidate_tensor_count": 0,
+        "vision_candidate_tensors": [],
+        "vision_related_metadata_keys": [],
+        "prior_full_sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3",
+        "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+        "stat_fstat_unchanged_during_header_scan": true,
+        "current_identity_matches_prior_integrity_receipt": true,
+        "current_stat_fstat": {
+          "size_bytes": 49376141504,
+          "mtime_ns": 1791270330000000000,
+          "ctime_ns": 1791269021380000000,
+          "device": 2894736058,
+          "file_index": 790292857600,
+          "fstat_size_bytes": 49376141504,
+          "fstat_mtime_ns": 1791270330000000000,
+          "fstat_device": 2894736058,
+          "fstat_file_index": 790292857600
+        },
+        "payload_accessed": false,
+        "payload_sha256_recomputed": false,
+        "identity_reference": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json"
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+        "bytes": 12087983520,
+        "architecture": null,
+        "tensor_count": 175,
+        "vision_candidate_tensor_count": 0,
+        "vision_candidate_tensors": [],
+        "vision_related_metadata_keys": [],
+        "prior_full_sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a",
+        "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+        "stat_fstat_unchanged_during_header_scan": true,
+        "current_identity_matches_prior_integrity_receipt": true,
+        "current_stat_fstat": {
+          "size_bytes": 12087983520,
+          "mtime_ns": 1791270664000000000,
+          "ctime_ns": 1791270360920000000,
+          "device": 2894736058,
+          "file_index": 790292857984,
+          "fstat_size_bytes": 12087983520,
+          "fstat_mtime_ns": 1791270664000000000,
+          "fstat_device": 2894736058,
+          "fstat_file_index": 790292857984
+        },
+        "payload_accessed": false,
+        "payload_sha256_recomputed": false,
+        "identity_reference": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json"
+      }
+    ],
+    "tensor_total": 1224,
+    "vision_candidate_tensor_total": 0,
+    "vision_name_filter": [
+      "vision",
+      "visual",
+      "clip",
+      "mmproj",
+      "projector",
+      "image",
+      "patch",
+      "prefix v. or v_"
+    ],
+    "vision_tensor_finding": "Zero vision-candidate weight tensors were found in the selected four GGUF tensor directories. Shard 1 has qwen4exp.ple.image_token_id metadata; this is a token-id field, not a vision weight tensor. The vision encoder/projector is a separate mmproj GGUF.",
+    "prior_identity_source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json",
+    "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+    "all_current_file_identities_match_prior_full_hash_state": true,
+    "metadata_notes": {
+      "shard_1_architecture": "qwen4exp",
+      "image_token_metadata_field": "qwen4exp.ple.image_token_id",
+      "is_tensor": false,
+      "interpretation": "special-token ID metadata only; not an image encoder/projector tensor"
+    }
+  },
+  "existing_named_vision_gguf_search": {
+    "roots": [
+      "F:\\Strata-data",
+      "E:\\Strata-Hetero-data"
+    ],
+    "patterns": [
+      "mmproj*.gguf",
+      "*vision*.gguf",
+      "*projector*.gguf"
+    ],
+    "matches": [],
+    "finding": "No matching filename found in the two searched data roots."
+  },
+  "limitations": [
+    "Inventory identifies tensor names and GGUF metadata, not whether an external project-specific preprocessor supports these weights.",
+    "No mmproj payload was present under the searched roots, so no local mmproj GGUF header was available to inspect."
+  ],
+  "superseded_report": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-13-vision-inventory\\vision-inventory.superseded.json",
+  "superseded_reason": "The first postscan comparator queried selected_shards in model-integrity-02.json, but that receipt uses model_shards; it therefore emitted null prior hashes and false match flags. The corrected report correlates current stat/fstat to prior full-hash identities in fresh-identities-before-request.json.",
+  "setup_mmproj": {
+    "repository": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+    "filename": "mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "pinned_revision": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",
+    "url_template": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/ed59f92082b1e93c0e96d60a8b11aab089b52f09/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "hf_endpoint_override": "HF_ENDPOINT can replace the host while setup keeps the repository revision in the URL",
+    "revision_fallback": "setup.py falls back to repository main on HTTP 404 for the pinned revision and warns",
+    "sha256_pinned_in_setup": null,
+    "expected_size_bytes_pinned_in_setup": null,
+    "documentation_size_estimate": "about 0.9 GB; not an exact byte count",
+    "setup_download_check": "setup uses Content-Length for transfer/resume; it does not run verify_sha256 for mmproj (model shard SHA checks are separate)",
+    "selected_ud_q4_k_xl_setup_vision_enabled": false,
+    "selected_variant_effect": "FAMILIES[unsloth] names this shared mmproj, but UD-Q4_K_XL has no vision override and falls back to family vision=false; setup selects vision=none and does not download the mmproj for this variant",
+    "existing_named_assets": [],
+    "source_refs": [
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\setup.py",
+        "lines": "65-70,76-84",
+        "supports": "fixed repository revision and URL template; HF_ENDPOINT can override the host"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\setup.py",
+        "lines": "183-215",
+        "supports": "official model family mmproj repository/filename and Unsloth family vision=false"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\setup.py",
+        "lines": "1046-1052",
+        "supports": "Content-Length query and fallback to repository main on pinned-revision HTTP 404"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\setup.py",
+        "lines": "4157-4169",
+        "supports": "model-shard SHA verification and separate mmproj download without an explicit mmproj SHA/size check"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\setup.py",
+        "lines": "3996-4009",
+        "supports": "selected model setup disables vision when MODELS or family vision value is false"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\docs\\DETAILS.md",
+        "lines": "866-868",
+        "supports": "approximate 0.9 GB and 27-layer ViT plus projector"
+      }
+    ],
+    "setup_vision_token_caps": {
+      "gpu": 1024,
+      "cpu": 300,
+      "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\setup.py:224-225"
+    }
+  },
+  "vision_helper": {
+    "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\tools\\vision\\strata_vision.cpp",
+    "model_structure": "Text model is loaded vocab-only. mtmd_init_from_file loads the separate mmproj vision encoder/projector; n_embd is read from clip.vision.projection_dim.",
+    "preprocessing": "mtmd_helper_bitmap_init_from_file loads the image; mtmd_tokenize forms image chunks with the default marker and mtmd_encode_chunk produces embeddings. Exact resize/crop/tiling policy is delegated to mtmd and is not specified in this helper source. Setup caps image tokens at 1024 for GPU and 300 for CPU.",
+    "protocol": {
+      "startup": "READY <n_embd>",
+      "request": "ENC <image path> <output path>",
+      "success": "OK <n_tokens> <nx> <ny> <ms>",
+      "failure": "ERR <message>",
+      "shutdown": "QUIT",
+      "file_header": "five int32 values {0x31455653 (SVE1), n_tokens, nx, ny, n_embd}",
+      "payload": "float32[n_tokens][n_embd]; row i maps to x=i%nx,y=i//nx",
+      "grid_validation": "nx*ny must equal n_tokens",
+      "endianness": "native int32; little-endian on this Windows host; no explicit endian/version field beyond magic",
+      "server_filename_suffix": ".sve",
+      "server_cache": "SHA-256 of normalized image bytes, first 32 hex characters"
+    },
+    "server_input_normalization": "JPEG, PNG, BMP and GIF pass through; other formats use Pillow and become PNG; transparent RGBA/LA are composited on white.",
+    "gpu_startup": "GPU mode warms with a synthetic 2048x2048 gray image before READY; CPU mode skips warmup.",
+    "source_refs": [
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\tools\\vision\\strata_vision.cpp",
+        "lines": "1-14",
+        "supports": "mmproj/text-model roles and SVE1/stdio protocol"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\tools\\vision\\strata_vision.cpp",
+        "lines": "92-121",
+        "supports": "vocab-only text model, mmproj load, projection_dim"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\tools\\vision\\strata_vision.cpp",
+        "lines": "122-150",
+        "supports": "GPU warmup/CPU behavior and READY handshake"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\tools\\vision\\strata_vision.cpp",
+        "lines": "152-199",
+        "supports": "image load/tokenize/encode, grid, SVE1 writer"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\serve\\server.py",
+        "lines": "1262-1289",
+        "supports": "vision helper command, persistent process and READY handshake"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\serve\\server.py",
+        "lines": "1321-1347",
+        "supports": "supported image formats and Pillow normalization"
+      },
+      {
+        "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\serve\\server.py",
+        "lines": "1349-1367",
+        "supports": "SVE output cache and ENC/OK protocol consumer"
+      },
+      {
+        "file": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py\\gguf\\gguf_reader.py",
+        "lines": "116-194,335-390",
+        "supports": "pinned reader memmap/header/tensor descriptors; payload views are created but never accessed"
+      }
+    ],
+    "device_support": {
+      "supported_modes": "CPU by default or generic --gpu flag; setup exposes --vision cpu|gpu. No NPU-specific device/provider selector was found in this existing helper/setup path.",
+      "source_refs": [
+        {
+          "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\tools\\vision\\strata_vision.cpp",
+          "lines": "40-76",
+          "supports": "helper accepts --gpu boolean, --threads, --max-tokens, --flash-attn; no NPU target option"
+        },
+        {
+          "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\serve\\server.py",
+          "lines": "1267-1274",
+          "supports": "server helper launch passes gpu boolean and optional threads/max_tokens"
+        },
+        {
+          "file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\setup.py",
+          "lines": "3548-3550,3996-4009",
+          "supports": "setup vision choices are yes/no/gpu/cpu and selected UD-Q4_K_XL is disabled"
+        }
+      ]
+    }
+  },
+  "unknowns": [
+    "No mmproj/vision/projector-named GGUF was found in the scoped F:\\Strata-data or E:\\Strata-Hetero-data trees.",
+    "No vision-candidate tensor names were found in the selected four UD-Q4_K_XL shards; shard 1 contains qwen4exp.ple.image_token_id metadata only.",
+    "No local mmproj GGUF header was available to inspect.",
+    "setup.py pins a repository revision but does not pin an mmproj SHA-256 or exact expected byte size; docs provide only an approximate size.",
+    "setup.py can fall back to repository main if the pinned revision returns HTTP 404."
+  ],
+  "scoped_configuration_inventory": {
+    "F_data_top_level_directories": [
+      "models",
+      "mtp",
+      "packs"
+    ],
+    "F_models_root_json_config_files": [],
+    "F_data_configs_directory_exists": false,
+    "reviewed_old_strata_sources": [
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\setup.py",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\docs\\DETAILS.md",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\tools\\vision\\strata_vision.cpp",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\serve\\server.py"
+    ],
+    "note": "No generated vision config or mmproj path was found under the scoped local data roots; setup defaults and existing source/docs were reviewed."
+  }
+}

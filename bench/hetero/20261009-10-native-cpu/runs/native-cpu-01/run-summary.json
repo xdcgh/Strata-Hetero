@@ -1,0 +1,643 @@
+{
+  "schema": "strata-hetero-native-cpu-run-v1",
+  "status": "complete_with_quality_failures",
+  "failure_reason": null,
+  "started_utc": "2026-10-09T04:45:00.4503157+00:00",
+  "finished_utc": "2026-10-09T04:45:25.5972415+00:00",
+  "rows_requested_in_order": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "completed_rows": [
+    {
+      "rows": 1,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 0.1205,
+      "native_formal_times_ns": [
+        129700,
+        120900,
+        120400,
+        120500,
+        120200
+      ],
+      "arc_f32_median_ms": 0.4136000000016793,
+      "native_vs_arc_median_ratio": 0.2913442940026856,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0002280878834426403,
+        "relative_rmse": 0.011067426946947104,
+        "max_row_norm_relative_error": 0.0009602041116875419,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-001\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-001\\comparison.json"
+    },
+    {
+      "rows": 2,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 0.2418,
+      "native_formal_times_ns": [
+        241800,
+        238900,
+        238000,
+        244400,
+        243300
+      ],
+      "arc_f32_median_ms": 0.34639999989849457,
+      "native_vs_arc_median_ratio": 0.6980369517057001,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0002832276513800025,
+        "relative_rmse": 0.012333951942374572,
+        "max_row_norm_relative_error": 0.0006756874472689804,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-002.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-002\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-002\\comparison.json"
+    },
+    {
+      "rows": 4,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 0.4747,
+      "native_formal_times_ns": [
+        479300,
+        474700,
+        470300,
+        469300,
+        476000
+      ],
+      "arc_f32_median_ms": 0.4536999999800173,
+      "native_vs_arc_median_ratio": 1.0462860921774468,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.00024576811119914055,
+        "relative_rmse": 0.01222108582327333,
+        "max_row_norm_relative_error": 0.0018698350396828697,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-004.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-004\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-004\\comparison.json"
+    },
+    {
+      "rows": 8,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 0.9458,
+      "native_formal_times_ns": [
+        950900,
+        935500,
+        945800,
+        935000,
+        947700
+      ],
+      "arc_f32_median_ms": 0.4663000001983164,
+      "native_vs_arc_median_ratio": 2.0283079553887053,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0005026273429393768,
+        "relative_rmse": 0.01298096471840956,
+        "max_row_norm_relative_error": 0.005189950942297386,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-008.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-008\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-008\\comparison.json"
+    },
+    {
+      "rows": 16,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 1.9525,
+      "native_formal_times_ns": [
+        2004000,
+        2066700,
+        1952500,
+        1937200,
+        1920800
+      ],
+      "arc_f32_median_ms": 0.4269999999451102,
+      "native_vs_arc_median_ratio": 4.572599532203721,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.00036644074134528637,
+        "relative_rmse": 0.0123097888806356,
+        "max_row_norm_relative_error": 0.0020397276920509563,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-016\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-016\\comparison.json"
+    },
+    {
+      "rows": 32,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 3.9053,
+      "native_formal_times_ns": [
+        3905300,
+        4040200,
+        3884400,
+        3973200,
+        3875500
+      ],
+      "arc_f32_median_ms": 0.49130000002151064,
+      "native_vs_arc_median_ratio": 7.9489110519621695,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0004315543919801712,
+        "relative_rmse": 0.012527179876984472,
+        "max_row_norm_relative_error": 0.0018805115125510841,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-032.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-032\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-032\\comparison.json"
+    },
+    {
+      "rows": 64,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 7.8599,
+      "native_formal_times_ns": [
+        7851000,
+        7809900,
+        7859900,
+        7885800,
+        7867000
+      ],
+      "arc_f32_median_ms": 0.8807000001525012,
+      "native_vs_arc_median_ratio": 8.924605425955475,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0003722403198480606,
+        "relative_rmse": 0.012404527237087863,
+        "max_row_norm_relative_error": 0.0030072361790901437,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-064.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-064\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-064\\comparison.json"
+    },
+    {
+      "rows": 128,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 17.8075,
+      "native_formal_times_ns": [
+        18071300,
+        15996800,
+        15914300,
+        17807500,
+        18416500
+      ],
+      "arc_f32_median_ms": 1.7255999998724292,
+      "native_vs_arc_median_ratio": 10.319598980827816,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0003623249940574169,
+        "relative_rmse": 0.012369696037272837,
+        "max_row_norm_relative_error": 0.004151478154908941,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-128.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-128\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-128\\comparison.json"
+    },
+    {
+      "rows": 256,
+      "native_process_exit": 0,
+      "native_latency_median_ms": 34.5937,
+      "native_formal_times_ns": [
+        34593700,
+        32520900,
+        33213700,
+        37153200,
+        35029000
+      ],
+      "arc_f32_median_ms": 4.189900000028501,
+      "native_vs_arc_median_ratio": 8.256450034550866,
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 0.0003735714126378298,
+        "relative_rmse": 0.012444221800046429,
+        "max_row_norm_relative_error": 0.0033311553790795543,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": false
+      },
+      "quality_pass": false,
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-256.f32",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-256\\native-receipt.json",
+      "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-256\\comparison.json"
+    }
+  ],
+  "all_quality_pass": false,
+  "inputs_manifest_sha256": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+  "raw_blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+  "native_harness_sha256": "9cd95dae9c92b50a6487a3a564322576cc2f9aaeb9f16a72946e97afa2ab90b6",
+  "weights_reference": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+  "weights_sha256": {
+    "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+    "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+    "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+  },
+  "strict_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "arc_comparison_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-02-arc-real-ffn\\comparison.json",
+  "scope": "Single-thread native Q4_K/Q5_1 expert with default Q8_K activation path. The measured interval includes x-to-Q8 quantization, full gate/up plus SiLU-times-up, intermediate Q8 requantization, and full down rows. It excludes engine pool/IPC, expert retrieval, weight movement, and model routing. Arc F32 medians include copy/retrieval; ratios are descriptive and not an apples-to-apples ranking.",
+  "resource_samples": [
+    {
+      "time_utc": "2026-10-09T04:44:59.9243847+00:00",
+      "available_physical_bytes": 116343635968,
+      "committed_bytes": 22073544704,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123479638016
+    },
+    {
+      "time_utc": "2026-10-09T04:45:00.7743408+00:00",
+      "available_physical_bytes": 116308807680,
+      "committed_bytes": 22100377600,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123452805120
+    },
+    {
+      "time_utc": "2026-10-09T04:45:01.2187202+00:00",
+      "available_physical_bytes": 116297498624,
+      "committed_bytes": 22119346176,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123433836544
+    },
+    {
+      "time_utc": "2026-10-09T04:45:01.5459009+00:00",
+      "available_physical_bytes": 116296896512,
+      "committed_bytes": 22161108992,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123392073728
+    },
+    {
+      "time_utc": "2026-10-09T04:45:02.1108237+00:00",
+      "available_physical_bytes": 116277624832,
+      "committed_bytes": 22124826624,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123428356096
+    },
+    {
+      "time_utc": "2026-10-09T04:45:02.4667437+00:00",
+      "available_physical_bytes": 116273799168,
+      "committed_bytes": 22107385856,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123445796864
+    },
+    {
+      "time_utc": "2026-10-09T04:45:03.8314584+00:00",
+      "available_physical_bytes": 116288307200,
+      "committed_bytes": 22112182272,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123441000448
+    },
+    {
+      "time_utc": "2026-10-09T04:45:04.1515379+00:00",
+      "available_physical_bytes": 116290924544,
+      "committed_bytes": 22111576064,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123441606656
+    },
+    {
+      "time_utc": "2026-10-09T04:45:04.4872359+00:00",
+      "available_physical_bytes": 116291903488,
+      "committed_bytes": 22111780864,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123441401856
+    },
+    {
+      "time_utc": "2026-10-09T04:45:05.0141313+00:00",
+      "available_physical_bytes": 116280758272,
+      "committed_bytes": 22117031936,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123436150784
+    },
+    {
+      "time_utc": "2026-10-09T04:45:05.3439082+00:00",
+      "available_physical_bytes": 116280856576,
+      "committed_bytes": 22125678592,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123427504128
+    },
+    {
+      "time_utc": "2026-10-09T04:45:06.6878698+00:00",
+      "available_physical_bytes": 116284379136,
+      "committed_bytes": 22116503552,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123436679168
+    },
+    {
+      "time_utc": "2026-10-09T04:45:07.0156507+00:00",
+      "available_physical_bytes": 116290285568,
+      "committed_bytes": 22122459136,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123430723584
+    },
+    {
+      "time_utc": "2026-10-09T04:45:07.3617498+00:00",
+      "available_physical_bytes": 116273475584,
+      "committed_bytes": 22127484928,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123425697792
+    },
+    {
+      "time_utc": "2026-10-09T04:45:07.8730153+00:00",
+      "available_physical_bytes": 116268982272,
+      "committed_bytes": 22123614208,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123429568512
+    },
+    {
+      "time_utc": "2026-10-09T04:45:08.2057446+00:00",
+      "available_physical_bytes": 116278276096,
+      "committed_bytes": 22130081792,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123423100928
+    },
+    {
+      "time_utc": "2026-10-09T04:45:09.5829501+00:00",
+      "available_physical_bytes": 116282277888,
+      "committed_bytes": 22119800832,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123433381888
+    },
+    {
+      "time_utc": "2026-10-09T04:45:09.9191026+00:00",
+      "available_physical_bytes": 116286971904,
+      "committed_bytes": 22119657472,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123433525248
+    },
+    {
+      "time_utc": "2026-10-09T04:45:10.2370299+00:00",
+      "available_physical_bytes": 116290646016,
+      "committed_bytes": 22117371904,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123435810816
+    },
+    {
+      "time_utc": "2026-10-09T04:45:10.7333916+00:00",
+      "available_physical_bytes": 116279738368,
+      "committed_bytes": 22119055360,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123434127360
+    },
+    {
+      "time_utc": "2026-10-09T04:45:11.0621113+00:00",
+      "available_physical_bytes": 116282736640,
+      "committed_bytes": 22116679680,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123436503040
+    },
+    {
+      "time_utc": "2026-10-09T04:45:12.4362044+00:00",
+      "available_physical_bytes": 116285243392,
+      "committed_bytes": 22116286464,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123436896256
+    },
+    {
+      "time_utc": "2026-10-09T04:45:12.7497373+00:00",
+      "available_physical_bytes": 116288077824,
+      "committed_bytes": 22117171200,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123436011520
+    },
+    {
+      "time_utc": "2026-10-09T04:45:13.0801650+00:00",
+      "available_physical_bytes": 116287868928,
+      "committed_bytes": 22122012672,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123431170048
+    },
+    {
+      "time_utc": "2026-10-09T04:45:13.6060119+00:00",
+      "available_physical_bytes": 116280729600,
+      "committed_bytes": 22123835392,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123429347328
+    },
+    {
+      "time_utc": "2026-10-09T04:45:13.9356340+00:00",
+      "available_physical_bytes": 116278525952,
+      "committed_bytes": 22129754112,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123423428608
+    },
+    {
+      "time_utc": "2026-10-09T04:45:15.3125368+00:00",
+      "available_physical_bytes": 116281122816,
+      "committed_bytes": 22124613632,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123428569088
+    },
+    {
+      "time_utc": "2026-10-09T04:45:15.6176242+00:00",
+      "available_physical_bytes": 116285378560,
+      "committed_bytes": 22124085248,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123429097472
+    },
+    {
+      "time_utc": "2026-10-09T04:45:15.9375653+00:00",
+      "available_physical_bytes": 116280688640,
+      "committed_bytes": 22136922112,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123416260608
+    },
+    {
+      "time_utc": "2026-10-09T04:45:16.4954696+00:00",
+      "available_physical_bytes": 116213514240,
+      "committed_bytes": 22187708416,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123365474304
+    },
+    {
+      "time_utc": "2026-10-09T04:45:16.8636048+00:00",
+      "available_physical_bytes": 116203638784,
+      "committed_bytes": 22200180736,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123353001984
+    },
+    {
+      "time_utc": "2026-10-09T04:45:18.2483499+00:00",
+      "available_physical_bytes": 116262498304,
+      "committed_bytes": 22141571072,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123411611648
+    },
+    {
+      "time_utc": "2026-10-09T04:45:18.5667274+00:00",
+      "available_physical_bytes": 116257796096,
+      "committed_bytes": 22144913408,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123408269312
+    },
+    {
+      "time_utc": "2026-10-09T04:45:18.8800167+00:00",
+      "available_physical_bytes": 116255150080,
+      "committed_bytes": 22148345856,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123404836864
+    },
+    {
+      "time_utc": "2026-10-09T04:45:19.3733686+00:00",
+      "available_physical_bytes": 116251992064,
+      "committed_bytes": 22155370496,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123397812224
+    },
+    {
+      "time_utc": "2026-10-09T04:45:19.7240355+00:00",
+      "available_physical_bytes": 116247838720,
+      "committed_bytes": 22159814656,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123393368064
+    },
+    {
+      "time_utc": "2026-10-09T04:45:21.0914647+00:00",
+      "available_physical_bytes": 116268081152,
+      "committed_bytes": 22144937984,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123408244736
+    },
+    {
+      "time_utc": "2026-10-09T04:45:21.4182458+00:00",
+      "available_physical_bytes": 116252626944,
+      "committed_bytes": 22149410816,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123403771904
+    },
+    {
+      "time_utc": "2026-10-09T04:45:21.7364460+00:00",
+      "available_physical_bytes": 116258000896,
+      "committed_bytes": 22149435392,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123403747328
+    },
+    {
+      "time_utc": "2026-10-09T04:45:22.2984187+00:00",
+      "available_physical_bytes": 116253732864,
+      "committed_bytes": 22149513216,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123403669504
+    },
+    {
+      "time_utc": "2026-10-09T04:45:22.6407277+00:00",
+      "available_physical_bytes": 116251312128,
+      "committed_bytes": 22156218368,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123396964352
+    },
+    {
+      "time_utc": "2026-10-09T04:45:24.0195807+00:00",
+      "available_physical_bytes": 116177481728,
+      "committed_bytes": 22149345280,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123403837440
+    },
+    {
+      "time_utc": "2026-10-09T04:45:24.3668260+00:00",
+      "available_physical_bytes": 116257837056,
+      "committed_bytes": 22148038656,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123405144064
+    },
+    {
+      "time_utc": "2026-10-09T04:45:24.6752384+00:00",
+      "available_physical_bytes": 116253794304,
+      "committed_bytes": 22148694016,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123404488704
+    },
+    {
+      "time_utc": "2026-10-09T04:45:25.2216834+00:00",
+      "available_physical_bytes": 116254404608,
+      "committed_bytes": 22146441216,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123406741504
+    },
+    {
+      "time_utc": "2026-10-09T04:45:25.5887702+00:00",
+      "available_physical_bytes": 116249391104,
+      "committed_bytes": 22152982528,
+      "commit_limit_bytes": 145553182720,
+      "commit_headroom_bytes": 123400200192
+    }
+  ],
+  "gpu_executed": false,
+  "model_or_api_called": false,
+  "engine_cli_executed": false
+}

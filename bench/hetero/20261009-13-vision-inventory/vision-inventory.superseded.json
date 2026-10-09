@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T04:39:18.292615+00:00",
+  "scope": "Read-only local vision asset/source inventory; no engine, model, helper, API, CUDA, download, compile or test was run. Only GGUF headers/tensor directory metadata were inspected; tensor payload views were not dereferenced.",
+  "pinned_gguf_py": {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py",
+    "revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "package_file_sha256": "495f86fe509eddef80b22e0d861de14d51ce5df01c5a584c63ddc302166eda8b",
+    "reader_implementation": "GGUFReader uses a read-only numpy.memmap and parses GGUF metadata/tensor directory; this inventory read only field metadata and tensor descriptors and never accessed ReaderTensor.data."
+  },
+  "selected_model": {
+    "name": "Qwen3.8-Flash-Next Unsloth UD-Q4_K_XL",
+    "model_dir": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL",
+    "integrity_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+    "full_payload_hashes_recomputed": false,
+    "files": [
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "bytes": 10946624,
+        "architecture": "qwen4exp",
+        "tensor_count": 0,
+        "vision_candidate_tensor_count": 0,
+        "vision_candidate_tensors": [],
+        "vision_related_metadata_keys": [
+          "qwen4exp.ple.image_token_id"
+        ],
+        "prior_full_sha256": null,
+        "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+        "stat_fstat_unchanged_during_header_scan": true,
+        "current_identity_matches_prior_integrity_receipt": false,
+        "current_stat_fstat": {
+          "size_bytes": 10946624,
+          "mtime_ns": 1791267636000000000,
+          "ctime_ns": 1791267635050000000,
+          "device": 2894736058,
+          "file_index": 790292856832,
+          "fstat_size_bytes": 10946624,
+          "fstat_mtime_ns": 1791267636000000000,
+          "fstat_device": 2894736058,
+          "fstat_file_index": 790292856832
+        },
+        "payload_accessed": false,
+        "payload_sha256_recomputed": false
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "bytes": 49859583136,
+        "architecture": null,
+        "tensor_count": 297,
+        "vision_candidate_tensor_count": 0,
+        "vision_candidate_tensors": [],
+        "vision_related_metadata_keys": [],
+        "prior_full_sha256": null,
+        "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+        "stat_fstat_unchanged_during_header_scan": true,
+        "current_identity_matches_prior_integrity_receipt": false,
+        "current_stat_fstat": {
+          "size_bytes": 49859583136,
+          "mtime_ns": 1791268992000000000,
+          "ctime_ns": 1791267636110000000,
+          "device": 2894736058,
+          "file_index": 790292857216,
+          "fstat_size_bytes": 49859583136,
+          "fstat_mtime_ns": 1791268992000000000,
+          "fstat_device": 2894736058,
+          "fstat_file_index": 790292857216
+        },
+        "payload_accessed": false,
+        "payload_sha256_recomputed": false
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+        "bytes": 49376141504,
+        "architecture": null,
+        "tensor_count": 752,
+        "vision_candidate_tensor_count": 0,
+        "vision_candidate_tensors": [],
+        "vision_related_metadata_keys": [],
+        "prior_full_sha256": null,
+        "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+        "stat_fstat_unchanged_during_header_scan": true,
+        "current_identity_matches_prior_integrity_receipt": false,
+        "current_stat_fstat": {
+          "size_bytes": 49376141504,
+          "mtime_ns": 1791270330000000000,
+          "ctime_ns": 1791269021380000000,
+          "device": 2894736058,
+          "file_index": 790292857600,
+          "fstat_size_bytes": 49376141504,
+          "fstat_mtime_ns": 1791270330000000000,
+          "fstat_device": 2894736058,
+          "fstat_file_index": 790292857600
+        },
+        "payload_accessed": false,
+        "payload_sha256_recomputed": false
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+        "bytes": 12087983520,
+        "architecture": null,
+        "tensor_count": 175,
+        "vision_candidate_tensor_count": 0,
+        "vision_candidate_tensors": [],
+        "vision_related_metadata_keys": [],
+        "prior_full_sha256": null,
+        "prior_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+        "stat_fstat_unchanged_during_header_scan": true,
+        "current_identity_matches_prior_integrity_receipt": false,
+        "current_stat_fstat": {
+          "size_bytes": 12087983520,
+          "mtime_ns": 1791270664000000000,
+          "ctime_ns": 1791270360920000000,
+          "device": 2894736058,
+          "file_index": 790292857984,
+          "fstat_size_bytes": 12087983520,
+          "fstat_mtime_ns": 1791270664000000000,
+          "fstat_device": 2894736058,
+          "fstat_file_index": 790292857984
+        },
+        "payload_accessed": false,
+        "payload_sha256_recomputed": false
+      }
+    ],
+    "tensor_total": 1224,
+    "vision_candidate_tensor_total": 0,
+    "vision_name_filter": [
+      "vision",
+      "visual",
+      "clip",
+      "mmproj",
+      "projector",
+      "image",
+      "patch",
+      "prefix v. or v_"
+    ],
+    "vision_tensor_finding": "Candidate header entries are listed per shard; name-based candidates require model-specific interpretation."
+  },
+  "existing_named_vision_gguf_search": {
+    "roots": [
+      "F:\\Strata-data",
+      "E:\\Strata-Hetero-data"
+    ],
+    "patterns": [
+      "mmproj*.gguf",
+      "*vision*.gguf",
+      "*projector*.gguf"
+    ],
+    "matches": [],
+    "finding": "No matching filename found in the two searched data roots."
+  },
+  "limitations": [
+    "Inventory identifies tensor names and GGUF metadata, not whether an external project-specific preprocessor supports these weights.",
+    "No mmproj payload was present under the searched roots, so no local mmproj GGUF header was available to inspect."
+  ]
+}

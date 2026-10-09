@@ -1,0 +1,98 @@
+{
+  "schema": "strata-hetero-native-cpu-preflight-v1",
+  "created_utc": "2026-10-09T04:45:00.4357174+00:00",
+  "inputs_receipt": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\inputs-receipt.json",
+    "sha256": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+    "status": "prepared"
+  },
+  "source_receipt_sha256": "e4b8083e5f8f39f04affcb99e4a292bdad92ecf132462499561bbaddbd9dac9d",
+  "source_identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "native_blob": {
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+    "bytes": 3072000,
+    "sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f"
+  },
+  "inputs": [
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+      "bytes": 10240,
+      "sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-002.f32",
+      "bytes": 20480,
+      "sha256": "82ef94289d545924bb39b6e8026d906072b4d6c9c284ae4b6afdcd49f5ce1a19"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-004.f32",
+      "bytes": 40960,
+      "sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-008.f32",
+      "bytes": 81920,
+      "sha256": "99d0e640b2f5fd9765f89509300c73ff6fb62f7c560d22e5c39408401b84273f"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+      "bytes": 163840,
+      "sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-032.f32",
+      "bytes": 327680,
+      "sha256": "1f3cd3e4a9fc4297cb0bb416a2c05a7f84b75f027d45d67dd4685de831f03e75"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-064.f32",
+      "bytes": 655360,
+      "sha256": "6343140782767ded9bae8bf6898233041f1344ae86ae1e991ae50b66527e5ccf"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-128.f32",
+      "bytes": 1310720,
+      "sha256": "e08545779c1d81b6b617d9b66c26bc377e14ae4a2ec1fcc0317a30276bd5f2d6"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-256.f32",
+      "bytes": 2621440,
+      "sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b"
+    }
+  ],
+  "harness_binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-harness-20261009-01\\hetero_native_expert.exe",
+    "bytes": 1997824,
+    "sha256": "9cd95dae9c92b50a6487a3a564322576cc2f9aaeb9f16a72946e97afa2ab90b6",
+    "build_head": "2d1b5fdff1cb2812a1708fede0a4d2c2b68483fd"
+  },
+  "weights_reference_metadata": {
+    "cpu_f32_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-02-arc-real-ffn\\cpu-f32.json",
+    "weights_npz_path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+    "npz_arrays_not_loaded_yet": true
+  },
+  "rows_order": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "warmup": 1,
+  "repeat": 5,
+  "avx2_force_disabled": false,
+  "output_root": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01",
+  "gpu_executed": false,
+  "model_or_engine_cli_executed": false,
+  "initial_resource_sample": {
+    "time_utc": "2026-10-09T04:44:59.9243847+00:00",
+    "available_physical_bytes": 116343635968,
+    "committed_bytes": 22073544704,
+    "commit_limit_bytes": 145553182720,
+    "commit_headroom_bytes": 123479638016
+  }
+}

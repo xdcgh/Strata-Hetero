@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T04:49:18.0652550Z",
+  "purpose": "Read-only official Hugging Face metadata lookup at the fixed revision; no GGUF payload download.",
+  "source_repository": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+  "fixed_revision": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",
+  "filename": "mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "canonical_resolve_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/ed59f92082b1e93c0e96d60a8b11aab089b52f09/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "api_metadata": {
+    "source_url": "https://huggingface.co/api/models/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/tree/ed59f92082b1e93c0e96d60a8b11aab089b52f09?recursive=true&expand=true",
+    "http_status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "response_kind": "official HF tree API file entry",
+    "path": "mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "type": "file",
+    "size_bytes": 907543008,
+    "lfs_size_bytes": 907543008,
+    "lfs_oid_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+    "hf_tree_oid": "974f4ca87254d6f1faf4d9914503e378d713021",
+    "xet_hash": "d4eb8204971d327ec2647724a791c7cd53e049b90c3d3c699eb8940f5a3cb7c9",
+    "last_commit_id": "1c04b8102ca5346f1faf4d9914503e378d713021",
+    "last_commit_title": "Add BF16 vision projector (mmproj)",
+    "last_commit_date": "2026-09-15T15:56:56Z",
+    "full_tree_response_body_saved": false
+  },
+  "head_check": {
+    "request_method": "HEAD",
+    "requested_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/ed59f92082b1e93c0e96d60a8b11aab089b52f09/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+    "http_status": 200,
+    "final_uri_host_and_path": "https://us.aws.cdn.hf.co/xet-bridge-us/6a9e86d1dab7f88030e2af20/d4eb8204971d327ec2647724a791c7cd53e049b90c3d3c699eb8940f5a3cb7c9",
+    "final_query_saved": false,
+    "content_length_bytes": 907543008,
+    "etag": "\"d4eb8204971d327ec2647724a791c7cd53e049b90c3d3c699eb8940f5a3cb7c9\"",
+    "etag_interpretation": "Xet hash, not the LFS SHA-256; use api_metadata.lfs_oid_sha256 as authoritative file SHA-256",
+    "accept_ranges": "bytes",
+    "payload_requested": false
+  },
+  "source_checkout": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+    "head": "3c76ad4e52dada08dd46265c1dd2179088d180e4",
+    "working_tree_status": [
+      " M bench/hetero/20261009-05-hetero04-ram-quality/provenance.json",
+      " M docs/HETERO_STORAGE.md",
+      " M tools/hetero_compare_quality.py",
+      " M tools/test_hetero_compare_quality.py",
+      "?? bench/hetero/20261009-04-hetero04-direct-quality/quality/root-regression-repeatable.json",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/admission.json",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/identity-recheck.json",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/launch-owned.ps1",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/process.json",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/quality-execution-contract.json",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/resource/",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/run-quality-after-ready.ps1",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/sampler-process.json",
+      "?? bench/hetero/20261009-05-hetero04-ram-quality/task-contract.json",
+      "?? bench/hetero/20261009-10-native-cpu/runs/",
+      "?? bench/hetero/20261009-11-ple-f-explicit-quality/",
+      "?? bench/hetero/20261009-12-ple-e-explicit-quality/",
+      "?? bench/hetero/20261009-13-vision-inventory/"
+    ],
+    "observation": "Current Strata-Hetero source tree, not old Strata, was checked for setup and vision-helper references."
+  },
+  "current_source_audit": {
+    "setup": {
+      "pin_and_resolve": "setup.py:66-85",
+      "family_mmproj_and_ud_q4_vision_off": "setup.py:292-300",
+      "ud_q4_vision_disable": "setup.py:5035-5038",
+      "download_gate": "setup.py:5225-5233",
+      "finding": "The current checkout still pins the named mmproj at the same fixed revision. The Unsloth family has vision=false, so this model setup path disables vision and does not request mmproj."
+    },
+    "vision_helper": {
+      "roles_and_protocol": "tools/vision/strata_vision.cpp:4-14",
+      "vocab_only_text_model_and_mmproj_load": "tools/vision/strata_vision.cpp:115-153",
+      "mtmd_image_decode_tokenize_encode": "tools/vision/strata_vision.cpp:193-216",
+      "sve1_write": "tools/vision/strata_vision.cpp:217-226",
+      "server_launch_and_ready": "serve/server.py:1712-1765",
+      "server_normalization": "serve/server.py:1874-1898",
+      "engine_sve1_consumer": "src/program/generate.cpp:7953-7957",
+      "finding": "Current helper still uses a separate mmproj loaded through mtmd; preprocessing is delegated to mtmd after image decode. SVE1 records and GENI consumer remain present. Exact resize/crop/tiling behavior is not specified at the helper call site."
+    },
+    "unknowns": [
+      "No downloaded payload was read or hashed in this operation; SHA-256 comes from the pinned-revision API LFS metadata.",
+      "HEAD ETag reflects the Xet object hash and is not interchangeable with the LFS SHA-256.",
+      "No vision helper build/runtime was performed."
+    ]
+  },
+  "network_limits": {
+    "timeouts_seconds": 15,
+    "redirect_limit": 3,
+    "only_metadata_json_and_http_head": true,
+    "no_main_fallback": true,
+    "downloaded_payload": false
+  }
+}

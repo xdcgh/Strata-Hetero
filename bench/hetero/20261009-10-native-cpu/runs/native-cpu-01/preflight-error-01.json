@@ -1,0 +1,9 @@
+{
+  "schema": "strata-hetero-native-cpu-preflight-error-v1",
+  "time_utc": "2026-10-09T04:44:47.5055800+00:00",
+  "phase": "required_path_validation",
+  "message": "compareScript was added to required files before its path variable was initialized.",
+  "tool_error": "Value cannot be null. (Parameter 'The provided Path argument was null or an empty collection.')",
+  "native_process_started": false,
+  "native_output_created": false
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "strata-hetero-native-cpu-run-v1",
+  "created_utc": "2026-10-09T04:45:05Z",
+  "status": "success",
+  "source": {"strata_head": "2d1b5fdff1cb2812a1708fede0a4d2c2b68483fd", "ggml_pin": "3cf03257f219afbe7334045ff7c6a06ac68c627d", "native_harness_source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609", "sha256_header_sha256": "5bbdfb8733ec347de4c5ca990ce412cc1241854c5920f81a47ac331d32bc19d8", "harness_cmake_sha256": "cc4a4c59b9af0b1af902199bc99cb75f93396eb8ae2a4210d6103cbd0cc6c75a"},
+  "execution": {"mode": "actual_native_quantized_cpu_expert", "native_kernel_called": true, "engine_pool_called": false, "threads": 1, "gpu_executed": false, "model_cli_executed": false},
+  "parameters": {"rows": 4, "hidden": 2560, "intermediate": 640, "gu_type": 12, "down_type": 7, "warmup": 1, "repeat": 5},
+  "reference_controls": {"STRATA_KQ256": "0 (process-local)", "STRATA_NO_Q8K_AVX2": "unset (model-default Q8_K activation path, process-local)", "q8k_avx2_available": true, "q8k_avx2_selected": true, "activation_quantizer": "q8k_quant_avx2", "down_activation_quantizer": "ggml Q8_1 from_float", "STRATA_IQ_MT_MIN": "not used by Q4_K/Q5_1 path"},
+  "layout": {"gu_row_bytes": 1440, "down_row_bytes": 480, "up_offset_bytes": 921600, "down_offset_bytes": 1843200, "blob_bytes": 3072000, "activation_bytes": 2920, "hidden_quantized_bytes": 720},
+  "blob": {"path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin", "bytes": 3072000, "sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f"},
+  "input": {"path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-004.f32", "bytes": 40960, "format": "token-major raw little-endian float32", "sha256": "8f12c69a374c5c1c1fc1c7c354bc78fa4a08b02280d83578b35291e964e76529"},
+  "timing_scope": "each formal iteration includes x-to-Q8 activation quantization, full gate/up rows with SiLU-times-up, hidden-to-Q8 requantization, and full down rows; file I/O, allocation, SHA-256, and output serialization are excluded",
+  "timings_ns": {"warmup_iterations": 1, "formal_iterations": [479300, 474700, 470300, 469300, 476000], "min": 469300, "median": 474700},
+  "output": {"path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-004.f32", "bytes": 40960, "format": "token-major raw little-endian float32", "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4"},
+  "claim_limit": "single-thread native expert reference only; not engine scheduling, model throughput, or GPU performance"
+}

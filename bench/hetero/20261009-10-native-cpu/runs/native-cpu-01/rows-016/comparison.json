@@ -1,0 +1,45 @@
+{
+  "schema": "strata-hetero-native-cpu-quality-v1",
+  "rows": 16,
+  "input_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+  "input_bytes": 163840,
+  "input_sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f",
+  "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-016\\native-receipt.json",
+  "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+  "output_sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+  "reference": "NumPy F32 FFN over the previously hash-verified official gguf-py dequantized weights",
+  "weights_npz_path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+  "weights_npz_stat": {
+    "size_bytes": 19661538,
+    "mtime_ns": 1791515299026387800,
+    "device": 6117023165593423684,
+    "file_index": 562949953527697
+  },
+  "weights_tensor_sha256_verified": {
+    "gate": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57",
+    "up": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5",
+    "down": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+  },
+  "weights_loaded_and_hash_verified": true,
+  "numpy_version": "2.5.3",
+  "threads": 1,
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "quality": {
+    "shape_ok": true,
+    "finite": true,
+    "max_abs_error": 0.00036644074134528637,
+    "relative_rmse": 0.0123097888806356,
+    "max_row_norm_relative_error": 0.0020397276920509563,
+    "tolerances": {
+      "max_abs": 0.01,
+      "relative_rmse": 0.001,
+      "row_norm_relative": 0.001
+    },
+    "pass": false
+  },
+  "comparison_scope": "Native quantized CPU Q4_K/Q5_1 with Q8 activation arithmetic versus the same expert dequantized to F32; this is not task-quality or engine-throughput evidence."
+}

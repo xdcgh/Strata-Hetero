@@ -1,0 +1,31 @@
+{
+  "rows": 2,
+  "native_process_exit": 0,
+  "native_latency_median_ms": 0.2418,
+  "native_formal_times_ns": [
+    241800,
+    238900,
+    238000,
+    244400,
+    243300
+  ],
+  "arc_f32_median_ms": 0.34639999989849457,
+  "native_vs_arc_median_ratio": 0.6980369517057001,
+  "quality": {
+    "shape_ok": true,
+    "finite": true,
+    "max_abs_error": 0.0002832276513800025,
+    "relative_rmse": 0.012333951942374572,
+    "max_row_norm_relative_error": 0.0006756874472689804,
+    "tolerances": {
+      "max_abs": 0.01,
+      "relative_rmse": 0.001,
+      "row_norm_relative": 0.001
+    },
+    "pass": false
+  },
+  "quality_pass": false,
+  "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-002.f32",
+  "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-002\\native-receipt.json",
+  "comparison_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-002\\comparison.json"
+}
