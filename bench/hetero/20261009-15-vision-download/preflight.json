@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-15-vision-download",
+  "status": "pass",
+  "observed_utc": "2026-10-09T05:21:40.6924384+00:00",
+  "source_repository": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+  "fixed_revision": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",
+  "filename": "mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "canonical_resolve_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/ed59f92082b1e93c0e96d60a8b11aab089b52f09/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "source_metadata_sha256": "98bb78356470820ab948b64fc58fb9f4daf875ee0c34d3442259cb6aa243c073",
+  "target_path": "E:\\Strata-Hetero-data\\models\\vision-ed59f92\\mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "expected_bytes": 907543008,
+  "expected_lfs_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "checks": {
+    "metadata_pin_exact": true,
+    "canonical_url_pinned": true,
+    "target_parent_exists": true,
+    "target_absent": true,
+    "disk_space_gate": true,
+    "physical_memory_gate": true,
+    "commit_gate": true,
+    "proxy_route_reachable": true,
+    "no_cpu_build_reads_F_model": true,
+    "run_receipt_paths_absent": true
+  },
+  "system_gates": {
+    "physical_available_bytes": 116217630720,
+    "physical_available_gib": 108.236,
+    "commit_available_bytes": 123289464832,
+    "commit_available_gib": 114.822,
+    "commit_source": "Windows Memory counters: commit limit minus committed bytes",
+    "E_free_bytes": 127339130880,
+    "required_free_bytes": 13792444896
+  },
+  "network": {
+    "proxy_route": "http://127.0.0.1:10808",
+    "proxy_listener_reachable": true,
+    "canonical_host": "huggingface.co",
+    "canonical_has_query": false
+  },
+  "host_build_processes": [],
+  "host_build_processes_reading_F_model": [],
+  "scope": "Metadata and host gates only. No model or F: model-table payload was read. CPU host build process snapshot is recorded; transfer remains a separate explicit step."
+}

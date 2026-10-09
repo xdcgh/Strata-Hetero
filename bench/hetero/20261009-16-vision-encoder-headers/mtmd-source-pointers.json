@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T05:39:46.2236628Z",
+  "pinned_source": {
+    "repo": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "expected_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "hashes": {
+      "tools/mtmd/mtmd-image.cpp": "5f305827cdb3255bd8d30e103ed7855725bcb52870c8edb02df2f3b2f5267b7a",
+      "tools/mtmd/models/qwen2vl.cpp": "6c624c7d17f050124909c7dfe2df7df0a1872f80ac8620ef9a1c0305cec30f29",
+      "tools/mtmd/clip-model.h": "6dcb7fc7a057be3bc6bfdfae405401d55eb6a7d4eac8d26b87bada3b68e5ab5e",
+      "tools/mtmd/models/models.h": "558d645ea4a81daff5f9257acf4bbb3129473b32b7454d470e046f84a1568717",
+      "tools/mtmd/mtmd.cpp": "16ca200494443e760c215a71ebfbabf8d294ab662b6458c03592bbcea6b4eff3",
+      "tools/mtmd/clip.cpp": "13f10801842caed2e77018da8546a31e4fd248a82a56761039957cfe6e43fd2d",
+      "tools/mtmd/clip-impl.h": "f68aa9e323af3e6af381c587e676aa73173c9fba77d6f4117e91a36863454eff",
+      "tools/mtmd/models/qwen3vl.cpp": "ae7a9472feb4322abdf20621237e3e7448d207bc0427c315d869300df63ab1b4"
+    }
+  },
+  "model_identity_receipt": "vision-header-inventory.json",
+  "source_grounded_architecture": {
+    "projector_type": {
+      "value": "qwen3vl_merger",
+      "source": "GGUF metadata clip.projector_type",
+      "unknown": false
+    },
+    "vision_hparams": {
+      "block_count": {
+        "value": 27,
+        "derived_block_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "unknown": false
+      },
+      "embedding_length": {
+        "value": 1152,
+        "unknown": false
+      },
+      "feed_forward_length": {
+        "value": 4304,
+        "unknown": false
+      },
+      "projection_dim": {
+        "value": 2560,
+        "unknown": false
+      },
+      "image_size": {
+        "value": 768,
+        "unknown": false
+      },
+      "patch_size": {
+        "value": 16,
+        "unknown": false
+      },
+      "spatial_merge_size": {
+        "value": 2,
+        "unknown": false
+      },
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "image_min_max_pixels": {
+      "min_key_present": false,
+      "max_key_present": false,
+      "finding": "Not stored in this GGUF header; pinned mtmd Qwen-VL loader chooses source defaults of 8..4096 image tokens and derives pixel limits from patch_size and spatial_merge_size."
+    },
+    "temporal_patch_size": {
+      "value": null,
+      "unknown": true,
+      "reason": "No clip.vision.temporal_patch_size metadata key in this GGUF."
+    },
+    "deepstack": {
+      "is_deepstack_layers": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "true_flag_count": 0,
+      "tensor_id_count": 0,
+      "tensor_names": [],
+      "finding": "Header has 27 false flags and no v.deepstack tensors; whether the source graph supports optional deepstack is source-derived."
+    },
+    "learned_position_embeddings": {
+      "present": true,
+      "tensors": [
+        {
+          "name": "v.position_embd.weight",
+          "shape_gguf": [
+            1152,
+            2304
+          ],
+          "type": "F32",
+          "bytes": 10616832,
+          "data_offset": 896926176
+        }
+      ]
+    },
+    "rotary_metadata": {
+      "keys": [],
+      "unknown": true,
+      "reason": "No GGUF metadata key explicitly provides rotary or RoPE parameters; source graph uses hardcoded vision M-RoPE constants."
+    },
+    "patch_embedding_tensors": [
+      {
+        "name": "v.patch_embd.bias",
+        "shape_gguf": [
+          1152
+        ],
+        "type": "F32",
+        "bytes": 4608,
+        "data_offset": 889843680
+      },
+      {
+        "name": "v.patch_embd.weight",
+        "shape_gguf": [
+          16,
+          16,
+          3,
+          1152
+        ],
+        "type": "F32",
+        "bytes": 3538944,
+        "data_offset": 889848288
+      },
+      {
+        "name": "v.patch_embd.weight.1",
+        "shape_gguf": [
+          16,
+          16,
+          3,
+          1152
+        ],
+        "type": "F32",
+        "bytes": 3538944,
+        "data_offset": 893387232
+      }
+    ],
+    "tensor_type_counts": [
+      {
+        "type": "BF16",
+        "count": 110
+      },
+      {
+        "type": "F32",
+        "count": 224
+      }
+    ],
+    "tensor_count": 334
+  },
+  "source_pointers": [
+    {
+      "file": "tools/mtmd/clip-impl.h",
+      "lines": "52-65,444-452,510-520",
+      "supports": "GGUF metadata key spellings and projector enum/string mapping, including qwen3vl_merger."
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "lines": "1174-1190",
+      "supports": "clip_model_loader opens GGUF metadata via gguf_init_from_file; header/payload loader structure."
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "lines": "1259-1281",
+      "supports": "Reads projector_type metadata and maps qwen3vl_merger to PROJECTOR_TYPE_QWEN3VL."
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "lines": "1296-1314,1398-1407",
+      "supports": "Reads image_size/patch_size/base vision hparams and image mean/std metadata."
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "lines": "1651-1667",
+      "supports": "Qwen2/Qwen2.5/Qwen3 VL defaults: merge 2, bicubic resize, token limits 8..4096 and warmup size when source hparams absent; optional metadata overrides merge."
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "lines": "975-978",
+      "supports": "Graph factory dispatches Qwen3VL to clip_graph_qwen3vl."
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "lines": "2291-2300",
+      "supports": "Optional v.deepstack tensors are searched by name and graph layer count is increased only when present."
+    },
+    {
+      "file": "tools/mtmd/clip.cpp",
+      "lines": "2474-2480",
+      "supports": "Loads Qwen3VL mm.0/mm.2 projector weights and biases."
+    },
+    {
+      "file": "tools/mtmd/mtmd.cpp",
+      "lines": "694-703,1370-1385",
+      "supports": "Qwen3VL selects dynamic-size image preprocessing and vision boundary markers; decoded image is passed through selected preprocessor."
+    },
+    {
+      "file": "tools/mtmd/mtmd-image.cpp",
+      "lines": "7-13,766-786",
+      "supports": "RGB U8 to F32 normalization by GGUF mean/std; dynamic size resize preserves aspect ratio, aligns to patch_size*n_merge, obeys pixel limits, then normalizes."
+    },
+    {
+      "file": "tools/mtmd/models/models.h",
+      "lines": "42-50",
+      "supports": "Qwen3VL graph inherits the Qwen2VL input graph helper."
+    },
+    {
+      "file": "tools/mtmd/models/qwen2vl.cpp",
+      "lines": "3-29",
+      "supports": "Shared temporal-merge input helper; for still image batch=1 combines two patch convolution branches."
+    },
+    {
+      "file": "tools/mtmd/models/qwen3vl.cpp",
+      "lines": "3-18,39-52,65-70,103-110,143-158,168-185",
+      "supports": "Qwen3VL graph: spatial merge, learned position embeddings, transformer blocks, optional deepstack, hardcoded M-RoPE constants, projector output."
+    }
+  ],
+  "scope": "Mechanical source pointer inventory only; no model/vision graph execution or OpenVINO graph design."
+}

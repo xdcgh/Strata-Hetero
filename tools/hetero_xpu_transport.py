@@ -39,6 +39,17 @@ class ProtocolError(TransportError):
     """The byte stream is truncated, malformed, oversized, or mismatched."""
 
 
+class FrameTooLarge(ProtocolError):
+    """A validated header advertised a payload that exceeds the receiver cap."""
+
+    def __init__(self, kind: int, request_id: int, payload_len: int, limit: int):
+        super().__init__(f"frame payload {payload_len} exceeds {limit} byte limit")
+        self.kind = kind
+        self.request_id = request_id
+        self.payload_len = payload_len
+        self.limit = limit
+
+
 class WorkerStateError(TransportError):
     """The worker is not started, is unusable, or is already closed."""
 
@@ -107,6 +118,24 @@ def encode_frame(kind: int, request_id: int, payload: bytes | bytearray | memory
     return header + view.tobytes()
 
 
+def encode_response_frame(request_kind: int, request_id: int, payload: bytes | bytearray | memoryview,
+                          *, version: int = VERSION) -> bytes:
+    """Encode the response for a request kind, setting its high response bit."""
+    request_kind = _uint(request_kind, 0x7FFF, "request kind")
+    request_id = _uint(request_id, 0xFFFFFFFFFFFFFFFF, "request_id")
+    version = _uint(version, 0xFFFF, "version")
+    if version != VERSION:
+        raise ProtocolError(f"unsupported protocol version: {version}")
+    try:
+        view = memoryview(payload).cast("B")
+    except (TypeError, ValueError) as exc:
+        raise ProtocolError("payload must be a contiguous bytes-like object") from exc
+    payload_len = view.nbytes
+    if payload_len > MAX_PAYLOAD_BYTES:
+        raise ProtocolError(f"response payload exceeds {MAX_PAYLOAD_BYTES} byte limit")
+    return HEADER.pack(MAGIC, version, request_kind | RESPONSE_BIT, request_id, payload_len) + view.tobytes()
+
+
 def read_exact(stream: BinaryIO, length: int) -> bytes:
     """Read exactly length bytes, tolerating short reads but bounding every allocation."""
     if isinstance(length, bool) or not isinstance(length, int) or not 0 <= length <= MAX_FRAME_BYTES:
@@ -146,6 +175,28 @@ def write_all(stream: BinaryIO, data: bytes | bytearray | memoryview) -> None:
     flush = getattr(stream, "flush", None)
     if callable(flush):
         flush()
+
+
+def read_frame(stream: BinaryIO, *, max_payload_bytes: int = MAX_PAYLOAD_BYTES) -> Frame | None:
+    """Read one generic frame; None denotes clean EOF before any header byte."""
+    max_payload_bytes = _uint(max_payload_bytes, MAX_PAYLOAD_BYTES, "max_payload_bytes")
+    first = stream.read(HEADER_BYTES)
+    if first is None:
+        raise ProtocolError("stream returned None while reading frame header")
+    if not first:
+        return None
+    if len(first) > HEADER_BYTES:
+        raise ProtocolError("stream returned more bytes than requested for frame header")
+    raw_header = first if len(first) == HEADER_BYTES else first + read_exact(stream, HEADER_BYTES - len(first))
+    magic, version, kind, request_id, payload_len = HEADER.unpack(raw_header)
+    if magic != MAGIC:
+        raise ProtocolError(f"bad frame magic: {magic!r}")
+    if version != VERSION:
+        raise ProtocolError(f"unsupported protocol version: {version}")
+    if payload_len > max_payload_bytes:
+        raise FrameTooLarge(kind, request_id, payload_len, max_payload_bytes)
+    payload = read_exact(stream, payload_len)
+    return Frame(kind=kind, request_id=request_id, payload=payload, version=version, magic=magic)
 
 
 def read_response(stream: BinaryIO, request_kind: int, request_id: int,

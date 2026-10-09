@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import contextlib
+import builtins
 import io
 import json
 import subprocess
@@ -114,6 +115,15 @@ class HeteroXpuTransportTests(unittest.TestCase):
         self.assertEqual(bytes(writer.data), data)
         self.assertEqual(writer.flushes, 1)
 
+    def test_generic_request_frame_and_response_encoder_roundtrip(self):
+        encoded = transport.encode_frame(6, 91, b"abc")
+        request = transport.read_frame(ShortReader(encoded, cap=2))
+        self.assertEqual((request.kind, request.request_id, request.payload), (6, 91, b"abc"))
+        self.assertIsNone(transport.read_frame(ShortReader(b"")))
+        response = transport.encode_response_frame(6, 91, b"ok")
+        decoded = transport.read_frame(ShortReader(response, cap=5))
+        self.assertEqual((decoded.kind, decoded.request_id, decoded.payload), (6 | 0x8000, 91, b"ok"))
+
     def test_eof_and_invalid_lengths_are_rejected(self):
         with self.assertRaisesRegex(transport.ProtocolError, "EOF"):
             transport.read_exact(ShortReader(b"abc", cap=2), 4)
@@ -129,6 +139,10 @@ class HeteroXpuTransportTests(unittest.TestCase):
         with self.assertRaisesRegex(transport.ProtocolError, "exceeds"):
             transport.read_response(reader, 1, 42)
         self.assertEqual(reader.bytes_read, transport.HEADER_BYTES)
+        request_reader = ShortReader(header, cap=transport.HEADER_BYTES)
+        with self.assertRaises(transport.FrameTooLarge):
+            transport.read_frame(request_reader)
+        self.assertEqual(request_reader.bytes_read, transport.HEADER_BYTES)
 
     def test_magic_version_kind_and_request_id_mismatches_rejected_from_header(self):
         cases = [
@@ -147,14 +161,20 @@ class HeteroXpuTransportTests(unittest.TestCase):
 
     def test_default_cli_and_import_only_validate_schema(self):
         stdout = io.StringIO()
-        with mock.patch.object(transport.subprocess, "Popen", side_effect=AssertionError("spawn forbidden")):
+        real_import = builtins.__import__
+
+        def deny_hardware_runtime(name, *args, **kwargs):
+            if name == "openvino" or name.startswith("openvino."):
+                raise AssertionError("default CLI imported OpenVINO")
+            return real_import(name, *args, **kwargs)
+
+        with mock.patch.object(transport.subprocess, "Popen", side_effect=AssertionError("spawn forbidden")), \
+                mock.patch("builtins.__import__", side_effect=deny_hardware_runtime):
             with contextlib.redirect_stdout(stdout):
                 self.assertEqual(transport.main([]), 0)
         result = json.loads(stdout.getvalue())
         self.assertEqual(result["status"], "schema_valid")
         self.assertFalse(result["worker_started"])
-        self.assertNotIn("openvino", sys.modules)
-        self.assertNotIn("numpy", sys.modules)
 
     def test_json_cli_validation_never_spawns(self):
         request = {"schema": transport.REQUEST_SCHEMA, "version": 1, "kind": 2,

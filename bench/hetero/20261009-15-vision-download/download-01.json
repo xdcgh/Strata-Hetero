@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-15-01",
+  "status": "pass",
+  "source_repository": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+  "fixed_revision": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",
+  "filename": "mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "canonical_resolve_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/ed59f92082b1e93c0e96d60a8b11aab089b52f09/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "source_query_or_signed_redirect_url_saved": false,
+  "expected_size_bytes": 907543008,
+  "expected_lfs_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "destination": "E:\\Strata-Hetero-data\\models\\vision-ed59f92\\mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "temporary_path": "E:\\Strata-Hetero-data\\models\\vision-ed59f92\\mmproj-Qwen3.8-Flash-Next-BF16.gguf.part.20261009-15-01",
+  "buffer_bytes": 8388608,
+  "proxy_route": "http://127.0.0.1:10808",
+  "stream_bytes": 907543008,
+  "stream_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "readback_bytes": 907543008,
+  "readback_sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "partial_preserved": false,
+  "final_file_present": false,
+  "error": null,
+  "source_metadata_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-13-vision-inventory\\source-metadata.json",
+  "source_metadata_sha256": "98bb78356470820ab948b64fc58fb9f4daf875ee0c34d3442259cb6aa243c073",
+  "preflight_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-15-vision-download\\preflight.json",
+  "preflight_receipt_sha256": "ab38fb04ef88be73c044c8d4d11145f301a36bae65c3019d035a6748afa63e39",
+  "host_build_process_snapshot": [],
+  "proxy_listener_preflight": "127.0.0.1:10808 reachable",
+  "destination_space_preflight": {
+    "free_bytes": 127339130880,
+    "required_bytes": 13792444896,
+    "reserve_bytes": 12884901888,
+    "pass": true
+  },
+  "system_gates_before": {
+    "observed_at_utc": "2026-10-09T05:21:58.557663+00:00",
+    "physical_available_bytes": 116199743488,
+    "physical_available_gib": 108.219,
+    "physical_gate": "pass",
+    "commit_available_bytes": 123267858432,
+    "commit_available_gib": 114.802,
+    "commit_gate": "pass",
+    "commit_source": "PSAPI GetPerformanceInfo"
+  },
+  "http_status": 200,
+  "http_content_length_bytes": 907543008,
+  "redirect_count": 1,
+  "response_final_host_only": "us.aws.cdn.hf.co",
+  "part_identity_before_readback": {
+    "size_bytes": 907543008,
+    "mtime_ns": 1791523393257725200,
+    "ctime_ns_path": 1791523318557938500,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1970324836990804
+    },
+    "fstat": {
+      "size_bytes": 907543008,
+      "mtime_ns": 1791523393257725200,
+      "volume": 6117023165593423684,
+      "index": 1970324836990804
+    }
+  },
+  "part_identity_after_readback": {
+    "size_bytes": 907543008,
+    "mtime_ns": 1791523393257725200,
+    "ctime_ns_path": 1791523318557938500,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1970324836990804
+    },
+    "fstat": {
+      "size_bytes": 907543008,
+      "mtime_ns": 1791523393257725200,
+      "volume": 6117023165593423684,
+      "index": 1970324836990804
+    }
+  },
+  "readback_path": "E:\\Strata-Hetero-data\\models\\vision-ed59f92\\mmproj-Qwen3.8-Flash-Next-BF16.gguf.part.20261009-15-01",
+  "system_gates_before_publish": {
+    "observed_at_utc": "2026-10-09T05:23:13.902562+00:00",
+    "physical_available_bytes": 116231163904,
+    "physical_available_gib": 108.249,
+    "physical_gate": "pass",
+    "commit_available_bytes": 123289075712,
+    "commit_available_gib": 114.822,
+    "commit_gate": "pass",
+    "commit_source": "PSAPI GetPerformanceInfo"
+  },
+  "destination_free_bytes_before_publish": 126431514624,
+  "final_identity": {
+    "size_bytes": 907543008,
+    "mtime_ns": 1791523393257725200,
+    "ctime_ns_path": 1791523318557938500,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1970324836990804
+    },
+    "fstat": {
+      "size_bytes": 907543008,
+      "mtime_ns": 1791523393257725200,
+      "volume": 6117023165593423684,
+      "index": 1970324836990804
+    }
+  },
+  "final_is_same_verified_file": true,
+  "final_identity_scope": "file ID, size and mtime match the independently SHA-256-verified .part; final path bytes were not rehashed after atomic rename"
+}

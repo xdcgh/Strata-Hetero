@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "destination": "E:\\Strata-Hetero-data\\models\\vision-ed59f92\\mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "exists_now": true,
+  "size_bytes": 907543008,
+  "sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0",
+  "root_fresh_final_payload_hash": true,
+  "prior_receipt_final_file_present_flag": false,
+  "correction": "The earlier flag remained false despite successful publication/final identity. Its original receipt is preserved; this check confirms current final file bytes."
+}
