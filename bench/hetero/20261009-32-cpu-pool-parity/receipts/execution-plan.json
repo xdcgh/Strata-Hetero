@@ -1,0 +1,86 @@
+{
+  "status": "prepared_for_run",
+  "cases": [
+    {
+      "phase": "single_thread_gate",
+      "rows": 1,
+      "workers": null,
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\single-thread-default\\rows-001\\output.f32"
+    },
+    {
+      "phase": "single_thread_gate",
+      "rows": 16,
+      "workers": null,
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\single-thread-default\\rows-016\\output.f32"
+    },
+    {
+      "phase": "single_thread_gate",
+      "rows": 256,
+      "workers": null,
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\single-thread-default\\rows-256\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 1,
+      "workers": 1,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-01\\rows-001\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 16,
+      "workers": 1,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-01\\rows-016\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 256,
+      "workers": 1,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-01\\rows-256\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 1,
+      "workers": 4,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-001\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 16,
+      "workers": 4,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-016\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 256,
+      "workers": 4,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-256\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 1,
+      "workers": 10,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-10\\rows-001\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 16,
+      "workers": 10,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-10\\rows-016\\output.f32"
+    },
+    {
+      "phase": "pool_parity",
+      "rows": 256,
+      "workers": 10,
+      "affinity": "none",
+      "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-10\\rows-256\\output.f32"
+    }
+  ]
+}

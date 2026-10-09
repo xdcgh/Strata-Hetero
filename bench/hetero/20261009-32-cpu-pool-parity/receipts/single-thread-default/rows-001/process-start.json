@@ -1,0 +1,30 @@
+{
+  "pid": 11108,
+  "popen_owned_handle": true,
+  "argv": [
+    "--run",
+    "--blob",
+    "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+    "--input",
+    "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+    "--rows",
+    "1",
+    "--hidden",
+    "2560",
+    "--intermediate",
+    "640",
+    "--gu-type",
+    "12",
+    "--down-type",
+    "7",
+    "--output",
+    "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\single-thread-default\\rows-001\\output.f32",
+    "--receipt-json",
+    "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\single-thread-default\\rows-001\\native-receipt.json",
+    "--warmup",
+    "1",
+    "--repeat",
+    "3"
+  ],
+  "start_utc": "2026-10-09T09:44:58.133361+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "label": "rows-1-workers-4",
+  "argv": [
+    "--run",
+    "--blob",
+    "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+    "--input",
+    "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+    "--rows",
+    "1",
+    "--hidden",
+    "2560",
+    "--intermediate",
+    "640",
+    "--gu-type",
+    "12",
+    "--down-type",
+    "7",
+    "--output",
+    "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-001\\output.f32",
+    "--receipt-json",
+    "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-001\\native-receipt.json",
+    "--warmup",
+    "1",
+    "--repeat",
+    "3",
+    "--pool-workers",
+    "4",
+    "--pool-affinity",
+    "none"
+  ],
+  "executable": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+  "cwd": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-001",
+  "resource_before": {
+    "time_utc": "2026-10-09T09:44:58.684830+00:00",
+    "label": "rows-1-workers-4:prelaunch",
+    "physical_available_bytes": 118500798464,
+    "commit_available_bytes": 123869601792,
+    "memory_source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true
+  },
+  "executable_identity_expected": {
+    "size_bytes": 2158592,
+    "mtime_ns": 1791536842767201200,
+    "ctime_ns": 1791536842587799900,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1407374883611045
+    },
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+    "sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467"
+  },
+  "inherited_controls": {},
+  "child_removed_controls": []
+}

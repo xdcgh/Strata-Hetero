@@ -1,0 +1,79 @@
+{
+  "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin": {
+    "size_bytes": 3072000,
+    "mtime_ns": 1791520543244546300,
+    "ctime_ns": 1791520543243549700,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 4222124650674796
+    },
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+    "sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f"
+  },
+  "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32": {
+    "size_bytes": 10240,
+    "mtime_ns": 1791520543262303100,
+    "ctime_ns": 1791520543262303100,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 3940649673963438
+    },
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+    "sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98"
+  },
+  "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32": {
+    "size_bytes": 163840,
+    "mtime_ns": 1791520543285860700,
+    "ctime_ns": 1791520543285860700,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 11821949021862199
+    },
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+    "sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f"
+  },
+  "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-256.f32": {
+    "size_bytes": 2621440,
+    "mtime_ns": 1791520543321554100,
+    "ctime_ns": 1791520543320553400,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 7881299347913035
+    },
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-256.f32",
+    "sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b"
+  },
+  "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32": {
+    "size_bytes": 10240,
+    "mtime_ns": 1791521100827354400,
+    "ctime_ns": 1791521100827354400,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1970324836990686
+    },
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+    "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3"
+  },
+  "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32": {
+    "size_bytes": 163840,
+    "mtime_ns": 1791521111110209100,
+    "ctime_ns": 1791521111110209100,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1970324836990690
+    },
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+    "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e"
+  },
+  "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-256.f32": {
+    "size_bytes": 2621440,
+    "mtime_ns": 1791521122925830900,
+    "ctime_ns": 1791521122923827500,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1970324836990694
+    },
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-256.f32",
+    "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8"
+  }
+}

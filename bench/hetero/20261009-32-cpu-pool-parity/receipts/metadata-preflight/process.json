@@ -1,0 +1,33 @@
+{
+  "pid": 10844,
+  "popen_owned_handle": true,
+  "argv": [
+    "--validate-only",
+    "--rows",
+    "1",
+    "--hidden",
+    "2560",
+    "--intermediate",
+    "640",
+    "--gu-type",
+    "12",
+    "--down-type",
+    "7",
+    "--pool-workers",
+    "1",
+    "--pool-affinity",
+    "none"
+  ],
+  "start_utc": "2026-10-09T09:44:58.102876+00:00",
+  "exit_code": 0,
+  "finish_utc": "2026-10-09T09:44:58.119684+00:00",
+  "resource_finish": {
+    "time_utc": "2026-10-09T09:44:58.119541+00:00",
+    "label": "pool-metadata:finished",
+    "physical_available_bytes": 118506889216,
+    "commit_available_bytes": 123871551488,
+    "memory_source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true
+  }
+}

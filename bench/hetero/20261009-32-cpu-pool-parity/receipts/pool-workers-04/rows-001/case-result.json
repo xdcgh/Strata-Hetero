@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "case": {
+    "phase": "pool_parity",
+    "rows": 1,
+    "workers": 4,
+    "affinity": "none",
+    "output": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-001\\output.f32"
+  },
+  "process": {
+    "pid": 22056,
+    "popen_owned_handle": true,
+    "argv": [
+      "--run",
+      "--blob",
+      "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+      "--input",
+      "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+      "--rows",
+      "1",
+      "--hidden",
+      "2560",
+      "--intermediate",
+      "640",
+      "--gu-type",
+      "12",
+      "--down-type",
+      "7",
+      "--output",
+      "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-001\\output.f32",
+      "--receipt-json",
+      "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity\\pool-workers-04\\rows-001\\native-receipt.json",
+      "--warmup",
+      "1",
+      "--repeat",
+      "3",
+      "--pool-workers",
+      "4",
+      "--pool-affinity",
+      "none"
+    ],
+    "start_utc": "2026-10-09T09:44:58.692264+00:00",
+    "exit_code": 0,
+    "finish_utc": "2026-10-09T09:44:58.726666+00:00",
+    "resource_finish": {
+      "time_utc": "2026-10-09T09:44:58.726624+00:00",
+      "label": "rows-1-workers-4:finished",
+      "physical_available_bytes": 118504861696,
+      "commit_available_bytes": 123879464960,
+      "memory_source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "errors": [],
+      "gate_ok": true
+    }
+  },
+  "stdout_json": "{\"status\":\"success\",\"receipt\":\"E:\\\\Strata-Hetero-data\\\\experts\\\\20261009-32-cpu-pool-parity\\\\pool-workers-04\\\\rows-001\\\\native-receipt.json\",\"output\":\"E:\\\\Strata-Hetero-data\\\\experts\\\\20261009-32-cpu-pool-parity\\\\pool-workers-04\\\\rows-001\\\\output.f32\"}",
+  "output_sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+  "finite": true,
+  "output_identity": {
+    "size_bytes": 10240,
+    "mtime_ns": 1791539098718584400,
+    "ctime_ns": 1791539098718584400,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1407374883617320
+    }
+  },
+  "float_count": 2560,
+  "matches_frozen_native_bitwise": true,
+  "matches_new_default_bitwise": true,
+  "execution_policy_ok": true
+}

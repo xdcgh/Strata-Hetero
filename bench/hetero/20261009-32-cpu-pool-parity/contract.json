@@ -1,0 +1,164 @@
+{
+  "schema": "native-cpu-pool-parity-contract-v1",
+  "run_id": "20261009-32-cpu-pool-parity",
+  "scope": "Real Q4_K/Q5_1 expert native CPU output parity only; not model inference, NumPy F32 quality, task quality, or throughput acceptance.",
+  "execution_guards": {
+    "default": "plan-only: no kernel, no tensor payload read, no E output directory creation",
+    "execution_requires": [
+      "--run",
+      "--root-start-confirmed",
+      "--vision-cpu-terminal-confirmed"
+    ],
+    "stop_policy": "stop on first metadata, resource, process, receipt, identity, or byte-parity failure; preserve all partial output and receipts; no retries"
+  },
+  "inputs_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\inputs-receipt.json",
+  "inputs_manifest_sha256": "47267506f5376747da9fd63e80a018f523ae1c10f87a30e0e92b6ead0ac6e8aa",
+  "extraction_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-01-real-expert\\extraction-01.json",
+  "extraction_receipt_sha256": "e4b8083e5f8f39f04affcb99e4a292bdad92ecf132462499561bbaddbd9dac9d",
+  "expert_identity_path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+  "expert_identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "expert_layer": 28,
+  "expert_id": 288,
+  "blob_path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+  "blob_bytes": 3072000,
+  "blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+  "old_native_preflight_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\preflight.json",
+  "old_native_summary_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\run-summary.json",
+  "old_harness_path": "E:\\Strata-Hetero-data\\build\\native-cpu-harness-20261009-01\\hetero_native_expert.exe",
+  "old_harness_bytes": 1997824,
+  "old_harness_sha256": "9cd95dae9c92b50a6487a3a564322576cc2f9aaeb9f16a72946e97afa2ab90b6",
+  "old_harness_source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609",
+  "new_harness_path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+  "new_harness_bytes": 2158592,
+  "new_harness_sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467",
+  "new_harness_source_sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+  "build_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-28-native-cpu-pool-build\\build-receipt.json",
+  "build_receipt_sha256": "04ab427e91c7f395e665f8f1662f770626ae594383b789011b590b8fa53e4e27",
+  "ggml_pin": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "e_output_root": "E:\\Strata-Hetero-data\\experts\\20261009-32-cpu-pool-parity",
+  "gate_rows": [
+    1,
+    16,
+    256
+  ],
+  "pool_workers": [
+    1,
+    4,
+    10
+  ],
+  "affinity": "none",
+  "warmup": 1,
+  "repeat": 3,
+  "input_seed": 42,
+  "input_recipe": "numpy.default_rng(seed+rows).standard_normal((rows,2560),dtype=float32)*float32(0.25)",
+  "parameters": {
+    "hidden": 2560,
+    "intermediate": 640,
+    "gu_type": 12,
+    "down_type": 7,
+    "native_blob_layout": "gate,up,down",
+    "pool_host_works": true,
+    "pool_threads_semantics": "N background workers plus participating caller",
+    "max_multi_rows_per_job": 8
+  },
+  "inputs": [
+    {
+      "rows": 1,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-001.f32",
+      "bytes": 10240,
+      "sha256": "69d264a3988328a542e8938420242f1b3b245baf190aa874c1c685f812c81f98"
+    },
+    {
+      "rows": 16,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-016.f32",
+      "bytes": 163840,
+      "sha256": "bde93fa4f089a8f8c59b001c200c08e312d8227bd13e8375679b026fa7a7b60f"
+    },
+    {
+      "rows": 256,
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\input-256.f32",
+      "bytes": 2621440,
+      "sha256": "85afa833dcabbf3155cb1e0bc55e3434592a422a8298b7dcb483c87a324ce69b"
+    }
+  ],
+  "frozen_outputs": {
+    "1": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-001.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-001\\native-receipt.json",
+      "native_receipt_sha256": "36bd3aeb7af0303175d9b97044feb7aa1d57ac49651a5bf18768313067196320",
+      "native_receipt_status": "success",
+      "old_harness_source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609"
+    },
+    "16": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-016.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-016\\native-receipt.json",
+      "native_receipt_sha256": "8082d1ff398410074d051f9e5db2c4eef6ae5d718365d6cb9e92fa6786de4631",
+      "native_receipt_status": "success",
+      "old_harness_source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609"
+    },
+    "256": {
+      "path": "E:\\Strata-Hetero-data\\experts\\20261009-10-native-outputs-01\\output-256.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "native_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-10-native-cpu\\runs\\native-cpu-01\\rows-256\\native-receipt.json",
+      "native_receipt_sha256": "7668c4a6938cbfa7d0ba878d8ed15cbbf7b368caa1b9bac1281b8c61776d6c30",
+      "native_receipt_status": "success",
+      "old_harness_source_sha256": "eeab559048ed0fc06759284274fd4d3a0bab6818a04fe7854c3dfc27df662609"
+    }
+  },
+  "comparison": {
+    "operation": "exact byte-for-byte equality",
+    "baseline": "existing frozen native CPU Q4_K/Q5_1 output",
+    "pool_outputs_must_match": [
+      "frozen old native output",
+      "new binary single-thread default output for same rows"
+    ],
+    "numpy_f32_comparison": "excluded: prior run is complete_with_quality_failures against distinct NumPy F32 arithmetic; this parity contract uses its native output only",
+    "formal_repeatability": "warmup1/formal3 per invocation; numerical output from final formal state"
+  },
+  "resources": {
+    "source": "stdlib ctypes GlobalMemoryStatusEx + PSAPI GetPerformanceInfo",
+    "min_available_physical_bytes": 12884901888,
+    "min_commit_headroom_bytes": 4294967296,
+    "sample_interval_seconds": 1,
+    "gate": "before every child and during each owned child"
+  },
+  "ownership": {
+    "child": "new harness Popen owned handle",
+    "stop": "only terminate the Popen-owned child process handle on gate failure",
+    "stdout_stderr": "per-case exclusive files",
+    "output_paths": "fixed new E root, exclusive directories/files; refuse any existing root or path",
+    "identity": "stat/fstat size, mtime, device, file index and stable path ctime around hash reads"
+  },
+  "phases": [
+    {
+      "phase": "single_thread_gate",
+      "rows": [
+        1,
+        16,
+        256
+      ],
+      "stop_if_any_diff": true
+    },
+    {
+      "phase": "pool_matrix",
+      "rows": [
+        1,
+        16,
+        256
+      ],
+      "workers": [
+        1,
+        4,
+        10
+      ],
+      "affinity": "none",
+      "only_after_all_single_thread_gates_pass": true
+    }
+  ],
+  "provenance_limit": "The previous native run used old harness binary and source; the NumPy F32 quality failures are unrelated to bitwise native parity. The new source/build differs; no performance claim is made."
+}

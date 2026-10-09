@@ -1,0 +1,19 @@
+{
+  "pool": {
+    "requested_workers": 1,
+    "affinity": "none",
+    "kernel_started": false,
+    "topology_queried": false
+  },
+  "executable_identity": {
+    "size_bytes": 2158592,
+    "mtime_ns": 1791536842767201200,
+    "ctime_ns": 1791536842587799900,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 1407374883611045
+    },
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-pool-20261009-28\\hetero_native_expert.exe",
+    "sha256": "a3d06d8d7985d23d7302f04750ad56f7441de31d5c10bfea278f79ebab2ca467"
+  }
+}

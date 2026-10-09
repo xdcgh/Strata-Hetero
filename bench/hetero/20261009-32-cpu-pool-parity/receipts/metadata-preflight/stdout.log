@@ -1,0 +1,19 @@
+{
+  "schema": "strata-hetero-native-cpu-metadata-v1",
+  "mode": "validate_only",
+  "native_fmt_called": true,
+  "native_kernel_called": false,
+  "output_written": false,
+  "strata_head": "9eb9960ec750b0db97634ea0dfafaed48b015a2a",
+  "ggml_pin": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "native_harness_source_sha256": "7082faf7df6a2fd578a96626b532bcdec4300aa6d02c669af80537d092f42a64",
+  "sha256_header_sha256": "5bbdfb8733ec347de4c5ca990ce412cc1241854c5920f81a47ac331d32bc19d8",
+  "harness_cmake_sha256": "cc4a4c59b9af0b1af902199bc99cb75f93396eb8ae2a4210d6103cbd0cc6c75a",
+  "rows": 1, "hidden": 2560, "intermediate": 640,
+  "gu_type": 12, "down_type": 7,
+  "gu_activation_type": 15, "down_activation_type": 9,
+  "gu_row_bytes": 1440, "down_row_bytes": 480,
+  "up_offset_bytes": 921600, "down_offset_bytes": 1843200,
+  "blob_bytes": 3072000, "act_bytes_per_row": 2920, "hidden_bytes_per_row": 720,
+  "pool": {"requested_workers": 1, "affinity": "none", "kernel_started": false, "topology_queried": false}
+}

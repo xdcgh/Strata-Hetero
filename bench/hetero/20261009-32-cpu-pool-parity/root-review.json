@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "status": "root_verified_12_native_pool_parity_cases",
+  "reviewed_utc": "2026-10-09T09:51:28.501811+00:00",
+  "rows": [
+    {
+      "rows": 1,
+      "workers": null,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 16,
+      "workers": null,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 256,
+      "workers": null,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 1,
+      "workers": 1,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 16,
+      "workers": 1,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 256,
+      "workers": 1,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 1,
+      "workers": 4,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 16,
+      "workers": 4,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 256,
+      "workers": 4,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 1,
+      "workers": 10,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 16,
+      "workers": 10,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "native_bitwise_equal": true,
+      "finite": true
+    },
+    {
+      "rows": 256,
+      "workers": 10,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "native_bitwise_equal": true,
+      "finite": true
+    }
+  ],
+  "reference": "frozen actual nativeCPU output; NumPyF32 not canonical",
+  "actual_affinity": "none; plannedtopology only",
+  "full_model_quality": "not_run",
+  "scheduling_performance_accepted": false
+}
