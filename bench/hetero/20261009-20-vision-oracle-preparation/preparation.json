@@ -1,0 +1,90 @@
+{
+  "schema": "strata-vision-oracle-build-preparation-v1",
+  "status": "built_not_run",
+  "created_utc": "2026-10-09",
+  "scope": "CPU-only strata-vision helper built from the existing pinned mtmd project; no helper, image encoder, mmproj, text-model weights, Core, or GPU was run or loaded",
+  "strata": {
+    "repo": "C:/Users/DC/Documents/ChatGPT/Strata-Hetero",
+    "branch": "codex/09-upstream-0-1-40-4",
+    "head": "5eb3abfd6d9ef1c4c233845ca7653885bdec479e",
+    "vision_cmake": {
+      "path": "tools/vision/CMakeLists.txt",
+      "git_blob": "d6518c71daf05076f919701148970b827d42d0af",
+      "sha256": "2F513C4B8346D146863723C059246678EC84043FD61F663B3728ABB01964FA53"
+    },
+    "vision_source": {
+      "path": "tools/vision/strata_vision.cpp",
+      "git_blob": "d8ef58fe873edbb075611b9b74cae568f8fb29d3",
+      "sha256": "3FF6A05B7305862529D68F039F95FD9E3E44CCA89A66B29B3AA6C09B3A10FB89"
+    },
+    "build_target": "strata-vision",
+    "target_sources": [
+      "tools/vision/strata_vision.cpp",
+      "pinned llama.cpp mtmd + llama + ggml dependencies"
+    ],
+    "cmake_contract": {
+      "LLAMA_BUILD_COMMON": "OFF (set by tools/vision/CMakeLists.txt)",
+      "LLAMA_BUILD_MTMD": "ON (set by tools/vision/CMakeLists.txt)",
+      "STRATA_VISION_CUDA": "OFF",
+      "STRATA_PORTABLE": "ON (static MSVC runtime, AVX2 baseline; GGML_NATIVE=OFF, AVX2/FMA/F16C/BMI2=ON, AVX-512/VNNI/AMX=OFF)",
+      "GGML_CUDA": "OFF",
+      "GGML_HIP": "OFF",
+      "GGML_SYCL": "OFF",
+      "GGML_VULKAN": "OFF",
+      "GGML_OPENCL": "OFF",
+      "GGML_NATIVE": "OFF",
+      "GGML_OPENMP": "OFF",
+      "configuration": "Release",
+      "generator": "Ninja",
+      "parallelism": 1
+    }
+  },
+  "pinned_llama": {
+    "path": "E:/Strata-Hetero-data/source/llama-3cf0325",
+    "head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "working_tree_status": "clean",
+    "cmake_blob": "4feaf083e04e6131febf25450da160ed9339928b",
+    "ggml_cmake_blob": "7f8a1f70616fc8101e55c6270bae2ca13272da5b",
+    "cmake_options_confirmed_at_pinned_revision": {
+      "LLAMA_BUILD_COMMON": "declared; explicitly disabled by the vision project",
+      "LLAMA_BUILD_MTMD": "declared; explicitly enabled by the vision project",
+      "GGML_CUDA": "declared; off",
+      "GGML_HIP": "declared; off",
+      "GGML_SYCL": "declared; off"
+    }
+  },
+  "toolchain": {
+    "cmake": {
+      "path": "E:/Strata-Hetero-data/venv/Lib/site-packages/cmake/data/bin/cmake.exe",
+      "version": "4.4.3"
+    },
+    "ninja": {
+      "path": "E:/Strata-Hetero-data/venv/Scripts/ninja.exe",
+      "version": "1.13.2.git.kitware.jobserver-pipe-1"
+    },
+    "msvc_environment_script": "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Auxiliary/Build/vcvars64.bat",
+    "msvc_expected_toolset": "19.51.36260 (from the pinned machine build setup; not independently invoked in this preparation)"
+  },
+  "paths": {
+    "build_directory": "E:/Strata-Hetero-data/build/vision-oracle-cpu-20261009-20",
+    "prepared_command": "bench/hetero/20261009-20-vision-oracle-preparation/build-vision-cpu.cmd",
+    "expected_executable": "E:/Strata-Hetero-data/build/vision-oracle-cpu-20261009-20/bin/strata-vision.exe"
+  },
+  "command_file": {
+    "purpose": "configure the existing tools/vision CMake project and build only strata-vision with one Ninja job",
+    "executed": false
+  },
+  "limitations": [
+    "This prepares a CPU-capable AVX2 helper; it does not yet establish SVE1 output or oracle quality.",
+    "The command deliberately does not pass --gpu or run the helper. A later authorized oracle run must provide exact mmproj/model/image paths and separately record output checksums and correctness comparisons.",
+    "No new vision math, CMake source edits, runtime edits, model access, accelerator runtime initialization, or build occurred."
+  ],
+  "build_execution": {
+    "status": "built_not_run",
+    "receipt": "build-evidence/build-receipt.json",
+    "configure_log": "build-evidence/configure-retry04.log",
+    "build_log": "build-evidence/build-retry04.log",
+    "executed_command": "build-evidence/run-reviewed-build.ps1",
+    "source_helpers_unchanged": true
+  }
+}
