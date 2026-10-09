@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "status": "candidate_cpu_runtime_comparison",
+  "rows": [
+    {
+      "rows": 1,
+      "status": "compared",
+      "devices": [
+        "CPU"
+      ],
+      "build": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "rows": 1,
+        "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+        "core_created": false,
+        "compiled": false,
+        "inference_run": false,
+        "raw_minimum_binding_owned_by_caller": true,
+        "native_runtime_parity": "NOT_RUN",
+        "production_route_enabled": false
+      },
+      "outputs": [
+        {
+          "iteration": "warmup",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-001-0.npy",
+          "sha256": "36ec3a6c15de1b1cff198625ff86a366ebfc316551aa5e44e532ee7f3ede21b0",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.271510988473892e-06,
+            "relative_rmse": 0.00020984087061577702,
+            "max_row_norm_relative_error": 5.654982527286812e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-1",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-001-1.npy",
+          "sha256": "36ec3a6c15de1b1cff198625ff86a366ebfc316551aa5e44e532ee7f3ede21b0",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.271510988473892e-06,
+            "relative_rmse": 0.00020984087061577702,
+            "max_row_norm_relative_error": 5.654982527286812e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-2",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-001-2.npy",
+          "sha256": "36ec3a6c15de1b1cff198625ff86a366ebfc316551aa5e44e532ee7f3ede21b0",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.271510988473892e-06,
+            "relative_rmse": 0.00020984087061577702,
+            "max_row_norm_relative_error": 5.654982527286812e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-3",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-001-3.npy",
+          "sha256": "36ec3a6c15de1b1cff198625ff86a366ebfc316551aa5e44e532ee7f3ede21b0",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.271510988473892e-06,
+            "relative_rmse": 0.00020984087061577702,
+            "max_row_norm_relative_error": 5.654982527286812e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "all_formal_pass": true
+    },
+    {
+      "rows": 16,
+      "status": "compared",
+      "devices": [
+        "CPU"
+      ],
+      "build": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "rows": 16,
+        "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+        "core_created": false,
+        "compiled": false,
+        "inference_run": false,
+        "raw_minimum_binding_owned_by_caller": true,
+        "native_runtime_parity": "NOT_RUN",
+        "production_route_enabled": false
+      },
+      "outputs": [
+        {
+          "iteration": "warmup",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-016-0.npy",
+          "sha256": "dc6d53093e2a7fc16c774e367fc6b1929385b8c6b7bf5d380be951397fc08ad2",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92420557141304e-05,
+            "relative_rmse": 0.0005186128283659362,
+            "max_row_norm_relative_error": 0.00014479014513470593,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-1",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-016-1.npy",
+          "sha256": "dc6d53093e2a7fc16c774e367fc6b1929385b8c6b7bf5d380be951397fc08ad2",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92420557141304e-05,
+            "relative_rmse": 0.0005186128283659362,
+            "max_row_norm_relative_error": 0.00014479014513470593,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-2",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-016-2.npy",
+          "sha256": "dc6d53093e2a7fc16c774e367fc6b1929385b8c6b7bf5d380be951397fc08ad2",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92420557141304e-05,
+            "relative_rmse": 0.0005186128283659362,
+            "max_row_norm_relative_error": 0.00014479014513470593,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-3",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-016-3.npy",
+          "sha256": "dc6d53093e2a7fc16c774e367fc6b1929385b8c6b7bf5d380be951397fc08ad2",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92420557141304e-05,
+            "relative_rmse": 0.0005186128283659362,
+            "max_row_norm_relative_error": 0.00014479014513470593,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "all_formal_pass": true
+    },
+    {
+      "rows": 256,
+      "status": "compared",
+      "devices": [
+        "CPU"
+      ],
+      "build": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "rows": 256,
+        "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+        "core_created": false,
+        "compiled": false,
+        "inference_run": false,
+        "raw_minimum_binding_owned_by_caller": true,
+        "native_runtime_parity": "NOT_RUN",
+        "production_route_enabled": false
+      },
+      "outputs": [
+        {
+          "iteration": "warmup",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-256-0.npy",
+          "sha256": "f6a10724f403320e171eef5f8520690d33355d5311bd79acddec3703819779c2",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.270657569169998e-05,
+            "relative_rmse": 0.0006364484122630362,
+            "max_row_norm_relative_error": 0.00013943102893655373,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-1",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-256-1.npy",
+          "sha256": "f6a10724f403320e171eef5f8520690d33355d5311bd79acddec3703819779c2",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.270657569169998e-05,
+            "relative_rmse": 0.0006364484122630362,
+            "max_row_norm_relative_error": 0.00013943102893655373,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-2",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-256-2.npy",
+          "sha256": "f6a10724f403320e171eef5f8520690d33355d5311bd79acddec3703819779c2",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.270657569169998e-05,
+            "relative_rmse": 0.0006364484122630362,
+            "max_row_norm_relative_error": 0.00013943102893655373,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        },
+        {
+          "iteration": "formal-3",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-37-native-openvino-cpu\\rows-256-3.npy",
+          "sha256": "f6a10724f403320e171eef5f8520690d33355d5311bd79acddec3703819779c2",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 2.270657569169998e-05,
+            "relative_rmse": 0.0006364484122630362,
+            "max_row_norm_relative_error": 0.00013943102893655373,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          }
+        }
+      ],
+      "all_formal_pass": true
+    }
+  ],
+  "all_pass": true,
+  "original_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "native_reference": "actualfrozen9cd",
+  "core_scope": "CPU only; noGPU/NPU enumeration",
+  "builder_sha256": "ddb26d786b4db2aff0f8360ed21d165fa65a399c8b4f27ac338bdea4ed60327a",
+  "production_route_enabled": false
+}

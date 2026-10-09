@@ -1,0 +1,1019 @@
+{
+  "schema_version": 1,
+  "status": "native_activation_arc_comparison",
+  "device": "GPU.0",
+  "device_name": "Intel(R) Arc(TM) 140T GPU (64GB) (iGPU)",
+  "openvino": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "all_pass": true,
+  "rows": [
+    {
+      "rows": 1,
+      "status": "compared",
+      "devices": [
+        "GPU.0"
+      ],
+      "compile_ns": 1902160800,
+      "build": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "rows": 1,
+        "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+        "core_created": false,
+        "compiled": false,
+        "inference_run": false,
+        "raw_minimum_binding_owned_by_caller": true,
+        "native_runtime_parity": "NOT_RUN",
+        "production_route_enabled": false
+      },
+      "outputs": [
+        {
+          "iteration": "warmup",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-001-0.npy",
+          "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 3004500
+        },
+        {
+          "iteration": "formal-1",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-001-1.npy",
+          "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 1142700
+        },
+        {
+          "iteration": "formal-2",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-001-2.npy",
+          "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 952700
+        },
+        {
+          "iteration": "formal-3",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-001-3.npy",
+          "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 4.2780302464962006e-06,
+            "relative_rmse": 0.00021016330954546657,
+            "max_row_norm_relative_error": 6.032197295386443e-06,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 883000
+        }
+      ],
+      "all_formal_pass": true
+    },
+    {
+      "rows": 16,
+      "status": "compared",
+      "devices": [
+        "GPU.0"
+      ],
+      "compile_ns": 1027687400,
+      "build": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "rows": 16,
+        "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+        "core_created": false,
+        "compiled": false,
+        "inference_run": false,
+        "raw_minimum_binding_owned_by_caller": true,
+        "native_runtime_parity": "NOT_RUN",
+        "production_route_enabled": false
+      },
+      "outputs": [
+        {
+          "iteration": "warmup",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-016-0.npy",
+          "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 1641100
+        },
+        {
+          "iteration": "formal-1",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-016-1.npy",
+          "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 664300
+        },
+        {
+          "iteration": "formal-2",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-016-2.npy",
+          "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 561500
+        },
+        {
+          "iteration": "formal-3",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-016-3.npy",
+          "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 1.92360021173954e-05,
+            "relative_rmse": 0.0005186173727708898,
+            "max_row_norm_relative_error": 0.00014491795441569952,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 552000
+        }
+      ],
+      "all_formal_pass": true
+    },
+    {
+      "rows": 256,
+      "status": "compared",
+      "devices": [
+        "GPU.0"
+      ],
+      "compile_ns": 1024451600,
+      "build": {
+        "schema_version": 1,
+        "status": "constructed_uncompiled",
+        "rows": 256,
+        "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+        "core_created": false,
+        "compiled": false,
+        "inference_run": false,
+        "raw_minimum_binding_owned_by_caller": true,
+        "native_runtime_parity": "NOT_RUN",
+        "production_route_enabled": false
+      },
+      "outputs": [
+        {
+          "iteration": "warmup",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-256-0.npy",
+          "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 2621000
+        },
+        {
+          "iteration": "formal-1",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-256-1.npy",
+          "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 2677600
+        },
+        {
+          "iteration": "formal-2",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-256-2.npy",
+          "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 2673100
+        },
+        {
+          "iteration": "formal-3",
+          "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-256-3.npy",
+          "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+          "quality": {
+            "shape_ok": true,
+            "finite": true,
+            "max_abs_error": 7.037073373794556e-05,
+            "relative_rmse": 0.0006915594487259341,
+            "max_row_norm_relative_error": 0.0001416532932196892,
+            "tolerances": {
+              "max_abs": 0.01,
+              "relative_rmse": 0.001,
+              "row_norm_relative": 0.001
+            },
+            "pass": true
+          },
+          "inprocess_infer_wall_ns_not_transport": 3238000
+        }
+      ],
+      "all_formal_pass": true
+    }
+  ],
+  "resource_gates": [
+    {
+      "phase": "preload:1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117864194048,
+        "physical_used_bytes": 19099054080,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22323929088,
+        "commit_available_bytes": 123229253632,
+        "commit_total_pages": 5450178,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123229253632,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:1:0",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670854656,
+        "physical_used_bytes": 19292393472,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:1:0",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670326272,
+        "physical_used_bytes": 19292921856,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:1:1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670326272,
+        "physical_used_bytes": 19292921856,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:1:1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670256640,
+        "physical_used_bytes": 19292991488,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:1:2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670256640,
+        "physical_used_bytes": 19292991488,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:1:2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670256640,
+        "physical_used_bytes": 19292991488,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:1:3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670256640,
+        "physical_used_bytes": 19292991488,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:1:3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670780928,
+        "physical_used_bytes": 19292467200,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "preload:16",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117670772736,
+        "physical_used_bytes": 19292475392,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22461759488,
+        "commit_available_bytes": 123091423232,
+        "commit_total_pages": 5483828,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 123091423232,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:16:0",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117573038080,
+        "physical_used_bytes": 19390210048,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22563057664,
+        "commit_available_bytes": 122990125056,
+        "commit_total_pages": 5508559,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122990125056,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:16:0",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117571653632,
+        "physical_used_bytes": 19391594496,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22564089856,
+        "commit_available_bytes": 122989092864,
+        "commit_total_pages": 5508811,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122989092864,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:16:1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117571416064,
+        "physical_used_bytes": 19391832064,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22564089856,
+        "commit_available_bytes": 122989092864,
+        "commit_total_pages": 5508811,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122989092864,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:16:1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117570068480,
+        "physical_used_bytes": 19393179648,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22565142528,
+        "commit_available_bytes": 122988040192,
+        "commit_total_pages": 5509068,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122988040192,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:16:2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117569998848,
+        "physical_used_bytes": 19393249280,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22565142528,
+        "commit_available_bytes": 122988040192,
+        "commit_total_pages": 5509068,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122988040192,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:16:2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117569581056,
+        "physical_used_bytes": 19393667072,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22565142528,
+        "commit_available_bytes": 122988040192,
+        "commit_total_pages": 5509068,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122988040192,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:16:3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117569576960,
+        "physical_used_bytes": 19393671168,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22565142528,
+        "commit_available_bytes": 122988040192,
+        "commit_total_pages": 5509068,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122988040192,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:16:3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117569503232,
+        "physical_used_bytes": 19393744896,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22565142528,
+        "commit_available_bytes": 122988040192,
+        "commit_total_pages": 5509068,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122988040192,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "preload:256",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117569495040,
+        "physical_used_bytes": 19393753088,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22565072896,
+        "commit_available_bytes": 122988109824,
+        "commit_total_pages": 5509051,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122988109824,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:256:0",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117529604096,
+        "physical_used_bytes": 19433644032,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22608244736,
+        "commit_available_bytes": 122944937984,
+        "commit_total_pages": 5519591,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122944937984,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:256:0",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117520265216,
+        "physical_used_bytes": 19442982912,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22617341952,
+        "commit_available_bytes": 122935840768,
+        "commit_total_pages": 5521812,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122935840768,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:256:1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117520248832,
+        "physical_used_bytes": 19442999296,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22617341952,
+        "commit_available_bytes": 122935840768,
+        "commit_total_pages": 5521812,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122935840768,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:256:1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117518565376,
+        "physical_used_bytes": 19444682752,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22618087424,
+        "commit_available_bytes": 122935095296,
+        "commit_total_pages": 5521994,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122935095296,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:256:2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117518565376,
+        "physical_used_bytes": 19444682752,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22618087424,
+        "commit_available_bytes": 122935095296,
+        "commit_total_pages": 5521994,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122935095296,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:256:2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117515370496,
+        "physical_used_bytes": 19447877632,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22617034752,
+        "commit_available_bytes": 122936147968,
+        "commit_total_pages": 5521737,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122936147968,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "beforeinfer:256:3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117515300864,
+        "physical_used_bytes": 19447947264,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22617034752,
+        "commit_available_bytes": 122936147968,
+        "commit_total_pages": 5521737,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122936147968,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "phase": "afterinfer:256:3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 117509107712,
+        "physical_used_bytes": 19454140416,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 22618144768,
+        "commit_available_bytes": 122935037952,
+        "commit_total_pages": 5522008,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 122935037952,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "native_reference": "actualfrozen9cd",
+  "tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "transport_model_gain": "not_measured",
+  "production_route_enabled": false
+}

@@ -1,0 +1,299 @@
+[
+  {
+    "rows": 1,
+    "status": "compared",
+    "devices": [
+      "GPU.0"
+    ],
+    "compile_ns": 1902160800,
+    "build": {
+      "schema_version": 1,
+      "status": "constructed_uncompiled",
+      "rows": 1,
+      "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+      "core_created": false,
+      "compiled": false,
+      "inference_run": false,
+      "raw_minimum_binding_owned_by_caller": true,
+      "native_runtime_parity": "NOT_RUN",
+      "production_route_enabled": false
+    },
+    "outputs": [
+      {
+        "iteration": "warmup",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-001-0.npy",
+        "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 4.2780302464962006e-06,
+          "relative_rmse": 0.00021016330954546657,
+          "max_row_norm_relative_error": 6.032197295386443e-06,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 3004500
+      },
+      {
+        "iteration": "formal-1",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-001-1.npy",
+        "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 4.2780302464962006e-06,
+          "relative_rmse": 0.00021016330954546657,
+          "max_row_norm_relative_error": 6.032197295386443e-06,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 1142700
+      },
+      {
+        "iteration": "formal-2",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-001-2.npy",
+        "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 4.2780302464962006e-06,
+          "relative_rmse": 0.00021016330954546657,
+          "max_row_norm_relative_error": 6.032197295386443e-06,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 952700
+      },
+      {
+        "iteration": "formal-3",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-001-3.npy",
+        "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 4.2780302464962006e-06,
+          "relative_rmse": 0.00021016330954546657,
+          "max_row_norm_relative_error": 6.032197295386443e-06,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 883000
+      }
+    ],
+    "all_formal_pass": true
+  },
+  {
+    "rows": 16,
+    "status": "compared",
+    "devices": [
+      "GPU.0"
+    ],
+    "compile_ns": 1027687400,
+    "build": {
+      "schema_version": 1,
+      "status": "constructed_uncompiled",
+      "rows": 16,
+      "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+      "core_created": false,
+      "compiled": false,
+      "inference_run": false,
+      "raw_minimum_binding_owned_by_caller": true,
+      "native_runtime_parity": "NOT_RUN",
+      "production_route_enabled": false
+    },
+    "outputs": [
+      {
+        "iteration": "warmup",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-016-0.npy",
+        "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.92360021173954e-05,
+          "relative_rmse": 0.0005186173727708898,
+          "max_row_norm_relative_error": 0.00014491795441569952,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 1641100
+      },
+      {
+        "iteration": "formal-1",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-016-1.npy",
+        "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.92360021173954e-05,
+          "relative_rmse": 0.0005186173727708898,
+          "max_row_norm_relative_error": 0.00014491795441569952,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 664300
+      },
+      {
+        "iteration": "formal-2",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-016-2.npy",
+        "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.92360021173954e-05,
+          "relative_rmse": 0.0005186173727708898,
+          "max_row_norm_relative_error": 0.00014491795441569952,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 561500
+      },
+      {
+        "iteration": "formal-3",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-016-3.npy",
+        "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 1.92360021173954e-05,
+          "relative_rmse": 0.0005186173727708898,
+          "max_row_norm_relative_error": 0.00014491795441569952,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 552000
+      }
+    ],
+    "all_formal_pass": true
+  },
+  {
+    "rows": 256,
+    "status": "compared",
+    "devices": [
+      "GPU.0"
+    ],
+    "compile_ns": 1024451600,
+    "build": {
+      "schema_version": 1,
+      "status": "constructed_uncompiled",
+      "rows": 256,
+      "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+      "core_created": false,
+      "compiled": false,
+      "inference_run": false,
+      "raw_minimum_binding_owned_by_caller": true,
+      "native_runtime_parity": "NOT_RUN",
+      "production_route_enabled": false
+    },
+    "outputs": [
+      {
+        "iteration": "warmup",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-256-0.npy",
+        "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 7.037073373794556e-05,
+          "relative_rmse": 0.0006915594487259341,
+          "max_row_norm_relative_error": 0.0001416532932196892,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 2621000
+      },
+      {
+        "iteration": "formal-1",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-256-1.npy",
+        "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 7.037073373794556e-05,
+          "relative_rmse": 0.0006915594487259341,
+          "max_row_norm_relative_error": 0.0001416532932196892,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 2677600
+      },
+      {
+        "iteration": "formal-2",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-256-2.npy",
+        "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 7.037073373794556e-05,
+          "relative_rmse": 0.0006915594487259341,
+          "max_row_norm_relative_error": 0.0001416532932196892,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 2673100
+      },
+      {
+        "iteration": "formal-3",
+        "path": "E:\\Strata-Hetero-data\\experts\\20261009-38-native-openvino-arc\\rows-256-3.npy",
+        "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+        "quality": {
+          "shape_ok": true,
+          "finite": true,
+          "max_abs_error": 7.037073373794556e-05,
+          "relative_rmse": 0.0006915594487259341,
+          "max_row_norm_relative_error": 0.0001416532932196892,
+          "tolerances": {
+            "max_abs": 0.01,
+            "relative_rmse": 0.001,
+            "row_norm_relative": 0.001
+          },
+          "pass": true
+        },
+        "inprocess_infer_wall_ns_not_transport": 3238000
+      }
+    ],
+    "all_formal_pass": true
+  }
+]

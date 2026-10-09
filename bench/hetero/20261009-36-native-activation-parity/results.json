@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "status": "candidate_native_algebra_checked",
+  "operator": "Q4_K_Q8_K_SILU_Q5_1_Q8_1",
+  "native_reference": "actualfrozen9cd output",
+  "tol": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "formal_count": 9,
+  "all_pass": true,
+  "rows": [
+    {
+      "rows": 1,
+      "iteration": "warmup",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-001-0.npy",
+      "output_sha256": "006c86b4b5d5921079df0212ddd975de1d49e4abf15258c865ecb35aa300cf17",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 5.820766091346741e-09,
+        "relative_rmse": 2.3330906304625047e-07,
+        "max_row_norm_relative_error": 2.8012369611467063e-09,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 2947400
+    },
+    {
+      "rows": 1,
+      "iteration": "formal-1",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-001-1.npy",
+      "output_sha256": "006c86b4b5d5921079df0212ddd975de1d49e4abf15258c865ecb35aa300cf17",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 5.820766091346741e-09,
+        "relative_rmse": 2.3330906304625047e-07,
+        "max_row_norm_relative_error": 2.8012369611467063e-09,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 3457800
+    },
+    {
+      "rows": 1,
+      "iteration": "formal-2",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-001-2.npy",
+      "output_sha256": "006c86b4b5d5921079df0212ddd975de1d49e4abf15258c865ecb35aa300cf17",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 5.820766091346741e-09,
+        "relative_rmse": 2.3330906304625047e-07,
+        "max_row_norm_relative_error": 2.8012369611467063e-09,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 2875700
+    },
+    {
+      "rows": 1,
+      "iteration": "formal-3",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-001-3.npy",
+      "output_sha256": "006c86b4b5d5921079df0212ddd975de1d49e4abf15258c865ecb35aa300cf17",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 5.820766091346741e-09,
+        "relative_rmse": 2.3330906304625047e-07,
+        "max_row_norm_relative_error": 2.8012369611467063e-09,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 2694500
+    },
+    {
+      "rows": 16,
+      "iteration": "warmup",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-016-0.npy",
+      "output_sha256": "5331d3a43f458e64e8fb2103e1f909771150946fb4823ffe57c0752e88996dde",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.336237907409668e-06,
+        "relative_rmse": 9.116348246553487e-05,
+        "max_row_norm_relative_error": 3.392552099079054e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 5607300
+    },
+    {
+      "rows": 16,
+      "iteration": "formal-1",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-016-1.npy",
+      "output_sha256": "5331d3a43f458e64e8fb2103e1f909771150946fb4823ffe57c0752e88996dde",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.336237907409668e-06,
+        "relative_rmse": 9.116348246553487e-05,
+        "max_row_norm_relative_error": 3.392552099079054e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 5152100
+    },
+    {
+      "rows": 16,
+      "iteration": "formal-2",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-016-2.npy",
+      "output_sha256": "5331d3a43f458e64e8fb2103e1f909771150946fb4823ffe57c0752e88996dde",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.336237907409668e-06,
+        "relative_rmse": 9.116348246553487e-05,
+        "max_row_norm_relative_error": 3.392552099079054e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 5048400
+    },
+    {
+      "rows": 16,
+      "iteration": "formal-3",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-016-3.npy",
+      "output_sha256": "5331d3a43f458e64e8fb2103e1f909771150946fb4823ffe57c0752e88996dde",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.336237907409668e-06,
+        "relative_rmse": 9.116348246553487e-05,
+        "max_row_norm_relative_error": 3.392552099079054e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 5024100
+    },
+    {
+      "rows": 256,
+      "iteration": "warmup",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-256-0.npy",
+      "output_sha256": "4894cb5db09b00d84245db049829f8138346f6d8bf6625ab286e30361c0eacc7",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 3.6089448258280754e-05,
+        "relative_rmse": 0.00011767425575340763,
+        "max_row_norm_relative_error": 0.00015137596388107864,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 30907200
+    },
+    {
+      "rows": 256,
+      "iteration": "formal-1",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-256-1.npy",
+      "output_sha256": "4894cb5db09b00d84245db049829f8138346f6d8bf6625ab286e30361c0eacc7",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 3.6089448258280754e-05,
+        "relative_rmse": 0.00011767425575340763,
+        "max_row_norm_relative_error": 0.00015137596388107864,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 32247000
+    },
+    {
+      "rows": 256,
+      "iteration": "formal-2",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-256-2.npy",
+      "output_sha256": "4894cb5db09b00d84245db049829f8138346f6d8bf6625ab286e30361c0eacc7",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 3.6089448258280754e-05,
+        "relative_rmse": 0.00011767425575340763,
+        "max_row_norm_relative_error": 0.00015137596388107864,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 32414600
+    },
+    {
+      "rows": 256,
+      "iteration": "formal-3",
+      "output_path": "E:\\Strata-Hetero-data\\experts\\20261009-36-native-activation-parity\\rows-256-3.npy",
+      "output_sha256": "4894cb5db09b00d84245db049829f8138346f6d8bf6625ab286e30361c0eacc7",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 3.6089448258280754e-05,
+        "relative_rmse": 0.00011767425575340763,
+        "max_row_norm_relative_error": 0.00015137596388107864,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      },
+      "calculation_wall_ns_not_model_performance": 36744900
+    }
+  ],
+  "resource_before": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 118176546816,
+    "physical_used_bytes": 18786701312,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 21999583232,
+    "commit_available_bytes": 123553599488,
+    "commit_total_pages": 5370992,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 123553599488,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "resource_after": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 118138208256,
+    "physical_used_bytes": 18825039872,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 22072729600,
+    "commit_available_bytes": 123480453120,
+    "commit_total_pages": 5388850,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 123480453120,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "source_hash": "31323455274a50236a6274464e51fc622c717f09bead8ab96337e133ce0dacaf",
+  "production_route_enabled": false,
+  "gpu_or_model_run": false
+}
