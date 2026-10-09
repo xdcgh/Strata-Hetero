@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "fixed_performance_prompt_prepared",
+  "path": "bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\prompts\\sustained_decode.prompt.txt",
+  "sha256": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+  "bytes": 4564,
+  "body": "Long request: ~1,500 tokens expected; actual output counts are recorded and may stop early under caps.",
+  "same_body_for_caps": [
+    256,
+    512,
+    1024
+  ],
+  "quality_task": false,
+  "quality_prompt_set_changed": false
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "documentation_finalizer_failed_before_artifact_writes",
+  "error": "Python documentation builder referenced undefined variable root instead of run",
+  "matrix_configs_untouched": true,
+  "model_or_api_launched": false,
+  "recorded_utc": "2026-10-09T12:50:43.2680038Z"
+}

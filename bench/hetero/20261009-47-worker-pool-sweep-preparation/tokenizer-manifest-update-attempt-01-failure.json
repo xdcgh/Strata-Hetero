@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "failed_during_safe_staging_original_leafs_not_replaced",
+  "phase": "tokenizer-manifest-arm-provenance-rebase-attempt-01",
+  "error": "TypeError: json.dump wrote str to binary-exclusive staging stream",
+  "partial_stage_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w04-all\\quality-on\\identity.json.tokenizer-rebase-next",
+  "partial_stage_bytes": 0,
+  "original_identity_present": true,
+  "original_provenance_present": true,
+  "original_matrix_copy": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix-pre-tokenizer-rebase.json",
+  "no_config_files_modified": true,
+  "no_model_api_core_gpu_use": true,
+  "recovery": "preserve attempt-01 backups/staging; use fresh attempt-02 suffixes and text-mode exclusive staging"
+}

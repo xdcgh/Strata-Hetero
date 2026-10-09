@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-47-worker-pool-sweep-preparation",
+  "status": "preparation_stopped_before_any_arm_artifact",
+  "phase": "binary-pin-preflight",
+  "error": "Inline preparation assertion used an incorrectly transcribed expected SHA256 (55 hex chars); actual binary is bound by run41 identity/build receipt. No arm config/identity/provenance or launch artifact was written.",
+  "wrong_expected_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe66645fa5715fbb",
+  "receipt_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "actual_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "no_model_or_build_started": true,
+  "recorded_utc": "2026-10-09T12:44:41.7495878Z"
+}

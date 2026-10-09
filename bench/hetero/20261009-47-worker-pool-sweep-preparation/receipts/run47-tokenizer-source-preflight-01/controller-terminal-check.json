@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "all_exact_preflight_controller_pids_absent_after_success",
+  "checked_utc": "2026-10-09T13:44:03.156313+00:00",
+  "pids": [
+    11688,
+    24496,
+    22408,
+    4168,
+    21532,
+    21812
+  ],
+  "live_matches": [],
+  "source_validation_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\receipts\\run47-tokenizer-source-preflight-01\\source-function-validation.json",
+  "source_validation_receipt_sha256": "db5794274ae0871ec3ed4d9ce4b81f446d4c3bf2b56e697e1f6317cde46fae06",
+  "live_api_status_polled": false,
+  "model_requests": 0,
+  "listener_claimed": false
+}

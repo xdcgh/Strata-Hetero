@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "six_run41_default_source_functions_passed_no_model_no_api",
+  "created_utc": "2026-10-09T13:42:58.277952+00:00",
+  "matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix-tokenizer-rebased-03.json",
+  "matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "new_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\quality-manifest\\manifest.json",
+  "manifest_sha256": "522dea6f10fc535195e9417f6c5fb99c39f7120be760ed6cc716ad5bc0def306",
+  "candidate_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "bridge_sha256": "0ca2dd70485e5e03b0a6fcb5dfc1ee1a8863d2dc44947257e342ae608326b026",
+  "source_templates_invoked_with_default_switches_only": true,
+  "model_launches": 0,
+  "model_api_requests": 0,
+  "core_initializations": 0,
+  "results": [
+    {
+      "phase": "quality_on",
+      "template": "launch",
+      "status": "prepared_validated",
+      "controller_pid": 11688,
+      "controller_create_utc": "2026-10-09T13:42:50.6241590Z",
+      "controller_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "stdout_sha256": "a514f31354b7dce281c96260099ea2462fda13b76d02c98a0d3b7eed00f774ba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "phase": "quality_on",
+      "template": "watch",
+      "status": "startup_watch_prepared",
+      "controller_pid": 24496,
+      "controller_create_utc": "2026-10-09T13:42:53.4411280Z",
+      "controller_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "stdout_sha256": "c3ca2870a2c8a6e965afd15a88482621ac2ca6f6ccb9f305bc1a629f561e5694",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "phase": "quality_on",
+      "template": "quality",
+      "status": "prepared_quality_validated",
+      "controller_pid": 22408,
+      "controller_create_utc": "2026-10-09T13:42:54.2198120Z",
+      "controller_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "stdout_sha256": "f79273453f493fcb523e398c74e6adde674e6493576b468df1f26627d7c369b1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "phase": "performance_off",
+      "template": "launch",
+      "status": "prepared_validated",
+      "controller_pid": 4168,
+      "controller_create_utc": "2026-10-09T13:42:55.3436980Z",
+      "controller_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "stdout_sha256": "b6667d7d426cdc249709f059f0fc542433f739529b4a5dc40fe5fbb66a961e66",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "phase": "performance_off",
+      "template": "watch",
+      "status": "startup_watch_prepared",
+      "controller_pid": 21532,
+      "controller_create_utc": "2026-10-09T13:42:56.4882400Z",
+      "controller_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "stdout_sha256": "2ebce9dcb1552de9f0f00e886b943d412cdd3ead4aadaa36265ac0f2d5e44f2c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "phase": "performance_off",
+      "template": "quality",
+      "status": "prepared_quality_validated",
+      "controller_pid": 21812,
+      "controller_create_utc": "2026-10-09T13:42:57.2360500Z",
+      "controller_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "stdout_sha256": "f79273453f493fcb523e398c74e6adde674e6493576b468df1f26627d7c369b1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

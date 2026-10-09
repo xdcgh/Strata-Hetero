@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "created_utc": "2026-10-09T13:41:54.107074+00:00",
+  "manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\quality-manifest\\manifest.json",
+  "manifest_sha256": "522dea6f10fc535195e9417f6c5fb99c39f7120be760ed6cc716ad5bc0def306",
+  "implementation_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\tokenizer-source-01\\strata_tokenizer-current-461b8afb.py",
+  "implementation_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+  "tokenizer_assets_status": "pass",
+  "prompt_count": 9,
+  "all_prompt_bytes_expectations_and_actual_counts_match": true,
+  "prompts": [
+    {
+      "id": "smoke_arithmetic",
+      "raw_prompt_sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 15,
+        "chat": 27,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    },
+    {
+      "id": "smoke_unicode",
+      "raw_prompt_sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 20,
+        "chat": 32,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    },
+    {
+      "id": "smoke_json_arithmetic",
+      "raw_prompt_sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 38,
+        "chat": 50,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    },
+    {
+      "id": "smoke_python_function",
+      "raw_prompt_sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 27,
+        "chat": 39,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    },
+    {
+      "id": "smoke_three_key_retrieval",
+      "raw_prompt_sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 102,
+        "chat": 114,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    },
+    {
+      "id": "long_1k",
+      "raw_prompt_sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 1024,
+        "chat": 1036,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    },
+    {
+      "id": "long_4k",
+      "raw_prompt_sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 4097,
+        "chat": 4109,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    },
+    {
+      "id": "long_16k",
+      "raw_prompt_sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 16384,
+        "chat": 16396,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    },
+    {
+      "id": "long_30k7",
+      "raw_prompt_sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+      "raw_prompt_equal_legacy": true,
+      "quality_expectation_equal_legacy": true,
+      "actual_local_counts": {
+        "body": 30700,
+        "chat": 30712,
+        "wrapper_delta": 12
+      },
+      "manifest_counts_match": true
+    }
+  ],
+  "tokenizer_asset_verification": {
+    "status": "pass",
+    "identity_sha256": "8b9da2600fc0d462aa9f632b8750eaf5072db6a6f384b4e297e49d0423f6e8ad",
+    "artifacts": [
+      {
+        "label": "implementation_source",
+        "sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+        "bytes": 18708,
+        "matches_manifest": true
+      },
+      {
+        "label": "asset_0",
+        "sha256": "87be2ac47d8bc7393b7435df6ccd276740019a393941a2585d5edce59f450c54",
+        "bytes": 554,
+        "matches_manifest": true
+      },
+      {
+        "label": "asset_1",
+        "sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4",
+        "bytes": 5737005,
+        "matches_manifest": true
+      },
+      {
+        "label": "asset_2",
+        "sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9",
+        "bytes": 3600844,
+        "matches_manifest": true
+      },
+      {
+        "label": "asset_3",
+        "sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b",
+        "bytes": 744960,
+        "matches_manifest": true
+      },
+      {
+        "label": "asset_4",
+        "sha256": "12827f24b742ea4e80cdc12dbcf9622227056b9f797252a3149263d4f9aaadce",
+        "bytes": 9993,
+        "matches_manifest": true
+      }
+    ],
+    "errors": []
+  },
+  "model_api_core_gpu_used": false
+}

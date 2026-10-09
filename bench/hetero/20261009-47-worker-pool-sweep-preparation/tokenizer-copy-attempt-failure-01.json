@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "failed_partial_snapshot_preserved",
+  "phase": "tokenizer-source-snapshot-attempt-01",
+  "error": "NameError: json output helper was not imported after first exclusive file copy",
+  "partial_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\tokenizer-source\\strata_tokenizer-current-461b8afb.py",
+  "partial_file_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+  "partial_file_bytes": 18708,
+  "no_manifest_written": true,
+  "no_original_artifact_modified": true
+}

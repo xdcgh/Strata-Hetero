@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized",
+  "utc": "2026-10-09T13:57:24.144019+00:00",
+  "matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "adapter_sha256": "61023ca8e32e331d3ccb0378e65f39d6790285104ea31de4f2bf7000faab8fb3",
+  "template_sha256s": {
+    "launch": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+    "watch": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+    "quality": "dcb68b86b81c0d2a7db92cc0ec7343d72123c8b48e2a2f76d6a383b32932a078",
+    "cleanup": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+    "jsonl_reader": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d"
+  },
+  "nonce": "c03af91d8c244444abe606325dfb3ac8",
+  "arms": [
+    "w10-all",
+    "w04-all",
+    "w06-all",
+    "w16-all",
+    "w06-auto"
+  ],
+  "output_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation",
+  "review_receipt_sha256": "c5e4c7fb1f6007c3c1a75d857b68c05bdaec922e6fd5522eda7a37a07abb2ecb",
+  "scope": "one serial ten-phase matrix; fresh admission each load; stop on first failure; no retry"
+}

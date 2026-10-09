@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-10-09T04:32:36.592367+00:00",
+  "method": "stat+fstat comparison against prior full-SHA/copy receipts; no payload rehash",
+  "all_current_identities_match": true,
+  "input_files": [
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "role": "original F model shard; shared native dense source in both arms",
+      "current_identity": {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "size_bytes": 10946624,
+        "mtime_ns": 1791267636000000000,
+        "ctime_ns": 1791267635050000000,
+        "device": 2894736058,
+        "file_index": 790292856832,
+        "fstat": {
+          "size_bytes": 10946624,
+          "mtime_ns": 1791267636000000000,
+          "device": 2894736058,
+          "file_index": 790292856832
+        }
+      },
+      "identity_matches_prior_full_hash_receipt": true,
+      "prior_sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+      "full_rehash_performed_now": false,
+      "identity_source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json"
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "role": "original F model shard; shared native dense source in both arms",
+      "current_identity": {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791268992000000000,
+        "ctime_ns": 1791267636110000000,
+        "device": 2894736058,
+        "file_index": 790292857216,
+        "fstat": {
+          "size_bytes": 49859583136,
+          "mtime_ns": 1791268992000000000,
+          "device": 2894736058,
+          "file_index": 790292857216
+        }
+      },
+      "identity_matches_prior_full_hash_receipt": true,
+      "prior_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+      "full_rehash_performed_now": false,
+      "identity_source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json"
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "role": "original F model shard; shared native dense source in both arms",
+      "current_identity": {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+        "size_bytes": 49376141504,
+        "mtime_ns": 1791270330000000000,
+        "ctime_ns": 1791269021380000000,
+        "device": 2894736058,
+        "file_index": 790292857600,
+        "fstat": {
+          "size_bytes": 49376141504,
+          "mtime_ns": 1791270330000000000,
+          "device": 2894736058,
+          "file_index": 790292857600
+        }
+      },
+      "identity_matches_prior_full_hash_receipt": true,
+      "prior_sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3",
+      "full_rehash_performed_now": false,
+      "identity_source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json"
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "role": "original F model shard; shared native dense source in both arms",
+      "current_identity": {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+        "size_bytes": 12087983520,
+        "mtime_ns": 1791270664000000000,
+        "ctime_ns": 1791270360920000000,
+        "device": 2894736058,
+        "file_index": 790292857984,
+        "fstat": {
+          "size_bytes": 12087983520,
+          "mtime_ns": 1791270664000000000,
+          "device": 2894736058,
+          "file_index": 790292857984
+        }
+      },
+      "identity_matches_prior_full_hash_receipt": true,
+      "prior_sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a",
+      "full_rehash_performed_now": false,
+      "identity_source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-03-upstream04-quality\\fresh-identities-before-request.json"
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "role": "PLE table source identity; selected by one arm only",
+      "current_identity": {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791268992000000000,
+        "ctime_ns": 1791267636110000000,
+        "device": 2894736058,
+        "file_index": 790292857216,
+        "fstat": {
+          "size_bytes": 49859583136,
+          "mtime_ns": 1791268992000000000,
+          "device": 2894736058,
+          "file_index": 790292857216
+        }
+      },
+      "identity_matches_copy_receipt": true,
+      "prior_verified_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+      "full_rehash_performed_now": false,
+      "copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "role": "PLE table source identity; selected by one arm only",
+      "current_identity": {
+        "path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "size_bytes": 49859583136,
+        "mtime_ns": 1791517696428560800,
+        "ctime_ns": 1791517574432878600,
+        "device": 6117023165593423684,
+        "file_index": 5629499534227261,
+        "fstat": {
+          "size_bytes": 49859583136,
+          "mtime_ns": 1791517696428560800,
+          "device": 6117023165593423684,
+          "file_index": 5629499534227261
+        }
+      },
+      "identity_matches_copy_receipt": true,
+      "prior_verified_sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+      "full_rehash_performed_now": false,
+      "copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json"
+    }
+  ],
+  "selected_ple_source": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+  "copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json",
+  "source_full_hash_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json"
+}

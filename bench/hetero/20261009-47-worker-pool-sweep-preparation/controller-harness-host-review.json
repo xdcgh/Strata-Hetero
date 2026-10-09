@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "host_fixtures_passed_plan_only_no_launch",
+  "run_id": "20261009-47-worker-pool-sweep-preparation",
+  "recorded_utc": "2026-10-09T13:05:41.3179787Z",
+  "python": "C:\\Python314\\python.exe",
+  "test_command": "C:\\Python314\\python.exe -m unittest tools.test_hetero_pool_sweep -v",
+  "tests_run": 19,
+  "tests_passed": 19,
+  "tests_failed": 0,
+  "default_plan_command": "C:\\Python314\\python.exe tools/hetero_pool_sweep.py --matrix bench/hetero/20261009-47-worker-pool-sweep-preparation/matrix.json",
+  "default_plan_exit": 0,
+  "execution_mode": "plan-only",
+  "host_fake_cli_used": true,
+  "actual_model_launch": false,
+  "actual_api": false,
+  "actual_core": false,
+  "performance_measurement": false,
+  "source_hashes": {
+    "tools/hetero_pool_sweep.py": "2967d5d853002c3cb248dba4f4e70cd2c30c093222bb5ddd370fbf3707436345",
+    "tools/test_hetero_pool_sweep.py": "140b0a9da673770caf7bc92e75de1893bfd9598c749b72cf4279b94297099e9f",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/prompts/sustained_decode.prompt.txt": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/README.md": "5f817d96219a108099df5ffb34aecc924f690420ac9acdd5f302fcac00e502c2",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/matrix.json": "c94e01bb081028b68b9222dc1f906cc9490801614bc96481aab10418c914f73c"
+  },
+  "notes": [
+    "One parameterized planner with no production lifecycle adapter; explicit execute path remains disabled.",
+    "Fixtures cover matrix/capture/prompt hash binding, Windows argv serialization, full UTC CreateTime, JSONL tail and partial preservation, exact owner cleanup ordering/PID reuse refusal, isolated actual host fake CLI, output-root exclusivity, stop-first behavior, SSE/[DONE]/usage/cache/finite/bang-loop and actual EOS counts.",
+    "Decode 256/512/1024 share the immutable sustained_decode prompt SHA and byte size; early EOS is recorded with actual count and never retried. Length-capped performance is timing-only, not a quality pass."
+  ]
+}

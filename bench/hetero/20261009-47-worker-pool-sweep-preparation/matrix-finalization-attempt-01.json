@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "static_matrix_finalizer_assumption_error_before_matrix_json",
+  "failure": "Finalizer incorrectly asserted capture-on and capture-off normalized hashes were equal while intentionally retaining the capture flag. Per-arm configs were compared read-only and verified to differ only in per-run log and capture flag; no model/build/source action.",
+  "configs_written": 10,
+  "matrix_json_written": false,
+  "recorded_utc": "2026-10-09T12:48:23.8598388Z"
+}

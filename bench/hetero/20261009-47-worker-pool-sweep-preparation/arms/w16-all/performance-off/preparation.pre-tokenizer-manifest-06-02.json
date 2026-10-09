@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-47-w16-all-performance-off",
+  "status": "prepared_not_launched",
+  "config_sha256": "955037fbc3db0b1a2637c2947168451fab0541922ef408a506aa5608bcfbc7bd",
+  "identity_sha256": "b79f610a632c085ede716dc95e9495345e7bbace177cdc73ad56c12e90eded1e",
+  "provenance_sha256": "b831bbcd5e101e4d1f1921f87a92cb20ab2061ef5916a263442bf589b3e4fe85",
+  "fresh_identities_sha256": "a64cb90f8d7302980453d9cf97bef50d63ae2f48d5813b6c2a042a27d99e2568",
+  "worker_count": 16,
+  "affinity": "all",
+  "token_capture": false,
+  "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752"
+}

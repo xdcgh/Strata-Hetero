@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "matrix_finalizer_schema_assumption_failed_no_matrix_written",
+  "phase": "arm-summary",
+  "error": "Finalizer read role from identity.config.role; role is in phase provenance.worker_pool.role. All arm configs/identities/provenance are prepared and normalized control checks had passed; matrix.json not written.",
+  "no_model_no_compile_no_source_edit": true,
+  "recorded_utc": "2026-10-09T12:48:32.8372311Z"
+}

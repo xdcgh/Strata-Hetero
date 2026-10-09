@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "static_configs_and_identity_bindings_passed",
+  "run_id": "20261009-47-worker-pool-sweep-preparation",
+  "arms": 5,
+  "phase_configs": 10,
+  "all_phase_output_dirs_empty": true,
+  "supported_affinity_modes_only": true,
+  "all_non_pool_settings_equal": true,
+  "capture_modes_separated": true,
+  "candidate_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "candidate_source_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+  "root_worktree_source_changes_not_in_binary": [
+    " M include/strata/kernels/cpu/pool.hpp",
+    " M src/hetero/native_expert_bench.cpp",
+    " M src/kernels/cpu/pool.cpp",
+    " M src/program/generate.cpp",
+    " M tools/hetero_native_cpu/CMakeLists.txt"
+  ],
+  "normalized_controls_sha256": "d1b2d0ad4c91e892a81be7edf024e50da205c031d7673546e94980e05bd9ad94",
+  "quality_capture_on_hash": "51fcfdbf3030d4a0ffb5c892275609d34bddd06f0df47704c3a0d4781fcaf89c",
+  "performance_capture_off_hash": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752",
+  "model_or_api_launched": false,
+  "compiled": false,
+  "recorded_utc": "2026-10-09T12:51:27.088221+00:00",
+  "leaves": [
+    {
+      "arm": "w04-all",
+      "phase": "quality-on",
+      "config_sha256": "6852db5ec5a8b94e1191377b24bda7f9c93b013115b1dfd2e4e5c9e03bc8478c",
+      "identity_sha256": "24be26ba63a0520f439a3fdce422a02588a178277ae316c53caa2c66bd629580",
+      "provenance_sha256": "111ad72b6d4330e90098c243b1cf5d668e520660f9b9f8fd3a6c0003ce6de2da"
+    },
+    {
+      "arm": "w04-all",
+      "phase": "performance-off",
+      "config_sha256": "185a83b347660f61bd113666aca58edc4f1fd5754ec4bcf501b98ee5887b0eb0",
+      "identity_sha256": "a0a16125e0c699cc680e2e2a8884d108e3014292d08379198d3d41109a5f4e60",
+      "provenance_sha256": "153b2d5112078aa28e12c848a4fbf3d0dbfab76e8fb41a9bbeae183d0b94005f"
+    },
+    {
+      "arm": "w06-all",
+      "phase": "quality-on",
+      "config_sha256": "3778716df4cc91eae23c406c7489fc95f0645d32f17d9576a8cf68404b659641",
+      "identity_sha256": "61f0d5dbc2380c1a24bb7500b53c721166c9ac56a3acc44f617df2dd91aae19c",
+      "provenance_sha256": "f5dea3dfec98a46b8b295a5bcc30aa64947e1f106954d4b2996c09f25f88852d"
+    },
+    {
+      "arm": "w06-all",
+      "phase": "performance-off",
+      "config_sha256": "f28c0f7601ddd05e8122906909804dabc48d64d52efb4fe413962e92fedb35d1",
+      "identity_sha256": "03aae827b09dd6da57615c3ae41aa3514ea2dc13eb58237ddba9f0101e9a2732",
+      "provenance_sha256": "5a33e14cfb9bf4ab9844eee0117fe8ba488af903d6cd4ca724bc94a68bc50421"
+    },
+    {
+      "arm": "w06-auto",
+      "phase": "quality-on",
+      "config_sha256": "bf7d4c79c2abea6ecb138ba99f9d94719b014bf2a0444f38da0983a46bb5f8e5",
+      "identity_sha256": "57d1d1cb424605567a717d77c831728f572066da5c37d05c3aa35eaa5b2cf98e",
+      "provenance_sha256": "c96f965c71e405d75e34c15ab134396452ccb0e8d9a1cbd4533af1ea12ec7032"
+    },
+    {
+      "arm": "w06-auto",
+      "phase": "performance-off",
+      "config_sha256": "713e1de6e247255473469a7eed6b4ba26d1553e8eb1d8bc18da031732e562025",
+      "identity_sha256": "071b5d99e6fa03a086dc66c41e88b2d8ef2248dec6839236ada74d7dcfe5597c",
+      "provenance_sha256": "05817cbd10c21bdd2c1418628ae1567498ada23947a10b9bdb384262be0612b7"
+    },
+    {
+      "arm": "w10-all",
+      "phase": "quality-on",
+      "config_sha256": "3e486fd2c75770125de9c770a54a3c6be2ac40632437128bb8ce20fdeb6ce7c0",
+      "identity_sha256": "7b3a9dc84ae3e5e30323039b44e22d7921cc99018c0b7979f2d007b5708d3b74",
+      "provenance_sha256": "708e53fe2137f58409c78c9ae3d7781db20cdeb98d45336e95de822b760476d2"
+    },
+    {
+      "arm": "w10-all",
+      "phase": "performance-off",
+      "config_sha256": "9526386f61abfc5c6cac6192eaa2bd6cac6c8728d0d51cd521ebc9b01e3b664e",
+      "identity_sha256": "91436b8d62df255d070a8cefc48a5283214ea5df4188cef7dbed9c83b4a23959",
+      "provenance_sha256": "dce18f28d69315f24ce1fa98d505e94e90328c55b46a57654653a974c748d251"
+    },
+    {
+      "arm": "w16-all",
+      "phase": "quality-on",
+      "config_sha256": "a1f68e9c851e73784d5b139dd8bff0416b623c787a37de362bfc4b8a1f6a1e07",
+      "identity_sha256": "310e0f4416c4f997dc31c4a919121dfa79678db72c289b14482663a5e1650265",
+      "provenance_sha256": "901280bde44bdde5196d085fa849fc3f255255899f8e9581e55573b4140a1952"
+    },
+    {
+      "arm": "w16-all",
+      "phase": "performance-off",
+      "config_sha256": "955037fbc3db0b1a2637c2947168451fab0541922ef408a506aa5608bcfbc7bd",
+      "identity_sha256": "1f6d0164b2d5d7a364f3b165fae717fa4430b1266c07826f2781b5415ec55d19",
+      "provenance_sha256": "25acf62e2d212804dba5ca72cc691d9c1941feac0a722b7033852ae974df6af6"
+    }
+  ],
+  "candidate_cli_source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41\\src\\program\\generate.cpp",
+  "candidate_cli_source_blob": "405620c45fb718e06f5f4e78985051be89d4a78f",
+  "candidate_cli_modes_verified": [
+    "all",
+    "auto",
+    "p-cores"
+  ],
+  "root_untracked_affinity_source_not_in_binary": [
+    "src/hetero/worker_affinity_observation_test.cpp"
+  ],
+  "matrix_hash_refresh_utc": "2026-10-09T12:52:01.194093+00:00",
+  "sustained_decode_prompt": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\prompts\\sustained_decode.prompt.txt",
+    "sha256": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+    "bytes": 4564,
+    "same_for_256_512_1024": true,
+    "quality_prompts_unchanged": true
+  },
+  "performance_capture_pairs": 3
+}

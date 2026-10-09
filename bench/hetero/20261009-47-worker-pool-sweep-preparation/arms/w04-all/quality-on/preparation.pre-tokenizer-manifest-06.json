@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-47-w04-all-quality-on",
+  "status": "prepared_not_launched",
+  "config_sha256": "6852db5ec5a8b94e1191377b24bda7f9c93b013115b1dfd2e4e5c9e03bc8478c",
+  "identity_sha256": "24be26ba63a0520f439a3fdce422a02588a178277ae316c53caa2c66bd629580",
+  "provenance_sha256": "111ad72b6d4330e90098c243b1cf5d668e520660f9b9f8fd3a6c0003ce6de2da",
+  "fresh_identities_sha256": "a64cb90f8d7302980453d9cf97bef50d63ae2f48d5813b6c2a042a27d99e2568",
+  "worker_count": 4,
+  "affinity": "all",
+  "token_capture": true,
+  "normalized_config_sha256": "51fcfdbf3030d4a0ffb5c892275609d34bddd06f0df47704c3a0d4781fcaf89c"
+}

@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "status": "passed_byte_and_tokenizer_identity_equivalence",
+  "created_utc": "2026-10-09T13:37:05.306955+00:00",
+  "legacy_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "legacy_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "legacy_implementation": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\tokenizer-source-01\\strata_tokenizer-legacy-b8af8e56.py",
+    "sha256": "b8af8e5697afea6c149f2ef824ae022c920730a0e90cba7386e757a18332d9f9",
+    "bytes": 18078
+  },
+  "current_implementation_snapshot": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\tokenizer-source-01\\strata_tokenizer-current-461b8afb.py",
+    "sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+    "bytes": 18708
+  },
+  "pack_assets_same_and_freshly_verified": true,
+  "assets": [
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\tokenizer.json",
+      "sha256": "87be2ac47d8bc7393b7435df6ccd276740019a393941a2585d5edce59f450c54",
+      "bytes": 554,
+      "matches_legacy_asset_identity": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\vocab.json",
+      "sha256": "4ba64f0332abcfb0b600b7df1537d1e836e68009d5fb7cdb77339738dc6365c4",
+      "bytes": 5737005,
+      "matches_legacy_asset_identity": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\merges.txt",
+      "sha256": "080cf95432173729d160346b7882bd2a644b07f7a3813a3eb73f4e66787bfde9",
+      "bytes": 3600844,
+      "matches_legacy_asset_identity": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\token_type.json",
+      "sha256": "5088c8c298fc06af8382ddb3b76c888703ac2634e82263b97eedcc2ad202738b",
+      "bytes": 744960,
+      "matches_legacy_asset_identity": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+      "sha256": "12827f24b742ea4e80cdc12dbcf9622227056b9f797252a3149263d4f9aaadce",
+      "bytes": 9993,
+      "matches_legacy_asset_identity": true
+    }
+  ],
+  "all_nine_raw_prompts_body_ids_and_chat_ids_identical": true,
+  "prompts": [
+    {
+      "id": "smoke_arithmetic",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\smoke_arithmetic.prompt.txt",
+      "raw_prompt_bytes": 48,
+      "raw_prompt_sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "f864c11ffc6e5ab72a43f989d2d723ccd19c7ae3a532203187dc8ffecfc97dc3",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 15,
+        "current_body": 15,
+        "legacy_chat": 27,
+        "current_chat": 27,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "311acfe66162b0cd07328d39d86b373b07d5a6f990cb27482631585c34f7249f",
+      "current_body_ids_sha256": "311acfe66162b0cd07328d39d86b373b07d5a6f990cb27482631585c34f7249f",
+      "legacy_chat_ids_sha256": "7b8184806efdf2be64593ae0ef23eab3127f9b5543b3f1f064d7b903036b17c8",
+      "current_chat_ids_sha256": "7b8184806efdf2be64593ae0ef23eab3127f9b5543b3f1f064d7b903036b17c8"
+    },
+    {
+      "id": "smoke_unicode",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\smoke_unicode.prompt.txt",
+      "raw_prompt_bytes": 82,
+      "raw_prompt_sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "aaa8674b475aae424c22562e3732f85a62f91c805c1200d7c0ba3fb6b08d2019",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 20,
+        "current_body": 20,
+        "legacy_chat": 32,
+        "current_chat": 32,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "69d0b058f37df74d969a48e24b1f97c41b7100a3ccf268637f0fd044d1fbfd1f",
+      "current_body_ids_sha256": "69d0b058f37df74d969a48e24b1f97c41b7100a3ccf268637f0fd044d1fbfd1f",
+      "legacy_chat_ids_sha256": "f8173f21ce7850210c0b97f1fec7fc21a7f677bdb12b58140d40e82e9c3dce10",
+      "current_chat_ids_sha256": "f8173f21ce7850210c0b97f1fec7fc21a7f677bdb12b58140d40e82e9c3dce10"
+    },
+    {
+      "id": "smoke_json_arithmetic",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\smoke_json_arithmetic.prompt.txt",
+      "raw_prompt_bytes": 143,
+      "raw_prompt_sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "0a87d42bbdba133422fb8edb727e7176754215bfef7966a505a2d9d1ed2d6f38",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 38,
+        "current_body": 38,
+        "legacy_chat": 50,
+        "current_chat": 50,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "3a8df5176621735f0847cee8169158429245b29e53ab0fc880e08867830031b1",
+      "current_body_ids_sha256": "3a8df5176621735f0847cee8169158429245b29e53ab0fc880e08867830031b1",
+      "legacy_chat_ids_sha256": "e2c0822b40887af958fb47c08e2e005ab3c4d90503352ea7319484318c00f375",
+      "current_chat_ids_sha256": "e2c0822b40887af958fb47c08e2e005ab3c4d90503352ea7319484318c00f375"
+    },
+    {
+      "id": "smoke_python_function",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\smoke_python_function.prompt.txt",
+      "raw_prompt_bytes": 126,
+      "raw_prompt_sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "a7dce55df68ecf5d32fed79a3c56f00be3e8257c594eded7c660a9e3acee93f6",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 27,
+        "current_body": 27,
+        "legacy_chat": 39,
+        "current_chat": 39,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "a08a707af35259cbedf189653ad0da9e24f7b744f7124611ad3f4645d663f4da",
+      "current_body_ids_sha256": "a08a707af35259cbedf189653ad0da9e24f7b744f7124611ad3f4645d663f4da",
+      "legacy_chat_ids_sha256": "2c340de66f938954c89fca04453a828bb60f2d26729019c7650e8a600cc4fd0b",
+      "current_chat_ids_sha256": "2c340de66f938954c89fca04453a828bb60f2d26729019c7650e8a600cc4fd0b"
+    },
+    {
+      "id": "smoke_three_key_retrieval",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\smoke_three_key_retrieval.prompt.txt",
+      "raw_prompt_bytes": 265,
+      "raw_prompt_sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 102,
+        "current_body": 102,
+        "legacy_chat": 114,
+        "current_chat": 114,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "17b49813d36b4e8d50b6f30cf97ae928d22d8a92d26c18253c9b1964696d4770",
+      "current_body_ids_sha256": "17b49813d36b4e8d50b6f30cf97ae928d22d8a92d26c18253c9b1964696d4770",
+      "legacy_chat_ids_sha256": "c7321a74c94c9e514fbdf26ea374d9cf007985ed81082b881add70c88ce29c5b",
+      "current_chat_ids_sha256": "c7321a74c94c9e514fbdf26ea374d9cf007985ed81082b881add70c88ce29c5b"
+    },
+    {
+      "id": "long_1k",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\long_1k.prompt.txt",
+      "raw_prompt_bytes": 2838,
+      "raw_prompt_sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 1024,
+        "current_body": 1024,
+        "legacy_chat": 1036,
+        "current_chat": 1036,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "abf309308f039244feeb5d1683a40e8300f6649ba7662c86b50df1fc7e7762ba",
+      "current_body_ids_sha256": "abf309308f039244feeb5d1683a40e8300f6649ba7662c86b50df1fc7e7762ba",
+      "legacy_chat_ids_sha256": "027deaae60242c4e57aca13e833f6d7b7635fad48c653995ce0e2ddba945aa9e",
+      "current_chat_ids_sha256": "027deaae60242c4e57aca13e833f6d7b7635fad48c653995ce0e2ddba945aa9e"
+    },
+    {
+      "id": "long_4k",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\long_4k.prompt.txt",
+      "raw_prompt_bytes": 14249,
+      "raw_prompt_sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 4097,
+        "current_body": 4097,
+        "legacy_chat": 4109,
+        "current_chat": 4109,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "56dec20eed1e1b474f593421d2f28fc77ca2908698c01b2196312fddc55cbf2b",
+      "current_body_ids_sha256": "56dec20eed1e1b474f593421d2f28fc77ca2908698c01b2196312fddc55cbf2b",
+      "legacy_chat_ids_sha256": "3d2799fbdb89273722ef243318e5c845087f9def9e4e0ca4448be216ff1c0a85",
+      "current_chat_ids_sha256": "3d2799fbdb89273722ef243318e5c845087f9def9e4e0ca4448be216ff1c0a85"
+    },
+    {
+      "id": "long_16k",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\long_16k.prompt.txt",
+      "raw_prompt_bytes": 66202,
+      "raw_prompt_sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 16384,
+        "current_body": 16384,
+        "legacy_chat": 16396,
+        "current_chat": 16396,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "0ebc247acf7153bdfceebc19960031e2f3d95dfd4bf77caef73b5afc87afa5f9",
+      "current_body_ids_sha256": "0ebc247acf7153bdfceebc19960031e2f3d95dfd4bf77caef73b5afc87afa5f9",
+      "legacy_chat_ids_sha256": "57345eb9df82145c354a731103ee4a75a546d510fc6582ad1bc0ccbb2f8d55c0",
+      "current_chat_ids_sha256": "57345eb9df82145c354a731103ee4a75a546d510fc6582ad1bc0ccbb2f8d55c0"
+    },
+    {
+      "id": "long_30k7",
+      "source_prompt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\prompts\\long_30k7.prompt.txt",
+      "raw_prompt_bytes": 127193,
+      "raw_prompt_sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+      "raw_prompt_matches_legacy": true,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "quality_expectation_preserved": true,
+      "counts": {
+        "legacy_body": 30700,
+        "current_body": 30700,
+        "legacy_chat": 30712,
+        "current_chat": 30712,
+        "legacy_wrapper_delta": 12,
+        "current_wrapper_delta": 12
+      },
+      "body_ids_equal": true,
+      "chat_ids_equal": true,
+      "id_counts_match_legacy_manifest": true,
+      "legacy_body_ids_sha256": "1c8c312ac45ef6a52f8348adc9732204822f62175571852da2f027d2910a0adf",
+      "current_body_ids_sha256": "1c8c312ac45ef6a52f8348adc9732204822f62175571852da2f027d2910a0adf",
+      "legacy_chat_ids_sha256": "3dcc31fc5f6a6d70c313cd0a1b265bd6a5d793fb7a1319d8cb74789580d3c489",
+      "current_chat_ids_sha256": "3dcc31fc5f6a6d70c313cd0a1b265bd6a5d793fb7a1319d8cb74789580d3c489"
+    }
+  ],
+  "interpretation": "The current piece-cache implementation is adoptable only if all original raw prompt bytes, expected quality fields, legacy counts, and every old/current body and chat ID sequence match."
+}

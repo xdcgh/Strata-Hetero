@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-47-w16-all-performance-off",
+  "status": "prepared_not_launched",
+  "config_sha256": "955037fbc3db0b1a2637c2947168451fab0541922ef408a506aa5608bcfbc7bd",
+  "identity_sha256": "cd0af0cd0de48e4f1b13dcd43080a0c0d216ef9b0afa2df0fb2853ef3348c4d8",
+  "provenance_sha256": "f6211d6d744c3372cc729c4f8ab760bfdb29676844220123a9166cfe6a10a648",
+  "fresh_identities_sha256": "a64cb90f8d7302980453d9cf97bef50d63ae2f48d5813b6c2a042a27d99e2568",
+  "worker_count": 16,
+  "affinity": "all",
+  "token_capture": false,
+  "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752",
+  "quality_prompt_manifest_sha256": "522dea6f10fc535195e9417f6c5fb99c39f7120be760ed6cc716ad5bc0def306",
+  "tokenizer_implementation_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00"
+}

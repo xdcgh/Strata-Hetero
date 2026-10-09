@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_ready_for_serial_execution",
+  "utc": "2026-10-09T13:57:24.144019+00:00",
+  "source_checkpoint": "7ee78e7f51db90a11d4e4655b59664fa18f0db7b",
+  "matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "adapter_sha256": "61023ca8e32e331d3ccb0378e65f39d6790285104ea31de4f2bf7000faab8fb3",
+  "adapter_frozen_source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\executed-pool-sweep.py",
+  "checked_evidence_hashes": {
+    "tools/hetero_pool_sweep.py": "61023ca8e32e331d3ccb0378e65f39d6790285104ea31de4f2bf7000faab8fb3",
+    "tools/test_hetero_pool_sweep.py": "46f5ef2a9cc3eeb183725e64b81b89f36774d3a99905fdccbdfbd4889a0e4a28",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/README.md": "cfb94b7c3482a19b463be816115ca1c62c1936ea839d5648dca573c8efa2dc75",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/tokenizer-equivalence.json": "aa0921ffc49be8e9c54212fc3e59ed113607ff568d7b2f89880d0912a3c1271d",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/tokenizer-manifest-provenance.json": "62d4deaa677eb62757af639c82a8c1fbf72511b340309a50e409b9e19ea477cc",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/quality-manifest-dry-validation.json": "07020193a0076ab9e3c94e0af1b1875d0ef97cb54f9912cea939dfff2feabf30",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/manifest-expectation-byte-review.json": "211a7bd0634abdc7cc276390adba40d4c114b2948a69ff2c9710fedc91323fc6",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/receipts/run47-tokenizer-source-preflight-01/source-function-validation.json": "db5794274ae0871ec3ed4d9ce4b81f446d4c3bf2b56e697e1f6317cde46fae06",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/receipts/run47-tokenizer-source-preflight-01/controller-terminal-check.json": "803482951b84e395ccb909308faa5445cc9dc7d20fd9b59320c2b765e23ad0f8",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/receipts/active-matrix-plan-validation.json": "13095abac266d0340f1febccc2275a2fafb22efd3984f8dc81220e48146bde5b",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/receipts/run47-tokenizer-manifest-preflight-01/unittest.log": "a2f52058b9c7de8954aef00f5a90b6447d041b477ab16067c7308c69299f4290"
+  },
+  "legacy_and_new_prompt_records_and_raw_bytes_equal": true,
+  "tokenizer_equivalence_receipt_rehashed": true,
+  "host_tests": {
+    "tests": 28,
+    "passed": 28,
+    "command": "python -B -m unittest tools.test_hetero_pool_sweep -q"
+  },
+  "peer_review": "read-only adapter review and real _call with mocked PowerShell execution; no static blocker",
+  "adapter_change_since_peer_review": "module docstring corrected; reversing these exact three lines reproduces prior source SHA; 28 host tests rerun passed",
+  "readme_change_since_preparation": "root records committed telemetry status and executable order; current documentary hash recorded separately from original receipt",
+  "prior_root_preflight_failures": [
+    "incorrect runpy module invocation: zero process launches",
+    "original evidence hashes rejected root-corrected module docstring and README: zero process launches, exact reversible-byte deltas now verified"
+  ],
+  "model_binary": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "model_binary_source": "ffeb748d190ddeedff23587ce848596d4db0c752",
+  "new_affinity_telemetry_in_model_binary": false,
+  "executable_order": [
+    {
+      "arm": "w10-all",
+      "phase": "quality_on"
+    },
+    {
+      "arm": "w04-all",
+      "phase": "quality_on"
+    },
+    {
+      "arm": "w06-all",
+      "phase": "quality_on"
+    },
+    {
+      "arm": "w16-all",
+      "phase": "quality_on"
+    },
+    {
+      "arm": "w06-auto",
+      "phase": "quality_on"
+    },
+    {
+      "arm": "w10-all",
+      "phase": "performance_off"
+    },
+    {
+      "arm": "w04-all",
+      "phase": "performance_off"
+    },
+    {
+      "arm": "w06-all",
+      "phase": "performance_off"
+    },
+    {
+      "arm": "w16-all",
+      "phase": "performance_off"
+    },
+    {
+      "arm": "w06-auto",
+      "phase": "performance_off"
+    }
+  ],
+  "legacy_planned_arm_order": "retained preparation history; arm_execution_order controls executable schedule",
+  "model_launches_by_this_review": 0,
+  "model_requests_by_this_review": 0,
+  "floors": {
+    "physical_gib": 12,
+    "system_commit_gib": 4,
+    "vram_mib": 46000
+  },
+  "stop_first": true,
+  "retry_authorized": false,
+  "final_owner_cleanup": "root reviews and cleans exact owned tree"
+}

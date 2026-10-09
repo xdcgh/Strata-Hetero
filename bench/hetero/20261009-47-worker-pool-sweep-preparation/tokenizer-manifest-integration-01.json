@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "status": "tokenizer_manifest_rebased_and_all_default_source_validations_passed_not_launched",
+  "created_utc": "2026-10-09T13:44:52.872687+00:00",
+  "active_matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix-tokenizer-rebased-03.json",
+  "active_matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "original_matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix.json",
+  "original_matrix_sha256": "c94e01bb081028b68b9222dc1f906cc9490801614bc96481aab10418c914f73c",
+  "original_matrix_copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix-pre-tokenizer-rebase.json",
+  "original_matrix_copy_sha256": "c94e01bb081028b68b9222dc1f906cc9490801614bc96481aab10418c914f73c",
+  "original_06_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "original_06_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "new_quality_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\quality-manifest\\manifest.json",
+  "new_quality_manifest_sha256": "522dea6f10fc535195e9417f6c5fb99c39f7120be760ed6cc716ad5bc0def306",
+  "old_tokenizer_source_sha256": "b8af8e5697afea6c149f2ef824ae022c920730a0e90cba7386e757a18332d9f9",
+  "new_tokenizer_snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\tokenizer-source-01\\strata_tokenizer-current-461b8afb.py",
+  "new_tokenizer_snapshot_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+  "new_tokenizer_snapshot_bytes": 18708,
+  "raw_prompt_count": 9,
+  "raw_prompts_byte_identical": true,
+  "all_old_current_body_and_chat_token_id_arrays_equal": true,
+  "all_body_chat_wrapper_counts_equal_legacy": true,
+  "all_quality_expectations_equal_legacy": true,
+  "fresh_pack_asset_hashes_pass": true,
+  "recomputed_new_manifest_current_tokenizer_counts_pass": true,
+  "default_run41_source_functions": {
+    "quality_on": {
+      "launch": "prepared_validated",
+      "watch": "startup_watch_prepared",
+      "quality": "prepared_quality_validated"
+    },
+    "performance_off": {
+      "launch": "prepared_validated",
+      "watch": "startup_watch_prepared",
+      "quality": "prepared_quality_validated"
+    },
+    "model_launches": 0,
+    "model_api_requests": 0,
+    "exact_preflight_controllers_terminal": true
+  },
+  "host_tests": {
+    "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -m unittest tools.test_hetero_pool_sweep -v",
+    "passed": 28,
+    "failed": 0
+  },
+  "default_plan": {
+    "exit": 0,
+    "phases": 10,
+    "quality_first_arm": "w10-all",
+    "timing_first_arm": "w10-all",
+    "timing_scenarios": 6
+  },
+  "phase_config_snapshots": [
+    {
+      "run_id": "20261009-47-w04-all-quality-on",
+      "config_sha256": "6852db5ec5a8b94e1191377b24bda7f9c93b013115b1dfd2e4e5c9e03bc8478c",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "612381597a20b7a55d3195a866c07cda1d7e58ed7b4e8cf147a9fd5a92c4057c",
+      "provenance_sha256": "434511aa42ce818f06067aee3b274d8248911291569e5a88d9df545fd5b31b48",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w04-all-performance-off",
+      "config_sha256": "185a83b347660f61bd113666aca58edc4f1fd5754ec4bcf501b98ee5887b0eb0",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "53392518ff0b073401d89a0e8c0d862e39371c960d34148177f704d313fd663b",
+      "provenance_sha256": "85a8911c73262bc8903dbd9abf3eaadaf39e9381dad4cdaebe11f541b0818ede",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w06-all-quality-on",
+      "config_sha256": "3778716df4cc91eae23c406c7489fc95f0645d32f17d9576a8cf68404b659641",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "4d60628b7b061c2115d58a7a9785937ecc1d20e9603beb50b144004d2e732f9e",
+      "provenance_sha256": "026d8cdfbb68ca4efc197fc0e7b1119dcf076764d3deb35c832272d3ef802fd7",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w06-all-performance-off",
+      "config_sha256": "f28c0f7601ddd05e8122906909804dabc48d64d52efb4fe413962e92fedb35d1",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "5eaabdbb7e439a62d0ec7e6090b26d0ef78636216e0fa021b4a2544f9bc16630",
+      "provenance_sha256": "7ac9fe9d28cf49d3ab5948c5308901a7f4ba2ce332da3d19c7d72d04ebd8e16d",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w06-auto-quality-on",
+      "config_sha256": "bf7d4c79c2abea6ecb138ba99f9d94719b014bf2a0444f38da0983a46bb5f8e5",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "8925a585fce87eba9f097d0f8ad74791e0a0c6e59bdbd19d65374721d5bcd33b",
+      "provenance_sha256": "f4fd46957485299f206674a4812020c388dae2b0ff71b02468a400dd5cd58546",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w06-auto-performance-off",
+      "config_sha256": "713e1de6e247255473469a7eed6b4ba26d1553e8eb1d8bc18da031732e562025",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "d29634f093e5ba494b4089405831e1447ea74db242cf07250e23ed337c6d4cf9",
+      "provenance_sha256": "2c5682cab4bb7409c15cd5499855307f2f1939dfb978c588ce012ec448ec8d16",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w10-all-quality-on",
+      "config_sha256": "3e486fd2c75770125de9c770a54a3c6be2ac40632437128bb8ce20fdeb6ce7c0",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "f8252b4243e8e7a304051f8a6602bfafe1cf6be21d35bae0887ee500a0603f78",
+      "provenance_sha256": "0e7417464e556f00cba4d5767548e9a8e9cf0bbc503898c2cff091c8594f36b9",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w10-all-performance-off",
+      "config_sha256": "9526386f61abfc5c6cac6192eaa2bd6cac6c8728d0d51cd521ebc9b01e3b664e",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "b175c10a34378b111469a7c6d0c9e66fefb2490fe3905b39678f5c7765538f45",
+      "provenance_sha256": "2ccaf61c95ea1d0f27acf31ed3cd6a5400f5804242a4cf1d5448858167fc683e",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w16-all-quality-on",
+      "config_sha256": "a1f68e9c851e73784d5b139dd8bff0416b623c787a37de362bfc4b8a1f6a1e07",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "c5716151730c75cd509a8f8dbdae62926c19177e1d23c1fb7270f07c8c43a30f",
+      "provenance_sha256": "18b692d7455252fd0d5482e8d4a07626998b5e5482c8b35fc1cb25707532cd90",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    },
+    {
+      "run_id": "20261009-47-w16-all-performance-off",
+      "config_sha256": "955037fbc3db0b1a2637c2947168451fab0541922ef408a506aa5608bcfbc7bd",
+      "config_byte_identical_to_original_matrix": true,
+      "identity_sha256": "cd0af0cd0de48e4f1b13dcd43080a0c0d216ef9b0afa2df0fb2853ef3348c4d8",
+      "provenance_sha256": "f6211d6d744c3372cc729c4f8ab760bfdb29676844220123a9166cfe6a10a648",
+      "old_identity_provenance_preparation_bytes_preserved": true,
+      "manifest_and_source_bindings_pass": true
+    }
+  ],
+  "attempt_failures_preserved": [
+    "tokenizer-copy-attempt-failure-01.json",
+    "tokenizer-manifest-update-attempt-01-failure.json",
+    "tokenizer-manifest-update-attempt-02-failure.json"
+  ],
+  "metadata_backups_preserved": true,
+  "source_binary_compile_or_runtime_changed": false,
+  "api_core_gpu_model_run": false,
+  "commit_or_push": false,
+  "evidence_hashes": {
+    "tools/hetero_pool_sweep.py": "b2857f0908f5059db27a78ce106c1ac1c26f2fafd768bb9c299eb9558994d1e2",
+    "tools/test_hetero_pool_sweep.py": "46f5ef2a9cc3eeb183725e64b81b89f36774d3a99905fdccbdfbd4889a0e4a28",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/README.md": "ae0a0fc17d5afb14168b78c9ba10b30b15c82572132081907f935744fe681e31",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/tokenizer-equivalence.json": "aa0921ffc49be8e9c54212fc3e59ed113607ff568d7b2f89880d0912a3c1271d",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/tokenizer-manifest-provenance.json": "62d4deaa677eb62757af639c82a8c1fbf72511b340309a50e409b9e19ea477cc",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/quality-manifest-dry-validation.json": "07020193a0076ab9e3c94e0af1b1875d0ef97cb54f9912cea939dfff2feabf30",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/manifest-expectation-byte-review.json": "211a7bd0634abdc7cc276390adba40d4c114b2948a69ff2c9710fedc91323fc6",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/receipts/run47-tokenizer-source-preflight-01/source-function-validation.json": "db5794274ae0871ec3ed4d9ce4b81f446d4c3bf2b56e697e1f6317cde46fae06",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/receipts/run47-tokenizer-source-preflight-01/controller-terminal-check.json": "803482951b84e395ccb909308faa5445cc9dc7d20fd9b59320c2b765e23ad0f8",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/receipts/active-matrix-plan-validation.json": "13095abac266d0340f1febccc2275a2fafb22efd3984f8dc81220e48146bde5b",
+    "bench/hetero/20261009-47-worker-pool-sweep-preparation/receipts/run47-tokenizer-manifest-preflight-01/unittest.log": "a2f52058b9c7de8954aef00f5a90b6447d041b477ab16067c7308c69299f4290"
+  }
+}

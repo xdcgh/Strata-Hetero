@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "source": {
+    "sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+    "tree": "ae84e7b6108e631926ef4316d7b671b42d08cf37",
+    "clean": true
+  },
+  "config": {
+    "sha256": "6852db5ec5a8b94e1191377b24bda7f9c93b013115b1dfd2e4e5c9e03bc8478c",
+    "scope": "v0.1.41-cpu-pool-full-model-comparison",
+    "prompt_cache": 0,
+    "deterministic_placement": true,
+    "resident_budget_gib": 20,
+    "expert_file_io": "explicit buffered",
+    "capture_actual_engine_token_ids": true,
+    "native_dense_gguf_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "ple_gguf_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "only_runtime_difference": "--ple-gguf path, excluding run-specific log path",
+    "pool_workers": 4,
+    "pool_affinity": "all",
+    "token_capture": true,
+    "arm_id": "w04-all"
+  },
+  "model": {
+    "id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+    "native_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "integrity_manifest": "../20261008-00-admission/model-integrity-02.json",
+    "integrity_status": "prior full-SHA receipts retained; current stat/fstat identities captured in fresh-identities.json and must be revalidated before launch",
+    "historical_manifest": "../20261006-00-inventory/historical-manifest.json"
+  },
+  "engine": {
+    "version": "0.1.41",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe",
+    "sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+    "size_bytes": 52433920,
+    "source_sha": "ffeb748d190ddeedff23587ce848596d4db0c752"
+  },
+  "server_python": {
+    "checkout_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+    "server_file_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41\\serve\\server.py",
+    "server_file_sha256": "0ca2dd70485e5e03b0a6fcb5dfc1ee1a8863d2dc44947257e342ae608326b026",
+    "quality_capture_opt_in": true,
+    "scope": "identical v1.41 token-ID capture bridge for both binaries"
+  },
+  "acceptance_status": "prepared_not_launched"
+}

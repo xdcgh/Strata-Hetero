@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "status": "frozen_manifest_adopted_after_full_token_id_equivalence",
+  "created_utc": "2026-10-09T13:38:35.704694+00:00",
+  "manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\quality-manifest\\manifest.json",
+  "manifest_sha256": "522dea6f10fc535195e9417f6c5fb99c39f7120be760ed6cc716ad5bc0def306",
+  "legacy_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "legacy_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "legacy_and_current_implementation_ids_equal": true,
+  "tokenizer_equivalence_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\tokenizer-equivalence.json",
+  "tokenizer_equivalence_receipt_sha256": "aa0921ffc49be8e9c54212fc3e59ed113607ff568d7b2f89880d0912a3c1271d",
+  "implementation_snapshot": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\tokenizer-source-01\\strata_tokenizer-current-461b8afb.py",
+    "sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+    "bytes": 18708
+  },
+  "legacy_implementation": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\tokenizer-source-01\\strata_tokenizer-legacy-b8af8e56.py",
+    "sha256": "b8af8e5697afea6c149f2ef824ae022c920730a0e90cba7386e757a18332d9f9",
+    "bytes": 18078
+  },
+  "prompt_files_relative_to_manifest": "prompts/<id>.prompt.txt",
+  "original_nine_prompt_files_byte_identical": true,
+  "original_quality_expectations_preserved": true,
+  "pack_tokenizer_assets_same_and_freshly_verified": true,
+  "prompt_records": [
+    {
+      "id": "smoke_arithmetic",
+      "sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+      "bytes": 48,
+      "body_tokens_local": 15,
+      "chat_prompt_tokens_local": 27,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "f864c11ffc6e5ab72a43f989d2d723ccd19c7ae3a532203187dc8ffecfc97dc3",
+      "body_ids_sha256": "311acfe66162b0cd07328d39d86b373b07d5a6f990cb27482631585c34f7249f",
+      "chat_ids_sha256": "7b8184806efdf2be64593ae0ef23eab3127f9b5543b3f1f064d7b903036b17c8"
+    },
+    {
+      "id": "smoke_unicode",
+      "sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+      "bytes": 82,
+      "body_tokens_local": 20,
+      "chat_prompt_tokens_local": 32,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "aaa8674b475aae424c22562e3732f85a62f91c805c1200d7c0ba3fb6b08d2019",
+      "body_ids_sha256": "69d0b058f37df74d969a48e24b1f97c41b7100a3ccf268637f0fd044d1fbfd1f",
+      "chat_ids_sha256": "f8173f21ce7850210c0b97f1fec7fc21a7f677bdb12b58140d40e82e9c3dce10"
+    },
+    {
+      "id": "smoke_json_arithmetic",
+      "sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+      "bytes": 143,
+      "body_tokens_local": 38,
+      "chat_prompt_tokens_local": 50,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "0a87d42bbdba133422fb8edb727e7176754215bfef7966a505a2d9d1ed2d6f38",
+      "body_ids_sha256": "3a8df5176621735f0847cee8169158429245b29e53ab0fc880e08867830031b1",
+      "chat_ids_sha256": "e2c0822b40887af958fb47c08e2e005ab3c4d90503352ea7319484318c00f375"
+    },
+    {
+      "id": "smoke_python_function",
+      "sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+      "bytes": 126,
+      "body_tokens_local": 27,
+      "chat_prompt_tokens_local": 39,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "a7dce55df68ecf5d32fed79a3c56f00be3e8257c594eded7c660a9e3acee93f6",
+      "body_ids_sha256": "a08a707af35259cbedf189653ad0da9e24f7b744f7124611ad3f4645d663f4da",
+      "chat_ids_sha256": "2c340de66f938954c89fca04453a828bb60f2d26729019c7650e8a600cc4fd0b"
+    },
+    {
+      "id": "smoke_three_key_retrieval",
+      "sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+      "bytes": 265,
+      "body_tokens_local": 102,
+      "chat_prompt_tokens_local": 114,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "body_ids_sha256": "17b49813d36b4e8d50b6f30cf97ae928d22d8a92d26c18253c9b1964696d4770",
+      "chat_ids_sha256": "c7321a74c94c9e514fbdf26ea374d9cf007985ed81082b881add70c88ce29c5b"
+    },
+    {
+      "id": "long_1k",
+      "sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+      "bytes": 2838,
+      "body_tokens_local": 1024,
+      "chat_prompt_tokens_local": 1036,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "body_ids_sha256": "abf309308f039244feeb5d1683a40e8300f6649ba7662c86b50df1fc7e7762ba",
+      "chat_ids_sha256": "027deaae60242c4e57aca13e833f6d7b7635fad48c653995ce0e2ddba945aa9e"
+    },
+    {
+      "id": "long_4k",
+      "sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+      "bytes": 14249,
+      "body_tokens_local": 4097,
+      "chat_prompt_tokens_local": 4109,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "body_ids_sha256": "56dec20eed1e1b474f593421d2f28fc77ca2908698c01b2196312fddc55cbf2b",
+      "chat_ids_sha256": "3d2799fbdb89273722ef243318e5c845087f9def9e4e0ca4448be216ff1c0a85"
+    },
+    {
+      "id": "long_16k",
+      "sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+      "bytes": 66202,
+      "body_tokens_local": 16384,
+      "chat_prompt_tokens_local": 16396,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "body_ids_sha256": "0ebc247acf7153bdfceebc19960031e2f3d95dfd4bf77caef73b5afc87afa5f9",
+      "chat_ids_sha256": "57345eb9df82145c354a731103ee4a75a546d510fc6582ad1bc0ccbb2f8d55c0"
+    },
+    {
+      "id": "long_30k7",
+      "sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+      "bytes": 127193,
+      "body_tokens_local": 30700,
+      "chat_prompt_tokens_local": 30712,
+      "chat_wrapper_delta_local": 12,
+      "quality_expectation_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "body_ids_sha256": "1c8c312ac45ef6a52f8348adc9732204822f62175571852da2f027d2910a0adf",
+      "chat_ids_sha256": "3dcc31fc5f6a6d70c313cd0a1b265bd6a5d793fb7a1319d8cb74789580d3c489"
+    }
+  ]
+}

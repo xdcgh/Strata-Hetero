@@ -1,0 +1,1 @@
+{"status":"startup_watch_prepared","monitor_started":false,"run_id":"20261009-47-w10-all-performance-off","physical_floor_gib":12,"commit_floor_gib":4,"sampling_interval_s":1,"exact_process_tree_check":true,"on_gate_failure":"stop only exact revalidated owned model tree; preserve read-only sampler"}

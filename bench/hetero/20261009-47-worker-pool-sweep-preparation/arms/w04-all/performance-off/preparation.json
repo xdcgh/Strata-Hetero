@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-47-w04-all-performance-off",
+  "status": "prepared_not_launched",
+  "config_sha256": "185a83b347660f61bd113666aca58edc4f1fd5754ec4bcf501b98ee5887b0eb0",
+  "identity_sha256": "53392518ff0b073401d89a0e8c0d862e39371c960d34148177f704d313fd663b",
+  "provenance_sha256": "85a8911c73262bc8903dbd9abf3eaadaf39e9381dad4cdaebe11f541b0818ede",
+  "fresh_identities_sha256": "a64cb90f8d7302980453d9cf97bef50d63ae2f48d5813b6c2a042a27d99e2568",
+  "worker_count": 4,
+  "affinity": "all",
+  "token_capture": false,
+  "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752",
+  "quality_prompt_manifest_sha256": "522dea6f10fc535195e9417f6c5fb99c39f7120be760ed6cc716ad5bc0def306",
+  "tokenizer_implementation_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00"
+}

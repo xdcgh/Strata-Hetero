@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "status": "pass_exact_prompt_and_quality_expectations",
+  "created_utc": "2026-10-09T13:44:23.898420+00:00",
+  "legacy_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+  "legacy_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+  "new_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\quality-manifest\\manifest.json",
+  "new_manifest_sha256": "522dea6f10fc535195e9417f6c5fb99c39f7120be760ed6cc716ad5bc0def306",
+  "nine_prompt_records_exact_except_versioned_tokenizer_identity": true,
+  "records": [
+    {
+      "id": "smoke_arithmetic",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "f864c11ffc6e5ab72a43f989d2d723ccd19c7ae3a532203187dc8ffecfc97dc3",
+      "new_quality_sha256": "f864c11ffc6e5ab72a43f989d2d723ccd19c7ae3a532203187dc8ffecfc97dc3"
+    },
+    {
+      "id": "smoke_unicode",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "aaa8674b475aae424c22562e3732f85a62f91c805c1200d7c0ba3fb6b08d2019",
+      "new_quality_sha256": "aaa8674b475aae424c22562e3732f85a62f91c805c1200d7c0ba3fb6b08d2019"
+    },
+    {
+      "id": "smoke_json_arithmetic",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "0a87d42bbdba133422fb8edb727e7176754215bfef7966a505a2d9d1ed2d6f38",
+      "new_quality_sha256": "0a87d42bbdba133422fb8edb727e7176754215bfef7966a505a2d9d1ed2d6f38"
+    },
+    {
+      "id": "smoke_python_function",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "a7dce55df68ecf5d32fed79a3c56f00be3e8257c594eded7c660a9e3acee93f6",
+      "new_quality_sha256": "a7dce55df68ecf5d32fed79a3c56f00be3e8257c594eded7c660a9e3acee93f6"
+    },
+    {
+      "id": "smoke_three_key_retrieval",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "new_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd"
+    },
+    {
+      "id": "long_1k",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "new_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd"
+    },
+    {
+      "id": "long_4k",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "new_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd"
+    },
+    {
+      "id": "long_16k",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "new_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd"
+    },
+    {
+      "id": "long_30k7",
+      "immutable_fields_equal": {
+        "id": true,
+        "file": true,
+        "kind": true,
+        "bytes": true,
+        "sha256": true,
+        "max_output_tokens": true
+      },
+      "quality_expectation_equal": true,
+      "legacy_and_new_count_fields_equal": {
+        "body_tokens_local": true,
+        "chat_prompt_tokens_local": true,
+        "chat_wrapper_delta_local": true
+      },
+      "legacy_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd",
+      "new_quality_sha256": "bb52498fd015eae08abec09d5352cf924b12ca8312c9a21b1b7be32c9103fadd"
+    }
+  ]
+}

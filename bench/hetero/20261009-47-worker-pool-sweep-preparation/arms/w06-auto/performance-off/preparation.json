@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-47-w06-auto-performance-off",
+  "status": "prepared_not_launched",
+  "config_sha256": "713e1de6e247255473469a7eed6b4ba26d1553e8eb1d8bc18da031732e562025",
+  "identity_sha256": "d29634f093e5ba494b4089405831e1447ea74db242cf07250e23ed337c6d4cf9",
+  "provenance_sha256": "2c5682cab4bb7409c15cd5499855307f2f1939dfb978c588ce012ec448ec8d16",
+  "fresh_identities_sha256": "a64cb90f8d7302980453d9cf97bef50d63ae2f48d5813b6c2a042a27d99e2568",
+  "worker_count": 6,
+  "affinity": "auto",
+  "token_capture": false,
+  "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752",
+  "quality_prompt_manifest_sha256": "522dea6f10fc535195e9417f6c5fb99c39f7120be760ed6cc716ad5bc0def306",
+  "tokenizer_implementation_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00"
+}

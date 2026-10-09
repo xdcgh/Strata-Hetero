@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "failed_before_tokenization_no_manifest_written",
+  "phase": "tokenizer-equivalence-attempt-01",
+  "python": "C:\\Python314\\python.exe",
+  "exception": "ModuleNotFoundError",
+  "missing_dependency": "regex",
+  "source_mutation": false,
+  "model_api_core_gpu_use": false,
+  "recovery": "reuse existing E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe with regex and jinja2 already installed; install nothing",
+  "utc": "2026-10-09T13:36:53.8132532Z"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "root_review_proposal_only",
+  "run_id": "20261009-47-worker-pool-sweep-preparation",
+  "single_parameterized_controller_not_per_arm_scripts": true,
+  "reuse": [
+    "bench/hetero/20261009-41-hetero41-direct-quality/launch-owned.ps1",
+    "bench/hetero/20261009-41-hetero41-direct-quality/startup-watch.ps1",
+    "bench/hetero/20261009-41-hetero41-direct-quality/run-quality-after-ready.ps1",
+    "tools/hetero_bench.py",
+    "tools/hetero_resources.py",
+    "tools/hetero_admission.py"
+  ],
+  "controller_changes": {
+    "launch": "Parameterize the run41 launch guard with a run directory/RunId; keep its exact fresh admission, source/binary/bridge and F asset identity checks, local env clearing, listener/process ownership and sampler launch.",
+    "quality": "Parameterize the run41 fixed nine-prompt controller; preserve strict H4 actual-token-ID comparison and caps for the quality-on configuration.",
+    "performance": "For performance-off configs, call hetero_bench sequentially for the six matrix scenarios with warmup 1/formal 3, capture off, and allow-capped-performance; check exact child ownership, fresh resource sample and timing metadata per request.",
+    "coordinator": "One coordinator reads matrix.json and executes each RunId in phase order; per-load fresh 12/4/46k admission and topology snapshot; stop at first failure, retain partial evidence, no retry/restart, leave last server live for root review."
+  },
+  "per_arm_scripts": false,
+  "implementation_or_launch_in_this_task": false
+}

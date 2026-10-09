@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "v0.1.41 source merged and tested; nativeArcIPC and CPUaffinity parity verified; vision native stage and CPUdiagnostic/replay complete, port numerical gap unresolved",
+  "phase": "CPU affinity observation verified; full-model five-arm quality/performance sweep authorized, not yet launched",
   "branch": "codex/45-upstream41-runtime",
   "upstream_base_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -70,7 +70,8 @@
     "Root read commandledger:23pure testcommands exitzero;792unit run791pass1skip0fail plus10PSfixtures; runnerpreflight/finalizationfailures retained withouttestsrepeated",
     "CPU35 actual2default+126pool alloutputs bitidentical/finite/exitzero; root independent128rehash+refcheck and257allresourcegatespass;18 strictPcore overflows NOT RUN, workerpinunknown",
     "Root all288 CPUvisiondiagnostic formalNPYs file+decodedSHA/shape/finite checked;264stage comparisons153negative, all24 projectionsinstrumentchanged; originalnativeoracle preserved",
-    "Sourceboundnormreplay onnativeblock0 reproducesnativeLN1.1bits; portnormonnativeinputpasses, upstreaminputdifferences dominate sampledLN1.1error; firstblockcauseunresolved"
+    "Sourceboundnormreplay onnativeblock0 reproducesnativeLN1.1bits; portnormonnativeinputpasses, upstreaminputdifferences dominate sampledLN1.1error; firstblockcauseunresolved",
+    "CPU48 builds/threeCTest and CPU49 75formal native outputs pass; 36 worker pin masks read back; no full-model gain yet"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -95,12 +96,12 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Continuefulloriginalscope: fullmodelCPUworker/affinity end-to-end gain and pinvisibility; nativeArc fullboundary CPUcomparison/sharedRAM contention/model dispatch; memory/storage/KV/parallelstartup and calibrated runtimeintegration; boundedvisionblock0 arithmetic analysis; formalperf andnatural128K/256K/512K/1M/quality/concurrency matrix. No unmeasuredroutepromoted.",
+  "next_experiment": "Run47 serial quality-on and performance-off five-arm CPU sweep; then KV parking/snapshot, Arc complete-boundary contention/model integration, storage/parallel startup, NPU, and full original benchmark scope",
   "completion_status": "active; originalfullscope stillrequired, no modelperformancepromotedfrommicrocases",
   "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T12:36:59.965080+00:00",
-  "current_run": null,
+  "last_checkpoint_utc": "2026-10-09T13:57:24.144019+00:00",
+  "current_run": "20261009-47-worker-pool-sweep",
   "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",

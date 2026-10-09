@@ -1,0 +1,1 @@
+Compute 12 * 13. Return only JSON with numeric field result and string field expression, e.g. keys result and expression. Use expression 12*13.

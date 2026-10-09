@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "failed_after_arm_metadata_rebase_matrix_staging_incomplete",
+  "phase": "tokenizer-manifest-arm-provenance-rebase-attempt-02",
+  "error": "TypeError: json.dump wrote str to binary-exclusive matrix stream after leaf metadata replacements",
+  "empty_matrix_stage": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix-tokenizer-rebased-02.json",
+  "empty_matrix_bytes": 0,
+  "original_matrix_sha256": "c94e01bb081028b68b9222dc1f906cc9490801614bc96481aab10418c914f73c",
+  "active_matrix_written": false,
+  "leaf_metadata_updates": 10,
+  "leaf_old_bytes_preserved_under_suffix": ".pre-tokenizer-manifest-06-02.json",
+  "config_files_changed": false,
+  "no_model_api_core_gpu_use": true,
+  "recovery": "create fresh matrix-tokenizer-rebased-03.json with text-mode exclusive write; preserve empty attempt-02 path"
+}

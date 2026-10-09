@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "pass_plan_only",
+  "created_utc": "2026-10-09T13:43:36.834123+00:00",
+  "matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix-tokenizer-rebased-03.json",
+  "matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "step_count": 10,
+  "arm_execution_order": [
+    "w10-all",
+    "w04-all",
+    "w06-all",
+    "w16-all",
+    "w06-auto"
+  ],
+  "quality_phase_first_arm": "w10-all",
+  "performance_phase_first_arm": "w10-all",
+  "performance_scenario_count": 6,
+  "execution_enabled": false,
+  "production_adapter_installed": true
+}
