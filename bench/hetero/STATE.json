@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "H18 diagnostic27 passed and stopped; H21 diagnostic-off prepared; CPU vision oracle build next",
+  "phase": "H21 same-binary diagnostic-off correctness failed and terminal; CPU vision oracle completed pending root review",
   "branch": "codex/09-upstream-0-1-40-4",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -38,7 +38,11 @@
     "E NVMe Disk1 vsF USB Disk3:96 read-only unbuffered arms288 measured repeats allok, sampled tails and globalcounter attribution limitations retained",
     "Integrated latest H4 direct control: corrected cap128 natural tasks, all27 formal quality and actualIDs/SSEtext/output bytes equal latest03; owned model/bridge/sampler stopped",
     "Native CPU harness linked actual Strata CPU/ggml kernels with static MSVC CRT; two metadata/SHA/CLI fixtures pass; original 3MB expert payload and nine matched input files prepared with scoped/readback SHA",
-    "Latest merged RAM20 locks full table but fails short three-key retrieval at raw output token66 with63 trailing ID0 tokens in all3 formal requests; first4 short tasks12formal match; longer requests stopped, exact resource windows pass; owned cleanup complete"
+    "Latest merged RAM20 locks full table but fails short three-key retrieval at raw output token66 with63 trailing ID0 tokens in all3 formal requests; first4 short tasks12formal match; longer requests stopped, exact resource windows pass; owned cleanup complete",
+    "Real sampled PLE host parity:45formal gathers Direct/pageable/locked RAM matched SHA and finite values; not GPU/model parity",
+    "Bounded zero-ID head diagnostic H18 passed27formal exactIDs but no readback branch fired; score statistics unavailable",
+    "Actual Arc pipe worker completed45 F32 comparisons; serialized transfer-inclusive latency measured; native quantized equivalence and model gain not accepted",
+    "H21 same-binary diagnostic-off:21formal passed;16K threeformal128 ID0 loops and later threecap8 arithmetic ID0 loops; full-RAM route rejected; exact owned cleanup terminal"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -59,15 +63,15 @@
     "restoration_required": true,
     "restoration_document": "docs/HETERO_ROLLBACK.md",
     "old_strata_pause_approval": "User confirmed other chat finished and authorised this chat to start",
-    "gpu_state_at_quota_resume": "H18/H19 fully terminal with exact owned process/descendant/listener cleanup; no newmodel yet. H21prepared andCPU-only vision oracle build authorized; original service/ComfyUI restoration still due after experiments",
+    "gpu_state_at_quota_resume": "H21 exact owned processes and8081 listener absent; CPU-only vision oracle completed pending root review; old service/ComfyUI restoration still due after experiments",
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Finish CPU-only vision oracle build; admitted same-binary RAM diagnostic-off H21 quality next. Source reviewer checks mapped-memory coherence. Controlled E/F runtime placement, CPU scheduling, Arc quantization/contention, vision/NPU, planner and full original context/performance matrix remain required.",
+  "next_experiment": "Review CPU vision oracle and compare identified OpenVINO graph before NPU; proceed controlled F/E PLE placement, CPU role benchmarks, helper arithmetic/contention and measured planner. RAM failure cause remains unresolved; preserve full original scope.",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T06:40:00+00:00",
-  "current_run": "20261009-20-vision-oracle-preparation",
+  "last_checkpoint_utc": "2026-10-09T07:17:23.831507+00:00",
+  "current_run": "20261009-22-vision-oracle-cpu",
   "current_model_owner": null
 }

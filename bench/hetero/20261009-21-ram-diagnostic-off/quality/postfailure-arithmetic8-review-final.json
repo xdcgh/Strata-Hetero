@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "status": "postfailure_probe_generation_degraded_reviewed",
+  "created_utc": "2026-10-09T07:07:06.208621+00:00",
+  "run_id": "postfailure-arithmetic8",
+  "separate_from_nine_task_sequence": true,
+  "control": {
+    "prompt": "smoke_arithmetic",
+    "prompt_tokens": 27,
+    "max_tokens": 8,
+    "warmup": 0,
+    "formal": 3,
+    "seed": 42,
+    "concurrency": 1,
+    "reasoning_effort": "none",
+    "cache_n": 0,
+    "source_or_env_changed": false
+  },
+  "result": {
+    "formal_count": 3,
+    "all_requests_completed_http": true,
+    "can_produce_expected_answer_4": false,
+    "visible_outputs": [
+      "!!!!!!!!",
+      "!!!!!!!!",
+      "!!!!!!!!"
+    ],
+    "actual_id_sequences": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "unique_id_sequences": 1,
+    "quality_statuses": [
+      null,
+      null,
+      null
+    ],
+    "formals": [
+      {
+        "formal": 1,
+        "request_status": "truncated_by_length",
+        "finish_reason": "length",
+        "prompt_tokens": 27,
+        "completion_tokens": 8,
+        "cache_n": 0,
+        "visible_text": "!!!!!!!!",
+        "visible_text_sha256": "c6f8e740f39178a88b2ba0ddd97a367784dce01919680db66ae3cf10304cc05a",
+        "raw_sse_valid": false,
+        "raw_sse_errors": [
+          "final finish reason is not stop: length"
+        ],
+        "actual_generated_token_ids": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_generated_token_ids_sha256": "677fa2df2254c7ad2cfdcf25373a5c0dc259d0a092f9b2e46ffca8b72a1b4bbc",
+        "include_stop": true,
+        "trailing_id0_count": 8,
+        "quality_status": null
+      },
+      {
+        "formal": 2,
+        "request_status": "truncated_by_length",
+        "finish_reason": "length",
+        "prompt_tokens": 27,
+        "completion_tokens": 8,
+        "cache_n": 0,
+        "visible_text": "!!!!!!!!",
+        "visible_text_sha256": "c6f8e740f39178a88b2ba0ddd97a367784dce01919680db66ae3cf10304cc05a",
+        "raw_sse_valid": false,
+        "raw_sse_errors": [
+          "final finish reason is not stop: length"
+        ],
+        "actual_generated_token_ids": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_generated_token_ids_sha256": "677fa2df2254c7ad2cfdcf25373a5c0dc259d0a092f9b2e46ffca8b72a1b4bbc",
+        "include_stop": true,
+        "trailing_id0_count": 8,
+        "quality_status": null
+      },
+      {
+        "formal": 3,
+        "request_status": "truncated_by_length",
+        "finish_reason": "length",
+        "prompt_tokens": 27,
+        "completion_tokens": 8,
+        "cache_n": 0,
+        "visible_text": "!!!!!!!!",
+        "visible_text_sha256": "c6f8e740f39178a88b2ba0ddd97a367784dce01919680db66ae3cf10304cc05a",
+        "raw_sse_valid": false,
+        "raw_sse_errors": [
+          "final finish reason is not stop: length"
+        ],
+        "actual_generated_token_ids": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_generated_token_ids_sha256": "677fa2df2254c7ad2cfdcf25373a5c0dc259d0a092f9b2e46ffca8b72a1b4bbc",
+        "include_stop": true,
+        "trailing_id0_count": 8,
+        "quality_status": null
+      }
+    ]
+  },
+  "resource_window": {
+    "samples": 1,
+    "min_physical_gib": 39.518,
+    "min_commit_gib": 20.109,
+    "all_gates_pass": true
+  },
+  "zero_logits_diagnostic": {
+    "lines": 0,
+    "rows": 0,
+    "numeric_fields": "unavailable; diagnostic off/no row emitted"
+  },
+  "note": "The tool summary exit was 1 because all three requests reached the 8-token length cap. The saved visible outputs and actual SSE IDs show an 8-character bang loop; this is per-request output evidence, not a logit readback.",
+  "quality_statuses_corrected_from_quality_report": [
+    "generation_degenerate_bang_loop",
+    "generation_degenerate_bang_loop",
+    "generation_degenerate_bang_loop"
+  ],
+  "prior_review_correction": "The initial review file used a nonexistent repeat key in the quality JSON and therefore recorded null statuses; the authoritative per-formal classification is read from quality report as generation_degenerate_bang_loop for all three formals.",
+  "quality_report_sha256": "dadd589a453df33ea544fec57c09c8b0c54da28d8e9262b4cb40ebf436957566"
+}

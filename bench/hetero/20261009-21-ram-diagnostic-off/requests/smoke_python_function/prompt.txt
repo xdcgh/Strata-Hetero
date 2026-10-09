@@ -1,0 +1,1 @@
+Write only a Python function named add_two that takes parameter x and returns x + 2. Do not include prose or execute anything.

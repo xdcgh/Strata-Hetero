@@ -1,0 +1,80 @@
+{
+  "status": "pass",
+  "model_runtime_files": [
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\compat-bf16.json",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\conversions.json",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\dense.bin",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\index.txt",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\native_experts.txt",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\merges.txt",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\token_type.json",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\tokenizer.json",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\vocab.json",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt\\dense.bin",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt\\dense.txt",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt\\draft_vocab.bin",
+      "identity_matches_prior_after": true
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt\\experts.bin",
+      "identity_matches_prior_after": true
+    }
+  ],
+  "binary_sha256": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+  "prior_integrity_receipt_sha256": "5b8ba5d4f82468de488a2269e45fb5d1889a25b9cabd77c718d829ec53a94656",
+  "scope": "current identity comparison and binary hash; no fresh full model hash"
+}

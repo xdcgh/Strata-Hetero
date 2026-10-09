@@ -26,14 +26,6 @@
   "quality_prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
   "quality_prompt_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
   "quality_prompt_counts_refreshed": true,
-  "launch_admission": {
-    "receipt": "admission.json",
-    "receipt_sha256": "54ac954c7638be050bb409b3ab78974b829b236cc7a54256de55a3898a3c8c26",
-    "status": "pass",
-    "launch_process_receipt": "process.json",
-    "process_receipt_sha256": "c819197bce2aff3688a076f5eec9981b8691bee7de6bd39930d8d0d7ba4ba656",
-    "scope": "launched immediately after fresh pass and commit check; exact saved JSON bytes"
-  },
   "control_comparison": {
     "reference_run": "20261009-18-ram-zero-logits",
     "same_binary": true,
@@ -47,5 +39,13 @@
     "STRATA_DBG_NAN_present": false,
     "purpose": "same-binary diagnostic-off control; not an automatic restart or startup-effects mask"
   },
-  "acceptance_status": "prepared_not_launched"
+  "acceptance_status": "prepared_not_launched",
+  "launch_admission": {
+    "receipt": "admission.json",
+    "receipt_sha256": "354a3eecf5f3e637b60b3da0a82e65014661c24b5c3ba1e1b6375a44837b0a67",
+    "status": "pass",
+    "launch_process_receipt": "process.json",
+    "process_receipt_sha256": "e8bc0903524a8b2b734bb052243b0968af74879d2240398914363ef47c4add0c",
+    "scope": "launched immediately after fresh pass and commit check; exact saved JSON bytes"
+  }
 }

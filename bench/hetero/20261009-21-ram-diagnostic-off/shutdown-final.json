@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-21-ram-diagnostic-off",
+  "status": "terminal",
+  "finished_utc": "2026-10-09T07:10:29.073176+00:00",
+  "identity_evidence": {
+    "process_json_sha256": "e8bc0903524a8b2b734bb052243b0968af74879d2240398914363ef47c4add0c",
+    "sampler_process_json_sha256": "65397c5e9b7143b27fb517c63051bc66cd06ebf52b6b7a3268d627940d17f1aa",
+    "identity_json_sha256": "0dd328c273bdef52e1179687451ec1b03a948269aa0f42d32b1335897116f34d",
+    "identity_recheck_sha256": "c08e40c80245b371ed3cba263ac43da25160c6b9622a0dc8749164ea37fe4d6d",
+    "config_sha256": "3fcb54307e381d5cfd5b28f5afe87465b9a532950c653530995d0e346afc5b99",
+    "admission_sha256": "354a3eecf5f3e637b60b3da0a82e65014661c24b5c3ba1e1b6375a44837b0a67",
+    "provenance_sha256": "706a58e88a02e5c542369fc007544c2f99e46feb32998989ebf543e6a6852328",
+    "launch_admission": {
+      "receipt": "admission.json",
+      "receipt_sha256": "354a3eecf5f3e637b60b3da0a82e65014661c24b5c3ba1e1b6375a44837b0a67",
+      "status": "pass",
+      "launch_process_receipt": "process.json",
+      "process_receipt_sha256": "e8bc0903524a8b2b734bb052243b0968af74879d2240398914363ef47c4add0c",
+      "scope": "launched immediately after fresh pass and commit check; exact saved JSON bytes"
+    },
+    "source_sha": "a7925b6a78ce5d89d940e4525f5c9699134b5c63",
+    "engine_version": "0.1.40.4",
+    "engine_path": "E:\\Strata-Hetero-data\\build\\cuda-zero-diag-01\\strata.exe",
+    "engine_sha256_expected": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+    "engine_sha256_rehashed": "45eb4cbeda4eb38cf32644f5b9bf601ef30143929a22213a46dc27b5815543bc",
+    "STRATA_DIAG_ZERO_LOGITS_present": false,
+    "STRATA_DBG_NAN_present": false,
+    "ple_io": "ram",
+    "launcher": {
+      "pid": 7824,
+      "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "argv": [
+        "-u",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\serve\\server.py",
+        "--engine",
+        "strata",
+        "--config",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off\\config.json",
+        "--port",
+        "8081"
+      ],
+      "start_utc_receipt": "2026-10-09T06:51:31.2995785Z",
+      "creation_delta_ms_observed": 0.0005
+    },
+    "bridge": {
+      "pid": 21780,
+      "parent_pid": 7824,
+      "config_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off\\config.json",
+      "loopback_listener": "127.0.0.1:8081"
+    },
+    "engine": {
+      "pid": 844,
+      "parent_pid": 21780,
+      "binary_sha_matches": true,
+      "command_exact_match": true
+    },
+    "sampler": {
+      "launcher_pid": 5864,
+      "argv": [
+        "-u",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+        "--output",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off\\resource\\samples.jsonl",
+        "--pid",
+        "7824",
+        "--interval",
+        "1",
+        "--max-seconds",
+        "10800",
+        "--minimum-commit-gib",
+        "4",
+        "--stop-file",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off\\resource\\STOP"
+      ],
+      "start_utc_receipt": "2026-10-09T06:51:31.3306317Z",
+      "creation_delta_ms_observed": 0.0007,
+      "actual_child_pid": 20032,
+      "actual_child_exe": "C:\\Python314\\python.exe"
+    }
+  },
+  "postfailure_probe": {
+    "review_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off\\quality\\postfailure-arithmetic8-review-final.json",
+    "review_sha256": "2d237ff03b7ba093baa953bfd95916f8f8ad377af613d9b81c093439fcc5814c",
+    "http_request_count": 3,
+    "warmup": 0,
+    "cap": 8,
+    "expected_arithmetic_answer_4_produced": false,
+    "formal_outputs": [
+      "!!!!!!!!",
+      "!!!!!!!!",
+      "!!!!!!!!"
+    ],
+    "actual_token_ids": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "quality_statuses": [
+      "generation_degenerate_bang_loop",
+      "generation_degenerate_bang_loop",
+      "generation_degenerate_bang_loop"
+    ],
+    "resource_window": {
+      "samples": 1,
+      "min_physical_gib": 39.518,
+      "min_commit_gib": 20.109,
+      "all_gates_pass": true
+    }
+  },
+  "original_sequence": {
+    "review_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off\\quality\\full-pairwise-review.json",
+    "review_sha256": "d0dac4638da137f014691ecfe233b38a238a7a26156b7261f8c947fd9d23cd49",
+    "quality_pass_formals": 21,
+    "degenerate_formals": 3,
+    "long_30k7_started": false,
+    "strict_accepted_claim": false
+  },
+  "unload": {
+    "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off\\shutdown-unload.json",
+    "receipt_sha256": "f341612b2cced2a22fc6718c00db5bf2fa75a6e08934761796546525f3e24e23",
+    "http_status": 200,
+    "loaded_after": false,
+    "in_flight_after": 0,
+    "requests_total": 35
+  },
+  "engine_exit": {
+    "pid": 844,
+    "exited_after_unload_within_s": 0.12
+  },
+  "sampler_stop": {
+    "stop_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-21-ram-diagnostic-off\\resource\\STOP",
+    "stop_file_mtime_ns": 1791529694767054100,
+    "terminal_record": {
+      "schema_version": 1,
+      "record_type": "sampler_stopped",
+      "observed_at_utc": "2026-10-09T07:08:15.445Z",
+      "monotonic_seconds": 15322.153263,
+      "reason": "stop_file_exists"
+    },
+    "launcher_pid": 5864,
+    "actual_child_pid": 20032,
+    "sampler_exit_code": 0,
+    "actual_child_exited": true
+  },
+  "bridge_and_launcher_stop": {
+    "exact_bridge_stop_pid": 21780,
+    "bridge_exited_within_s": 0.55,
+    "launcher_pid": 7824,
+    "launcher_natural_exit": true,
+    "launcher_exited_within_s": 0.27
+  },
+  "post_cleanup_check": {
+    "checked_owned_pids": [
+      7824,
+      21780,
+      844,
+      5864,
+      20032,
+      21604
+    ],
+    "all_owned_process_identities_absent": true,
+    "listener_8081_absent": true,
+    "last_sampler_process_tree": [
+      {
+        "pid": 7824,
+        "parent_pid": 21596,
+        "name": "python.exe",
+        "executable_path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "rss_bytes": 4243456,
+        "io_read_bytes": 185,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0,
+        "errors": []
+      },
+      {
+        "pid": 21604,
+        "parent_pid": 7824,
+        "name": "conhost.exe",
+        "executable_path": "C:\\Windows\\System32\\conhost.exe",
+        "rss_bytes": 20115456,
+        "io_read_bytes": 16607,
+        "io_write_bytes": 0,
+        "cpu_user_seconds": 0.171875,
+        "cpu_system_seconds": 0.375,
+        "errors": []
+      },
+      {
+        "pid": 21780,
+        "parent_pid": 7824,
+        "name": "python.exe",
+        "executable_path": "C:\\Python314\\python.exe",
+        "rss_bytes": 219729920,
+        "io_read_bytes": 15501542,
+        "io_write_bytes": 403652,
+        "cpu_user_seconds": 2.0625,
+        "cpu_system_seconds": 1.75,
+        "errors": []
+      }
+    ],
+    "pid_reuse_note": "A later point-in-time query observed PID 5864 under different parent PID 17688; it was not treated as H21 ownership and was not stopped. A final exact-PID query found no process at 5864."
+  },
+  "resource_window": {
+    "sample_count": 1004,
+    "first_sample_utc": "2026-10-09T06:51:31.444Z",
+    "last_sample_utc": "2026-10-09T07:08:14.445Z",
+    "min_physical_available_gib": 38.302,
+    "min_commit_available_gib": 18.451,
+    "all_owner_gates_pass_no_alerts_errors": true
+  },
+  "diagnostic": {
+    "engine_log_lines": 0,
+    "rows_observed": 0,
+    "numeric_logit_stats": "unavailable; diag-off emitted no row. Output token ID 0 is not a logit value."
+  },
+  "preservation": [
+    "Original H21 long16k failure raw artifacts and postfailure probe retained.",
+    "H5/H18 history unchanged.",
+    "No retry, restart, code/config/environment change, later prompt, or unrelated process termination."
+  ]
+}

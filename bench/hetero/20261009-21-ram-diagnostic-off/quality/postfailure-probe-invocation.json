@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "run_id": "postfailure-arithmetic8",
+  "created_utc": "2026-10-09T07:06:25.2241353Z",
+  "root_authorized_controls": {
+    "concurrency": 1,
+    "formal": 3,
+    "reasoning_effort": "none",
+    "prompt_sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+    "seed": 42,
+    "warmup": 0,
+    "cache_n_required": 0,
+    "max_tokens": 8,
+    "prompt_id": "smoke_arithmetic"
+  },
+  "preflight": {
+    "commit_gib": 20.159,
+    "launcher_pid": 7824,
+    "loaded": true,
+    "in_flight": 0,
+    "physical_gib": 39.591,
+    "sampler_owner_pid": 7824,
+    "engine_pid": 844,
+    "bridge_pid": 21780
+  },
+  "execution_path": "In-process call to existing tools.hetero_bench.main/request_once; one-call-only validate_args adapter permits requested warmup=0 without changing source; original argparse metadata records warmup=0",
+  "source_or_environment_modified": false
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-09T07:17:23.830932+00:00",
+  "status": "correctness_failed_terminal",
+  "shutdown_final_sha256": "ed0a387f2322996283c06d22a77ad194031de178911151be3385746f78ba5315",
+  "saved_receipt_hashes_verified": true,
+  "original_matrix": {
+    "formal_records": 24,
+    "quality_pass_formals": 21,
+    "degenerate_formals": 3,
+    "successful_request_statuses": 21,
+    "capped_length_formals": 3,
+    "api_calls_including_warmups": 32
+  },
+  "independent_failed_sse_checks": [
+    {
+      "prompt": "long_16k",
+      "file": "requests\\long_16k\\formal-0000.sse.txt",
+      "sse_sha256": "b818ecedd4a84663700466dc97fc8d7dd69a3dc38a1e42f36126cab757ed76ac",
+      "finish": "length",
+      "actual_id_count": 128,
+      "all_actual_ids_zero": true,
+      "visible_text": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "only_sse_acceptance_error": "final finish reason is not stop: length"
+    },
+    {
+      "prompt": "long_16k",
+      "file": "requests\\long_16k\\formal-0001.sse.txt",
+      "sse_sha256": "2c75174d424e538547770abf961c624897d13b93ecbf95d314744390606e01a9",
+      "finish": "length",
+      "actual_id_count": 128,
+      "all_actual_ids_zero": true,
+      "visible_text": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "only_sse_acceptance_error": "final finish reason is not stop: length"
+    },
+    {
+      "prompt": "long_16k",
+      "file": "requests\\long_16k\\formal-0002.sse.txt",
+      "sse_sha256": "7a00c67610c20c6b51dd80716df3f3817bf2ac6130fc0dde924873878ab08d66",
+      "finish": "length",
+      "actual_id_count": 128,
+      "all_actual_ids_zero": true,
+      "visible_text": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "only_sse_acceptance_error": "final finish reason is not stop: length"
+    },
+    {
+      "prompt": "postfailure-arithmetic8",
+      "file": "requests\\postfailure-arithmetic8\\formal-0000.sse.txt",
+      "sse_sha256": "667c887d43a91bac56401311c44c97b982119e9b0290945ec9ade0df8ca14c94",
+      "finish": "length",
+      "actual_id_count": 8,
+      "all_actual_ids_zero": true,
+      "visible_text": "!!!!!!!!",
+      "only_sse_acceptance_error": "final finish reason is not stop: length"
+    },
+    {
+      "prompt": "postfailure-arithmetic8",
+      "file": "requests\\postfailure-arithmetic8\\formal-0001.sse.txt",
+      "sse_sha256": "56805c359c63f9d81ab564c989a048aa5742f3c9b682cfc154d357826fb2dd76",
+      "finish": "length",
+      "actual_id_count": 8,
+      "all_actual_ids_zero": true,
+      "visible_text": "!!!!!!!!",
+      "only_sse_acceptance_error": "final finish reason is not stop: length"
+    },
+    {
+      "prompt": "postfailure-arithmetic8",
+      "file": "requests\\postfailure-arithmetic8\\formal-0002.sse.txt",
+      "sse_sha256": "2cf1c2564afd872fbc60b712d3589a4f86fe9ac045faa026e2ef0aa703b2bd97",
+      "finish": "length",
+      "actual_id_count": 8,
+      "all_actual_ids_zero": true,
+      "visible_text": "!!!!!!!!",
+      "only_sse_acceptance_error": "final finish reason is not stop: length"
+    }
+  ],
+  "full_ram_route_accepted": false,
+  "causal_conclusion": "unresolved; same binary with diagnostic flag removed failed after16K; startup and request history remain possible factors",
+  "postfailure_state": "three separate arithmetic probes remained degenerate; no restart or retry",
+  "numeric_logit_stats": "unavailable; emitted zero IDs are not logit values",
+  "provenance_history_note": "prepared_not_launched acceptance field retained with original bytes; launch admission and terminal receipt establish executed failure",
+  "probe_history_note": "initial null quality_status fields retained; final supplemental corrected statuses and raw SSE verified",
+  "review_invocation_note": "Initial import failed before any mutation; corrected sibling-module search path using tools directory"
+}
