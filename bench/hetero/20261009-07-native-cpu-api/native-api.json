@@ -1,0 +1,268 @@
+{
+  "schema": "strata-native-cpu-api-inventory-v1",
+  "created_utc": "2026-10-09T03:33:19.783121+00:00",
+  "source_revisions": {
+    "integrated_baseline_sha": "e87d74c452f7c0bdcb46201fa0a9bcd5453cd10c",
+    "strata_inspected_head_at_task_start": "247132a130e3ce88bb9d01d559237d37cc5defb5",
+    "strata_head_when_inventory_written": "9d2a0f07fe2677f9936da5229b0afcff415671d9",
+    "api_sources_unchanged_between_inspected_and_written_heads": true,
+    "pinned_ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d"
+  },
+  "scope": {
+    "source_search_only": true,
+    "build_or_link_attempted": false,
+    "harness_created_or_modified": false,
+    "model_or_pack_files_read": false,
+    "cpu_kernel_executed": false,
+    "gpu_or_device_touched": false,
+    "model_or_api_called": false
+  },
+  "target_case": {
+    "ggml_types": {
+      "gate_up": {
+        "name": "GGML_TYPE_Q4_K",
+        "value": 12
+      },
+      "down": {
+        "name": "GGML_TYPE_Q5_1",
+        "value": 7
+      }
+    },
+    "n_embd": 2560,
+    "n_ff": 640,
+    "expected_native_blob_bytes": 3072000,
+    "user_reported_payload_bytes": 3072000,
+    "payload_geometry_matches": true
+  },
+  "public_callable_api": [
+    {
+      "signature": "bool native_fmt(int gu_type, int d_type, int64_t n_embd, int64_t n_ff, NativeFmt& f, std::string& err);",
+      "purpose": "Resolve ggml CPU dot/activation types, block geometry, row sizes, offsets and bounded activation buffers. Call with (12,7,2560,640)."
+    },
+    {
+      "signature": "void native_quant_act(const NativeFmt& f, const float* x, void* dst);",
+      "purpose": "Quantize one 2560-float input vector to Q4_K gate/up vec_dot_type Q8_K."
+    },
+    {
+      "signature": "void native_gu_rows(const NativeFmt& f, const uint8_t* blob, const void* const* act, int nt, float* const* ff, int r0, int r1);",
+      "purpose": "For token t and row r in [r0,r1), compute Q4_K gate/up dots and write silu(gate_dot)*up_dot to ff[t][r]."
+    },
+    {
+      "signature": "void native_quant_h(const NativeFmt& f, const float* h, void* dst);",
+      "purpose": "Quantize one 640-float post-SiLU-times-up vector to Q5_1 down vec_dot_type Q8_1. This re-quantization is part of the native contract."
+    },
+    {
+      "signature": "void native_down_rows(const NativeFmt& f, const uint8_t* blob, const void* const* hq, int nt, float* const* out, int r0, int r1);",
+      "purpose": "Dot Q5_1 down rows against caller-supplied Q8_1 hq[t], writing float outputs out[t][r] for [r0,r1). It does not accept the unquantized float h."
+    },
+    {
+      "signature": "int native_gu_mt_min(int gu_type);",
+      "purpose": "Multi-token threshold for IQ gate/up path; it does not control Q4_K/Q5_1 branches."
+    },
+    {
+      "signature": "void q8k_quant_avx2(const float* x, void* y, int64_t n);",
+      "purpose": "Optional AVX2 implementation of ggml Q8_K activation conversion; native_quant_act selects only when AVX2 is available and STRATA_NO_Q8K_AVX2 is unset."
+    },
+    {
+      "signature": "void kq256_gu_rows(int ggml_type, const uint8_t* blob, size_t gu_row, size_t up_off, int n, const void* const* act, int nt, float* const* ff, int r0, int r1);",
+      "purpose": "Optional bit-exact Q4_K/Q8_K mult-token gate/up kernel."
+    },
+    {
+      "signature": "void kq256_rows(int ggml_type, const uint8_t* w, size_t row_bytes, int n, const void* const* act, int nt, float* const* out, int r0, int r1);",
+      "purpose": "Optional bit-exact Q5_1/Q8_1 mult-token down kernel."
+    },
+    {
+      "signature": "const struct ggml_type_traits_cpu * ggml_get_type_traits_cpu(enum ggml_type type);",
+      "purpose": "Supplies the canonical ggml-cpu from_float, vec_dot, and vec_dot_type function pointers."
+    },
+    {
+      "signature": "typedef void (*ggml_from_float_t)(const float * x, void * y, int64_t k);",
+      "purpose": "Trait callback signature used by native_quant_act/native_quant_h."
+    },
+    {
+      "signature": "typedef void (*ggml_vec_dot_t)(int n, float * GGML_RESTRICT s, size_t bs, const void * GGML_RESTRICT x, size_t bx, const void * GGML_RESTRICT y, size_t by, int nrc);",
+      "purpose": "Trait callback signature used for one Q4_K or Q5_1 row dot."
+    }
+  ],
+  "format_traits": {
+    "Q4_K": {
+      "type_value": 12,
+      "block_values": 256,
+      "bytes_per_block": 144,
+      "cpu_vec_dot": "ggml_vec_dot_q4_K_q8_K",
+      "vec_dot_type": "GGML_TYPE_Q8_K",
+      "row_bytes_at_n_embd_2560": 1440,
+      "gate_rows": 640,
+      "gate_segment_bytes": 921600,
+      "up_offset_bytes": 921600
+    },
+    "Q5_1": {
+      "type_value": 7,
+      "block_values": 32,
+      "bytes_per_block": 24,
+      "cpu_vec_dot": "ggml_vec_dot_q5_1_q8_1",
+      "vec_dot_type": "GGML_TYPE_Q8_1",
+      "row_bytes_at_n_ff_640": 480,
+      "down_rows": 2560,
+      "down_offset_bytes": 1843200,
+      "down_segment_bytes": 1228800
+    },
+    "Q8_K": {
+      "block_values": 256,
+      "bytes_per_block": 292,
+      "activation_bytes_for_2560": 2920
+    },
+    "Q8_1": {
+      "block_values": 32,
+      "bytes_per_block": 36,
+      "activation_bytes_for_640": 720
+    },
+    "blob_layout": "[640 Q4_K gate rows][640 Q4_K up rows][2560 Q5_1 down rows], no inter-segment padding in NativeFmt",
+    "blob_total_bytes_formula": "2*(640*1440) + 2560*480 = 3072000",
+    "scratch_and_outputs": {
+      "act[t]": "Q8_K packed vector, 2920 bytes per token",
+      "ff[t]": "float[640]",
+      "hq[t]": "Q8_1 packed vector, 720 bytes per token",
+      "out[t]": "float[2560]"
+    }
+  },
+  "execution_contract": {
+    "pipeline": [
+      "caller provides x[t] as 2560 F32 values",
+      "native_quant_act emits Q8_K for Q4_K gate/up",
+      "native_gu_rows reads gate rows at blob and up rows at blob+921600, then emits F32 SiLU(gate dot)*up dot",
+      "caller passes that F32 intermediate through native_quant_h, producing Q8_1 for Q5_1 down",
+      "native_down_rows consumes Q8_1 and emits F32 output"
+    ],
+    "rows": "Both row APIs operate on half-open [r0,r1) ranges and do not create threads; for a single-thread reference call full ranges [0,640) and [0,2560).",
+    "tokens": "nt is the number of token pointers; act[t], ff[t], hq[t], out[t] each address a separate token vector. Scalar ggml fallback loops rows and tokens.",
+    "single_token": "nt=1 uses ggml CPU vec_dot fallback for Q4_K gate/up and Q5_1 down, including the ggml activation quantizer callbacks.",
+    "multitoken": "With STRATA_KQ256 unset/0, Q4_K and Q5_1 stay on the per-token ggml-cpu dots for any nt. With STRATA_KQ256=1 and runtime AVX2, nt>=2 selects KQ kernels; headers/comments state bit-exact versus ggml dots.",
+    "STRATA_IQ_MT_MIN": "Only controls IQ multi-token routes. It does not set Q4_K or Q5_1 thresholds; KQ routes use nt>=2.",
+    "static_environment": "STRATA_KQ256, STRATA_NO_Q8K_AVX2 and IQ switches are function-local static cached; a future harness must set its child-process environment before its first API call.",
+    "canonical_reference_mode": "For the uncomplicated ggml-cpu quantized reference, use a fresh process with STRATA_KQ256 unset/0 and call per-token or batched with ggml fallback; do not replace native_quant_h with float down input."
+  },
+  "dependencies": {
+    "direct_headers": [
+      "include/strata/kernels/cpu/native_expert.hpp",
+      "include/strata/kernels/cpu/expert.hpp",
+      "include/strata/kernels/cpu/expert_layout.hpp",
+      "include/strata/kernels/cpu/iq_avx2.hpp",
+      "include/strata/kernels/cpu/iq_avx512.hpp",
+      "include/strata/kernels/cpu/kq_avx2.hpp",
+      "ggml/include/ggml.h",
+      "ggml/include/ggml-cpu.h"
+    ],
+    "source_symbol_closure": [
+      "src/kernels/cpu/native_expert.cpp",
+      "src/kernels/cpu/expert_layout.cpp (runtime AVX2/AVX-512 probes)",
+      "src/kernels/cpu/iq_avx2.cpp",
+      "src/kernels/cpu/iq_avx512.cpp",
+      "src/kernels/cpu/kq_avx2.cpp",
+      "src/kernels/cpu/kq_avx1.cpp (bundled by the native target; native Q4_K/Q5_1 does not call its AVX1 helpers)"
+    ],
+    "cmake_target": "strata_kernels_cpu",
+    "target_link_dependencies": [
+      "ggml-cpu",
+      "ggml-base",
+      "Threads::Threads"
+    ],
+    "required_definition": "STRATA_NATIVE_EXPERTS=1; without it expert_layout.cpp supplies abort/false native stubs instead of the live implementation.",
+    "ggml_cpu_configuration_from_CMakeLists": "GGML_STATIC=ON, GGML_CUDA=OFF, GGML_OPENMP=OFF; portable Strata config sets GGML_NATIVE=OFF and selects explicit CPU ISA variants.",
+    "isa_build_flags": "CMake compiles iq_avx512.cpp with AVX-512 flags; iq_avx2.cpp/kq_avx2.cpp with AVX2/FMA/F16C; native_expert guards those paths with CPU+OS feature checks.",
+    "cuda_header_blocker": {
+      "for_native_api_translation_unit": false,
+      "basis": "native_expert.hpp is ordinary C++ declarations; native_expert.cpp includes ggml CPU headers and no CUDA headers; CMake explicitly sets GGML_CUDA=OFF for the embedded ggml build.",
+      "standalone_link_verified": false,
+      "caveat": "No build or link was run per task boundary. Reuse/link the strata_kernels_cpu target and its public ggml/Threads dependencies; do not infer that native_expert.cpp alone is link-complete."
+    }
+  },
+  "evidence_files": {
+    "strata": [
+      {
+        "path": "CMakeLists.txt",
+        "git_blob": "65c6cc5a351d057bd10158c5c0092ace4c26345e",
+        "lines": "1122-1212",
+        "relevance": "native CPU target and ggml dependencies"
+      },
+      {
+        "path": "src/kernels/cpu/native_expert.cpp",
+        "git_blob": "066afe0d41fa45e13aee38b7b8cfd619625a2246",
+        "lines": "1-190",
+        "relevance": "native format, activation quantization, Q4_K/Q5_1 call path"
+      },
+      {
+        "path": "include/strata/kernels/cpu/native_expert.hpp",
+        "git_blob": "c41a1991bfe634b6dd11ef59b1808142f64cd6dd",
+        "lines": "1-51",
+        "relevance": "public CPU native-expert signatures and blob contract"
+      },
+      {
+        "path": "include/strata/kernels/cpu/kq_avx2.hpp",
+        "git_blob": "01b7a63cc9a669938cc5646bb1627c516cf0aa45",
+        "lines": "1-20",
+        "relevance": "AVX2 Q4_K/Q5_1 mult-token function signatures"
+      },
+      {
+        "path": "src/kernels/cpu/kq_avx2.cpp",
+        "git_blob": "a34731198c3fb5addde74145e15164fd986d5ae4",
+        "lines": "84-185,202-263",
+        "relevance": "Q4_K/Q5_1 AVX2 dots and exported row APIs"
+      },
+      {
+        "path": "include/strata/kernels/cpu/expert_layout.hpp",
+        "git_blob": "615afa195a8c7bde8ae96d9bdbd2c460a9474bcf",
+        "lines": "46-72",
+        "relevance": "CPU ISA feature probe API"
+      },
+      {
+        "path": "src/kernels/cpu/expert_layout.cpp",
+        "git_blob": "cc218f272cfaea9894deb3c93f1129f6d10f5338",
+        "lines": "100-150,290-310",
+        "relevance": "CPU ISA feature probes and disabled-expert fallback"
+      }
+    ],
+    "ggml": [
+      {
+        "path": "ggml/include/ggml.h",
+        "git_blob": "224bdef927ac90bfa07ee39db3247b7bac4f14ec",
+        "lines": "390-410,2970-2985",
+        "relevance": "GGML type identifiers and from-float callback type"
+      },
+      {
+        "path": "ggml/include/ggml-cpu.h",
+        "git_blob": "dc6453c6eaa16667f720f987659ad42d03a403a2",
+        "lines": "110-128",
+        "relevance": "CPU dot callback, traits and CPU init"
+      },
+      {
+        "path": "ggml/src/ggml-common.h",
+        "git_blob": "1dbbe326d0fc6a5ce8a86d237cb94901340443af",
+        "lines": "87-90,237-269,328-338,365-376",
+        "relevance": "Q4_K/Q5_1 and activation block formats/sizes"
+      },
+      {
+        "path": "ggml/src/ggml-cpu/ggml-cpu.c",
+        "git_blob": "8bb0ff7bc3366be957dd20aba3fbe0f50dd249d7",
+        "lines": "266-284,311-315,418-420",
+        "relevance": "Q5_1/Q4_K CPU trait dispatch"
+      },
+      {
+        "path": "ggml/src/ggml.c",
+        "git_blob": "1752814093b5cf973a820794e0dbe53fb8c6fe5b",
+        "lines": "1325-1348",
+        "relevance": "GGML type/block/row-size calculation"
+      },
+      {
+        "path": "ggml/src/ggml-cpu/arch/x86/quants.c",
+        "git_blob": "ea54cfe44ce403fe06c8b4aa10b5a882779e7e71",
+        "lines": "400-405,500-510,1222-1305,2038-2212",
+        "relevance": "x86 Q8_1/Q8_K activation quantizers and Q5_1/Q4_K dot callbacks"
+      }
+    ]
+  },
+  "limitations": [
+    "This is source inspection only; no extracted tensor, model file, official NPZ, harness or runtime artifact was read.",
+    "No code was compiled or executed, so standalone host-link closure remains to be verified in a later authorized step."
+  ]
+}
