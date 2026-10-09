@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "phase": "Nativeactivation NumPy/CPU/Arc sampledquality passed; upstream0.1.41 CUDAcompiled; matchedHetero compileactive; CPUaffinity andboundedvisionstage toolsinpreparation",
-  "branch": "codex/09-upstream-0-1-40-4",
+  "phase": "Both0.1.41 matchedmodel quality27formal pass and terminal; nativeArcIPC45formal pass; nativevision20SVE/132stage verified; CPUOVdiagnostic negative under analysis; readytointegrateupstreamsource",
+  "branch": "codex/45-upstream41-runtime",
   "upstream_base_sha": "6674a0065fb96bacde33e3eb10f91a1df86f95f2",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
   "validated": [
@@ -55,7 +55,17 @@
     "Isolatedpinned0.1.41 mergeffeb748 pushed;770puretests run769pass1skip; newmatchingCUDA builds authorized, no modelbaselineyet",
     "NativeQ4K/Q5_1 activationcontract algebra rows1/16/256 all9formal pass originalnativeCPU tolerances",
     "SameOpenVINO nativeactivationgraphCPU andArcGPU.0 rows1/16/256 each9formalpass; maxrelativeRMSE6.92e-4, noIPC/wholemodelgainclaimed",
-    "Pinnedupstreamfb58 ReleaseSM89CUDA buildcompleted; source/SDK/ggml stable; sampler412pass; exeSHAa6e2763ffce668e213f12380389223674621c47e4e5cb94c0f724e6ea8e686fc"
+    "Pinnedupstreamfb58 ReleaseSM89CUDA buildcompleted; source/SDK/ggml stable; sampler412pass; exeSHAa6e2763ffce668e213f12380389223674621c47e4e5cb94c0f724e6ea8e686fc",
+    "Root rehashed both v0.1.41 binaries and checked clean source/ggml trees; Hetero exe SHA6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb; no engine launched",
+    "Native operator service metadata/no-Core path and 63 related pure fixtures passed; new service committed and pushed b5d6458; actual native IPC pending",
+    "All124 CUDA build evidence file bytes independently rehashed and checked against Git index; force-tracked ignored build evidence, pushed ed625ab",
+    "Native-stage C++ fixture and CPU helper build pass; original7285 oracle unchanged, new helperf01a SHA verified; real stage outputs pending",
+    "Profile persistence and guarded stateless dispatcher16fixtures pass and pushed1d9607e; actual engine integration/calibration still pending",
+    "Root independently compared all9 retained nativeArcIPC outputs against frozenCPU, rehashed45formal outputs, passed unchangedgates; measured9shape profile roundtripped, acceptanceempty, helperdefaultoff",
+    "Root independently reparsed upstream41run44 all27formal actualtokenIDs/SSEtext/storedUTF8 bytes againstH4; allmatch and strictqualitypass; exactcleanup697samples allpass min63.980physical/44.727commitGiB",
+    "Run40 prefillfirstrequest cancelled24/27input and0output due liveTailreader bug; 521samples allvalid/all12/4gatespass; originalfailedrun terminal and preserved, newboundedreader10hostfixturespass",
+    "Root all27 candidate41 actualIDs/SSEtext/storedUTF8 match latestupstream41 and H4;651resource samples pass, bothmodel owners cleanlyterminal",
+    "Actualnative visionstage20SVE fullbytes equal frozen23;132stage hashes/finite verified and repeatstable, eachimage under16MiB; CPUOVdiagnosticcompleted negative, originaloracleunchanged"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -80,28 +90,19 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Finish/reviewHetero0.1.41matchedbinary thenfreshgatedqualitybaseline; CPUaffinitysweepaftercompilerterminal; nativeactivationIPCworker+transport/crossover/contention; boundednativevisionstageparity; measuredplannerintegration/calibration andremainingfulloriginalmatrix.",
+  "next_experiment": "Merge testedupstream33into new45 branch, runrequiredpure regressions; diagnosefirstCPUvisionstagedivergence; runCPUaffinitysweep afterfrozenpreflight; fulloriginalRAM/storage/KV/Arc/modelintegration/calibrator/performance/context/concurrency remainrequired.",
   "completion_status": "active; full original scope preserved; no performance route accepted from prepared microbenchmarks",
   "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-09T10:36:35.887349+00:00",
-  "current_run": "cuda-hetero41-01",
+  "last_checkpoint_utc": "2026-10-09T12:14:27.103977+00:00",
+  "current_run": "upstream41 source integration",
   "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
     "tag": "v0.1.41",
-    "status": "isolated_merge_pushed_build_pending",
+    "status": "matched_models_quality_passed_source_merge_next",
     "review": "bench\\hetero\\20261009-25-upstream-0-1-41-review\\review.json",
     "merge_sha": "ffeb748d190ddeedff23587ce848596d4db0c752"
   },
-  "current_build_owner": {
-    "controller_pid": 20748,
-    "build_cmd_pid": 19412,
-    "cmake_pid": 11144,
-    "ninja_pid": 20176,
-    "sampler_launcher_pid": 21424,
-    "sampler_child_pid": 6028,
-    "worktree": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41",
-    "note": "verifiedactiveCUDAcompile; repollsamehandle,notrestartonobservationtimeout"
-  }
+  "current_build_owner": null
 }

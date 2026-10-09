@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "root_conditionally_authorized_cpu_ov_diagnostic_native_frozen",
+  "status": "root_authorized_native_stage_only_ov_not_authorized",
   "execution_authorized": true,
   "run_id": "20261009-43-vision-stage-oracle",
   "helper": {
@@ -247,9 +247,8 @@
     "bench/hetero/20261009-22-vision-oracle-cpu/oracle_client.py": "17fd4ae4856ef1e144574c7ba52c18ec8d0aa8d2f429d4697cd0c3ecd3f7846b",
     "bench/hetero/20261009-39-vision-stage-cpu-build/build-receipt.json": "e4d2b6e5d7402bcb98ad67dfe23fafac1f4418f9f83a0da871889ca32c4214e4",
     "bench/hetero/20261009-43-vision-stage-oracle-preparation/client.py": "ea0dbe8745be86496b9bcf3c05631835882a89e4b2f3a3a0f7134d6b451633fe",
-    "bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py": "8da72cbc7c2128ff272821a67796b07ea972e6a61ede8480d2f79e0b03b33fc7",
-    "bench/hetero/20261009-43-vision-stage-oracle-preparation/analyse.py": "a161378939fc7c00d12dcb452dda0e5e1405c4a0fecacfdde5245fd5d319e336",
-    "bench/hetero/20261009-43-vision-stage-oracle-preparation/test_ov_driver.py": "2cbf50b61751defc730f2f640178a715babdd681cd0df8e84114493cadba5d23"
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/ov_driver.py": "93381aa30ff0de243e4a62e2d48bb74a27539abbf6f1449cdc885ceb62da4a19",
+    "bench/hetero/20261009-43-vision-stage-oracle-preparation/analyse.py": "a161378939fc7c00d12dcb452dda0e5e1405c4a0fecacfdde5245fd5d319e336"
   },
   "capture_forward_order": [
     "patch_merge",
@@ -264,7 +263,5 @@
     "post_norm",
     "merged"
   ],
-  "external_launch_guard_requirement": "Use main venv with psutil for the controller; bind its actual C Python PID/create/exe/full argv explicitly. Native direct Popen is the actual runtime, requires command_line == helper_argv and never waits for a Cpython child. OV worker alone uses Intel venv and requires its actual C Python child binding.",
-  "openvino_run_authorized": true,
-  "ov_worker_timeout_seconds": 1800
+  "external_launch_guard_requirement": "Use main venv with psutil for the controller; bind its actual C Python PID/create/exe/full argv explicitly. Native direct Popen is the actual runtime, requires command_line == helper_argv and never waits for a Cpython child. OV worker alone uses Intel venv and requires its actual C Python child binding."
 }
