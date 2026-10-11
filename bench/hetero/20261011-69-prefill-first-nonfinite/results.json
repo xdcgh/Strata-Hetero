@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scope": "diagnostic_only_not_performance_benchmark",
+  "root_output_review_sha256": "93f36fb249991b168a6fa0c246d3d164fbe328c75042c6bd284185fe4c8aebfa",
+  "short_formal_pass": 15,
+  "long_warm_and_formal_fail": 4,
+  "first_bad": {
+    "ordinal": 277,
+    "stage": "moe_output",
+    "chunk": 0,
+    "pos0": 0,
+    "layer": 45,
+    "half": 1,
+    "rows": 1035,
+    "width": 2560,
+    "index": 394240,
+    "row": 154,
+    "column": 0,
+    "nan": 2560,
+    "positive_inf": 0,
+    "negative_inf": 0
+  },
+  "zero_head_rows": 28,
+  "resources": {
+    "samples": 780,
+    "terminal_rows": 1,
+    "all_pass": true,
+    "physical_min_gib": 61.974456787109375,
+    "commit_min_gib": 42.551448822021484
+  },
+  "cleanup": {
+    "exit_code": 0,
+    "loaded_after_unload": false,
+    "inflight_after_unload": 0,
+    "owners_and_8081_released": true
+  },
+  "performance_accepted": false,
+  "later_long_prompts_run": false,
+  "source_cause_identified": false
+}

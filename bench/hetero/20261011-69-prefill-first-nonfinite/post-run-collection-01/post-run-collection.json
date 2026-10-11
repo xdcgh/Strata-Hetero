@@ -1,0 +1,748 @@
+{
+  "schema": "strata-run69-post-run-collection-v1",
+  "collected_utc": "2026-10-11T04:49:58.0726995Z",
+  "status": "quality_failed_long_1k_strictstop_cleanup_pass",
+  "no_raw_artifacts_modified": true,
+  "root_takeover": {
+    "auth_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\root-authorization-02.json",
+    "auth_sha256": "e5d7514ea15ece3d9c9c7dfdeb33c686631d81173075b1706ff6ecc525eb712d",
+    "adopted_active_sides": [
+      "probe69"
+    ],
+    "root_quality_outer_session_id": 35433,
+    "root_quality_outer_exit_code": 1,
+    "quality_inner": {
+      "controller": {
+        "pid": 20832,
+        "parent_pid": 25028,
+        "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "create_utc": "2026-10-11T04:33:41.9145700Z",
+        "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\quality.ps1 -Run -RootReadyConfirmed -LauncherPid 14924 -SamplerPid 16852",
+        "argv": [
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-File",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\quality.ps1",
+          "-Run",
+          "-RootReadyConfirmed",
+          "-LauncherPid",
+          "14924",
+          "-SamplerPid",
+          "16852"
+        ],
+        "script_sha256": "cc43baa65fe00cb5593b39821e5f17d21ab6817b6e6c4d9598bf1618bf5cd8e6",
+        "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6"
+      },
+      "terminal": {
+        "side": "probe69",
+        "phase": "quality",
+        "controller_pid": 20832,
+        "exit_code": 1,
+        "finished_utc": "2026-10-11T04:35:10.6160441+00:00",
+        "stdout_sha256": "eb7dd5413834342104791997faca0226532cfea26da2e221e7684e554eccc885",
+        "stderr_sha256": "c9bd1149142a4515c013ddf96ca8bff5e96092e81573fc85d6367855ea118809",
+        "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+        "source_script_sha256": "cc43baa65fe00cb5593b39821e5f17d21ab6817b6e6c4d9598bf1618bf5cd8e6"
+      },
+      "stdout": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\quality\\stdout.log",
+        "bytes": 1760,
+        "sha256": "eb7dd5413834342104791997faca0226532cfea26da2e221e7684e554eccc885"
+      },
+      "stderr": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\quality\\stderr.log",
+        "bytes": 425,
+        "sha256": "c9bd1149142a4515c013ddf96ca8bff5e96092e81573fc85d6367855ea118809"
+      }
+    },
+    "cleanup_inner": {
+      "controller": {
+        "pid": 6512,
+        "parent_pid": 7928,
+        "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "create_utc": "2026-10-11T04:35:29.0037810Z",
+        "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\cleanup.ps1 -Execute",
+        "argv": [
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-File",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\cleanup.ps1",
+          "-Execute"
+        ],
+        "script_sha256": "a0bf63b05a678711715e4750e72c3f1f85cde6d07ad50327cd85a752e239f63c",
+        "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6"
+      },
+      "terminal": {
+        "side": "probe69",
+        "phase": "cleanup",
+        "controller_pid": 6512,
+        "exit_code": 0,
+        "finished_utc": "2026-10-11T04:35:36.3333302+00:00",
+        "stdout_sha256": "54382ba9deed605228e2db8f8736fbc02f399b4ccfb928d9c1be88f5f11cc299",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+        "source_script_sha256": "a0bf63b05a678711715e4750e72c3f1f85cde6d07ad50327cd85a752e239f63c"
+      },
+      "stdout": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\cleanup\\stdout.log",
+        "bytes": 562,
+        "sha256": "54382ba9deed605228e2db8f8736fbc02f399b4ccfb928d9c1be88f5f11cc299"
+      },
+      "stderr": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\cleanup\\stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "root_cleanup_exit_code": 0,
+    "fact": "Root adopted existing active probe69 owners; did not relaunch; performed sampler-first cleanup after quality failure."
+  },
+  "launch": {
+    "main_head_at_launch": "3ca32b79614626fbf595c78fd0a1676a92d18cb4",
+    "main_clean_before_launch": true,
+    "main_head_at_collection": "1e22f1a7403385aca81f3640f194a9e1df77f4e5",
+    "main_status_at_collection": [
+      "?? bench/hetero/20261011-70-moe45-nonfinite-source-review/report-addendum-empty-dir-policy.json",
+      "?? bench/hetero/20261011-70-moe45-nonfinite-source-review/report.json",
+      "?? bench/hetero/20261011-70-moe45-nonfinite-source-review/report.md"
+    ],
+    "main_tracked_changes_at_collection": [],
+    "E69_head_at_collection": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "E69_clean_at_collection": true,
+    "authorized_source_pins_match": 10,
+    "root_launch_outer_session_id": 95468,
+    "outer_stall_resolution": "After cleanup closed inherited stdout pipe, original session reached terminal exit 0.",
+    "outer_stall_observation": {
+      "schema": "strata-run69-outer-session-stall-observation-v1",
+      "observed_utc": "2026-10-11T04:26:38.8143739Z",
+      "exec_tool_session_id": 95468,
+      "outer_process": {
+        "pid": 8548,
+        "parent_pid": 10616,
+        "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "created_utc": "2026-10-11T04:22:27.9510020Z",
+        "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -Command \"try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}\n$ErrorActionPreference='Stop';$run='C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite';$inv=Join-Path $run 'lifecycle-invocation-01';$authPath=Join-Path $run 'root-authorization-01.json';$auth=Get-Content -LiteralPath $authPath -Raw|ConvertFrom-Json -DateKind String;$repo='C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero';$matrixPath=Join-Path $run 'matrix.json';$wrapper=Join-Path $run 'run-phase.ps1';$mainHead=(git -C $repo rev-parse HEAD).Trim();$mainStatus=@(git -C $repo status --porcelain=v1 --untracked-files=all);if($mainHead -ne '3ca32b79614626fbf595c78fd0a1676a92d18cb4' -or $mainStatus.Count){throw 'Main source changed before launch'};if((Get-FileHash -LiteralPath $matrixPath -Algorithm SHA256).Hash.ToLowerInvariant() -ne $auth.matrix_sha256 -or (Get-FileHash -LiteralPath $wrapper -Algorithm SHA256).Hash.ToLowerInvariant() -ne $auth.wrapper_sha256){throw 'Matrix/wrapper changed before launch'};foreach($pin in $auth.source_pins){if((Get-FileHash -LiteralPath $pin.path -Algorithm SHA256).Hash.ToLowerInvariant() -ne $pin.sha256){throw \\\"Pinned source changed before launch: $($pin.path)\\\"}};$eSource='E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69';if((git -C $eSource rev-parse HEAD).Trim() -ne '1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86' -or @(git -C $eSource status --porcelain=v1 --untracked-files=all).Count){throw 'E69 worktree changed before launch'};$all=@(Get-CimInstance Win32_Process);$comp=@($all|Where-Object{$_.Name -match '^(cmake|ninja|nvcc|cl|link|msbuild)\\.exe$'});$pyproc=@($all|Where-Object{$_.Name -match '^python(w)?\\.exe$'});$model=@($all|Where-Object{$_.Name -match '^(strata|StrataEngine|llama-server)$' -or ($_.ExecutablePath -and $_.ExecutablePath -match '\\\\cuda-prefill-probe69-01\\\\strata\\.exe$')});if($comp.Count -or $pyproc.Count -or $model.Count){throw 'Foreign build/python/model process appeared before launch'};if(Test-Path -LiteralPath $inv){throw 'Lifecycle invocation folder already exists'};[void][IO.Directory]::CreateDirectory($inv);$pins=@(foreach($pin in $auth.source_pins){[ordered]@{path=$pin.path;sha256=$pin.sha256}});$pre=[ordered]@{schema='strata-run69-lifecycle-prelaunch-v1';captured_utc=(Get-Date).ToUniversalTime().ToString('o');authorization_path=$authPath;authorization_sha256=(Get-FileHash -LiteralPath $authPath -Algorithm SHA256).Hash.ToLowerInvariant();authorization_status=$auth.status;main_head=$mainHead;main_clean_before_receipt=$true;matrix_sha256=$auth.matrix_sha256;wrapper_sha256=$auth.wrapper_sha256;root_review_sha256=$auth.root_prelaunch_review_sha256;source_pin_count=$pins.Count;source_pins=$pins;e69_head='1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86';e69_clean=$true;compiler_processes=@();python_processes=@();possible_model_processes=@();phase='launch';limits=@{max_chat_requests=$auth.maximum_chat_requests;performance_phases_allowed=$auth.performance_phases_allowed;unchanged_retry_allowed=$auth.unchanged_costly_retry_allowed}};$prePath=Join-Path $inv 'prelaunch.json';$pb=[Text.UTF8Encoding]::new($false).GetBytes(($pre|ConvertTo-Json -Depth 9)+\\\"`n\\\");$f=[IO.File]::Open($prePath,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read);try{$f.Write($pb,0,$pb.Length);$f.Flush($true)}finally{$f.Dispose()};$phaseDir=Join-Path $inv 'launch';[void][IO.Directory]::CreateDirectory($phaseDir);$pwsh='C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe';$argv=@('-NoLogo','-NoProfile','-NonInteractive','-File',$wrapper,'-Side','probe69','-Phase','launch','-Execute','-Authorization',$authPath);$out=Join-Path $phaseDir 'invocation.stdout.raw.log';$err=Join-Path $phaseDir 'invocation.stderr.raw.log';$identPath=Join-Path $phaseDir 'invocation-controller.json';$termPath=Join-Path $phaseDir 'invocation-terminal.json';foreach($x in @($out,$err,$identPath,$termPath)){if(Test-Path -LiteralPath $x){throw \\\"Refusing existing lifecycle evidence: $x\\\"}};$parent=Get-CimInstance Win32_Process -Filter \\\"ProcessId = $PID\\\" -ErrorAction SilentlyContinue;$plan=[ordered]@{schema='strata-run69-phase-invocation-plan-v1';phase='launch';planned_utc=(Get-Date).ToUniversalTime().ToString('o');launcher_pid=$PID;launcher_exe=if($parent){$parent.ExecutablePath}else{$null};controller_exe=$pwsh;argv=$argv;working_directory=$repo;stdout=$out;stderr=$err};$so=[IO.File]::Open($out,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read);$se=[IO.File]::Open($err,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read);$psi=[Diagnostics.ProcessStartInfo]::new();$psi.FileName=$pwsh;$psi.WorkingDirectory=$repo;$psi.UseShellExecute=$false;$psi.CreateNoWindow=$true;$psi.RedirectStandardOutput=$true;$psi.RedirectStandardError=$true;foreach($a in $argv){$psi.ArgumentList.Add($a)};$proc=[Diagnostics.Process]::new();$proc.StartInfo=$psi;$outTask=$null;$errTask=$null;$startUtc=$null;$identity=$null;$exitCode=$null;try{if(-not $proc.Start()){throw 'Launch phase controller failed to start'};$startUtc=[DateTimeOffset]::UtcNow.ToString('o');$outTask=$proc.StandardOutput.BaseStream.CopyToAsync($so);$errTask=$proc.StandardError.BaseStream.CopyToAsync($se);$cim=Get-CimInstance Win32_Process -Filter \\\"ProcessId = $($proc.Id)\\\" -ErrorAction SilentlyContinue;$identity=[ordered]@{pid=$proc.Id;parent_pid=if($cim){[int]$cim.ParentProcessId}else{$null};exe=if($cim){$cim.ExecutablePath}else{$pwsh};created_utc=if($cim){$cim.CreationDate.ToUniversalTime().ToString('o')}else{$startUtc};command_line=if($cim){$cim.CommandLine}else{$null}};$controller=[ordered]@{schema='strata-run69-phase-invocation-controller-v1';phase='launch';identity=$identity;argv=$argv;working_directory=$repo;start_utc=$startUtc;stdout=$out;stderr=$err};$cb=[Text.UTF8Encoding]::new($false).GetBytes(($controller|ConvertTo-Json -Depth 7)+\\\"`n\\\");$cf=[IO.File]::Open($identPath,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read);try{$cf.Write($cb,0,$cb.Length);$cf.Flush($true)}finally{$cf.Dispose()};Write-Output (\\\"LAUNCH_INVOKED controller_pid={0} start_utc={1}\\\" -f $proc.Id,$startUtc);$proc.WaitForExit();[Threading.Tasks.Task]::WaitAll(@($outTask,$errTask));$exitCode=$proc.ExitCode}finally{if($outTask -and $errTask){try{[Threading.Tasks.Task]::WaitAll(@($outTask,$errTask))}catch{}};$so.Dispose();$se.Dispose()};$endUtc=[DateTimeOffset]::UtcNow.ToString('o');$terminal=[ordered]@{schema='strata-run69-phase-invocation-terminal-v1';phase='launch';controller=$identity;start_utc=$startUtc;end_utc=$endUtc;exit_code=$exitCode;terminal=($null -ne $exitCode);stdout_bytes=(Get-Item -LiteralPath $out).Length;stdout_sha256=(Get-FileHash -LiteralPath $out -Algorithm SHA256).Hash.ToLowerInvariant();stderr_bytes=(Get-Item -LiteralPath $err).Length;stderr_sha256=(Get-FileHash -LiteralPath $err -Algorithm SHA256).Hash.ToLowerInvariant()};$tb=[Text.UTF8Encoding]::new($false).GetBytes(($terminal|ConvertTo-Json -Depth 7)+\\\"`n\\\");$tf=[IO.File]::Open($termPath,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read);try{$tf.Write($tb,0,$tb.Length);$tf.Flush($true)}finally{$tf.Dispose()};$terminal|ConvertTo-Json -Depth 6;if($exitCode -ne 0){exit $exitCode}\""
+      },
+      "inner_run_phase_terminal": {
+        "side": "probe69",
+        "phase": "launch",
+        "controller_pid": 3756,
+        "exit_code": 0,
+        "finished_utc": "2026-10-11T04:22:35.5454238+00:00",
+        "stdout_sha256": "596e94690a20e1e07b0944c2399843b5161c0baf52f7b02cc3c4ee27d7776a10",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+        "source_script_sha256": "a3aefd880437052016a9bb560c5a0beff8dc40d08f53d9783c217269b998dfe4"
+      },
+      "outer_stdout": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\lifecycle-invocation-01\\launch\\invocation.stdout.raw.log",
+        "bytes": 0
+      },
+      "outer_stderr": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\lifecycle-invocation-01\\launch\\invocation.stderr.raw.log",
+        "bytes": 0
+      },
+      "outer_terminal_receipt_exists": false,
+      "helper_file_path": null,
+      "helper_source": "inline PowerShell supplied to exec_command",
+      "suspected_wait_stage": "Task.WaitAll over redirected child stdout/stderr copy tasks after child WaitForExit",
+      "wait_stage_is_inference": true,
+      "no_duplicate_launch": true,
+      "active_server_owner_pid": 14924,
+      "active_sampler_owner_pid": 16852
+    },
+    "outer_terminal": {
+      "schema": "strata-run69-phase-invocation-terminal-v1",
+      "phase": "launch",
+      "controller": {
+        "pid": 14864,
+        "parent_pid": 8548,
+        "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "created_utc": "2026-10-11T04:22:28.8797620Z",
+        "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\run-phase.ps1 -Side probe69 -Phase launch -Execute -Authorization C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\root-authorization-01.json"
+      },
+      "start_utc": "2026-10-11T04:22:29.0122783+00:00",
+      "end_utc": "2026-10-11T04:35:35.7227819+00:00",
+      "exit_code": 0,
+      "terminal": true,
+      "stdout_bytes": 193,
+      "stdout_sha256": "2780869b458551e13b81127714581382aff2cce2125654904d4d713b89219143",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outer_capture_files": [
+      {
+        "name": "invocation-terminal.json",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\lifecycle-invocation-01\\launch\\invocation-terminal.json",
+        "bytes": 1161,
+        "sha256": "5584e0186c6ab5a5245026dec4e696bc20ecf23e8c4d02534c5a7e5d92578628"
+      },
+      {
+        "name": "invocation-controller.json",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\lifecycle-invocation-01\\launch\\invocation-controller.json",
+        "bytes": 1730,
+        "sha256": "5bdb03611a517bfab1d339acbce591df8f5e0d1b916644c39633c17d7ef6f0bc"
+      },
+      {
+        "name": "invocation.stdout.raw.log",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\lifecycle-invocation-01\\launch\\invocation.stdout.raw.log",
+        "bytes": 193,
+        "sha256": "2780869b458551e13b81127714581382aff2cce2125654904d4d713b89219143"
+      },
+      {
+        "name": "invocation.stderr.raw.log",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\lifecycle-invocation-01\\launch\\invocation.stderr.raw.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "source_pins": [
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_admission.py",
+      "sha256": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_bench.py",
+      "sha256": "833696199a71a7fc20f6a15d2968d7142851a0e62c778f734d907c789472880f"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_quality.py",
+      "sha256": "e12e0a4f3ecd4225c42e361ec0dd512ac0ac874c250efaa095a90715d2a0b4a2"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_compare_quality.py",
+      "sha256": "bc556866293eaa98deb17cc144280d426a7cdc33865d0e6b0ab974cb533b3f97"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_jsonl_tail.ps1",
+      "sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+      "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\strata.exe",
+      "sha256": "96b67b604e6b3b86f2a0bb865d9ffcc87be0a30232a9cfddb805387414243b83"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\build-receipt.json",
+      "sha256": "0bcd13c38cf12eed6d0adf9addb1298ae45847b4cb57b5927dc863e3937fa629"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\root-fixture-review.json",
+      "sha256": "57fa3737198a1b7e02ed12389ba64af9dcc04cb773c4feafeb96f71892f9cc6f"
+    }
+  ],
+  "phase_evidence": {
+    "launch": {
+      "controller": {
+        "pid": 3756,
+        "parent_pid": 14864,
+        "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "create_utc": "2026-10-11T04:22:29.3897810Z",
+        "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\launch.ps1 -Start",
+        "argv": [
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-File",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\launch.ps1",
+          "-Start"
+        ],
+        "script_sha256": "a3aefd880437052016a9bb560c5a0beff8dc40d08f53d9783c217269b998dfe4",
+        "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6"
+      },
+      "terminal": {
+        "side": "probe69",
+        "phase": "launch",
+        "controller_pid": 3756,
+        "exit_code": 0,
+        "finished_utc": "2026-10-11T04:22:35.5454238+00:00",
+        "stdout_sha256": "596e94690a20e1e07b0944c2399843b5161c0baf52f7b02cc3c4ee27d7776a10",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+        "source_script_sha256": "a3aefd880437052016a9bb560c5a0beff8dc40d08f53d9783c217269b998dfe4"
+      },
+      "stdout": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\launch\\stdout.log",
+        "bytes": 1074,
+        "sha256": "596e94690a20e1e07b0944c2399843b5161c0baf52f7b02cc3c4ee27d7776a10"
+      },
+      "stderr": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\launch\\stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "watch": {
+      "controller": {
+        "pid": 4496,
+        "parent_pid": 20764,
+        "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "create_utc": "2026-10-11T04:27:55.5227990Z",
+        "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\startup-watch.ps1 -Monitor -TimeoutSeconds 1800",
+        "argv": [
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-File",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\startup-watch.ps1",
+          "-Monitor",
+          "-TimeoutSeconds",
+          "1800"
+        ],
+        "script_sha256": "a228c482118ebe17d5462b56aaac3dede5eff387af9d243dbed6f2201f2b78d9",
+        "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6"
+      },
+      "terminal": {
+        "side": "probe69",
+        "phase": "watch",
+        "controller_pid": 4496,
+        "exit_code": 0,
+        "finished_utc": "2026-10-11T04:27:56.9620115+00:00",
+        "stdout_sha256": "7b518b818c36d5488d3a1e0779f5bd3ca0a4ef66d49f513293df183d2c169312",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+        "source_script_sha256": "a228c482118ebe17d5462b56aaac3dede5eff387af9d243dbed6f2201f2b78d9"
+      },
+      "stdout": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\watch\\stdout.log",
+        "bytes": 3941,
+        "sha256": "7b518b818c36d5488d3a1e0779f5bd3ca0a4ef66d49f513293df183d2c169312"
+      },
+      "stderr": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\watch\\stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "quality": {
+      "controller": {
+        "pid": 20832,
+        "parent_pid": 25028,
+        "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "create_utc": "2026-10-11T04:33:41.9145700Z",
+        "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\quality.ps1 -Run -RootReadyConfirmed -LauncherPid 14924 -SamplerPid 16852",
+        "argv": [
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-File",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\quality.ps1",
+          "-Run",
+          "-RootReadyConfirmed",
+          "-LauncherPid",
+          "14924",
+          "-SamplerPid",
+          "16852"
+        ],
+        "script_sha256": "cc43baa65fe00cb5593b39821e5f17d21ab6817b6e6c4d9598bf1618bf5cd8e6",
+        "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6"
+      },
+      "terminal": {
+        "side": "probe69",
+        "phase": "quality",
+        "controller_pid": 20832,
+        "exit_code": 1,
+        "finished_utc": "2026-10-11T04:35:10.6160441+00:00",
+        "stdout_sha256": "eb7dd5413834342104791997faca0226532cfea26da2e221e7684e554eccc885",
+        "stderr_sha256": "c9bd1149142a4515c013ddf96ca8bff5e96092e81573fc85d6367855ea118809",
+        "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+        "source_script_sha256": "cc43baa65fe00cb5593b39821e5f17d21ab6817b6e6c4d9598bf1618bf5cd8e6"
+      },
+      "stdout": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\quality\\stdout.log",
+        "bytes": 1760,
+        "sha256": "eb7dd5413834342104791997faca0226532cfea26da2e221e7684e554eccc885"
+      },
+      "stderr": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\quality\\stderr.log",
+        "bytes": 425,
+        "sha256": "c9bd1149142a4515c013ddf96ca8bff5e96092e81573fc85d6367855ea118809"
+      }
+    },
+    "cleanup": {
+      "controller": {
+        "pid": 6512,
+        "parent_pid": 7928,
+        "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "create_utc": "2026-10-11T04:35:29.0037810Z",
+        "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\cleanup.ps1 -Execute",
+        "argv": [
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-File",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\cleanup.ps1",
+          "-Execute"
+        ],
+        "script_sha256": "a0bf63b05a678711715e4750e72c3f1f85cde6d07ad50327cd85a752e239f63c",
+        "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6"
+      },
+      "terminal": {
+        "side": "probe69",
+        "phase": "cleanup",
+        "controller_pid": 6512,
+        "exit_code": 0,
+        "finished_utc": "2026-10-11T04:35:36.3333302+00:00",
+        "stdout_sha256": "54382ba9deed605228e2db8f8736fbc02f399b4ccfb928d9c1be88f5f11cc299",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+        "source_script_sha256": "a0bf63b05a678711715e4750e72c3f1f85cde6d07ad50327cd85a752e239f63c"
+      },
+      "stdout": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\cleanup\\stdout.log",
+        "bytes": 562,
+        "sha256": "54382ba9deed605228e2db8f8736fbc02f399b4ccfb928d9c1be88f5f11cc299"
+      },
+      "stderr": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\execution\\probe69\\cleanup\\stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "phase_controller_terminal_review": [
+    {
+      "phase": "launch",
+      "pid": 3756,
+      "exit_code": 0,
+      "exact_identity_absent": true,
+      "current_pid_reuse": null
+    },
+    {
+      "phase": "watch",
+      "pid": 4496,
+      "exit_code": 0,
+      "exact_identity_absent": true,
+      "current_pid_reuse": {
+        "exe": "C:\\Windows\\System32\\wsl.exe",
+        "created_utc": "2026-10-11T04:34:10.6742670Z",
+        "command_line": "\"C:\\Windows\\System32\\wsl.exe\" --distribution Ubuntu-24.04 --exec /home/ubuntu/comfy-ops/launch-comfy-mcp.sh"
+      }
+    },
+    {
+      "phase": "quality",
+      "pid": 20832,
+      "exit_code": 1,
+      "exact_identity_absent": true,
+      "current_pid_reuse": null
+    },
+    {
+      "phase": "cleanup",
+      "pid": 6512,
+      "exit_code": 0,
+      "exact_identity_absent": true,
+      "current_pid_reuse": null
+    }
+  ],
+  "service_and_sampler_owners": [
+    {
+      "pid": 14924,
+      "terminal_absent": true,
+      "current_exe": null,
+      "current_parent_pid": null,
+      "current_command_line": null
+    },
+    {
+      "pid": 12120,
+      "terminal_absent": true,
+      "current_exe": null,
+      "current_parent_pid": null,
+      "current_command_line": null
+    },
+    {
+      "pid": 24536,
+      "terminal_absent": true,
+      "current_exe": null,
+      "current_parent_pid": null,
+      "current_command_line": null
+    },
+    {
+      "pid": 16852,
+      "terminal_absent": true,
+      "current_exe": null,
+      "current_parent_pid": null,
+      "current_command_line": null
+    },
+    {
+      "pid": 448,
+      "terminal_absent": true,
+      "current_exe": null,
+      "current_parent_pid": null,
+      "current_command_line": null
+    }
+  ],
+  "all_five_service_and_sampler_pids_terminal": true,
+  "listener8081": [],
+  "listener8081_released": true,
+  "exact_engine_processes": [],
+  "smoke_quality": {
+    "prompt_count": 5,
+    "formal_total": 15,
+    "all_15_smoke_formals_pass": true,
+    "prompts": [
+      {
+        "prompt_id": "smoke_arithmetic",
+        "formal": 3,
+        "runner_exit": 0,
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_sse_token_ids_valid": true,
+        "actual_token_ids_match_h4": [
+          true,
+          true,
+          true
+        ],
+        "result_sha256": "77039aede02f518c6811cb7045e946575786246e3f15e583f3b153a7e03acaf8"
+      },
+      {
+        "prompt_id": "smoke_json_arithmetic",
+        "formal": 3,
+        "runner_exit": 0,
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_sse_token_ids_valid": true,
+        "actual_token_ids_match_h4": [
+          true,
+          true,
+          true
+        ],
+        "result_sha256": "88c658f294cf91a8f794e891720fc12733e444dd42b9e7f74e253c7a3d8f9807"
+      },
+      {
+        "prompt_id": "smoke_python_function",
+        "formal": 3,
+        "runner_exit": 0,
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_sse_token_ids_valid": true,
+        "actual_token_ids_match_h4": [
+          true,
+          true,
+          true
+        ],
+        "result_sha256": "6a3f7f4dd4532ab63ad4a0377d66e101f0ccaf05eb53d248125f67f7b759c282"
+      },
+      {
+        "prompt_id": "smoke_three_key_retrieval",
+        "formal": 3,
+        "runner_exit": 0,
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_sse_token_ids_valid": true,
+        "actual_token_ids_match_h4": [
+          true,
+          true,
+          true
+        ],
+        "result_sha256": "fa303150fc543e7bc61abca025359f81d5f4488160a1acc413a8173334a1da0a"
+      },
+      {
+        "prompt_id": "smoke_unicode",
+        "formal": 3,
+        "runner_exit": 0,
+        "quality_statuses": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "actual_sse_token_ids_valid": true,
+        "actual_token_ids_match_h4": [
+          true,
+          true,
+          true
+        ],
+        "result_sha256": "91301253f073d68c34269109eeceeb20603e62aa8b9c5d81da5be08a22057e5d"
+      }
+    ]
+  },
+  "long_1k": {
+    "warmup_requests": 1,
+    "warmup_successes": 0,
+    "formal_requests": 3,
+    "formal_successes": 0,
+    "truncated_by_length": 3,
+    "acceptance_status": "not_accepted_pending_quality",
+    "formal_quality": [
+      {
+        "run_status": "truncated_by_length",
+        "quality_status": "generation_degenerate_bang_loop",
+        "generation_stability": "fail_single_character_bang_loop"
+      },
+      {
+        "run_status": "truncated_by_length",
+        "quality_status": "generation_degenerate_bang_loop",
+        "generation_stability": "fail_single_character_bang_loop"
+      },
+      {
+        "run_status": "truncated_by_length",
+        "quality_status": "generation_degenerate_bang_loop",
+        "generation_stability": "fail_single_character_bang_loop"
+      }
+    ],
+    "fatal_nonfinite_records": 4,
+    "fatal_zero_logits_records": 28,
+    "first_bad": {
+      "ordinal": 277,
+      "stage": "moe_output",
+      "chunk": 0,
+      "pos0": 0,
+      "layer": 45,
+      "half": 1,
+      "rows": 1035,
+      "width": 2560,
+      "index": 394240,
+      "row": 154,
+      "column": 0,
+      "nan": 2560,
+      "positive_inf": 0,
+      "negative_inf": 0
+    },
+    "first_bad_infinity_count": 0,
+    "long_sse_trials": [
+      {
+        "trial": "warmup-0000",
+        "events_sha256": "84925418430925a88d0e97fc6af0a6428a50116ac7945f83c671cde4642d828a",
+        "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+        "visible_content_chunks": 128,
+        "visible_text_characters": 128,
+        "all_visible_text_is_bang_loop": true,
+        "finish_reason": "length",
+        "prompt_tokens": 1036,
+        "completion_tokens": 128,
+        "engine_diagnostic_token_id_count": 128,
+        "unique_engine_diagnostic_token_ids": [
+          0
+        ]
+      },
+      {
+        "trial": "formal-0000",
+        "events_sha256": "c42793c945fc1e3b4c742a23113a3e893f32fae3493f1bfd77e7d600d97b8845",
+        "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+        "visible_content_chunks": 128,
+        "visible_text_characters": 128,
+        "all_visible_text_is_bang_loop": true,
+        "finish_reason": "length",
+        "prompt_tokens": 1036,
+        "completion_tokens": 128,
+        "engine_diagnostic_token_id_count": 128,
+        "unique_engine_diagnostic_token_ids": [
+          0
+        ]
+      },
+      {
+        "trial": "formal-0001",
+        "events_sha256": "55746d6e72c3c974f6cb8d0836583d06e13543e75c2b53690af43ece58eab02f",
+        "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+        "visible_content_chunks": 128,
+        "visible_text_characters": 128,
+        "all_visible_text_is_bang_loop": true,
+        "finish_reason": "length",
+        "prompt_tokens": 1036,
+        "completion_tokens": 128,
+        "engine_diagnostic_token_id_count": 128,
+        "unique_engine_diagnostic_token_ids": [
+          0
+        ]
+      },
+      {
+        "trial": "formal-0002",
+        "events_sha256": "5169a7b2b3239e9248cc96a8d696f1518356802e2c8802f88af42a39fe7073fa",
+        "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+        "visible_content_chunks": 128,
+        "visible_text_characters": 128,
+        "all_visible_text_is_bang_loop": true,
+        "finish_reason": "length",
+        "prompt_tokens": 1036,
+        "completion_tokens": 128,
+        "engine_diagnostic_token_id_count": 128,
+        "unique_engine_diagnostic_token_ids": [
+          0
+        ]
+      }
+    ],
+    "diagnostic_records_sha256": "1b90f113a59d99d7f6a77f161d8ac434ff9b1af06da745767390d915ac5fab17",
+    "quality_report_sha256": "2ec14a8d8c36936a593a6556cd1b74e784d47ca287e838055ce9cb45c5bde0d4",
+    "failure_summary_sha256": "a67344f6ee2a81a1e916315b5a384c503ab034d339274b7fa93aae6140f7eaad"
+  },
+  "quality_key_files": [
+    {
+      "name": "F-long_1k-diagnostics.json",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\arms\\probe69\\quality-on\\quality\\F-long_1k-diagnostics.json",
+      "bytes": 15887,
+      "sha256": "1b90f113a59d99d7f6a77f161d8ac434ff9b1af06da745767390d915ac5fab17"
+    },
+    {
+      "name": "F-long_1k-quality.json",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\arms\\probe69\\quality-on\\quality\\F-long_1k-quality.json",
+      "bytes": 3053,
+      "sha256": "2ec14a8d8c36936a593a6556cd1b74e784d47ca287e838055ce9cb45c5bde0d4"
+    },
+    {
+      "name": "F-quality-failure.json",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\arms\\probe69\\quality-on\\quality\\F-quality-failure.json",
+      "bytes": 8077,
+      "sha256": "a67344f6ee2a81a1e916315b5a384c503ab034d339274b7fa93aae6140f7eaad"
+    }
+  ],
+  "cleanup": {
+    "preflight_status": "exact_owned_cleanup_preflight_pass",
+    "unload_api_status": "unloaded",
+    "loaded_after_unload": false,
+    "request_count": 24,
+    "in_flight": 0,
+    "status": "terminal_owned_server_and_sampler_released",
+    "engine_server_sampler_terminal": true,
+    "sampler_was_not_killed": true,
+    "resource_samples": 780,
+    "resource_terminal_records": 1,
+    "resource_jsonl_line_count": 781,
+    "resource_sha256": "d19783aca91f7a4665cf8bb053d9ec711a11f750c088c51b96c1bc35bdef4334",
+    "resource_bytes": 2690946,
+    "min_ram_available_bytes": 66544566272,
+    "min_psapi_commit_available_bytes": 45689270272,
+    "ram_floor_bytes": 12884901888,
+    "commit_floor_bytes": 4294967296,
+    "bad_sample_rows": 0,
+    "all_sample_rows_pass": true,
+    "cleanup_final_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\arms\\probe69\\quality-on\\cleanup\\final.json",
+    "unload_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\arms\\probe69\\quality-on\\cleanup\\unload.json",
+    "post_unload_status_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\arms\\probe69\\quality-on\\cleanup\\post-unload-status.json"
+  },
+  "local_preflight_failures": [
+    {
+      "failure_class": "process.json omitted engine_pid",
+      "corrected_binding": "startup_ready watch stdout record",
+      "quality_or_api_started": false,
+      "request_leaves_created": 0
+    },
+    {
+      "failure_class": "local UTC timestamp preflight false negative",
+      "detail": "PowerShell timezone normalization compared receipt and CIM timestamps inconsistently; all occurred before quality invocation directory/API requests",
+      "quality_or_api_started": false,
+      "request_leaves_created": 0
+    }
+  ],
+  "no_postrun_test_compile_device_model_or_engine_cli": true
+}

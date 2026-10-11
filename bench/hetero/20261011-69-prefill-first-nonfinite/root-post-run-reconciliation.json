@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "root_post_run_collection_reconciled",
+  "recorded_utc": "2026-10-11T04:52:13.671297+00:00",
+  "collection_sha256": "4cd43dc44ebed0c2a8c3b8a590a70e5346d07d48cece6a9b0034961c3c06cace",
+  "model_output_review_sha256": "93f36fb249991b168a6fa0c246d3d164fbe328c75042c6bd284185fe4c8aebfa",
+  "runtime_pins_rehashed": 10,
+  "main_head_history": {
+    "launch": "3ca32b79614626fbf595c78fd0a1676a92d18cb4",
+    "after_root_model_cleanup_and_evidence_merge": "1e22f1a7403385aca81f3640f194a9e1df77f4e5",
+    "after_source_inventory_commit": "e740d3fa26b8ecd51664c40481fb792d0b80ee6b"
+  },
+  "main_head_change_reason": "root commits and source merge after model cleanup; untracked files do not change HEAD",
+  "runtime_engine_and_bridge_unchanged_during_model": true,
+  "original_outer_capture_closed_after_cleanup": true,
+  "all_24_requests_accounted_for": true,
+  "complete_original_goal": false
+}
