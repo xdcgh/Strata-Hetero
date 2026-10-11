@@ -2055,7 +2055,11 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
     const cudaStream_t cs = (cudaStream_t) m.cs;
 #if defined(STRATA_PREFILL_FINITE_PROBE)
     finite_probe::Probe pf_probe;
-    if (!pf_probe.init(finite_probe::requested(std::getenv("STRATA_PREFILL_FINITE_PROBE")),
+    const bool probe_enabled = finite_probe::requested(std::getenv("STRATA_PREFILL_FINITE_PROBE"));
+    int probe_detail_layer = -1;
+    if (probe_enabled && !finite_probe::parse_detail_layer(std::getenv("STRATA_PREFILL_DETAIL_LAYER"),
+                                                          g.n_layers, probe_detail_layer, err)) return false;
+    if (!pf_probe.init(probe_enabled,
                            m.cs, m.device, pos0, n, err)) return false;
 #endif
     // the MMQ row table lives in the borrowed cache slots, which the refill after a prompt overwrites with experts:
@@ -2570,6 +2574,15 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
 
 #if defined(STRATA_PREFILL_FINITE_PROBE)
                 if (!pf_probe.scan(m.mixed, {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::hc_mixed}, err)) return false;
+                const bool probe_detail = pf_probe.allocated() && l == probe_detail_layer;
+                if (probe_detail) {
+                    if (m.mixed_h && !pf_probe.scan16(m.mixed_h,
+                        {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::hc_mixed_f16}, finite_probe::Format::f16, err)) return false;
+                    if (m.mixed_bf && !pf_probe.scan16(m.mixed_bf,
+                        {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::hc_mixed_bf16}, finite_probe::Format::bf16, err)) return false;
+                    if (m.mixed_bf_lo && !pf_probe.scan16(m.mixed_bf_lo,
+                        {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::hc_mixed_bf16_low}, finite_probe::Format::bf16, err)) return false;
+                }
 #endif
                 if (half == 0 && !core::is_qsa_layer(g, l)) {
                     // ======================= GDN =======================
@@ -2843,6 +2856,10 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                     if (!wr || !wgi || !wsg || !wsu || !wsd) return false;
                     pt.mark(kPfRouter, cs);
                     if (!bf16_proj(m.gemm, wr, m.mixed_bf, m.logits, T, v.name("ffn_gate_inp.weight"), err, 0, m.mixed_bf_lo)) return false;
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                    if (probe_detail && !pf_probe.scan(m.logits,
+                        {c0 / m.T, p0, l, T, m.g->n_expert, half, finite_probe::Stage::route_logits}, err)) return false;
+#endif
                     route(m.logits, m.ids, m.w, T, m.g->n_expert, m.cs);
                     // RESEARCH HOOK (141-research, opt-in, never on by default): STRATA_DBG_FEAT=<file> dumps, per MoE layer and chunk,
                     // the routed ids + weights (and for the layers in STRATA_DBG_FEAT_LAYERS the router-input hidden state, bf16);
@@ -2905,14 +2922,40 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                         }
                     }
                     // the shared expert and its scalar gate
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                    // Check the weights actually consumed, including an
+                    // explicitly enabled research route override.
+                    if (probe_detail && !pf_probe.scan(m.w,
+                        {c0 / m.T, p0, l, T, K, half, finite_probe::Stage::route_weights}, err)) return false;
+#endif
                     auto shared_expert = [&]() -> bool {
                         if (!native_proj(m.gemm, wsg, m.mixed_h, m.sgate, T, v.name("ffn_gate_shexp.weight"), err)) return false;
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                        if (probe_detail && !pf_probe.scan(m.sgate,
+                            {c0 / m.T, p0, l, T, 640, half, finite_probe::Stage::shared_gate}, err)) return false;
+#endif
                         if (!native_proj(m.gemm, wsu, m.mixed_h, m.sup, T, v.name("ffn_up_shexp.weight"), err)) return false;
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                        if (probe_detail && !pf_probe.scan(m.sup,
+                            {c0 / m.T, p0, l, T, 640, half, finite_probe::Stage::shared_up}, err)) return false;
+#endif
                         swiglu_pair(m.sgate, m.sup, m.sh_h, T, m.cs);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                        if (probe_detail && !pf_probe.scan16(m.sh_h,
+                            {c0 / m.T, p0, l, T, 640, half, finite_probe::Stage::shared_activation_f16}, finite_probe::Format::f16, err)) return false;
+#endif
                         if (!native_proj(m.gemm, wsd, m.sh_h, m.shared, T, v.name("ffn_down_shexp.weight"), err)) return false;
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                        if (probe_detail && !pf_probe.scan(m.shared,
+                            {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::shared_output}, err)) return false;
+#endif
                         if (wgi->kind != core::WeightKind::Bf16InF32) { err = "prefill: shared gate is not BF16"; return false; }
                         m.gemm.bf16(m.mixed_bf, (const uint16_t*) wgi->data, m.sg, T, 1, N);
                         if (m.mixed_bf_lo) m.gemm.bf16(m.mixed_bf_lo, (const uint16_t*) wgi->data, m.sg, T, 1, N, 0, 1.0f);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                        if (probe_detail && !pf_probe.scan(m.sg,
+                            {c0 / m.T, p0, l, T, 1, half, finite_probe::Stage::shared_scalar_gate}, err)) return false;
+#endif
                         return true;
                     };
                     // Only the router needs to finish before readback. Queue the shared expert afterwards
@@ -3744,7 +3787,15 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                                 gu.n = ngx; gu.xq = m.Xq; gu.bounds = m.bounds_dev + j0; gu.ids = m.ids_identity;
                                 gu.total_rows = T * K; gu.max_rows = maxr; gu.dst = m.GU; gu.ld_dst = 1280;
                                 m.mmq_ctx->run(gu, m.cs);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                                if (probe_detail && nr > 0 && !pf_probe.scan(m.GU + r0 * 1280,
+                                    {c0 / m.T, p0, l, nr, 1280, half, finite_probe::Stage::routed_gate_up, r0}, err)) return false;
+#endif
                                 mmq::swiglu(m.GU + r0 * 1280, m.H + r0 * 640, nr, 640, !lay.native, m.cs);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                                if (probe_detail && nr > 0 && !pf_probe.scan(m.H + r0 * 640,
+                                    {c0 / m.T, p0, l, nr, 640, half, finite_probe::Stage::routed_activation_f32, r0}, err)) return false;
+#endif
                                 pt.mark(kPfGemmD, cs);
                                 mmq::quantize(m.H + r0 * 640, nullptr, m.Hq, mmq_dt, 640, 640, nr, m.cs);
                                 mmq::Product dn;
@@ -3753,6 +3804,10 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                                 dn.ids = m.ids_identity; dn.total_rows = nr; dn.max_rows = maxr; dn.dst = m.Dm + r0 * N;
                                 dn.ld_dst = N;
                                 m.mmq_ctx->run(dn, m.cs);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                                if (probe_detail && nr > 0 && !pf_probe.scan(m.Dm + r0 * N,
+                                    {c0 / m.T, p0, l, nr, N, half, finite_probe::Stage::routed_output, r0}, err)) return false;
+#endif
                                 return true;
                             }
                             const int q = (int) (j % DQ);
@@ -3767,11 +3822,36 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                             }
                             if (slot >= 0) { cudaEventRecord(m.used[slot], m.cs); m.used_of[slot] = slot; }
                             const int64_t o0 = m.off[(size_t) e], ne = m.cnt[(size_t) e];
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                            if (probe_detail && ne > 0) {
+                                if (!pf_probe.scan16(m.Xs + o0 * N,
+                                    {c0 / m.T, p0, l, ne, N, half, finite_probe::Stage::routed_input_f16, o0, e}, finite_probe::Format::f16, err)) return false;
+                                // These two buffers are FP16 weights, not token
+                                // rows. Record the expert; never infer token
+                                // positions from their matrix-row coordinates.
+                                if (!pf_probe.scan16(m.dq_gu[q],
+                                    {c0 / m.T, p0, l, 1280, N, half, finite_probe::Stage::dequant_gate_up_f16, 0, e}, finite_probe::Format::f16, err)) return false;
+                                if (!pf_probe.scan16(m.dq_d[q],
+                                    {c0 / m.T, p0, l, N, 640, half, finite_probe::Stage::dequant_down_f16, 0, e}, finite_probe::Format::f16, err)) return false;
+                            }
+#endif
                             pt.mark(kPfGemmGU, cs);
                             m.gemm.f16(m.Xs + o0 * N, m.dq_gu[q], m.GU + o0 * 1280, ne, 1280, N);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                            if (probe_detail && ne > 0 && !pf_probe.scan(m.GU + o0 * 1280,
+                                {c0 / m.T, p0, l, ne, 1280, half, finite_probe::Stage::routed_gate_up, o0, e}, err)) return false;
+#endif
                             swiglu_interleaved(m.GU + o0 * 1280, m.Hh + o0 * 640, ne, m.cs);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                            if (probe_detail && ne > 0 && !pf_probe.scan16(m.Hh + o0 * 640,
+                                {c0 / m.T, p0, l, ne, 640, half, finite_probe::Stage::routed_activation_f16, o0, e}, finite_probe::Format::f16, err)) return false;
+#endif
                             pt.mark(kPfGemmD, cs);
                             m.gemm.f16(m.Hh + o0 * 640, m.dq_d[q], m.Dm + o0 * N, ne, N, 640);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                            if (probe_detail && ne > 0 && !pf_probe.scan(m.Dm + o0 * N,
+                                {c0 / m.T, p0, l, ne, N, half, finite_probe::Stage::routed_output, o0, e}, err)) return false;
+#endif
                             return true;
                         };
                         if (!stream_all) {
@@ -3868,6 +3948,19 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                         if (!m.pp->p2p && !m.pp->sums)
                             copy_f32_wide(m.Dm + (size_t) m.pp->back_at * N, m.pp->host_rows, m.pp->back_rows * N, m.cs);
                     }
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                    if (probe_detail) {
+                        const bool peer_sums = peer_now && m.pp->sums;
+                        pf_probe.report_moe_path({c0 / m.T, p0, l, T, N, half, finite_probe::Stage::moe_output},
+                            (int) m.g->n_expert, lay.native, use_mmq, fused_l, mmq_gt, mmq_dt,
+                            stream_all, peer_now, peer_sums, rows_cpu);
+                        // In peer-sums mode the peer rows are not populated in
+                        // Dm; only scan the local prefix, never untyped scratch.
+                        const int64_t dm_rows = peer_sums ? m.pp->back_at : T * K;
+                        if (dm_rows > 0 && !pf_probe.scan(m.Dm,
+                            {c0 / m.T, p0, l, dm_rows, N, half, finite_probe::Stage::routed_output}, err)) return false;
+                    }
+#endif
                     if (peer_now && m.pp->sums && m.pp->f16)
                         moe_combine_peer16(m.Dm, m.slot_dev, m.w, m.shared, m.sg, m.pp->host_sum16, m.pp->back_at, m.bo, T, m.cs);
                     else if (peer_now && m.pp->sums)
