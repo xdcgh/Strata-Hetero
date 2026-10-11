@@ -1,0 +1,10 @@
+{
+  "schema": "strata-run71-build-driver-equivalence-v1",
+  "base_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.ps1",
+  "prepared_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1",
+  "base_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+  "prepared_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+  "byte_identical": true,
+  "build_path_absent": true,
+  "driver_executed": false
+}

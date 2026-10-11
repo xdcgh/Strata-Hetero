@@ -1,0 +1,23 @@
+{
+  "schema": "strata-run71-powershell-ast-parse-v1",
+  "build_driver": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1",
+    "sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+    "parsed": true,
+    "error_count": 0,
+    "token_count": 5760,
+    "errors": []
+  },
+  "fixture_driver": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_probe_fixture71.ps1",
+    "sha256": "c99802642741f4ba8ae56f88bd6ad6c48bf159647961d4a961e6e2c19dcc55e3",
+    "parsed": true,
+    "error_count": 0,
+    "token_count": 2186,
+    "errors": []
+  },
+  "driver_or_fixture_executed": false,
+  "configure_run": false,
+  "build_run": false,
+  "tests_run": false
+}

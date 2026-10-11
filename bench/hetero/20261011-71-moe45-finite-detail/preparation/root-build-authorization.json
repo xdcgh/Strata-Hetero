@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized_build_only",
+  "recorded_utc": "2026-10-11T05:16:19.181252+00:00",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+  "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "source_files": {
+    "include/strata/prefill/finite_probe.hpp": "63833441f044e82ed6f43e428653197d9d69bd75ab4a8a3f9293220d1065b5df",
+    "src/prefill/finite_probe.cu": "e6ef51535cc7a650df00c9117e077f3cb20cb6d5dd287d444cbe1d7058cf0a19",
+    "src/prefill/prefill.cpp": "77da085ae07b132fe326ad0ee989064651d3ef146807b9ff88c161ee97668a0d",
+    "tests/cuda/prefill_finite_probe_test.cpp": "eb445286d4ff208018a76a240b2c667546b81833c0133e22ae57408142bd3dd6",
+    "docs/HETERO_PREFILL_DIAGNOSTICS.md": "254f8257836af1be205dd19b609f17a7948dc796ae132e5c524a9a980d139d69",
+    "CMakeLists.txt": "167c4154fce2d2d8076ce4d6a71331a1a647a7e1326b92446304834bce67e490"
+  },
+  "driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1",
+  "driver_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01",
+  "run_name": "moe45-finite-detail-20261011-71-build01",
+  "expected_project_version": "0.1.42",
+  "targets": [
+    "strata",
+    "prefill_finite_probe_test"
+  ],
+  "parallel": 1,
+  "limits": {
+    "model_or_engine_cli": false,
+    "device_execution": false,
+    "test_binary_execution": false,
+    "unchanged_retry": false,
+    "minimum_ram_gib": 12,
+    "minimum_psapi_commit_gib": 4
+  },
+  "root_source_review_sha256": "ba94523e3c5245913237f367240efc0a7f4f33a0a9035909864e259dce55778c",
+  "no_start_validation_sha256": "72e9dcf3f740f00c00fcd2d6193e9a9fa4090c67609fa5f4225475939b9fd4f8",
+  "upstream_current_fetch": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406"
+}

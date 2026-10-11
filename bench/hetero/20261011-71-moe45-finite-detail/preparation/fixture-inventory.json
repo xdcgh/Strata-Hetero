@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "test_source_prepared_not_compiled_or_executed",
+  "run_id": "20261011-71-moe45-finite-detail",
+  "source_branch": "codex/71-moe45-finite-detail",
+  "source_head": "8b0cedac83f02b088861069d998112279f550792",
+  "test_path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71\\tests\\cuda\\prefill_finite_probe_test.cpp",
+  "test_sha256": "89d1fc9abbcd37a38b1e6832ae425644e9eccdbc44d2da7f938bd9b40ab145f6",
+  "scope": "only tests/cuda/prefill_finite_probe_test.cpp changed by this task",
+  "baseline_device_case_count": 60,
+  "baseline_cases_retained": true,
+  "added_host_cases": [
+    "parse_detail_layer absent, 0, 45; reject empty, negative, whitespace, out-of-range, malformed, and overflow decimal inputs",
+    "Format names and representative newly added MoE stage names",
+    "disabled-only scan16 and report_moe_path calls remain no-op before device context"
+  ],
+  "added_synthetic_scenarios": [
+    "FP16 signed zero, subnormal, maximum finite 65504",
+    "FP16 signed infinities and positive/negative NaN patterns across multiple blocks; lowest index and total counters",
+    "First FP16 nonfinite checkpoint retains precedence over later FP32 NaN; verify layer, stage, format, row_offset, expert, unchanged input bytes",
+    "BF16 finite values including bit pattern 0x7c00; separate signed infinity and NaN counts plus metadata/input-byte checks",
+    "CUDA __float2half_rn conversion of finite FP32 65520 yields FP16 +Inf and scan detects only converted format",
+    "report_moe_path captured as exactly one moe_path JSON metadata line without checkpoint event"
+  ],
+  "additional_scan_launches_expected": 7,
+  "invalid_scan_calls_expected_to_launch": 0,
+  "model_or_engine_payloads_read": false,
+  "model_or_api_executed": false,
+  "cuda_compiled": false,
+  "device_test_executed": false,
+  "commit_created": false
+}

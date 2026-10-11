@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "Run69 diagnostic model first nonfinite boundary layer45 MoE row154 (four identical records), head allNaN, 15short formalH4 IDs pass; 780resource gates pass; exactcleanup terminal; finer MoE/FP16 probes next; original goal incomplete",
+  "phase": "Run71 selected-layer typed MoE probe frozen3fbad60, compile currently active; Run69 firstbad45/154 established, fine cause stillunknown; original optimization goal incomplete",
   "branch": "codex/45-upstream41-runtime",
   "upstream_base_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -106,12 +106,12 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Run70 source-pinned layer45 MoE buffer inventory then default-off FP32/FP16 fine probes, synthetic fixtures and one controlled changed diagnostic; no unchanged costly retry",
+  "next_experiment": "Verify Run71 serial CUDA build then extended typed format synthetic fixtures and validated one-side fine model diagnostic; unchanged model recipe/strict12/4/46k gates; no unchanged expensive retry",
   "completion_status": "active; original full goal remains unfinished, no user decision required",
   "latest_upstream_fetched_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-11T04:45:38.396586Z",
-  "current_run": "20261011-69-prefill-first-nonfinite",
+  "last_checkpoint_utc": "2026-10-11T05:20:16.748762Z",
+  "current_run": "20261011-71-moe45-finite-detail",
   "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
@@ -120,12 +120,19 @@
     "isolated_source_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
     "review": "bench/hetero/20261011-64-upstream42-cuda-build/execution/root-pair-review.json"
   },
-  "current_build_owner": null,
+  "current_build_owner": {
+    "controller_pid": 25020,
+    "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+    "source_path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+    "build_path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01",
+    "status": "authorized_build_only_active",
+    "gpu_tests_or_model_started": false
+  },
   "diagnostic_source_worktree": {
-    "path": "E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69",
-    "branch": "codex/69-prefill-first-nonfinite",
-    "head": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+    "branch": "codex/71-moe45-finite-detail",
+    "head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
     "pushed": true,
-    "merged_to_main": true
+    "merged_to_main": false
   }
 }

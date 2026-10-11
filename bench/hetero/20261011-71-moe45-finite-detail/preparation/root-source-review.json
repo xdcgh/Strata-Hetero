@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "root_fine_probe_source_review_pass_build_and_device_not_run",
+  "recorded_utc": "2026-10-11T05:14:39.225970+00:00",
+  "base_head": "8b0cedac83f02b088861069d998112279f550792",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+  "source_files": [
+    {
+      "path": "include/strata/prefill/finite_probe.hpp",
+      "sha256": "63833441f044e82ed6f43e428653197d9d69bd75ab4a8a3f9293220d1065b5df",
+      "bytes": 5652
+    },
+    {
+      "path": "src/prefill/finite_probe.cu",
+      "sha256": "e6ef51535cc7a650df00c9117e077f3cb20cb6d5dd287d444cbe1d7058cf0a19",
+      "bytes": 8914
+    },
+    {
+      "path": "src/prefill/prefill.cpp",
+      "sha256": "77da085ae07b132fe326ad0ee989064651d3ef146807b9ff88c161ee97668a0d",
+      "bytes": 283401
+    },
+    {
+      "path": "tests/cuda/prefill_finite_probe_test.cpp",
+      "sha256": "eb445286d4ff208018a76a240b2c667546b81833c0133e22ae57408142bd3dd6",
+      "bytes": 21216
+    },
+    {
+      "path": "docs/HETERO_PREFILL_DIAGNOSTICS.md",
+      "sha256": "254f8257836af1be205dd19b609f17a7948dc796ae132e5c524a9a980d139d69",
+      "bytes": 5722
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "167c4154fce2d2d8076ce4d6a71331a1a647a7e1326b92446304834bce67e490",
+      "bytes": 112272
+    }
+  ],
+  "default_off": {
+    "stripped_blocks": 30,
+    "original_prefill_lf_bytes_equal": true,
+    "original_sha256": "5e9153e991e7d91ef436818d531387a3ca4d0842e7c4e985763090c6d7145d70"
+  },
+  "mechanical_source_review_sha256": "d26fc1e0318124bc3812cd2e15c0fa4392569b4913005ff43ee6a262eaf6afc2",
+  "root_delta_after_mechanical_review": [
+    "route weights scan moved after optional route override to measure consumed weights",
+    "routed down outputs scanned per group immediately after producer (MMQ row_offset; FP16 exact expert)",
+    "fixture adds last-valid layer47 and rejects plus sign; moe_path test uses coherent native FP16 fallback flags"
+  ],
+  "scope": [
+    "read-only same-stream typed f32/f16/bf16 scans",
+    "first stage/min index/counters and rowoffset/expert coordinates retained",
+    "optional layer45 detail only, runtime/compile off defaults retained",
+    "GU/H on fused paths are never scanned as floating-point",
+    "peer-sum Dm scan limited to populated local prefix; incomplete CPU/peer coverage documented",
+    "single fprintf JSON record framing"
+  ],
+  "acceptance": {
+    "cuda_build": false,
+    "synthetic_device": false,
+    "model": false,
+    "performance": false
+  },
+  "limits": [
+    "MMQ group metadata cannot name offending member expert without group bounds correlation",
+    "mmq/fused flags orthogonal predicates",
+    "new scan/log work may perturb races",
+    "HIP/SYCL builds not run"
+  ]
+}

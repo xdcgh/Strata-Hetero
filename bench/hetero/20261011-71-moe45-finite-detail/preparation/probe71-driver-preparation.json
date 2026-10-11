@@ -1,0 +1,85 @@
+{
+  "schema": "strata-moe45-probe71-driver-preparation-v1",
+  "status": "prepared_not_executed_source_not_frozen",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+  "source_head_at_preparation": "8b0cedac83f02b088861069d998112279f550792",
+  "source_clean_at_preparation": false,
+  "source_status_at_preparation": [
+    " M docs/HETERO_PREFILL_DIAGNOSTICS.md",
+    " M include/strata/prefill/finite_probe.hpp",
+    " M src/prefill/finite_probe.cu",
+    " M src/prefill/prefill.cpp",
+    " M tests/cuda/prefill_finite_probe_test.cpp"
+  ],
+  "source_key_files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 112272,
+      "sha256": "167c4154fce2d2d8076ce4d6a71331a1a647a7e1326b92446304834bce67e490"
+    },
+    {
+      "path": "src/prefill/prefill.cpp",
+      "bytes": 282733,
+      "sha256": "bb1fe386cd23c84a058ce37b24c4aef94f2dbda0bf446bb9fe64c58fb76dd75d"
+    },
+    {
+      "path": "include/strata/prefill/finite_probe.hpp",
+      "bytes": 5652,
+      "sha256": "63833441f044e82ed6f43e428653197d9d69bd75ab4a8a3f9293220d1065b5df"
+    },
+    {
+      "path": "src/prefill/finite_probe.cu",
+      "bytes": 8914,
+      "sha256": "e6ef51535cc7a650df00c9117e077f3cb20cb6d5dd287d444cbe1d7058cf0a19"
+    },
+    {
+      "path": "tests/cuda/prefill_finite_probe_test.cpp",
+      "bytes": 21216,
+      "sha256": "eb445286d4ff208018a76a240b2c667546b81833c0133e22ae57408142bd3dd6"
+    },
+    {
+      "path": "docs/HETERO_PREFILL_DIAGNOSTICS.md",
+      "bytes": 5722,
+      "sha256": "254f8257836af1be205dd19b609f17a7948dc796ae132e5c524a9a980d139d69"
+    }
+  ],
+  "future_source_head_binding": "ExpectedSourceHead is mandatory and validated as 40 lowercase hex; future root authorization must bind the committed E71 source head before execution",
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01",
+  "build_path_absent": true,
+  "build_driver": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1",
+    "sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+    "base_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.ps1",
+    "base_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+    "byte_identical": true,
+    "purpose": "strata + prefill_finite_probe_test; Run69 pinned toolchain/reference/resource/ownership gates retained byte-for-byte"
+  },
+  "fixture_driver": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_probe_fixture71.ps1",
+    "sha256": "2d868fbbb28c78f087c499392f1e1ff3ec459b21896d807444b27722257dde62",
+    "base_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_probe_fixture69.ps1",
+    "base_sha256": "1885cbbe9326eac2e369cfaafaa5a6f37400e2d9cc4aeecb6a4c6b41f7a6ba08",
+    "diff_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_probe_fixture71.diff",
+    "diff_sha256": "f8ab5054de4bf051cef96b60c88a07a7026d711842670d7dcc1bb6c53c612b82",
+    "adaptations": [
+      "mandatory validated ExpectedSourceHead parameter",
+      "E71 source path",
+      "remove frozen Run69 source SHA; require caller-bound source head",
+      "E71 fixture binary path"
+    ],
+    "fixture_binary": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe",
+    "source_path_rebound": true,
+    "source_head_not_hardcoded": true,
+    "future_root_authorization_required": true,
+    "all_other_admission_sampler_ownership_cleanup_receipt_logic_retained": true
+  },
+  "ast_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\probe71-driver-ast.json",
+  "ast_parse_pass": true,
+  "no_driver_execution": true,
+  "no_no_execute_validation": true,
+  "no_configure_build_test_cli_device_model": true,
+  "no_source_edits": true,
+  "corrected_from_initial_sha256": "c99802642741f4ba8ae56f88bd6ad6c48bf159647961d4a961e6e2c19dcc55e3",
+  "correction": "Removed an unintended literal backtick before the ExpectedSourceHead assignment; initial version preserved as run_probe_fixture71.initial.diff and preparation.initial.json.",
+  "ast_receipt_sha256": "20b9d09992c35561c3cbcef00e68dc1400f103b74877a193717944151ce77746"
+}

@@ -1,0 +1,32 @@
+diff --git "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_probe_fixture69.ps1" "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_probe_fixture71.ps1"
+index 823c96dc..12233ec0 100644
+--- "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_probe_fixture69.ps1"
++++ "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_probe_fixture71.ps1"
+@@ -1,6 +1,7 @@
+ param(
+     [Parameter(Mandatory)][string]$BinaryPath,
+     [Parameter(Mandatory)][string]$ExpectedBinarySha,
++    [Parameter(Mandatory)][ValidatePattern('^[0-9a-f]{40}$')][string]$ExpectedSourceHead,
+     [Parameter(Mandatory)][string]$BuildReceiptPath,
+     [Parameter(Mandatory)][string]$OutputPath,
+     [switch]$Execute
+@@ -11,8 +12,8 @@ $repo='C:\Users\DC\Documents\ChatGPT\Strata-Hetero'
+ $py='E:\Strata-Hetero-data\venv\Scripts\python.exe'
+ $stdlibPy='C:\Python314\python.exe'
+ $sdk='E:\Strata-Hetero-data\toolchains\cuda-13.3.1'
+-$source='E:\Strata-Hetero-data\source\hetero-prefill-probe-69'
+-$sourceHead='1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86'
++$source='E:\Strata-Hetero-data\source\hetero-moe45-probe-71'
++`$sourceHead=$ExpectedSourceHead
+ $sampler=$null;$samplerIdentity=$null;$samplerChild=$null;$worker=$null;$workerIdentity=$null;$failure=$null;$runs=@();$samples=@();$syntheticStarted=$false;$stopActions=@()
+ function Sha([string]$path){(Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant()}
+ function WriteNew([string]$path,$value){
+@@ -44,7 +45,7 @@ function FreshMemory {
+     return -not $row.error -and $age -ge -2 -and $age -le 5 -and $null -ne $row.physical_available_bytes -and $null -ne $row.commit_available_bytes -and [int64]$row.physical_available_bytes -ge 12GB -and [int64]$row.commit_available_bytes -ge 4GB
+ }
+ $BinaryPath=[IO.Path]::GetFullPath($BinaryPath);$OutputPath=[IO.Path]::GetFullPath($OutputPath)
+-$expectedFixture='E:\Strata-Hetero-data\build\cuda-prefill-probe69-01\prefill_finite_probe_test.exe'
++$expectedFixture='E:\Strata-Hetero-data\build\cuda-moe45-probe71-01\prefill_finite_probe_test.exe'
+ if($BinaryPath -ne $expectedFixture){throw 'Only the pinned synthetic prefill_finite_probe_test.exe may be executed'}
+ if(Test-Path -LiteralPath $OutputPath){throw 'Fixture output path must be absent'}
+ $build=Get-Content -LiteralPath $BuildReceiptPath -Raw|ConvertFrom-Json -DateKind String

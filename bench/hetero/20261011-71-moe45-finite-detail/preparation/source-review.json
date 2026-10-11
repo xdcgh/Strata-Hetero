@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "read_only_static_source_review",
+  "recorded_utc": "2026-10-11",
+  "scope": "Run71 typed first-nonfinite probe only; no build/test/device/model/cleanup.",
+  "source_pin": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+    "head": "8b0cedac83f02b088861069d998112279f550792",
+    "tree": "4e6ee481debbfc51048545cff3c46da31639d597",
+    "dirty_at_review": true,
+    "modified_paths": ["docs/HETERO_PREFILL_DIAGNOSTICS.md", "include/strata/prefill/finite_probe.hpp", "src/prefill/finite_probe.cu", "src/prefill/prefill.cpp", "tests/cuda/prefill_finite_probe_test.cpp"],
+    "sha256": {
+      "CMakeLists.txt": "167c4154fce2d2d8076ce4d6a71331a1a647a7e1326b92446304834bce67e490",
+      "include/strata/prefill/finite_probe.hpp": "63833441f044e82ed6f43e428653197d9d69bd75ab4a8a3f9293220d1065b5df",
+      "src/prefill/finite_probe.cu": "e6ef51535cc7a650df00c9117e077f3cb20cb6d5dd287d444cbe1d7058cf0a19",
+      "src/prefill/prefill.cpp": "bb1fe386cd23c84a058ce37b24c4aef94f2dbda0bf446bb9fe64c58fb76dd75d",
+      "tests/cuda/prefill_finite_probe_test.cpp": "eb445286d4ff208018a76a240b2c667546b81833c0133e22ae57408142bd3dd6",
+      "docs/HETERO_PREFILL_DIAGNOSTICS.md": "254f8257836af1be205dd19b609f17a7948dc796ae132e5c524a9a980d139d69"
+    }
+  },
+  "compile_guard_equivalence": {
+    "baseline": "Cmain b50ba770:src/prefill/prefill.cpp",
+    "operation": "In-memory LF-normalized removal of all 28 complete #if defined(STRATA_PREFILL_FINITE_PROBE) blocks from E71 src/prefill/prefill.cpp, with nested preprocessor depth preserved.",
+    "stripped_bytes": 270243,
+    "baseline_bytes": 270243,
+    "stripped_sha256_lf": "5e9153e991e7d91ef436818d531387a3ca4d0842e7c4e985763090c6d7145d70",
+    "baseline_sha256_lf": "5e9153e991e7d91ef436818d531387a3ca4d0842e7c4e985763090c6d7145d70",
+    "byte_equal": true
+  },
+  "default_guards": {
+    "cmake_default": "STRATA_PREFILL_FINITE_PROBE=OFF (CMakeLists.txt:72)",
+    "runtime_request": "requested() accepts only the exact string 1 (finite_probe.hpp:10-12); detail parsing occurs only while probe_enabled (prefill.cpp:2056-2064).",
+    "detail_selection": "Absent STRATA_PREFILL_DETAIL_LAYER sets -1; strict decimal/range parsing is finite_probe.hpp:14-29. Detail calls also require allocated probe and exact layer match (prefill.cpp:2575-2584)."
+  },
+  "typed_classifier_and_record": {
+    "anchors": ["finite_probe.cu:13-42", "finite_probe.cu:82-110", "finite_probe.cu:127-156", "finite_probe.hpp:31-38,98-117,126-148"],
+    "classification": "f32 uses exponent mask 0x7f800000; f16 uses 0x7c00; bf16 uses 0x7f80. Magnitude below infinity is finite, equal is infinity, above is NaN; sign selects +/-Inf. This matches IEEE encodings for the declared formats.",
+    "first_record": "Same-stream scan kernels serialize checkpoints. Each kernel atomically claims ordinal from zero; only the claiming ordinal contributes min index and complete NaN/+Inf/-Inf counters. Later scans return after seeing an earlier ordinal. The record is copied only after an existing stream synchronization; point fields are written before kernel completion.",
+    "coordinates": "row_offset must be nonnegative; serialized source_row=row_offset+index/width, row and column are scan-relative, and expert defaults -1. Per-expert fallback scans set expert=e; grouped MMQ scans leave expert=-1."
+  },
+  "producer_and_shape_review": [
+    {"stage":"HC images","anchors":"prefill.cpp:2575-2584; kernels.cu:136,266","checked":"m.mixed is scanned after gr_mix/gr_mix_r; m.mixed_h is hf(s) FP16 and m.mixed_bf/mixed_bf_lo are CUDA BF16 images. Typed flags f16/bf16 and [T,N] match producers."},
+    {"stage":"router","anchors":"prefill.cpp:2858-2866","checked":"logits [T,E] scanned after bf16_proj and before route; weights [T,K] scanned after route on same stream."},
+    {"stage":"shared expert","anchors":"prefill.cpp:2930-2955","checked":"sgate/sup [T,640] after projections; sh_h [T,640] f16 after swiglu_pair and before shared down; shared [T,N] and sg [T,1] after their producers."},
+    {"stage":"MMQ group","anchors":"prefill.cpp:3774-3805","checked":"GU scan uses m.GU+r0*1280 with nr rows; H scan uses m.H+r0*640 with the same nr/r0, after swiglu and before quantize. Down writes Dm at r0*N. Buffers are FP32 here; GU/H offsets and extents match Product destinations."},
+    {"stage":"FP16 fallback expert","anchors":"prefill.cpp:1215-1218,3379-3380,3818-3845","checked":"Xs is gathered from m.mixed_h into expert order using src_dev; scan Xs+o0*N covers ne x N. dq_gu is dequantized FP16 [1280,N], dq_d FP16 [N,640], each scanned with expert=e. GU [ne,1280] and Hh f16 [ne,640] use o0 offsets; scans sit after producers and before SwiGLU/down consumers."},
+    {"stage":"pre-combine Dm","anchors":"prefill.cpp:3227-3263,3412-3419,3627-3642,3936-3959","checked":"CPU share requires !m.pp (3033-3034), so CPU tail rows do not coexist with peer path. back_at=rows_local after peer-row partition; in peer_sums mode peer rows are accumulated separately and absent from Dm, so scan of [0,back_at) is correct. Otherwise scan T*K rows after CPU H2D and peer waits/copies."}
+  ],
+  "moe_path_record": {
+    "anchors": "prefill.cpp:2930-2938,3941-3951; finite_probe.cu:113-125,151-156",
+    "fields": "native=lay.native; mmq=use_mmq; fused=fused_l; gu/down types from selected layer layout; stream_all/peer/peer_sums and cpu_rows are passed at the per-selected-layer site.",
+    "interpretation": "Flags are descriptive predicates, not a one-hot enum: use_mmq may be 1 together with fused=1 because the fused eligibility depends on MMQ planning. The record is emitted only for the selected layer.",
+    "atomic_log_line": "moe_path and checkpoint each use one fprintf call plus fflush (finite_probe.cu:117-125,153-156); report_after_sync formats first_bad into a bounded local buffer then emits one JSON line, avoiding the old two-call split."
+  },
+  "potential_issues_or_limits": [
+    {"severity":"conditional blind spot","anchors":"prefill.cpp:2863-2866,2870-2924","detail":"route_weights is scanned immediately after route, before optional STRATA_DBG_ROUTE_OVERRIDE can replace m.ids/m.w. If override is enabled simultaneously, the diagnostic describes original route weights rather than the values consumed downstream. Not applicable when that hook is absent; current source metadata alone does not prove its runtime environment."},
+    {"severity":"attribution limit","anchors":"prefill.cpp:3789-3795; finite_probe.hpp:102-106,130-132","detail":"MMQ scans cover a group of experts and set no expert id; report_moe_path records total expert count/types but not order/group bounds. row_offset/source_row correctly identify packed expert-order coordinates, but a first_bad record alone cannot name the member expert in a multi-expert group."},
+    {"severity":"flag semantics","anchors":"prefill.cpp:2930-2938,3944-3946","detail":"A consumer must not interpret mmq/fused as mutually exclusive labels; they are use_mmq and fused_l predicates and can both be true. The JSON currently does not name these semantics explicitly."}
+  ],
+  "execution": {"source_only":true,"build_or_compile":false,"test_or_fixture_run":false,"device_or_model":false,"source_edits_by_reviewer":false}
+}
