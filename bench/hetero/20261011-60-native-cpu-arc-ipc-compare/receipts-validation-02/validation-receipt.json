@@ -1,0 +1,20 @@
+{
+  "schema": "native-ipc-compare-validation-v2",
+  "status": "pass",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "no_bytecode": true,
+  "unit_test_exit_code": 0,
+  "pure_tests": 13,
+  "default53_plan_exit_code": 0,
+  "custom60_plan_exit_code": 0,
+  "source_and_run59_binding_exit_code": 0,
+  "plan53_sha256": "b73f9f1ebdcb361c2a093e6afb51b02297dbe740cd5506219ab7c56e9cf11321",
+  "plan60_sha256": "2959ecf9f43c89742c918070f6df4722f7f199791f0c2969aa7197e49b142d25",
+  "binding_check_sha256": "55ec955431bf3f53cb9a64cf0c06f5f4db59b73f773ec5d20aaaf235219c1d38",
+  "payloads_read": false,
+  "cpu_service_started": false,
+  "arc_service_started": false,
+  "device_accessed": false,
+  "inference_called": false,
+  "finished_utc": "2026-10-11T01:43:41.2386193Z"
+}

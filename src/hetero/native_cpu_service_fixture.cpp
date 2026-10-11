@@ -5,6 +5,45 @@
 
 void require(bool ok, const char* message) { if (!ok) throw std::runtime_error(message); }
 
+void synthetic_identity_handshake() {
+    const auto serial = std::chrono::steady_clock::now().time_since_epoch().count();
+    const fs::path dir = fs::current_path() / ("cpu-identity-fixture-" + std::to_string(serial));
+    require(fs::create_directory(dir), "fixture directory already exists");
+    const fs::path blob = dir / "synthetic-zero-blob.bin";
+    const fs::path identity = dir / "synthetic-identity.json";
+    auto cleanup = [&] { fs::remove(blob); fs::remove(identity); fs::remove(dir); };
+    try {
+        const std::vector<uint8_t> zero_blob(static_cast<size_t>(kBlobBytes), 0);
+        const std::string id = "{\"fixture_only\":true,\"model_loaded\":false}\n";
+        write_new_file(blob, zero_blob.data(), zero_blob.size(), "synthetic blob");
+        write_new_file(identity, id.data(), id.size(), "synthetic identity");
+        ServiceArgs args;
+        args.serve = true; args.blob = blob; args.identity = identity;
+        args.blob_sha = sha256(zero_blob.data(), zero_blob.size());
+        args.identity_sha = sha256(id.data(), id.size());
+        CpuService service(args); // no pool, inference, real weights, or device
+        require(service.identity_sha == args.identity_sha, "verified identity was not retained for INIT");
+        auto request = [&](const std::string& digest) {
+            const std::string payload = "{\"schema\":\"strata-xpu-init-v1\",\"nonce\":\"0123456789abcdef0123456789abcdef\",\"rows\":1,\"identity_sha256\":\"" + digest + "\"}";
+            std::string frame(20 + payload.size(), '\0');
+            auto* bytes = reinterpret_cast<uint8_t*>(frame.data());
+            std::memcpy(bytes, "SXPU", 4); put16(bytes+4, 1); put16(bytes+6, 1);
+            put64(bytes+8, 7); put32(bytes+16, static_cast<uint32_t>(payload.size()));
+            std::memcpy(bytes+20, payload.data(), payload.size());
+            std::istringstream input(frame, std::ios::in | std::ios::binary);
+            std::ostringstream output(std::ios::out | std::ios::binary);
+            require(service_loop(service, input, output) == 0, "INIT fixture failed framing/EOF");
+            const std::string result = output.str();
+            require(result.size() >= 32 && result.substr(0, 4) == "SXPU", "INIT response missing");
+            return get32(reinterpret_cast<const uint8_t*>(result.data()) + 20);
+        };
+        require(request(args.identity_sha) == 0 && service.initialized, "verified identity INIT rejected");
+        require(request(std::string(64, '0')) == 1 && !service.initialized, "wrong identity did not clear ready state");
+        require(request(args.identity_sha) == 0 && service.initialized, "valid INIT after rejection failed");
+        cleanup();
+    } catch (...) { cleanup(); throw; }
+}
+
 int main() {
     const std::string init = R"({ "identity_sha256" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "rows": 2, "nonce":"0123456789abcdef0123456789abcdef", "schema":"strata-xpu-init-v1" })";
     const InitRequest parsed = parse_init_json(init);
@@ -52,7 +91,6 @@ int main() {
     bool nonfinite_rejected = false;
     try { validate_infer_payload(valid, 1); } catch (const std::exception&) { nonfinite_rejected = true; }
     require(nonfinite_rejected, "non-finite INFER payload accepted");
+    synthetic_identity_handshake();
     return 0;
 }
-
-

@@ -25,8 +25,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-BENCH = ROOT / "bench/hetero/20261011-53-native-cpu-arc-ipc-compare"
-CONTRACT_PATH = BENCH / "compare-contract.json"
+DEFAULT_CONTRACT_PATH = ROOT / "bench/hetero/20261011-53-native-cpu-arc-ipc-compare/compare-contract.json"
 RUN42_PATH = ROOT / "bench/hetero/20261009-42-native-q4k-q5_1-ipc/executed-client.py"
 RESULT_PREFIX = struct.Struct("<IQ")
 ROWS = (1, 2, 4, 8, 16, 32, 64, 128, 256)
@@ -62,8 +61,8 @@ def _stable_sha(path: Path) -> str:
     return sha(data)
 
 
-def load_contract() -> dict[str, Any]:
-    return json.loads(CONTRACT_PATH.read_text(encoding="utf-8-sig"))
+def load_contract(path: Path = DEFAULT_CONTRACT_PATH) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def plan_record(contract: dict[str, Any]) -> dict[str, Any]:
@@ -358,17 +357,20 @@ def _persist_progress(receipt, record):
     _update_receipt(receipt, record)
 
 
-def _authorization(args, contract):
+def _authorization(args, contract, contract_path: Path):
     if not (args.execute and args.root_start_confirmed and args.model_matrix_stopped_confirmed):
         raise CompareError("execution requires explicit root start and model-matrix-stopped confirmations")
     path = args.root_authorization
     if path is None or not path.is_absolute() or not path.is_file():
         raise CompareError("an absolute existing root authorization JSON is required")
     auth = json.loads(path.read_text(encoding="utf-8-sig"))
+    source_freeze_path = Path(contract.get("source_freeze_path", contract_path.parent / "source-freeze.json"))
+    if not source_freeze_path.is_absolute() or not source_freeze_path.is_file():
+        raise CompareError("an absolute existing source-freeze receipt is required")
     expected = {"schema": "strata-native-ipc-compare-root-authorization-v1", "run_id": contract["run_id"],
         "execution_authorized": True, "model_matrix_stopped": True, "root_review_complete": True,
-        "client_sha256": _stable_sha(Path(__file__)), "contract_sha256": _stable_sha(CONTRACT_PATH),
-        "source_freeze_sha256": _stable_sha(BENCH / "source-freeze.json")}
+        "client_sha256": _stable_sha(Path(__file__)), "contract_sha256": _stable_sha(contract_path),
+        "source_freeze_sha256": _stable_sha(source_freeze_path)}
     for key, value in expected.items():
         if auth.get(key) != value: raise CompareError(f"root authorization binding mismatch: {key}")
     if args.include_cpu16_none and not auth.get("cpu16_none_authorized", False):
@@ -393,6 +395,13 @@ def _check_source_pins(contract):
         digest = _stable_sha(Path(pins[path_key]))
         if digest != pins[digest_key]: raise CompareError(f"pinned CPU source changed: {pins[path_key]}")
         actual[digest_key] = digest
+    if "cpu_service_fixture_path" in pins or "cpu_service_fixture_sha256" in pins:
+        if not ("cpu_service_fixture_path" in pins and "cpu_service_fixture_sha256" in pins):
+            raise CompareError("CPU service fixture source pin is incomplete")
+        digest = _stable_sha(Path(pins["cpu_service_fixture_path"]))
+        if digest != pins["cpu_service_fixture_sha256"]:
+            raise CompareError(f"pinned source changed: {pins['cpu_service_fixture_path']}")
+        actual["cpu_service_fixture_sha256"] = digest
     if contract.get("contract_version") == 2:
         old_recipe = Path(contract["supersedes_contract_path"])
         old_sha = _stable_sha(old_recipe)
@@ -404,12 +413,13 @@ def _check_source_pins(contract):
 
 def _verify_cpu_binary(contract, backend):
     path = Path(backend["exe"]); digest = _stable_sha(path)
-    if digest != backend["exe_sha256"]: raise CompareError("CPU service executable SHA differs from run52")
+    if digest != backend["exe_sha256"]: raise CompareError("CPU service executable SHA differs from contract")
     build_path = Path(backend["build_receipt_path"])
     if _stable_sha(build_path) != backend["build_receipt_sha256"]: raise CompareError("CPU service build receipt changed")
     receipt = json.loads(build_path.read_text(encoding="utf-8-sig"))
-    if receipt.get("status") != "success" or receipt.get("run_id") != "native-cpu-service-20261011-52":
-        raise CompareError("CPU service build receipt is not a successful run52 build")
+    expected_build_run_id = backend.get("build_run_id", "native-cpu-service-20261011-52")
+    if receipt.get("status") != "success" or receipt.get("run_id") != expected_build_run_id:
+        raise CompareError(f"CPU service build receipt is not a successful {expected_build_run_id} build")
     b = receipt.get("binaries", {}).get("hetero_native_cpu_service", {})
     if b.get("sha256") != digest or os.path.normcase(os.path.realpath(b.get("path", ""))) != os.path.normcase(os.path.realpath(path)):
         raise CompareError("CPU build receipt does not bind this executable")
@@ -420,8 +430,10 @@ def _verify_cpu_binary(contract, backend):
         "src/kernels/cpu/pool.cpp": pins["cpu_pool_cpp_sha256"],
         "include/strata/kernels/cpu/pool.hpp": pins["cpu_pool_hpp_sha256"]}
     before = receipt.get("source_sha256_before", {})
+    if "cpu_service_fixture_sha256" in pins:
+        source_map["src/hetero/native_cpu_service_fixture.cpp"] = pins["cpu_service_fixture_sha256"]
     if any(before.get(rel) != digest for rel, digest in source_map.items()):
-        raise CompareError("run52 build receipt source freeze differs from compare contract")
+        raise CompareError(f"{expected_build_run_id} build receipt source freeze differs from compare contract")
     return {"path": str(path), "sha256": digest, "bytes": path.stat().st_size,
             "build_receipt_sha256": backend["build_receipt_sha256"]}
 
@@ -835,17 +847,21 @@ def execute(args, contract, authorization):
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--contract", type=Path, default=DEFAULT_CONTRACT_PATH,
+        help="comparison contract JSON (defaults to the preserved run53 recipe)")
     parser.add_argument("--execute", action="store_true", help="run only after explicit root review and authorization")
     parser.add_argument("--root-start-confirmed", action="store_true")
     parser.add_argument("--model-matrix-stopped-confirmed", action="store_true")
     parser.add_argument("--root-authorization", type=Path)
     parser.add_argument("--include-cpu16-none", action="store_true", help="add distinct optional w16/none arms")
     args = parser.parse_args(argv)
-    contract = load_contract()
+    if not args.contract.is_absolute():
+        args.contract = args.contract.resolve()
+    contract = load_contract(args.contract)
     if not args.execute:
         print(json.dumps(plan_record(contract), indent=2, ensure_ascii=True, allow_nan=False))
         return 0
-    authorization = _authorization(args, contract)
+    authorization = _authorization(args, contract, args.contract)
     return execute(args, contract, authorization)
 
 

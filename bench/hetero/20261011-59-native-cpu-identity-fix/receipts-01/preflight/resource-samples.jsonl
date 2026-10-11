@@ -1,0 +1,1 @@
+{"time_utc": "2026-10-11T01:40:28.837035+00:00", "label": "preflight:start", "physical_available_bytes": 114551001088, "commit_available_bytes": 122072289280, "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit", "errors": [], "gate_ok": true, "owned_process_tree": null}

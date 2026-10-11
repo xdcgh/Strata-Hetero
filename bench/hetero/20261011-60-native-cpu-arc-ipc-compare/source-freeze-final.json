@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "status": "source_only_prepared_for_root_review",
+  "run_id": "native-cpu-arc-ipc-compare-20261011-60",
+  "contract_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\compare-contract.json",
+  "contract_sha256": "63e51d33f6b1e0795c11a6288d600549698c49eecfe0f0e8bb358870de61ab00",
+  "source_freeze_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\source-freeze-final.json",
+  "supersedes_preliminary_freeze_sha256": "35bea1d7f3f308c197e6e4c9c2689772e95d1f0aae00ae339e67e2581ad34236",
+  "execution_authorized": false,
+  "root_review_complete": false,
+  "build_run_id": "native-cpu-service-20261011-59",
+  "build_receipt_sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c",
+  "cpu_binary_sha256": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57",
+  "validation_receipt_sha256": "bfae77a3b13c645a331dc8b2915c5410626c7fe1fc33d3c687389095c991d606",
+  "payloads_read": false,
+  "cpu_service_started": false,
+  "arc_service_started": false,
+  "inference_called": false,
+  "device_accessed": false,
+  "root_authorization_created": false,
+  "actual_output_root_created": false,
+  "actual_receipt_dir_created": false,
+  "files": [
+    {
+      "role": "client",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_ipc_compare.py",
+      "bytes": 51792,
+      "sha256": "11a0cc3306851fc8b6391b58ee9b6167bff41a61e21169dc45e59641d26ccc84"
+    },
+    {
+      "role": "pure_tests",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_native_ipc_compare.py",
+      "bytes": 20878,
+      "sha256": "0ddb43a7cfc9e828310347b7e40c5f3e1aa852d7439b4901c8cf84afd2aab16a"
+    },
+    {
+      "role": "contract",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\compare-contract.json",
+      "bytes": 19027,
+      "sha256": "63e51d33f6b1e0795c11a6288d600549698c49eecfe0f0e8bb358870de61ab00"
+    },
+    {
+      "role": "validation_receipt",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\receipts-validation-02\\validation-receipt.json",
+      "bytes": 800,
+      "sha256": "bfae77a3b13c645a331dc8b2915c5410626c7fe1fc33d3c687389095c991d606"
+    },
+    {
+      "role": "validation_unittest_log",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\receipts-validation-02\\unittest.log",
+      "bytes": 2503,
+      "sha256": "8a4c8838217f64733457ecd85d30cc447db4a4ff77a0f86f0cc8217ecb49bbc9"
+    },
+    {
+      "role": "validation_plan53",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\receipts-validation-02\\plan53.stdout.json",
+      "bytes": 3655,
+      "sha256": "b73f9f1ebdcb361c2a093e6afb51b02297dbe740cd5506219ab7c56e9cf11321"
+    },
+    {
+      "role": "validation_plan60",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\receipts-validation-02\\plan60.stdout.json",
+      "bytes": 3655,
+      "sha256": "2959ecf9f43c89742c918070f6df4722f7f199791f0c2969aa7197e49b142d25"
+    },
+    {
+      "role": "validation_binding_check",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\receipts-validation-02\\binding-check.stdout.json",
+      "bytes": 2125,
+      "sha256": "55ec955431bf3f53cb9a64cf0c06f5f4db59b73f773ec5d20aaaf235219c1d38"
+    },
+    {
+      "role": "preliminary_source_freeze",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\source-freeze.json",
+      "bytes": 7408,
+      "sha256": "35bea1d7f3f308c197e6e4c9c2689772e95d1f0aae00ae339e67e2581ad34236"
+    },
+    {
+      "role": "service_source",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_cpu_service.cpp",
+      "bytes": 24827,
+      "sha256": "138c7b2c983fd18c7b3d9401f4b8f632baafda0b4b4bd02888a3f43ac07326c9"
+    },
+    {
+      "role": "service_fixture",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_cpu_service_fixture.cpp",
+      "bytes": 6218,
+      "sha256": "c90461a0060166d173f26724b31052e840c7b2c103686057ce67af0f2c857f61"
+    },
+    {
+      "role": "native_kernel",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_bench.cpp",
+      "bytes": 45332,
+      "sha256": "0ad1dbc70fc00ced12f093e111e154de46f253ed84e670e4fe420a6fc90354ed"
+    },
+    {
+      "role": "cpu_cmake",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "bytes": 6995,
+      "sha256": "1704be49a740bb476ce1c469c32cd9408760f19feecbe19c93753f19d8586592"
+    },
+    {
+      "role": "pool_cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool.cpp",
+      "bytes": 41611,
+      "sha256": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639"
+    },
+    {
+      "role": "pool_hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "bytes": 19269,
+      "sha256": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff"
+    },
+    {
+      "role": "run42_client",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\executed-client.py",
+      "bytes": 36849,
+      "sha256": "49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83"
+    },
+    {
+      "role": "xpu_transport",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_transport.py",
+      "bytes": 21907,
+      "sha256": "537a15a7284919741bb8e33a910ec5452644169c81fa6fd9edeaa69cbe5fcb91"
+    },
+    {
+      "role": "xpu_service",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+      "bytes": 33838,
+      "sha256": "069d77d31e7b19a7d119ff14819694ce479a9393e7273c6217fb12e636d991d2"
+    },
+    {
+      "role": "xpu_worker",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_worker.py",
+      "bytes": 26679,
+      "sha256": "068bb1324a7eb6d3c36f0538031ef0bf3e0476e0bbadf80762691be541541d72"
+    },
+    {
+      "role": "activation",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_activation.py",
+      "bytes": 6864,
+      "sha256": "31323455274a50236a6274464e51fc622c717f09bead8ab96337e133ce0dacaf"
+    },
+    {
+      "role": "resources",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "bytes": 26316,
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    {
+      "role": "verify",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_verify_existing.py",
+      "bytes": 14788,
+      "sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3"
+    },
+    {
+      "role": "run42_contract",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\execution-contract.json",
+      "bytes": 15845,
+      "sha256": "69fb26ea65dd9ae228dde8e3edd2a13265eb4c7329fe2cdc518ac9b19131b6e6"
+    },
+    {
+      "role": "preserved_run53_v1",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\compare-contract-v1.json",
+      "bytes": 17338,
+      "sha256": "8a0f1c472d56a9caa68b328bb0517ee80cd396c04baf89755f25d3b482c381e0"
+    },
+    {
+      "role": "run59_builder",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\run_cpu59_build.py",
+      "bytes": 18426,
+      "sha256": "cb8d7c85c3e43cef776e9c680e26b78027583dfeeab46c650d9d75d42fcb19a5"
+    },
+    {
+      "role": "run59_build_receipt",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\receipts-02\\execution\\build-receipt.json",
+      "bytes": 90451,
+      "sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c"
+    },
+    {
+      "role": "run59_build_manifest",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\source-freeze-manifest.json",
+      "bytes": 16226,
+      "sha256": "3059bc6e9d2705e2c926d6fc3d4d1d682bc646ae3a3c670e44cdc5d0fbce7704"
+    },
+    {
+      "role": "run59_preflight",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\receipts-02\\preflight.json",
+      "bytes": 17522,
+      "sha256": "ce8d3ff2520d0cafefd57ca1ccfc8ba8422b14c9c54f8538b90d30370443d1cc"
+    },
+    {
+      "role": "run59_initial_preserved_failure",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\receipts-01\\preflight-failure.json",
+      "bytes": 415,
+      "sha256": "4c2282d9bad23629ffaaf5a7d5c2ea0b2c0770ba529f50e4aa529f7e38c047e8"
+    },
+    {
+      "role": "run59_ctest_log",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\receipts-02\\execution\\ctest.log",
+      "bytes": 634,
+      "sha256": "870df7b53d01379efa1f0453a2dcdf5542708f07aae125d7b2583c9f32a30a93"
+    },
+    {
+      "role": "run59_binary",
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "bytes": 2128896,
+      "sha256": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57"
+    }
+  ],
+  "note": "Run60 is a source-only recipe for review. Its contract selects the run59 CPU build, new receipt/private-output roots, and an explicit source-freeze path. No authorization or actual IPC has occurred."
+}

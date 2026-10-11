@@ -263,7 +263,8 @@ struct CpuService {
         if (in.gcount() != static_cast<std::streamsize>(n)) throw std::runtime_error("short identity read");
         char extra = 0; if (in.read(&extra, 1)) throw std::runtime_error("identity grew during read");
         if (!in.eof() && in.fail()) throw std::runtime_error("identity read error");
-        if (sha256(id.data(), id.size()) != args.identity_sha) throw std::runtime_error("identity SHA-256 mismatch");
+        identity_sha = sha256(id.data(), id.size());
+        if (identity_sha != args.identity_sha) throw std::runtime_error("identity SHA-256 mismatch");
         if (args.workers) setup_pool();
     }
     void setup_pool() {

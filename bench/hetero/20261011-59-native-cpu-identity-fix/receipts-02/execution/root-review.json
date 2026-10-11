@@ -1,0 +1,13 @@
+{
+  "status": "root_binary_source_review_pass",
+  "receipt_sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c",
+  "binaries": {
+    "hetero_native_expert": "4e01368aad8e741d93edcb0b5732b7d9413fa88ff77fb504e9aba6593e9e1860",
+    "hetero_native_expert_metadata_fixture": "2b979486e7c0ae9484e10bb394db04325e24e8d6a4bdb4041ef4785febc4cfd1",
+    "hetero_worker_affinity_observation": "e5f3e6561a5d6d70b6465a50a179e3fade6b27fcafa1bb7d46775b26874ada53",
+    "hetero_native_cpu_service": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57",
+    "hetero_native_cpu_service_fixture": "66d8400e81c334c5b4d87fb15548d41aee0f226ebd3d684b7c3e5c96cafee393"
+  },
+  "fixture_scope": "synthetic3MBzero+tinyidentity, valid/wrong/validINIT, no FFN or device",
+  "source_fix": "retain verified SHA member before INIT; no math changes"
+}

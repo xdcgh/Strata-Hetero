@@ -1,0 +1,32 @@
+{
+  "source_pins": {
+    "run42_client_sha256": "49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83",
+    "protocol_sha256": "537a15a7284919741bb8e33a910ec5452644169c81fa6fd9edeaa69cbe5fcb91",
+    "arc_service_sha256": "069d77d31e7b19a7d119ff14819694ce479a9393e7273c6217fb12e636d991d2",
+    "worker_api_sha256": "068bb1324a7eb6d3c36f0538031ef0bf3e0476e0bbadf80762691be541541d72",
+    "activation_sha256": "31323455274a50236a6274464e51fc622c717f09bead8ab96337e133ce0dacaf",
+    "resource_sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+    "verify_sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+    "cpu_service_source_sha256": "138c7b2c983fd18c7b3d9401f4b8f632baafda0b4b4bd02888a3f43ac07326c9",
+    "cpu_kernel_source_sha256": "0ad1dbc70fc00ced12f093e111e154de46f253ed84e670e4fe420a6fc90354ed",
+    "cpu_harness_cmake_sha256": "1704be49a740bb476ce1c469c32cd9408760f19feecbe19c93753f19d8586592",
+    "cpu_pool_cpp_sha256": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+    "cpu_pool_hpp_sha256": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+    "cpu_service_fixture_sha256": "c90461a0060166d173f26724b31052e840c7b2c103686057ce67af0f2c857f61",
+    "compare_contract_v1_sha256": "8a0f1c472d56a9caa68b328bb0517ee80cd396c04baf89755f25d3b482c381e0"
+  },
+  "verified_binaries": {
+    "cpu-pool-w10-all": {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "sha256": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57",
+      "bytes": 2128896,
+      "build_receipt_sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c"
+    },
+    "cpu-pool-w16-none": {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "sha256": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57",
+      "bytes": 2128896,
+      "build_receipt_sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c"
+    }
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "phase": "source_only_preflight",
+  "build_started": false,
+  "python_executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "python_version": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+  "python_dont_write_bytecode": true,
+  "head": "07b14cb05f1a6fda75bb0b3c0e1ca06866bea837",
+  "ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "resource_gate_initial": {
+    "time_utc": "2026-10-11T01:40:56.391995+00:00",
+    "label": "preflight:start",
+    "physical_available_bytes": 114170535936,
+    "commit_available_bytes": 121531252736,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "compiler_conflicts": [],
+  "tool_paths": {
+    "cmake": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "ninja": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "compiler": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "ctest": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "vcvars": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat"
+  },
+  "expected_tool_sha256": {
+    "cmake": "ab8247ca4554871e5d75c0ee118ee8663727bd6fdf37ad76b17e9cc8d5f286a8",
+    "ninja": "a7f084e8ee37bff0872aa8bd3d17cc19632d2a37734f6c242dd3dee22d77c0b4",
+    "compiler": "b0a1818ebae6da7f18230a84e76ce839212584ac4c2ab55b97a0d5268085da57",
+    "ctest": "083f482c8656c86932c28906445cb3c10c0c5ee649a90ff3e0080ee4447d3dfc",
+    "vcvars": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209"
+  },
+  "actual_tool_sha256": {
+    "cmake": "ab8247ca4554871e5d75c0ee118ee8663727bd6fdf37ad76b17e9cc8d5f286a8",
+    "ninja": "a7f084e8ee37bff0872aa8bd3d17cc19632d2a37734f6c242dd3dee22d77c0b4",
+    "compiler": "b0a1818ebae6da7f18230a84e76ce839212584ac4c2ab55b97a0d5268085da57",
+    "ctest": "083f482c8656c86932c28906445cb3c10c0c5ee649a90ff3e0080ee4447d3dfc",
+    "vcvars": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209"
+  },
+  "vcvars": {
+    "vcvars_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+    "vcvars_sha256": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209",
+    "environment_keys_removed": [],
+    "env_command": "cmd /d /s /c <vcvars64.bat> >nul && set",
+    "process": {
+      "command_line_redacted": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+      "process_identity": {
+        "pid": 12300,
+        "parent_pid": 18804,
+        "create_time": 1791682857.1120443,
+        "executable": "c:\\windows\\system32\\cmd.exe",
+        "command_line": [
+          "C:\\Windows\\System32\\cmd.exe",
+          "/d",
+          "/s",
+          "/c",
+          "C:\\Program",
+          "Files",
+          "(x86)\\Microsoft",
+          "Visual",
+          "Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat >nul && set"
+        ]
+      },
+      "exit_code": 0,
+      "resource_before": {
+        "time_utc": "2026-10-11T01:40:57.110608+00:00",
+        "label": "vcvars-environment:prelaunch",
+        "physical_available_bytes": 114177437696,
+        "commit_available_bytes": 121535578112,
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "errors": [],
+        "gate_ok": true,
+        "owned_process_tree": null
+      },
+      "resource_after": {
+        "time_utc": "2026-10-11T01:40:58.516611+00:00",
+        "label": "vcvars-environment:finished",
+        "physical_available_bytes": 114140925952,
+        "commit_available_bytes": 121472868352,
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "errors": [],
+        "gate_ok": true,
+        "owned_process_tree": [
+          {
+            "pid": 12300,
+            "parent_pid": 18804,
+            "create_time": 1791682857.1120443,
+            "executable": "c:\\windows\\system32\\cmd.exe",
+            "command_line": [
+              "C:\\Windows\\System32\\cmd.exe",
+              "/d",
+              "/s",
+              "/c",
+              "C:\\Program",
+              "Files",
+              "(x86)\\Microsoft",
+              "Visual",
+              "Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat >nul && set"
+            ]
+          },
+          {
+            "pid": 4860,
+            "parent_pid": 12300,
+            "create_time": 1791682857.1254077,
+            "executable": "c:\\windows\\system32\\conhost.exe",
+            "command_line": [
+              "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+              "0x4"
+            ]
+          },
+          {
+            "pid": 3736,
+            "parent_pid": 12300,
+            "create_time": 1791682857.8409588,
+            "executable": "e:\\codex\\appdata\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+            "command_line": [
+              "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+              "-NoProfile",
+              "-ExecutionPolicy",
+              "Unrestricted",
+              "-Command",
+              "iex (get-content \"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\vcpkg\\vcpkg-init.cmd\" -raw)#"
+            ]
+          }
+        ]
+      },
+      "stdout_bytes": 12372,
+      "stdout_sha256": "c2b3f6d049ffcddb9e85c0df5f3ac77dc505c1fe81f4f96ec2c5fb5fe6a61865",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_environment_values_persisted": false
+    },
+    "environment_values_persisted": false
+  },
+  "msvc_toolset": "14.51.36231",
+  "msvc_target_arch": "x64",
+  "windows_sdk": {
+    "version": "10.0.26100.0",
+    "root": "C:\\Program Files (x86)\\Windows Kits\\10",
+    "tools": {
+      "rc.exe": {
+        "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe",
+        "sha256": "65db0d7b4f10ba0f55973fd9356543a556da9ec1c777a0c05f05a0329c8a100a"
+      },
+      "mt.exe": {
+        "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe",
+        "sha256": "fb1ab75294b78619bd6ac8cadf30cb95befbc7324703cbe2654ef800ddd2bf4d"
+      }
+    }
+  },
+  "tool_versions": {
+    "cmake": {
+      "stdout_tail": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+      "process": {
+        "name": "cmake-version",
+        "status": "success",
+        "argv": [
+          "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+          "--version"
+        ],
+        "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+        "exit_code": 0,
+        "finished_utc": "2026-10-11T01:40:58.568060+00:00",
+        "accepted_exit_codes": [
+          0
+        ],
+        "resource_after": {
+          "time_utc": "2026-10-11T01:40:58.566331+00:00",
+          "label": "cmake-version:finished",
+          "physical_available_bytes": 114162384896,
+          "commit_available_bytes": 121519550464,
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "errors": [],
+          "gate_ok": true,
+          "owned_process_tree": [
+            {
+              "pid": 10020,
+              "parent_pid": 18804,
+              "create_time": 1791682858.530769,
+              "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+              "command_line": [
+                "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+                "--version"
+              ]
+            }
+          ]
+        },
+        "process_tree": [
+          {
+            "pid": 10020,
+            "parent_pid": 18804,
+            "create_time": 1791682858.530769,
+            "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+            "command_line": [
+              "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+              "--version"
+            ]
+          }
+        ],
+        "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\receipts-02\\preflight\\cmake-version.log",
+        "log_bytes": 90,
+        "log_sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+      }
+    },
+    "ninja": {
+      "stdout_tail": "1.13.2.git.kitware.jobserver-pipe-1\r\n",
+      "process": {
+        "name": "ninja-version",
+        "status": "success",
+        "argv": [
+          "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+          "--version"
+        ],
+        "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+        "exit_code": 0,
+        "finished_utc": "2026-10-11T01:40:58.606353+00:00",
+        "accepted_exit_codes": [
+          0
+        ],
+        "resource_after": {
+          "time_utc": "2026-10-11T01:40:58.601313+00:00",
+          "label": "ninja-version:finished",
+          "physical_available_bytes": 114160746496,
+          "commit_available_bytes": 121517355008,
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "errors": [],
+          "gate_ok": true,
+          "owned_process_tree": [
+            {
+              "pid": 1812,
+              "parent_pid": 18804,
+              "create_time": 1791682858.5809288,
+              "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+              "command_line": [
+                "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+                "--version"
+              ]
+            }
+          ]
+        },
+        "process_tree": [
+          {
+            "pid": 1812,
+            "parent_pid": 18804,
+            "create_time": 1791682858.5809288,
+            "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+            "command_line": [
+              "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+              "--version"
+            ]
+          }
+        ],
+        "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\receipts-02\\preflight\\ninja-version.log",
+        "log_bytes": 37,
+        "log_sha256": "cc30d39e321dcb24ca5c4c5d5b7730e25ab769876a825616360194c634824754"
+      }
+    },
+    "compiler": {
+      "stdout_tail": "Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64\r\n\ufffd\ufffd\u0228\ufffd\ufffd\ufffd\ufffd(C) Microsoft Corporation\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0228\ufffd\ufffd\ufffd\ufffd\r\n\r\n\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0268\ufffd\ufffd\ufffd\ufffd\ufffd:\r\n C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe:        \ufffd\u6c7e 19.51.36260.0\r\n C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\c1.dll:        \ufffd\u6c7e 19.51.36260.0\r\n C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\c1xx.dll:      \ufffd\u6c7e 19.51.36260.0\r\n C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\c2.dll:        \ufffd\u6c7e 19.51.36260.0\r\n C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\c1xx.dll:      \ufffd\u6c7e 19.51.36260.0\r\n C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe:      \ufffd\u6c7e 14.51.36260.0\r\n C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\mspdb140.dll:  \ufffd\u6c7e 14.51.36260.0\r\n C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\2052\\clui.dll: \ufffd\u6c7e 19.51.36260.0\r\n\r\ncl: \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd error D8003 :\u0231\ufffd\ufffd\u0534\ufffd\u013c\ufffd\ufffd\ufffd\r\n",
+      "process": {
+        "name": "compiler-version",
+        "status": "success",
+        "argv": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+          "/Bv"
+        ],
+        "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+        "exit_code": 2,
+        "finished_utc": "2026-10-11T01:40:58.650562+00:00",
+        "accepted_exit_codes": [
+          0,
+          2
+        ],
+        "resource_after": {
+          "time_utc": "2026-10-11T01:40:58.649448+00:00",
+          "label": "compiler-version:finished",
+          "physical_available_bytes": 114163351552,
+          "commit_available_bytes": 121515868160,
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "errors": [],
+          "gate_ok": true,
+          "owned_process_tree": [
+            {
+              "pid": 19896,
+              "parent_pid": 18804,
+              "create_time": 1791682858.6175556,
+              "executable": "c:\\program files (x86)\\microsoft visual studio\\18\\buildtools\\vc\\tools\\msvc\\14.51.36231\\bin\\hostx64\\x64\\cl.exe",
+              "command_line": [
+                "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+                "/Bv"
+              ]
+            }
+          ]
+        },
+        "process_tree": [
+          {
+            "pid": 19896,
+            "parent_pid": 18804,
+            "create_time": 1791682858.6175556,
+            "executable": "c:\\program files (x86)\\microsoft visual studio\\18\\buildtools\\vc\\tools\\msvc\\14.51.36231\\bin\\hostx64\\x64\\cl.exe",
+            "command_line": [
+              "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+              "/Bv"
+            ]
+          }
+        ],
+        "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\receipts-02\\preflight\\compiler-version.log",
+        "log_bytes": 1291,
+        "log_sha256": "a2c2c785f5e98d40d3261a0532e0abfe794e648b0593ba1a732ec9137e234899"
+      }
+    },
+    "ctest": {
+      "stdout_tail": "ctest version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+      "process": {
+        "name": "ctest-version",
+        "status": "success",
+        "argv": [
+          "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+          "--version"
+        ],
+        "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+        "exit_code": 0,
+        "finished_utc": "2026-10-11T01:40:58.690808+00:00",
+        "accepted_exit_codes": [
+          0
+        ],
+        "resource_after": {
+          "time_utc": "2026-10-11T01:40:58.688972+00:00",
+          "label": "ctest-version:finished",
+          "physical_available_bytes": 114160451584,
+          "commit_available_bytes": 121514614784,
+          "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+          "errors": [],
+          "gate_ok": true,
+          "owned_process_tree": [
+            {
+              "pid": 12904,
+              "parent_pid": 18804,
+              "create_time": 1791682858.6605773,
+              "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+              "command_line": [
+                "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+                "--version"
+              ]
+            }
+          ]
+        },
+        "process_tree": [
+          {
+            "pid": 12904,
+            "parent_pid": 18804,
+            "create_time": 1791682858.6605773,
+            "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+            "command_line": [
+              "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+              "--version"
+            ]
+          }
+        ],
+        "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-59-native-cpu-identity-fix\\receipts-02\\preflight\\ctest-version.log",
+        "log_bytes": 90,
+        "log_sha256": "1c3f216562e2dffaab6038c5a1ba3df2a491bcefaa9260946ece2176a04ccce4"
+      }
+    }
+  },
+  "source_freeze_manifest_sha256": "3059bc6e9d2705e2c926d6fc3d4d1d682bc646ae3a3c670e44cdc5d0fbce7704",
+  "source_count": 33,
+  "targets": [
+    "hetero_native_expert",
+    "hetero_native_expert_metadata_fixture",
+    "hetero_worker_affinity_observation",
+    "hetero_native_cpu_service",
+    "hetero_native_cpu_service_fixture"
+  ],
+  "parallel_jobs": 1,
+  "gpu_backends": {
+    "CUDA": "OFF",
+    "HIP": "OFF",
+    "SYCL": "OFF"
+  },
+  "native_blob_opened": false,
+  "identity_opened": false,
+  "service_serve_started": false,
+  "inference_called": false,
+  "resource_samples": 12,
+  "physical_available_min_bytes": 114131832832,
+  "commit_available_min_bytes": 121472868352
+}

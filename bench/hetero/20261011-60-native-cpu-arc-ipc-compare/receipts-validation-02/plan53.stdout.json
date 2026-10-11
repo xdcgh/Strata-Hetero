@@ -1,0 +1,94 @@
+{
+  "status": "plan_only",
+  "run_id": "native-cpu-arc-ipc-compare-20261011-53",
+  "execution_authorized": false,
+  "rows": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "warmup": 1,
+  "formal_repeats": 5,
+  "backends": [
+    {
+      "id": "cpu-pool-w10-all",
+      "pool_workers": 10,
+      "pool_affinity": "all",
+      "optional": false,
+      "binary_sha256": "486dedeeba69497dc5d3aebf771833278b8431fc29e0e0c33bab503e5a04caf9"
+    },
+    {
+      "id": "cpu-pool-w16-none",
+      "pool_workers": 16,
+      "pool_affinity": "none",
+      "optional": true,
+      "binary_sha256": "486dedeeba69497dc5d3aebf771833278b8431fc29e0e0c33bab503e5a04caf9"
+    }
+  ],
+  "arms": [
+    "cpu-pool-w10-all solo across all rows",
+    "Arc GPU.0 solo across all rows",
+    "CPU pool w10/all concurrent with Arc GPU.0 across synchronized row batches",
+    "optional distinct CPU pool w16/none solo and concurrent arms"
+  ],
+  "arc": {
+    "device": "GPU.0",
+    "precision": "f32",
+    "execution_mode": "ACCURACY"
+  },
+  "timing_contract": {
+    "caller_rtt": "F32LE input serialization start through owned contiguous F32 output copy completion; same serializer, OwnedPipeWorker.request, response prefix parse, and NumPy owned copy for CPU and Arc",
+    "worker_wall": "Service-local input owned copy through native operator/full graph and output serialization; CPU and Arc reported separately",
+    "checks_outside_timed_interval": [
+      "monitor.require before/after",
+      "input SHA-256 and size",
+      "output finite/shape/hash checks",
+      "quality evaluation"
+    ],
+    "init_costs_separate": true,
+    "run42_comparison_note": "Fresh Arc remeasure required: run42 timed input SHA/monitor checks in its client RTT.",
+    "paired_end_barrier": "Same reusable two-party barrier is entered after both end timestamps/output copies and before any monitor/hash/quality/file-write postprocessing.",
+    "output_persistence": "Each raw response is written exclusively under the E private root after the timed boundary; size/hash/path are in the receipt before numerical gating."
+  },
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "quality_policy": {
+    "arc_formal_quality_required": true,
+    "cpu_warmup_and_formal_bitwise_gold_required": true,
+    "arc_warmup_quality_required": true,
+    "fail_on_first_quality_or_integrity_failure": true
+  },
+  "resource_gate": {
+    "minimum_physical_bytes": 12884901888,
+    "minimum_commit_bytes": 4294967296,
+    "interval_seconds": 1,
+    "source": "tools.hetero_resources.memory_snapshot plus psutil-owned process-tree snapshots",
+    "fail_closed": true,
+    "minimum_free_disk_bytes": 12884901888
+  },
+  "cpu_blob_hash_pinned": true,
+  "model_payloads_read": false,
+  "native_f32_payloads_read": false,
+  "native_cpu_service_started": false,
+  "arc_service_started": false,
+  "openvino_imported": false,
+  "core_created": false,
+  "device_accessed": false,
+  "inference_called": false,
+  "large_f32_outputs_written": false,
+  "raw_output_files_planned": true,
+  "planned_output_format": "raw service response F32LE, one exclusive file per response transfer",
+  "output_format": "raw service response F32LE, one exclusive file per response transfer",
+  "output_root": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-53",
+  "receipt_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts",
+  "run42_fresh_arc_remeasure_required": true
+}

@@ -1,0 +1,12 @@
+{
+  "step": "pure_unittest",
+  "exit_code": 0,
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "no_bytecode": true,
+  "payloads_read": false,
+  "cpu_service_started": false,
+  "arc_service_started": false,
+  "device_accessed": false,
+  "inference_called": false,
+  "finished_utc": "2026-10-11T01:43:27.4582247Z"
+}

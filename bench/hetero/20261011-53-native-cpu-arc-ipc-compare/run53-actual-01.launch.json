@@ -1,0 +1,18 @@
+{
+  "pid": 9088,
+  "started_utc": "2026-10-11T01:35:32.1039099Z",
+  "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-B",
+    "-m",
+    "tools.hetero_native_ipc_compare",
+    "--execute",
+    "--root-start-confirmed",
+    "--model-matrix-stopped-confirmed",
+    "--include-cpu16-none",
+    "--root-authorization",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\root-authorization-01.json"
+  ],
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\run53-actual-01.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\run53-actual-01.stderr.log"
+}

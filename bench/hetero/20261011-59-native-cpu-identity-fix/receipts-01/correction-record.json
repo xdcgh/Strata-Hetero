@@ -1,0 +1,10 @@
+{
+  "schema": "native-cpu-service-build-correction-v1",
+  "run_id": "native-cpu-service-20261011-59",
+  "preserved_failed_preflight": "receipts-01/preflight-failure.json",
+  "failed_phase": "source_only_preflight",
+  "build_started": false,
+  "reason": "First preflight source map incorrectly joined run_cpu59_build.py under run52 directory.",
+  "correction": "Bind current builder to run59 repo-relative path and isolate receipts/source snapshot under receipts-02 and source-freeze-02.",
+  "retry_policy": "Fresh corrected preflight/build sequence; no compiler/build was run in failed attempt."
+}

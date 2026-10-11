@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "run_id": "native-cpu-arc-ipc-compare-20261011-53",
+  "started_utc": "2026-10-11T01:35:33.188259+00:00",
+  "root_authorization": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\root-authorization-01.json",
+    "sha256": "c1464f4578875211e8d3964db21db0da5623a5292847fb61872740eeddbc427b",
+    "authorization": {
+      "schema": "strata-native-ipc-compare-root-authorization-v1",
+      "run_id": "native-cpu-arc-ipc-compare-20261011-53",
+      "execution_authorized": true,
+      "model_matrix_stopped": true,
+      "root_review_complete": true,
+      "client_sha256": "82d93ac18cf70acd23f8850089b18b260f9ae18cd8422c89ddee619ca7e7fc44",
+      "contract_sha256": "ccb9f1ff3a746688ab7c2f4a8d88709258b841cec53a22fd96ad54c479645e8c",
+      "source_freeze_sha256": "13317bdf3f5df8f8169224c3dfc5d4f54d2863c8e969bffc4d0ad55049ef9b75",
+      "cpu16_none_authorized": true,
+      "utc": "2026-10-11T01:34:20.217816+00:00",
+      "admission_sha256": "a2f58d04297cc96061384f86bfa9e7873aa385b7e383343103cb6941060bf296",
+      "scope": "one serial solo+joint nine-shape comparison; strict alltrialquality,12/4floors,stopfirst; no modelroute",
+      "pure_fixture_count": 10
+    }
+  },
+  "resource_gate_initial": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 114032005120,
+    "physical_used_bytes": 22931243008,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 24766443520,
+    "commit_available_bytes": 120786739200,
+    "commit_total_pages": 6046495,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 120786739200,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "source_pins": {
+    "run42_client_sha256": "49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83",
+    "protocol_sha256": "537a15a7284919741bb8e33a910ec5452644169c81fa6fd9edeaa69cbe5fcb91",
+    "arc_service_sha256": "069d77d31e7b19a7d119ff14819694ce479a9393e7273c6217fb12e636d991d2",
+    "worker_api_sha256": "068bb1324a7eb6d3c36f0538031ef0bf3e0476e0bbadf80762691be541541d72",
+    "activation_sha256": "31323455274a50236a6274464e51fc622c717f09bead8ab96337e133ce0dacaf",
+    "resource_sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+    "verify_sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+    "cpu_service_source_sha256": "3194b7e67e3f7781e54785c17f53f127395f7635ec8a4bf36cc454b024130ccc",
+    "cpu_kernel_source_sha256": "0ad1dbc70fc00ced12f093e111e154de46f253ed84e670e4fe420a6fc90354ed",
+    "cpu_harness_cmake_sha256": "1704be49a740bb476ce1c469c32cd9408760f19feecbe19c93753f19d8586592",
+    "cpu_pool_cpp_sha256": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+    "cpu_pool_hpp_sha256": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+    "compare_contract_v1_sha256": "8a0f1c472d56a9caa68b328bb0517ee80cd396c04baf89755f25d3b482c381e0"
+  },
+  "controller_identity": {
+    "pid": 19232,
+    "parent_pid": 9088,
+    "create_time": 1791682532.531383,
+    "executable": "c:\\python314\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "tools.hetero_native_ipc_compare",
+      "--execute",
+      "--root-start-confirmed",
+      "--model-matrix-stopped-confirmed",
+      "--include-cpu16-none",
+      "--root-authorization",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\root-authorization-01.json"
+    ],
+    "create_time_utc": "2026-10-11T01:35:32.531383+00:00"
+  },
+  "cpu_binaries": {
+    "cpu-pool-w10-all": {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52\\hetero_native_cpu_service.exe",
+      "sha256": "486dedeeba69497dc5d3aebf771833278b8431fc29e0e0c33bab503e5a04caf9",
+      "bytes": 2128896,
+      "build_receipt_sha256": "723bbb8f3805a4ae2ca15ec2c325dea564d475ad30cabd2b841cca8c1b1676f6"
+    },
+    "cpu-pool-w16-none": {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52\\hetero_native_cpu_service.exe",
+      "sha256": "486dedeeba69497dc5d3aebf771833278b8431fc29e0e0c33bab503e5a04caf9",
+      "bytes": 2128896,
+      "build_receipt_sha256": "723bbb8f3805a4ae2ca15ec2c325dea564d475ad30cabd2b841cca8c1b1676f6"
+    }
+  },
+  "arc_identity_sha256": "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+  "native_blob_sha256": "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+  "verified_inputs": {
+    "1": {
+      "size_bytes": 10240,
+      "mtime_ns": 1791520543262303100,
+      "ctime_ns": 1791520543262303100,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 3940649673963438
+      }
+    },
+    "2": {
+      "size_bytes": 20480,
+      "mtime_ns": 1791520543267609800,
+      "ctime_ns": 1791520543267609800,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 5066549580806450
+      }
+    },
+    "4": {
+      "size_bytes": 40960,
+      "mtime_ns": 1791520543272615900,
+      "ctime_ns": 1791520543272615900,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 5066549580806451
+      }
+    },
+    "8": {
+      "size_bytes": 81920,
+      "mtime_ns": 1791520543278822400,
+      "ctime_ns": 1791520543278822400,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 12384898975283510
+      }
+    },
+    "16": {
+      "size_bytes": 163840,
+      "mtime_ns": 1791520543285860700,
+      "ctime_ns": 1791520543285860700,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 11821949021862199
+      }
+    },
+    "32": {
+      "size_bytes": 327680,
+      "mtime_ns": 1791520543290861000,
+      "ctime_ns": 1791520543290861000,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 3377699720542510
+      }
+    },
+    "64": {
+      "size_bytes": 655360,
+      "mtime_ns": 1791520543297950800,
+      "ctime_ns": 1791520543297950800,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 20829148276603205
+      }
+    },
+    "128": {
+      "size_bytes": 1310720,
+      "mtime_ns": 1791520543308726300,
+      "ctime_ns": 1791520543307578000,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 16888498602654026
+      }
+    },
+    "256": {
+      "size_bytes": 2621440,
+      "mtime_ns": 1791520543321554100,
+      "ctime_ns": 1791520543320553400,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 7881299347913035
+      }
+    }
+  },
+  "verified_native_cpu_gold": {
+    "1": {
+      "size_bytes": 10240,
+      "mtime_ns": 1791521100827354400,
+      "ctime_ns": 1791521100827354400,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990686
+      }
+    },
+    "2": {
+      "size_bytes": 20480,
+      "mtime_ns": 1791521102519356300,
+      "ctime_ns": 1791521102519356300,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990687
+      }
+    },
+    "4": {
+      "size_bytes": 40960,
+      "mtime_ns": 1791521105385314900,
+      "ctime_ns": 1791521105385314900,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990688
+      }
+    },
+    "8": {
+      "size_bytes": 81920,
+      "mtime_ns": 1791521108266074300,
+      "ctime_ns": 1791521108266074300,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990689
+      }
+    },
+    "16": {
+      "size_bytes": 163840,
+      "mtime_ns": 1791521111110209100,
+      "ctime_ns": 1791521111110209100,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990690
+      }
+    },
+    "32": {
+      "size_bytes": 327680,
+      "mtime_ns": 1791521114006907600,
+      "ctime_ns": 1791521114005614000,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990691
+      }
+    },
+    "64": {
+      "size_bytes": 655360,
+      "mtime_ns": 1791521116958964500,
+      "ctime_ns": 1791521116958964500,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990692
+      }
+    },
+    "128": {
+      "size_bytes": 1310720,
+      "mtime_ns": 1791521119885249000,
+      "ctime_ns": 1791521119883240000,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 7881299347914443
+      }
+    },
+    "256": {
+      "size_bytes": 2621440,
+      "mtime_ns": 1791521122925830900,
+      "ctime_ns": 1791521122923827500,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 1970324836990694
+      }
+    }
+  },
+  "asset_stats": {
+    "identity": {
+      "size_bytes": 3589,
+      "mtime_ns": 1791515299026387800,
+      "ctime_ns": 1791515299026387800,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 562949953527698
+      }
+    },
+    "blob": {
+      "size_bytes": 3072000,
+      "mtime_ns": 1791520543244546300,
+      "ctime_ns": 1791520543243549700,
+      "file_id": {
+        "volume": 6117023165593423684,
+        "index": 4222124650674796
+      }
+    }
+  },
+  "weights_header": {
+    "path": "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\weights.npz",
+    "size_bytes": 19661538,
+    "mtime_ns": 1791515299026387800,
+    "file_id": {
+      "volume": 6117023165593423684,
+      "index": 562949953527697
+    },
+    "tensors": {
+      "gate": {
+        "shape": [
+          640,
+          2560
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "646dfa7218597b396d18ee7b7c438e138fe3376dcf52e2d794b11cdaec97fb57"
+      },
+      "up": {
+        "shape": [
+          640,
+          2560
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "e956f0eb07632e15161c4ec855a9943ecd2b14843d4cf6ef8db32b7a8b70e5d5"
+      },
+      "down": {
+        "shape": [
+          2560,
+          640
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "uncompressed_member_bytes": 6553728,
+        "tensor_payload_bytes": 6553600,
+        "sha256_expected": "f189a27dd0e2c7d5a5fbf9f7ff9d2d309da265d8e7b75a73ad885d925ae07568"
+      }
+    },
+    "hidden": 2560,
+    "intermediate": 640,
+    "tensor_payload_bytes": 19660800,
+    "max_tensor_payload_bytes": 536870912,
+    "payload_hashes_verified": false,
+    "tensor_arrays_materialized": false
+  },
+  "arms": [
+    {
+      "id": "cpu-pool-w10-all-solo",
+      "kind": "cpu_solo",
+      "backend": "cpu-pool-w10-all",
+      "rows": [],
+      "status": "running",
+      "process_start": {
+        "argv": [
+          "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52\\hetero_native_cpu_service.exe",
+          "--serve",
+          "--blob",
+          "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+          "--blob-sha256",
+          "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+          "--identity",
+          "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+          "--identity-sha256",
+          "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+          "--pool-workers",
+          "10",
+          "--pool-affinity",
+          "all"
+        ],
+        "process_startup_wall_ns": 62551100,
+        "launcher_identity": {
+          "pid": 9972,
+          "parent_pid": 19232,
+          "create_time": 1791682533.3874347,
+          "executable": "e:\\strata-hetero-data\\build\\native-cpu-service-20261011-52\\hetero_native_cpu_service.exe",
+          "command_line": [
+            "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52\\hetero_native_cpu_service.exe",
+            "--serve",
+            "--blob",
+            "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "--blob-sha256",
+            "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "--identity",
+            "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+            "--identity-sha256",
+            "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+            "--pool-workers",
+            "10",
+            "--pool-affinity",
+            "all"
+          ]
+        },
+        "actual_service_process": {
+          "pid": 9972,
+          "parent_pid": 19232,
+          "create_time": 1791682533.3874347,
+          "executable": "e:\\strata-hetero-data\\build\\native-cpu-service-20261011-52\\hetero_native_cpu_service.exe",
+          "command_line": [
+            "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52\\hetero_native_cpu_service.exe",
+            "--serve",
+            "--blob",
+            "E:\\Strata-Hetero-data\\experts\\20261009-10-native-inputs-01\\expert.native.bin",
+            "--blob-sha256",
+            "b1dfa5bcd93c93044e19a4e4d9439460dfc49097afd87aaffb50792c288cb77f",
+            "--identity",
+            "E:\\Strata-Hetero-data\\experts\\20261009-01-real-expert-01\\identity.json",
+            "--identity-sha256",
+            "f8a01325406ed64ec0e12eabfddc49099f7f5d927dd33bc2447a25122422ac21",
+            "--pool-workers",
+            "10",
+            "--pool-affinity",
+            "all"
+          ],
+          "create_time_utc": "2026-10-11T01:35:33.387435+00:00"
+        },
+        "service_tree_topology": "direct-child"
+      },
+      "cleanup": {
+        "cpu-pool-w10-all": {
+          "descendant_cleanup": [
+            {
+              "identity": {
+                "pid": 11288,
+                "parent_pid": 9972,
+                "create_time": 1791682533.3947306,
+                "executable": "c:\\windows\\system32\\conhost.exe",
+                "command_line": [
+                  "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+                  "0x4"
+                ]
+              },
+              "action": "exited_during_cleanup"
+            }
+          ],
+          "remaining_owned_descendants": [],
+          "terminal": true
+        }
+      }
+    }
+  ],
+  "model_route_enabled": false,
+  "timing_contract": {
+    "caller_rtt": "F32LE input serialization start through owned contiguous F32 output copy completion; same serializer, OwnedPipeWorker.request, response prefix parse, and NumPy owned copy for CPU and Arc",
+    "worker_wall": "Service-local input owned copy through native operator/full graph and output serialization; CPU and Arc reported separately",
+    "checks_outside_timed_interval": [
+      "monitor.require before/after",
+      "input SHA-256 and size",
+      "output finite/shape/hash checks",
+      "quality evaluation"
+    ],
+    "init_costs_separate": true,
+    "run42_comparison_note": "Fresh Arc remeasure required: run42 timed input SHA/monitor checks in its client RTT.",
+    "paired_end_barrier": "Same reusable two-party barrier is entered after both end timestamps/output copies and before any monitor/hash/quality/file-write postprocessing.",
+    "output_persistence": "Each raw response is written exclusively under the E private root after the timed boundary; size/hash/path are in the receipt before numerical gating."
+  },
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "raw_output_files_written": false,
+  "large_f32_outputs_written": false,
+  "failure": {
+    "type": "CompareError",
+    "message": "IPC kind=1 id=1: INIT identity_sha256 does not match fixed identity file",
+    "failed_utc": "2026-10-11T01:35:33.453125+00:00",
+    "no_restart": true
+  },
+  "resource_gate_samples": 1,
+  "resource_gate_all_samples_passed": true,
+  "physical_available_min_bytes": 114043445248,
+  "commit_available_min_bytes": 120805232640,
+  "finished_utc": "2026-10-11T01:35:33.458930+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "phase": "source_only_preflight",
+  "build_started": false,
+  "no_retry": true,
+  "error": "FileNotFoundError: [WinError 2] \u7cfb\u7edf\u627e\u4e0d\u5230\u6307\u5b9a\u7684\u6587\u4ef6\u3002: 'C:\\\\Users\\\\DC\\\\Documents\\\\ChatGPT\\\\Strata-Hetero\\\\bench\\\\hetero\\\\20261011-52-native-cpu-service-build\\\\run_cpu59_build.py'",
+  "failed_utc": "2026-10-11T01:40:29.419785+00:00"
+}

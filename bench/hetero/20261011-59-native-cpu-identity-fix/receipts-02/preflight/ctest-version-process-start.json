@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "pid": 12904,
+    "parent_pid": 18804,
+    "create_time": 1791682858.6605773,
+    "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+      "--version"
+    ]
+  },
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "--version"
+  ],
+  "popen_owned_handle": true
+}

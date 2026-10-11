@@ -5,10 +5,12 @@ from dataclasses import dataclass
 import json
 import struct
 import threading
+import tempfile
 import time
 import unittest
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from types import SimpleNamespace
 
 from tools import hetero_native_ipc_compare as compare
 
@@ -93,6 +95,67 @@ class FakeQuality:
 
 
 class CompareProtocolFixtures(unittest.TestCase):
+    def test_contract_loader_accepts_explicit_path(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "contract.json"
+            expected = {"run_id": "fixture-run-60", "backends": []}
+            path.write_text(json.dumps(expected), encoding="utf-8")
+            self.assertEqual(compare.load_contract(path), expected)
+
+    def test_authorization_uses_selected_contract_and_source_freeze_paths(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            contract_path = directory / "compare-contract.json"
+            freeze_path = directory / "source-freeze.json"
+            auth_path = directory / "root-authorization.json"
+            contract_path.write_text('{"fixture":true}', encoding="utf-8")
+            freeze_path.write_text('{"fixture_freeze":true}', encoding="utf-8")
+            contract = {"run_id": "fixture-run-60", "source_freeze_path": str(freeze_path)}
+            auth = {"schema": "strata-native-ipc-compare-root-authorization-v1",
+                "run_id": contract["run_id"], "execution_authorized": True,
+                "model_matrix_stopped": True, "root_review_complete": True,
+                "client_sha256": compare._stable_sha(Path(compare.__file__)),
+                "contract_sha256": compare._stable_sha(contract_path),
+                "source_freeze_sha256": compare._stable_sha(freeze_path),
+                "cpu16_none_authorized": True}
+            auth_path.write_text(json.dumps(auth), encoding="utf-8")
+            args = SimpleNamespace(execute=True, root_start_confirmed=True,
+                model_matrix_stopped_confirmed=True, root_authorization=auth_path,
+                include_cpu16_none=True)
+            result = compare._authorization(args, contract, contract_path)
+            self.assertEqual(result["authorization"], auth)
+            self.assertEqual(result["path"], str(auth_path))
+
+    def test_cpu_binary_verification_binds_explicit_run59_and_legacy_run52(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            binary = directory / "service.exe"
+            binary.write_bytes(b"synthetic fixture bytes; never executed")
+            pins = {"cpu_service_source_sha256": "2" * 64,
+                "cpu_kernel_source_sha256": "1" * 64, "cpu_harness_cmake_sha256": "3" * 64,
+                "cpu_pool_cpp_sha256": "4" * 64, "cpu_pool_hpp_sha256": "5" * 64,
+                "cpu_service_fixture_sha256": "6" * 64}
+            source_map = {"src/hetero/native_cpu_service.cpp": pins["cpu_service_source_sha256"],
+                "src/hetero/native_expert_bench.cpp": pins["cpu_kernel_source_sha256"],
+                "tools/hetero_native_cpu/CMakeLists.txt": pins["cpu_harness_cmake_sha256"],
+                "src/kernels/cpu/pool.cpp": pins["cpu_pool_cpp_sha256"],
+                "include/strata/kernels/cpu/pool.hpp": pins["cpu_pool_hpp_sha256"],
+                "src/hetero/native_cpu_service_fixture.cpp": pins["cpu_service_fixture_sha256"]}
+            for run_id, explicit in (("native-cpu-service-20261011-59", True),
+                                     ("native-cpu-service-20261011-52", False)):
+                receipt_path = directory / (run_id + ".json")
+                receipt = {"status": "success", "run_id": run_id,
+                    "binaries": {"hetero_native_cpu_service": {"sha256": compare.sha(binary.read_bytes()),
+                        "path": str(binary)}}, "source_sha256_before": source_map}
+                receipt_path.write_text(json.dumps(receipt), encoding="utf-8")
+                backend = {"exe": str(binary), "exe_sha256": compare.sha(binary.read_bytes()),
+                    "build_receipt_path": str(receipt_path),
+                    "build_receipt_sha256": compare._stable_sha(receipt_path)}
+                if explicit:
+                    backend["build_run_id"] = run_id
+                self.assertEqual(compare._verify_cpu_binary({"source_pins": pins}, backend)["sha256"],
+                                 backend["exe_sha256"])
+
     def test_init_schema_and_rows(self):
         raw = compare.init_payload("0123456789abcdef0123456789abcdef", 256, "a" * 64)
         self.assertEqual(json.loads(raw), {
