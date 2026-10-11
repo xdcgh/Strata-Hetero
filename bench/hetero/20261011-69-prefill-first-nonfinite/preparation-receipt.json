@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_executed_root_review_required",
+  "run_id": "20261011-69-prefill-first-nonfinite",
+  "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6",
+  "preparation_sha256": "b2fb41aa5d6348ba44324ee607e7260ec3467932f4f7544d2720280947a44761",
+  "template_bindings_sha256": "124f1de243c422fe1465f6d1425bd1ab397fbc7ad35dd92cfad80bcc6c5a70ed",
+  "controls_normalization_sha256": "79df97215f184d5370929a6a7393c6aa646063f601347c1be6ba76aa8391213d",
+  "rendered_script_count": 4,
+  "request_output_leaves_created": 0,
+  "authorization_present": false,
+  "script_or_lifecycle_execution": false,
+  "no_model_payload_read_or_hashed": true
+}

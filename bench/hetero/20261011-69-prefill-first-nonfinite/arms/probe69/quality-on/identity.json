@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "source": {
+    "sha": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "tree": "4fccda1c3a4a10952fa2e1079a43b98fb78ca548",
+    "clean": true,
+    "binary_hash_finalized": true
+  },
+  "config": {
+    "sha256": "e672977613f11a27c1da3b941deea8852fe14d33c24db158f9b60a7d06d6f6c4",
+    "scope": "v0.1.42-E69-prefill-first-nonfinite-diagnostic",
+    "prompt_cache": 0,
+    "deterministic_placement": true,
+    "resident_budget_gib": 20,
+    "expert_file_io": "explicit buffered",
+    "capture_actual_engine_token_ids": true,
+    "native_dense_gguf_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "ple_gguf_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "only_runtime_difference": "E69 source/binary plus opt-in prefill finite-probe and zero-logits diagnostics; Run66 controls retained",
+    "diagnostic_environment_delta": {
+      "STRATA_PREFILL_FINITE_PROBE": "1",
+      "STRATA_DIAG_ZERO_LOGITS": "1"
+    },
+    "diagnostic_build_option": "STRATA_PREFILL_FINITE_PROBE=ON"
+  },
+  "model": {
+    "id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
+    "native_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "integrity_manifest": "../20261008-00-admission/model-integrity-02.json",
+    "integrity_status": "prior full-SHA receipts retained; current stat/fstat identities captured in fresh-identities.json and must be revalidated before launch",
+    "historical_manifest": "../20261006-00-inventory/historical-manifest.json"
+  },
+  "engine": {
+    "version": "0.1.42",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\strata.exe",
+    "sha256": "96b67b604e6b3b86f2a0bb865d9ffcc87be0a30232a9cfddb805387414243b83",
+    "size_bytes": 52784640,
+    "source_sha": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "build_receipt": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\build-receipt.json",
+    "build_receipt_sha256": "0bcd13c38cf12eed6d0adf9addb1298ae45847b4cb57b5927dc863e3937fa629",
+    "cmake_probe_option": "STRATA_PREFILL_FINITE_PROBE=ON"
+  },
+  "server_python": {
+    "checkout_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+    "server_file_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+    "server_file_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+    "quality_capture_opt_in": true,
+    "scope": "pinned v1.42 token-ID bridge for the single E69 diagnostic engine"
+  },
+  "acceptance_status": "prepared_not_launched"
+}

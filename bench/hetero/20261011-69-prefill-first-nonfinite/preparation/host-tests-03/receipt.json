@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "command": [
+    "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "-B",
+    "bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\test_prepare_probe69_model.py",
+    "DiagnosticFixtureTests.test_quality_renderer_keeps_full_manifest_validation_and_six_prompt_loop",
+    "PreparationBindingFixtureTests.test_complete_preparation_writes_only_inside_temporary_fixture",
+    "PreparationBindingFixtureTests.test_cleanup_without_text_run_id_requires_explicit_path_binding"
+  ],
+  "working_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "source_sha256": "b344d39bc6947ee1e4ede7c0ee9cb0e1c9b9d952820fd74a121be317524f7771",
+  "test_sha256": "6b13e38e7808dcb18bb6c87feb77534288988a2013fa85d0f916ae048b30c08d",
+  "powershell_path": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "powershell_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "selected_tests": [
+    "DiagnosticFixtureTests.test_quality_renderer_keeps_full_manifest_validation_and_six_prompt_loop",
+    "PreparationBindingFixtureTests.test_complete_preparation_writes_only_inside_temporary_fixture",
+    "PreparationBindingFixtureTests.test_cleanup_without_text_run_id_requires_explicit_path_binding"
+  ],
+  "exit_code": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_sha256": "239ba389ac6161932a0c9428d0b07c37e2ca1da56cb377076c3e4cd2ee6a1931",
+  "stderr_bytes": 106,
+  "preparation_program_executed": false,
+  "official_run69_outputs_created": false
+}

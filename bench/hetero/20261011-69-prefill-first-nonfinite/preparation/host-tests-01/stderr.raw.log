@@ -1,0 +1,49 @@
+...E..E..E.
+======================================================================
+ERROR: test_quality_renderer_keeps_full_manifest_validation_and_six_prompt_loop (__main__.DiagnosticFixtureTests.test_quality_renderer_keeps_full_manifest_validation_and_six_prompt_loop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\test_prepare_probe69_model.py", line 101, in test_quality_renderer_keeps_full_manifest_validation_and_six_prompt_loop
+    rendered = prep.rewrite_quality_script(source, r"C:\Run69\arms\probe69\quality-on")
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 403, in rewrite_quality_script
+    result = _rewrite_six_prompt_final(result)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 451, in _rewrite_six_prompt_final
+    raise ValueError("Run66 nine-prompt final metadata block anchors changed")
+ValueError: Run66 nine-prompt final metadata block anchors changed
+
+======================================================================
+ERROR: test_complete_preparation_writes_only_inside_temporary_fixture (__main__.PreparationBindingFixtureTests.test_complete_preparation_writes_only_inside_temporary_fixture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\test_prepare_probe69_model.py", line 230, in test_complete_preparation_writes_only_inside_temporary_fixture
+    result = prep._write_preparation()
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 964, in _write_preparation
+    script_texts, script_bindings = render_phase_scripts(phase_dir, rendered_dir, base_side["model_name"])
+                                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 537, in render_phase_scripts
+    rendered = render_quality_script(source, new_dir) if source_name == "quality.ps1" else _replace_run_bindings(source, old_dir, new_dir)
+               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 469, in render_quality_script
+    return rewrite_quality_script(source, new_run_dir)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 403, in rewrite_quality_script
+    result = _rewrite_six_prompt_final(result)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 451, in _rewrite_six_prompt_final
+    raise ValueError("Run66 nine-prompt final metadata block anchors changed")
+ValueError: Run66 nine-prompt final metadata block anchors changed
+
+======================================================================
+ERROR: test_rendered_quality_script_has_valid_powershell_ast (__main__.PreparationBindingFixtureTests.test_rendered_quality_script_has_valid_powershell_ast)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\test_prepare_probe69_model.py", line 161, in test_rendered_quality_script_has_valid_powershell_ast
+    rendered = prep.rewrite_quality_script(source, r"C:\Probe69\arms\probe69\quality-on")
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 403, in rewrite_quality_script
+    result = _rewrite_six_prompt_final(result)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\preparation\prepare_probe69_model.py", line 451, in _rewrite_six_prompt_final
+    raise ValueError("Run66 nine-prompt final metadata block anchors changed")
+ValueError: Run66 nine-prompt final metadata block anchors changed
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.605s
+
+FAILED (errors=3)

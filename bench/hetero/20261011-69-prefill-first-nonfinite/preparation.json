@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "prepared_probe69_pending_root_review_not_launched",
+  "run_id": "20261011-69-prefill-first-nonfinite",
+  "side_id": "probe69",
+  "source_head": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+  "source_tree": "4fccda1c3a4a10952fa2e1079a43b98fb78ca548",
+  "build_receipt": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\build-receipt.json",
+  "build_receipt_sha256": "0bcd13c38cf12eed6d0adf9addb1298ae45847b4cb57b5927dc863e3937fa629",
+  "binary_path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\strata.exe",
+  "binary_sha256": "96b67b604e6b3b86f2a0bb865d9ffcc87be0a30232a9cfddb805387414243b83",
+  "binary_bytes": 52784640,
+  "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6",
+  "template_bindings_sha256": "124f1de243c422fe1465f6d1425bd1ab397fbc7ad35dd92cfad80bcc6c5a70ed",
+  "controls_normalization_sha256": "79df97215f184d5370929a6a7393c6aa646063f601347c1be6ba76aa8391213d",
+  "quality_prompt_ids": [
+    "smoke_arithmetic",
+    "smoke_unicode",
+    "smoke_json_arithmetic",
+    "smoke_python_function",
+    "smoke_three_key_retrieval",
+    "long_1k"
+  ],
+  "manifest_prompt_ids": [
+    "smoke_arithmetic",
+    "smoke_unicode",
+    "smoke_json_arithmetic",
+    "smoke_python_function",
+    "smoke_three_key_retrieval",
+    "long_1k",
+    "long_4k",
+    "long_16k",
+    "long_30k7"
+  ],
+  "warmups_per_prompt": 1,
+  "formal_per_prompt": 3,
+  "request_output_leaves_created": 0,
+  "model_or_runtime_assets_copied": false,
+  "authorization_present": false,
+  "scripts_invoked": false,
+  "no_start_cli_validation_performed": false
+}
