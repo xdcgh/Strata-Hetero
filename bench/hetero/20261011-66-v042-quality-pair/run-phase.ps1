@@ -1,6 +1,7 @@
 param(
     [ValidateSet('upstream42','hetero42')][string]$Side='upstream42',
     [ValidateSet('launch','watch','quality','cleanup')][string]$Phase='launch',
+    [ValidateRange(1,3)][int]$Attempt=1,
     [switch]$Execute,
     [string]$Authorization
 )
@@ -35,12 +36,14 @@ if(-not $Execute){
 if(-not $Authorization -or -not [IO.Path]::IsPathRooted($Authorization)){throw 'Absolute root authorization required'}
 $auth=Get-Content -LiteralPath $Authorization -Raw|ConvertFrom-Json -DateKind String
 if($auth.status -ne 'root_reviewed_authorized' -or $auth.matrix_sha256 -ne (Sha $matrixPath) -or $auth.wrapper_sha256 -ne (Sha $PSCommandPath) -or $Side -notin $auth.sides -or $auth.execution_mode -ne 'direct_powershell_controllers'){throw 'Root execution binding mismatch'}
+if($Attempt -gt 1 -and ($Side+'.'+$Phase+'.'+$Attempt) -notin $auth.corrected_preflight_attempts){throw 'This corrected preflight attempt is not explicitly authorized'}
 foreach($pin in $auth.source_pins){if((Sha $pin.path) -ne $pin.sha256){throw "Runtime source changed: $($pin.path)"}}
 if($Phase -eq 'launch'){
     foreach($prompt in $matrix.quality_recipe.prompt_ids){if(Test-Path -LiteralPath (Join-Path $arm ('requests\'+$prompt))){throw 'Request output leaf must be absent before launch'}}
     foreach($relative in @('process.json','sampler-process.json','admission.json','logs\engine.log','resource\samples.jsonl','resource\STOP')){if(Test-Path -LiteralPath (Join-Path $arm $relative)){throw "Lifecycle output already exists: $relative"}}
 }
-$evidence=Join-Path $root ('execution\'+$Side+'\'+$Phase)
+$phaseFolder=if($Attempt -eq 1){$Phase}else{$Phase+'-attempt-'+$Attempt.ToString('00')}
+$evidence=Join-Path $root ('execution\'+$Side+'\'+$phaseFolder)
 if(Test-Path -LiteralPath $evidence){throw 'Phase evidence path already exists; no implicit retry'}
 [void][IO.Directory]::CreateDirectory($evidence)
 $out=Join-Path $evidence 'stdout.log';$err=Join-Path $evidence 'stderr.log'

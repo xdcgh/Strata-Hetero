@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "status": "prepared_v42_contracts_validated_no_actions_pending_root_review_and_new_authorization",
+  "run_id": "20261011-66-v042-quality-pair",
+  "matrix_sha256": "544e03a14c6aaad5127dca7448e65bc08791fe7d3d827b84f497d80fca8f9b6a",
+  "preparation_sha256": "b317ac22ffda520fd654e20777162406578fa3e8b57f23cde2ab648416cb7ea4",
+  "preparation_receipt_sha256": "e9a1402e5836935fd95529e3480d95e5628b8bd44cd0e6144b52cfffbc3d4c2f",
+  "template_bindings_sha256": "7e40ac6234a6860e5c9459fe5427e25ec9a6a635b089af7fc1ddac041b9a2c0f",
+  "controls_normalization_sha256": "137ca0f09ea7a45b2beeeecf8d364f9178a0195691d1d0ca282cbfd073bf63ee",
+  "no_start_validation": {
+    "upstream42": {
+      "launch": {
+        "status": "prepared_validated",
+        "script_sha256": "de0825a75187d72c99beaae4e34a66de0400f6eb7debc4ed34eee66e612d348d",
+        "stdout_sha256": "c3024d7b5ff78a567900b90643fdf891fe6297a200a0948db8674aefe74af2d2",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0,
+        "action_flag": {
+          "start_performed": false
+        },
+        "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\validation-receipt.json"
+      },
+      "watch": {
+        "status": "startup_watch_prepared",
+        "script_sha256": "9f795e25198fb5d6d801c3d45f5ea702f4f5fd8ac094899a0359b67c2c88ff69",
+        "stdout_sha256": "3832d77f6717631f7c5dcb0ebd97808cf230959b2d9290cb9e63b31ef5192560",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0,
+        "action_flag": {
+          "monitor_started": false
+        },
+        "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\watch-validation-receipt.json"
+      },
+      "quality": {
+        "status": "prepared_quality_validated",
+        "script_sha256": "836e4bed436fbda07d13a36f4b65c1fd2b11d90c9f9620fe3cfcf78943ad0548",
+        "stdout_sha256": "c966c6698a0409c9afb7f9190b11f1c8f8b2edc32d6f2012360a065303743e36",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0,
+        "action_flag": {
+          "run_started": false
+        },
+        "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\quality-validation-receipt.json"
+      },
+      "cleanup": {
+        "status": "pass_parse_only_not_invoked",
+        "script_sha256": "6edcf72c66ee7c317e8adac840b0de5d372587c00fd9709725efaaa651baa9a9",
+        "stdout_sha256": "b81051b221b99639cb9c3f2844ea16e458190a95c00bdc36cac57a38c280e306",
+        "stderr_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "parse_errors": 0,
+        "script_invoked": false,
+        "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\cleanup-validation-receipt.json"
+      }
+    },
+    "hetero42": {
+      "launch": {
+        "status": "prepared_validated",
+        "script_sha256": "d7089b54ffc537115fa76602fc1b19019aa087453c0cf4e209fb9a1fb360b112",
+        "stdout_sha256": "2d61c087a0db1408b6f60e2f993f088e2c0eb73618b74ce8698e131164d43aa4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0,
+        "action_flag": {
+          "start_performed": false
+        },
+        "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\launch-validation-receipt.json"
+      },
+      "watch": {
+        "status": "startup_watch_prepared",
+        "script_sha256": "ec26cdff6c643a9dd25b73074dceac8b3ce82157a1549d5a42f7eef03deefe42",
+        "stdout_sha256": "619c7f46f735afd247543171f0106a9bd85f8992d5038dff8e0cbc519fc50216",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0,
+        "action_flag": {
+          "monitor_started": false
+        },
+        "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\watch-validation-receipt.json"
+      },
+      "quality": {
+        "status": "prepared_quality_validated",
+        "script_sha256": "8e12d43d5c85adeaf739657959d0c877c75424f9edf0e370a1dd6f822ce0d899",
+        "stdout_sha256": "c966c6698a0409c9afb7f9190b11f1c8f8b2edc32d6f2012360a065303743e36",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0,
+        "action_flag": {
+          "run_started": false
+        },
+        "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\quality-validation-receipt.json"
+      },
+      "cleanup": {
+        "status": "pass_parse_only_not_invoked",
+        "script_sha256": "e528d014dccc5914d0a97d2cad7cef1997436020548bd55fb055aab8ccf83ef1",
+        "stdout_sha256": "b81051b221b99639cb9c3f2844ea16e458190a95c00bdc36cac57a38c280e306",
+        "stderr_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "parse_errors": 0,
+        "script_invoked": false,
+        "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\cleanup-validation-receipt.json"
+      }
+    }
+  },
+  "rendered_script_count": 8,
+  "launched_scripts": 6,
+  "cleanup_parser_only_count": 2,
+  "start_performed": false,
+  "monitor_started": false,
+  "quality_run_started": false,
+  "cleanup_invoked": false,
+  "model_api_called": false,
+  "authorization": null,
+  "failed_initial_launch_preserved": true,
+  "root_authorization_01_preserved_but_stale": true,
+  "root_run_phase_wrapper_untouched": true,
+  "root_run_phase_wrapper_sha256": "88cfca5d2f61920defa618533c969df6302cef272fd4595d59f55d7d1dbafe71",
+  "preflight_repair_source_pins": {
+    "identity_provenance_repair": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\repair_identity_contracts_01.py",
+      "sha256": "c42a4673912770f7baaf7b8a3c0883c048690fa718158ac6c89bbe94c53b71a9"
+    },
+    "no_start_validation_recorder": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\record_no_start_validation_01.py",
+      "sha256": "a37c284920509e9d8d802e4806ba43d82f33e193a805c92b25e3886fae6ce632"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "status": "pre-repair-source-and-failed-launch-state-snapshotted",
+  "observed_utc": "2026-10-11T03:10:19.0461723Z",
+  "files": [
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\root-authorization-01.json",
+      "sha256": "09c552ba6be71725557446f60e115fef8bbf37ac2b4a27802274da30df0ebe94",
+      "source": "root-authorization-01.json",
+      "bytes": 2669
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\matrix.json",
+      "sha256": "bfee74aca86651b0a10aac95379708091b3f28613b1bfee960784a3928b24d79",
+      "source": "matrix.json",
+      "bytes": 15301
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\template-bindings.json",
+      "sha256": "7950618c75b29c438204c4349dec1ab3552bcf2f4b407e46d328d865d825c882",
+      "source": "template-bindings.json",
+      "bytes": 15030
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\controls-normalization.json",
+      "sha256": "51f54a8e09ccdace67dd00adf0dfa308f48e9091def293851eaae421d5ea4102",
+      "source": "controls-normalization.json",
+      "bytes": 5092
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\preparation.json",
+      "sha256": "f58bc48f70c8e9b215517d4e29280bb8328bc3255656d928d1d793937f88e35f",
+      "source": "preparation.json",
+      "bytes": 8611
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\preparation-receipt.json",
+      "sha256": "549d20ed553620db50154a5d365d6112a9adf404c731276d6d1b62834331fc04",
+      "source": "preparation-receipt.json",
+      "bytes": 1957
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\finalization-01__receipt.json",
+      "sha256": "460a134292eed532a16e7faf572af0358fe3d2f5dbe13e85e880a5841f3e0c7f",
+      "source": "finalization-01\\receipt.json",
+      "bytes": 1155
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\finalization-02__receipt.json",
+      "sha256": "3fc1c4ff420cf1f5a19ac58ef353e8aea17ce1fc011cf7ea7d6e6d9549235961",
+      "source": "finalization-02\\receipt.json",
+      "bytes": 1049
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\draft-01__matrix.json",
+      "sha256": "0c7a1c92c88a8f6b1fc17dfe41adadb120dc7060804062983c9b1d8db0d77f9f",
+      "source": "draft-01\\matrix.json",
+      "bytes": 12919
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\draft-01__preparation.json",
+      "sha256": "c99b02b98998a26629f12f4af1c1c369cd56714aa81616e738a6bde84bbf27c5",
+      "source": "draft-01\\preparation.json",
+      "bytes": 8271
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\draft-01__preparation-receipt.json",
+      "sha256": "74e54f4653e129f5b160e23f9eb9e301dc27b1ce99a33239ed5cbdcff844efe7",
+      "source": "draft-01\\preparation-receipt.json",
+      "bytes": 1414
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\draft-01__template-bindings.json",
+      "sha256": "bb3ae1a29674e07a41024e2b7550e423ccebe341996609a3c932623023bc6c26",
+      "source": "draft-01\\template-bindings.json",
+      "bytes": 12090
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\draft-01__controls-normalization.json",
+      "sha256": "3f9e4ae157d7593d9912541ffccbc093925959bec4a29d3f60b33e5b38d99f6c",
+      "source": "draft-01\\controls-normalization.json",
+      "bytes": 3357
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\arms__upstream42__quality-on__identity.json",
+      "sha256": "c9b7e1371c47970a3640c311a1a0defead2c2dc11083d9cb3b4a7afa066f7def",
+      "source": "arms\\upstream42\\quality-on\\identity.json",
+      "bytes": 2137
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\arms__upstream42__quality-on__provenance.json",
+      "sha256": "3ec1ebb16b075a81a02260ddae623721cf2d49ed1ce01951b6f427e45b6f3191",
+      "source": "arms\\upstream42\\quality-on\\provenance.json",
+      "bytes": 2499
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\arms__hetero42__quality-on__identity.json",
+      "sha256": "1b92c8c5039e424328a573d7460dc4643d61422fdd26d53996e2a9afa1b36841",
+      "source": "arms\\hetero42\\quality-on\\identity.json",
+      "bytes": 2131
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\arms__hetero42__quality-on__provenance.json",
+      "sha256": "4fd6c2a8f32280f564d022ecff7036e5d9f90715d4a8f7eb32d6cbb8f4a32ba2",
+      "source": "arms\\hetero42\\quality-on\\provenance.json",
+      "bytes": 2493
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\execution__upstream42__launch__controller.json",
+      "sha256": "95366fa144d597486b00808e4f338217a536fc63ce856679dac001bbf8fc6a65",
+      "source": "execution\\upstream42\\launch\\controller.json",
+      "bytes": 954
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\execution__upstream42__launch__stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "execution\\upstream42\\launch\\stdout.log",
+      "bytes": 0
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\execution__upstream42__launch__stderr.log",
+      "sha256": "947cdcba798a7d0a387a93dc20568af0bd114a41733421afa619ef410b980884",
+      "source": "execution\\upstream42\\launch\\stderr.log",
+      "bytes": 390
+    },
+    {
+      "snapshot": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\pre-edit-snapshot\\execution__upstream42__launch__terminal.json",
+      "sha256": "89c131227d197c360e64e3af709de89e189ce1094dae4c7d10e502c0d6b06118",
+      "source": "execution\\upstream42\\launch\\terminal.json",
+      "bytes": 425
+    }
+  ]
+}

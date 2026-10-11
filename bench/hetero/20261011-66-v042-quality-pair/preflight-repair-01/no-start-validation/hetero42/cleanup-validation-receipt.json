@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "pass_parse_only_not_invoked",
+  "side": "hetero42",
+  "phase": "cleanup",
+  "script_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\cleanup.ps1",
+  "script_sha256": "e528d014dccc5914d0a97d2cad7cef1997436020548bd55fb055aab8ccf83ef1",
+  "parser": "System.Management.Automation.Language.Parser.ParseFile",
+  "parse_errors": 0,
+  "script_invoked": false,
+  "reason": "cleanup body reads owner receipts and performs API status/unload validation; unsafe as default validation invocation",
+  "stdout_sha256": "b81051b221b99639cb9c3f2844ea16e458190a95c00bdc36cac57a38c280e306",
+  "stderr_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+  "observed_utc": "2026-10-11T03:12:50.6614965Z"
+}

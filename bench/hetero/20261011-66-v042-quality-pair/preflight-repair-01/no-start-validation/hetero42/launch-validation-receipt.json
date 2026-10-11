@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "prepared_validated",
+  "side": "hetero42",
+  "phase": "launch",
+  "mode": "no -Start",
+  "exit_code": 0,
+  "script_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\launch.ps1",
+  "script_sha256": "d7089b54ffc537115fa76602fc1b19019aa087453c0cf4e209fb9a1fb360b112",
+  "stdout_path": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\no-start-validation\\hetero42\\launch.stdout.log",
+  "stdout_sha256": "2d61c087a0db1408b6f60e2f993f088e2c0eb73618b74ce8698e131164d43aa4",
+  "stderr_path": "bench\\hetero\\20261011-66-v042-quality-pair\\preflight-repair-01\\no-start-validation\\hetero42\\launch.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "invoked_at_utc": "2026-10-11T03:12:35.1749977Z"
+}

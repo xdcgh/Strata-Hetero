@@ -1,0 +1,63 @@
+{
+  "status": "root_reviewed_authorized",
+  "run_id": "20261011-66-v042-quality-pair",
+  "utc": "2026-10-11T03:15:18.999224+00:00",
+  "matrix_sha256": "544e03a14c6aaad5127dca7448e65bc08791fe7d3d827b84f497d80fca8f9b6a",
+  "wrapper_sha256": "88cfca5d2f61920defa618533c969df6302cef272fd4595d59f55d7d1dbafe71",
+  "template_bindings_sha256": "7e40ac6234a6860e5c9459fe5427e25ec9a6a635b089af7fc1ddac041b9a2c0f",
+  "execution_mode": "direct_powershell_controllers",
+  "sides": [
+    "upstream42",
+    "hetero42"
+  ],
+  "source_pins": [
+    {
+      "role": "admission",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_admission.py",
+      "sha256": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e"
+    },
+    {
+      "role": "resource_monitor",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    {
+      "role": "quality_runner",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_quality.py",
+      "sha256": "e12e0a4f3ecd4225c42e361ec0dd512ac0ac874c250efaa095a90715d2a0b4a2"
+    },
+    {
+      "role": "asset_stat_verifier",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_verify_existing.py",
+      "sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3"
+    },
+    {
+      "role": "jsonl_reader",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_jsonl_tail.ps1",
+      "sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d"
+    },
+    {
+      "role": "shared_bridge",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+      "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded"
+    },
+    {
+      "role": "cleanup_renderer",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_pool_sweep.py",
+      "sha256": "1942736d217f376f82702f62027302de70f8ff222919d38a4916b57627b6bd8f"
+    }
+  ],
+  "quality_only": true,
+  "model_source_integrity_and_build_review": "bench/hetero/20261011-64-upstream42-cuda-build/execution/root-pair-review.json",
+  "scope": "Same fixed two-side quality recipe; corrected missing fullprovenance/identity contract beforeadmission; upstreamlaunchattempt2 exclusivelyauthorized; no modelorrequests inattempt1; strictfreshgates andstopfirst unchanged",
+  "first_side": "upstream42",
+  "second_side_condition": "Root verifies first side quality and exact terminal cleanup before authorizing continuation to second side",
+  "physical_RAM_floor_bytes": 12884901888,
+  "commit_floor_bytes": 4294967296,
+  "corrected_preflight_attempts": [
+    "upstream42.launch.2"
+  ],
+  "previous_failed_before_model_attempt": "execution/upstream42/launch",
+  "previous_auth_stale_retained": "root-authorization-01.json",
+  "no_start_contract_validation_receipt_sha256": "bfd0d513fa9ed942e163ba287141743616b0b654daabab477c763c5debf629de"
+}

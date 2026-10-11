@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "status": "exact_normalized_json_pair_match_final_direct_powershell_contract",
+  "normalization": {
+    "replace_executable_path_with": "@ENGINE_PATH@",
+    "replace_model_name_with": "@SIDE_LABEL@",
+    "replace_run_local_log_path_with": "@SIDE_LOG@",
+    "do_not_normalize_or_reorder_args": true,
+    "do_not_normalize_environment": true
+  },
+  "common_arguments": [
+    "--pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+    "--native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "--expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+    "--expert-cache auto",
+    "--prefill auto",
+    "--spec 4",
+    "--spec-min-p 0.5",
+    "--mtp F:\\Strata-data\\mtp\\rt",
+    "--max-context 32768",
+    "--kv int8",
+    "--resident-budget-gib 20",
+    "--vram-reserve-mib 4096",
+    "--pool-workers 10",
+    "--pool-affinity all",
+    "--prompt-cache 0",
+    "--adapt-swaps 0",
+    "--pcie-frac 0",
+    "--ple-io direct",
+    "four --native-dense-gguf shards (same paths, same order)",
+    "--ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+  ],
+  "common_environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "STRATA_IQ_MT_MIN": "1",
+    "STRATA_GGUF_PY": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py",
+    "STRATA_UNBUFFERED_LOAD": "0",
+    "STRATA_PREFILL_CPU_SHARE": "0",
+    "STRATA_STAGE_PIN": "0",
+    "STRATA_ROUTE_TAIL_SKIP": "0"
+  },
+  "common_sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 42
+  },
+  "quality": {
+    "captured_actual_engine_token_ids": true,
+    "warmups_per_prompt": 1,
+    "formal_repeats_per_prompt": 3,
+    "prompts": 9,
+    "performance_phase": false
+  },
+  "comparison_only_differences": [
+    "source commit",
+    "binary path/hash",
+    "config model_name",
+    "run-local paths and owned receipts"
+  ],
+  "current_stat_identity": "not captured; must be fresh at root launch admission",
+  "source_and_binary_hashes": "binary SHA/size pending both active builds; source commits pinned above",
+  "canonical_normalized_config_sha256": "f26ddd8f9e8f2f34a96c9e5bcb92353e81de652ba4a8f40fe6a0c366c0d999c3",
+  "normalized_config_equality": "pass_exact_json_equality_after_only_exe_model_name_log_replacement",
+  "normalization_status": "exact_normalized_json_pair_match",
+  "config_hashes": {
+    "upstream42": "8703ae9037f7dc6d2058ab6953c33407e8c6d8b9f4729d4d51aec7ade816d430",
+    "hetero42": "8c883346e5482e549d37a95f39f2138c2b5a5ab52090427e9bf0eeda15ae02d8"
+  },
+  "identity_hashes": {
+    "upstream42": "27b9d324fea2db7ec34de03d2a47a71856abbac77a78465f94abdddacec15b34",
+    "hetero42": "2f79bdd22b7519908f01d0d93ca35d5bf7c914beec5326097a3dca53a8c04071"
+  },
+  "provenance_hashes": {
+    "upstream42": "3ec1ebb16b075a81a02260ddae623721cf2d49ed1ce01951b6f427e45b6f3191",
+    "hetero42": "0ab86d5fcf15bbd88180112f3dc24840c9905c6c788c86ec266b80b6be2061e6"
+  },
+  "normalization_verification": {
+    "status": "pass_exact_json_equality",
+    "normalized_fields": [
+      "exe",
+      "model_name",
+      "log"
+    ],
+    "all_other_config_fields_equal": true,
+    "canonical_normalized_config_sha256": "f26ddd8f9e8f2f34a96c9e5bcb92353e81de652ba4a8f40fe6a0c366c0d999c3",
+    "route_tail_skip": "0 on both",
+    "strata_diag_zero_logits": "absent on both"
+  },
+  "binary_bindings": {
+    "upstream42": {
+      "sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+      "bytes": 52763648
+    },
+    "hetero42": {
+      "sha256": "deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0",
+      "bytes": 52769792
+    }
+  },
+  "source_commits": {
+    "upstream42": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "hetero42": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf"
+  },
+  "fresh_input_identity_snapshot": {
+    "sha256": "5cd2b83334ed8c091f2640f156d6dada1ddc92c6b343311387aa06bb4c618539",
+    "model_shards": 4,
+    "pack_mtp_runtime_files": 14,
+    "all_current_identities_match_prior_receipts": true,
+    "payload_bytes_read": 0,
+    "launch_time_stat_recheck_required": true
+  },
+  "execution_mode": "direct_powershell_controllers",
+  "controller_wrapper": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\run-phase.ps1",
+    "sha256": "88cfca5d2f61920defa618533c969df6302cef272fd4595d59f55d7d1dbafe71",
+    "owner": "root",
+    "mutated_by_this_preparation": false
+  },
+  "admission_proof": {
+    "strict_original_gates_retained": true,
+    "required": [
+      "WSL shutdown",
+      "12 GiB available RAM",
+      "4 GiB available commit",
+      "46000 MiB VRAM"
+    ],
+    "foreign_python_and_gpu_workload_checks": "retained without exemptions",
+    "owned_python_controller_proof_argument": "removed from rendered launch commands; not a gate exemption"
+  },
+  "rendered_launch_hashes": {
+    "upstream42": "de0825a75187d72c99beaae4e34a66de0400f6eb7debc4ed34eee66e612d348d",
+    "hetero42": "d7089b54ffc537115fa76602fc1b19019aa087453c0cf4e209fb9a1fb360b112"
+  },
+  "identity_provenance_schema_sources": {
+    "upstream42": {
+      "identity_template": "bench\\hetero\\20261009-40-upstream41-direct-quality\\identity.json",
+      "identity_template_sha256": "db2dc0037180fc7bf77a0adeb384bbb9c031950165221bcfea67dba690f28b8e",
+      "provenance_template": "bench\\hetero\\20261009-40-upstream41-direct-quality\\provenance.json",
+      "provenance_template_sha256": "ab10666f11efe173a4e7e063e2f788d8aae666233ba548116895c625e23a0e86",
+      "identity_sha256": "4543a92a0d1324e460e1b29008859a0b3245ebd9dc6e1df1bf870c212cb887f0",
+      "provenance_sha256": "142acf6f379604d8b2b79465a75ce231a669399039eff5bc898d00bb94db8afc",
+      "full_original_schema_copied": true,
+      "placements_contrast_retained_from_prior_full_hash_and_copy_receipt": true
+    },
+    "hetero42": {
+      "identity_template": "bench\\hetero\\20261009-41-hetero41-direct-quality\\identity.json",
+      "identity_template_sha256": "f00faab421cd3aaa372de2fd31e857eb1368ab74bd6b690ff8a86c8c929e0d30",
+      "provenance_template": "bench\\hetero\\20261009-41-hetero41-direct-quality\\provenance.json",
+      "provenance_template_sha256": "b07a05571798f9e1b513d65a030841651cd44c500e14ce05c1bbf5d302207816",
+      "identity_sha256": "42518197e8973b3ba427bb7738723d5a667785420dc44d70d1861f765ea6aa40",
+      "provenance_sha256": "8363944fd4d1c97e9f247b4b2bab79b51099b1272ad35f382b83f5dfb6446225",
+      "full_original_schema_copied": true,
+      "placements_contrast_retained_from_prior_full_hash_and_copy_receipt": true
+    }
+  },
+  "v42_contract_coverage": {
+    "all_sides_have_placement_contrast_path_and_prior_sha256": true,
+    "all_sides_have_quality_manifest_path_and_sha256": true,
+    "all_sides_have_jsonl_reader_sha256": true,
+    "all_sides_have_engine_cpp_sha_version_path_sha256": true,
+    "expected_model_names_match_each_config": true,
+    "all_sides_have_route_tail_skip_zero": true,
+    "snapshot_sha256": "8b75cbdb3c587d09d829e8be6f485d47a5971aab8bdb5f497a56a1093904b908",
+    "placement_contrast_path_and_prior_sha": "pass_both_sides",
+    "quality_manifest_sha256": "pass_both_sides",
+    "jsonl_reader_sha256": "pass_both_sides",
+    "engine_cpp_sha_version_path_binary_sha": "pass_both_sides",
+    "model_name_matches_config": "pass_both_sides",
+    "launch_watch_quality_readonly_defaults": "pass_both_sides",
+    "cleanup_parser_only": "pass_both_sides"
+  },
+  "authorization_status": "none; prior auth is stale after matrix repair and preserved unchanged",
+  "no_start_validation": {
+    "status": "six_read_only_default_invocations_passed; two cleanup scripts parser-only",
+    "results": {
+      "upstream42": {
+        "launch": {
+          "status": "prepared_validated",
+          "script_sha256": "de0825a75187d72c99beaae4e34a66de0400f6eb7debc4ed34eee66e612d348d",
+          "stdout_sha256": "c3024d7b5ff78a567900b90643fdf891fe6297a200a0948db8674aefe74af2d2",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "start_performed": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\validation-receipt.json"
+        },
+        "watch": {
+          "status": "startup_watch_prepared",
+          "script_sha256": "9f795e25198fb5d6d801c3d45f5ea702f4f5fd8ac094899a0359b67c2c88ff69",
+          "stdout_sha256": "3832d77f6717631f7c5dcb0ebd97808cf230959b2d9290cb9e63b31ef5192560",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "monitor_started": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\watch-validation-receipt.json"
+        },
+        "quality": {
+          "status": "prepared_quality_validated",
+          "script_sha256": "836e4bed436fbda07d13a36f4b65c1fd2b11d90c9f9620fe3cfcf78943ad0548",
+          "stdout_sha256": "c966c6698a0409c9afb7f9190b11f1c8f8b2edc32d6f2012360a065303743e36",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "run_started": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\quality-validation-receipt.json"
+        },
+        "cleanup": {
+          "status": "pass_parse_only_not_invoked",
+          "script_sha256": "6edcf72c66ee7c317e8adac840b0de5d372587c00fd9709725efaaa651baa9a9",
+          "stdout_sha256": "b81051b221b99639cb9c3f2844ea16e458190a95c00bdc36cac57a38c280e306",
+          "stderr_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+          "parse_errors": 0,
+          "script_invoked": false,
+          "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\cleanup-validation-receipt.json"
+        }
+      },
+      "hetero42": {
+        "launch": {
+          "status": "prepared_validated",
+          "script_sha256": "d7089b54ffc537115fa76602fc1b19019aa087453c0cf4e209fb9a1fb360b112",
+          "stdout_sha256": "2d61c087a0db1408b6f60e2f993f088e2c0eb73618b74ce8698e131164d43aa4",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "start_performed": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\launch-validation-receipt.json"
+        },
+        "watch": {
+          "status": "startup_watch_prepared",
+          "script_sha256": "ec26cdff6c643a9dd25b73074dceac8b3ce82157a1549d5a42f7eef03deefe42",
+          "stdout_sha256": "619c7f46f735afd247543171f0106a9bd85f8992d5038dff8e0cbc519fc50216",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "monitor_started": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\watch-validation-receipt.json"
+        },
+        "quality": {
+          "status": "prepared_quality_validated",
+          "script_sha256": "8e12d43d5c85adeaf739657959d0c877c75424f9edf0e370a1dd6f822ce0d899",
+          "stdout_sha256": "c966c6698a0409c9afb7f9190b11f1c8f8b2edc32d6f2012360a065303743e36",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "run_started": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\quality-validation-receipt.json"
+        },
+        "cleanup": {
+          "status": "pass_parse_only_not_invoked",
+          "script_sha256": "e528d014dccc5914d0a97d2cad7cef1997436020548bd55fb055aab8ccf83ef1",
+          "stdout_sha256": "b81051b221b99639cb9c3f2844ea16e458190a95c00bdc36cac57a38c280e306",
+          "stderr_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+          "parse_errors": 0,
+          "script_invoked": false,
+          "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\cleanup-validation-receipt.json"
+        }
+      }
+    },
+    "all_action_flags_false": true,
+    "cleanup_invocations": 0,
+    "no_model_api_or_start": true,
+    "no_monitoring_or_unload": true
+  },
+  "preflight_repair_source_pins": {
+    "identity_provenance_repair": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\repair_identity_contracts_01.py",
+      "sha256": "c42a4673912770f7baaf7b8a3c0883c048690fa718158ac6c89bbe94c53b71a9"
+    },
+    "no_start_validation_recorder": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\record_no_start_validation_01.py",
+      "sha256": "a37c284920509e9d8d802e4806ba43d82f33e193a805c92b25e3886fae6ce632"
+    }
+  }
+}

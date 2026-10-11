@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "run_id": "20261011-66-upstream42-quality",
-  "status": "prepared_not_launched_run64_binary_and_fresh_metadata_bound_launch_rehash_required",
+  "status": "prepared_not_launched_full_v41_schema_rebased_to_v42",
   "config_sha256": "8703ae9037f7dc6d2058ab6953c33407e8c6d8b9f4729d4d51aec7ade816d430",
-  "identity_sha256": "c9b7e1371c47970a3640c311a1a0defead2c2dc11083d9cb3b4a7afa066f7def",
-  "provenance_sha256": "3ec1ebb16b075a81a02260ddae623721cf2d49ed1ce01951b6f427e45b6f3191",
+  "identity_sha256": "4543a92a0d1324e460e1b29008859a0b3245ebd9dc6e1df1bf870c212cb887f0",
+  "provenance_sha256": "142acf6f379604d8b2b79465a75ce231a669399039eff5bc898d00bb94db8afc",
   "engine_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
   "engine_size_bytes": 52763648,
   "server_bridge_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",

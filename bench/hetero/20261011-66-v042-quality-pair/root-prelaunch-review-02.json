@@ -1,0 +1,11 @@
+{
+  "status": "root_repaired_full_contract_review_pass",
+  "matrix_sha256": "544e03a14c6aaad5127dca7448e65bc08791fe7d3d827b84f497d80fca8f9b6a",
+  "wrapper_sha256": "88cfca5d2f61920defa618533c969df6302cef272fd4595d59f55d7d1dbafe71",
+  "no_start_validation_receipt_sha256": "bfd0d513fa9ed942e163ba287141743616b0b654daabab477c763c5debf629de",
+  "failed_first_launch_model_started": false,
+  "first_failed_launch_retained": true,
+  "upstream_attempt2_authorized": true,
+  "resource_admission_still_required_eachside": true,
+  "schema_source": "Full pinnedrun41identity/provenance, samecontrols, updatedv42pins; no weakeningcheck"
+}

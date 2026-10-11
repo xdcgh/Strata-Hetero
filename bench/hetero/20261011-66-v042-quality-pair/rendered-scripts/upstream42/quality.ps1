@@ -25,7 +25,7 @@ $qualityTool = Join-Path $repo 'tools\hetero_quality.py'
 $benchTool = Join-Path $repo 'tools\hetero_bench.py'
 $jsonlReaderPath = Join-Path $repo 'tools\hetero_jsonl_tail.ps1'
 $port = 8081
-$expectedModel = 'qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero'
+$expectedModel = 'qwen3.8-flash-next-unsloth-ud-q4_k_xl-upstream42'
 $expectedIds = @('smoke_arithmetic','smoke_unicode','smoke_json_arithmetic','smoke_python_function',
                 'smoke_three_key_retrieval','long_1k','long_4k','long_16k','long_30k7')
 $diagLog = Join-Path $runDir 'logs\engine.log'

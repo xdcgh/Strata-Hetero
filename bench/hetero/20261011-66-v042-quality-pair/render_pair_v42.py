@@ -105,6 +105,9 @@ def render(name: str, side: dict) -> tuple[str, dict]:
             old_manifest = "$manifestPath = 'C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json'"
         rendered = replace_once(rendered, old_manifest, "$manifestPath = '" + str(MANIFEST.resolve()) + "'",
                                 f"{name} manifest path")
+        expected_model = "$expectedModel = 'qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero'"
+        rendered = replace_once(rendered, expected_model, "$expectedModel = '" + side["model_name"] + "'",
+                                "quality expected model identity")
     root_count = rendered.count(OLD_SERVER_ROOT)
     if root_count:
         rendered = rendered.replace(OLD_SERVER_ROOT, V42_SERVER_ROOT)

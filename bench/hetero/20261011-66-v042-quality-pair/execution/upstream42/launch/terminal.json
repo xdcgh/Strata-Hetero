@@ -1,0 +1,10 @@
+{
+  "side": "upstream42",
+  "phase": "launch",
+  "controller_pid": 14824,
+  "exit_code": 1,
+  "finished_utc": "2026-10-11T03:08:10.8525357+00:00",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "947cdcba798a7d0a387a93dc20568af0bd114a41733421afa619ef410b980884",
+  "source_script_sha256": "de0825a75187d72c99beaae4e34a66de0400f6eb7debc4ed34eee66e612d348d"
+}

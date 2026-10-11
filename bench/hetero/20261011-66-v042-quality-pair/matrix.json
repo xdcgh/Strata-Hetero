@@ -2,7 +2,7 @@
   "schema_version": 1,
   "schema": "strata-v042-two-side-quality-pair-preparation-v1",
   "run_id": "20261011-66-v042-quality-pair",
-  "status": "finalized_direct_powershell_preparation_pending_root_authorization",
+  "status": "prepared_v42_contracts_validated_no_actions_pending_root_review_and_new_authorization",
   "prepared_utc": "2026-10-11",
   "upstream": {
     "release": "v0.1.42",
@@ -73,11 +73,11 @@
       "source_commit": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
       "binary_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
       "config_sha256": "8703ae9037f7dc6d2058ab6953c33407e8c6d8b9f4729d4d51aec7ade816d430",
-      "identity_sha256": "c9b7e1371c47970a3640c311a1a0defead2c2dc11083d9cb3b4a7afa066f7def",
-      "provenance_sha256": "3ec1ebb16b075a81a02260ddae623721cf2d49ed1ce01951b6f427e45b6f3191",
+      "identity_sha256": "4543a92a0d1324e460e1b29008859a0b3245ebd9dc6e1df1bf870c212cb887f0",
+      "provenance_sha256": "142acf6f379604d8b2b79465a75ce231a669399039eff5bc898d00bb94db8afc",
       "status": "prepared_not_launched",
       "binary_bytes": 52763648,
-      "preparation_sha256": "f44bc806b78b2aeb40178807e1f6b0a9e675c1fd680c47e9a1e9ead81e696fb5",
+      "preparation_sha256": "79503da93bdaefaca0d31e155bdc746add9ab95745032f930ddcee3b5ba629ab",
       "rendered_scripts": {
         "launch": {
           "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\launch-owned.ps1",
@@ -112,9 +112,9 @@
           "run_id_replacements": 4,
           "engine_version_replacements": 2,
           "server_root_replacements": 1,
-          "rendered_sha256": "ebb9d1d88a579d3cf88c99a34ef1a8d16e2efecba5a964525da6091b4f87a12d",
-          "rendered_bytes": 32206,
-          "status": "rendered_not_executed",
+          "rendered_sha256": "836e4bed436fbda07d13a36f4b65c1fd2b11d90c9f9620fe3cfcf78943ad0548",
+          "rendered_bytes": 32210,
+          "status": "rendered_model_name_contract_aligned_not_executed",
           "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\quality.ps1",
           "parser_status": "pass_parse_only"
         },
@@ -147,11 +147,11 @@
       "source_commit": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
       "binary_sha256": "deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0",
       "config_sha256": "8c883346e5482e549d37a95f39f2138c2b5a5ab52090427e9bf0eeda15ae02d8",
-      "identity_sha256": "1b92c8c5039e424328a573d7460dc4643d61422fdd26d53996e2a9afa1b36841",
-      "provenance_sha256": "4fd6c2a8f32280f564d022ecff7036e5d9f90715d4a8f7eb32d6cbb8f4a32ba2",
+      "identity_sha256": "42518197e8973b3ba427bb7738723d5a667785420dc44d70d1861f765ea6aa40",
+      "provenance_sha256": "8363944fd4d1c97e9f247b4b2bab79b51099b1272ad35f382b83f5dfb6446225",
       "status": "prepared_not_launched",
       "binary_bytes": 52769792,
-      "preparation_sha256": "770167d3caff7102e41970cbc6a53efdd93adafca6344978605d74828ed1d73b",
+      "preparation_sha256": "24283ecfcff0d4dd2774f538d0d69ec3ae56f56b19d39e3e634a0207e259ded1",
       "rendered_scripts": {
         "launch": {
           "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\launch-owned.ps1",
@@ -186,9 +186,9 @@
           "run_id_replacements": 4,
           "engine_version_replacements": 2,
           "server_root_replacements": 1,
-          "rendered_sha256": "a34e3228f72d409c8d4bfbc69e0952d2ce01948e434e9d77ebffff6d427f7d10",
-          "rendered_bytes": 32198,
-          "status": "rendered_not_executed",
+          "rendered_sha256": "8e12d43d5c85adeaf739657959d0c877c75424f9edf0e370a1dd6f822ce0d899",
+          "rendered_bytes": 32200,
+          "status": "rendered_model_name_contract_aligned_not_executed",
           "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\quality.ps1",
           "parser_status": "pass_parse_only"
         },
@@ -254,8 +254,8 @@
   "template_bindings": "template-bindings.json",
   "execution_enabled": false,
   "no_model_api_device_or_build_action": true,
-  "template_bindings_sha256": "7950618c75b29c438204c4349dec1ab3552bcf2f4b407e46d328d865d825c882",
-  "controls_normalization_sha256": "51f54a8e09ccdace67dd00adf0dfa308f48e9091def293851eaae421d5ea4102",
+  "template_bindings_sha256": "7e40ac6234a6860e5c9459fe5427e25ec9a6a635b089af7fc1ddac041b9a2c0f",
+  "controls_normalization_sha256": "137ca0f09ea7a45b2beeeecf8d364f9178a0195691d1d0ca282cbfd073bf63ee",
   "prepared_at_utc": "2026-10-11T02:54:52.458820Z",
   "fresh_input_identity_snapshot": {
     "path": "fresh-input-identities-01.json",
@@ -284,7 +284,7 @@
   "execution_mode": "direct_powershell_controllers",
   "controller_wrapper": {
     "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\run-phase.ps1",
-    "sha256": "aa0097217b57d195b7b3be1ca743ac18bbade2305c023b2fb8ff61d45dafeb68",
+    "sha256": "88cfca5d2f61920defa618533c969df6302cef272fd4595d59f55d7d1dbafe71",
     "owner": "root",
     "mutated_by_this_preparation": false
   },
@@ -298,5 +298,132 @@
     },
     "foreign_python_and_gpu_workload_gates": "strict and unchanged",
     "gate_exemptions": []
+  },
+  "authorization_file_status": "root-authorization-01 remains unchanged but is stale against repaired matrix; root review and replacement required",
+  "identity_provenance_schema_sources": {
+    "upstream42": {
+      "identity_template": "bench\\hetero\\20261009-40-upstream41-direct-quality\\identity.json",
+      "identity_template_sha256": "db2dc0037180fc7bf77a0adeb384bbb9c031950165221bcfea67dba690f28b8e",
+      "provenance_template": "bench\\hetero\\20261009-40-upstream41-direct-quality\\provenance.json",
+      "provenance_template_sha256": "ab10666f11efe173a4e7e063e2f788d8aae666233ba548116895c625e23a0e86",
+      "identity_sha256": "4543a92a0d1324e460e1b29008859a0b3245ebd9dc6e1df1bf870c212cb887f0",
+      "provenance_sha256": "142acf6f379604d8b2b79465a75ce231a669399039eff5bc898d00bb94db8afc",
+      "full_original_schema_copied": true,
+      "placements_contrast_retained_from_prior_full_hash_and_copy_receipt": true
+    },
+    "hetero42": {
+      "identity_template": "bench\\hetero\\20261009-41-hetero41-direct-quality\\identity.json",
+      "identity_template_sha256": "f00faab421cd3aaa372de2fd31e857eb1368ab74bd6b690ff8a86c8c929e0d30",
+      "provenance_template": "bench\\hetero\\20261009-41-hetero41-direct-quality\\provenance.json",
+      "provenance_template_sha256": "b07a05571798f9e1b513d65a030841651cd44c500e14ce05c1bbf5d302207816",
+      "identity_sha256": "42518197e8973b3ba427bb7738723d5a667785420dc44d70d1861f765ea6aa40",
+      "provenance_sha256": "8363944fd4d1c97e9f247b4b2bab79b51099b1272ad35f382b83f5dfb6446225",
+      "full_original_schema_copied": true,
+      "placements_contrast_retained_from_prior_full_hash_and_copy_receipt": true
+    }
+  },
+  "preflight_repair_snapshot": {
+    "path": "preflight-repair-01/pre-edit-snapshot/snapshot-manifest.json",
+    "sha256": "8b75cbdb3c587d09d829e8be6f485d47a5971aab8bdb5f497a56a1093904b908",
+    "failed_upstream_launch_evidence_preserved": true,
+    "authorization_and_draft_receipts_snapshotted_before_edits": true
+  },
+  "no_start_validation": {
+    "path": "preflight-repair-01/no-start-validation",
+    "sides": {
+      "upstream42": {
+        "launch": {
+          "status": "prepared_validated",
+          "script_sha256": "de0825a75187d72c99beaae4e34a66de0400f6eb7debc4ed34eee66e612d348d",
+          "stdout_sha256": "c3024d7b5ff78a567900b90643fdf891fe6297a200a0948db8674aefe74af2d2",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "start_performed": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\validation-receipt.json"
+        },
+        "watch": {
+          "status": "startup_watch_prepared",
+          "script_sha256": "9f795e25198fb5d6d801c3d45f5ea702f4f5fd8ac094899a0359b67c2c88ff69",
+          "stdout_sha256": "3832d77f6717631f7c5dcb0ebd97808cf230959b2d9290cb9e63b31ef5192560",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "monitor_started": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\watch-validation-receipt.json"
+        },
+        "quality": {
+          "status": "prepared_quality_validated",
+          "script_sha256": "836e4bed436fbda07d13a36f4b65c1fd2b11d90c9f9620fe3cfcf78943ad0548",
+          "stdout_sha256": "c966c6698a0409c9afb7f9190b11f1c8f8b2edc32d6f2012360a065303743e36",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "run_started": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\quality-validation-receipt.json"
+        },
+        "cleanup": {
+          "status": "pass_parse_only_not_invoked",
+          "script_sha256": "6edcf72c66ee7c317e8adac840b0de5d372587c00fd9709725efaaa651baa9a9",
+          "stdout_sha256": "b81051b221b99639cb9c3f2844ea16e458190a95c00bdc36cac57a38c280e306",
+          "stderr_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+          "parse_errors": 0,
+          "script_invoked": false,
+          "receipt_path": "preflight-repair-01\\no-start-validation\\upstream42\\cleanup-validation-receipt.json"
+        }
+      },
+      "hetero42": {
+        "launch": {
+          "status": "prepared_validated",
+          "script_sha256": "d7089b54ffc537115fa76602fc1b19019aa087453c0cf4e209fb9a1fb360b112",
+          "stdout_sha256": "2d61c087a0db1408b6f60e2f993f088e2c0eb73618b74ce8698e131164d43aa4",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "start_performed": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\launch-validation-receipt.json"
+        },
+        "watch": {
+          "status": "startup_watch_prepared",
+          "script_sha256": "ec26cdff6c643a9dd25b73074dceac8b3ce82157a1549d5a42f7eef03deefe42",
+          "stdout_sha256": "619c7f46f735afd247543171f0106a9bd85f8992d5038dff8e0cbc519fc50216",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "monitor_started": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\watch-validation-receipt.json"
+        },
+        "quality": {
+          "status": "prepared_quality_validated",
+          "script_sha256": "8e12d43d5c85adeaf739657959d0c877c75424f9edf0e370a1dd6f822ce0d899",
+          "stdout_sha256": "c966c6698a0409c9afb7f9190b11f1c8f8b2edc32d6f2012360a065303743e36",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit_code": 0,
+          "action_flag": {
+            "run_started": false
+          },
+          "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\quality-validation-receipt.json"
+        },
+        "cleanup": {
+          "status": "pass_parse_only_not_invoked",
+          "script_sha256": "e528d014dccc5914d0a97d2cad7cef1997436020548bd55fb055aab8ccf83ef1",
+          "stdout_sha256": "b81051b221b99639cb9c3f2844ea16e458190a95c00bdc36cac57a38c280e306",
+          "stderr_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+          "parse_errors": 0,
+          "script_invoked": false,
+          "receipt_path": "preflight-repair-01\\no-start-validation\\hetero42\\cleanup-validation-receipt.json"
+        }
+      }
+    },
+    "launch_start_performed": false,
+    "watch_monitor_started": false,
+    "quality_run_started": false,
+    "cleanup_script_invocations": 0,
+    "cleanup_parser_errors": 0
   }
 }

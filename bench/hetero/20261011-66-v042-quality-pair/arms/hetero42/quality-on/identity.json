@@ -1,7 +1,5 @@
 {
   "schema": 1,
-  "run_id": "20261011-66-hetero42-quality",
-  "arm": "hetero42",
   "source": {
     "sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
     "tree": "bb4e73468f85ccc85bb9c511980b4e51a8f1738c",
@@ -11,39 +9,40 @@
   "config": {
     "sha256": "8c883346e5482e549d37a95f39f2138c2b5a5ab52090427e9bf0eeda15ae02d8",
     "scope": "v0.1.42-matched-quality-pair",
-    "pool_workers": 10,
-    "pool_affinity": "all",
-    "resident_budget_gib": 20,
     "prompt_cache": 0,
+    "deterministic_placement": true,
+    "resident_budget_gib": 20,
+    "expert_file_io": "explicit buffered",
     "capture_actual_engine_token_ids": true,
-    "native_dense_gguf_paths_same_as_upstream42": true
+    "native_dense_gguf_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "ple_gguf_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "only_runtime_difference": "upstream42 versus hetero42 engine source/binary; matched request and placement controls"
+  },
+  "model": {
+    "id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
+    "native_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "integrity_manifest": "../20261008-00-admission/model-integrity-02.json",
+    "integrity_status": "prior full-SHA receipts retained; current stat/fstat identities captured in fresh-identities.json and must be revalidated before launch",
+    "historical_manifest": "../20261006-00-inventory/historical-manifest.json"
   },
   "engine": {
     "version": "0.1.42",
     "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\strata.exe",
     "sha256": "deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0",
     "size_bytes": 52769792,
-    "source_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
-    "hash_status": "RUN64_BUILD_RECEIPT_AND_LOCAL_GETHASH_VERIFIED_FRESH_LAUNCH_REHASH_REQUIRED"
-  },
-  "model": {
-    "id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
-    "family": "Qwen3.8-Flash-Next Unsloth UD-Q4_K_XL",
-    "native_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
-    "integrity_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
-    "current_asset_stat": "PENDING_FRESH_LAUNCH_ADMISSION"
-  },
-  "quality_prompt_manifest": {
-    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\manifest.json",
-    "sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
-    "prompt_count": 9
+    "source_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf"
   },
   "server_python": {
     "checkout_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
     "server_file_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
     "server_file_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
-    "captured_token_ids": true,
-    "used_by_both_sides": true
+    "quality_capture_opt_in": true,
+    "scope": "identical v1.42 captured-token bridge for both binaries"
   },
   "acceptance_status": "prepared_not_launched"
 }

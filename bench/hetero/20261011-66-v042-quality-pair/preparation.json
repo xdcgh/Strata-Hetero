@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "run_id": "20261011-66-v042-quality-pair",
-  "status": "finalized_direct_powershell_preparation_pending_root_authorization",
+  "status": "v42_identity_contracts_passed_readonly_default_validation_pending_root_review",
   "prepared_date": "2026-10-11",
   "source_commits": {
     "upstream42": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
@@ -153,5 +153,8 @@
   "fresh_input_all_match_prior_receipts": true,
   "fresh_input_payload_bytes_read": 0,
   "fresh_launch_stat_recheck_required": true,
-  "execution_mode": "direct_powershell_controllers"
+  "execution_mode": "direct_powershell_controllers",
+  "authorization_file_status": "prior auth preserved but stale after matrix update",
+  "full_identity_provenance_schema_rebased": true,
+  "no_start_validation": "six safe read-only defaults pass; cleanup parser-only"
 }
