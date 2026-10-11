@@ -1,0 +1,35 @@
+{
+  "schema": "strata-run69-build-controller-terminal-v1",
+  "controller": {
+    "pid": 23048,
+    "parent_pid": 5292,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T03:53:12.8753040Z",
+    "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01 -ExpectedHead 1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86 -ExpectedProjectVersion 0.1.42 -RunName prefill-first-nonfinite-20261011-69-build01 -Execute"
+  },
+  "started_utc": "2026-10-11T03:53:13.0226306+00:00",
+  "ended_utc": "2026-10-11T04:00:29.6426147+00:00",
+  "exit_code": 0,
+  "terminal": true,
+  "stdout_sha256": "4cce6b0a200cf4a1c8d40436134be2cf86b5d12477426e4443c7ee4d968eb620",
+  "stdout_bytes": 11724,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "argv": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.ps1",
+    "-SourcePath",
+    "E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69",
+    "-BuildPath",
+    "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01",
+    "-ExpectedHead",
+    "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "-ExpectedProjectVersion",
+    "0.1.42",
+    "-RunName",
+    "prefill-first-nonfinite-20261011-69-build01",
+    "-Execute"
+  ]
+}

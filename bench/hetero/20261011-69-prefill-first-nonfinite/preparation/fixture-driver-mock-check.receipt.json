@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_probe_fixture69.ps1",
+  "driver_sha256": "1885cbbe9326eac2e369cfaafaa5a6f37400e2d9cc4aeecb6a4c6b41f7a6ba08",
+  "ast_parse_errors": 0,
+  "functions_extracted": [
+    "Same",
+    "ExpectedWorker",
+    "StopProven"
+  ],
+  "test_count": 13,
+  "tests": [
+    {
+      "name": "nil identity is not approved",
+      "passed": true
+    },
+    {
+      "name": "executable mismatch is rejected",
+      "passed": true
+    },
+    {
+      "name": "parent mismatch is rejected",
+      "passed": true
+    },
+    {
+      "name": "unique argv mismatch is rejected",
+      "passed": true
+    },
+    {
+      "name": "exact expected worker identity is approved",
+      "passed": true
+    },
+    {
+      "name": "nil unproven identity never stops",
+      "passed": true
+    },
+    {
+      "name": "already-terminal process is not stopped",
+      "passed": true
+    },
+    {
+      "name": "live parent change prevents stop",
+      "passed": true
+    },
+    {
+      "name": "live exe change prevents stop",
+      "passed": true
+    },
+    {
+      "name": "live created change prevents stop",
+      "passed": true
+    },
+    {
+      "name": "live command change prevents stop",
+      "passed": true
+    },
+    {
+      "name": "exact match stops only the proven PID once",
+      "passed": true
+    },
+    {
+      "name": "mock stop failure remains explicit",
+      "passed": true
+    }
+  ],
+  "mocked_commands": [
+    "Identity",
+    "Stop-Process"
+  ],
+  "real_cim_accessed": false,
+  "real_process_stop_attempted": false,
+  "driver_executed": false,
+  "model_or_engine_executed": false,
+  "gpu_or_device_used": false,
+  "build_or_test_binary_executed": false,
+  "error": null
+}

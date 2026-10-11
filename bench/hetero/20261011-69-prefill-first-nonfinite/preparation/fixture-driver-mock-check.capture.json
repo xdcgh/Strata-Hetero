@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "captured",
+  "recorded_utc": "2026-10-11T04:01:13.2292908+00:00",
+  "driver_sha256": "1885cbbe9326eac2e369cfaafaa5a6f37400e2d9cc4aeecb6a4c6b41f7a6ba08",
+  "mock_script_sha256": "c1894ebd88e39920b720d5392692a15192e05646bc351776f98fd04c7b20dd3e",
+  "mock_receipt_sha256": "2f5351fca49f62dc505e8f202590155e603ae2eed0919e19aea12fd79174619e",
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\fixture-driver-mock-check.stdout.log",
+  "stdout_sha256": "b8d3f74ce73ea017a8415626b226f3034e04cbbfe2fb664e16041ceff572dfff",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\fixture-driver-mock-check.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "mock_exit_code": 0,
+  "mock_status": "pass",
+  "test_count": 13,
+  "driver_executed": false,
+  "real_cim_accessed": false,
+  "real_process_stop_attempted": false
+}

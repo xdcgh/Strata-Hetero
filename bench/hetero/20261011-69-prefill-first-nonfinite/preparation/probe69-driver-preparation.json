@@ -1,0 +1,64 @@
+{
+  "schema": "strata-prefill-probe69-driver-preparation-v1",
+  "status": "prepared_not_executed",
+  "base_driver": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\run_cuda_build_42.ps1",
+  "base_driver_sha256": "3bc879a2b421321ccffbbf6f47a5edb139f665f27df3abd3115a61877b449472",
+  "adapter": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.ps1",
+  "adapter_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+  "diff": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.diff",
+  "diff_sha256": "3fce7d4b36eb7e2513cae30b88086d119a32da790d33493b7aaf77c95d6e8619",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69",
+  "source_head": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+  "source_clean": true,
+  "source_key_files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 112256,
+      "sha256": "53ae876f94d07ca73837e2436416c26094085fa91fefb8f92416a417d8ee0280"
+    },
+    {
+      "path": "include/strata/prefill/finite_probe.hpp",
+      "bytes": 2533,
+      "sha256": "9d4e946ae0f6464af66cbb3f838a8c8703f0d4dd4ab0a3a0654091423443bd9f"
+    },
+    {
+      "path": "src/prefill/finite_probe.cu",
+      "bytes": 6029,
+      "sha256": "eb5358e5aef8264e813f0bcb360a4234738676232edf80671a0c33a27511d942"
+    },
+    {
+      "path": "tests/cuda/prefill_finite_probe_test.cpp",
+      "bytes": 8014,
+      "sha256": "8b9ec4b700da49b47d5bc8573e55991a3c87e48fe95cf57dc0135d03140afc9b"
+    }
+  ],
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01",
+  "build_path_absent": true,
+  "changes": [
+    "planned targets",
+    "planned probe flag",
+    "test receipt state",
+    "source key files",
+    "configure probe flag",
+    "actual cache key",
+    "actual probe cache assertion",
+    "build targets",
+    "test binary existence",
+    "test binary hash and success state",
+    "receipt test binary mapping",
+    "receipt test execution flags",
+    "record built binary identities immediately after successful build and existence checks"
+  ],
+  "planned_configure_flag": "-DSTRATA_PREFILL_FINITE_PROBE=ON",
+  "planned_targets": [
+    "strata",
+    "prefill_finite_probe_test"
+  ],
+  "tests_built_semantics": "true only after successful build command and both expected executables exist",
+  "tests_run": false,
+  "execution_authorized": false,
+  "configure_run": false,
+  "build_run": false,
+  "test_run": false,
+  "device_or_model_work": false
+}

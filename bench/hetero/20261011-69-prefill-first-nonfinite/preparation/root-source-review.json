@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "root_source_review_pass_build_pending",
+  "recorded_utc": "2026-10-11T03:43:24.941050+00:00",
+  "base_head": "b50ba7702531d0184bc89be13bb9d69b0194f71c",
+  "source_files": {
+    "CMakeLists.txt": {
+      "sha256": "53ae876f94d07ca73837e2436416c26094085fa91fefb8f92416a417d8ee0280",
+      "bytes": 112256
+    },
+    "src/prefill/prefill.cpp": {
+      "sha256": "eb22e2018b269d924546c4da5e8fdd6e3011376a3b7c3368eb7901e6b4b35374",
+      "bytes": 276898
+    },
+    "include/strata/prefill/finite_probe.hpp": {
+      "sha256": "9d4e946ae0f6464af66cbb3f838a8c8703f0d4dd4ab0a3a0654091423443bd9f",
+      "bytes": 2533
+    },
+    "src/prefill/finite_probe.cu": {
+      "sha256": "eb5358e5aef8264e813f0bcb360a4234738676232edf80671a0c33a27511d942",
+      "bytes": 6029
+    },
+    "tests/cuda/prefill_finite_probe_test.cpp": {
+      "sha256": "8b9ec4b700da49b47d5bc8573e55991a3c87e48fe95cf57dc0135d03140afc9b",
+      "bytes": 8014
+    },
+    "docs/HETERO_PREFILL_DIAGNOSTICS.md": {
+      "sha256": "bc20f1e95f5db9382c3d13333ec81da133fbc635ac2e8cce2181b537b4d4f521",
+      "bytes": 3278
+    }
+  },
+  "static_receipt_sha256": "ba697dbd3c9bdcfbd9899d3ae0df287b0b7133d3a35437a863dbb9dfa12a1e6c",
+  "fixture_expanded_after_static_receipt": true,
+  "review": [
+    "Default compile guard removes every prefill change, LF-normalized equal baseline",
+    "Scans after producers and before scratch reuse on m.cs",
+    "First-stage atomic claim, atomic minimum index and complete nonfinite counters; later stage cannot replace",
+    "Small pinned record copied before existing stream boundary; no per-layer or device-wide sync",
+    "Synthetic fixture adds dense all-NaN count and duplicate-read/invalid-row checks",
+    "Compile/runtime/quality tests NOT RUN; code is diagnostic only; extra work can perturb races"
+  ],
+  "backend_limitations": [
+    "CUDA-only added translation unit; HIP/gfx906 reject opt-in; SYCL source untouched",
+    "HIP/SYCL builds NOT RUN"
+  ]
+}

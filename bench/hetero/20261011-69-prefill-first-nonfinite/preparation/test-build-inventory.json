@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "status": "read_only_build_and_test_target_inventory",
+  "workspace_head": "b50ba7702531d0184bc89be13bb9d69b0194f71c",
+  "run64": {
+    "source": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+    "source_commit": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+    "build_dir": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01",
+    "driver": {
+      "path": "bench/hetero/20261011-64-upstream42-cuda-build/run_cuda_build_42.ps1",
+      "sha256": "3bc879a2b421321ccffbbf6f47a5edb139f665f27df3abd3115a61877b449472",
+      "source_blob": "9c877b36506d1f5220ab73494b42a83e134b6479",
+      "build_target_hardcoded": "strata",
+      "target_parameter_available": false,
+      "configure_build_path_must_be_absent": true,
+      "execution_requires_switch": "-Execute"
+    },
+    "cmake_source": {
+      "path": "CMakeLists.txt",
+      "sha256": "54074bd12a6b5b0d718a02222a222afff1a481ef6bacb110ed7208984fcff41e",
+      "source_blob": "28e8715fa73a3ac7f8d429dc8a564497ceb81348"
+    },
+    "toolchain": {
+      "generator": "Ninja",
+      "cmake": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe (4.4.3)",
+      "ninja": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe (1.13.2.git.kitware.jobserver-pipe-1)",
+      "nvcc": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe (13.3.73)",
+      "msvc": "19.51.36260.0",
+      "cuda_architecture": "89"
+    },
+    "configure_options": [
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DSTRATA_ENABLE_CUDA=ON",
+      "-DCMAKE_CUDA_ARCHITECTURES=89",
+      "-DCMAKE_CUDA_COMPILER=E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+      "-DCUDAToolkit_ROOT=E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+      "-DSTRATA_BUILD_TESTS=OFF",
+      "-DSTRATA_NATIVE_EXPERTS=ON",
+      "-DSTRATA_PORTABLE=ON",
+      "-DSTRATA_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+      "-DSTRATA_ENABLE_HIP=OFF",
+      "-DSTRATA_HIP_GFX906=OFF",
+      "-DSTRATA_ENABLE_SYCL=OFF",
+      "-DSTRATA_MMQ_KQUANTS=OFF",
+      "-DSTRATA_Q6K_EXPERTS=OFF",
+      "-DSTRATA_PREFILL_MMQ=OFF",
+      "-DSTRATA_ORCA_Q4KS_MMQ=OFF",
+      "-DSTRATA_ISA_FLOOR="
+    ],
+    "recorded_build_argv": [
+      "--build",
+      "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01",
+      "--target",
+      "strata",
+      "--parallel",
+      "1",
+      "--verbose"
+    ],
+    "build_receipt": {
+      "path": "bench/hetero/20261011-64-upstream42-cuda-build/execution/hetero/e-build-metadata/build-receipt.json",
+      "source_commit_clean": true,
+      "tests_built": false,
+      "tests_run": false,
+      "gpu_executed": false,
+      "model_or_engine_cli_executed": false
+    },
+    "target_graph_read_only_check": {
+      "build_ninja_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build.ninja",
+      "gdn_rec_parity_present": true,
+      "native_expert_parity_present": true,
+      "prefill_fused_moe_test_present": false,
+      "cache_STRATA_BUILD_TESTS": "OFF"
+    }
+  },
+  "synthetic_cuda_targets": [
+    {
+      "target": "gdn_rec_parity",
+      "source": "src/prefill/gdn_rec_parity.cu",
+      "source_sha256": "5162c0f36e881bceadee8dfed01490edd00064c82e9e74a63f52861b517b4b4c",
+      "source_blob": "8df8ef99613fecb3a62e54b9815c1a2375b22a0f",
+      "cmake_lines": "CMakeLists.txt:800-815",
+      "convention": "add_executable(target, .cu); link only ${_strata_gpu_runtime_target}; add_test separately",
+      "fixture": "synthetic model-shaped recurrence/state inputs; no model files",
+      "requires_STRATA_BUILD_TESTS": false,
+      "available_in_run64_build_ninja": true,
+      "compile_only_command_template": "cmake --build E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01 --target gdn_rec_parity --parallel 1 --verbose",
+      "note": "The checked-in Run64 driver itself is hardcoded to target strata and would not record this extra target build. A later approved build receipt/controller should wrap the target-only command. Building the target does not execute it; running it uses a CUDA device."
+    },
+    {
+      "target": "dma_batch_parity",
+      "source": "tests/core/dma_batch_parity.cu",
+      "source_sha256": "3721378ca66b25ed246c31615239480b5fc8b1e83ea7586ee3abf7a60e88d9c0",
+      "source_blob": "489ba5a802814781779770df946cfa011a4fc04b",
+      "cmake_lines": "CMakeLists.txt:802-812",
+      "convention": "synthetic pinned expert uploads and stream/event ordering; target links selected GPU runtime",
+      "requires_STRATA_BUILD_TESTS": false,
+      "available_in_run64_build_ninja": true,
+      "note": "CMake target is present in the inspected Run64 Ninja graph even with STRATA_BUILD_TESTS=OFF. Its runtime test uses CUDA; compile-only does not."
+    },
+    {
+      "target": "gemm_bf16_parity",
+      "source": "src/prefill/gemm_bf16_parity.cu",
+      "source_sha256": "45f5ff1cb686641b87678ee00e1805c045f65a0756c7834d3a289b5e061d39bb",
+      "source_blob": "a94700517f6ef6b0759d1f4fec957e34f1d3eb30",
+      "cmake_lines": "CMakeLists.txt:816-820",
+      "convention": "synthetic BF16 prompt GEMM parity against cuBLAS; target links strata_prefill",
+      "available_in_run64_build_ninja": true,
+      "note": "Commented GPU synthetic/no model; building the target does not execute parity or start the engine."
+    },
+    {
+      "target": "prefill_fused_moe_test",
+      "source": "tests/cuda/prefill_fused_moe_test.cpp",
+      "source_sha256": "b491ab25fd3a2c39b63df19e55f661f0c24ef91d55bb346a09d4746d3e913754",
+      "source_blob": "991b663e4522cabd0df827e1298da9e11e969e60",
+      "cmake_lines": "CMakeLists.txt:1386-1396",
+      "convention": "synthetic inputs with a double-precision reference; links strata_mmq, ggml-base, and GPU runtime",
+      "requires_STRATA_BUILD_TESTS": true,
+      "requires_STRATA_PREFILL_MMQ": true,
+      "available_in_run64_build_ninja": false,
+      "note": "Run64 configured both prerequisites OFF, so this target is absent from its CMake graph."
+    },
+    {
+      "target": "native_expert_parity",
+      "source": "src/kernels/native_expert_parity.cpp",
+      "cmake_lines": "CMakeLists.txt:1477-1483",
+      "convention": "CUDA executable accepts synthetic quantized-weight cases; test registrations are conditional on STRATA_BUILD_TESTS",
+      "requires_STRATA_BUILD_TESTS_for_executable": false,
+      "available_in_run64_build_ninja": true,
+      "note": "Broader expert/dequant parity fixture; less directly focused on prefill activation boundaries than gdn_rec_parity."
+    }
+  ],
+  "host_only_test_methods": [
+    {
+      "target_and_ctest_name": "share_rules_test",
+      "source": "tests/prefill/share_rules_test.cpp",
+      "source_sha256": "17ec2bb52219620f1832abf57bb910e5fedae8fad446098cda6ba0f6b7be4a07",
+      "source_blob": "88d829a09f001e844d6c567d0cce92fe376c7648",
+      "cmake_lines": "CMakeLists.txt:269-272",
+      "method": "header-only rule fixture; no GPU"
+    },
+    {
+      "target_and_ctest_name": "tuning_header_arch_family_test",
+      "source": "tests/prefill/tuning_header_arch_family_test.cpp",
+      "source_sha256": "a1a9a53db6bc4d3f97e1342f7f1825dedd345546f3520aa70da4207192022659",
+      "source_blob": "06906c29155f9e03773f44ad338e36f175dc14b8",
+      "cmake_lines": "CMakeLists.txt:258-262",
+      "method": "synthetic header/tuning table fixture; no model or GPU"
+    },
+    {
+      "target_and_ctest_name": "split_rules_test",
+      "source": "tests/program/split_rules_test.cpp",
+      "source_sha256": "8fd0808657fe27f228dff02049dc36154ccdc79ef65fb9503ba69f6fb3c7cb4b",
+      "source_blob": "4c3140a2bc0d0dd2e385143aba02e178c4bf9ae8",
+      "cmake_lines": "CMakeLists.txt:264-267",
+      "method": "header-only arithmetic rule fixture; no GPU"
+    },
+    {
+      "target_and_ctest_name": "host_limits_test",
+      "source": "tests/platform/host_limits_test.cpp",
+      "source_sha256": "9758c6f203f51012173cb7b1606fbc1f9b2531cc72456294393414cbd75ba788",
+      "source_blob": "1576e11aed557f3950c9b64b6624b6324e33cfb2",
+      "cmake_lines": "CMakeLists.txt:274-277",
+      "method": "Windows/commit limit verdict fixture; no GPU"
+    },
+    {
+      "target_and_ctest_name": "gguf_reader_test",
+      "source": "src/artifact/gguf_reader_test.cpp",
+      "cmake_lines": "CMakeLists.txt:245-248",
+      "method": "synthetic duplicate-tensor GGUF fixture; no model or GPU"
+    }
+  ],
+  "host_test_invocation_template_not_run": {
+    "build_one_target": "cmake --build <host-build-dir> --target share_rules_test --parallel 1",
+    "run_selected_tests": "ctest --test-dir <host-build-dir> -R '^(share_rules_test|tuning_header_arch_family_test|split_rules_test|host_limits_test|gguf_reader_test)$' --output-on-failure",
+    "note": "Run64 has STRATA_BUILD_TESTS=OFF; these test targets require a separate reviewed configuration with the test option enabled. No command was invoked."
+  },
+  "compile_only_plan_for_future_review": {
+    "existing_best_fit_target": "gdn_rec_parity",
+    "existing_run64_build_graph_has_target": true,
+    "compile_only_command": "cmake --build E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01 --target gdn_rec_parity --parallel 1 --verbose",
+    "runtime_model_or_engine_cli": false,
+    "target_execution_or_ctest": false,
+    "tests_or_builds_performed_in_this_inventory": false,
+    "device_or_model_started": false,
+    "driver_limitation": "run_cuda_build_42.ps1 has no target parameter, plans only strata, and writes a build receipt for that planned target. A separately approved supplemental target-build receipt/controller is needed for an auditable extra compile."
+  }
+}

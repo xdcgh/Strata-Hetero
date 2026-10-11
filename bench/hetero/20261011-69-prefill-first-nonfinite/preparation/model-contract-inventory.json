@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "status": "readonly_dependency_inventory_complete_preparation_only",
+  "created_utc": "2026-10-11T03:47:35.2599373Z",
+  "scope": "Run66 renderer/repairer/direct wrapper dependency map and minimal Run69 contract deltas. No render, repair, wrapper invocation, test, validation CLI, build, API, process, model, GPU or model-payload hash.",
+  "new_run": {
+    "run_id": "20261011-69-prefill-first-nonfinite",
+    "side_id": "probe69",
+    "source_head": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "binary": "not built; SHA/bytes/build receipt pending",
+    "extra_environment": {
+      "STRATA_DIAG_ZERO_LOGITS": "1",
+      "STRATA_PREFILL_FINITE_PROBE": "1"
+    },
+    "route_tail_skip": "0",
+    "quality_history": {
+      "completed_prior_prompts": [
+        "smoke_arithmetic",
+        "smoke_unicode",
+        "smoke_json_arithmetic",
+        "smoke_python_function",
+        "smoke_three_key_retrieval"
+      ],
+      "new_run_prefix": [
+        "smoke_arithmetic",
+        "smoke_unicode",
+        "smoke_json_arithmetic",
+        "smoke_python_function",
+        "smoke_three_key_retrieval",
+        "long_1k"
+      ],
+      "failed_prompt": true,
+      "warmups_per_prompt": 1,
+      "formal_per_prompt": 3,
+      "run66_outputs_copied": false,
+      "run69_request_leaves_start_absent": true,
+      "later_ids_not_planned": [
+        "long_4k",
+        "long_16k",
+        "long_30k7"
+      ]
+    }
+  },
+  "run66_observed": {
+    "matrix_status": "prepared_v42_contracts_validated_no_actions_pending_root_review_and_new_authorization",
+    "execution_mode": "direct_powershell_controllers",
+    "matrix_sha256": "544e03a14c6aaad5127dca7448e65bc08791fe7d3d827b84f497d80fca8f9b6a",
+    "prior_failure": "long_1k: status/token-count/cache/quality gate failed; preserve outputs and stop the remaining matrix",
+    "completed_prompts": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval"
+    ],
+    "authorization03_status": "root_reviewed_authorized",
+    "authorization03_wrapper_sha256": "9fe49e2701c4c5f8dbb97d9bd0f2e91092b75e72d4a51d915a442c40428c83af",
+    "authorization03_matrix_sha256": "544e03a14c6aaad5127dca7448e65bc08791fe7d3d827b84f497d80fca8f9b6a",
+    "adopted_active_sides": [
+      "upstream42"
+    ],
+    "authorization03_scope": "Continueexactexistingupstream42 model fromsuccessfulsource-launch; watch/quality/cleanup only; no duplicate launch; modelconfig/math/source unchanged",
+    "authorization03_reusable_for_run69": false
+  },
+  "observed_hashes": {
+    "bench/hetero/20261011-66-v042-quality-pair/render_pair_v42.py": "50249ad0359e2a07b597b4554419dbefc524595d49d6821f77b51c7657e9f65d",
+    "bench/hetero/20261011-66-v042-quality-pair/refresh_direct_ps_bindings.py": "be90ae840c745dc69e92fe01483f7cddf89b7049d5ac2d6c1f237c48ed0cfea1",
+    "bench/hetero/20261011-66-v042-quality-pair/repair_identity_contracts_01.py": "c42a4673912770f7baaf7b8a3c0883c048690fa718158ac6c89bbe94c53b71a9",
+    "bench/hetero/20261011-66-v042-quality-pair/run-phase.ps1": "9fe49e2701c4c5f8dbb97d9bd0f2e91092b75e72d4a51d915a442c40428c83af",
+    "bench/hetero/20261011-66-v042-quality-pair/root-authorization-03.json": "9bf92e29e6fd0e95c893c51c744a071aee4f324709d40f6d777c9678513c281f",
+    "bench/hetero/20261011-66-v042-quality-pair/matrix.json": "544e03a14c6aaad5127dca7448e65bc08791fe7d3d827b84f497d80fca8f9b6a",
+    "bench/hetero/20261011-66-v042-quality-pair/template-bindings.json": "7e40ac6234a6860e5c9459fe5427e25ec9a6a635b089af7fc1ddac041b9a2c0f",
+    "bench/hetero/20261011-66-v042-quality-pair/rendered-scripts/hetero42/quality.ps1": "8e12d43d5c85adeaf739657959d0c877c75424f9edf0e370a1dd6f822ce0d899"
+  },
+  "matrix_wrapper_metadata_sha256": "88cfca5d2f61920defa618533c969df6302cef272fd4595d59f55d7d1dbafe71",
+  "actual_wrapper_sha256": "9fe49e2701c4c5f8dbb97d9bd0f2e91092b75e72d4a51d915a442c40428c83af",
+  "wrapper_metadata_note": "Run66 matrix wrapper SHA differs from the actual wrapper and root authorization SHA. For Run69, rebind matrix, template bindings, and new authorization to the same final run-phase.ps1 bytes.",
+  "dependency_order": [
+    {
+      "step": 1,
+      "name": "Run69 one-side matrix/config skeleton",
+      "prerequisites": "E69 source pin, planned binary path, Run66 fixed controls and prompt manifest/H4 pointers",
+      "outputs": "unique probe69 RunId/path, diagnostic env pair, route-tail-skip=0, first six prompt scope, empty request output leaves, binary pending"
+    },
+    {
+      "step": 2,
+      "name": "one-side renderer derived from render_pair_v42.py",
+      "prerequisites": "step 1 and pinned raw run41 templates",
+      "outputs": "launch/watch/quality/cleanup scripts, direct Run69 paths/model/bridge/manifest bindings, parser-only hashes; remove pair-only upstream-versus-hetero equality checks"
+    },
+    {
+      "step": 3,
+      "name": "direct PowerShell binder derived from refresh_direct_ps_bindings.py",
+      "prerequisites": "step 2 and final run-phase.ps1 wrapper",
+      "outputs": "remove only --owned-controller-proof argument, keep strict admission flags, set direct_powershell_controllers and bind wrapper/template hashes"
+    },
+    {
+      "step": 4,
+      "name": "single-side identity/provenance repair derived from repair_identity_contracts_01.py",
+      "prerequisites": "steps 1-3; actual E69 build receipt before final binary identity",
+      "outputs": "rebind source/tree/engine/config/bridge/environment/provenance hashes, rendered expected model, matrix/bindings hashes; stale any prior authorization"
+    },
+    {
+      "step": 5,
+      "name": "no-start checks and final frozen receipts",
+      "prerequisites": "all Run69 matrix/config/identity/provenance/render/wrapper artifacts final",
+      "outputs": "PowerShell parser-only scripts, wrapper default no-Execute receipt, metadata contract receipts; cleanup parser-only"
+    },
+    {
+      "step": 6,
+      "name": "new root authorization",
+      "prerequisites": "final matrix, actual wrapper, template bindings, E69 build and fresh input evidence",
+      "outputs": "fresh probe69-only authorization; root auth03 must not be copied"
+    }
+  ],
+  "minimal_run69_changes": {
+    "config": [
+      "exe/log and run-local path to probe69; retain model/pack/args/sampling from Run66",
+      "add STRATA_PREFILL_FINITE_PROBE=1 and STRATA_DIAG_ZERO_LOGITS=1",
+      "retain STRATA_ROUTE_TAIL_SKIP=0, STRATA_PREFILL_CPU_SHARE=0, STRATA_STAGE_PIN=0, cache 0, 20 GiB, int8, seed 42"
+    ],
+    "identity": [
+      "side/source SHA+tree to E69; engine path/version with binary SHA/bytes pending then rebind from build receipt",
+      "config SHA, probe/zero-logits env scope, bridge SHA unchanged; prepared_not_launched"
+    ],
+    "provenance": [
+      "unique Run69 run_id and E69 source/build receipt pointer",
+      "environment_frozen with both diagnostic variables and route-tail-skip=0",
+      "diagnostic-only scope; point to Run66 prior five-pass/long_1k-fail history without copying outputs"
+    ],
+    "render": [
+      "single side id probe69; update Side ValidateSet and all run IDs/run paths/model/manifest/bridge anchors",
+      "quality scope exact first six prompt IDs with 1 warmup+3 formals and strict stop-first; no later long prompts",
+      "Get-DiagnosticSlice captures both strata zero-logits diag and strata pf_nonfinite records; record checkpoint lines and distinguish first_bad=null from non-null",
+      "sampler-first cleanup render is retained with exact owner checks"
+    ]
+  },
+  "quality_script_observed": {
+    "run66_expected_ids": 9,
+    "loop_source": "manifest.prompts",
+    "existing_diag_prefix": "strata zero-logits diag:",
+    "diagnostic_observed_currently_constant_false": true,
+    "run69_requirement": "select only the first six prompts from the pinned manifest and keep any probe records in per-prompt progress/failure evidence"
+  },
+  "no_start_validation": {
+    "renderer": "render and PowerShell AST parse only; do not invoke scripts",
+    "wrapper": "run-phase.ps1 -Side probe69 -Phase launch without -Execute; checks config/identity/provenance/rendered hashes and reports start_performed=false/api_called=false",
+    "launch": "later no -Start contract mode only after fresh asset/binary evidence is available",
+    "watch": "later without -Monitor; no watcher",
+    "quality": "later without -Run/-CheckReady; contract validation only, no API requests",
+    "cleanup": "parser-only because cleanup preflight inspects live owners/status even without -Execute"
+  },
+  "source_and_device_actions": {
+    "model_payload_read_or_hashed": false,
+    "tests_or_validation_cli_run": false,
+    "model_or_gpu_started": false,
+    "binary_built": false,
+    "source_files_modified": false
+  },
+  "failed_inventory_attempt": "model-contract-inventory-01.failed.json preserves the earlier null-only erroneous write"
+}

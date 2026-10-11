@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized_synthetic_cuda_fixture_only",
+  "recorded_utc": "2026-10-11T04:02:41.3268775+00:00",
+  "driver_sha256": "1885cbbe9326eac2e369cfaafaa5a6f37400e2d9cc4aeecb6a4c6b41f7a6ba08",
+  "source_head": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+  "binary_sha256": "3495849bd3c8e002cde9a0d92e54fa115994026e576a8738a7aece822c2841cb",
+  "build_receipt_sha256": "0bcd13c38cf12eed6d0adf9addb1298ae45847b4cb57b5927dc863e3937fa629",
+  "scope": [
+    "disabled-only test",
+    "synthetic device fixture"
+  ],
+  "model_or_engine_cli_allowed": false,
+  "root_mock_guards_reviewed": true,
+  "request_count": 0,
+  "fresh_admission_required": true,
+  "minimum_ram_gib": 12,
+  "minimum_system_commit_gib": 4,
+  "minimum_vram_mib": 46000
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "host_source_contract_pass",
+  "created_utc": "2026-10-11T03:42:18.450267Z",
+  "scope": "static source/file structure only; no compile, test binary, CUDA runtime, model, or GPU execution",
+  "worktree": "E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69",
+  "base_revision": "b50ba7702531d0184bc89be13bb9d69b0194f71c",
+  "source_file_sha256": {
+    "CMakeLists.txt": "53ae876f94d07ca73837e2436416c26094085fa91fefb8f92416a417d8ee0280",
+    "src/prefill/prefill.cpp": "eb22e2018b269d924546c4da5e8fdd6e3011376a3b7c3368eb7901e6b4b35374",
+    "include/strata/prefill/finite_probe.hpp": "9d4e946ae0f6464af66cbb3f838a8c8703f0d4dd4ab0a3a0654091423443bd9f",
+    "src/prefill/finite_probe.cu": "eb5358e5aef8264e813f0bcb360a4234738676232edf80671a0c33a27511d942",
+    "tests/cuda/prefill_finite_probe_test.cpp": "8db387e29a3cc8d87014627e4736532acef296f2f426bc0f8329a4d8e1bc709b"
+  },
+  "base_prefill_sha256": "5e9153e991e7d91ef436818d531387a3ca4d0842e7c4e985763090c6d7145d70",
+  "probe_blocks_removed": 15,
+  "report_after_sync_sites": [
+    {
+      "report_line": 3996,
+      "enqueue_read_line": 3986,
+      "existing_sync_line": 3991,
+      "ordered_enqueue_sync_host_report": true
+    },
+    {
+      "report_line": 4058,
+      "enqueue_read_line": 4049,
+      "existing_sync_line": 4052,
+      "ordered_enqueue_sync_host_report": true
+    },
+    {
+      "report_line": 4100,
+      "enqueue_read_line": 4091,
+      "existing_sync_line": 4093,
+      "ordered_enqueue_sync_host_report": true
+    }
+  ],
+  "checks": {
+    "probe_blocks_removed_match_pinned_b50ba770": {
+      "status": "pass",
+      "detail": "removed_blocks=15; normalized_bytes_equal=True; first_difference_offset=None"
+    },
+    "probe_scan_read_order_on_existing_compute_stream": {
+      "status": "pass",
+      "detail": "Prefill binds Probe to m.cs; scan/read use stream_; no cudaDeviceSynchronize"
+    },
+    "host_record_reads_follow_existing_stream_sync": {
+      "status": "pass",
+      "detail": "all report_after_sync sites queue one read then follow cudaStreamSynchronize(m.cs); report only dereferences host record"
+    },
+    "cmake_cuda_only_default_off": {
+      "status": "pass",
+      "detail": "option defaults OFF; rejects non-CUDA backends; new target and macro are inside opt-in guard"
+    }
+  }
+}

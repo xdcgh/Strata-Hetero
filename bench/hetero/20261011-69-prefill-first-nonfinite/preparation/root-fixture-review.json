@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "root_synthetic_fixture_review_pass_model_not_run",
+  "created_utc": "2026-10-11T04:03:24.794253+00:00",
+  "receipt_sha256": "f534d1d80891ec6fd172723811cc0dbce4a77dc88eee5cbfabc82729091ec93f",
+  "device_cases_pass": 60,
+  "begin_records": 60,
+  "checkpoint_records": 114,
+  "finite_checkpoint_records": 36,
+  "nonfinite_checkpoint_records": 78,
+  "json_schema_and_index_counts_checked": true,
+  "separate_record_run_ids": 60,
+  "all_raw_resource_rows": 2,
+  "all_resource_gates_pass": true,
+  "physical_min_gib": 109.44933700561523,
+  "commit_min_gib": 116.32645034790039,
+  "exact_recorded_identities_live": [],
+  "disabled_mode_context_calls": "source contract plus successful disabled-only program; CUDA API hook counters not captured",
+  "model_executed": false,
+  "performance_claim": false
+}

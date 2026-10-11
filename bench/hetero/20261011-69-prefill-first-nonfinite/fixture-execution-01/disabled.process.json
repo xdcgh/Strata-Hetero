@@ -1,0 +1,12 @@
+{
+  "pid": 2552,
+  "identity": {
+    "pid": 2552,
+    "parent": 8588,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\prefill_finite_probe_test.exe",
+    "created": "2026-10-11T04:02:56.4937550Z",
+    "command": "\"E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\prefill_finite_probe_test.exe\" --disabled-only"
+  },
+  "binary_sha256": "3495849bd3c8e002cde9a0d92e54fa115994026e576a8738a7aece822c2841cb",
+  "argv": "--disabled-only"
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "strata-run69-build-admission-v1",
+  "captured_utc": "2026-10-11T03:52:26.1412126Z",
+  "authorization_sha256": "ec4056727ba52532cc454de752fd6230a71195910d15f6fcb897160f738db981",
+  "authorization_status": "root_reviewed_authorized_build_only",
+  "driver_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+  "source_head": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+  "source_clean": true,
+  "source_key_files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "53ae876f94d07ca73837e2436416c26094085fa91fefb8f92416a417d8ee0280",
+      "bytes": 112256
+    },
+    {
+      "path": "src/prefill/prefill.cpp",
+      "sha256": "eb22e2018b269d924546c4da5e8fdd6e3011376a3b7c3368eb7901e6b4b35374",
+      "bytes": 276898
+    },
+    {
+      "path": "include/strata/prefill/finite_probe.hpp",
+      "sha256": "9d4e946ae0f6464af66cbb3f838a8c8703f0d4dd4ab0a3a0654091423443bd9f",
+      "bytes": 2533
+    },
+    {
+      "path": "src/prefill/finite_probe.cu",
+      "sha256": "eb5358e5aef8264e813f0bcb360a4234738676232edf80671a0c33a27511d942",
+      "bytes": 6029
+    },
+    {
+      "path": "tests/cuda/prefill_finite_probe_test.cpp",
+      "sha256": "8b9ec4b700da49b47d5bc8573e55991a3c87e48fe95cf57dc0135d03140afc9b",
+      "bytes": 8014
+    },
+    {
+      "path": "docs/HETERO_PREFILL_DIAGNOSTICS.md",
+      "sha256": "bc20f1e95f5db9382c3d13333ec81da133fbc635ac2e8cce2181b537b4d4f521",
+      "bytes": 3278
+    }
+  ],
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01",
+  "build_path_absent": true,
+  "memory": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 112935370752,
+    "physical_used_bytes": 24027877376,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 25388142592,
+    "commit_available_bytes": 120165040128,
+    "commit_total_pages": 6198277,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 120165040128,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null,
+    "errors": []
+  },
+  "ram_floor_bytes": 12884901888,
+  "commit_floor_bytes": 4294967296,
+  "compiler_processes": [],
+  "pass": true
+}

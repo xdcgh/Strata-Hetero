@@ -1,0 +1,60 @@
+{
+  "schema": "strata-run69-build-controller-launch-v1",
+  "planned_utc": "2026-10-11T03:53:12.8324469Z",
+  "launcher_pid": 5292,
+  "launcher_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcher_create_utc": "2026-10-11T03:53:12.2634200Z",
+  "controller_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "argv": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.ps1",
+    "-SourcePath",
+    "E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69",
+    "-BuildPath",
+    "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01",
+    "-ExpectedHead",
+    "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "-ExpectedProjectVersion",
+    "0.1.42",
+    "-RunName",
+    "prefill-first-nonfinite-20261011-69-build01",
+    "-Execute"
+  ],
+  "working_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\build-execution-01\\controller.stdout.raw.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\build-execution-01\\controller.stderr.raw.log",
+  "root_authorized_build_only": true
+}
+{
+  "schema": "strata-run69-build-controller-start-v1",
+  "started_utc": "2026-10-11T03:53:13.0226306+00:00",
+  "controller": {
+    "pid": 23048,
+    "parent_pid": 5292,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T03:53:12.8753040Z",
+    "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01 -ExpectedHead 1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86 -ExpectedProjectVersion 0.1.42 -RunName prefill-first-nonfinite-20261011-69-build01 -Execute"
+  },
+  "argv": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_cuda_build_probe69.ps1",
+    "-SourcePath",
+    "E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69",
+    "-BuildPath",
+    "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01",
+    "-ExpectedHead",
+    "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "-ExpectedProjectVersion",
+    "0.1.42",
+    "-RunName",
+    "prefill-first-nonfinite-20261011-69-build01",
+    "-Execute"
+  ],
+  "working_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\build-execution-01\\controller.stdout.raw.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\build-execution-01\\controller.stderr.raw.log"
+}

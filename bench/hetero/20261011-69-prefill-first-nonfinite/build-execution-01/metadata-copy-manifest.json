@@ -1,0 +1,378 @@
+{
+  "schema": "strata-run69-build-metadata-copy-v1",
+  "source_build_path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01",
+  "destination": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\build-execution-01\\e-build-evidence",
+  "include_extensions": [
+    ".check_cache",
+    ".cmake",
+    ".cmd",
+    ".gpu",
+    ".json",
+    ".jsonl",
+    ".log",
+    ".module_id",
+    ".ninja",
+    ".ninja_deps",
+    ".ninja_log",
+    ".optf",
+    ".py",
+    ".stop",
+    ".txt",
+    ".yaml"
+  ],
+  "copied_files": [
+    {
+      "relative_path": ".ninja_deps",
+      "bytes": 124432,
+      "sha256": "f3c7abba182f6d4cc73351a01fbdf3d6e75cbacc034827bd53aaa6a8494af0ce"
+    },
+    {
+      "relative_path": ".ninja_log",
+      "bytes": 15577,
+      "sha256": "9673e3510ef9746e05dfce4a9a29ee732f8697f8db49a01c4bba2a5ba377be6d"
+    },
+    {
+      "relative_path": "build-receipt.json",
+      "bytes": 14145,
+      "sha256": "0bcd13c38cf12eed6d0adf9addb1298ae45847b4cb57b5927dc863e3937fa629"
+    },
+    {
+      "relative_path": "build.cmd",
+      "bytes": 1151,
+      "sha256": "6c53f6b8a75f5f808b3c8ca705a92b2c0882f8b2708bc59a963a16cdc6a09db3"
+    },
+    {
+      "relative_path": "build.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "relative_path": "build.log",
+      "bytes": 1427831,
+      "sha256": "45f6d44606e4a889de3d826981dfdfc3cee3296b5ebad170c2d132168576c712"
+    },
+    {
+      "relative_path": "build.ninja",
+      "bytes": 400356,
+      "sha256": "28670aac3cc51bcb8dec306b11f34c0e10d1b378ba6448a0f55b45b5450f7d38"
+    },
+    {
+      "relative_path": "build.process.json",
+      "bytes": 325,
+      "sha256": "58b64da5c3fdfada5dfc41bb20886c3cad66975b89641a035723ae4814e4b727"
+    },
+    {
+      "relative_path": "build.result.json",
+      "bytes": 980,
+      "sha256": "bdea67bbe169d2f55dca748672dec4b24c3312f3443139bf7fe1be761808cac7"
+    },
+    {
+      "relative_path": "build.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "relative_path": "cl-version.log",
+      "bytes": 1291,
+      "sha256": "061fe6b537e9c01b47465b86ed2a6e087510d2007be8738ec3c69f52b5f1f3a0"
+    },
+    {
+      "relative_path": "cmake_install.cmake",
+      "bytes": 1965,
+      "sha256": "b16686cc60101237f14a25eca0ac51f44429af2ae66a1be4984b481063eb2556"
+    },
+    {
+      "relative_path": "cmake-version.log",
+      "bytes": 90,
+      "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+    },
+    {
+      "relative_path": "CMakeCache.txt",
+      "bytes": 49390,
+      "sha256": "266961e24c7033dfa120cbd231c6fd18119404e1c62d0d6e80723e547c532c37"
+    },
+    {
+      "relative_path": "compile_commands.json",
+      "bytes": 29880,
+      "sha256": "ee0cf60e0dbef1645581571f1540f6abe05665d28d268e74fc4ed1102b47998c"
+    },
+    {
+      "relative_path": "configure.cmd",
+      "bytes": 2553,
+      "sha256": "3f64f6af45c1be2e1b0c6a067fcd4cc3f1ba77bac95fffcd67467a0e5cb42b41"
+    },
+    {
+      "relative_path": "configure.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "relative_path": "configure.log",
+      "bytes": 3279,
+      "sha256": "2eafd29d4dd53103ac82e536f2d5f2de7f1d51fd4c81359816583c0ec2c1697c"
+    },
+    {
+      "relative_path": "configure.process.json",
+      "bytes": 333,
+      "sha256": "342de65b783dc3cb597013fff6d862b7cce0b5027e5912638b42a2d6436fbc1c"
+    },
+    {
+      "relative_path": "configure.result.json",
+      "bytes": 998,
+      "sha256": "9d1743268cadaaaf7ebdd7648fe086d9c48d0f37e46518e3106a84030f951f45"
+    },
+    {
+      "relative_path": "configure.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "relative_path": "CTestTestfile.cmake",
+      "bytes": 18297,
+      "sha256": "1e3efa4eea6d17eabe7ca3a18da2095aab666cdd549ad1a712f688cfc7cf52ab"
+    },
+    {
+      "relative_path": "ninja-version.log",
+      "bytes": 37,
+      "sha256": "cc30d39e321dcb24ca5c4c5d5b7730e25ab769876a825616360194c634824754"
+    },
+    {
+      "relative_path": "nvcc-version.log",
+      "bytes": 231,
+      "sha256": "c9a2d15f807013db977d10dd509b539cdd30059caa01fbc42c23f19d4bfd4c59"
+    },
+    {
+      "relative_path": "resource_sampler.py",
+      "bytes": 971,
+      "sha256": "9281c59e8bbd1f499b821ffc93633a745d298fead48baa837df8efdd2c5e8beb"
+    },
+    {
+      "relative_path": "resource-preflight.json",
+      "bytes": 519,
+      "sha256": "d0386ba68560c648131c9c289b559b53a35d2cc473774602835dffe15a84da4c"
+    },
+    {
+      "relative_path": "resource-sampler-process.json",
+      "bytes": 765,
+      "sha256": "c45cae6b93c2d61f122084dbb4d578d8d76acc4c812dc0f599f9ea046bad2f59"
+    },
+    {
+      "relative_path": "resource-sampler.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "resource-sampler.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "resources.jsonl",
+      "bytes": 126440,
+      "sha256": "fe6a538f57ac15ff6fa61ba6640181e7a9ee6d8f48ddeec53609f62033228397"
+    },
+    {
+      "relative_path": "resources.STOP",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "where-cl.log",
+      "bytes": 111,
+      "sha256": "4a7478a9bfd9a41d57cfdd05f4396905c804b400414ac9dc4267625208f6837f"
+    },
+    {
+      "relative_path": "where-nvcc.log",
+      "bytes": 59,
+      "sha256": "20b5b6c89d5294d6d5c9d15b003810aa73007e16a3d11d9843c57351a83c6c71"
+    },
+    {
+      "relative_path": "CMakeFiles\\cmake.check_cache",
+      "bytes": 86,
+      "sha256": "95079b44bcef481d601432c2fd3c654d7fe85b9c8386c355f2874502b47441d7"
+    },
+    {
+      "relative_path": "CMakeFiles\\CMakeConfigureLog.yaml",
+      "bytes": 7192334,
+      "sha256": "633d9442f96d399d2abf943a036f69616ee9b8295956b894a3b14841ed34933f"
+    },
+    {
+      "relative_path": "CMakeFiles\\InstallScripts.json",
+      "bytes": 401,
+      "sha256": "f083296f05197ffdaa316e379fb4ffd793320faf054399c4e99cc31315b8f887"
+    },
+    {
+      "relative_path": "CMakeFiles\\rules.ninja",
+      "bytes": 184157,
+      "sha256": "0897d5e8fa1dc12df193e35fddfcef5aff84547f771e25a0b26dfa74cbe7ad35"
+    },
+    {
+      "relative_path": "CMakeFiles\\TargetDirectories.txt",
+      "bytes": 8384,
+      "sha256": "90fef4f26c5d297413e2d1428956ac0da9751b682c1cd9583801f19308c50f69"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CMakeASMCompiler.cmake",
+      "bytes": 1454,
+      "sha256": "38a376397f84b7fb06a7479604c3b8d939ae4132795133ab63beb15b76cea714"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CMakeCCompiler.cmake",
+      "bytes": 3424,
+      "sha256": "ca12a5b612e3286d6517896763de348602fa2fca3f39d21e3523335cbf6cd709"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CMakeCUDACompiler.cmake",
+      "bytes": 4524,
+      "sha256": "9929c9279b34b48deb8efeb3ccc4cf5e49bb6d1ecbd75bcfd3632da146eb4e18"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CMakeCXXCompiler.cmake",
+      "bytes": 6740,
+      "sha256": "32f0eb370724a64da20de9803e1fd5cc96a97a0be0932f85021cbbcc46f6cf75"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CMakeRCCompiler.cmake",
+      "bytes": 276,
+      "sha256": "f1c96e7b6bc035d04a44733638743f28bf70450e870a3095a55cff6ad81924fa"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CMakeSystem.cmake",
+      "bytes": 395,
+      "sha256": "cf05e982232c22b6fe58288ef10f11c1d5ba2af1e7e050ea9d8037095b59d948"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CompilerIdCUDA\\tmp\\a_dlink.sm_75.cubin.optf",
+      "bytes": 228,
+      "sha256": "6736f329877099edf46d5178a8341a36867428420bd66a8044bea7e810702f32"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.gpu",
+      "bytes": 459,
+      "sha256": "fc508691b00ad340e73c0da6a7e585926a6b24ce5a27a93ed9c9998857c327b0"
+    },
+    {
+      "relative_path": "CMakeFiles\\4.4.3\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.module_id",
+      "bytes": 44,
+      "sha256": "62558ea7363675bb7003c64540fdae00d544656aaa4ffad6dc03d16461ae744b"
+    },
+    {
+      "relative_path": "ggml\\cmake_install.cmake",
+      "bytes": 3931,
+      "sha256": "e9f2112de3a1cfd983aa80a7fb77ea4f9c2104775d2f5f020babc368c014a6a9"
+    },
+    {
+      "relative_path": "ggml\\CTestTestfile.cmake",
+      "bytes": 338,
+      "sha256": "3191decc7ce15c5233d7aff7893184c9db8dcefd5d9467e156d04ded542d36af"
+    },
+    {
+      "relative_path": "ggml\\ggml-config-version.cmake",
+      "bytes": 2830,
+      "sha256": "77585509b3e33a0c106d28bc7ea15f10193b5b8f9af42dd8f5f005f1d36d41af"
+    },
+    {
+      "relative_path": "ggml\\ggml-config.cmake",
+      "bytes": 13602,
+      "sha256": "b1fc781806ca5c89067d9fe52ee6be27bf12fa82fd9ae99828e5dcebe899edd5"
+    },
+    {
+      "relative_path": "ggml\\src\\cmake_install.cmake",
+      "bytes": 1805,
+      "sha256": "cb34e8ad8501581244305997a6a5f8c88bb61f1c110f48a68191ede5bb85aa68"
+    },
+    {
+      "relative_path": "ggml\\src\\CTestTestfile.cmake",
+      "bytes": 351,
+      "sha256": "8b4a8bb68d0c323799431309dbd483f90e8f570610775d7226a3cd17c8c180cc"
+    },
+    {
+      "relative_path": "ggml\\src\\ggml-cpu\\cmake_install.cmake",
+      "bytes": 1365,
+      "sha256": "196c74d04bd99b69b4a8a694f1bcc1592aa0193a45c1c39aff5144505256ff40"
+    },
+    {
+      "relative_path": "ggml\\src\\ggml-cpu\\CTestTestfile.cmake",
+      "bytes": 348,
+      "sha256": "0a5e52d442f7feee658390486ecc526a451bfff812833964fd7a7b2c86ff777d"
+    }
+  ],
+  "copied_file_count": 55,
+  "copied_bytes": 9650084,
+  "excluded_files_count": 189,
+  "excluded_bytes": 389958608.0,
+  "excluded_extensions": [
+    {
+      "extension": ".bin",
+      "count": 3,
+      "bytes": 1803776.0
+    },
+    {
+      "extension": ".c",
+      "count": 7,
+      "bytes": 44477.0
+    },
+    {
+      "extension": ".cpp",
+      "count": 2,
+      "bytes": 919360.0
+    },
+    {
+      "extension": ".cu",
+      "count": 1,
+      "bytes": 31752.0
+    },
+    {
+      "extension": ".cubin",
+      "count": 2,
+      "bytes": 2792.0
+    },
+    {
+      "extension": ".exe",
+      "count": 5,
+      "bytes": 53331968.0
+    },
+    {
+      "extension": ".fatbin",
+      "count": 2,
+      "bytes": 3104.0
+    },
+    {
+      "extension": ".h",
+      "count": 2,
+      "bytes": 81.0
+    },
+    {
+      "extension": ".ii",
+      "count": 2,
+      "bytes": 3979460.0
+    },
+    {
+      "extension": ".lib",
+      "count": 10,
+      "bytes": 133890136.0
+    },
+    {
+      "extension": ".obj",
+      "count": 135,
+      "bytes": 144487004.0
+    },
+    {
+      "extension": ".pdb",
+      "count": 12,
+      "bytes": 51462144.0
+    },
+    {
+      "extension": ".ptx",
+      "count": 1,
+      "bytes": 215.0
+    },
+    {
+      "extension": ".res",
+      "count": 5,
+      "bytes": 2339.0
+    }
+  ],
+  "excluded_includes_binaries_objects_and_debug_symbols": true,
+  "receipt_correction": "copied byte total recomputed from actual copied files after initial null aggregation"
+}

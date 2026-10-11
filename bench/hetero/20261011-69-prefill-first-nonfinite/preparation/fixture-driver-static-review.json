@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "review": "Run69 fixture lifecycle driver static review",
+  "reviewed_utc": "2026-10-11T03:58:29.1996862+00:00",
+  "workspace_head": "b50ba7702531d0184bc89be13bb9d69b0194f71c",
+  "driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\run_probe_fixture69.ps1",
+  "driver_sha256": "286f959603ed4fe5e5811888995a88ee5906af94e5b89d19500efe5506476030",
+  "method": [
+    "Read source only",
+    "PowerShell Parser.ParseFile AST parse only; did not dot-source, invoke, or execute driver functions",
+    "No build, test, device, model, engine, or admission invocation"
+  ],
+  "ast": {
+    "parse_errors": 0,
+    "type": "ScriptBlockAst"
+  },
+  "checks": {
+    "resource_gate": "Fresh sample age -2..5 seconds, physical available >=12GB, commit available >=4GB",
+    "short_worker": "Handled through Start-Process process handle/PID/exit code when CIM identity is null; identity is recorded null",
+    "output_receipt": "Failure path catches body exceptions and attempts receipt.json in finally",
+    "admission": "hetero_admission.py --observe with --required-vram-mib 46000 --minimum-ram-gib 12 --check-wsl-current",
+    "executed_program": "The script launches only parameterized $BinaryPath in disabled and synthetic modes; it contains no literal strata.exe/model invocation",
+    "wsl_shutdown": "Present only in -Execute branch, before admission"
+  },
+  "findings": [
+    {
+      "lines": "2-5,37-38,70-72",
+      "minimal_fix": "Pin exact fixture target/path or require and verify a pinned authorization field naming prefill_finite_probe_test.exe before Execute.",
+      "id": "F1",
+      "finding": "Executable boundary is not enforced. BinaryPath and ExpectedBinarySha are caller-controlled; receipt path equality and matching hash do not require the target basename or target name prefill_finite_probe_test.exe. Thus a valid receipt/path/hash for strata.exe could satisfy these checks, and the driver would launch it.",
+      "severity": "blocking"
+    },
+    {
+      "lines": "74-77,92-95",
+      "minimal_fix": "Keep the snapshot separate; mark identity proven only after expected executable and command validation, and require that proof plus Same before Stop-Process.",
+      "id": "F2",
+      "finding": "Worker identity is stored before validation. If CIM returns an unexpected/reused PID and the expected exe/command check throws, finally compares the live process to that same unvalidated snapshot; Same can succeed and Stop-Process can stop that process.",
+      "severity": "high"
+    },
+    {
+      "lines": "55-66,97-108",
+      "minimal_fix": "Record launcher identity immediately; retain unknown child as unknown; after STOP timeout, exact-revalidate and stop only the proven launcher, then record its terminal result.",
+      "id": "F3",
+      "finding": "If sampler child never binds, failure is caught and STOP is requested, but sampler_process.json is never written and the receipt has no launcher/child identity. sampler_terminal is forced false whenever samplerChild is null, even if the launcher process handle has exited. If the launcher remains alive after 10 seconds, code records failure but does not exact-stop it.",
+      "severity": "medium"
+    },
+    {
+      "lines": "35-45,48-52,90-108",
+      "minimal_fix": "If preflight failures need durable evidence, write a separate exclusive preflight failure record without creating or overwriting an execution receipt.",
+      "id": "F4",
+      "finding": "Admission rejection is inside try/finally and should produce failed receipt. Binary/build/source preflight failures occur before try/output-directory creation, so they throw without a failure receipt. The admission path also relies on the catch/finally receipt write succeeding.",
+      "severity": "medium"
+    },
+    {
+      "lines": "37-44,66,107",
+      "minimal_fix": "Bind the reviewed build receipt SHA and target/path, and validate sampler helper identity/hash against that receipt.",
+      "id": "F5",
+      "finding": "Source HEAD/clean and actual binary SHA are checked, but no expected build-receipt SHA or target name is input/bound; source_after path/tree and build target/configuration are not validated. resource_sampler.py SHA is computed/recorded but not compared to a pinned value.",
+      "severity": "medium"
+    },
+    {
+      "lines": "101-108",
+      "minimal_fix": "Guard final parsing/receipt serialization separately and preserve original failure plus finalizer error in an exclusive diagnostic record.",
+      "id": "F6",
+      "finding": "Finally parses all resource JSONL lines and writes receipt without a nested preservation guard. A malformed/partial sample or receipt write error can throw from finally and mask the original caught failure, leaving no final receipt.",
+      "severity": "low"
+    }
+  ],
+  "overall": "AST syntax passes. Several requested failure paths are conservative, but executable target enforcement and worker stop ownership require repair before any -Execute use; sampler-child-unbound is recorded failed but has incomplete terminal evidence."
+}

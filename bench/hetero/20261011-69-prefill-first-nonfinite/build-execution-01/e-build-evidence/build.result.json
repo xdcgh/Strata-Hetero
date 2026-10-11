@@ -1,0 +1,24 @@
+{
+  "phase": "build",
+  "exit_code": 0,
+  "batch_exit_file": 0,
+  "duration_seconds": 422.6771318,
+  "process": {
+    "pid": 25232,
+    "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+    "created": "2026-10-11T03:53:25.7753820Z",
+    "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\build.cmd\"",
+    "batch": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\build.cmd"
+  },
+  "log": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\build.log",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\build.cmd",
+  "last_resource": {
+    "sampled_at_utc": "2026-10-11T04:00:28.514Z",
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 112577007616,
+    "commit_limit_bytes": 145553182720,
+    "commit_available_bytes": 119768604672,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "error": null
+  }
+}

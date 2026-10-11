@@ -1,0 +1,17 @@
+{
+  "launcher": {
+    "pid": 7568,
+    "parent": 8588,
+    "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "created": "2026-10-11T04:02:56.2350780Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\fixture-execution-01\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\fixture-execution-01\\resources.STOP"
+  },
+  "child": {
+    "pid": 24084,
+    "parent": 7568,
+    "exe": "C:\\Python314\\python.exe",
+    "created": "2026-10-11T04:02:56.2675380Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\fixture-execution-01\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\fixture-execution-01\\resources.STOP"
+  },
+  "script_sha256": "9281c59e8bbd1f499b821ffc93633a745d298fead48baa837df8efdd2c5e8beb"
+}

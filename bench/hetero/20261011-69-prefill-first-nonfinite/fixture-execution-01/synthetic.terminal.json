@@ -1,0 +1,14 @@
+{
+  "mode": "synthetic",
+  "pid": 24184,
+  "exit_code": 0,
+  "stdout_sha256": "9c82d66274a99ca66dafab2da6af2216a6cc9825dd48de692a2538a52eb65f7e",
+  "stderr_sha256": "bc931927e75417398e4eec699beb9f11cd4d85444d40015b8d49bb1893b573e3",
+  "identity": {
+    "pid": 24184,
+    "parent": 8588,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\prefill_finite_probe_test.exe",
+    "created": "2026-10-11T04:02:56.5542240Z",
+    "command": "\"E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\prefill_finite_probe_test.exe\""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "root_all_copied_build_metadata_bytes_verified",
+  "manifest_sha256": "25ddca3a484ad6736a1adf9b9d39d56a5517370ad801df2a92adf0fa297dc491",
+  "file_count": 55,
+  "total_bytes": 9650084,
+  "created_utc": "2026-10-11T04:06:25.795162+00:00",
+  "source_destination_and_manifest_hashes_equal": true,
+  "executable_object_debug_or_model_copied": false
+}
