@@ -38,6 +38,9 @@
 #include "strata/prefill/moe_mmq.hpp"
 #include "strata/core/peer_experts.hpp"
 #include "strata/prefill/kernels.hpp"
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+#include "strata/prefill/finite_probe.hpp"
+#endif
 
 #include <cuda_runtime.h>
 
@@ -2050,6 +2053,11 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
     PeTimer pe;
     if (m.pp) pe.dev = m.pp->dev; else pe.on = false;
     const cudaStream_t cs = (cudaStream_t) m.cs;
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+    finite_probe::Probe pf_probe;
+    if (!pf_probe.init(finite_probe::requested(std::getenv("STRATA_PREFILL_FINITE_PROBE")),
+                           m.cs, m.device, pos0, n, err)) return false;
+#endif
     // the MMQ row table lives in the borrowed cache slots, which the refill after a prompt overwrites with experts:
     // write it again for every prompt (a layout is reused as long as the chunk and the slots are the same)
     if (m.ids_identity != nullptr) mmq::iota(m.ids_identity, m.T * K, m.cs);
@@ -2146,6 +2154,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
             }
         }
         if (hand_in_ == nullptr) gr_broadcast(m.emb, m.R, T, m.cs);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+        if (!pf_probe.scan(m.R, {c0 / m.T, p0, -1, T, D, -1, finite_probe::Stage::input_residual}, err)) return false;
+#endif
         // ---- the PLE rows of the whole chunk, one batched SSD request on a thread (see ple_gather).  A later chunk's
         // were read ahead during the previous chunk; the first chunk's are read beside layer 0 - they are needed from
         // layer 1 on, and gathering them here first left the GPU idle for the whole read (~0.4 s of a 32K prompt)
@@ -2485,6 +2496,10 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                 stats_.ms_ple += ms_since(tp);
             }
             for (int half = 0; half < 2; ++half) {
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                if (half == 0 && l == 1 && ple_on &&
+                    !pf_probe.scan(m.R, {c0 / m.T, p0, l, T, D, -1, finite_probe::Stage::ple_residual}, err)) return false;
+#endif
                 // ---- the hyper-connection read of this half
                 const char* pre = half == 0 ? "hc_attn_" : "hc_ffn_";
                 const std::string sn = std::string(pre) + "norm.weight", sd = std::string(pre) + "down.weight",
@@ -2553,6 +2568,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                              m.mixed_bf_lo);
                 }
 
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                if (!pf_probe.scan(m.mixed, {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::hc_mixed}, err)) return false;
+#endif
                 if (half == 0 && !core::is_qsa_layer(g, l)) {
                     // ======================= GDN =======================
                     const core::WeightRef *wqkv = need(v, "attn_qkv.weight", err), *wg = need(v, "attn_gate.weight", err),
@@ -2578,6 +2596,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                     pt.mark(kPfGdnOut, cs);
                     if (!native_proj(m.gemm, wo, m.y_h, m.bo, T, v.name("ssm_out.weight"), err, 0, ld_y)) return false;
                     ++gdn_index;
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                    if (!pf_probe.scan(m.bo, {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::gdn_output}, err)) return false;
+#endif
                 } else if (half == 0) {
                     // ======================= QSA =======================
                     const core::QsaState& st = ss.qsa_states[qsa_index];
@@ -2808,6 +2829,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                     gate_attn(m.attn, m.Qf, m.attn_h, T, m.cs, ld_a);
                     if (!native_proj(m.gemm, wo, m.attn_h, m.bo, T, v.name("attn_output.weight"), err, 0, ld_a)) return false;
                     ++qsa_index;
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                    if (!pf_probe.scan(m.bo, {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::qsa_output}, err)) return false;
+#endif
                     if (!kv_prefetch_after(l + 1, qsa_index)) return false;
                 } else {
                     // ======================= MoE =======================
@@ -3850,6 +3874,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                         moe_combine_peer(m.Dm, m.slot_dev, m.w, m.shared, m.sg, m.pp->host_sum, m.pp->back_at, m.bo, T, m.cs);
                     else
                         moe_combine(m.Dm, m.slot_dev, m.w, m.shared, m.sg, m.bo, T, m.cs);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                    if (!pf_probe.scan(m.bo, {c0 / m.T, p0, l, T, N, half, finite_probe::Stage::moe_output}, err)) return false;
+#endif
                     // debug: STRATA_DBG_NAN=1 reports the first layer of a chunk whose MoE produced non-finite values
                     if (static const bool dbg = std::getenv("STRATA_DBG_NAN") != nullptr; dbg) {
                         cudaStreamSynchronize(m.cs);
@@ -3939,6 +3966,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                 }
                 if (steered && !cv_fused)   // --control-vector-scaled
                     strata::kernels::cvec_apply(m.R, l, T, D, nullptr, 0, nullptr, 0, false, m.cs);
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+                if (!pf_probe.scan(m.R, {c0 / m.T, p0, l, T, D, half, finite_probe::Stage::residual_write}, err)) return false;
+#endif
             }
         }
         if (!ple_land()) return false;   // a stage that ends before layer 1: the rows land anyway, the next gather starts
@@ -3952,6 +3982,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
         core::progress_at("reading the prompt (batched): finishing the chunk from token", p0);
         pt.mark(kPfStart, cs);
         if (next_ != nullptr) {
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+            if (!pf_probe.enqueue_read(err)) return false;
+#endif
             // The current hand-off slot was used two chunks ago.
             float* h = m.hand[hand_buf_];
             if (cudaMemcpyAsync(h, m.R, (size_t) T * D * 4, cudaMemcpyDeviceToHost, m.cs) != cudaSuccess ||
@@ -3959,6 +3992,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                 err = std::string("prefill: the layer split's hand-off: ") + cudaGetErrorString(cudaGetLastError());
                 return false;
             }
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+            pf_probe.report_after_sync(c0 / m.T, p0, T);
+#endif
             // Wait only for the DIRECT successor's previous chunk. That successor
             // may already have forwarded its older chunk to later GPUs.
             if (on_stage_chunk && !on_stage_chunk(p0 + T, err)) return false;
@@ -4009,12 +4045,18 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
             }
         }
         if (on_chunk || on_stage_chunk) {
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+            if (!pf_probe.enqueue_read(err)) return false;
+#endif
             const auto toc = Clock::now();
             if (cudaStreamSynchronize(m.cs) != cudaSuccess) {
                 err = std::string("prefill: ") + cudaGetErrorString(cudaGetLastError());
                 return false;
             }
             const auto toc2 = Clock::now();
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+            pf_probe.report_after_sync(c0 / m.T, p0, T);
+#endif
             if (on_stage_chunk && !on_stage_chunk(p0 + T, err)) return false;
             if (on_chunk && !on_chunk(m.R, T, p0, err)) return false;
             host_sync_ms += std::chrono::duration<double, std::milli>(toc2 - toc).count();
@@ -4043,10 +4085,21 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
         bad(ss.gdn_state, 64 * 1024);
         std::fprintf(stderr, "\n");
     }
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+    // Without a chunk callback, use the existing prompt-end synchronization.
+    const bool probe_at_end = n > 0 && next_ == nullptr && !on_chunk && !on_stage_chunk;
+    if (probe_at_end && !pf_probe.enqueue_read(err)) return false;
+#endif
     if (cudaStreamSynchronize(m.cs) != cudaSuccess) {
         err = std::string("prefill: ") + cudaGetErrorString(cudaGetLastError());
         return false;
     }
+#if defined(STRATA_PREFILL_FINITE_PROBE)
+    if (probe_at_end) {
+        const int64_t last_c0 = (n - 1) / m.T * m.T;
+        pf_probe.report_after_sync(last_c0 / m.T, pos0 + last_c0, n - last_c0);
+    }
+#endif
     // (PR #121) an expert copy that failed on the copy stream surfaces here, not in the next request
     if (const cudaError_t cst = cudaStreamSynchronize(m.copy); cst != cudaSuccess) {
         err = std::string("prefill: expert copy stream: ") + cudaGetErrorString(cst);
