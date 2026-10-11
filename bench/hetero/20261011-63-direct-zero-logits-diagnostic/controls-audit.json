@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "status": "run57_controls_and_prompt_assets_match_run63",
+  "source_matrix": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\matrix.json",
+  "source_matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+  "new_matrix": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\matrix.json",
+  "new_matrix_sha256": "edc264b0118f939843b535de4a1f9c4ace27162eee254c2924c79520a60f7520",
+  "candidate_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "candidate_source_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+  "shared_bridge_sha256": "0ca2dd70485e5e03b0a6fcb5dfc1ee1a8863d2dc44947257e342ae608326b026",
+  "fixed_controls_equal": true,
+  "quality_prompt_count": 9,
+  "quality_prompt_expectations_and_local_counts_equal": true,
+  "quality_prompt_files": [
+    {
+      "id": "smoke_arithmetic",
+      "bytes": 48,
+      "sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd"
+    },
+    {
+      "id": "smoke_unicode",
+      "bytes": 82,
+      "sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008"
+    },
+    {
+      "id": "smoke_json_arithmetic",
+      "bytes": 143,
+      "sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52"
+    },
+    {
+      "id": "smoke_python_function",
+      "bytes": 126,
+      "sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74"
+    },
+    {
+      "id": "smoke_three_key_retrieval",
+      "bytes": 265,
+      "sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f"
+    },
+    {
+      "id": "long_1k",
+      "bytes": 2838,
+      "sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3"
+    },
+    {
+      "id": "long_4k",
+      "bytes": 14249,
+      "sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065"
+    },
+    {
+      "id": "long_16k",
+      "bytes": 66202,
+      "sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751"
+    },
+    {
+      "id": "long_30k7",
+      "bytes": 127193,
+      "sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af"
+    }
+  ],
+  "tokenizer_source_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+  "sustained_decode_prompt_sha256": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+  "normalized_configs_equal_except_log_path": true,
+  "phase_controls": [
+    {
+      "arm": "w10-all",
+      "phase": "quality_on",
+      "workers": 10,
+      "affinity": "all",
+      "capture_token_ids": true,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\logs\\engine.log",
+      "diagnostic_env": "1"
+    },
+    {
+      "arm": "w10-all",
+      "phase": "performance_off",
+      "workers": 10,
+      "affinity": "all",
+      "capture_token_ids": false,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off\\logs\\engine.log",
+      "diagnostic_env": null
+    },
+    {
+      "arm": "w04-all",
+      "phase": "quality_on",
+      "workers": 4,
+      "affinity": "all",
+      "capture_token_ids": true,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on\\logs\\engine.log",
+      "diagnostic_env": null
+    },
+    {
+      "arm": "w04-all",
+      "phase": "performance_off",
+      "workers": 4,
+      "affinity": "all",
+      "capture_token_ids": false,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off\\logs\\engine.log",
+      "diagnostic_env": null
+    },
+    {
+      "arm": "w06-all",
+      "phase": "quality_on",
+      "workers": 6,
+      "affinity": "all",
+      "capture_token_ids": true,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on\\logs\\engine.log",
+      "diagnostic_env": null
+    },
+    {
+      "arm": "w06-all",
+      "phase": "performance_off",
+      "workers": 6,
+      "affinity": "all",
+      "capture_token_ids": false,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off\\logs\\engine.log",
+      "diagnostic_env": null
+    },
+    {
+      "arm": "w16-all",
+      "phase": "quality_on",
+      "workers": 16,
+      "affinity": "all",
+      "capture_token_ids": true,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on\\logs\\engine.log",
+      "diagnostic_env": null
+    },
+    {
+      "arm": "w16-all",
+      "phase": "performance_off",
+      "workers": 16,
+      "affinity": "all",
+      "capture_token_ids": false,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off\\logs\\engine.log",
+      "diagnostic_env": null
+    },
+    {
+      "arm": "w06-auto",
+      "phase": "quality_on",
+      "workers": 6,
+      "affinity": "auto",
+      "capture_token_ids": true,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on\\logs\\engine.log",
+      "diagnostic_env": null
+    },
+    {
+      "arm": "w06-auto",
+      "phase": "performance_off",
+      "workers": 6,
+      "affinity": "auto",
+      "capture_token_ids": false,
+      "only_config_difference": "run-local log path",
+      "source_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off\\logs\\engine.log",
+      "new_log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off\\logs\\engine.log",
+      "diagnostic_env": null
+    }
+  ],
+  "models_or_runtime_assets_copied": false,
+  "request_output_leaves_created": 0,
+  "authorization_or_execution": false,
+  "audit_source_sha256": "f75a114e49c527dc7a137143e2133c5b793bf5c87458f81ab0ba1866453d1544"
+}

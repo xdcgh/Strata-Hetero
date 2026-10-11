@@ -111,6 +111,35 @@ def _fixture_matrix(root: Path) -> Path:
     return path
 
 
+def _fixture_run63_matrix(root: Path) -> Path:
+    path = _fixture_matrix(root)
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    doc["run_id"] = "20261011-63-direct-zero-logits-diagnostic"
+    doc["diagnostic_plan"] = {
+        "only_extra_environment": {"STRATA_DIAG_ZERO_LOGITS": "1"},
+        "applies_to": "first quality phase only: w10-all",
+        "maximum_authorized_phase_intent": 1,
+    }
+    for arm in doc["arms"]:
+        for phase_key, phase_name in (("quality_on", "quality-on"), ("performance_off", "performance-off")):
+            row = arm[phase_key]
+            row["run_id"] = f"20261011-63-{arm['arm']}-{phase_name}"
+            leaf = Path(row["path"])
+            provenance_path = leaf / "provenance.json"
+            provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+            provenance["run_id"] = row["run_id"]
+            provenance_path.write_text(json.dumps(provenance, sort_keys=True) + "\n", encoding="utf-8")
+            row["provenance_sha256"] = sweep.sha256_file(provenance_path)
+            if arm["arm"] == "w10-all" and phase_key == "quality_on":
+                config_path = leaf / "config.json"
+                config = json.loads(config_path.read_text(encoding="utf-8"))
+                config["env"] = {"STRATA_DIAG_ZERO_LOGITS": "1"}
+                config_path.write_text(json.dumps(config, sort_keys=True) + "\n", encoding="utf-8")
+                row["config_sha256"] = sweep.sha256_file(config_path)
+    path.write_text(json.dumps(doc, sort_keys=True) + "\n", encoding="utf-8")
+    return path
+
+
 def _auth(matrix: Path, nonce: str = "a" * 32) -> dict:
     repo = Path(sweep.__file__).resolve().parents[1]
     return {"status": "root_reviewed_authorized", "matrix_sha256": sweep.sha256_file(matrix),
@@ -307,6 +336,53 @@ class PoolSweepPlanTests(unittest.TestCase):
             (leaf / "fresh-identities.json").unlink()
             with self.assertRaisesRegex(sweep.SweepError, "runtime file identities missing"):
                 sweep.build_plan(matrix)
+
+    def test_fresh_quality_request_collision_stops_before_controller_or_launch(self):
+        with tempfile.TemporaryDirectory(prefix="strata-pool-fresh-output-collision-") as temp:
+            matrix = _fixture_run63_matrix(Path(temp))
+            plan = sweep.build_plan(matrix)
+            first = plan["steps"][0]
+            leaf = Path(first["config"]).parent
+            collision = leaf / "requests" / "smoke_arithmetic"
+            collision.mkdir(parents=True)
+            authorization = _auth(matrix)
+            authorization["_resolved_output_root"] = str(matrix.parent.resolve())
+            adapter = sweep.Run41LifecycleAdapter(matrix, authorization)
+            with mock.patch.object(adapter, "_call", side_effect=AssertionError("lifecycle callback must not run")) as call:
+                with self.assertRaisesRegex(sweep.SweepError, "prelaunch quality output already exists: requests\\\\smoke_arithmetic|prelaunch quality output already exists: requests/smoke_arithmetic"):
+                    adapter.run_phase(first)
+            call.assert_not_called()
+            self.assertFalse((leaf / "controller").exists())
+            self.assertEqual(adapter.execution_state["stage"], "phase_preflight")
+
+    def test_fresh_performance_output_collision_stops_before_controller_or_launch(self):
+        with tempfile.TemporaryDirectory(prefix="strata-pool-fresh-performance-collision-") as temp:
+            matrix = _fixture_run63_matrix(Path(temp))
+            plan = sweep.build_plan(matrix)
+            step = next(item for item in plan["steps"] if item["phase"] == "performance_off")
+            leaf = Path(step["config"]).parent
+            collision = leaf / "performance" / f"{step['run_id']}-decode-cap-256"
+            collision.mkdir(parents=True)
+            authorization = _auth(matrix)
+            authorization["_resolved_output_root"] = str(matrix.parent.resolve())
+            adapter = sweep.Run41LifecycleAdapter(matrix, authorization)
+            with mock.patch.object(adapter, "_call", side_effect=AssertionError("lifecycle callback must not run")) as call:
+                with self.assertRaisesRegex(sweep.SweepError, "prelaunch lifecycle output already exists"):
+                    adapter.run_phase(step)
+            call.assert_not_called()
+            self.assertFalse((leaf / "controller").exists())
+
+    def test_run63_authorization_requires_explicit_single_phase_limit(self):
+        with tempfile.TemporaryDirectory(prefix="strata-run63-phase-limit-") as temp:
+            matrix = _fixture_run63_matrix(Path(temp))
+            auth_path = Path(temp) / "authorization.json"
+            authorization = _auth(matrix)
+            auth_path.write_text(json.dumps(authorization), encoding="utf-8")
+            with self.assertRaisesRegex(sweep.SweepError, "explicitly bind max_phases=1"):
+                sweep.validate_root_authorization(matrix, auth_path)
+            authorization["max_phases"] = 1
+            auth_path.write_text(json.dumps(authorization), encoding="utf-8")
+            self.assertEqual(sweep.validate_root_authorization(matrix, auth_path)["max_phases"], 1)
 
     def test_admission_probe_stops_before_model_start_source(self):
         with tempfile.TemporaryDirectory(prefix="strata-pool-admission-boundary-") as temp:

@@ -1,0 +1,13 @@
+{
+  "status": "root_source_controls_fresh_outputs_review_pass",
+  "matrix_sha256": "edc264b0118f939843b535de4a1f9c4ace27162eee254c2924c79520a60f7520",
+  "adapter_sha256": "01fdcaf87e0f47b5a736cfb7e7ec61229b436ab71de4897af6cc7d81bd6bc875",
+  "planned_phases": 10,
+  "authorized_phases": 1,
+  "fresh_phase_output_checks": 10,
+  "source_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "source_version": "0.1.41",
+  "run57_outputs_untouched": true,
+  "actual_launch_NOT_RUN": true,
+  "actual_admission_required_in_launcher": true
+}

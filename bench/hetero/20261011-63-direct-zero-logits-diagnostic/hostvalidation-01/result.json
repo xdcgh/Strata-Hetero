@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B -m unittest tools.test_hetero_pool_sweep",
+  "exit_code": 1,
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\hostvalidation-01\\unittest.stdout.txt",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\hostvalidation-01\\unittest.stderr.txt",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "0dfbdce8b1c14e25c04d46b3cc629cc46704b6474b2e046189c075cd7da0f8dd",
+  "model_started": false,
+  "device_work": false,
+  "utc": "2026-10-11T02:22:46.3679410Z"
+}

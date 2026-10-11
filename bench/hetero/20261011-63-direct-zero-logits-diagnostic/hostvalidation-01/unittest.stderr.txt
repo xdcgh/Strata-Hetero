@@ -1,0 +1,15 @@
+.................E..............
+======================================================================
+ERROR: test_real_run41_adapter_cleanup_schema_crosses_coordinator (tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_real_run41_adapter_cleanup_schema_crosses_coordinator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\test_hetero_pool_sweep.py", line 566, in test_real_run41_adapter_cleanup_schema_crosses_coordinator
+    results = sweep.execute_controlled_coordinator(plan, auth, adapter)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_pool_sweep.py", line 642, in execute_controlled_coordinator
+    raise SweepError("authorized phase limit must be a positive bounded integer")
+tools.hetero_pool_sweep.SweepError: authorized phase limit must be a positive bounded integer
+
+----------------------------------------------------------------------
+Ran 32 tests in 5.423s
+
+FAILED (errors=1)

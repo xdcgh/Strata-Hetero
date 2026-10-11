@@ -27,7 +27,7 @@ EXPECTED_ARMS = {
 ARM_EXECUTION_ORDER = ("w10-all", "w04-all", "w06-all", "w16-all", "w06-auto")
 EXPECTED_QUALITY_PROMPT_IDS = ("smoke_arithmetic", "smoke_unicode", "smoke_json_arithmetic", "smoke_python_function",
                               "smoke_three_key_retrieval", "long_1k", "long_4k", "long_16k", "long_30k7")
-RUN_ID_RE = re.compile(r"^(?:20261009-47|20261011-51|20261011-57)-(?:w10-all|w04-all|w06-all|w16-all|w06-auto)-(?:quality-on|performance-off)$")
+RUN_ID_RE = re.compile(r"^(?:20261009-47|20261011-51|20261011-57|20261011-63)-(?:w10-all|w04-all|w06-all|w16-all|w06-auto)-(?:quality-on|performance-off)$")
 RUN41_REL = Path("bench/hetero/20261009-41-hetero41-direct-quality")
 RUN41_TEMPLATES = {
     "launch": (RUN41_REL / "launch-owned.ps1", "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679"),
@@ -50,6 +50,56 @@ class LifecycleTimeout(SweepError):
     def __init__(self, owner: dict[str, Any], stdout: bytes, stderr: bytes, process: subprocess.Popen):
         super().__init__(f"owned PowerShell controller timed out with PID {owner.get('pid')}; process/evidence preserved")
         self.owner, self.stdout, self.stderr, self.process = owner, stdout, stderr, process
+
+
+def validate_fresh_quality_outputs(run_dir: Path) -> None:
+    """Reject stale quality outputs before a model process can start."""
+    conflicts = [run_dir / "requests" / prompt_id for prompt_id in EXPECTED_QUALITY_PROMPT_IDS]
+    conflicts += [run_dir / rel for rel in (
+        "controller", "process.json", "sampler-process.json", "admission.json",
+        "logs/engine.log", "logs/server.stdout.log", "logs/server.stderr.log",
+        "logs/sampler.stdout.log", "logs/sampler.stderr.log",
+        "resource/samples.jsonl", "resource/startup-watch.jsonl", "resource/startup-watch-result.json", "resource/STOP",
+        "quality/ready-binding.json", "quality/preflight-ready-binding.json", "quality/quality-progress.jsonl",
+        "quality/F-quality-failure.json", "quality/F-nine-prompt-stage.json",
+        "cleanup/preflight.json", "cleanup/resource-summary.json", "cleanup/unload.json", "cleanup/final.json",
+    )]
+    for prompt_id in EXPECTED_QUALITY_PROMPT_IDS:
+        conflicts += [run_dir / "quality" / f"F-{prompt_id}-{kind}.json" for kind in ("quality", "result")]
+        conflicts += [run_dir / "logs" / f"quality-F-{prompt_id}.{stream}.log" for stream in ("stdout", "stderr")]
+    for path in conflicts:
+        if path.exists() or path.is_symlink():
+            raise SweepError(f"prelaunch quality output already exists: {path.relative_to(run_dir)}")
+
+
+def validate_fresh_phase_outputs(run_dir: Path, *, quality: bool, run_id: str | None = None) -> None:
+    """Check the run41 lifecycle's exclusive receipts before launch."""
+    if quality: validate_fresh_quality_outputs(run_dir)
+    conflicts = [run_dir / "controller", run_dir / "process.json", run_dir / "sampler-process.json",
+                 run_dir / "admission.json", run_dir / "identity-recheck.json", run_dir / "launch-status.json",
+                 run_dir / "logs" / "engine.log",
+                 run_dir / "logs" / "server.stdout.log", run_dir / "logs" / "server.stderr.log",
+                 run_dir / "logs" / "sampler.stdout.log", run_dir / "logs" / "sampler.stderr.log",
+                 run_dir / "resource" / "samples.jsonl", run_dir / "resource" / "startup-watch.jsonl",
+                 run_dir / "resource" / "startup-watch-result.json", run_dir / "resource" / "STOP",
+                 run_dir / "cleanup" / "preflight.json", run_dir / "cleanup" / "resource-summary.json",
+                 run_dir / "cleanup" / "unload.json", run_dir / "cleanup" / "final.json"]
+    if quality:
+        conflicts += [run_dir / rel for rel in (
+            "quality/ready-binding.json", "quality/preflight-ready-binding.json", "quality/quality-progress.jsonl",
+            "quality/F-quality-failure.json", "quality/F-nine-prompt-stage.json")]
+    else:
+        conflicts += [run_dir / "performance" / name for name in (
+            "ready-binding.json", "performance-progress.jsonl", "performance-stage.json", "performance-failure.json")]
+        if not isinstance(run_id, str) or not RUN_ID_RE.fullmatch(run_id):
+            raise SweepError("performance freshness check requires the exact allowlisted phase RunId")
+        for scenario in ("decode-cap-256", "decode-cap-512", "decode-cap-1024", "context-4k", "context-16k", "context-32k"):
+            conflicts.extend((run_dir / "performance" / f"{scenario}.stdout.log",
+                              run_dir / "performance" / f"{scenario}.stderr.log",
+                              run_dir / "performance" / f"{run_id}-{scenario}"))
+    for path in conflicts:
+        if path.exists() or path.is_symlink():
+            raise SweepError(f"prelaunch lifecycle output already exists: {path.relative_to(run_dir)}")
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -364,11 +414,26 @@ def build_plan(matrix_path: Path) -> dict[str, Any]:
     matrix = json.loads(matrix_path.read_text(encoding="utf-8"))
     if matrix.get("status") != "prepared_for_root_review_not_launched":
         raise SweepError("matrix is not a prepared plan")
+    matrix_run_id = matrix.get("run_id")
+    run_prefix = None
+    if matrix_run_id is not None:
+        if not isinstance(matrix_run_id, str) or not re.fullmatch(r"202610(?:09-47|11-(?:51|57|63))-[a-z0-9-]+", matrix_run_id):
+            raise SweepError("matrix RunId is outside the fixed prepared-run namespace")
+        run_prefix = "-".join(matrix_run_id.split("-")[:2]) + "-"
     actual_arms = {(x.get("arm"), x.get("workers"), x.get("affinity")) for x in matrix.get("arms", [])}
     if actual_arms != EXPECTED_ARMS:
         raise SweepError("worker-pool arm set does not exactly match the reviewed five-arm matrix")
     if matrix.get("arm_execution_order") != list(ARM_EXECUTION_ORDER):
         raise SweepError("arm execution order must place w10-all baseline first for both phases")
+    diagnostic = matrix.get("diagnostic_plan")
+    if diagnostic is not None:
+        if (not isinstance(diagnostic, dict) or diagnostic.get("only_extra_environment") != {"STRATA_DIAG_ZERO_LOGITS": "1"} or
+                diagnostic.get("maximum_authorized_phase_intent") != 1 or
+                diagnostic.get("applies_to") != "first quality phase only: w10-all"):
+            raise SweepError("zero-logits diagnostic must be bound to only the first w10-all quality phase")
+    if matrix_run_id == "20261011-63-direct-zero-logits-diagnostic":
+        if not diagnostic or diagnostic.get("maximum_authorized_phase_intent") != 1:
+            raise SweepError("run63 must carry the fixed first-phase-only diagnostic boundary")
     scenarios = matrix.get("performance_phase", {}).get("scenarios")
     if not isinstance(scenarios, list) or len(scenarios) != 6:
         raise SweepError("performance recipe must contain the three decode and three context scenarios")
@@ -434,6 +499,8 @@ def build_plan(matrix_path: Path) -> dict[str, Any]:
             run_id = row["run_id"]
             if not RUN_ID_RE.fullmatch(run_id):
                 raise SweepError("RunId is outside the fixed matrix namespace")
+            if run_prefix and not run_id.startswith(run_prefix):
+                raise SweepError(f"phase RunId does not match its matrix run family: {run_id}")
             expected_leaf = (matrix_path.parent / "arms" / arm["arm"] /
                              ("quality-on" if phase == "quality_on" else "performance-off"))
             leaf = Path(row["path"])
@@ -446,6 +513,14 @@ def build_plan(matrix_path: Path) -> dict[str, Any]:
                 current = current.parent
             config_doc = json.loads((leaf / "config.json").read_text(encoding="utf-8"))
             identity_doc = json.loads((leaf / "identity.json").read_text(encoding="utf-8"))
+            diagnostic_value = config_doc.get("env", {}).get("STRATA_DIAG_ZERO_LOGITS")
+            expected_diagnostic = bool(diagnostic and arm_id == ARM_EXECUTION_ORDER[0] and phase == "quality_on")
+            if expected_diagnostic and diagnostic_value != "1":
+                raise SweepError(f"first diagnostic quality phase lacks STRATA_DIAG_ZERO_LOGITS=1: {run_id}")
+            if not expected_diagnostic and diagnostic_value is not None:
+                raise SweepError(f"diagnostic environment escaped the first quality phase: {run_id}")
+            if matrix_run_id == "20261011-63-direct-zero-logits-diagnostic" and phase == "quality_on":
+                validate_fresh_phase_outputs(leaf, quality=True)
             args = config_doc.get("args", [])
             try:
                 workers = args[args.index("--pool-workers") + 1]
@@ -486,12 +561,18 @@ def build_plan(matrix_path: Path) -> dict[str, Any]:
                 "launch_template": "pinned run41 launch-owned.ps1 (parameterized in memory)",
                 "quality_template": "pinned run41 quality controller (quality-on) or guarded hetero_bench loop (performance-off)",
             })
+    max_phases = (diagnostic.get("maximum_authorized_phase_intent", len(plan_steps)) if diagnostic else len(plan_steps))
+    if type(max_phases) is not int or not 1 <= max_phases <= len(plan_steps):
+        raise SweepError("matrix maximum authorized phase intent is invalid")
+    if matrix_run_id == "20261011-63-direct-zero-logits-diagnostic" and max_phases != 1:
+        raise SweepError("run63 must keep its first-phase-only authorization boundary")
     return {
         "schema_version": 1,
         "status": "plan_only_no_hardware_or_process_access",
         "matrix_path": str(matrix_path),
         "matrix_sha256": sha256_file(matrix_path),
         "steps": plan_steps,
+        "maximum_authorized_phases": max_phases,
         "arm_execution_order": list(ARM_EXECUTION_ORDER),
         "performance_scenarios": enrich_performance_scenarios(scenarios, manifest_path),
         "execution_enabled": False,
@@ -504,6 +585,17 @@ def validate_root_authorization(matrix_path: Path, authorization_path: Path) -> 
     matrix_path = matrix_path.resolve(strict=True)
     matrix = json.loads(matrix_path.read_text(encoding="utf-8"))
     authorization = json.loads(authorization_path.read_text(encoding="utf-8"))
+    diagnostic = matrix.get("diagnostic_plan")
+    maximum = diagnostic.get("maximum_authorized_phase_intent") if isinstance(diagnostic, dict) else len(matrix.get("arms", [])) * 2
+    if type(maximum) is not int or not 1 <= maximum <= len(matrix.get("arms", [])) * 2:
+        raise SweepError("matrix maximum authorized phase intent is invalid")
+    if matrix.get("run_id") == "20261011-63-direct-zero-logits-diagnostic" and authorization.get("max_phases") != 1:
+        raise SweepError("run63 root authorization must explicitly bind max_phases=1")
+    authorized_phases = authorization.get("max_phases", maximum)
+    if type(authorized_phases) is not int or not 1 <= authorized_phases <= maximum:
+        raise SweepError("root authorization phase limit exceeds the matrix's explicit first-phase boundary")
+    if matrix.get("run_id") == "20261011-63-direct-zero-logits-diagnostic" and authorized_phases != 1:
+        raise SweepError("run63 root authorization must explicitly bind max_phases=1")
     if authorization.get("status") != "root_reviewed_authorized":
         raise SweepError("authorization is not root reviewed")
     if authorization.get("matrix_sha256") != sha256_file(matrix_path):
@@ -546,8 +638,9 @@ def execute_controlled_coordinator(plan: dict[str, Any], authorization: dict[str
         raise SweepError("authorization does not bind this exact immutable plan hash")
     results = []
     previous = None
-    phase_limit = authorization.get("max_phases", len(plan["steps"]))
-    if type(phase_limit) is not int or not 1 <= phase_limit <= len(plan["steps"]):
+    maximum = plan.get("maximum_authorized_phases", len(plan["steps"]))
+    phase_limit = authorization.get("max_phases", min(maximum, len(plan["steps"])))
+    if type(phase_limit) is not int or not 1 <= phase_limit <= min(maximum, len(plan["steps"])):
         raise SweepError("authorized phase limit must be a positive bounded integer")
     for step in plan["steps"][:phase_limit]:
         if step["arm"] not in authorization["arms"]:
@@ -1036,11 +1129,12 @@ class Run41LifecycleAdapter:
         config = json.loads(config_path.read_text(encoding="utf-8"))
         identity = json.loads(identity_path.read_text(encoding="utf-8"))
         provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+        matrix_doc = json.loads(self.matrix_path.read_text(encoding="utf-8"))
+        matrix_arm = next(x for x in matrix_doc["arms"] if x["arm"] == step["arm"])
         self.execution_state.update({"stage": "phase_preflight", "run_id": step["run_id"],
                                      "run_dir": str(config_path.parent), "controller_dir": None,
                                      "model_launch_reported": False})
-        if (sha256_file(config_path) != next(x for x in json.loads(self.matrix_path.read_text(encoding="utf-8"))["arms"]
-                                               if x["arm"] == step["arm"])[step["phase"]]["config_sha256"] or
+        if (sha256_file(config_path) != matrix_arm[step["phase"]]["config_sha256"] or
                 config.get("exe") != identity.get("engine", {}).get("path") or
                 provenance.get("run_id") != step["run_id"] or provenance.get("engine_sha256") != identity.get("engine", {}).get("sha256") or
                 provenance.get("shared_controls", {}).get("quality_prompt_manifest") != step.get("quality_prompt_manifest_path") or
@@ -1052,6 +1146,9 @@ class Run41LifecycleAdapter:
                 config.get("hetero_capture_token_ids") is not step["token_capture"]):
             raise SweepError("phase config/identity/provenance changed from the immutable matrix recipe")
         resume_existing = self.authorization.get("resume_existing_run_id") == step["run_id"]
+        if not resume_existing:
+            validate_fresh_phase_outputs(config_path.parent, quality=(step["phase"] == "quality_on"),
+                                          run_id=step["run_id"])
         controller_dir = config_path.parent / "controller" if resume_existing else self._controller_dir(step)
         if controller_dir.parent != config_path.parent:
             raise SweepError("controller evidence directory escaped its run leaf")

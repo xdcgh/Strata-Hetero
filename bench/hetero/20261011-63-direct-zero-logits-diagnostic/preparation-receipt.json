@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "prepared_plan_validated_no_lifecycle_execution",
+  "run_id": "20261011-63-direct-zero-logits-diagnostic",
+  "preparation_sha256": "517f6887b3a2a63bd8dc0852001892f4b1d75b24c58682602e952cd48809ca89",
+  "matrix_sha256": "edc264b0118f939843b535de4a1f9c4ace27162eee254c2924c79520a60f7520",
+  "plan_step_count": 10,
+  "plan_status": "plan_only_no_hardware_or_process_access",
+  "maximum_authorized_phases": 1,
+  "runtime_admission_or_execution": false
+}

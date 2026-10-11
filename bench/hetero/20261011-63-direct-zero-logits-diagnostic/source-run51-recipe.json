@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "source_recipe_reference_only",
+  "source_run_id": "20261011-51-worker-pool-sweep",
+  "source_matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\matrix-tokenizer-rebased-05.json",
+  "source_matrix_sha256": "971c55ef00feb4184a4a2bbe6fc9859b1385c794ae18f9a7f930590b34b42024",
+  "source_matrix_variant": "matrix-tokenizer-rebased-05.json",
+  "runtime_evidence_copied": false,
+  "process_admission_or_result_artifacts_copied": false,
+  "note": "Only configuration, identity, provenance, freshness-reference, source, and prompt recipe inputs were used."
+}

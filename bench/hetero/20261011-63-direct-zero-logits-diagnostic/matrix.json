@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-63-direct-zero-logits-diagnostic",
+  "status": "prepared_for_root_review_not_launched",
+  "source_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd",
+  "branch": "codex/45-upstream41-runtime",
+  "source_worktree_status_at_matrix_finalization": [
+    " M include/strata/kernels/cpu/pool.hpp",
+    " M src/hetero/native_expert_bench.cpp",
+    " M src/kernels/cpu/pool.cpp",
+    " M src/program/generate.cpp",
+    " M tools/hetero_native_cpu/CMakeLists.txt",
+    "?? bench/hetero/20261009-35-cpu-worker-affinity/affinity-telemetry-insertion-inventory.md",
+    "?? bench/hetero/20261011-51-worker-pool-sweep-preparation/",
+    "?? src/hetero/worker_affinity_observation_test.cpp"
+  ],
+  "candidate_source_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+  "candidate_binary_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe",
+  "candidate_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "candidate_binary_bytes": 52433920,
+  "shared_bridge_sha256": "0ca2dd70485e5e03b0a6fcb5dfc1ee1a8863d2dc44947257e342ae608326b026",
+  "pinned_ggml": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "source_blobs": {
+    "src/program/generate.cpp": "405620c45fb718e06f5f4e78985051be89d4a78f",
+    "src/kernels/cpu/pool.cpp": "16e3fb2d8f8beb4df064f2b469370d5d178c3a3c",
+    "include/strata/kernels/cpu/pool.hpp": "6796e39173a0015ff7e397b71a6b3170415897ec"
+  },
+  "cli_affinity_support": {
+    "generate_cli_modes": [
+      "all",
+      "auto",
+      "p-cores"
+    ],
+    "modes_selected": [
+      "all",
+      "auto"
+    ],
+    "none": "excluded because not a generate CLI option; native harness semantics do not apply"
+  },
+  "fixed_controls": {
+    "pack": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+    "native_model_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "native_dense_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "original_F_ple_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "ple_io": "direct",
+    "resident_budget_gib": 20,
+    "max_context": 32768,
+    "kv": "int8",
+    "prompt_cache": 0,
+    "spec": 4,
+    "pool_tasks": "unchanged default",
+    "host_core": "default first; not overridden",
+    "tokenizer": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer",
+    "mtp": "F:\\Strata-data\\mtp\\rt",
+    "environment": {
+      "PATH": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64;E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin;C:\\Windows\\System32;C:\\Windows",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "STRATA_IQ_MT_MIN": "1",
+      "STRATA_GGUF_PY": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py",
+      "STRATA_UNBUFFERED_LOAD": "0",
+      "STRATA_PREFILL_CPU_SHARE": "0",
+      "STRATA_STAGE_PIN": "0"
+    }
+  },
+  "arms": [
+    {
+      "arm": "w10-all",
+      "role": "baseline",
+      "workers": 10,
+      "affinity": "all",
+      "quality_on": {
+        "run_id": "20261011-63-w10-all-quality-on",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on",
+        "config_sha256": "cac17e39490dfb222c7cdd83e9fbb7fd4fdbf7aa51dba32573b826ca5aeb5ddc",
+        "identity_sha256": "007c5f183479320b1049120be2ed2d9f7aa620453dc4c82a2514ecba9b8e2348",
+        "provenance_sha256": "3becaef55e3e69a5f0e4b7b77f95ae913d3836217c8abee4c9c339a9c94bf0c9",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "efe819682ec34be24cd3a7893003e10af7219eb2a28a409369dbfb07f25946d8"
+      },
+      "performance_off": {
+        "run_id": "20261011-63-w10-all-performance-off",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off",
+        "config_sha256": "04e90a14b13ac21ca7699b465f8d183864d8dbe87c2f5b5ee442ff617f4d93f5",
+        "identity_sha256": "bf2607b018167c095e1d7dee2e195fdc09bbd68d84eadd6523c4c2be71f54761",
+        "provenance_sha256": "bc4066353d1a1b3236e43f3c79c1cdd693157310611b2b2a18ad8dd972222fe0",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752"
+      }
+    },
+    {
+      "arm": "w04-all",
+      "role": "candidate",
+      "workers": 4,
+      "affinity": "all",
+      "quality_on": {
+        "run_id": "20261011-63-w04-all-quality-on",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on",
+        "config_sha256": "2ae5a0e42ff4bf6049f2d43fc65af5d19c5c5dbc5b2121e3033ed96766024d29",
+        "identity_sha256": "77cdf76dd5920866a11c4ecf2e9ea9390df718371fb7c889049039d6063c3e84",
+        "provenance_sha256": "bf48fa5ffe185f7d5510503ccb1103ba64391eac6db239984715398791e828e7",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "51fcfdbf3030d4a0ffb5c892275609d34bddd06f0df47704c3a0d4781fcaf89c"
+      },
+      "performance_off": {
+        "run_id": "20261011-63-w04-all-performance-off",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off",
+        "config_sha256": "f5f5d42c73f1724c10aae423137c25ad0db93f7cf76168fdcfae7d37b49de304",
+        "identity_sha256": "2f0c275a5ac3450d94d9f2fb4ddd0c0599aa666f929abe3d895d0d9aa14709c0",
+        "provenance_sha256": "c290d43bf98d830153cc764f9c9be17beb1368590d77f318643750854707d1f6",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752"
+      }
+    },
+    {
+      "arm": "w06-all",
+      "role": "candidate",
+      "workers": 6,
+      "affinity": "all",
+      "quality_on": {
+        "run_id": "20261011-63-w06-all-quality-on",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on",
+        "config_sha256": "336befda66b2cfb5dfc209b86005b76a2c18ac3a8531316029377a3b2c672b1f",
+        "identity_sha256": "4b326ae33799c56b04a24a6db710e0655679e91e085163d15d9fe680f64db529",
+        "provenance_sha256": "66f590f5067d565254f63696991230e90233daadc4b9a77d85e6234b1e76715c",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "51fcfdbf3030d4a0ffb5c892275609d34bddd06f0df47704c3a0d4781fcaf89c"
+      },
+      "performance_off": {
+        "run_id": "20261011-63-w06-all-performance-off",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off",
+        "config_sha256": "b8a2f005c936bb0c60038042107d1890b654927353960ac63cbbd54b213a76b2",
+        "identity_sha256": "58fe1bdec960227d5a5eef0ac6e97356d509b1091150fc3e178aa5e1dbd642ea",
+        "provenance_sha256": "369ab1ab7a61e76dd30f6cb8f5bcb53de1a9787aa5ad814e639187473e340319",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752"
+      }
+    },
+    {
+      "arm": "w16-all",
+      "role": "candidate",
+      "workers": 16,
+      "affinity": "all",
+      "quality_on": {
+        "run_id": "20261011-63-w16-all-quality-on",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on",
+        "config_sha256": "3c62a845bb8e6817c9a73120f69d6a5670d63d370b3e86f50b2c97b270448e5b",
+        "identity_sha256": "74c51b149abdb9e7d56fc85afaa1136da4669a851b00b63716c19322494d6676",
+        "provenance_sha256": "798242998113ce399bc574a11fb2d0ed2a94115002e7ca9aefc578ba78adcb58",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "51fcfdbf3030d4a0ffb5c892275609d34bddd06f0df47704c3a0d4781fcaf89c"
+      },
+      "performance_off": {
+        "run_id": "20261011-63-w16-all-performance-off",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off",
+        "config_sha256": "e981d64bf2693567db832c7fadf2e045658589e109f81b048cec997c15b9e9bc",
+        "identity_sha256": "46b95c6af048d18222dbc29d512a1e0596aa345cf0e8ea1cd9a79ef1e0a11b43",
+        "provenance_sha256": "1e09071150d3945737da1b66004cf655b06a0df936a5d7190606177b0387f32f",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752"
+      }
+    },
+    {
+      "arm": "w06-auto",
+      "role": "candidate",
+      "workers": 6,
+      "affinity": "auto",
+      "quality_on": {
+        "run_id": "20261011-63-w06-auto-quality-on",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on",
+        "config_sha256": "1d91e4a8850bb985d99f27e300efb3247805e73339646d0ab6cc44a3a1679e4d",
+        "identity_sha256": "c9c5ebd1596fcc24982e1d17acb493a82a4e68d940b182f2c55305e5cdcb5b8f",
+        "provenance_sha256": "26d5b6e416348b742d5861ec061dd808e7f654f5476a2a5927bc147eeaaf871d",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "51fcfdbf3030d4a0ffb5c892275609d34bddd06f0df47704c3a0d4781fcaf89c"
+      },
+      "performance_off": {
+        "run_id": "20261011-63-w06-auto-performance-off",
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off",
+        "config_sha256": "55e8163f5909e636ad083928562e8f19bf93e6f919b9a87c295bf64448c3584e",
+        "identity_sha256": "7019b9f481e3474213b5b3e5749f26a3cc907a31a0dfc069ce24967422be026c",
+        "provenance_sha256": "5721fe0e047b144bd4c4e256209eda72515a734346c31f12942709402165e0d7",
+        "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+        "normalized_config_sha256": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752"
+      }
+    }
+  ],
+  "canonical_config_hashes": {
+    "all_modes_capture_placeholder": "d1b2d0ad4c91e892a81be7edf024e50da205c031d7673546e94980e05bd9ad94",
+    "quality_capture_on": "51fcfdbf3030d4a0ffb5c892275609d34bddd06f0df47704c3a0d4781fcaf89c",
+    "performance_capture_off": "14fd5b651bd2bd526e81e241ca93221573c6f7d2aa6e8cf13a320ed397c71752",
+    "quality_capture_on_first_diagnostic_phase": "efe819682ec34be24cd3a7893003e10af7219eb2a28a409369dbfb07f25946d8"
+  },
+  "quality_phase": {
+    "mode": "capture-on",
+    "manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd",
+    "prompts": [
+      {
+        "id": "smoke_arithmetic",
+        "file": "prompts/smoke_arithmetic.prompt.txt",
+        "sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+        "chat_prompt_tokens": 27,
+        "quality_cap": 128
+      },
+      {
+        "id": "smoke_unicode",
+        "file": "prompts/smoke_unicode.prompt.txt",
+        "sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+        "chat_prompt_tokens": 32,
+        "quality_cap": 128
+      },
+      {
+        "id": "smoke_json_arithmetic",
+        "file": "prompts/smoke_json_arithmetic.prompt.txt",
+        "sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+        "chat_prompt_tokens": 50,
+        "quality_cap": 128
+      },
+      {
+        "id": "smoke_python_function",
+        "file": "prompts/smoke_python_function.prompt.txt",
+        "sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+        "chat_prompt_tokens": 39,
+        "quality_cap": 256
+      },
+      {
+        "id": "smoke_three_key_retrieval",
+        "file": "prompts/smoke_three_key_retrieval.prompt.txt",
+        "sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+        "chat_prompt_tokens": 114,
+        "quality_cap": 128
+      },
+      {
+        "id": "long_1k",
+        "file": "prompts/long_1k.prompt.txt",
+        "sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+        "chat_prompt_tokens": 1036,
+        "quality_cap": 128
+      },
+      {
+        "id": "long_4k",
+        "file": "prompts/long_4k.prompt.txt",
+        "sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+        "chat_prompt_tokens": 4109,
+        "quality_cap": 128
+      },
+      {
+        "id": "long_16k",
+        "file": "prompts/long_16k.prompt.txt",
+        "sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+        "chat_prompt_tokens": 16396,
+        "quality_cap": 128
+      },
+      {
+        "id": "long_30k7",
+        "file": "prompts/long_30k7.prompt.txt",
+        "sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+        "chat_prompt_tokens": 30712,
+        "quality_cap": 128
+      }
+    ],
+    "warmups_per_prompt": 1,
+    "formals_per_prompt": 3,
+    "formal_requests": 135,
+    "warmup_requests": 45,
+    "strict_quality": true,
+    "actual_engine_ids_each_formal_match_H4": true
+  },
+  "performance_phase": {
+    "mode": "capture-off",
+    "scenarios": [
+      {
+        "id": "decode-cap-256",
+        "prompt_id": "sustained_decode",
+        "max_tokens": 256,
+        "prompt_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\prompts\\sustained_decode.prompt.txt",
+        "prompt_sha256": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+        "prompt_bytes": 4564,
+        "prompt_expectation": "detailed multi-section ~1500-token request; record actual response length, EOS/length finish, do not retry if it ends early"
+      },
+      {
+        "id": "decode-cap-512",
+        "prompt_id": "sustained_decode",
+        "max_tokens": 512,
+        "prompt_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\prompts\\sustained_decode.prompt.txt",
+        "prompt_sha256": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+        "prompt_bytes": 4564,
+        "prompt_expectation": "detailed multi-section ~1500-token request; record actual response length, EOS/length finish, do not retry if it ends early"
+      },
+      {
+        "id": "decode-cap-1024",
+        "prompt_id": "sustained_decode",
+        "max_tokens": 1024,
+        "prompt_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\prompts\\sustained_decode.prompt.txt",
+        "prompt_sha256": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+        "prompt_bytes": 4564,
+        "prompt_expectation": "detailed multi-section ~1500-token request; record actual response length, EOS/length finish, do not retry if it ends early"
+      },
+      {
+        "id": "context-4k",
+        "prompt_id": "long_4k",
+        "prompt_tokens": 4109,
+        "max_tokens": 128
+      },
+      {
+        "id": "context-16k",
+        "prompt_id": "long_16k",
+        "prompt_tokens": 16396,
+        "max_tokens": 128
+      },
+      {
+        "id": "context-32k",
+        "prompt_id": "long_30k7",
+        "prompt_tokens": 30712,
+        "max_tokens": 128
+      }
+    ],
+    "warmups_per_scenario": 1,
+    "formals_per_scenario": 3,
+    "formal_requests": 90,
+    "warmup_requests": 30,
+    "runner": "tools/hetero_bench.py",
+    "flags": [
+      "--repeats 3",
+      "--warmup 1",
+      "--concurrency 1",
+      "--seed 42",
+      "--reasoning-effort none",
+      "--allow-capped-performance"
+    ],
+    "metrics": [
+      "TTFT/first-generated",
+      "first-visible-content",
+      "client E2E",
+      "server prompt/decode timings",
+      "actual output token count",
+      "finish_reason",
+      "cache_n"
+    ],
+    "capture_diagnostic_pairs": [
+      "long_4k cap128",
+      "long_16k cap128",
+      "long_30k7 cap128"
+    ],
+    "capped_outputs_may_finish_early": true,
+    "decode_caps_share_one_fixed_prompt": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\prompts\\sustained_decode.prompt.txt",
+      "sha256": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+      "bytes": 4564,
+      "capture_on_quality_pair_available": false
+    }
+  },
+  "planned_arm_order": {
+    "quality_capture_on": [
+      "w10-all",
+      "w04-all",
+      "w06-all",
+      "w16-all",
+      "w06-auto"
+    ],
+    "performance_capture_off": [
+      "w10-all",
+      "w04-all",
+      "w06-all",
+      "w16-all",
+      "w06-auto"
+    ]
+  },
+  "future_controller_protocol": {
+    "quality_model_loads": 5,
+    "performance_model_loads": 5,
+    "fresh_admission_before_each_load": {
+      "RAM_GiB": 12,
+      "commit_GiB": 4,
+      "VRAM_MiB": 46000
+    },
+    "CPU_topology_snapshot_each_load": true,
+    "one_second_resource_sampler": true,
+    "max_sample_age_seconds": 5,
+    "exact_owner_tree_and_full_argv": true,
+    "stop_on_first_fail": true,
+    "no_retries_or_restarts": true,
+    "controller_reuse": [
+      "run41 reviewed launch-owned owner/admission gate",
+      "run41 bounded startup watcher",
+      "run41 strict quality/H4-ID controller",
+      "generic tools/hetero_bench.py"
+    ],
+    "no_per_arm_scripts": true,
+    "one_new_parameterized_matrix_coordinator_after_root_review": true
+  },
+  "affinity_interpretation": {
+    "workers_semantics": "N CPU worker threads plus the participating caller when host_works is true",
+    "affinity_all": "one worker per physical core with current hybrid core ordering as implemented",
+    "affinity_auto": "P-core primaries, then P-core SMT siblings, then E-core overflow on hybrid CPU",
+    "process_or_parent_affinity_mutation": false,
+    "reported_engine_worker_logical_cpu_list_required": true,
+    "P_E_labels_require_fresh_topology_map": true
+  },
+  "timing_policy": "Capture-on quality timings and capture-off performance timings are separate populations. Report per-case median/range of three formal repeats; do not make pooled p95 or daily promotion claim from this matrix alone.",
+  "no_model_or_api_launched": true,
+  "no_compile_or_gpu": true,
+  "prepared_utc": "2026-10-11T02:22:35.518664Z",
+  "candidate_build_source_tree": "ae84e7b6108e631926ef4316d7b671b42d08cf37",
+  "candidate_build_source_clean_before_after": true,
+  "candidate_build_source_blobs": {
+    "src/program/generate.cpp": "405620c45fb718e06f5f4e78985051be89d4a78f",
+    "src/kernels/cpu/pool.cpp": "16e3fb2d8f8beb4df064f2b469370d5d178c3a3c",
+    "include/strata/kernels/cpu/pool.hpp": "6796e39173a0015ff7e397b71a6b3170415897ec"
+  },
+  "merged_head_committed_blobs": {
+    "src/program/generate.cpp": "405620c45fb718e06f5f4e78985051be89d4a78f",
+    "src/kernels/cpu/pool.cpp": "16e3fb2d8f8beb4df064f2b469370d5d178c3a3c",
+    "include/strata/kernels/cpu/pool.hpp": "6796e39173a0015ff7e397b71a6b3170415897ec"
+  },
+  "root_worktree_tracked_source_changes_not_in_candidate_binary": [
+    " M include/strata/kernels/cpu/pool.hpp",
+    " M src/hetero/native_expert_bench.cpp",
+    " M src/kernels/cpu/pool.cpp",
+    " M src/program/generate.cpp",
+    " M tools/hetero_native_cpu/CMakeLists.txt"
+  ],
+  "binary_scope_note": "All planned arms bind the already validated 6bbc binary built from clean ffeb748. Root's current uncommitted worker-affinity telemetry and Win32 readback changes are not compiled into it. Do not substitute current HEAD for this binary's source identity.",
+  "telemetry48_note": "A separate CPU-only telemetry48 build is planned by root; this preparation does not bind or build its future binary. Re-review source/binary/config hashes if root later chooses to substitute it.",
+  "cli_affinity_source_binding": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41\\src\\program\\generate.cpp",
+    "source_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+    "git_blob": "405620c45fb718e06f5f4e78985051be89d4a78f",
+    "supported_modes_verified_in_candidate": [
+      "all",
+      "auto",
+      "p-cores"
+    ],
+    "matrix_uses": [
+      "all",
+      "auto"
+    ],
+    "none_cli_supported": false,
+    "source_lines": "1746-1753"
+  },
+  "root_worktree_untracked_affinity_artifacts_not_in_candidate_binary": [
+    "src/hetero/worker_affinity_observation_test.cpp"
+  ],
+  "binary_source_note": "Candidate binary remains run41 6bbc built from clean ffeb source; root modifications to CPU-affinity logging/native expert reporting in main worktree are separate and are not compiled into this candidate.",
+  "sustained_decode_prompt": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\prompts\\sustained_decode.prompt.txt",
+    "sha256": "f9eb59ccbc0e129aefdcb2024313acdc2a845d3e1ef636a4ebfb7766d4bdb6bd",
+    "bytes": 4564,
+    "quality_prompt_set_unchanged": true,
+    "decode_caps": [
+      256,
+      512,
+      1024
+    ]
+  },
+  "arm_execution_order": [
+    "w10-all",
+    "w04-all",
+    "w06-all",
+    "w16-all",
+    "w06-auto"
+  ],
+  "quality_prompt_manifest": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\quality-manifest\\manifest.json",
+    "sha256": "6ba31e9f5ceaa9ca371e28046010c414e2cb9e0b53703c2e080aa58f3491402a",
+    "legacy_manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-06-quality-prompts\\manifest.json",
+    "legacy_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd"
+  },
+  "tokenizer_implementation_snapshot": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\tokenizer-source-01\\strata_tokenizer-current-461b8afb.py",
+    "sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+    "bytes": 18708,
+    "legacy_implementation_sha256": "b8af8e5697afea6c149f2ef824ae022c920730a0e90cba7386e757a18332d9f9",
+    "equivalence_receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\tokenizer-equivalence.json",
+    "equivalence_receipt_sha256": "ce88672ddcf83fb511c949e0d5843b8b53dd667af02bf56984a5fe4e292944aa"
+  },
+  "tokenizer_manifest_provenance": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\tokenizer-manifest-provenance.json",
+    "sha256": "cc32a0d29543aeb765da7e08c7a52adbda8add11f9e4a53f4d2ce92d82112306"
+  },
+  "source_preparation_history": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\source-run51-recipe.json",
+    "sha256": "d9f765e4dfbad44c0ec9fabfb6b01f90d482ad1517f252888f3c58518e264d9d",
+    "source_matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\matrix-tokenizer-rebased-05.json",
+    "source_matrix_sha256": "971c55ef00feb4184a4a2bbe6fc9859b1385c794ae18f9a7f930590b34b42024"
+  },
+  "preparation_source": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\prepare_run63.py",
+    "sha256": "c369abf23ee3ee624e29071fbfccdc738df090dd083fcaf23afea43a9f56233f"
+  },
+  "source_run51_v05": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\matrix-tokenizer-rebased-05.json",
+    "sha256": "971c55ef00feb4184a4a2bbe6fc9859b1385c794ae18f9a7f930590b34b42024",
+    "candidate_source_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+    "candidate_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+    "note": "recipe reference only; no run51 runtime, admission, result, or process files copied"
+  },
+  "diagnostic_plan": {
+    "only_extra_environment": {
+      "STRATA_DIAG_ZERO_LOGITS": "1"
+    },
+    "applies_to": "first quality phase only: w10-all",
+    "other_arms_and_phases": "UNRUN and diagnostic environment absent",
+    "maximum_authorized_phase_intent": 1,
+    "diagnostic_is_not_a_quality_acceptance_or_cause_claim": true
+  },
+  "source_template_capture": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-capture\\source-template-capture.json",
+    "sha256": "cfcb8236a4f37fca01f28aee2776ecbbe3dff4df762782628ccbd30060afdf99"
+  },
+  "source_run57_preparation": {
+    "matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\matrix.json",
+    "matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+    "source_run51_recipe_reference_preserved": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-run51-recipe.json",
+    "source_run51_recipe_sha256": "d9f765e4dfbad44c0ec9fabfb6b01f90d482ad1517f252888f3c58518e264d9d",
+    "runtime_evidence_copied": false
+  }
+}
