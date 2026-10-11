@@ -1,0 +1,7 @@
+{
+  "status": "adopted_existing_owned_launch",
+  "start_performed": false,
+  "launcher_pid": 14324,
+  "sampler_pid": 11428,
+  "reason": "launch PowerShell exited while descendants kept capture pipe open; model retained"
+}

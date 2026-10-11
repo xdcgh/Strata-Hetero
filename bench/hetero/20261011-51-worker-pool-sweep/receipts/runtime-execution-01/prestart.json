@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "prepared_to_execute",
+  "created_utc": "2026-10-11T00:49:39.840756Z",
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "tools.hetero_pool_sweep",
+    "--matrix",
+    "bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-05.json",
+    "--execute",
+    "--adapter",
+    "run41",
+    "--authorization",
+    "bench/hetero/20261011-51-worker-pool-sweep/root-authorization-02.json"
+  ],
+  "matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\matrix-tokenizer-rebased-05.json",
+  "matrix_sha256": "971c55ef00feb4184a4a2bbe6fc9859b1385c794ae18f9a7f930590b34b42024",
+  "authorization_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\root-authorization-02.json",
+  "authorization_sha256": "306c66e43dfcde95a09c33f30aa73346deebd05ae1f5c55bd55711ec43ce3e10",
+  "harness_sha256": "ca57a9c206beb8c8949367fca093f55f07a9f52122b032f15287846cb8d85df3",
+  "admission_source_sha256": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e",
+  "resource_source_sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+  "shell_invocation": "direct native Python argv from PowerShell; no Start-Process wrapper",
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\runtime-execution-01\\cli.stdout.log",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\runtime-execution-01\\cli.stderr.log",
+  "exit_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\runtime-execution-01\\cli.exit.json",
+  "no_admission_only_flag": true
+}

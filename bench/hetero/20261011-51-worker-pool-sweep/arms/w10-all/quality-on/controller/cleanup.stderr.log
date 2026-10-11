@@ -1,0 +1,5 @@
+ParentContainsErrorRecordException: 
+Line |
+   5 |  бн h 12)+"`n");$f=[IO.File]::Open($p,[IO.FileMode]::CreateNew,[IO.FileAc бн
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Exception calling "Open" with "4" argument(s): "Could not find a part of the path 'C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-51-worker-pool-sweep\arms\w10-all\quality-on\cleanup\preflight.json'."

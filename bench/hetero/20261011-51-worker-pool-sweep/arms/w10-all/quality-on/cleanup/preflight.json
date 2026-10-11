@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-51-w10-all-quality-on",
+  "status": "exact_owned_cleanup_preflight_pass",
+  "utc": "2026-10-11T01:09:46.7810145Z",
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero",
+  "engine": "0.1.41",
+  "loaded": true,
+  "requests": 24,
+  "in_flight": 0,
+  "listener_pid": 18916,
+  "pids": [
+    14324,
+    18916,
+    23192,
+    11428,
+    20024
+  ]
+}

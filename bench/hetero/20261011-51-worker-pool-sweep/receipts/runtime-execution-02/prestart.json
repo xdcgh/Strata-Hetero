@@ -1,0 +1,26 @@
+{
+  "status": "prepared_to_execute_resume_existing_first_phase",
+  "created_utc": "2026-10-11T01:05:05.7208688Z",
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "tools.hetero_pool_sweep",
+    "--matrix",
+    "bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-05.json",
+    "--execute",
+    "--adapter",
+    "run41",
+    "--authorization",
+    "bench/hetero/20261011-51-worker-pool-sweep/root-authorization-03.json"
+  ],
+  "matrix_sha256": "971c55ef00feb4184a4a2bbe6fc9859b1385c794ae18f9a7f930590b34b42024",
+  "authorization_sha256": "86f829c3d53a379e4f56398461ca768aeb371d17996bf297c7fdc4fe35a98b8b",
+  "harness_sha256": "c63aa28f22115f0382808d2cbf5c1c477e3d49fd6d02ee5190994577f34378fb",
+  "stdout_path": "bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\runtime-execution-02\\cli.stdout.log",
+  "stderr_path": "bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\runtime-execution-02\\cli.stderr.log",
+  "exit_path": "bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\runtime-execution-02\\cli.exit.json",
+  "admission_only": false,
+  "resume_existing_first_phase": true
+}`n

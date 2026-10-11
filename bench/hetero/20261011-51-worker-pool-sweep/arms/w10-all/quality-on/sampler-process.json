@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-51-w10-all-quality-on",
+  "sampler_launcher_pid": 11428,
+  "sampler_launcher_exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "sampler_launcher_create_utc": "2026-10-11T00:49:59.6785690Z",
+  "configured_python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "actual_child_pid": 20024,
+  "actual_child_parent_pid": 11428,
+  "actual_child_exe": "C:\\Python314\\python.exe",
+  "actual_child_create_utc": "2026-10-11T00:49:59.7131590Z",
+  "argv": [
+    "-u",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+    "--output",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\resource\\samples.jsonl",
+    "--pid",
+    "14324",
+    "--interval",
+    "1",
+    "--max-seconds",
+    "10800",
+    "--minimum-commit-gib",
+    "4",
+    "--stop-file",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\resource\\STOP"
+  ],
+  "owner_pid": 14324,
+  "output": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\resource\\samples.jsonl"
+}

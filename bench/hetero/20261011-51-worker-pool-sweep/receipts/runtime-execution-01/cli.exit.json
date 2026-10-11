@@ -1,0 +1,7 @@
+{
+  "status": "process_exited",
+  "exit_code": -1,
+  "completed_utc": "2026-10-11T01:02:33.7108208Z",
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\runtime-execution-01\\cli.stdout.log",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\runtime-execution-01\\cli.stderr.log"
+}

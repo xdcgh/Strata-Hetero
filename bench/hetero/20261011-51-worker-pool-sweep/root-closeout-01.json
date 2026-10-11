@@ -1,0 +1,71 @@
+{
+  "status": "stopped_first_on_model_quality_failure",
+  "first_five_prompts_formals": 15,
+  "long_1k_formals_failed": 3,
+  "long_1k_output": "128 bang characters each",
+  "performance_arms_started": 0,
+  "model_relaunches": 0,
+  "all_remaining_arms_unrun": true,
+  "quality_evidence": [
+    {
+      "file": "bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\quality\\F-long_1k-quality.json",
+      "sha256": "24944a6ca79adb1ae478a237cb924910c5e1117f7e6b834fb46917f8cba959b7",
+      "statuses": [
+        "generation_degenerate_bang_loop",
+        "generation_degenerate_bang_loop",
+        "generation_degenerate_bang_loop"
+      ]
+    },
+    {
+      "file": "bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\quality\\F-smoke_arithmetic-quality.json",
+      "sha256": "755dd2b9bca6c46ed2bce25f342e9c40a4f9998374f0d9659d1f3722aa8e41b9",
+      "statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\quality\\F-smoke_json_arithmetic-quality.json",
+      "sha256": "b8ebabbb57bec8d632188d9b4945ed93d755ccbc20ee41905d5e061056c5e6c7",
+      "statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\quality\\F-smoke_python_function-quality.json",
+      "sha256": "7efe3cf3047bbe005de5e867fea058c6a8071a17955cc764fccf68a9f3e53e49",
+      "statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\quality\\F-smoke_three_key_retrieval-quality.json",
+      "sha256": "8fcde12f62f77db0afe5fe6a61728d6c2240f865541780c11038e1527f97ac47",
+      "statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\quality\\F-smoke_unicode-quality.json",
+      "sha256": "3dfd8301660cd4dc418b305a63e925417a66918c1f440eb2b776d21161f82490",
+      "statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    }
+  ],
+  "physical_commit_gates_passed": true,
+  "resource_samples": 1192,
+  "min_physical_gib": 62.851,
+  "min_system_commit_gib": 44.304,
+  "owned_cleanup": "terminal_owned_server_and_sampler_released",
+  "cause": "unresolved; direct PLE route was configured, no full RAM PLE in this experiment"
+}
