@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-11T03:15:45.469286+00:00",
+  "observer_only": true,
+  "is_model_test": false,
+  "raw": {
+    "observed_at_utc": "2026-10-11T03:15:45.469286+00:00",
+    "errors": [],
+    "windows_memory": {
+      "total_bytes": 136963248128,
+      "available_bytes": 118963507200,
+      "commit_limit_bytes": 145553182720,
+      "available_commit_bytes": 126355177472,
+      "source": "GlobalMemoryStatusEx physical RAM; PSAPI GetPerformanceInfo system commit"
+    },
+    "risky_windows_processes": [],
+    "nvidia": {
+      "gpus": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "vram_total_mib": 49140,
+          "vram_free_mib": 48399,
+          "vram_used_mib": 230,
+          "utilization_percent": 0.0,
+          "driver_version": "610.88"
+        }
+      ],
+      "compute_pids": [
+        2300,
+        2380
+      ],
+      "process_telemetry_unknown": false,
+      "raw_gpu_csv": "NVIDIA GeForce RTX 4090 D, 49140, 48399, 230, 0, 610.88\n",
+      "raw_process_csv": "2380\n2300\n",
+      "processes": [
+        {
+          "pid": 2300,
+          "name": "LogonUI.exe",
+          "path": null
+        },
+        {
+          "pid": 2380,
+          "name": "dwm.exe",
+          "path": null
+        }
+      ],
+      "telemetry_error": null
+    },
+    "wsl": {
+      "available": true,
+      "running_list_raw": [],
+      "running_distros": []
+    }
+  },
+  "chosen_gates": {
+    "required_vram_mib": 46000,
+    "minimum_available_ram_gib": 12.0,
+    "check_wsl_current": true,
+    "ram": {
+      "pass": true,
+      "available_gib": 110.793,
+      "reason": null
+    },
+    "system_commit": {
+      "pass": true,
+      "minimum_gib": 4,
+      "available_bytes": 126355177472,
+      "reason": null
+    },
+    "vram": {
+      "pass": true,
+      "selected_gpu": "NVIDIA GeForce RTX 4090 D",
+      "available_mib": 48399,
+      "reason": null
+    },
+    "gpu_processes": {
+      "pass": true,
+      "blocked": [],
+      "reason": null
+    },
+    "windows_processes": {
+      "pass": true,
+      "found": [],
+      "exact_owned_controllers": [],
+      "reason": null
+    },
+    "wsl": {
+      "pass": true,
+      "blocked": [],
+      "reason": null
+    }
+  },
+  "status": "pass",
+  "pass": true,
+  "reasons": []
+}

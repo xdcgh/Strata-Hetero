@@ -1,0 +1,11 @@
+{
+  "side": "upstream42",
+  "phase": "quality",
+  "controller_pid": 17708,
+  "exit_code": 1,
+  "finished_utc": "2026-10-11T03:20:50.4716135+00:00",
+  "stdout_sha256": "c7d92d583c28073ffb53824db2eb59a2c567667a1dafb553c049516be7003487",
+  "stderr_sha256": "dc5c969eca3b9a74b6ff22fd71248a70b55cd38ede8271595a837adacfffe0a5",
+  "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+  "source_script_sha256": "836e4bed436fbda07d13a36f4b65c1fd2b11d90c9f9620fe3cfcf78943ad0548"
+}

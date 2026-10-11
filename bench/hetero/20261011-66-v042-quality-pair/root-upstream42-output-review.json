@@ -1,0 +1,58 @@
+{
+  "status": "root_upstream42_quality_failure_review_and_terminal_cleanup_pass",
+  "source_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+  "binary_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+  "passed_prompts": 5,
+  "short_formals_H4_ids_match": 15,
+  "failed_prompt": "long_1k",
+  "bad_outputs": [
+    {
+      "label": "warmup-0000",
+      "actual_ids_count": 128,
+      "actual_ids_unique": [
+        0
+      ],
+      "sse_sha256": "f0b83ba8d4f51950c7b931cee6befdaedafd5bd6a37da35221baedcd5a4274f5",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44"
+    },
+    {
+      "label": "formal-0000",
+      "actual_ids_count": 128,
+      "actual_ids_unique": [
+        0
+      ],
+      "sse_sha256": "9937a8203514546dc38db986d1b4b8ef2376ae5a5d8d9e180923fa178610f888",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44"
+    },
+    {
+      "label": "formal-0001",
+      "actual_ids_count": 128,
+      "actual_ids_unique": [
+        0
+      ],
+      "sse_sha256": "6a30175259213e97f2e064ed3f56674920eced27edd187ee84a5b7a54d8dbbca",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44"
+    },
+    {
+      "label": "formal-0002",
+      "actual_ids_count": 128,
+      "actual_ids_unique": [
+        0
+      ],
+      "sse_sha256": "aa37328df3c24db6ac2d070be88f4a1f469e7fa90378fc82e42dd9769bec8eef",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44"
+    }
+  ],
+  "retained_resource_samples_checked": 343,
+  "all_resource_and_owner_samples_pass": true,
+  "minimum_physical_gib": 63.77036666870117,
+  "minimum_commit_gib": 43.468170166015625,
+  "cleanup_complete": true,
+  "model_quality_pass": false,
+  "raw_logits_NOT_CAPTURED": true,
+  "finiteness_argmax_NOT_MEASURED": true,
+  "hetero42_NOT_RUN": true,
+  "performance_NOT_RUN": true,
+  "source_and_config_not_changed_during_adopted_launch": true,
+  "scope": "Latest unmodified upstream also exhibits actualID0bangloop undermatchedtailSkip0 controls; cannotascribeonlytoHeterofork or identifyfirstfaultyoperator fromthisrun"
+}

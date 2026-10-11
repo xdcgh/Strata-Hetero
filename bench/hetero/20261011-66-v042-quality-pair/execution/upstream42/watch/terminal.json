@@ -1,0 +1,11 @@
+{
+  "side": "upstream42",
+  "phase": "watch",
+  "controller_pid": 22268,
+  "exit_code": 0,
+  "finished_utc": "2026-10-11T03:19:13.7722937+00:00",
+  "stdout_sha256": "62837fb8ffdb05a867151f6086c6efd8c393ea255d268d94b50635675d820274",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+  "source_script_sha256": "9f795e25198fb5d6d801c3d45f5ea702f4f5fd8ac094899a0359b67c2c88ff69"
+}
