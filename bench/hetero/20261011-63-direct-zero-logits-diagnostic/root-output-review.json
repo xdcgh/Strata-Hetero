@@ -1,0 +1,462 @@
+{
+  "status": "root_failure_logit_and_wire_review_pass_no_model_acceptance",
+  "passed_prompts": 5,
+  "short_formals_matching_H4": 15,
+  "failed_prompt": "long_1k",
+  "failed_formals": 3,
+  "bad_warmups": 1,
+  "actual_zero_id_outputs": [
+    {
+      "label": "warmup-0000",
+      "actual_token_count": 128,
+      "actual_ids_unique": [
+        0
+      ],
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+      "sse_sha256": "684fdd3f30ed43bc6245c0b4fb6dac717cf8c642bb75201558062cbeeecb8949"
+    },
+    {
+      "label": "formal-0000",
+      "actual_token_count": 128,
+      "actual_ids_unique": [
+        0
+      ],
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+      "sse_sha256": "d241fd8656ec276368d96e6c940bada235f81ebdc92568464e6e1e491eaf3176"
+    },
+    {
+      "label": "formal-0001",
+      "actual_token_count": 128,
+      "actual_ids_unique": [
+        0
+      ],
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+      "sse_sha256": "208fe497e97cafbe6f1739de9d431434ac30b071f8c66619c41e764a04fba075"
+    },
+    {
+      "label": "formal-0002",
+      "actual_token_count": 128,
+      "actual_ids_unique": [
+        0
+      ],
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+      "sse_sha256": "3bf8520d2e73cc8cfbe5457fd294e747d365c20807a8a974372fe795503408b8"
+    }
+  ],
+  "zero_logit_rows": [
+    {
+      "line": 145,
+      "position": 1035,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 146,
+      "position": 1036,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 147,
+      "position": 1037,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 148,
+      "position": 1038,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 149,
+      "position": 1039,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 150,
+      "position": 1039,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 151,
+      "position": 1041,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 152,
+      "position": 1041,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 153,
+      "position": 1043,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 154,
+      "position": 1043,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 155,
+      "position": 1045,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 156,
+      "position": 1045,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 157,
+      "position": 1047,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 158,
+      "position": 1047,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 159,
+      "position": 1049,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 160,
+      "position": 1049,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 161,
+      "position": 1051,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 162,
+      "position": 1051,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 163,
+      "position": 1053,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 164,
+      "position": 1053,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 165,
+      "position": 1055,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 166,
+      "position": 1055,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 167,
+      "position": 1057,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 168,
+      "position": 1057,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 169,
+      "position": 1059,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 170,
+      "position": 1059,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 171,
+      "position": 1061,
+      "row": 0,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    },
+    {
+      "line": 172,
+      "position": 1061,
+      "row": 1,
+      "vocab": 248320,
+      "finite": 0,
+      "nan": 248320,
+      "finite_argmax": -1,
+      "selected_token": 0
+    }
+  ],
+  "sampled_position_range": [
+    1035,
+    1061
+  ],
+  "all_captured_logit_rows_entirely_NaN": true,
+  "first_nonfinite_layer_unresolved": true,
+  "resource_sample_count": 268,
+  "physical_and_commit_gates_all_pass": true,
+  "minimum_physical_gib": 62.916988372802734,
+  "minimum_commit_gib": 43.759185791015625,
+  "owner_telemetry_failure_samples": 1,
+  "failed_owner_sample": {
+    "schema_version": 1,
+    "record_type": "resource_sample",
+    "observed_at_utc": "2026-10-11T02:30:46.480Z",
+    "monotonic_seconds": 7889.18824,
+    "sample_gap_seconds": 0.999939500000437,
+    "sampler_elapsed_seconds": 0.08380009999928006,
+    "owner_pid": 18004,
+    "cpu": {
+      "percent": 26.9,
+      "source": "psutil.cpu_percent (system-wide; interval since prior call)"
+    },
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 113338630144,
+      "physical_used_bytes": 23624617984,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 24931450880,
+      "commit_available_bytes": 120621731840,
+      "commit_total_pages": 6086780,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 120621731840,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "ram_gate": {
+      "status": "pass",
+      "available_gib": 105.555,
+      "required_gib": 12
+    },
+    "commit_gate": {
+      "status": "pass",
+      "available_gib": 112.338,
+      "required_gib": 4.0,
+      "source": "PSAPI GetPerformanceInfo"
+    },
+    "owner_process_tree": null,
+    "disk_io": {
+      "PhysicalDrive0": {
+        "read_bytes": 10951639040,
+        "write_bytes": 10905826304,
+        "read_count": 323354,
+        "write_count": 385036,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive1": {
+        "read_bytes": 14080293376,
+        "write_bytes": 8209940992,
+        "read_count": 198785,
+        "write_count": 201744,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive2": {
+        "read_bytes": 455397376,
+        "write_bytes": 1597440,
+        "read_count": 3901,
+        "write_count": 302,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      },
+      "PhysicalDrive3": {
+        "read_bytes": 123501837824,
+        "write_bytes": 0,
+        "read_count": 1180111,
+        "write_count": 0,
+        "device_key_source": "psutil.disk_io_counters(perdisk=True)",
+        "volume_mapping": "not_inferred"
+      }
+    },
+    "nvidia": {
+      "source": "nvidia-smi",
+      "telemetry_known": true,
+      "devices": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "memory_used_mib": 230,
+          "memory_free_mib": 48399,
+          "utilization_percent": 0.0,
+          "power_watts": 10.94,
+          "temperature_c": 33.0,
+          "telemetry_known": true,
+          "optional": {
+            "clocks.current.graphics": 210,
+            "clocks.current.memory": 405,
+            "pcie.link.gen.current": 1,
+            "pcie.link.width.current": 8
+          }
+        }
+      ]
+    },
+    "alerts": [
+      "owner_process_tree_unknown"
+    ],
+    "errors": [
+      {
+        "section": "process_tree",
+        "error": "NoSuchProcess"
+      }
+    ]
+  },
+  "aggregate_cleanup_exit_code": 1,
+  "exact_owners_and_listener_terminal": true,
+  "quality_pass": false,
+  "performance_NOT_RUN": true,
+  "later_prompts_NOT_RUN": [
+    "long_4k",
+    "long_16k",
+    "long_30k7"
+  ],
+  "later_phases_NOT_RUN": 9,
+  "engine_log_sha256": "878d0608bdfe4fda130dcd476e4160b1c007d45857c53cfded67d0df2254f9d3",
+  "resource_log_sha256": "c84084370d6298443125c132f562d4c2ba4813f4ade472314e7fbfc9539435fe",
+  "terminal_addendum_sha256": "49782bb84b0c69f7900503f792d02a29598b392c11003676fb3d1deff9571bde"
+}

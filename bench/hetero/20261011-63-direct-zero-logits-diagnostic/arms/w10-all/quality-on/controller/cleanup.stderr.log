@@ -1,0 +1,5 @@
+Exception: 
+Line |
+  26 |  бн gates_pass){throw 'resource gate history contains fail/unknown'};Writ бн
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | resource gate history contains fail/unknown

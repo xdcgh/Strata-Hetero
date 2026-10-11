@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-63-w10-all-quality-on",
+  "action": "watch",
+  "status": "owned_controller_started_before_script_input",
+  "owner": {
+    "pid": 11476,
+    "parent_pid": 19124,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T02:26:19.6550150Z",
+    "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Monitor -TimeoutSeconds 1800\"",
+    "argv": [
+      "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Monitor -TimeoutSeconds 1800"
+    ],
+    "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Monitor -TimeoutSeconds 1800\"",
+    "controller_streams": "stdout/stderr pipes captured before script input; exclusive evidence paths supplied by caller"
+  },
+  "rendered_script_sha256": "253c3ed6bda4454da8f4516452449f4a371d54b4362bc44527aa620cfd518573",
+  "template_source_sha256": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+  "matrix_sha256": "edc264b0118f939843b535de4a1f9c4ace27162eee254c2924c79520a60f7520",
+  "authorization_nonce": "ba1ac5b9ab6a38b47c5dca94e9ccd7cb",
+  "stdout_evidence_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\controller\\watch.stdout.log",
+  "stderr_evidence_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-63-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\controller\\watch.stderr.log"
+}

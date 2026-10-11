@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-63-w10-all-quality-on",
+  "status": "owned_processes_and_listener_terminal_after_pinned_cleanup_resource_summary_rejected_final_post_stop_sample",
+  "utc": "2026-10-11T02:31:15.6423556Z",
+  "recorded_pids": [
+    18004,
+    12236,
+    20556,
+    12232,
+    7176
+  ],
+  "remaining_recorded_pids": [],
+  "listener_8081": [],
+  "post_unload_loaded": false,
+  "post_unload_in_flight": 0,
+  "sampler_stop_file_exists": true,
+  "sampler_terminal_records": 1,
+  "resource_sample_count": 268,
+  "post_stop_owner_tree_unknown_count": 1,
+  "cleanup_preflight_sha256": "4d18d0ce5667664cbea53200b2e9a1b6a17f8237d8136330667fe3349c848539",
+  "unload_sha256": "f527cbec64746a50b77174cfaf730ab7a7adbe5bfe69a898d846648a93508332",
+  "post_unload_status_sha256": "454557e7f73d431c77e8662d292e7e7adfb6efc6c8866371a064d972189e7fb2",
+  "cleanup_exit_code": 1,
+  "cleanup_error": "resource gate history contains fail/unknown because final sampler sample has owner_process_tree_unknown/NoSuchProcess after exact owner stop",
+  "cleanup_reported_success": false
+}
