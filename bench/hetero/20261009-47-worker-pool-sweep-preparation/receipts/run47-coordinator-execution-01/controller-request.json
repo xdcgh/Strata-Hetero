@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "single_authorized_invocation_prepared",
+  "created_utc": "2026-10-09T14:06:02.7278104Z",
+  "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-B",
+    "-m",
+    "tools.hetero_pool_sweep",
+    "--matrix",
+    "bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix-tokenizer-rebased-03.json",
+    "--execute",
+    "--adapter",
+    "run41",
+    "--authorization",
+    "bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\root-authorization-01.json"
+  ],
+  "working_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "authorization_sha256": "9276ce3485518913ed233895794378bfb79733de61aa91feb2598289be259f92",
+  "root_review_sha256": "c5e4c7fb1f6007c3c1a75d857b68c05bdaec922e6fd5522eda7a37a07abb2ecb",
+  "adapter_sha256": "61023ca8e32e331d3ccb0378e65f39d6790285104ea31de4f2bf7000faab8fb3",
+  "authorization_nonce": "c03af91d8c244444abe606325dfb3ac8",
+  "planned_phase_count": 10,
+  "no_retry": true
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "status": "historical_source_reference_only",
+  "run_id": "20261009-47-worker-pool-sweep-preparation",
+  "matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\matrix-tokenizer-rebased-03.json",
+  "matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "preparation_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\preparation.json",
+  "preparation_sha256": "912e8ce37628deff651fc5d949a55c48424dc9decce00a21513c7a0a2454dfc2",
+  "tree_before_sha256": "e54064e3bdb06212daf69b2443b943cf790d3dc67b126b657e46ed7e63e8d471",
+  "phase_artifacts": {
+    "20261011-51-w10-all-quality-on": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on",
+      "config_sha256": "3e486fd2c75770125de9c770a54a3c6be2ac40632437128bb8ce20fdeb6ce7c0",
+      "identity_sha256": "f8252b4243e8e7a304051f8a6602bfafe1cf6be21d35bae0887ee500a0603f78",
+      "provenance_sha256": "0e7417464e556f00cba4d5767548e9a8e9cf0bbc503898c2cff091c8594f36b9",
+      "preparation_sha256": "c3b589dbf203981f02c2477a582d983530092e5bef4895afdc3e44ecb8e33c33"
+    },
+    "20261011-51-w10-all-performance-off": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\performance-off",
+      "config_sha256": "9526386f61abfc5c6cac6192eaa2bd6cac6c8728d0d51cd521ebc9b01e3b664e",
+      "identity_sha256": "b175c10a34378b111469a7c6d0c9e66fefb2490fe3905b39678f5c7765538f45",
+      "provenance_sha256": "2ccaf61c95ea1d0f27acf31ed3cd6a5400f5804242a4cf1d5448858167fc683e",
+      "preparation_sha256": "be8b67366660ba785811d961dadad383021303ff77c9da32e9fd1ecb8f85b822"
+    },
+    "20261011-51-w04-all-quality-on": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w04-all\\quality-on",
+      "config_sha256": "6852db5ec5a8b94e1191377b24bda7f9c93b013115b1dfd2e4e5c9e03bc8478c",
+      "identity_sha256": "612381597a20b7a55d3195a866c07cda1d7e58ed7b4e8cf147a9fd5a92c4057c",
+      "provenance_sha256": "434511aa42ce818f06067aee3b274d8248911291569e5a88d9df545fd5b31b48",
+      "preparation_sha256": "4795fbbdfc069348568b4f4469749abbc2e454c5d40532340044ce6d0788e319"
+    },
+    "20261011-51-w04-all-performance-off": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w04-all\\performance-off",
+      "config_sha256": "185a83b347660f61bd113666aca58edc4f1fd5754ec4bcf501b98ee5887b0eb0",
+      "identity_sha256": "53392518ff0b073401d89a0e8c0d862e39371c960d34148177f704d313fd663b",
+      "provenance_sha256": "85a8911c73262bc8903dbd9abf3eaadaf39e9381dad4cdaebe11f541b0818ede",
+      "preparation_sha256": "23d16db96344e4be26b9c2be530441aaa275a3b668c0287e4405ab491a7faff8"
+    },
+    "20261011-51-w06-all-quality-on": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w06-all\\quality-on",
+      "config_sha256": "3778716df4cc91eae23c406c7489fc95f0645d32f17d9576a8cf68404b659641",
+      "identity_sha256": "4d60628b7b061c2115d58a7a9785937ecc1d20e9603beb50b144004d2e732f9e",
+      "provenance_sha256": "026d8cdfbb68ca4efc197fc0e7b1119dcf076764d3deb35c832272d3ef802fd7",
+      "preparation_sha256": "2481a7e55ad4ae9eb03af5312aa77827545018631b5bf737342b301674ac12ee"
+    },
+    "20261011-51-w06-all-performance-off": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w06-all\\performance-off",
+      "config_sha256": "f28c0f7601ddd05e8122906909804dabc48d64d52efb4fe413962e92fedb35d1",
+      "identity_sha256": "5eaabdbb7e439a62d0ec7e6090b26d0ef78636216e0fa021b4a2544f9bc16630",
+      "provenance_sha256": "7ac9fe9d28cf49d3ab5948c5308901a7f4ba2ce332da3d19c7d72d04ebd8e16d",
+      "preparation_sha256": "7262f8b57692e5871edd74a002eca6b5eb9f12693aa6ad54bafed79548d89141"
+    },
+    "20261011-51-w16-all-quality-on": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w16-all\\quality-on",
+      "config_sha256": "a1f68e9c851e73784d5b139dd8bff0416b623c787a37de362bfc4b8a1f6a1e07",
+      "identity_sha256": "c5716151730c75cd509a8f8dbdae62926c19177e1d23c1fb7270f07c8c43a30f",
+      "provenance_sha256": "18b692d7455252fd0d5482e8d4a07626998b5e5482c8b35fc1cb25707532cd90",
+      "preparation_sha256": "ca0098c82cfcc8c4d1e9a2cbc5fa56bca267a09d1b2ea773682e0bdd2d9757f0"
+    },
+    "20261011-51-w16-all-performance-off": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w16-all\\performance-off",
+      "config_sha256": "955037fbc3db0b1a2637c2947168451fab0541922ef408a506aa5608bcfbc7bd",
+      "identity_sha256": "cd0af0cd0de48e4f1b13dcd43080a0c0d216ef9b0afa2df0fb2853ef3348c4d8",
+      "provenance_sha256": "f6211d6d744c3372cc729c4f8ab760bfdb29676844220123a9166cfe6a10a648",
+      "preparation_sha256": "56ef650e0f494d67ed1df8ca3b512c13303d3ede8a6f4c14ba79821783d38fbf"
+    },
+    "20261011-51-w06-auto-quality-on": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w06-auto\\quality-on",
+      "config_sha256": "bf7d4c79c2abea6ecb138ba99f9d94719b014bf2a0444f38da0983a46bb5f8e5",
+      "identity_sha256": "8925a585fce87eba9f097d0f8ad74791e0a0c6e59bdbd19d65374721d5bcd33b",
+      "provenance_sha256": "f4fd46957485299f206674a4812020c388dae2b0ff71b02468a400dd5cd58546",
+      "preparation_sha256": "beaec25c389e47654397cd53bbc8896e80b5a95690584447443413662b72e061"
+    },
+    "20261011-51-w06-auto-performance-off": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w06-auto\\performance-off",
+      "config_sha256": "713e1de6e247255473469a7eed6b4ba26d1553e8eb1d8bc18da031732e562025",
+      "identity_sha256": "d29634f093e5ba494b4089405831e1447ea74db242cf07250e23ed337c6d4cf9",
+      "provenance_sha256": "2c5682cab4bb7409c15cd5499855307f2f1939dfb978c588ce012ec448ec8d16",
+      "preparation_sha256": "aa8a722112e3f121b10b8375639989298615b6574cc0f1ce9c21e313104dab79"
+    }
+  },
+  "note": "Run47 is preserved as source history; this run51 preparation writes no files into it."
+}

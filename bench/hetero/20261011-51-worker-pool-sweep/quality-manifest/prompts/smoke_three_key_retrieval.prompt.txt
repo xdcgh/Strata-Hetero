@@ -1,0 +1,4 @@
+Read these three records once and return only JSON mapping each exact key to its exact string value:
+Checkpoint key ARCHIVE-1CA3B1799D has value 126855092.
+Checkpoint key ARCHIVE-46BDD640FB has value 362950628.
+Checkpoint key ARCHIVE-23392456DE has value 890779946.

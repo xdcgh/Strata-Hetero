@@ -1,0 +1,17 @@
+{
+  "status": "empty_precreated_controller_directories_preserved_under_new_name",
+  "model_launches": 0,
+  "previous_failure": "root preflight rejected existing empty controller dirs before authorization",
+  "moved_paths": [
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\performance-off\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\quality-on\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\performance-off\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\quality-on\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\performance-off\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\quality-on\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\performance-off\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\quality-on\\precreated-controller",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\performance-off\\precreated-controller"
+  ]
+}

@@ -7,6 +7,8 @@ import argparse
 import csv
 import ctypes
 import datetime as dt
+import hashlib
+import importlib.util
 import io
 import json
 import ntpath
@@ -101,6 +103,56 @@ def decode_wsl_list(data: bytes | str) -> list[str]:
     return [line.strip().lstrip("\ufeff") for line in text.splitlines() if line.strip()]
 
 
+def verify_controller_chain(proof: dict[str, Any], live: list[dict[str, Any]],
+                            observer_parent_pid: int, now: dt.datetime) -> list[dict[str, Any]]:
+    """Allow only fresh, exact Python ancestors of the owned launch controller.
+
+    This does not exempt any NVIDIA compute process or an unrelated Python PID.
+    The controller records its identity before accepting the launch script.
+    """
+    if proof.get("schema") != "strata-hetero-controller-chain-v1":
+        raise ValueError("unsupported controller proof")
+    created = dt.datetime.fromisoformat(proof["created_utc"].replace("Z", "+00:00"))
+    expires = dt.datetime.fromisoformat(proof["expires_utc"].replace("Z", "+00:00"))
+    if any(t.tzinfo is None or t.utcoffset() != dt.timedelta(0) for t in (created, expires, now)):
+        raise ValueError("controller proof clocks must be UTC")
+    if not 0 <= (now - created).total_seconds() <= 120 or not created < now < expires or (expires-created).total_seconds() > 120:
+        raise ValueError("controller proof expired or future dated")
+    if re.fullmatch(r"[0-9a-f]{32}", str(proof.get("nonce", ""))) is None:
+        raise ValueError("controller proof nonce missing")
+    controller = proof.get("controller", {})
+    owners = proof.get("python_controllers")
+    if not isinstance(owners, list) or not 1 <= len(owners) <= 2:
+        raise ValueError("one actual coordinator and optional venv launcher required")
+    by_pid = {r["pid"]: r for r in live}
+    all_owners = [controller, *owners]
+    if len({r.get("pid") for r in all_owners}) != len(all_owners):
+        raise ValueError("duplicate controller PID")
+    fields = ("pid", "parent_pid", "name", "path", "create_utc", "command_line")
+    for index, owner in enumerate(all_owners):
+        if type(owner.get("pid")) is not int or type(owner.get("parent_pid")) is not int:
+            raise ValueError("controller PIDs must be known integers")
+        actual = by_pid.get(owner["pid"])
+        if actual is None or any(actual.get(k) != owner.get(k) for k in fields):
+            raise ValueError("controller identity changed or no longer live")
+        if not isinstance(owner.get("create_utc"), str) or not owner["create_utc"].endswith("Z"):
+            raise ValueError("controller CreateTime must retain UTC text")
+        if index + 1 < len(all_owners) and owner["parent_pid"] != all_owners[index+1]["pid"]:
+            raise ValueError("controller is not an immediate ancestor chain")
+    expected_pwsh = r"C:\Users\DC\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe"
+    if (controller["pid"] != observer_parent_pid or controller["path"].casefold() != expected_pwsh.casefold()
+            or controller["name"].casefold() != "pwsh.exe" or "ReadToEnd" not in controller["command_line"]
+            or "-Start" not in controller["command_line"]):
+        raise ValueError("observer is not a child of the owned launch controller")
+    allowed_python = (r"C:\Python314\python.exe", r"E:\Strata-Hetero-data\venv\Scripts\python.exe")
+    for index, owner in enumerate(owners):
+        if (owner["name"].casefold() != "python.exe" or owner["path"].casefold() != allowed_python[index].casefold()
+                or " -m tools.hetero_pool_sweep " not in owner["command_line"]
+                or " --execute" not in owner["command_line"] or " --adapter run41" not in owner["command_line"]):
+            raise ValueError("ancestor is not the reviewed Python sweep coordinator")
+    return owners
+
+
 def evaluate(raw: dict[str, Any], required_vram_mib: int, minimum_ram_gib: float,
              check_wsl: bool = True) -> dict[str, Any]:
     reasons: list[str] = []
@@ -117,6 +169,13 @@ def evaluate(raw: dict[str, Any], required_vram_mib: int, minimum_ram_gib: float
         gates["ram"] = {"pass": passed, "available_gib": round(available_gib, 3),
                         "reason": None if passed else "available RAM below reserve"}
         if not passed: reasons.append(gates["ram"]["reason"])
+
+    available_commit = memory.get("available_commit_bytes") if isinstance(memory, dict) else None
+    commit_pass = type(available_commit) is int and available_commit >= 4 * 1024**3
+    gates["system_commit"] = {"pass": commit_pass, "minimum_gib": 4,
+                              "available_bytes": available_commit,
+                              "reason": None if commit_pass else "PSAPI system commit reserve missing or below 4 GiB"}
+    if not commit_pass: reasons.append(gates["system_commit"]["reason"])
 
     gpu_data = raw.get("nvidia")
     if not isinstance(gpu_data, dict) or gpu_data.get("telemetry_error") or not gpu_data.get("gpus"):
@@ -160,8 +219,15 @@ def evaluate(raw: dict[str, Any], required_vram_mib: int, minimum_ram_gib: float
         gates["windows_processes"] = {"pass": False, "reason": "Windows process identity telemetry unknown"}
         reasons.append(gates["windows_processes"]["reason"])
     else:
-        passed = len(risky_processes) == 0
-        gates["windows_processes"] = {"pass": passed, "found": risky_processes,
+        proof = raw.get("owned_controller_validation")
+        allowed = proof.get("verified_python_controllers", []) if isinstance(proof, dict) and proof.get("status") == "pass" else []
+        allowed_by_pid = {r["pid"]: r for r in allowed}
+        identity_fields = ("pid", "parent_pid", "name", "path", "create_utc")
+        blocked = [r for r in risky_processes if r.get("pid") not in allowed_by_pid or
+                   any(r.get(k) != allowed_by_pid[r["pid"]].get(k) for k in identity_fields)]
+        passed = len(blocked) == 0 and (proof is None or isinstance(proof, dict) and proof.get("status") == "pass")
+        gates["windows_processes"] = {"pass": passed, "found": blocked,
+                                      "exact_owned_controllers": allowed,
                                       "reason": None if passed else "Strata/Python/ComfyUI process present"}
         if not passed: reasons.append(gates["windows_processes"]["reason"])
 
@@ -187,19 +253,21 @@ def evaluate(raw: dict[str, Any], required_vram_mib: int, minimum_ram_gib: float
             "is_model_test": False, "gates": gates, "reasons": reasons}
 
 
-def _windows_memory() -> dict[str, int]:
-    class MEMORYSTATUSEX(ctypes.Structure):
-        _fields_ = [("dwLength", ctypes.c_ulong), ("dwMemoryLoad", ctypes.c_ulong),
-                    ("ullTotalPhys", ctypes.c_ulonglong), ("ullAvailPhys", ctypes.c_ulonglong),
-                    ("ullTotalPageFile", ctypes.c_ulonglong), ("ullAvailPageFile", ctypes.c_ulonglong),
-                    ("ullTotalVirtual", ctypes.c_ulonglong), ("ullAvailVirtual", ctypes.c_ulonglong),
-                    ("ullAvailExtendedVirtual", ctypes.c_ulonglong)]
-    status = MEMORYSTATUSEX()
-    status.dwLength = ctypes.sizeof(status)
-    if not ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(status)):
-        raise OSError("GlobalMemoryStatusEx failed")
-    return {"total_bytes": int(status.ullTotalPhys), "available_bytes": int(status.ullAvailPhys),
-            "commit_limit_bytes": int(status.ullTotalPageFile), "available_commit_bytes": int(status.ullAvailPageFile)}
+def _windows_memory() -> dict[str, Any]:
+    # Reuse the sampler's tested WinAPI implementation. GMS pagefile
+    # availability is a diagnostic, never the system commit gate.
+    source = Path(__file__).resolve().with_name("hetero_resources.py")
+    spec = importlib.util.spec_from_file_location("_hetero_admission_resources", source)
+    if spec is None or spec.loader is None: raise RuntimeError("resource observer unavailable")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    memory = module.windows_memory_global()
+    fields = ("physical_total_bytes", "physical_available_bytes", "commit_limit_bytes", "commit_available_bytes")
+    if any(type(memory.get(key)) is not int for key in fields):
+        raise RuntimeError("physical RAM or PSAPI system commit telemetry unavailable")
+    return {"total_bytes": memory["physical_total_bytes"], "available_bytes": memory["physical_available_bytes"],
+            "commit_limit_bytes": memory["commit_limit_bytes"], "available_commit_bytes": memory["commit_available_bytes"],
+            "source": "GlobalMemoryStatusEx physical RAM; PSAPI GetPerformanceInfo system commit"}
 
 
 def _process_records(pids: list[int], runner: Runner) -> list[dict[str, Any]]:
@@ -247,7 +315,47 @@ def _probe_wsl(runner: Runner) -> dict[str, Any]:
     return {"available": True, "running_list_raw": names, "running_distros": records}
 
 
-def observe(runner: Runner = subprocess.run, check_wsl: bool = True) -> dict[str, Any]:
+def _controller_process_observation(path: Path, runner: Runner) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result: raise ValueError("duplicate controller proof key")
+            result[key] = value
+        return result
+    if not path.is_absolute() or path.is_symlink() or not path.is_file() or path.stat().st_size > 65536:
+        raise ValueError("bounded absolute regular controller proof required")
+    with path.open("rb") as stream:
+        raw_proof = stream.read(65537)
+    if len(raw_proof) > 65536: raise ValueError("controller proof too large")
+    proof = json.loads(raw_proof, object_pairs_hook=unique_object)
+    source = proof["source"]
+    expected_source = Path(__file__).resolve().with_name("hetero_pool_sweep.py")
+    if Path(source["path"]).resolve(strict=True) != expected_source or hashlib.sha256(expected_source.read_bytes()).hexdigest() != source["sha256"]:
+        raise ValueError("controller proof source hash mismatch")
+    owner_pids = [os.getpid(), proof["controller"]["pid"], *(r["pid"] for r in proof["python_controllers"])]
+    if any(type(pid) is not int or pid <= 0 for pid in owner_pids): raise ValueError("invalid controller PID")
+    pidlist = ",".join(str(pid) for pid in owner_pids)
+    ps = shutil.which("powershell.exe") or shutil.which("pwsh")
+    if not ps: raise RuntimeError("PowerShell process identity query unavailable")
+    script = ("Get-CimInstance Win32_Process | Where-Object { $_.ProcessId -in @(" + pidlist + ") -or "
+              "$_.Name -match '(?i)strata|python|comfy' -or $_.ExecutablePath -match '(?i)strata|python|comfy' } | "
+              "ForEach-Object { [ordered]@{pid=[int]$_.ProcessId;parent_pid=[int]$_.ParentProcessId;"
+              "name=$_.Name;path=$_.ExecutablePath;create_utc=$_.CreationDate.ToUniversalTime().ToString('o');"
+              "command_line=$_.CommandLine} } | ConvertTo-Json -Compress")
+    result = _execute([ps, "-NoLogo", "-NoProfile", "-NonInteractive", "-Command", script], runner)
+    live = json.loads(result.stdout or "null")
+    if isinstance(live, dict): live = [live]
+    own = next((r for r in live or [] if r["pid"] == os.getpid()), None)
+    if own is None: raise ValueError("admission observer identity missing")
+    allowed = verify_controller_chain(proof, live, own["parent_pid"], dt.datetime.now(dt.timezone.utc))
+    risky = [{k: v for k, v in r.items() if k != "command_line"} for r in live
+             if r["pid"] != os.getpid() and re.search(r"strata|python|comfy", str(r["name"]) + " " + str(r["path"]), re.I)]
+    return risky, {"status": "pass", "proof_sha256": hashlib.sha256(raw_proof).hexdigest(),
+                   "verified_python_controllers": allowed, "launch_controller": proof["controller"]}
+
+
+def observe(runner: Runner = subprocess.run, check_wsl: bool = True,
+            owned_controller_proof: Path | None = None) -> dict[str, Any]:
     raw: dict[str, Any] = {"observed_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "errors": []}
     if os.name != "nt":
         raw["windows_memory"] = None
@@ -258,7 +366,11 @@ def observe(runner: Runner = subprocess.run, check_wsl: bool = True) -> dict[str
     try: raw["windows_memory"] = _windows_memory()
     except Exception as exc:
         raw["windows_memory"] = None; raw["errors"].append({"section": "windows_memory", "error": str(exc)})
-    try: raw["risky_windows_processes"] = _risky_windows_processes(runner)
+    try:
+        if owned_controller_proof is None:
+            raw["risky_windows_processes"] = _risky_windows_processes(runner)
+        else:
+            raw["risky_windows_processes"], raw["owned_controller_validation"] = _controller_process_observation(owned_controller_proof, runner)
     except Exception as exc:
         raw["risky_windows_processes"] = None; raw["errors"].append({"section": "windows_processes", "error": str(exc)})
 
@@ -306,6 +418,8 @@ def main(argv: list[str] | None = None, *, observer: Callable[..., dict[str, Any
     parser.add_argument("--required-vram-mib", type=int, default=46000)
     parser.add_argument("--minimum-ram-gib", type=float, default=12)
     parser.add_argument("--check-wsl-current", action=argparse.BooleanOptionalAction, default=(os.name == "nt"))
+    parser.add_argument("--owned-controller-proof", type=Path,
+                        help="fresh exact launch-controller ancestry proof; never exempts GPU workloads")
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--validate-only", action="store_true")
     mode.add_argument("--observe", action="store_true")
@@ -319,7 +433,9 @@ def main(argv: list[str] | None = None, *, observer: Callable[..., dict[str, Any
             print(json.dumps({"status": "valid", "observer_only": True, "observe_performed": False,
                               "output_available": str(output)}, ensure_ascii=False))
             return 0
-        raw = observer(check_wsl=args.check_wsl_current)
+        kwargs = {"check_wsl": args.check_wsl_current}
+        if args.owned_controller_proof is not None: kwargs["owned_controller_proof"] = args.owned_controller_proof
+        raw = observer(**kwargs)
         decision = evaluate(raw, args.required_vram_mib, args.minimum_ram_gib, args.check_wsl_current)
         manifest = {"schema_version": 1, "observed_at_utc": raw.get("observed_at_utc"),
                     "observer_only": True, "is_model_test": False,

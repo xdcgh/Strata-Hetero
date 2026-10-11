@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "failed_preserved_after_execution_attempt",
+  "utc": "2026-10-09T14:06:08.312358Z",
+  "error_type": "SweepError",
+  "error": "run41 launch phase failed with exit 1; logs retained in C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\controller",
+  "execution_state": {
+    "execution_attempted": true,
+    "lifecycle_controller_started": true,
+    "model_launch_reported": false,
+    "stage": "launch_controller_running",
+    "run_id": "20261009-47-w10-all-quality-on",
+    "run_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on",
+    "controller_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\controller",
+    "controller_process": {
+      "pid": 22408,
+      "parent_pid": 18488,
+      "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "create_utc": "2026-10-09T14:06:02.8939970Z",
+      "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\"",
+      "argv": [
+        "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-Command",
+        "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start"
+      ],
+      "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\"",
+      "controller_streams": "stdout/stderr pipes captured before script input; exclusive evidence paths supplied by caller"
+    },
+    "owner_receipt_paths": [
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\process.json",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\sampler-process.json",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\resource\\startup-watch-result.json"
+    ],
+    "live_owner_state": "launch_controller_started_owner_state_unverified",
+    "last_cleanup_receipt": null,
+    "controller_process_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\controller\\launch-process.json"
+  },
+  "model_launch_reported": false,
+  "live_state_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\controller",
+  "owner_receipts": [
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\process.json",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\sampler-process.json",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\resource\\startup-watch-result.json"
+  ]
+}

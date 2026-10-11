@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "stopped_required_input_audit_before_any_default_validation",
+  "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\supplement_run51_fresh_identities.py",
+  "source_sha256": "84a29bcffbb8cedbf0c3a518af00b7c61420532b0af9f7e8c08c1187bf51aa1f",
+  "required_input_audit_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\run51-dry-validation-02\\required-input-audit.json",
+  "required_input_audit_sha256": "b4965d0038cfbff5da5b49bb665e7d1c8f073c532481847b76f0baa88c7445ba",
+  "missing_input": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\BUILD.json",
+  "reason": "inventory mistakenly listed BUILD.json although pinned default launch/watch/quality functions do not require it",
+  "exit_code": 1,
+  "default_validations_run": 0,
+  "process_identities_captured": 0,
+  "admission_or_model_start": false,
+  "run47_modified": false
+}

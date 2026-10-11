@@ -1,0 +1,909 @@
+{
+  "status": "failed_missing_dry_inputs",
+  "missing": [
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\BUILD.json",
+      "role": "engine version metadata",
+      "exists": false,
+      "kind": "missing"
+    }
+  ],
+  "required_input_count": 130,
+  "inputs": [
+    {
+      "path": "C:\\Python314\\python.exe",
+      "role": "pinned standard-library Python runtime",
+      "exists": true,
+      "kind": "file",
+      "bytes": 106208
+    },
+    {
+      "path": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "role": "pinned PowerShell 7 executable",
+      "exists": true,
+      "kind": "file",
+      "bytes": 301368
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+      "role": "configured repository working directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261008-00-admission\\model-integrity-02.json",
+      "role": "prior pack/MTP stat identity inventory",
+      "exists": true,
+      "kind": "file",
+      "bytes": 23414
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_16k\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20970
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_16k\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20969
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_16k\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20970
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_1k\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_1k\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_1k\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_30k7\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20987
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_30k7\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20987
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_30k7\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20987
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_4k\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_4k\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\long_4k\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_arithmetic\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 1392
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_arithmetic\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 1392
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_arithmetic\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 1392
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_json_arithmetic\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 5669
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_json_arithmetic\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 5669
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_json_arithmetic\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 5669
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_python_function\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 4707
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_python_function\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 4707
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_python_function\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 4707
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_three_key_retrieval\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20930
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_three_key_retrieval\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20931
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_three_key_retrieval\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20930
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_unicode\\formal-0000.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_unicode\\formal-0001.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\requests\\smoke_unicode\\formal-0002.sse.txt",
+      "role": "H4 actual-token-ID reference",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2934
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality\\shutdown-final.json",
+      "role": "H4 quality reference receipt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 11033
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\cleanup-owned-model.ps1",
+      "role": "pinned run41 cleanup source/helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9504
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\launch-owned.ps1",
+      "role": "pinned run41 launch source/helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 20840
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\run-quality-after-ready.ps1",
+      "role": "pinned run41 quality source/helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 32533
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\startup-watch.ps1",
+      "role": "pinned run41 watch source/helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 11992
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\performance-off\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2514
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\performance-off\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\performance-off\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3675
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\performance-off\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\performance-off\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9878
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\quality-on\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2508
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\quality-on\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\quality-on\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3673
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\quality-on\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w04-all\\quality-on\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9865
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\performance-off\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2514
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\performance-off\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\performance-off\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3675
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\performance-off\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\performance-off\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9878
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\quality-on\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2508
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\quality-on\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\quality-on\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3673
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\quality-on\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-all\\quality-on\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9865
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\performance-off\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2516
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\performance-off\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\performance-off\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3677
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\performance-off\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\performance-off\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9884
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\quality-on\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2510
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\quality-on\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\quality-on\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3675
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\quality-on\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w06-auto\\quality-on\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9871
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\performance-off\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2515
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\performance-off\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\performance-off\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3676
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\performance-off\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\performance-off\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9880
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2509
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3674
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9867
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\performance-off\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2515
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\performance-off\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\performance-off\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3676
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\performance-off\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\performance-off\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9881
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\quality-on\\config.json",
+      "role": "run51 phase input config.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2509
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\quality-on\\fresh-identities.json",
+      "role": "run51 phase input fresh-identities.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 6976
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\quality-on\\identity.json",
+      "role": "run51 phase input identity.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3674
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\quality-on\\precreated-controller",
+      "role": "preserved empty precreated controller directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w16-all\\quality-on\\provenance.json",
+      "role": "run51 phase input provenance.json",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9868
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\prompts\\sustained_decode.prompt.txt",
+      "role": "matrix performance prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 4564
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\manifest.json",
+      "role": "run51 frozen quality prompt manifest",
+      "exists": true,
+      "kind": "file",
+      "bytes": 16258
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\long_16k.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 66202
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\long_1k.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 2838
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\long_30k7.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 127193
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\long_4k.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 14249
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\smoke_arithmetic.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 48
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\smoke_json_arithmetic.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 143
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\smoke_python_function.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 126
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\smoke_three_key_retrieval.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 265
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\prompts\\smoke_unicode.prompt.txt",
+      "role": "frozen quality prompt",
+      "exists": true,
+      "kind": "file",
+      "bytes": 82
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\tokenizer-source-01\\strata_tokenizer-current-461b8afb.py",
+      "role": "frozen tokenizer implementation",
+      "exists": true,
+      "kind": "file",
+      "bytes": 18708
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+      "role": "config input for --expert-profile",
+      "exists": true,
+      "kind": "file",
+      "bytes": 196632
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_bench.py",
+      "role": "pinned/default validation helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 25851
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_compare_quality.py",
+      "role": "pinned/default validation helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 72208
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_jsonl_tail.ps1",
+      "role": "pinned run41 jsonl_reader source/helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9978
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_pool_sweep.py",
+      "role": "pinned/default validation helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 80219
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_quality.py",
+      "role": "pinned/default validation helper",
+      "exists": true,
+      "kind": "file",
+      "bytes": 33007
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_verify_existing.py",
+      "role": "stdlib file identity verifier",
+      "exists": true,
+      "kind": "file",
+      "bytes": 14788
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\BUILD.json",
+      "role": "engine version metadata",
+      "exists": false,
+      "kind": "missing"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe",
+      "role": "pinned engine binary; hash checked by default lifecycle validation",
+      "exists": true,
+      "kind": "file",
+      "bytes": 52433920
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41\\serve\\server.py",
+      "role": "pinned server bridge",
+      "exists": true,
+      "kind": "file",
+      "bytes": 356788
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "role": "pinned Python runtime",
+      "exists": true,
+      "kind": "file",
+      "bytes": 255200
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "role": "config input for --native-dense-gguf",
+      "exists": true,
+      "kind": "file",
+      "bytes": 10946624
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "role": "config input for --ple-gguf",
+      "exists": true,
+      "kind": "file",
+      "bytes": 49859583136
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "role": "config input for --native-dense-gguf",
+      "exists": true,
+      "kind": "file",
+      "bytes": 49376141504
+    },
+    {
+      "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "role": "config input for --native-dense-gguf",
+      "exists": true,
+      "kind": "file",
+      "bytes": 12087983520
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt",
+      "role": "config input for --mtp",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt\\dense.bin",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 116099072
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt\\dense.txt",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 1880
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt\\draft_vocab.bin",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 425196
+    },
+    {
+      "path": "F:\\Strata-data\\mtp\\rt\\experts.bin",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 707788800
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+      "role": "config input for --pack",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\compat-bf16.json",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 22055
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\conversions.json",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 172496
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\dense.bin",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 1485688320
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\index.txt",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 93560
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\native_experts.txt",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 5795
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer",
+      "role": "configured tokenizer directory",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\chat_template.jinja",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 9993
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\merges.txt",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 3600844
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\token_type.json",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 744960
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\tokenizer.json",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 554
+    },
+    {
+      "path": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl\\tokenizer\\vocab.json",
+      "role": "prior pack/MTP runtime identity input",
+      "exists": true,
+      "kind": "file",
+      "bytes": 5737005
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+#Requires -Version 7.0
+param(
+    [switch]$Run,
+    [switch]$CheckReady,
+    [int]$LauncherPid,
+    [int]$SamplerPid,
+    [switch]$RootReadyConfirmed
+)
+
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version 2.0
+if ($Run -and $CheckReady) { throw 'Use either -CheckReady or -Run.' }
+$repo = 'C:\Users\DC\Documents\ChatGPT\Strata-Hetero'
+$runDir = 'C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-51-worker-pool-sweep\arms\w10-all\performance-off'
+$configPath = Join-Path $runDir 'config.json'
+$identityPath = Join-Path $runDir 'identity.json'
+$provenancePath = Join-Path $runDir 'provenance.json'
+$manifestPath = 'C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-51-worker-pool-sweep\quality-manifest\manifest.json'
+$serverRoot = 'E:\Strata-Hetero-data\source\hetero-0-1-41'
+$serverScript = Join-Path $serverRoot 'serve\server.py'
+$baselinePath = Join-Path $repo 'bench\hetero\20261009-04-hetero04-direct-quality\shutdown-final.json'
+$python = 'E:\Strata-Hetero-data\venv\Scripts\python.exe'
+$stdlibPython = 'C:\Python314\python.exe'
+$qualityTool = Join-Path $repo 'tools\hetero_quality.py'
+$benchTool = Join-Path $repo 'tools\hetero_bench.py'
+$jsonlReaderPath = Join-Path $repo 'tools\hetero_jsonl_tail.ps1'
+$port = 8081
+$expectedModel = 'qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero'
+$expectedIds = @('smoke_arithmetic','smoke_unicode','smoke_json_arithmetic','smoke_python_function',
+                'smoke_three_key_retrieval','long_1k','long_4k','long_16k','long_30k7')
+$diagLog = Join-Path $runDir 'logs\engine.log'
+. $jsonlReaderPath
+
+function Get-Sha256([string]$Path) { (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant() }
+
+function Write-ExclusiveJson([string]$Path, $Value, [int]$Depth=10) {
+    $bytes = [Text.UTF8Encoding]::new($false).GetBytes(($Value | ConvertTo-Json -Depth $Depth) + "`n")
+    $out = [IO.File]::Open($Path,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read)
+    try { $out.Write($bytes,0,$bytes.Length); $out.Flush($true) } finally { $out.Dispose() }
+}
+
+function Test-QualityContract {
+    foreach ($p in @($configPath,$identityPath,$provenancePath,$manifestPath,$baselinePath,$python,$stdlibPython,$qualityTool,$benchTool,$jsonlReaderPath)) {
+        if (-not (Test-Path -LiteralPath $p -PathType Leaf)) { throw "required quality input missing: $p" }
+    }
+    $config = Get-Content -LiteralPath $configPath -Raw | ConvertFrom-Json
+    $identity = Get-Content -LiteralPath $identityPath -Raw | ConvertFrom-Json
+    $provenance = Get-Content -LiteralPath $provenancePath -Raw | ConvertFrom-Json
+    $baseline = Get-Content -LiteralPath $baselinePath -Raw | ConvertFrom-Json
+    $manifestHash = Get-Sha256 $manifestPath
+    if ($provenance.run_id -ne '20261011-51-w10-all-performance-off' -or $provenance.shared_controls.ple_io -ne 'direct' -or
+        $provenance.placement_contrast.path -notlike 'F:\Strata-data\models\*' -or
+        $provenance.acceptance_status -ne 'prepared_not_launched') { throw 'prepared original-F direct-ple run identity/status changed' }
+    if ($manifestHash -ne $provenance.shared_controls.quality_prompt_manifest_sha256) { throw 'prompt manifest SHA differs from prepared run11 provenance' }
+    if ($config.exe -ne $identity.engine.path -or $provenance.engine_path -ne $identity.engine.path -or
+        $identity.engine.sha256 -ne $provenance.engine_sha256 -or
+        (Get-Sha256 $config.exe) -ne $provenance.engine_sha256) { throw 'engine binary/config/provenance identity mismatch' }
+    if ((Get-Sha256 $serverScript) -ne $provenance.server_file_sha256) {
+        throw 'server bridge changed from the reviewed shared v1.41 capture bridge'
+    }
+    if ((Get-Sha256 $jsonlReaderPath) -ne $provenance.jsonl_tail_reader_sha256) {
+        throw 'bounded JSONL reader changed from the prepared SHA-256'
+    }
+    $manifestCheck = @'
+import hashlib,json,pathlib,sys
+root=pathlib.Path(sys.argv[1]); manifest_path=pathlib.Path(sys.argv[2]); expected_ids=json.loads(__import__("base64").b64decode(sys.argv[3]))
+sys.path.insert(0,str(root/"tools"))
+from hetero_quality import load_manifest
+from hetero_compare_quality import verify_tokenizer_manifest
+m,by_id=load_manifest(manifest_path)
+if list(x["id"] for x in m.get("prompts",[]))!=expected_ids: raise SystemExit("prompt IDs/order differ from fixed nine-task matrix")
+caps={x:(256 if x=="smoke_python_function" else 128) for x in expected_ids}
+checks=[]
+for p in m["prompts"]:
+    path=(manifest_path.parent/p["file"]).resolve(strict=True); data=path.read_bytes()
+    if len(data)!=p["bytes"] or hashlib.sha256(data).hexdigest()!=p["sha256"]: raise SystemExit("prompt bytes/SHA mismatch: "+p["id"])
+    if p.get("chat_prompt_tokens_local") is None or p.get("max_output_tokens",0)<1: raise SystemExit("prompt counts missing: "+p["id"])
+    checks.append({"id":p["id"],"body_tokens":p["body_tokens_local"],"chat_tokens":p["chat_prompt_tokens_local"],"max_tokens":caps[p["id"]],"sha256":p["sha256"]})
+tok=verify_tokenizer_manifest(m)
+if tok.get("status")!="pass": raise SystemExit("tokenizer asset/source verification failed: "+json.dumps(tok))
+print(json.dumps({"status":"pass","prompt_count":len(checks),"prompts":checks,"tokenizer":tok},separators=(",",":")))
+'@
+    $idsJson = ConvertTo-Json -InputObject $expectedIds -Compress
+    $encodedIds = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($idsJson))
+    $encodedCheck = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($manifestCheck))
+    $wrapper = "exec(__import__('base64').b64decode('$encodedCheck'))"
+    $pythonArgs = @('-I','-B','-X','utf8','-c',$wrapper,$repo,$manifestPath,$encodedIds)
+    $raw = & $stdlibPython @pythonArgs
+    if ($LASTEXITCODE -ne 0) { throw 'Pure nine-prompt/asset validation failed' }
+    $manifestInfo = (($raw -join "`n") | ConvertFrom-Json)
+    if ($manifestInfo.status -ne 'pass' -or $manifestInfo.prompt_count -ne 9) { throw 'manifest validation result was incomplete' }
+    $base = $baseline.quality.prompt_results
+    foreach ($p in $manifestInfo.prompts) {
+        $old = $base.PSObject.Properties[$p.id].Value
+        if (-not $old -or $old.local_chat_prompt_tokens -ne $p.chat_tokens -or $old.max_tokens -ne $p.max_tokens -or
+            $old.warmups -ne 1 -or $old.formal_requests -ne 3 -or @($old.quality_statuses | Where-Object { $_ -ne 'pass' }).Count -gt 0) {
+            throw "Fixed prompt/cap/warm/formal contract does not exactly match H4: $($p.id)"
+        }
+        $h4PromptDir = Join-Path (Join-Path $repo 'bench\hetero\20261009-04-hetero04-direct-quality\requests') $p.id
+        for ($i=0; $i -lt 3; $i++) {
+            if (-not (Test-Path -LiteralPath (Join-Path $h4PromptDir ("formal-{0:D4}.sse.txt" -f $i)) -PathType Leaf)) {
+                throw "H4 actual-token-ID reference is missing for $($p.id) formal $i"
+            }
+        }
+    }
+    if ($identity.config.sha256 -ne (Get-Sha256 $configPath) -or $identity.config.prompt_cache -ne 0 -or
+        $identity.config.resident_budget_gib -ne 20 -or $identity.config.capture_actual_engine_token_ids -ne $false) {
+        throw 'prepared F identity/config controls changed'
+    }
+    if ($config.env.STRATA_PREFILL_CPU_SHARE -ne '0' -or $config.env.STRATA_STAGE_PIN -ne '0') { throw 'v0.1.41 CPU-share/stage-pin controls must remain explicitly disabled' }
+    if ($config.parallel -ne 1 -or $config.sampling.temperature -ne 0 -or $config.sampling.top_p -ne 1 -or $config.sampling.seed -ne 42) {
+        throw 'deterministic request controls changed'
+    }
+    $pleIndex = [array]::IndexOf($config.args,'--ple-gguf')
+    $nativePaths = @(); for ($i=0; $i -lt $config.args.Count; $i++) { if ($config.args[$i] -eq '--native-dense-gguf') { $nativePaths += $config.args[$i+1] } }
+    if ($pleIndex -lt 0 -or $config.args[$pleIndex+1] -ne $identity.config.ple_gguf_path -or
+        $config.args[$pleIndex+1] -notlike 'F:\Strata-data\models\*' -or $nativePaths.Count -ne 4 -or
+        @($nativePaths | Where-Object { $_ -like 'E:\*' -or $_ -notlike 'F:\Strata-data\models\*' }).Count -gt 0 -or
+        $config.args[([array]::IndexOf($config.args,'--ple-io')+1)] -ne 'direct') { throw 'quality F arm does not retain the explicit original F-only placement config' }
+    $fullManifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+    return [pscustomobject]@{manifest=$fullManifest;identity=$identity;provenance=$provenance;config=$config;
+        manifest_sha256=$manifestHash;config_sha256=(Get-Sha256 $configPath);
+        engine_sha256=$provenance.engine_sha256;server_file_sha256=$provenance.server_file_sha256}
+}
+
+function Get-LatestResourceGate([string]$When) {
+    $path = Join-Path $runDir 'resource\samples.jsonl'
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "${When}: sampler output is absent" }
+    $tail = Read-LastCompleteJsonlRecord -Path $path -MaxRecordBytes 65536 -MaxTailBytes 262144 `
+        -TimestampField 'observed_at_utc' -MaxAgeSeconds 5 -FutureToleranceSeconds 2 `
+        -OwnerField 'owner_pid' -ExpectedOwnerPid $LauncherPid -RecordTypeField 'record_type' `
+        -ExpectedRecordType 'resource_sample' -PartialEvidenceDirectory (Join-Path $runDir 'resource')
+    $sample = $tail.record
+    $age = $tail.age_seconds
+    $sample | Add-Member -NotePropertyName reader_record_sha256 -NotePropertyValue $tail.record_sha256 -Force
+    $sample | Add-Member -NotePropertyName reader_trailing_partial_bytes -NotePropertyValue $tail.trailing_partial_bytes -Force
+    $sample | Add-Member -NotePropertyName reader_trailing_partial_sha256 -NotePropertyValue $tail.trailing_partial_sha256 -Force
+    $sample | Add-Member -NotePropertyName reader_trailing_partial_path -NotePropertyValue $tail.trailing_partial_path -Force
+    if ($age -lt -2 -or $age -gt 5 -or
+        $sample.ram_gate.status -ne 'pass' -or $null -eq $sample.ram_gate.available_gib -or [double]$sample.ram_gate.available_gib -lt 12 -or
+        $sample.commit_gate.status -ne 'pass' -or $null -eq $sample.commit_gate.available_gib -or [double]$sample.commit_gate.available_gib -lt 4 -or
+        @($sample.alerts).Count -gt 0 -or @($sample.errors).Count -gt 0) { throw "${When}: resource sample stale/unknown/blocked; no further prompt will be sent" }
+    return $sample
+}
+
+function Get-DiagnosticSlice([long]$StartOffset) {
+    if (-not (Test-Path -LiteralPath $diagLog)) { return [pscustomobject]@{end_offset=0;lines=@()} }
+    $stream=[IO.File]::Open($diagLog,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::ReadWrite)
+    try {
+        $end=[long]$stream.Length; [void]$stream.Seek([Math]::Min($StartOffset,$end),[IO.SeekOrigin]::Begin)
+        $reader=[IO.StreamReader]::new($stream,[Text.Encoding]::UTF8,$true,4096,$true)
+        $text=$reader.ReadToEnd();$reader.Dispose()
+        return [pscustomobject]@{end_offset=$end;lines=@([regex]::Split($text,"\r?\n")|Where-Object{$_.Contains('strata zero-logits diag:')})}
+    } finally { $stream.Dispose() }
+}
+
+function Get-ReadyBindings([string]$When, [int]$AllowedInFlight) {
+    $proc = Get-CimInstance Win32_Process -Filter "ProcessId = $LauncherPid" -ErrorAction SilentlyContinue
+    $procReceiptText = Get-Content -LiteralPath (Join-Path $runDir 'process.json') -Raw
+    $procReceipt = $procReceiptText | ConvertFrom-Json
+    $procReceiptDoc = [System.Text.Json.JsonDocument]::Parse($procReceiptText)
+    $launcherCreateUtc = $procReceiptDoc.RootElement.GetProperty('launcher_create_utc').GetString()
+    $serverCreateUtc = $procReceiptDoc.RootElement.GetProperty('actual_server_child_create_utc').GetString()
+    if (-not $proc -or $proc.ExecutablePath -ne $procReceipt.python -or
+        $proc.CreationDate.ToUniversalTime().ToString('o') -ne $launcherCreateUtc -or
+        -not $proc.CommandLine.Contains('serve\server.py') -or -not $proc.CommandLine.Contains($configPath)) {
+        throw "${When}: server launcher PID/executable/command is not the owned run11 process"
+    }
+    $server = Get-CimInstance Win32_Process | Where-Object {
+        $_.ParentProcessId -eq $LauncherPid -and $_.Name -eq 'python.exe' -and $_.CommandLine.Contains($configPath)
+    } | Select-Object -First 1
+    if (-not $server -or $server.ProcessId -ne $procReceipt.actual_server_child_pid -or
+        $server.ExecutablePath -ne $procReceipt.actual_server_child_exe -or
+        $server.CreationDate.ToUniversalTime().ToString('o') -ne $serverCreateUtc) {
+        throw "${When}: exact C Python server child PID/executable/CreateTime is absent"
+    }
+    $engine = Get-CimInstance Win32_Process | Where-Object {
+        $_.ParentProcessId -eq $server.ProcessId -and $_.ExecutablePath -eq $identity.engine.path
+    } | Select-Object -First 1
+    if (-not $engine) { throw "${When}: exact Hetero engine child is absent" }
+    $config = Get-Content -LiteralPath $configPath -Raw | ConvertFrom-Json
+    $expectedEngineCommand = $identity.engine.path + ' --serve ' + ($config.args -join ' ')
+    if ($engine.CommandLine -ne $expectedEngineCommand) { throw "${When}: engine child command differs from prepared config" }
+    $listeners = @(Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue)
+    if ($listeners.Count -ne 1 -or $listeners[0].LocalAddress -ne '127.0.0.1' -or $listeners[0].OwningProcess -ne $server.ProcessId) {
+        throw "${When}: 8081 listener is not uniquely owned by the loopback server child"
+    }
+    $status = Invoke-RestMethod -Uri "http://127.0.0.1:$port/v1/status" -Method Get -TimeoutSec 5
+    if ($status.model -ne $expectedModel -or $status.engine -ne '0.1.41' -or $status.loaded -ne $true -or
+        $status.activity.in_flight -gt $AllowedInFlight) { throw "${When}: live service identity/loaded/in-flight state is invalid" }
+    return [pscustomobject]@{launcher=$proc;server=$server;engine=$engine;status=$status}
+}
+
+function Stop-OwnedRunner([int]$LauncherProcessId, [string]$LauncherCreateUtc, [string]$LauncherExe,
+                          [int]$ActualProcessId, [string]$ActualCreateUtc, [string]$RunId) {
+    $actual = Get-CimInstance Win32_Process -Filter "ProcessId = $ActualProcessId" -ErrorAction SilentlyContinue
+    if ($actual) {
+        if ($actual.ExecutablePath -ne 'C:\Python314\python.exe' -or
+            ($ActualProcessId -ne $LauncherProcessId -and $actual.ParentProcessId -ne $LauncherProcessId) -or
+            $actual.CreationDate.ToUniversalTime().ToString('o') -ne $ActualCreateUtc -or
+            -not $actual.CommandLine.Contains('tools\hetero_bench.py') -or -not $actual.CommandLine.Contains($RunId)) {
+            throw 'Runner actual-child PID/executable/parent/CreateTime changed; refusing to stop an unknown process'
+        }
+        Stop-Process -Id $ActualProcessId -ErrorAction Stop
+    }
+    $launcher = Get-CimInstance Win32_Process -Filter "ProcessId = $LauncherProcessId" -ErrorAction SilentlyContinue
+    if ($launcher -and $ActualProcessId -ne $LauncherProcessId) {
+        if ($launcher.ExecutablePath -ne $LauncherExe -or $launcher.CreationDate.ToUniversalTime().ToString('o') -ne $LauncherCreateUtc -or
+            -not $launcher.CommandLine.Contains('tools\hetero_bench.py')) { throw 'Runner launcher identity changed; refusing to stop an unknown process' }
+        Stop-Process -Id $LauncherProcessId -ErrorAction Stop
+    }
+    if ($LauncherProcessId -ne $ActualProcessId) { Wait-Process -Id $ActualProcessId -Timeout 10 -ErrorAction SilentlyContinue }
+    Wait-Process -Id $LauncherProcessId -Timeout 10 -ErrorAction SilentlyContinue
+}
+
+function Test-RunReady {
+    if (-not $RootReadyConfirmed) { throw 'Only run after root explicitly confirms run11 is ready.' }
+    if ($LauncherPid -le 0 -or $SamplerPid -le 0) { throw 'valid run-owned launcher/sampler PIDs are required' }
+    $launch = Get-Content -LiteralPath (Join-Path $runDir 'process.json') -Raw | ConvertFrom-Json
+    $sampler = Get-Content -LiteralPath (Join-Path $runDir 'sampler-process.json') -Raw | ConvertFrom-Json
+    $admission = Get-Content -LiteralPath (Join-Path $runDir 'admission.json') -Raw | ConvertFrom-Json
+    if ($launch.launcher_pid -ne $LauncherPid -or $launch.actual_server_child_pid -le 0 -or
+        $sampler.sampler_launcher_pid -ne $SamplerPid -or $sampler.actual_child_pid -le 0 -or
+        $sampler.actual_child_exe -ne 'C:\Python314\python.exe' -or $sampler.actual_child_parent_pid -ne $SamplerPid) {
+        throw 'run process/sampler receipts do not bind supplied wrapper and C Python child PIDs'
+    }
+    $samplerReceiptText = Get-Content -LiteralPath (Join-Path $runDir 'sampler-process.json') -Raw
+    $samplerDoc = [System.Text.Json.JsonDocument]::Parse($samplerReceiptText)
+    $samplerCreatedUtc = $samplerDoc.RootElement.GetProperty('actual_child_create_utc').GetString()
+    $samplerLive = Get-CimInstance Win32_Process -Filter "ProcessId = $($sampler.actual_child_pid)" -ErrorAction SilentlyContinue
+    if (-not $samplerLive -or $samplerLive.ExecutablePath -ne 'C:\Python314\python.exe' -or
+        $samplerLive.ParentProcessId -ne $SamplerPid -or $samplerLive.CreationDate.ToUniversalTime().ToString('o') -ne $samplerCreatedUtc -or
+        -not $samplerLive.CommandLine.Contains('hetero_resources.py')) { throw 'sampler actual child PID/executable/parent/CreateTime is not live and owned' }
+    if ($admission.pass -ne $true -or $admission.status -ne 'pass' -or $admission.chosen_gates.vram.available_mib -lt 46000 -or
+        $admission.raw.windows_memory.available_commit_bytes -lt 4GB) { throw 'fresh launch admission no longer proves 12/4/46k gate' }
+    if ((Get-Sha256 (Join-Path $runDir 'identity.json')) -ne (Get-Sha256 $identityPath) -or
+        (Get-Sha256 (Join-Path $runDir 'provenance.json')) -ne (Get-Sha256 $provenancePath)) { throw 'prepared identity/provenance was modified' }
+}
+
+$contract = Test-QualityContract
+$identity = $contract.identity
+$provenance = $contract.provenance
+$config = $contract.config
+if (-not $Run -and -not $CheckReady) {
+    [ordered]@{status='prepared_quality_validated';run_started=$false;prompt_count=9;formal_per_prompt=3;warmups_per_prompt=1;
+        caps='128 for eight non-code tasks, 256 for smoke_python_function';manifest_sha256=$contract.manifest_sha256;
+        expected_h4_configured_status='passed'} | ConvertTo-Json -Compress
+    exit 0
+}
+Test-RunReady
+$samplerReceiptText = Get-Content -LiteralPath (Join-Path $runDir 'sampler-process.json') -Raw
+$samplerReceiptDoc = [System.Text.Json.JsonDocument]::Parse($samplerReceiptText)
+$qualitySamplerCreateUtc = $samplerReceiptDoc.RootElement.GetProperty('actual_child_create_utc').GetString()
+$ready = Get-ReadyBindings 'quality entry' 0
+if ($CheckReady) {
+    $sample = Get-LatestResourceGate 'read-only quality preflight'
+    if ($ready.status.activity.requests -ne 0) { throw 'Read-only preflight requires zero model requests.' }
+    $preflight = [ordered]@{status='live_quality_preflight_pass';chat_requests_sent=0;prompt_count=$contract.manifest.prompts.Count;
+        model_requests=$ready.status.activity.requests;engine_pid=$ready.engine.ProcessId;
+        physical_gib=$sample.ram_gate.available_gib;commit_gib=$sample.commit_gate.available_gib;
+        manifest_has_prompt_paths=@($contract.manifest.prompts | Where-Object { -not $_.file }).Count -eq 0;
+        identity_bound=$identity.engine.path -eq $ready.engine.ExecutablePath}
+    $preflightPath = Join-Path $runDir 'quality\preflight-ready-binding.json'
+    if (Test-Path -LiteralPath $preflightPath) { throw 'preflight-ready-binding exists; refusing overwrite' }
+    Write-ExclusiveJson $preflightPath $preflight
+    $preflight | ConvertTo-Json -Compress
+    return
+}
+$phaseRunId = $contract.provenance.run_id
+$performanceDir = Join-Path $runDir 'performance'
+if (-not (Test-Path -LiteralPath $performanceDir -PathType Container)) { throw 'performance output directory missing' }
+$bindingPath = Join-Path $performanceDir 'ready-binding.json'
+if (Test-Path -LiteralPath $bindingPath) { throw 'performance ready binding exists; refusing overwrite' }
+$binding = [ordered]@{run_id=$phaseRunId;checked_utc=[DateTime]::UtcNow.ToString('o');launcher_pid=$LauncherPid;
+    server_pid=$ready.server.ProcessId;engine_pid=$ready.engine.ProcessId;sampler_actual_child_pid=(Get-Content -LiteralPath (Join-Path $runDir 'sampler-process.json') -Raw | ConvertFrom-Json).actual_child_pid;
+    engine_sha256=(Get-Sha256 $identity.engine.path);server_file_sha256=(Get-Sha256 $serverScript);mode='performance-off'}
+Write-ExclusiveJson $bindingPath $binding
+$progressPath = Join-Path $performanceDir 'performance-progress.jsonl'
+if (Test-Path -LiteralPath $progressPath) { throw 'performance progress exists; refusing overwrite' }
+$progress = [IO.File]::Open($progressPath,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read)
+function Write-Progress($Event) { $line=(ConvertTo-Json -InputObject ([ordered]@{utc=[DateTime]::UtcNow.ToString('o');event=$Event}) -Compress)+"`n";$bytes=[Text.UTF8Encoding]::new($false).GetBytes($line);$progress.Write($bytes,0,$bytes.Length);$progress.Flush($true) }
+$scenarioResults=@();$scenarios=@($env:RUN47_PERF_SCENARIOS_JSON | ConvertFrom-Json -DateKind String)
+if ($scenarios.Count -ne 6) { throw 'fixed six-scenario performance recipe is missing' }
+try {
+    $null=Get-LatestResourceGate 'performance start';$null=Get-ReadyBindings 'performance start' 0
+    Write-Progress @{event='performance_start';scenario_count=$scenarios.Count}
+    foreach ($scenario in $scenarios) {
+        if ($scenario.id -notmatch '^(decode-cap-(256|512|1024)|context-(4k|16k|32k))$') { throw 'performance scenario ID not allowlisted' }
+        $promptPath=[IO.Path]::GetFullPath([string]$scenario.prompt_file)
+        if (-not (Test-Path -LiteralPath $promptPath -PathType Leaf) -or (Get-Sha256 $promptPath) -ne $scenario.prompt_sha256 -or
+            (Get-Item -LiteralPath $promptPath).Length -ne $scenario.prompt_bytes) { throw "$($scenario.id): prompt bytes/hash differ from matrix recipe" }
+        $cap=[int]$scenario.max_tokens
+        if (($scenario.id -like 'decode-cap-*' -and $cap -notin @(256,512,1024)) -or
+            ($scenario.id -like 'context-*' -and $cap -ne 128)) { throw "$($scenario.id): output cap differs from fixed recipe" }
+        $null=Get-ReadyBindings "before $($scenario.id)" 0;$null=Get-LatestResourceGate "before $($scenario.id)"
+        $requestRunId=$phaseRunId+'-'+$scenario.id
+        $outputPath=Join-Path $performanceDir $requestRunId
+        $stdoutPath=Join-Path $performanceDir ($scenario.id+'.stdout.log');$stderrPath=Join-Path $performanceDir ($scenario.id+'.stderr.log')
+        foreach($path in @($outputPath,$stdoutPath,$stderrPath)){if(Test-Path -LiteralPath $path){throw "$($scenario.id): existing output; refusing overwrite"}}
+        $runnerArgs=@((Join-Path $repo 'tools\hetero_bench.py'),'--prompt-file',$promptPath,'--output',$performanceDir,
+            '--run-id',$requestRunId,'--repeats','3','--warmup','1','--max-tokens',[string]$cap,'--concurrency','1',
+            '--seed','42','--reasoning-effort','none','--identity-json',$identityPath,'--base-url',"http://127.0.0.1:$port",
+            '--allow-capped-performance')
+        $runner=Start-Process -FilePath $python -ArgumentList $runnerArgs -WorkingDirectory $repo -WindowStyle Hidden -PassThru `
+            -RedirectStandardOutput $stdoutPath -RedirectStandardError $stderrPath
+        $runnerLauncher=Get-CimInstance Win32_Process -Filter "ProcessId = $($runner.Id)" -ErrorAction SilentlyContinue
+        if (-not $runnerLauncher) { throw "$($scenario.id): benchmark launcher identity missing" }
+        $actual=$null
+        if ($runnerLauncher.ExecutablePath -eq 'C:\Python314\python.exe' -and $runnerLauncher.CommandLine.Contains('tools\hetero_bench.py')) {$actual=$runnerLauncher}
+        for($i=0;$i -lt 50 -and -not $actual;$i++){$actual=Get-CimInstance Win32_Process|Where-Object{$_.ParentProcessId -eq $runner.Id -and $_.ExecutablePath -eq 'C:\Python314\python.exe' -and $_.CommandLine.Contains('tools\hetero_bench.py') -and $_.CommandLine.Contains($requestRunId)}|Select-Object -First 1;if(-not $actual){Start-Sleep -Milliseconds 100}}
+        if(-not $actual){throw "$($scenario.id): benchmark actual C Python child identity missing"}
+        $launcherCreated=$runnerLauncher.CreationDate.ToUniversalTime().ToString('o');$actualCreated=$actual.CreationDate.ToUniversalTime().ToString('o')
+        Write-Progress @{scenario=$scenario.id;event='runner_started';launcher_pid=$runner.Id;launcher_exe=$runnerLauncher.ExecutablePath;launcher_create_utc=$launcherCreated;
+            actual_child_pid=$actual.ProcessId;actual_child_exe=$actual.ExecutablePath;actual_child_parent_pid=$actual.ParentProcessId;actual_child_create_utc=$actualCreated;argv=$runnerArgs}
+        try {
+            while ($true) {
+                $runner.Refresh();$live=Get-CimInstance Win32_Process -Filter "ProcessId = $($actual.ProcessId)" -ErrorAction SilentlyContinue
+                if ($runner.HasExited -and -not $live) { break }
+                if ($runner.HasExited -and $live) { throw "$($scenario.id): actual benchmark child outlived launcher" }
+                $null=Get-LatestResourceGate "during $($scenario.id)";$null=Get-ReadyBindings "during $($scenario.id)" 1
+                Start-Sleep -Seconds 1;$runner.Refresh()
+            }
+        } catch {
+            Stop-OwnedRunner $runner.Id $launcherCreated $runnerLauncher.ExecutablePath $actual.ProcessId $actualCreated $requestRunId
+            throw
+        }
+        $runnerFinalChild=Get-CimInstance Win32_Process -Filter "ProcessId = $($actual.ProcessId)" -ErrorAction SilentlyContinue
+        if($runnerFinalChild){throw "$($scenario.id): actual benchmark child remained after exit"}
+        if($runner.ExitCode -ne 0 -or -not(Test-Path -LiteralPath $outputPath -PathType Container)){throw "$($scenario.id): benchmark failed; preserve partial output"}
+        $null=Get-LatestResourceGate "after $($scenario.id)";$null=Get-ReadyBindings "after $($scenario.id)" 0
+        $scenarioResults+=,[ordered]@{id=$scenario.id;run_id=$requestRunId;status='client_exit_zero_output_preserved';exit_code=[int]$runner.ExitCode;
+            max_tokens=$cap;prompt_sha256=$scenario.prompt_sha256;output_path=$outputPath;launcher_pid=$runner.Id;actual_child_pid=$actual.ProcessId;
+            launcher_create_utc=$launcherCreated;actual_child_create_utc=$actualCreated}
+        Write-Progress @{scenario=$scenario.id;event='runner_complete';result=$scenarioResults[-1]}
+    }
+    $summary=[ordered]@{schema_version=1;run_id=$phaseRunId;status='six_performance_clients_completed_pending_offline_guard';completed_utc=[DateTime]::UtcNow.ToString('o');scenarios=$scenarioResults}
+    Write-ExclusiveJson (Join-Path $performanceDir 'performance-stage.json') $summary
+    Write-Progress @{event='performance_complete';status=$summary.status}
+    $summary|ConvertTo-Json -Depth 10 -Compress
+} catch {
+    Write-Progress @{event='failed';error_type=$_.Exception.GetType().Name;error=$_.Exception.Message;completed_scenarios=$scenarioResults.Count}
+    $failurePath=Join-Path $performanceDir 'performance-failure.json'
+    if(-not(Test-Path -LiteralPath $failurePath)){Write-ExclusiveJson $failurePath ([ordered]@{schema_version=1;run_id=$phaseRunId;status='failed_stopped';utc=[DateTime]::UtcNow.ToString('o');error_type=$_.Exception.GetType().Name;error=$_.Exception.Message;completed_scenarios=$scenarioResults})}
+    throw
+} finally { $progress.Dispose() }

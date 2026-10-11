@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-47-w10-all-quality-on",
+  "action": "launch",
+  "status": "owned_controller_started_before_script_input",
+  "owner": {
+    "pid": 22408,
+    "parent_pid": 18488,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-09T14:06:02.8939970Z",
+    "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\"",
+    "argv": [
+      "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start"
+    ],
+    "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\"",
+    "controller_streams": "stdout/stderr pipes captured before script input; exclusive evidence paths supplied by caller"
+  },
+  "rendered_script_sha256": "8fcf1ccc0ab4802eba37a72d70545896adb1453392df5153b1d1c5c4913bfd7c",
+  "template_source_sha256": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+  "matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "authorization_nonce": "c03af91d8c244444abe606325dfb3ac8",
+  "stdout_evidence_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\controller\\launch.stdout.log",
+  "stderr_evidence_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\controller\\launch.stderr.log"
+}

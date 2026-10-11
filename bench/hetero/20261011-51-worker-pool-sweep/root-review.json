@@ -1,0 +1,23 @@
+{
+  "status": "root_reviewed_serial_sweep_and_admission_probe",
+  "utc": "2026-10-11T00:37:40.172925+00:00",
+  "source_hashes": {
+    "hetero_pool_sweep.py": "4e836ec53c7bf885981c26ba7296d5ef79f8f9c972b8fd3f9ea431c49d8af2be",
+    "hetero_admission.py": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e",
+    "hetero_resources.py": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+  },
+  "matrix_sha256": "dce95ce74eca894a5378789df7848bb2591a22a82cd98858d559122e1ecf58db",
+  "host_tests": {
+    "admission": 18,
+    "pool_sweep": 28,
+    "failed": 0
+  },
+  "prior_failure": "run47 blocked its own coordinator before model Popen; external wrapper also used unavailable QuoteArgument",
+  "correction": "fresh exact PS launch-controller and C Python/optional E venv ancestor identities; no blanket Python or GPU exemptions",
+  "new_commit_gate": "4 GiB PSAPI GetPerformanceInfo reserve, independent from 12 GiB physical RAM",
+  "model_source": "ffeb748d190ddeedff23587ce848596d4db0c752",
+  "model_binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "telemetry_worker_source_in_candidate_binary": false,
+  "no_model_or_request_in_this_review": true,
+  "scope": "one zero-model admission probe, then one serial ten-phase matrix; stop first; no unreasoned retries"
+}

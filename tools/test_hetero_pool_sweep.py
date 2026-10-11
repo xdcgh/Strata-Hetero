@@ -69,6 +69,7 @@ def _fixture_matrix(root: Path) -> Path:
             run_id = f"20261009-47-{arm}-{phase}"
             leaf = run / "arms" / arm / phase
             leaf.mkdir(parents=True)
+            _write(leaf / "fresh-identities.json", b'{"fixture_only":true}\n')
             config = {"exe": "fake-engine.exe", "hetero_capture_token_ids": capture,
                       "args": ["--pool-workers", str(workers), "--pool-affinity", affinity]}
             identity = {"run_id": run_id, "engine": {"path": "fake-engine.exe", "sha256": "a" * 64},
@@ -115,7 +116,7 @@ def _auth(matrix: Path, nonce: str = "a" * 32) -> dict:
     return {"status": "root_reviewed_authorized", "matrix_sha256": sweep.sha256_file(matrix),
             "arms": [x["arm"] for x in json.loads(matrix.read_text())["arms"]], "nonce": nonce,
             "output_root": str(matrix.parent.resolve()), "adapter_sha256": sweep.sha256_file(Path(sweep.__file__)),
-            "template_sha256s": sweep.template_source_hashes(repo)}
+            "template_sha256s": sweep.template_source_hashes(repo), "gate_source_sha256s": sweep.gate_source_hashes(repo)}
 
 
 def _valid_performance_run(root: Path, *, text: str = "Detailed output with several useful words.",
@@ -297,6 +298,38 @@ class PoolSweepPlanTests(unittest.TestCase):
             auth.write_text(json.dumps(valid), encoding="utf-8")
             with self.assertRaises(sweep.SweepError):
                 sweep.validate_root_authorization(matrix, auth)
+
+    def test_missing_prepared_runtime_identities_rejected_before_callbacks(self):
+        with tempfile.TemporaryDirectory(prefix="strata-pool-missing-identities-") as temp:
+            matrix = _fixture_matrix(Path(temp))
+            plan = sweep.build_plan(matrix)
+            leaf = Path(plan["steps"][0]["config"]).parent
+            (leaf / "fresh-identities.json").unlink()
+            with self.assertRaisesRegex(sweep.SweepError, "runtime file identities missing"):
+                sweep.build_plan(matrix)
+
+    def test_admission_probe_stops_before_model_start_source(self):
+        with tempfile.TemporaryDirectory(prefix="strata-pool-admission-boundary-") as temp:
+            matrix = _fixture_matrix(Path(temp))
+            plan = sweep.build_plan(matrix)
+            auth = _auth(matrix)
+            auth["_resolved_output_root"] = str(matrix.parent.resolve())
+            adapter = sweep.Run41LifecycleAdapter(matrix, auth)
+            folder = matrix.parent / "probe"
+            folder.mkdir()
+            scripts = []
+
+            def fake_invoke(script, _action, **_kwargs):
+                scripts.append(script)
+                return 0, b'{"status":"controller_admission_probe_pass","start_performed":false}\n', b'', {"pid": 123}
+
+            with mock.patch.object(sweep, "_invoke_pwsh_text", side_effect=fake_invoke):
+                result = adapter._call(plan["steps"][0], "launch", "launch", folder, admission_only=True)
+            self.assertEqual(result["json"]["status"], "controller_admission_probe_pass")
+            self.assertIn("--owned-controller-proof $env:RUN47_CONTROLLER_PROOF", scripts[0])
+            self.assertIn(str(folder / "admission.json"), scripts[0])
+            self.assertNotIn("Start-Process -FilePath $python", scripts[0])
+            self.assertNotIn("$serverArgs =", scripts[0])
 
     def test_fake_cli_runs_on_host_inside_temp_root_and_preserves_argv(self):
         with tempfile.TemporaryDirectory(prefix="strata-pool-sweep-fakecli-") as temp:

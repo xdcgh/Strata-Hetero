@@ -1,17 +1,20 @@
 import json
+import datetime as dt
+import copy
 import os
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-from hetero_admission import _probe_wsl, _risky_windows_processes, decode_wsl_list, evaluate, main, parse_nvidia_csv
+from hetero_admission import _probe_wsl, _risky_windows_processes, decode_wsl_list, evaluate, main, parse_nvidia_csv, verify_controller_chain
 
 
 def fixture(**changes):
     raw = {
         "observed_at_utc": "2026-10-06T00:00:00+00:00",
-        "windows_memory": {"total_bytes": 64 * 1024**3, "available_bytes": 32 * 1024**3},
+        "windows_memory": {"total_bytes": 64 * 1024**3, "available_bytes": 32 * 1024**3,
+                           "available_commit_bytes": 32 * 1024**3},
         "nvidia": {"gpus": [{"name": "RTX 4090 D", "vram_total_mib": 49140,
                               "vram_free_mib": 48000, "vram_used_mib": 1140,
                               "utilization_percent": 0, "driver_version": "x"}],
@@ -24,6 +27,71 @@ def fixture(**changes):
 
 
 class AdmissionTests(unittest.TestCase):
+    def test_system_commit_floor_is_required_independently_of_physical_ram(self):
+        for value in (None, 4 * 1024**3 - 1):
+            memory = {"available_bytes": 32 * 1024**3, "available_commit_bytes": value}
+            result = evaluate(fixture(windows_memory=memory), 46000, 12)
+            self.assertTrue(result["gates"]["ram"]["pass"])
+            self.assertFalse(result["gates"]["system_commit"]["pass"])
+            self.assertEqual(result["status"], "blocked")
+    def controller_fixture(self):
+        now = dt.datetime(2026, 10, 11, 1, 2, 3, tzinfo=dt.timezone.utc)
+        controller = {"pid": 10, "parent_pid": 11, "name": "pwsh.exe",
+                      "path": r"C:\Users\DC\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe",
+                      "create_utc": "2026-10-11T01:02:01.1234567Z", "command_line": "pwsh -Command ReadToEnd -Start"}
+        py = {"pid": 11, "parent_pid": 12, "name": "python.exe", "path": r"C:\Python314\python.exe",
+              "create_utc": "2026-10-11T01:02:00.1234567Z", "command_line": "python -B -m tools.hetero_pool_sweep --matrix m --execute --adapter run41 --authorization a"}
+        launcher = {**py, "pid": 12, "parent_pid": 13, "path": r"E:\Strata-Hetero-data\venv\Scripts\python.exe"}
+        proof = {"schema": "strata-hetero-controller-chain-v1", "nonce": "a"*32,
+                 "created_utc": (now-dt.timedelta(seconds=1)).isoformat(),
+                 "expires_utc": (now+dt.timedelta(seconds=119)).isoformat(),
+                 "controller": controller, "python_controllers": [py, launcher]}
+        return proof, [controller, py, launcher], now
+
+    def test_exact_owned_coordinator_chain_allowed_but_other_python_blocked(self):
+        proof, live, now = self.controller_fixture()
+        allowed = verify_controller_chain(proof, live, 10, now)
+        raw = fixture(risky_windows_processes=live[1:],
+                      owned_controller_validation={"status": "pass", "verified_python_controllers": allowed})
+        self.assertTrue(evaluate(raw, 46000, 12)["gates"]["windows_processes"]["pass"])
+        raw["risky_windows_processes"].append({"pid": 88, "name": "python.exe", "path": r"C:\other\python.exe"})
+        self.assertFalse(evaluate(raw, 46000, 12)["gates"]["windows_processes"]["pass"])
+
+    def test_controller_pid_reuse_and_parent_changes_rejected(self):
+        proof, live, now = self.controller_fixture()
+        for field, value in (("create_utc", "2026-10-11T01:02:00.1234568Z"), ("parent_pid", 42),
+                             ("path", r"C:\other\python.exe"), ("command_line", "python model.py")):
+            changed = copy.deepcopy(live)
+            changed[1][field] = value
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                verify_controller_chain(proof, changed, 10, now)
+
+    def test_missing_expired_future_and_non_ancestor_proofs_rejected(self):
+        proof, live, now = self.controller_fixture()
+        with self.assertRaises(ValueError): verify_controller_chain(proof, live[:-1], 10, now)
+        with self.assertRaises(ValueError): verify_controller_chain(proof, live, 44, now)
+        with self.assertRaises(ValueError): verify_controller_chain(proof, live, 10, now+dt.timedelta(seconds=121))
+        with self.assertRaises(ValueError): verify_controller_chain(proof, live, 10, now-dt.timedelta(seconds=2))
+
+    def test_owned_coordinator_never_exempted_from_gpu_process_gate(self):
+        proof, live, now = self.controller_fixture()
+        allowed = verify_controller_chain(proof, live, 10, now)
+        raw = fixture(risky_windows_processes=live[1:],
+                      owned_controller_validation={"status": "pass", "verified_python_controllers": allowed})
+        raw["nvidia"]["processes"] = [live[1]]
+        result = evaluate(raw, 46000, 12)
+        self.assertTrue(result["gates"]["windows_processes"]["pass"])
+        self.assertFalse(result["gates"]["gpu_processes"]["pass"])
+
+    def test_raw_risky_identity_must_still_match_proof(self):
+        proof, live, now = self.controller_fixture()
+        allowed = verify_controller_chain(proof, live, 10, now)
+        risky = copy.deepcopy(live[1:])
+        risky[0]["create_utc"] = "2026-10-11T01:02:00.9999999Z"
+        raw = fixture(risky_windows_processes=risky,
+                      owned_controller_validation={"status": "pass", "verified_python_controllers": allowed})
+        self.assertFalse(evaluate(raw, 46000, 12)["gates"]["windows_processes"]["pass"])
+
     def test_zero_gpu_utilization_with_persistent_strata_process_is_blocked(self):
         raw = fixture(nvidia={"gpus": [{"name": "RTX 4090 D", "vram_free_mib": 48000,
                                         "utilization_percent": 0}], "processes": [

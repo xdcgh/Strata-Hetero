@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "outer_controller_failed_preserve_owner_evidence",
+  "utc": "2026-10-09T14:06:02.9677471Z",
+  "error_type": "RuntimeException",
+  "error": "Method invocation failed because [System.Management.Automation.Language.CodeGeneration] does not contain a method named 'QuoteArgument'.",
+  "runner_pid": 23140,
+  "process_receipt": null,
+  "evidence_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\receipts\\run47-coordinator-execution-01",
+  "do_not_retry": true,
+  "do_not_kill_by_pid": true
+}

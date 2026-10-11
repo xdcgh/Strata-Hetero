@@ -10,6 +10,7 @@ import datetime as dt
 import hashlib
 import json
 import math
+import ntpath
 import os
 from pathlib import Path
 import re
@@ -25,7 +26,7 @@ EXPECTED_ARMS = {
 ARM_EXECUTION_ORDER = ("w10-all", "w04-all", "w06-all", "w16-all", "w06-auto")
 EXPECTED_QUALITY_PROMPT_IDS = ("smoke_arithmetic", "smoke_unicode", "smoke_json_arithmetic", "smoke_python_function",
                               "smoke_three_key_retrieval", "long_1k", "long_4k", "long_16k", "long_30k7")
-RUN_ID_RE = re.compile(r"^20261009-47-(?:w10-all|w04-all|w06-all|w16-all|w06-auto)-(?:quality-on|performance-off)$")
+RUN_ID_RE = re.compile(r"^(?:20261009-47|20261011-51)-(?:w10-all|w04-all|w06-all|w16-all|w06-auto)-(?:quality-on|performance-off)$")
 RUN41_REL = Path("bench/hetero/20261009-41-hetero41-direct-quality")
 RUN41_TEMPLATES = {
     "launch": (RUN41_REL / "launch-owned.ps1", "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679"),
@@ -461,6 +462,11 @@ def build_plan(matrix_path: Path) -> dict[str, Any]:
                                    ("provenance.json", row["provenance_sha256"])):
                 if sha256_file(leaf / name) != expected:
                     raise SweepError(f"prepared {name} hash mismatch in {run_id}")
+            fresh_identity = leaf / "fresh-identities.json"
+            if not fresh_identity.is_file():
+                raise SweepError(f"prepared runtime file identities missing in {run_id}")
+            if row.get("fresh_identities_sha256") is not None and sha256_file(fresh_identity) != row["fresh_identities_sha256"]:
+                raise SweepError(f"prepared runtime file identities changed in {run_id}")
             plan_steps.append({
                 "run_id": run_id,
                 "arm": arm["arm"],
@@ -523,6 +529,8 @@ def validate_root_authorization(matrix_path: Path, authorization_path: Path) -> 
     expected_templates = template_source_hashes(repo)
     if authorization.get("template_sha256s") != expected_templates:
         raise SweepError("authorization does not bind the reviewed run41 template/JSONL-reader sources")
+    if authorization.get("gate_source_sha256s") != gate_source_hashes(repo):
+        raise SweepError("authorization does not bind admission/resource observer sources")
     authorization["_resolved_output_root"] = str(resolved_output)
     return authorization
 
@@ -561,6 +569,10 @@ def execute_controlled_coordinator(plan: dict[str, Any], authorization: dict[str
 
 def template_source_hashes(repo: Path) -> dict[str, str]:
     return {name: sha256_file(repo / rel) for name, (rel, _) in RUN41_TEMPLATES.items()}
+
+
+def gate_source_hashes(repo: Path) -> dict[str, str]:
+    return {name: sha256_file(repo / "tools" / name) for name in ("hetero_admission.py", "hetero_resources.py")}
 
 
 def enrich_performance_scenarios(scenarios: list[dict[str, Any]], manifest_path: Path) -> list[dict[str, Any]]:
@@ -605,6 +617,10 @@ def render_run41_template(template_name: str, step: dict[str, Any], repo: Path) 
         old = "$run = Join-Path $repo 'bench\\hetero\\" + run_id + "'"
         if rendered.count(old) != 1: raise SweepError("run41 launch run-directory anchor not unique")
         rendered = rendered.replace(old, "$run = '" + str(run_dir) + "'")
+        old_admission = "--required-vram-mib 46000 --minimum-ram-gib 12 --check-wsl-current"
+        if rendered.count(old_admission) != 1:
+            raise SweepError("run41 admission argument anchor not unique")
+        rendered = rendered.replace(old_admission, old_admission + " --owned-controller-proof $env:RUN47_CONTROLLER_PROOF")
     if template_name == "watch":
         old = "$runId='" + run_id + "'; $run=Join-Path $repo ('bench\\hetero\\'+$runId)"
         if rendered.count(old) != 1: raise SweepError("run41 watcher run-directory anchor not unique")
@@ -789,6 +805,41 @@ def _close_unfed_owned_process(proc: subprocess.Popen) -> None:
             proc.wait(timeout=5)
 
 
+def _admission_controller_proof(owner: dict[str, Any], nonce: str) -> dict[str, Any]:
+    """Snapshot only our actual Python process and its optional venv launcher."""
+    own_pid = os.getpid()
+    query = (f'$own=Get-CimInstance Win32_Process -Filter "ProcessId = {own_pid}";'
+             '$rows=@($own);$parent=Get-CimInstance Win32_Process -Filter "ProcessId = $($own.ParentProcessId)";'
+             r"if($parent -and $parent.ExecutablePath -eq 'E:\Strata-Hetero-data\venv\Scripts\python.exe'){$rows+=,$parent};"
+             "$rows|ForEach-Object{[ordered]@{pid=[int]$_.ProcessId;parent_pid=[int]$_.ParentProcessId;"
+             "name=$_.Name;path=$_.ExecutablePath;create_utc=$_.CreationDate.ToUniversalTime().ToString('o');"
+             "command_line=$_.CommandLine}}|ConvertTo-Json -Compress")
+    completed = subprocess.run([str(PWsh7), "-NoLogo", "-NoProfile", "-NonInteractive", "-Command", query],
+                               cwd=str(Path(__file__).resolve().parents[1]), capture_output=True,
+                               shell=False, check=False, timeout=10,
+                               creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+    if completed.returncode:
+        raise SweepError("coordinator ancestry snapshot failed before launch script input")
+    rows = json.loads(completed.stdout.decode("utf-8", "strict"))
+    if isinstance(rows, dict): rows = [rows]
+    if not rows or rows[0].get("pid") != own_pid or owner.get("parent_pid") != own_pid:
+        raise SweepError("owned launch controller is not this coordinator's child")
+    allowed_paths = (r"C:\Python314\python.exe", r"E:\Strata-Hetero-data\venv\Scripts\python.exe")
+    for index, row in enumerate(rows):
+        if (index > 1 or str(row.get("path", "")).casefold() != allowed_paths[index].casefold()
+                or " -m tools.hetero_pool_sweep " not in str(row.get("command_line", ""))):
+            raise SweepError("only the exact Python module coordinator ancestry may be admitted")
+        validate_create_time(row.get("create_utc"))
+    now = dt.datetime.now(dt.timezone.utc)
+    return {"schema": "strata-hetero-controller-chain-v1", "nonce": nonce,
+            "created_utc": now.isoformat(), "expires_utc": (now + dt.timedelta(seconds=120)).isoformat(),
+            "source": {"path": str(Path(__file__).resolve()), "sha256": sha256_file(Path(__file__).resolve())},
+            "controller": {"pid": owner["pid"], "parent_pid": owner["parent_pid"],
+                           "name": ntpath.basename(owner["exe"]), "path": owner["exe"],
+                           "create_utc": owner["create_utc"], "command_line": owner["command_line"]},
+            "python_controllers": rows}
+
+
 def _invoke_pwsh_text(script_text: str, action: str, *, env: dict[str, str], cwd: Path,
                       on_started: Callable[[dict[str, Any], subprocess.Popen], None],
                       timeout_seconds: float = 3600) -> tuple[int, bytes, bytes, dict[str, Any]]:
@@ -861,13 +912,22 @@ class Run41LifecycleAdapter:
 
     def _call(self, step: dict[str, Any], template: str, action: str, controller_dir: Path,
               *, launcher_pid: int | None = None, sampler_pid: int | None = None,
-              scenarios: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+              scenarios: list[dict[str, Any]] | None = None, admission_only: bool = False) -> dict[str, Any]:
         script_text = render_performance_controller(step, self.repo) if action == "performance" else render_run41_template(template, step, self.repo)
+        if admission_only:
+            if template != "launch" or action != "launch": raise SweepError("admission probe must use the launch gate")
+            marker = "# Recheck the original F file IDs after WSL shutdown and admission, immediately before creating the server."
+            anchor = "$admissionPath = Join-Path $run 'admission.json'"
+            if script_text.count(marker) != 1 or script_text.count(anchor) != 1:
+                raise SweepError("admission probe boundary changed")
+            script_text = script_text[:script_text.index(marker)].replace(anchor, "$admissionPath = '" + str(controller_dir / "admission.json") + "'")
+            script_text += "\n$response.status='controller_admission_probe_pass';$response.start_performed=$false;$response.admission_pass=$true;$response|ConvertTo-Json -Depth 8 -Compress;exit 0\n"
         stamp = {"action": action, "run_id": step["run_id"], "template": template,
                  "rendered_script_sha256": sha256_bytes(script_text.encode("utf-8")),
                  "template_source_sha256": sha256_file(self.repo / RUN41_TEMPLATES[template][0]),
                  "adapter_sha256": sha256_file(Path(__file__).resolve()),
                  "matrix_sha256": sha256_file(self.matrix_path), "authorization_nonce": self.authorization["nonce"],
+                 "gate_source_sha256s": gate_source_hashes(self.repo), "admission_only": admission_only,
                  "created_utc": dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
                  "argv": [str(PWsh7), "-NoLogo", "-NoProfile", "-NonInteractive", "-Command", "<stdin-scriptblock>"],
                  "argv_windows": serialize_windows_argv([str(PWsh7), "-NoLogo", "-NoProfile", "-NonInteractive", "-Command", "<stdin-scriptblock>"])}
@@ -875,11 +935,16 @@ class Run41LifecycleAdapter:
         env = os.environ.copy()
         env["RUN47_LAUNCHER_PID"] = str(launcher_pid or 0)
         env["RUN47_SAMPLER_PID"] = str(sampler_pid or 0)
+        controller_proof_path = controller_dir / "launch-controller-proof.json"
+        if action == "launch": env["RUN47_CONTROLLER_PROOF"] = str(controller_proof_path)
         if scenarios is not None:
             env["RUN47_PERF_SCENARIOS_JSON"] = json.dumps(scenarios, separators=(",", ":"))
         process_receipt_path = controller_dir / f"{action}-process.json"
 
         def on_started(owner: dict[str, Any], proc: subprocess.Popen) -> None:
+            if action == "launch":
+                proof = _admission_controller_proof(owner, self.authorization["nonce"])
+                _save_exclusive(controller_proof_path, (json.dumps(proof, indent=2) + "\n").encode("utf-8"))
             process_receipt = {"schema_version": 1, "run_id": step["run_id"], "action": action,
                                "status": "owned_controller_started_before_script_input", "owner": owner,
                                "rendered_script_sha256": stamp["rendered_script_sha256"],
@@ -926,7 +991,26 @@ class Run41LifecycleAdapter:
         result["json"] = _last_json_object(stdout)
         return result
 
+    def probe_admission(self, step: dict[str, Any]) -> dict[str, Any]:
+        """Run the same fresh launch gates, stopping before any model Popen."""
+        probe_id = self.authorization.get("admission_probe_id", "controller-admission-probe-01")
+        if not isinstance(probe_id, str) or re.fullmatch(r"controller-admission-probe-[0-9]{2}", probe_id) is None:
+            raise SweepError("invalid authorized admission probe ID")
+        folder = self.matrix_path.parent / "receipts" / probe_id
+        folder.mkdir(parents=True, exist_ok=False)
+        self.execution_state.update({"stage": "admission_probe", "run_id": step["run_id"],
+                                     "run_dir": str(Path(step["config"]).parent), "controller_dir": str(folder)})
+        result = self._call(step, "launch", "launch", folder, admission_only=True)
+        value = result["json"]
+        if value.get("status") != "controller_admission_probe_pass" or value.get("start_performed") is not False:
+            raise SweepError("admission-only result did not prove zero model launches")
+        self.execution_state["live_owner_state"] = "admission_probe_terminal_no_model_launched"
+        return {"status": "controller_admission_probe_pass", "model_launches": 0, "model_requests": 0,
+                "evidence_dir": str(folder), "result": value}
+
     def run_phase(self, step: dict[str, Any]) -> dict[str, Any]:
+        if gate_source_hashes(self.repo) != self.authorization.get("gate_source_sha256s"):
+            raise SweepError("admission/resource observer source changed since authorization")
         if self.live_result is not None:
             raise SweepError("previous successful phase must be exactly cleaned before next launch")
         config_path = Path(step["config"]).resolve(strict=True)
@@ -1089,6 +1173,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--matrix", required=True)
     parser.add_argument("--execute", action="store_true")
+    parser.add_argument("--admission-only", action="store_true", help="verify owned coordinator admission without starting a model")
     parser.add_argument("--authorization")
     parser.add_argument("--adapter", choices=("run41",), help="explicit reviewed shared lifecycle adapter")
     args = parser.parse_args(argv)
@@ -1102,6 +1187,9 @@ def main(argv: list[str] | None = None) -> int:
                 raise SweepError("execution requires explicit --adapter run41")
             authorization = validate_root_authorization(Path(args.matrix), Path(args.authorization))
             adapter = Run41LifecycleAdapter(Path(args.matrix), authorization)
+            if args.admission_only:
+                print(json.dumps(adapter.probe_admission(plan["steps"][0]), indent=2, ensure_ascii=False))
+                return 0
             results = execute_controlled_coordinator(plan, authorization, adapter)
             print(json.dumps({"status": "matrix_phases_complete_last_service_left_for_root_review",
                               "phase_count": len(results), "results": results}, indent=2, ensure_ascii=False))

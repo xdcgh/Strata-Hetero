@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "run_id": "20261011-51-w10-all-quality-on",
+  "action": "watch",
+  "template": "watch",
+  "invocation_mode": "default parameters only; no Start, Monitor, Run, CheckReady, or Execute switch",
+  "script_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\run51-dry-validation-03\\20261011-51-w10-all-quality-on\\watch.ps1.txt",
+  "script_sha256": "944226db78b81d5cd39a28c27c71a27192a8134b827acfc6af4f8bb3b7e2745f",
+  "template_source_sha256": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+  "exit_code": 0,
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\run51-dry-validation-03\\20261011-51-w10-all-quality-on\\watch.stdout.bin",
+  "stdout_sha256": "bc9e3948e1116f98def37b5e911cb2b02256a95f1a0fbc6388a22ff4d130e801",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\run51-dry-validation-03\\20261011-51-w10-all-quality-on\\watch.stderr.bin",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "owner_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\receipts\\run51-dry-validation-03\\20261011-51-w10-all-quality-on\\watch.owner.json",
+  "owner_pid": 16780,
+  "admission_proof_created": false,
+  "parsed_default_response": {
+    "status": "startup_watch_prepared",
+    "monitor_started": false,
+    "run_id": "20261011-51-w10-all-quality-on",
+    "physical_floor_gib": 12,
+    "commit_floor_gib": 4,
+    "sampling_interval_s": 1,
+    "exact_process_tree_check": true,
+    "on_gate_failure": "stop only exact revalidated owned model tree; preserve read-only sampler"
+  },
+  "error": null
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "stopped_pre_validation_after_metadata_copy",
+  "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\supplement_run51_fresh_identities.py",
+  "source_sha256": "67f91da50f5df66f5c75bc092b4980eeaf65a88fc8efc0549d3abb22b2991f7b",
+  "exit_code": 1,
+  "error": "preparation source expected controller dirs to exist; root had safely preserved them as empty precreated-controller dirs",
+  "default_validations_run": 0,
+  "process_identities_captured": 0,
+  "admission_or_model_start": false,
+  "run47_modified": false,
+  "fresh_identity_targets_written": 10
+}

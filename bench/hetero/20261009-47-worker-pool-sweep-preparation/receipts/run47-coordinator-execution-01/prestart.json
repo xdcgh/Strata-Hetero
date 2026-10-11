@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "fresh_no_listener_no_engine_no_compiler",
+  "checked_utc": "2026-10-09T14:06:02.7537186Z",
+  "listener_ports": [
+    8080,
+    8081,
+    8188
+  ],
+  "listener_count": 0,
+  "active_owned_name_count": 0,
+  "all_runtime_evidence_paths_empty": true,
+  "fresh_ram_commit_vram_admission": "performed independently by pinned launch controller before each load",
+  "model_launches_before_this_receipt": 0
+}

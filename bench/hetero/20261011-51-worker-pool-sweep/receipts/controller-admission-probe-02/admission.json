@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-11T00:46:28.593355+00:00",
+  "observer_only": true,
+  "is_model_test": false,
+  "raw": {
+    "observed_at_utc": "2026-10-11T00:46:28.593355+00:00",
+    "errors": [],
+    "windows_memory": {
+      "total_bytes": 136963248128,
+      "available_bytes": 120320962560,
+      "commit_limit_bytes": 145553182720,
+      "available_commit_bytes": 128326479872,
+      "source": "GlobalMemoryStatusEx physical RAM; PSAPI GetPerformanceInfo system commit"
+    },
+    "risky_windows_processes": [
+      {
+        "pid": 23332,
+        "parent_pid": 22268,
+        "name": "python.exe",
+        "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "create_utc": "2026-10-11T00:46:22.3399320Z"
+      },
+      {
+        "pid": 15136,
+        "parent_pid": 23332,
+        "name": "python.exe",
+        "path": "C:\\Python314\\python.exe",
+        "create_utc": "2026-10-11T00:46:22.3472780Z"
+      }
+    ],
+    "owned_controller_validation": {
+      "status": "pass",
+      "proof_sha256": "7da9c8b68cfbcc120684c493ab30c7d7f34a6886b93d7ceccc652e6588cff892",
+      "verified_python_controllers": [
+        {
+          "pid": 15136,
+          "parent_pid": 23332,
+          "name": "python.exe",
+          "path": "C:\\Python314\\python.exe",
+          "create_utc": "2026-10-11T00:46:22.3472780Z",
+          "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-05.json --execute --adapter run41 --authorization bench/hetero/20261011-51-worker-pool-sweep/root-authorization-02.json --admission-only"
+        },
+        {
+          "pid": 23332,
+          "parent_pid": 22268,
+          "name": "python.exe",
+          "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+          "create_utc": "2026-10-11T00:46:22.3399320Z",
+          "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-05.json --execute --adapter run41 --authorization bench/hetero/20261011-51-worker-pool-sweep/root-authorization-02.json --admission-only"
+        }
+      ],
+      "launch_controller": {
+        "pid": 6412,
+        "parent_pid": 15136,
+        "name": "pwsh.exe",
+        "path": "%USERPROFILE%\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "create_utc": "2026-10-11T00:46:22.5019360Z",
+        "command_line": "%USERPROFILE%\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\""
+      }
+    },
+    "nvidia": {
+      "gpus": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "vram_total_mib": 49140,
+          "vram_free_mib": 48393,
+          "vram_used_mib": 236,
+          "utilization_percent": 0.0,
+          "driver_version": "610.88"
+        }
+      ],
+      "compute_pids": [
+        2300,
+        2380
+      ],
+      "process_telemetry_unknown": false,
+      "raw_gpu_csv": "NVIDIA GeForce RTX 4090 D, 49140, 48393, 236, 0, 610.88\n",
+      "raw_process_csv": "2380\n2300\n",
+      "processes": [
+        {
+          "pid": 2300,
+          "name": "LogonUI.exe",
+          "path": null
+        },
+        {
+          "pid": 2380,
+          "name": "dwm.exe",
+          "path": null
+        }
+      ],
+      "telemetry_error": null
+    },
+    "wsl": {
+      "available": true,
+      "running_list_raw": [],
+      "running_distros": []
+    }
+  },
+  "chosen_gates": {
+    "required_vram_mib": 46000,
+    "minimum_available_ram_gib": 12.0,
+    "check_wsl_current": true,
+    "ram": {
+      "pass": true,
+      "available_gib": 112.058,
+      "reason": null
+    },
+    "system_commit": {
+      "pass": true,
+      "minimum_gib": 4,
+      "available_bytes": 128326479872,
+      "reason": null
+    },
+    "vram": {
+      "pass": true,
+      "selected_gpu": "NVIDIA GeForce RTX 4090 D",
+      "available_mib": 48393,
+      "reason": null
+    },
+    "gpu_processes": {
+      "pass": true,
+      "blocked": [],
+      "reason": null
+    },
+    "windows_processes": {
+      "pass": true,
+      "found": [],
+      "exact_owned_controllers": [
+        {
+          "pid": 15136,
+          "parent_pid": 23332,
+          "name": "python.exe",
+          "path": "C:\\Python314\\python.exe",
+          "create_utc": "2026-10-11T00:46:22.3472780Z",
+          "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-05.json --execute --adapter run41 --authorization bench/hetero/20261011-51-worker-pool-sweep/root-authorization-02.json --admission-only"
+        },
+        {
+          "pid": 23332,
+          "parent_pid": 22268,
+          "name": "python.exe",
+          "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+          "create_utc": "2026-10-11T00:46:22.3399320Z",
+          "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-05.json --execute --adapter run41 --authorization bench/hetero/20261011-51-worker-pool-sweep/root-authorization-02.json --admission-only"
+        }
+      ],
+      "reason": null
+    },
+    "wsl": {
+      "pass": true,
+      "blocked": [],
+      "reason": null
+    }
+  },
+  "status": "pass",
+  "pass": true,
+  "reasons": []
+}

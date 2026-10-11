@@ -1,0 +1,28 @@
+{
+  "status": "root_reviewed_authorized",
+  "utc": "2026-10-11T00:37:40.172925+00:00",
+  "matrix_sha256": "dce95ce74eca894a5378789df7848bb2591a22a82cd98858d559122e1ecf58db",
+  "adapter_sha256": "4e836ec53c7bf885981c26ba7296d5ef79f8f9c972b8fd3f9ea431c49d8af2be",
+  "template_sha256s": {
+    "launch": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+    "watch": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+    "quality": "dcb68b86b81c0d2a7db92cc0ec7343d72123c8b48e2a2f76d6a383b32932a078",
+    "cleanup": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+    "jsonl_reader": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d"
+  },
+  "gate_source_sha256s": {
+    "hetero_admission.py": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e",
+    "hetero_resources.py": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+  },
+  "nonce": "c48b9db67df647a2b9c86938b2c304fb",
+  "arms": [
+    "w10-all",
+    "w04-all",
+    "w06-all",
+    "w16-all",
+    "w06-auto"
+  ],
+  "output_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep",
+  "review_sha256": "2955c77db01bba41806a398b73080ec13891cc2d93f9ccb67f475d774d07c7f4",
+  "scope": "one zero-model admission probe, then one serial ten-phase matrix; stop first; no unreasoned retries"
+}

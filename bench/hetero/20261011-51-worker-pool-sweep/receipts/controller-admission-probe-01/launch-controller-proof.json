@@ -1,0 +1,36 @@
+{
+  "schema": "strata-hetero-controller-chain-v1",
+  "nonce": "c48b9db67df647a2b9c86938b2c304fb",
+  "created_utc": "2026-10-11T00:37:42.183659+00:00",
+  "expires_utc": "2026-10-11T00:39:42.183659+00:00",
+  "source": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_pool_sweep.py",
+    "sha256": "4e836ec53c7bf885981c26ba7296d5ef79f8f9c972b8fd3f9ea431c49d8af2be"
+  },
+  "controller": {
+    "pid": 17336,
+    "parent_pid": 7104,
+    "name": "pwsh.exe",
+    "path": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T00:37:40.3269110Z",
+    "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\""
+  },
+  "python_controllers": [
+    {
+      "pid": 7104,
+      "parent_pid": 6016,
+      "name": "python.exe",
+      "path": "C:\\Python314\\python.exe",
+      "create_utc": "2026-10-11T00:37:40.2072220Z",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-04.json --execute --adapter run41 --authorization bench/hetero/20261011-51-worker-pool-sweep/root-authorization.json --admission-only"
+    },
+    {
+      "pid": 6016,
+      "parent_pid": 18112,
+      "name": "python.exe",
+      "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "create_utc": "2026-10-11T00:37:40.2017510Z",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-04.json --execute --adapter run41 --authorization bench/hetero/20261011-51-worker-pool-sweep/root-authorization.json --admission-only"
+    }
+  ]
+}

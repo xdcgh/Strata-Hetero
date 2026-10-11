@@ -1,0 +1,20 @@
+{
+  "action": "launch",
+  "run_id": "20261009-47-w10-all-quality-on",
+  "template": "launch",
+  "rendered_script_sha256": "8fcf1ccc0ab4802eba37a72d70545896adb1453392df5153b1d1c5c4913bfd7c",
+  "template_source_sha256": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+  "adapter_sha256": "61023ca8e32e331d3ccb0378e65f39d6790285104ea31de4f2bf7000faab8fb3",
+  "matrix_sha256": "301bb2c976b1e7accf06709778a4af1298e8587a63bff977b482239551961038",
+  "authorization_nonce": "c03af91d8c244444abe606325dfb3ac8",
+  "created_utc": "2026-10-09T14:06:02.890721Z",
+  "argv": [
+    "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "-NoLogo",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "<stdin-scriptblock>"
+  ],
+  "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command <stdin-scriptblock>"
+}

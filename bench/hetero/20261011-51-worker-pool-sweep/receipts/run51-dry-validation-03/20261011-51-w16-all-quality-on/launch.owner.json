@@ -1,0 +1,28 @@
+{
+  "status": "normal_controller_process_identity_captured",
+  "purpose": "default rendered script validation only",
+  "action": "launch",
+  "template": "launch",
+  "run_id": "20261011-51-w16-all-quality-on",
+  "owner": {
+    "pid": 5824,
+    "parent_pid": 10484,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T00:43:04.3614930Z",
+    "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block \"",
+    "argv": [
+      "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block "
+    ],
+    "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block \"",
+    "controller_streams": "stdout/stderr pipes captured before script input; exclusive evidence paths supplied by caller"
+  },
+  "started_pid": 5824,
+  "admission_proof_created": false,
+  "model_start_switch_passed": false,
+  "monitor_or_run_switch_passed": false
+}

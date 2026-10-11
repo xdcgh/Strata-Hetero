@@ -1,0 +1,23 @@
+{
+  "status": "root_reviewed_full_dry_validation",
+  "utc": "2026-10-11T00:45:17.654555+00:00",
+  "source_hashes": {
+    "hetero_pool_sweep.py": "ca57a9c206beb8c8949367fca093f55f07a9f52122b032f15287846cb8d85df3",
+    "hetero_admission.py": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e",
+    "hetero_resources.py": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+  },
+  "matrix_sha256": "971c55ef00feb4184a4a2bbe6fc9859b1385c794ae18f9a7f930590b34b42024",
+  "dry_functions_passed": 30,
+  "host_tests": {
+    "admission": 18,
+    "pool_sweep": 30,
+    "failures_final": 0
+  },
+  "supplement_receipt_sha256": "b069a8695563f831c5ce29a94267e8415d37e2653b37298289e6a00157cfea17",
+  "fresh_identities_sha256": "a64cb90f8d7302980453d9cf97bef50d63ae2f48d5813b6c2a042a27d99e2568",
+  "previous_probe": "stopped at missing prepared file before WSL/admission/model; preserved",
+  "scope": "one admission-only probe after corrected metadata, then one serial ten-phase sweep; stop first",
+  "model_binary": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+  "model_source": "ffeb748d190ddeedff23587ce848596d4db0c752",
+  "new_worker_telemetry_in_model_binary": false
+}

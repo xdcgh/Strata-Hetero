@@ -1,0 +1,24 @@
+{
+  "action": "launch",
+  "exit_code": 1,
+  "controller_pid": 17336,
+  "owner": {
+    "pid": 17336,
+    "parent_pid": 7104,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T00:37:40.3269110Z",
+    "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\"",
+    "argv": [
+      "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start"
+    ],
+    "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\"",
+    "controller_streams": "stdout/stderr pipes captured before script input; exclusive evidence paths supplied by caller"
+  },
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "2339c4cc6d47d17125b08b724cf52ac43a6584293edbd48095d6d485788c7e33"
+}

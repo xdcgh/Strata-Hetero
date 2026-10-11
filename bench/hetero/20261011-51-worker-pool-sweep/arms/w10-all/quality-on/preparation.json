@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-51-w10-all-quality-on",
+  "status": "prepared_not_launched",
+  "config_sha256": "7cf5649a5b22f61f73ea1f5643dde9a99be635ac36ac2d001c6641bf039930d6",
+  "identity_sha256": "21a28b06d8d9208d32e459b128aac8d184a8bdcbe0578374c61b5de8f9544991",
+  "provenance_sha256": "bf8be8197a8876b1abca171dc4b9eb15fa1fcc88c936f0a23fcbf8604c93d0f7",
+  "fresh_identities_sha256": null,
+  "fresh_identities_status": "NOT_CAPTURED; require fresh launch admission and file identities",
+  "source_run47_fresh_identities_sha256": "a64cb90f8d7302980453d9cf97bef50d63ae2f48d5813b6c2a042a27d99e2568",
+  "worker_count": 10,
+  "affinity": "all",
+  "token_capture": true,
+  "normalized_config_sha256": "51fcfdbf3030d4a0ffb5c892275609d34bddd06f0df47704c3a0d4781fcaf89c",
+  "quality_prompt_manifest_sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
+  "tokenizer_implementation_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+  "source_run47_phase": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on",
+    "config_sha256": "3e486fd2c75770125de9c770a54a3c6be2ac40632437128bb8ce20fdeb6ce7c0",
+    "identity_sha256": "f8252b4243e8e7a304051f8a6602bfafe1cf6be21d35bae0887ee500a0603f78",
+    "provenance_sha256": "0e7417464e556f00cba4d5767548e9a8e9cf0bbc503898c2cff091c8594f36b9",
+    "preparation_sha256": "c3b589dbf203981f02c2477a582d983530092e5bef4895afdc3e44ecb8e33c33",
+    "fresh_identities_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-47-worker-pool-sweep-preparation\\arms\\w10-all\\quality-on\\fresh-identities.json"
+  }
+}

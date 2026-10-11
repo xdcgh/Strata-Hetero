@@ -1,0 +1,27 @@
+Write a comprehensive technical design proposal for a fictional observability platform that ingests application events from many services and produces reliable dashboards. Aim for a long, detailed answer of roughly 1,500 tokens. Do not stop after an introduction or a summary. Continue through every numbered section, use concrete examples, and explain trade-offs and failure behavior in full sentences. Do not claim that you ran code or inspected any real system.
+
+1. Begin with the goals and non-goals of the event pipeline. Explain the difference between receiving an event, validating it, durably accepting it, and making it visible to a query. State the latency and loss guarantees you would promise, and identify which guarantees depend on the storage system.
+
+2. Describe the event envelope. Cover a stable event identifier, tenant and service identifiers, schema version, event time, receive time, trace context, severity, and a typed payload. Explain how to handle optional fields, unknown fields, malformed timestamps, and schema evolution without silently changing the meaning of old events.
+
+3. Explain ingress and admission control. Describe authentication, tenant quotas, request size limits, bounded queues, back-pressure, load shedding, and how clients should retry after a temporary failure. Explain why retries need idempotency and how the server distinguishes a repeated delivery from a new event.
+
+4. Design the durable write path. Compare append-only logs with a relational or key-value index, explain write-ahead logging and batch commits, and show how an acknowledgement relates to persistence. Discuss what happens if a process crashes between storing an event and updating a secondary index.
+
+5. Explain ordering and partitioning. Describe partition keys, per-key order, cross-partition ordering limits, sequence numbers, clock skew, late arrivals, and duplicate delivery. Give one example where strict global ordering would cost more than it is worth.
+
+6. Describe schema validation and normalization. Explain how to validate types and units, normalize service names, preserve the original payload for audit, reject non-finite numeric values, and prevent one malformed event from blocking an entire batch. Distinguish validation errors from transient infrastructure failures.
+
+7. Explain the worker model. Describe a bounded worker pool, queue ownership, cancellation, timeouts, graceful shutdown, and the difference between background workers and a caller that participates in draining work. Explain how worker count and CPU affinity can affect latency without changing event semantics.
+
+8. Design replay and recovery. Explain how an operator would replay a bounded interval after a consumer bug, how replay avoids double counting, how checkpoints are committed, and what evidence should be retained for an interrupted replay. Include a safe stop condition and explain why a replay should not silently skip corrupt records.
+
+9. Describe retention, compaction, and privacy. Cover time-based retention, tenant deletion requests, encryption at rest, least-privilege access, redaction in diagnostics, and the difference between deleting an index row and deleting the underlying event data. Explain how backups affect deletion guarantees.
+
+10. Design observability for the pipeline itself. Specify counters, histograms, queue depth, oldest-event age, write latency, retry counts, dropped-event counts, and per-tenant saturation indicators. Explain how to avoid high-cardinality metric labels and how operators should diagnose a rising queue without increasing load further.
+
+11. Explain consistency for dashboards and queries. Describe how a dashboard communicates freshness, how a query handles an event that arrives late, how cached results are invalidated, and why an accepted write may not be immediately visible in every index. Give a clear example of an eventually consistent result.
+
+12. Describe a staged rollout and rollback plan. Include shadow validation, a small tenant canary, schema compatibility checks, rate limits, monitoring thresholds, rollback triggers, and how to preserve queued events if a consumer version is rolled back. Distinguish rollback of code from rollback of persisted data.
+
+13. Finish with a compact failure matrix in prose: process crash, storage timeout, full queue, malformed event, duplicate retry, clock skew, and a tenant quota breach. For each case state the observable symptom, safe behavior, and recovery action. Then conclude with the two design trade-offs you would measure first in a prototype.
