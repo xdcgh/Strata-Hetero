@@ -1,0 +1,15 @@
+{
+  "schema": "strata-native-ipc-compare-root-authorization-v1",
+  "run_id": "native-cpu-arc-ipc-compare-20261011-53",
+  "execution_authorized": true,
+  "model_matrix_stopped": true,
+  "root_review_complete": true,
+  "client_sha256": "82d93ac18cf70acd23f8850089b18b260f9ae18cd8422c89ddee619ca7e7fc44",
+  "contract_sha256": "ccb9f1ff3a746688ab7c2f4a8d88709258b841cec53a22fd96ad54c479645e8c",
+  "source_freeze_sha256": "13317bdf3f5df8f8169224c3dfc5d4f54d2863c8e969bffc4d0ad55049ef9b75",
+  "cpu16_none_authorized": true,
+  "utc": "2026-10-11T01:34:20.217816+00:00",
+  "admission_sha256": "a2f58d04297cc96061384f86bfa9e7873aa385b7e383343103cb6941060bf296",
+  "scope": "one serial solo+joint nine-shape comparison; strict alltrialquality,12/4floors,stopfirst; no modelroute",
+  "pure_fixture_count": 10
+}
