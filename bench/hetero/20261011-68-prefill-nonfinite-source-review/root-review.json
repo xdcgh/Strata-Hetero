@@ -1,0 +1,10 @@
+{
+  "status": "root_readonly_source_review_accepted_runtime_cause_unresolved",
+  "report_md_sha256": "e9be3c488c5d66d4d47d5e697999bdd236537db03a01bd70790c10aeae2a878c",
+  "report_json_sha256": "be674200d6e7e3fd0f328df047a88885034fd1f7ecd1b22d7baee1ac52257521",
+  "sources": "upstream61b3andHetero8cfpinned; promptcorecommon",
+  "next_candidate": "Explicitdefaultoff samecomputestream finitescan preservingfirst chunk/layer/half/stage/index; readonceatexistingchunk boundary; noinventedglobal-sync-free-noeffectclaim",
+  "limitations": "Probe is unimplemented/unbuilt/unmeasured; extraGPUwork mayperturbormaskrace. DBG_NAN scansafterMoEandselectedfinalstate; priorpassesdonotidentifyfirstfaultyoperator. HIPf16GEMMdebugsyncisnotCUDApath.",
+  "no_model_quality_or_performance_acceptance": true,
+  "implementation_and_root_review_still_required": true
+}

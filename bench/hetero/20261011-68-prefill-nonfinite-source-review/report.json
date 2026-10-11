@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-68-prefill-nonfinite-source-review",
+  "status": "read_only_source_inventory_complete",
+  "created_date": "2026-10-11",
+  "scope": {
+    "source_only": true,
+    "model_or_payload_read": false,
+    "api_or_device_action": false,
+    "compile_or_test_action": false,
+    "source_edited": false,
+    "hypothesis_claimed_as_cause": false,
+    "max_concrete_entries": 10,
+    "entry_count": 9
+  },
+  "repositories": {
+    "upstream_v042": {
+      "path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+      "commit": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+      "tree": "7417abeee74c20912310306a2b1dc16f9ea7515b"
+    },
+    "hetero_v042": {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+      "commit": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+      "tree": "bb4e73468f85ccc85bb9c511980b4e51a8f1738c"
+    },
+    "hetero_v041": {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41",
+      "commit": "ffeb748d190ddeedff23587ce848596d4db0c752",
+      "tree": "ae84e7b6108e631926ef4316d7b671b42d08cf37"
+    },
+    "main_repo_at_review": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+      "commit": "8b91d1ae02a7da74bc546977fd805eff29094434"
+    }
+  },
+  "source_blob_pins": [
+    {
+      "revision": "upstream_v042_and_hetero_v042",
+      "path": "src/prefill/prefill.cpp",
+      "blob": "e36bb6884ad4e50f34ca12cb6141f63f704ace03",
+      "same_blob_in_both": true
+    },
+    {
+      "revision": "upstream_v042_and_hetero_v042",
+      "path": "src/prefill/gemm.cu",
+      "blob": "88ecb7933c5061ef7ae6bf2abb908a2c7703d200",
+      "same_blob_in_both": true
+    },
+    {
+      "revision": "upstream_v042",
+      "path": "src/program/generate.cpp",
+      "blob": "ff3f2e1a65939d4c1e7b80746179a55d780615b4"
+    },
+    {
+      "revision": "hetero_v042",
+      "path": "src/program/generate.cpp",
+      "blob": "e6d490c086e929bebd7a2639a9e8c8f1c473a124"
+    },
+    {
+      "revision": "upstream_v042",
+      "path": "src/core/verify.cpp",
+      "blob": "3e9ec069a5f706df76ab43ee87144ec3317d3362"
+    },
+    {
+      "revision": "hetero_v042",
+      "path": "src/core/verify.cpp",
+      "blob": "46a64aecfaf569ee1b0fc60a0f38488e13dd636d"
+    },
+    {
+      "revision": "hetero_v041",
+      "path": "src/prefill/prefill.cpp",
+      "blob": "4e03dc8b6117ee2d35e442cc2176fa50f00ece6b"
+    },
+    {
+      "revision": "hetero_v041",
+      "path": "src/prefill/gemm.cu",
+      "blob": "2c1db6de28127829d185aeac973f4172e794cfb9"
+    },
+    {
+      "revision": "hetero_v041",
+      "path": "src/core/verify.cpp",
+      "blob": "7277d5e30a9a92f26f2ff038f96059cfe357c8ef"
+    },
+    {
+      "revision": "hetero_v041",
+      "path": "src/program/generate.cpp",
+      "blob": "405620c45fb718e06f5f4e78985051be89d4a78f"
+    },
+    {
+      "revision": "hetero_v041",
+      "path": "src/core/session.cpp",
+      "blob": "d87452d0ce3792a9b88b6bf9aef8e09c44f6b006"
+    },
+    {
+      "revision": "hetero_v041",
+      "path": "src/core/mtp.cpp",
+      "blob": "e73ce24a09d7b931ac86720cbccb84f836f9fb64"
+    },
+    {
+      "revision": "hetero_v042",
+      "path": "src/core/session.cpp",
+      "blob": "8d1fad916af0c88fb5b477e2fc99a55a0d14d458"
+    },
+    {
+      "revision": "hetero_v042",
+      "path": "src/core/mtp.cpp",
+      "blob": "3ed034d7f0d9288f85c1986d4bf6c52213c8c748"
+    },
+    {
+      "revision": "hetero_v042",
+      "path": "include/strata/core/session.hpp",
+      "blob": "4d633205ea8387e4701d77fb71c75cc49ac0c60f"
+    }
+  ],
+  "entries": [
+    {
+      "id": 1,
+      "topic": "v042 source relationship",
+      "finding": "Hetero v0.1.42 descends from upstream v0.1.42. The selected prompt files prefill.cpp and gemm.cu are byte-identical across the two pinned trees. Within the focused source set, the Hetero-only v042 deltas are in verify.cpp and generate.cpp; verify.cpp adds the zero-logits diagnostic, while generate.cpp adds PLE RAM reserve handling and pool-affinity reporting.",
+      "anchors": [
+        "src/prefill/prefill.cpp blob e36bb6884ad4e50f34ca12cb6141f63f704ace03",
+        "src/prefill/gemm.cu blob 88ecb7933c5061ef7ae6bf2abb908a2c7703d200",
+        "src/core/verify.cpp upstream lines 2187-2234; Hetero lines 2188-2234",
+        "src/program/generate.cpp Hetero v042 diff adds PLE RAM reserve and affinity reporting"
+      ],
+      "interpretation": "The shared prompt source narrows a source-level comparison but does not establish that runtime paths or outcomes are identical."
+    },
+    {
+      "id": 2,
+      "topic": "ordinary prefill layer order",
+      "finding": "Prefill::run_impl gathers PLE rows ahead, lands them at layer 1, runs PLE before that layer's two halves, then executes half 0 (GDN or QSA attention) followed by half 1 (MoE/feed-forward); each half writes back to the residual. The head is outside run_impl, after prompt prefill in the token loop.",
+      "anchors": [
+        "src/prefill/prefill.cpp:1994-1999 run_impl",
+        "src/prefill/prefill.cpp:2059-2081, 2152-2187, 2431-2486 PLE gather/land/block",
+        "src/prefill/prefill.cpp:2487-2581 hyper-connection and GDN/QSA half 0",
+        "src/prefill/prefill.cpp:2582-2810 QSA path",
+        "src/prefill/prefill.cpp:3852, 3908-3938 MoE combine and residual writes",
+        "src/program/generate.cpp:12193 prompt call; 12310 onward token loop/head"
+      ],
+      "interpretation": "The diagnostic boundary after MoE is later than the attention/GDN half and PLE producer."
+    },
+    {
+      "id": 3,
+      "topic": "scratch lifetime and buffer reuse",
+      "finding": "The main attention and MoE scratch region is sized to the maximum of the respective layouts and intentionally shared because the operations are sequential. PLE batch post-ops also carve the region before those halves. A probe reading ephemeral scratch must be ordered before later reuse.",
+      "anchors": [
+        "src/prefill/prefill.cpp:803 region comment",
+        "src/prefill/prefill.cpp:905-908 attention/MoE shared-buffer contract",
+        "src/prefill/prefill.cpp:1185-1206 max-region allocation",
+        "src/prefill/prefill.cpp:2434-2457 PLE batch region carving"
+      ],
+      "interpretation": "Prefer completed outputs m.R or m.bo for a bounded scan; if checking shared scratch, check immediately after its producer."
+    },
+    {
+      "id": 4,
+      "topic": "STRATA_DBG_NAN prefill coverage",
+      "finding": "The per-layer prefill report runs after moe_combine, stream-synchronizes m.cs, then copies and scans GU/H/Dm/bo. It reports the first layer with a bad MoE result for a chunk. The prompt-end report scans the last residual row, PLE history, and only the first 65,536 GDN-state floats. Neither probe identifies the first bad GDN/QSA/PLE activation before MoE.",
+      "anchors": [
+        "src/prefill/prefill.cpp:3852-3882 after moe_combine",
+        "src/prefill/prefill.cpp:4028-4040 prompt-end residual/PLE/GDN scans",
+        "src/prefill/prefill.cpp:3794-3824 Hetero v041 counterpart"
+      ],
+      "interpretation": "The name 'first layer' means first reported MoE-bad layer in a chunk, not the first non-finite activation in the forward path."
+    },
+    {
+      "id": 5,
+      "topic": "diagnostic synchronization overhead",
+      "finding": "The normal Prefill::run_impl path contains stream/event waits and chunk-boundary stream synchronizations but no cudaDeviceSynchronize call. STRATA_DBG_NAN adds a compute-stream synchronization and blocking host scans after MoE, plus a prompt-end synchronization/reads. STRATA_PF_STEP_SYNC=1 waits on compute and copy streams after named steps. The f16_inplace STRATA_DBG_NAN counter in gemm.cu is inside a HIP-only compilation branch and calls hipStreamSynchronize per FP16-output GEMM; it is not the CUDA Run66 path.",
+      "anchors": [
+        "src/prefill/prefill.cpp:2412-2425 STRATA_PF_STEP_SYNC",
+        "src/prefill/prefill.cpp:3854-3860 MoE debug synchronization/readback",
+        "src/prefill/prefill.cpp:4046-4056 ordinary stream finalization",
+        "src/prefill/gemm.cu:51-67 HIP-only counter kernel; 798-812 per-GEMM hipStreamSynchronize"
+      ],
+      "interpretation": "Do not equate a pass with a synchronization-heavy debug mode to a fix; the mode can change scheduling/overhead and has limited scan coverage."
+    },
+    {
+      "id": 6,
+      "topic": "head/logit diagnostics",
+      "finding": "The ordinary generator's head/logit validation counts non-finite logits when logits are read; all-zero finite logits are not an error there. Hetero's STRATA_DIAG_ZERO_LOGITS hook is in Verifier::run: after sampling and the compute-stream synchronization, if a sampled ID is zero it reads logits and reports finite/NaN/Inf/zero counts, finite argmax, range, id0, and id19. It is an output-stage probe, not a prefill activation probe.",
+      "anchors": [
+        "src/program/generate.cpp:12310-12346 run_head, read_logits, and non-finite count",
+        "src/core/verify.cpp Hetero v042:2174-2234 STRATA_DBG_NAN and STRATA_DIAG_ZERO_LOGITS",
+        "src/core/verify.cpp upstream v042 ends the corresponding block before the Hetero diagnostic addition"
+      ],
+      "interpretation": "It can characterize a bad head row but cannot say which earlier producer first made it bad."
+    },
+    {
+      "id": 7,
+      "topic": "cache loan, session state, and MTP",
+      "finding": "The generator plans a prompt cache loan, synchronizes/grows K/V before it marks lent experts non-resident, passes borrowed buffers to Prefill, then refills the borrowed slots after Prefill. session_zero clears the residual, GDN recurrence/conv state, QSA cache/indexer, PLE history, and PLE predecessor tokens. Prompt MTP KV fill is a per-chunk callback from residual rows and next prompt tokens, with a tail-window skip and optional STRATA_MTP_PREFILL_SYNC behavior; this draft KV is separate from the target session's GDN/QSA/PLE state.",
+      "anchors": [
+        "src/program/generate.cpp:12131-12168 loan and prefill init; 12193 run; 12197 onward refill",
+        "src/core/session.cpp:140-162 session_zero",
+        "src/program/generate.cpp:12175-12184 MTP prompt callback",
+        "src/core/mtp.cpp:1154-1168 tail window/sync policy; 1207-1248 MTP prefill"
+      ],
+      "interpretation": "These are state/lifetime boundaries to preserve in instrumentation; no evidence here attributes the observed output to a reset or loan."
+    },
+    {
+      "id": 8,
+      "topic": "historical STRATA_DIAG_ZERO_LOGITS run",
+      "finding": "Run18's long1k review records a pass with H4 text and actual IDs equal while STRATA_DIAG_ZERO_LOGITS=1 was configured; the same review reports zero zero-logits diagnostic rows and marks finite/NaN/argmax details unavailable. That preparation used a v0.1.40.4 binary and PLE RAM, with STRATA_DBG_NAN absent. It is a different build/control and does not prove a v0.1.42 fix or finite logits.",
+      "anchors": [
+        "bench/hetero/20261009-18-ram-zero-logits/quality/long1k-review.json sha256 3b71e8ca3176351f388a032192c288545ca6887664b9f9eeff650e0343966a71",
+        "bench/hetero/20261009-18-ram-zero-logits/preparation-receipt.json sha256 e46877aa18daf725878393325a36a18de5064c3ef2986399a6d782b0caec1bea",
+        "run18 contract: STRATA_DIAG_ZERO_LOGITS=1, STRATA_DBG_NAN_absent=true, PLE mode ram, engine 0.1.40.4"
+      ],
+      "interpretation": "The pass and absence of a diagnostic row are historical observations, not causal evidence."
+    },
+    {
+      "id": 9,
+      "topic": "bounded first-bad probe candidate",
+      "finding": "A narrow future probe could be default-off and explicitly enabled to enqueue a finite-scan kernel on m.cs after PLE writes m.R, after the GDN/QSA half output, after MoE combine, and after each residual write. Each scan would atomically retain the first chunk/layer/half/stage/index in a device flag; the host would read that small flag at an already-existing chunk-boundary stream sync. Cross-stream producers must use their existing event/wait dependency before the probe. This avoids adding a device-wide synchronization or blocking host read after each GEMM, but the scan kernels, atomics, and final flag read add work and can perturb or mask a race; the probe is not a no-effect measurement.",
+      "anchors": [
+        "src/prefill/prefill.cpp:2434-2457 PLE producer",
+        "src/prefill/prefill.cpp:2487-2810 attention/GDN/QSA producer paths",
+        "src/prefill/prefill.cpp:3852-3938 MoE and residual producers",
+        "src/prefill/prefill.cpp:4013, 4046 existing chunk/final stream synchronization"
+      ],
+      "hypothesis_status": "default-off instrumentation placement hypothesis only; not implemented, built, tested, or measured; timing perturbation may mask races; it does not identify a cause or propose a math fix"
+    }
+  ],
+  "runtime_context": {
+    "run63": "Root-provided prior record: Hetero v0.1.41 long_1k produced an all-NaN head under the same prompt history; not re-executed here.",
+    "run66_upstream42": {
+      "quality_report": "bench/hetero/20261011-66-v042-quality-pair/arms/upstream42/quality-on/quality/F-long_1k-quality.json",
+      "quality_sha256": "8930409eecf1c18c11a077882b9490bfc9183496b61bb502fe151f02f42674e6",
+      "observation": "first failure at long_1k; visible output was a 128-byte bang loop; captured SSE diagnostics had 128 generated token IDs, all 0, per warmup/formal; no raw logits were captured",
+      "raw_logits_claim": false
+    }
+  }
+}
