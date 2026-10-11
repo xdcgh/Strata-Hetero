@@ -1,0 +1,4018 @@
+{
+  "status": "root_raw_and_numerical_review_pass_joint_only",
+  "receipt_sha256": "930b3d03400aa70f0681d92743864260b1ee350f85144eeda425219bd20fba08",
+  "checked_response_files": 216,
+  "checked_bytes": 125583360,
+  "cpu_bitwise_outputs": 108,
+  "independent_arc_numerical_outputs": 108,
+  "quality_tolerances": {
+    "max_abs": 0.01,
+    "relative_rmse": 0.001,
+    "row_norm_relative": 0.001
+  },
+  "model_gain_unrun": true,
+  "cross_run_not_interleaved": true,
+  "memory_bandwidth_unmeasured": true,
+  "terminal_receipt_sha256": "87b20cc263a48dcce7053ecf6948dc571c1677600628703afd3cfa6c93ba4844",
+  "resource_samples": 9,
+  "points": [
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-001\\warmup.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\warmup.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-001\\formal-01.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-01.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-001\\formal-02.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-02.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-001\\formal-03.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-03.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-001\\formal-04.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-04.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-001\\formal-05.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-05.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-002\\warmup.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\warmup.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-002\\formal-01.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-01.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-002\\formal-02.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-02.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-002\\formal-03.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-03.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-002\\formal-04.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-04.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-002\\formal-05.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-05.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-004\\warmup.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\warmup.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-004\\formal-01.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-01.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-004\\formal-02.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-02.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-004\\formal-03.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-03.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-004\\formal-04.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-04.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-004\\formal-05.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-05.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-008\\warmup.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\warmup.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-008\\formal-01.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-01.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-008\\formal-02.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-02.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-008\\formal-03.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-03.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-008\\formal-04.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-04.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-008\\formal-05.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-05.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-016\\warmup.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\warmup.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-016\\formal-01.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-01.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-016\\formal-02.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-02.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-016\\formal-03.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-03.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-016\\formal-04.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-04.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-016\\formal-05.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-05.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-032\\warmup.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\warmup.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-032\\formal-01.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-01.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-032\\formal-02.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-02.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-032\\formal-03.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-03.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-032\\formal-04.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-04.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-032\\formal-05.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-05.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-064\\warmup.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\warmup.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-064\\formal-01.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-01.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-064\\formal-02.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-02.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-064\\formal-03.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-03.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-064\\formal-04.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-04.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-064\\formal-05.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-05.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-128\\warmup.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\warmup.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-128\\formal-01.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-01.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-128\\formal-02.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-02.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-128\\formal-03.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-03.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-128\\formal-04.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-04.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-128\\formal-05.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-05.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-256\\warmup.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\warmup.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-256\\formal-01.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-01.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-256\\formal-02.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-02.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-256\\formal-03.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-03.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-256\\formal-04.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-04.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\cpu-pool-w10-all\\rows-256\\formal-05.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w10-all+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-05.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-001\\warmup.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\warmup.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-001\\formal-01.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-01.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-001\\formal-02.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-02.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-001\\formal-03.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-03.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-001\\formal-04.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-04.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-001\\formal-05.f32",
+      "bytes": 10240,
+      "sha256": "03989de7a950c71a14d6b0348970fb2767c4d2004f6d5a99f7dea11a0c4fc8c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 1,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-001\\formal-05.f32",
+      "bytes": 10240,
+      "sha256": "f5b749936ba19e581426007b803c17035e52d729d837898760e9608bf1d9d445",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.2780302464962006e-06,
+        "relative_rmse": 0.00021016330954546657,
+        "max_row_norm_relative_error": 6.032197295386443e-06,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-002\\warmup.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\warmup.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-002\\formal-01.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-01.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-002\\formal-02.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-02.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-002\\formal-03.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-03.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-002\\formal-04.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-04.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-002\\formal-05.f32",
+      "bytes": 20480,
+      "sha256": "fb0c56bbe1c03c33bf9d889c4d87829e5701886c36b0f9ad529476e273af53b8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 2,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-002\\formal-05.f32",
+      "bytes": 20480,
+      "sha256": "b2cc6d570914273ec317388fda072f189c8017ec8cb46acd5ae19f2aeb96632b",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.3820827007293701e-05,
+        "relative_rmse": 0.0008226254965136196,
+        "max_row_norm_relative_error": 2.5955679183542494e-05,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-004\\warmup.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\warmup.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-004\\formal-01.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-01.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-004\\formal-02.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-02.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-004\\formal-03.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-03.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-004\\formal-04.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-04.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-004\\formal-05.f32",
+      "bytes": 40960,
+      "sha256": "91c59f06aa20f15f47fda5ad1c0437f7c7df228e01ca43ad096852516b1edec4",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 4,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-004\\formal-05.f32",
+      "bytes": 40960,
+      "sha256": "1db98e04f303a028d153a9513a9bf661fabb49bffedbe36eca7895944d9e7a20",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.5365425497293472e-05,
+        "relative_rmse": 0.0007141930669261404,
+        "max_row_norm_relative_error": 0.0001248755892342781,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-008\\warmup.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\warmup.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-008\\formal-01.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-01.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-008\\formal-02.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-02.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-008\\formal-03.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-03.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-008\\formal-04.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-04.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-008\\formal-05.f32",
+      "bytes": 81920,
+      "sha256": "e1284f8de586158bed0db648d9ff50d760d5f5fcc6e001b718b1b02a1f1619c3",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 8,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-008\\formal-05.f32",
+      "bytes": 81920,
+      "sha256": "4274853ad40db7cba2fff2af2d5632c6ca689530bd957a6dbade3403bf82ff36",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.4233402907848358e-05,
+        "relative_rmse": 0.0006074609212682623,
+        "max_row_norm_relative_error": 0.00015249027362021218,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-016\\warmup.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\warmup.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-016\\formal-01.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-01.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-016\\formal-02.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-02.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-016\\formal-03.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-03.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-016\\formal-04.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-04.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-016\\formal-05.f32",
+      "bytes": 163840,
+      "sha256": "d783ddd6509a6a1ce975222e61f34a5a7ef52df3395cf8a42e15f141cb5ea58e",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 16,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-016\\formal-05.f32",
+      "bytes": 163840,
+      "sha256": "48b8a3f24098c64b0cc474b00a3bfe38fdd29777b5a2651c026828a5ffa928f9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 1.92360021173954e-05,
+        "relative_rmse": 0.0005186173727708898,
+        "max_row_norm_relative_error": 0.00014491795441569952,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-032\\warmup.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\warmup.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-032\\formal-01.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-01.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-032\\formal-02.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-02.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-032\\formal-03.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-03.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-032\\formal-04.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-04.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-032\\formal-05.f32",
+      "bytes": 327680,
+      "sha256": "61c865d34362410386e91cb003dfcd5875d3081392012c1aa70a52fc17cc3c33",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 32,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-032\\formal-05.f32",
+      "bytes": 327680,
+      "sha256": "93544104542380f72b406951b8b8021d72d188fedf4fe17f0baa3547b18cf6a9",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.0420178771018982e-05,
+        "relative_rmse": 0.0005787282142474964,
+        "max_row_norm_relative_error": 0.00013579797289159628,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-064\\warmup.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\warmup.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-064\\formal-01.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-01.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-064\\formal-02.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-02.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-064\\formal-03.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-03.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-064\\formal-04.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-04.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-064\\formal-05.f32",
+      "bytes": 655360,
+      "sha256": "f1c5bd0e7e8da833e0d9609c23c57260f4be0ae215d17dc0dd6902cf094385a2",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 64,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-064\\formal-05.f32",
+      "bytes": 655360,
+      "sha256": "f01e7ea46c20393e29d001302ec74f4157369bb6d1d4efc8566bf1b22580af34",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 2.3138709366321564e-05,
+        "relative_rmse": 0.0006521309578641237,
+        "max_row_norm_relative_error": 0.0001817225429015063,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-128\\warmup.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\warmup.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-128\\formal-01.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-01.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-128\\formal-02.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-02.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-128\\formal-03.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-03.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-128\\formal-04.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-04.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-128\\formal-05.f32",
+      "bytes": 1310720,
+      "sha256": "613e35a44da3923cea19653ed71e135f4443f579207061fb77407ceadafd29ea",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 128,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-128\\formal-05.f32",
+      "bytes": 1310720,
+      "sha256": "44bf70841b7c9d470ac85b14f6c81d70a346040d619a2d82019a0079684e4862",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 4.1542574763298035e-05,
+        "relative_rmse": 0.000665951757270185,
+        "max_row_norm_relative_error": 0.0001674657547378106,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "warmup",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-256\\warmup.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "warmup",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\warmup.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-01",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-256\\formal-01.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-01",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-01.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-02",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-256\\formal-02.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-02",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-02.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-03",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-256\\formal-03.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-03",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-03.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-04",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-256\\formal-04.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-04",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-04.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-05",
+      "side": "cpu",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\cpu-pool-w16-none\\rows-256\\formal-05.f32",
+      "bytes": 2621440,
+      "sha256": "063ef702e50abb6a553292fae6e133b8322f9db35f42bc3e7d4fd033411371e8",
+      "quality": {
+        "bitwise_gold_match": true
+      }
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "rows": 256,
+      "label": "formal-05",
+      "side": "arc",
+      "path": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint\\cpu-pool-w16-none+arc-gpu0-concurrent\\arc-gpu0-f32-accuracy\\rows-256\\formal-05.f32",
+      "bytes": 2621440,
+      "sha256": "443e76fade93c73a18936f6faf1bb1e0044ef0d46066246b92a3864116daf11d",
+      "quality": {
+        "shape_ok": true,
+        "finite": true,
+        "max_abs_error": 7.037073373794556e-05,
+        "relative_rmse": 0.0006915594487259341,
+        "max_row_norm_relative_error": 0.0001416532932196892,
+        "tolerances": {
+          "max_abs": 0.01,
+          "relative_rmse": 0.001,
+          "row_norm_relative": 0.001
+        },
+        "pass": true
+      }
+    }
+  ],
+  "median_comparison": [
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 1,
+      "side": "cpu",
+      "solo_median_ms": 0.2706,
+      "joint_median_ms": 0.4439,
+      "delta_pct": 64.04286770140428,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 1,
+      "side": "arc",
+      "solo_median_ms": 1.2111,
+      "joint_median_ms": 1.3061,
+      "delta_pct": 7.844108661547344,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 2,
+      "side": "cpu",
+      "solo_median_ms": 0.3037,
+      "joint_median_ms": 0.3406,
+      "delta_pct": 12.150148172538678,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 2,
+      "side": "arc",
+      "solo_median_ms": 1.228,
+      "joint_median_ms": 0.9778,
+      "delta_pct": -20.374592833876214,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 4,
+      "side": "cpu",
+      "solo_median_ms": 0.3713,
+      "joint_median_ms": 0.5347,
+      "delta_pct": 44.00754107190949,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 4,
+      "side": "arc",
+      "solo_median_ms": 1.652,
+      "joint_median_ms": 2.0085,
+      "delta_pct": 21.579903147699774,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 8,
+      "side": "cpu",
+      "solo_median_ms": 0.5919,
+      "joint_median_ms": 0.9788,
+      "delta_pct": 65.36577124514275,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 8,
+      "side": "arc",
+      "solo_median_ms": 1.6152,
+      "joint_median_ms": 2.0366,
+      "delta_pct": 26.08964834076275,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 16,
+      "side": "cpu",
+      "solo_median_ms": 1.0284,
+      "joint_median_ms": 0.988,
+      "delta_pct": -3.9284325165305334,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 16,
+      "side": "arc",
+      "solo_median_ms": 2.2451,
+      "joint_median_ms": 2.1055,
+      "delta_pct": -6.217985835820217,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 32,
+      "side": "cpu",
+      "solo_median_ms": 1.7716,
+      "joint_median_ms": 2.4247,
+      "delta_pct": 36.864980808308864,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 32,
+      "side": "arc",
+      "solo_median_ms": 2.6754,
+      "joint_median_ms": 3.171,
+      "delta_pct": 18.524332810047106,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 64,
+      "side": "cpu",
+      "solo_median_ms": 3.9706,
+      "joint_median_ms": 4.8747,
+      "delta_pct": 22.769858459678627,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 64,
+      "side": "arc",
+      "solo_median_ms": 4.1059,
+      "joint_median_ms": 5.5717,
+      "delta_pct": 35.69984656226406,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 128,
+      "side": "cpu",
+      "solo_median_ms": 8.1702,
+      "joint_median_ms": 11.9758,
+      "delta_pct": 46.57903111306945,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 128,
+      "side": "arc",
+      "solo_median_ms": 8.6024,
+      "joint_median_ms": 11.2403,
+      "delta_pct": 30.664698223751508,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 256,
+      "side": "cpu",
+      "solo_median_ms": 16.0446,
+      "joint_median_ms": 19.7789,
+      "delta_pct": 23.274497338668464,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w10-all",
+      "rows": 256,
+      "side": "arc",
+      "solo_median_ms": 17.518,
+      "joint_median_ms": 19.5307,
+      "delta_pct": 11.489325265441263,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 1,
+      "side": "cpu",
+      "solo_median_ms": 17.9314,
+      "joint_median_ms": 12.0795,
+      "delta_pct": -32.63493090333159,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 1,
+      "side": "arc",
+      "solo_median_ms": 1.2111,
+      "joint_median_ms": 20.8063,
+      "delta_pct": 1617.9671373131864,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 2,
+      "side": "cpu",
+      "solo_median_ms": 22.0242,
+      "joint_median_ms": 13.8777,
+      "delta_pct": -36.98885771106328,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 2,
+      "side": "arc",
+      "solo_median_ms": 1.228,
+      "joint_median_ms": 20.8379,
+      "delta_pct": 1596.897394136808,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 4,
+      "side": "cpu",
+      "solo_median_ms": 24.4156,
+      "joint_median_ms": 19.9547,
+      "delta_pct": -18.270695784662273,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 4,
+      "side": "arc",
+      "solo_median_ms": 1.652,
+      "joint_median_ms": 20.653,
+      "delta_pct": 1150.181598062954,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 8,
+      "side": "cpu",
+      "solo_median_ms": 23.3026,
+      "joint_median_ms": 18.1963,
+      "delta_pct": -21.91300541570469,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 8,
+      "side": "arc",
+      "solo_median_ms": 1.6152,
+      "joint_median_ms": 18.0813,
+      "delta_pct": 1019.4465081723624,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 16,
+      "side": "cpu",
+      "solo_median_ms": 27.3365,
+      "joint_median_ms": 12.6471,
+      "delta_pct": -53.7354818649059,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 16,
+      "side": "arc",
+      "solo_median_ms": 2.2451,
+      "joint_median_ms": 20.5923,
+      "delta_pct": 817.2108146630441,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 32,
+      "side": "cpu",
+      "solo_median_ms": 14.7231,
+      "joint_median_ms": 14.8587,
+      "delta_pct": 0.9210016912199137,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 32,
+      "side": "arc",
+      "solo_median_ms": 2.6754,
+      "joint_median_ms": 15.9735,
+      "delta_pct": 497.0509082753981,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 64,
+      "side": "cpu",
+      "solo_median_ms": 29.793,
+      "joint_median_ms": 17.7754,
+      "delta_pct": -40.33699191085154,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 64,
+      "side": "arc",
+      "solo_median_ms": 4.1059,
+      "joint_median_ms": 20.0927,
+      "delta_pct": 389.3616503080932,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 128,
+      "side": "cpu",
+      "solo_median_ms": 21.0564,
+      "joint_median_ms": 21.4996,
+      "delta_pct": 2.1048232366406516,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 128,
+      "side": "arc",
+      "solo_median_ms": 8.6024,
+      "joint_median_ms": 24.1844,
+      "delta_pct": 181.13549707058496,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 256,
+      "side": "cpu",
+      "solo_median_ms": 18.9196,
+      "joint_median_ms": 27.9015,
+      "delta_pct": 47.47404807712636,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    },
+    {
+      "backend": "cpu-pool-w16-none",
+      "rows": 256,
+      "side": "arc",
+      "solo_median_ms": 17.518,
+      "joint_median_ms": 28.6046,
+      "delta_pct": 63.28690489781938,
+      "comparison_scope": "cross-run baseline; not interleaved"
+    }
+  ]
+}

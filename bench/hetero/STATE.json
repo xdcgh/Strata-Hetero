@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "run51 direct-PLE baseline passed15 short formals then failed all3 natural1K formals with bang loops; stoppedfirst and exactownedcleanup terminal",
+  "phase": "Native CPU/Arc solo and joint measurements verified; run51 model quality degeneration remains unresolved; run57 diagnostic prepared",
   "branch": "codex/45-upstream41-runtime",
   "upstream_base_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -74,7 +74,9 @@
     "CPU48 builds/threeCTest and CPU49 75formal native outputs pass; 36 worker pin masks read back; no full-model gain yet",
     "Admission18 and sweep30 puretests pass; real zero-model probe verifies exactly2 coordinator ancestors and PSAPI12/4 reserve",
     "PersistentCPU SXPU service actualnativekernel linked; CPU52 fivebinaries independently rehashed,4CTestpass; realIPCquality/performance pending",
-    "Run51 captured15 short quality/H4 ID passes and3 long1K bang-loop failures under directPLE;1192physical/PSAPI gatespass; no performancearm; exactownedcleanup terminal"
+    "Run51 captured15 short quality/H4 ID passes and3 long1K bang-loop failures under directPLE;1192physical/PSAPI gatespass; no performancearm; exactownedcleanup terminal",
+    "Run60 all three solo native CPU/Arc arms pass135formal and27warm gates; root rehashed162raw outputs and independently replayed54Arc quality comparisons; joint log collision preserved before startup",
+    "Run61 both joint native CPU/Arc arms complete9shapes, all216responses independently rehashed and quality-checked;9PSAPI samples pass min105.74physical/111.69commitGiB; exact owned cleanup terminal; cross-run contention comparisons only, no model gain"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -99,19 +101,19 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Compare exact successfulrun41 controls/history with run51; controlled diagnostics for directPLE natural1K degeneration without blindrestart; then resume fulloriginalscope. NewCPUIPC/Arccomparison andKVadapter preparations remain unrun.",
+  "next_experiment": "Run57 one diagnostic w10/all quality phase on existing6bbc/ffeb binary; capture post-selected-zero logits and stop first quality failure. Then isolated upstream v0.1.42 integration with STRATA_ROUTE_TAIL_SKIP=0 for matched controls; full original scope remains active.",
   "completion_status": "active; originalfullscope stillrequired, no modelperformancepromotedfrommicrocases",
-  "latest_upstream_fetched_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
+  "latest_upstream_fetched_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-11T01:11:05.458846+00:00",
+  "last_checkpoint_utc": "2026-10-11T02:00:30.685954+00:00",
   "current_run": null,
   "current_model_owner": null,
   "upstream_pending_integration": {
-    "sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf",
-    "tag": "v0.1.41",
-    "status": "merged_into_mainworktree_1676895_modelpair_and_puretests_verified",
-    "review": "bench\\hetero\\20261009-25-upstream-0-1-41-review\\review.json",
-    "merge_sha": "ffeb748d190ddeedff23587ce848596d4db0c752"
+    "sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "tag": "v0.1.42",
+    "status": "reviewed_not_merged_or_built",
+    "review": "bench/hetero/20261011-55-upstream-0-1-42-review/review.md",
+    "matched_control": "STRATA_ROUTE_TAIL_SKIP=0"
   },
   "current_build_owner": null
 }

@@ -1,0 +1,162 @@
+{
+  "schema": "run61-terminal-controller-receipt-v1",
+  "run_id": "native-cpu-arc-ipc-joint-compare-20261011-61",
+  "status": "complete",
+  "execution_mode": "paired_only",
+  "wrapper": {
+    "run_id": "native-cpu-arc-ipc-joint-compare-20261011-61",
+    "exit_code": 0,
+    "finished_utc": "2026-10-11T02:00:30.7234863Z",
+    "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare\\run61-actual-01.stdout.log",
+    "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare\\run61-actual-01.stderr.log"
+  },
+  "controller_identity": {
+    "pid": 22744,
+    "parent_pid": 5088,
+    "create_time": 1791684020.981722,
+    "executable": "c:\\python314\\python.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "tools.hetero_native_ipc_compare",
+      "--contract",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare\\compare-contract.json",
+      "--execute",
+      "--paired-only",
+      "--root-start-confirmed",
+      "--model-matrix-stopped-confirmed",
+      "--root-authorization",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare\\root-authorization-01.json",
+      "--include-cpu16-none"
+    ],
+    "create_time_utc": "2026-10-11T10:00:20.981722+08:00"
+  },
+  "owned_processes": [
+    {
+      "role": "controller",
+      "pid": 22744,
+      "create_time": 1791684020.981722,
+      "executable": "c:\\python314\\python.exe",
+      "running": false
+    },
+    {
+      "role": "cpu-pool-w10-all+arc-gpu0-concurrent:cpu-pool-w10-all:launcher_identity",
+      "pid": 1748,
+      "create_time": 1791684021.8761075,
+      "executable": "e:\\strata-hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "running": false
+    },
+    {
+      "role": "cpu-pool-w10-all+arc-gpu0-concurrent:cpu-pool-w10-all:actual_service_process",
+      "pid": 1748,
+      "create_time": 1791684021.8761075,
+      "executable": "e:\\strata-hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "running": false
+    },
+    {
+      "role": "cpu-pool-w10-all+arc-gpu0-concurrent:arc-gpu0-f32-accuracy:launcher_identity",
+      "pid": 8012,
+      "create_time": 1791684021.9096081,
+      "executable": "e:\\strata-hetero-data\\venv-intel\\scripts\\python.exe",
+      "running": false
+    },
+    {
+      "role": "cpu-pool-w10-all+arc-gpu0-concurrent:arc-gpu0-f32-accuracy:actual_service_process",
+      "pid": 14748,
+      "create_time": 1791684021.9469604,
+      "executable": "c:\\python314\\python.exe",
+      "running": false
+    },
+    {
+      "role": "cpu-pool-w16-none+arc-gpu0-concurrent:cpu-pool-w16-none:launcher_identity",
+      "pid": 11476,
+      "create_time": 1791684025.4929123,
+      "executable": "e:\\strata-hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "running": false
+    },
+    {
+      "role": "cpu-pool-w16-none+arc-gpu0-concurrent:cpu-pool-w16-none:actual_service_process",
+      "pid": 11476,
+      "create_time": 1791684025.4929123,
+      "executable": "e:\\strata-hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "running": false
+    },
+    {
+      "role": "cpu-pool-w16-none+arc-gpu0-concurrent:arc-gpu0-f32-accuracy:launcher_identity",
+      "pid": 4376,
+      "create_time": 1791684025.5278604,
+      "executable": "e:\\strata-hetero-data\\venv-intel\\scripts\\python.exe",
+      "running": false
+    },
+    {
+      "role": "cpu-pool-w16-none+arc-gpu0-concurrent:arc-gpu0-f32-accuracy:actual_service_process",
+      "pid": 860,
+      "create_time": 1791684025.553866,
+      "executable": "c:\\python314\\python.exe",
+      "running": false
+    }
+  ],
+  "all_controller_and_workers_absent": true,
+  "arms": [
+    {
+      "arm": "cpu-pool-w10-all+arc-gpu0-concurrent",
+      "status": "complete",
+      "rows": 9,
+      "cleanup": [
+        {
+          "role": "cpu-pool-w10-all",
+          "terminal": true,
+          "remaining_owned_descendants": 0
+        },
+        {
+          "role": "arc-gpu0-f32-accuracy",
+          "terminal": true,
+          "remaining_owned_descendants": 0
+        }
+      ]
+    },
+    {
+      "arm": "cpu-pool-w16-none+arc-gpu0-concurrent",
+      "status": "complete",
+      "rows": 9,
+      "cleanup": [
+        {
+          "role": "cpu-pool-w16-none",
+          "terminal": true,
+          "remaining_owned_descendants": 0
+        },
+        {
+          "role": "arc-gpu0-f32-accuracy",
+          "terminal": true,
+          "remaining_owned_descendants": 0
+        }
+      ]
+    }
+  ],
+  "all_arm_trees_terminal": true,
+  "quality_checks": {
+    "total": 216,
+    "passed": 216,
+    "failed": 0
+  },
+  "raw_outputs": {
+    "root": "E:\\Strata-Hetero-data\\experts\\native-cpu-arc-ipc-compare-20261011-61-joint",
+    "count": 216,
+    "bytes": 125583360.0
+  },
+  "resource": {
+    "samples": 9,
+    "all_passed": true,
+    "physical_available_min_bytes": 113536724992,
+    "commit_available_min_bytes": 119925387264
+  },
+  "failure": null,
+  "receipt_path": "bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare\\receipts\\compare-receipt.json",
+  "receipt_sha256": "930b3d03400aa70f0681d92743864260b1ee350f85144eeda425219bd20fba08",
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare\\run61-actual-01.stdout.log",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare\\run61-actual-01.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "finished_utc": "2026-10-11T10:00:30.685954+08:00"
+}

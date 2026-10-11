@@ -1,0 +1,37 @@
+{
+  "schema": "run61-prelaunch-12-4-v1",
+  "observed_utc": "2026-10-11T02:00:08.6479458Z",
+  "pass": true,
+  "client_sha256": "bbd8a426c012d5f768175cd898e9dffe127a51ee8b4419eb003017332adbc45b",
+  "contract_sha256": "4af7eeb868202cee93d28ad534ee1b3add0642541c7dc9c934e6b72f7a2c1e36",
+  "source_freeze_sha256": "9f5758af2359426ec2e9710cd4f6edcc08f1c54ad8855b1061d2830a33b1bc90",
+  "root_admission_sha256": "a9d645bbed964d0e012bad9ac7854b8d7dfaccad4b0a89d7ac907db567a16079",
+  "psapi": {
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 114144481280,
+      "physical_used_bytes": 22818766848,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 24126529536,
+      "commit_available_bytes": 121426653184,
+      "commit_total_pages": 5890266,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 121426653184,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "errors": []
+  },
+  "blocked_processes": [],
+  "output_root_exists": false,
+  "receipt_dir_exists": false,
+  "launch_logs_absent": true
+}

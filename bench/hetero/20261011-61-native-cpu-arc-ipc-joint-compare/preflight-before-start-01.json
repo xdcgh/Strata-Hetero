@@ -1,0 +1,45 @@
+{
+  "schema": "run61-prelaunch-12-4-v1",
+  "observed_utc": "2026-10-11T02:00:00.2059423Z",
+  "pass": false,
+  "client_sha256": "bbd8a426c012d5f768175cd898e9dffe127a51ee8b4419eb003017332adbc45b",
+  "contract_sha256": "4af7eeb868202cee93d28ad534ee1b3add0642541c7dc9c934e6b72f7a2c1e36",
+  "source_freeze_sha256": "9f5758af2359426ec2e9710cd4f6edcc08f1c54ad8855b1061d2830a33b1bc90",
+  "root_admission_sha256": "a9d645bbed964d0e012bad9ac7854b8d7dfaccad4b0a89d7ac907db567a16079",
+  "psapi": {
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 114021056512,
+      "physical_used_bytes": 22942191616,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 24288542720,
+      "commit_available_bytes": 121264640000,
+      "commit_total_pages": 5929820,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 121264640000,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "errors": []
+  },
+  "blocked_processes": [
+    {
+      "ProcessId": 2740,
+      "ParentProcessId": 10616,
+      "Name": "pwsh.exe",
+      "ExecutablePath": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "CommandLine": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -Command \"try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}\n$ErrorActionPreference='Stop'; $run='bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare'; $contract=Join-Path $run 'compare-contract.json'; $freeze=Join-Path $run 'source-freeze-final.json'; $authPath=Join-Path $run 'root-authorization-01.json'; $admPath=Join-Path $run 'root-admission-01.json'; $expect=@{client='bbd8a426c012d5f768175cd898e9dffe127a51ee8b4419eb003017332adbc45b';contract='4af7eeb868202cee93d28ad534ee1b3add0642541c7dc9c934e6b72f7a2c1e36';freeze='9f5758af2359426ec2e9710cd4f6edcc08f1c54ad8855b1061d2830a33b1bc90'}; $actual=@{client=(Get-FileHash 'tools\\hetero_native_ipc_compare.py' -Algorithm SHA256).Hash.ToLower();contract=(Get-FileHash $contract -Algorithm SHA256).Hash.ToLower();freeze=(Get-FileHash $freeze -Algorithm SHA256).Hash.ToLower()}; $auth=Get-Content -Raw $authPath|ConvertFrom-Json; $adm=Get-Content -Raw $admPath|ConvertFrom-Json; if($actual.client -ne $expect.client -or $actual.contract -ne $expect.contract -or $actual.freeze -ne $expect.freeze){throw 'client/contract/freeze hash mismatch'}; if((Get-FileHash $admPath -Algorithm SHA256).Hash.ToLower() -ne $auth.admission_sha256){throw 'root admission receipt hash mismatch'}; $memText=& 'E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe' -B -c \\\"from tools.hetero_resources import memory_snapshot; import json; m,e=memory_snapshot(); print(json.dumps({'memory':m,'errors':e}))\\\"; if($LASTEXITCODE -ne 0){throw 'PSAPI snapshot failed'}; $mem=$memText|ConvertFrom-Json; $blocked=@(Get-CimInstance Win32_Process | Where-Object {($_.Name -match '^(cl|cmake|ninja|ctest|nvcc|hipcc|dpcpp|icx|clang-cl)\\.exe$') -or ($_.CommandLine -match 'hetero_native_cpu_service|hetero_xpu_service|llama-server|llama\\s+server|vllm|openvino.*serve') } | Select-Object ProcessId,ParentProcessId,Name,ExecutablePath,CommandLine); $pass=($mem.errors.Count -eq 0 -and [long]$mem.memory.physical_available_bytes -ge 12GB -and [long]$mem.memory.commit_available_bytes -ge 4GB -and $blocked.Count -eq 0); $pre=[ordered]@{schema='run61-prelaunch-12-4-v1';observed_utc=[DateTime]::UtcNow.ToString('o');pass=$pass;client_sha256=$actual.client;contract_sha256=$actual.contract;source_freeze_sha256=$actual.freeze;root_admission_sha256=(Get-FileHash $admPath -Algorithm SHA256).Hash.ToLower();psapi=$mem;blocked_processes=$blocked;output_root_exists=(Test-Path -LiteralPath $((Get-Content -Raw $contract | ConvertFrom-Json).output.private_output_root));receipt_dir_exists=(Test-Path -LiteralPath ((Get-Content -Raw $contract | ConvertFrom-Json).output.receipt_dir));launch_logs_absent=@('run61-actual-01.stdout.log','run61-actual-01.stderr.log','run61-actual-01.launch.json','run61-actual-01.terminal.json'|ForEach-Object{ -not (Test-Path -LiteralPath (Join-Path $run $_)) }) -notcontains $false}; $pre|ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $run 'preflight-before-start-01.json') -Encoding utf8; $pre|ConvertTo-Json -Depth 5; if(-not $pass -or -not $pre.launch_logs_absent -or $pre.output_root_exists -or $pre.receipt_dir_exists){exit 2}\""
+    }
+  ],
+  "output_root_exists": false,
+  "receipt_dir_exists": false,
+  "launch_logs_absent": true
+}
