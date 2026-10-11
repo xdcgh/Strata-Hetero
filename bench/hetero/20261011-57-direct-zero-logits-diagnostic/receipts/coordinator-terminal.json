@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-57-w10-all-quality-on",
+  "status": "failed_before_first_quality_prompt_then_exact_owned_cleanup_pass",
+  "created_utc": "2026-10-11T02:12:21.027499Z",
+  "authorization": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\root-authorization-01.json",
+    "sha256": "01097b027a844c4926bd7772725152d17e0e1521230313cf44c824c2902050df",
+    "max_phases": 1,
+    "matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4"
+  },
+  "matrix": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\matrix.json",
+    "sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+    "source_sha": "ffeb748d190ddeedff23587ce848596d4db0c752",
+    "engine_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb"
+  },
+  "single_authorized_phase": {
+    "arm": "w10-all",
+    "phase": "quality_on",
+    "run_id": "20261011-57-w10-all-quality-on",
+    "terminal_quality_status": "failed_stopped",
+    "remaining_nine_phases": "UNRUN"
+  },
+  "failure": {
+    "reason": "smoke_arithmetic: output already exists: C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\requests\\smoke_arithmetic",
+    "completed_prompts": [],
+    "partial_prompts": 0,
+    "quality_requests_sent": 0,
+    "request_files": [],
+    "precreated_request_directories": [
+      "long_16k",
+      "long_1k",
+      "long_30k7",
+      "long_4k",
+      "smoke_arithmetic",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "smoke_unicode"
+    ],
+    "first_collision_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\requests\\smoke_arithmetic",
+    "interpretation": "quality controller filesystem preflight failed before prompt dispatch; no model output, token IDs, or zero-logit diagnostic event exist"
+  },
+  "owned_processes": {
+    "outer_python": {
+      "pid": 17360,
+      "parent_pid": 16260,
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "create_utc": "2026-10-11T02:06:03.4595680Z"
+    },
+    "launch_controller": {
+      "pid": 10032,
+      "parent_pid": 2612,
+      "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "create_utc": "2026-10-11T02:06:03.5816660Z",
+      "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\"",
+      "argv": [
+        "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-Command",
+        "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start"
+      ]
+    },
+    "watch_controller": {
+      "pid": 11612,
+      "parent_pid": 2612,
+      "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "create_utc": "2026-10-11T02:06:11.3147850Z",
+      "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Monitor -TimeoutSeconds 1800\"",
+      "argv": [
+        "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-Command",
+        "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Monitor -TimeoutSeconds 1800"
+      ]
+    },
+    "quality_controller": {
+      "pid": 10204,
+      "parent_pid": 2612,
+      "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "create_utc": "2026-10-11T02:08:21.7356360Z",
+      "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Run -RootReadyConfirmed -LauncherPid ([int]$env:RUN47_LAUNCHER_PID) -SamplerPid ([int]$env:RUN47_SAMPLER_PID)\"",
+      "argv": [
+        "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-Command",
+        "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Run -RootReadyConfirmed -LauncherPid ([int]$env:RUN47_LAUNCHER_PID) -SamplerPid ([int]$env:RUN47_SAMPLER_PID)"
+      ]
+    },
+    "cleanup_controller": {
+      "pid": 5104,
+      "parent_pid": 21064,
+      "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "create_utc": "2026-10-11T02:10:04.9648520Z",
+      "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Execute\"",
+      "argv": [
+        "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-Command",
+        "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Execute"
+      ]
+    },
+    "service_launcher": {
+      "pid": 19016,
+      "create_utc": "2026-10-11T02:06:10.9655530Z",
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "command_line": "see process.json"
+    },
+    "server_child": {
+      "pid": 15212,
+      "parent_pid": 19016,
+      "create_utc": "2026-10-11T02:06:10.9984530Z",
+      "exe": "C:\\Python314\\python.exe"
+    },
+    "engine": {
+      "pid": 4356,
+      "create_utc": "2026-10-11T02:06:11.5108630Z",
+      "exe": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe"
+    },
+    "sampler_launcher": {
+      "pid": 12864,
+      "create_utc": "2026-10-11T02:06:11.0176270Z",
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe"
+    },
+    "sampler_child": {
+      "pid": 4444,
+      "parent_pid": 12864,
+      "create_utc": "2026-10-11T02:06:11.0507510Z",
+      "exe": "C:\\Python314\\python.exe"
+    }
+  },
+  "raw_controller_logs": {
+    "arms\\w10-all\\quality-on\\controller\\launch.stdout.log": {
+      "bytes": 1083,
+      "sha256": "e14c3fec5563a85d9b795d2ac4e0e2e7d16a66d6174fe2fc4825842686779b7a"
+    },
+    "arms\\w10-all\\quality-on\\controller\\launch.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "arms\\w10-all\\quality-on\\controller\\watch.stdout.log": {
+      "bytes": 3925,
+      "sha256": "76116e5c308e275204de4ce61ed469f077b6567aed81dbeed300f8d233cf7524"
+    },
+    "arms\\w10-all\\quality-on\\controller\\watch.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "arms\\w10-all\\quality-on\\controller\\check-ready.stdout.log": {
+      "bytes": 216,
+      "sha256": "d930caee13e7e5e0dda062e2aaa189035e45e9a976a2f9a85fa85e596b165f67"
+    },
+    "arms\\w10-all\\quality-on\\controller\\check-ready.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "arms\\w10-all\\quality-on\\controller\\quality.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "arms\\w10-all\\quality-on\\controller\\quality.stderr.log": {
+      "bytes": 378,
+      "sha256": "3296f3f0f77f2e57c120b23a2b7c49a58ec8c14fe10b73b26045d3d3919a5976"
+    },
+    "arms\\w10-all\\quality-on\\controller\\cleanup.stdout.log": {
+      "bytes": 564,
+      "sha256": "79565119188abb40b0a9156aec06e420a2093d3879d7fdff943983f7873928c9"
+    },
+    "arms\\w10-all\\quality-on\\controller\\cleanup.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "cleanup": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\cleanup\\final.json",
+    "status": "terminal_owned_server_and_sampler_released",
+    "listener8081_released": true,
+    "engine_server_sampler_terminal": true,
+    "sampler_was_not_killed": true,
+    "resource_summary_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\cleanup\\resource-summary.json",
+    "resource_summary": {
+      "status": "pass",
+      "sample_count": 239,
+      "terminal_count": 1,
+      "min_ram_gib": 66.955,
+      "min_commit_gib": 43.861,
+      "all_gates_pass": true,
+      "terminal": {
+        "schema_version": 1,
+        "record_type": "sampler_stopped",
+        "observed_at_utc": "2026-10-11T02:10:10.130Z",
+        "monotonic_seconds": 6652.8386385,
+        "reason": "stop_file_exists"
+      }
+    }
+  },
+  "no_retry_restart_or_second_phase": true
+}

@@ -1,0 +1,2 @@
+{"utc":"2026-10-11T02:08:24.1262633Z","event":{"status":"pass","phase":"start"}}
+{"utc":"2026-10-11T02:08:24.1374075Z","event":{"error":"smoke_arithmetic: output already exists: C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\requests\\smoke_arithmetic","error_type":"RuntimeException","partial_prompts":0,"phase":"failed"}}

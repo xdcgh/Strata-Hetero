@@ -1,0 +1,24 @@
+{
+  "action": "quality",
+  "exit_code": 1,
+  "controller_pid": 10204,
+  "owner": {
+    "pid": 10204,
+    "parent_pid": 2612,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T02:08:21.7356360Z",
+    "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Run -RootReadyConfirmed -LauncherPid ([int]$env:RUN47_LAUNCHER_PID) -SamplerPid ([int]$env:RUN47_SAMPLER_PID)\"",
+    "argv": [
+      "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Run -RootReadyConfirmed -LauncherPid ([int]$env:RUN47_LAUNCHER_PID) -SamplerPid ([int]$env:RUN47_SAMPLER_PID)"
+    ],
+    "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Run -RootReadyConfirmed -LauncherPid ([int]$env:RUN47_LAUNCHER_PID) -SamplerPid ([int]$env:RUN47_SAMPLER_PID)\"",
+    "controller_streams": "stdout/stderr pipes captured before script input; exclusive evidence paths supplied by caller"
+  },
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "3296f3f0f77f2e57c120b23a2b7c49a58ec8c14fe10b73b26045d3d3919a5976"
+}

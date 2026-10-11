@@ -1,0 +1,25 @@
+{
+  "action": "cleanup",
+  "run_id": "20261011-57-w10-all-quality-on",
+  "template": "cleanup",
+  "rendered_script_sha256": "1c152a05ae2093fc1c2f9068e8d5c543f828f8c24baacb2593488cc300237f18",
+  "template_source_sha256": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+  "adapter_sha256": "44d27e8240bc459dbcc90461134810a09f957d94cb3e2d8ddf44c0d5c5e5ae43",
+  "matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+  "authorization_nonce": "5fde24674c6f4829b9a0aacc1ef051a7",
+  "gate_source_sha256s": {
+    "hetero_admission.py": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e",
+    "hetero_resources.py": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+  },
+  "admission_only": false,
+  "created_utc": "2026-10-11T02:10:04.960977Z",
+  "argv": [
+    "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "-NoLogo",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "<stdin-scriptblock>"
+  ],
+  "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command <stdin-scriptblock>"
+}

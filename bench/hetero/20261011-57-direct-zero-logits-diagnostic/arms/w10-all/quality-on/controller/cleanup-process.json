@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-57-w10-all-quality-on",
+  "action": "cleanup",
+  "status": "owned_controller_started_before_script_input",
+  "owner": {
+    "pid": 5104,
+    "parent_pid": 21064,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T02:10:04.9648520Z",
+    "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Execute\"",
+    "argv": [
+      "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Execute"
+    ],
+    "argv_windows": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Execute\"",
+    "controller_streams": "stdout/stderr pipes captured before script input; exclusive evidence paths supplied by caller"
+  },
+  "rendered_script_sha256": "1c152a05ae2093fc1c2f9068e8d5c543f828f8c24baacb2593488cc300237f18",
+  "template_source_sha256": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+  "matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+  "authorization_nonce": "5fde24674c6f4829b9a0aacc1ef051a7",
+  "stdout_evidence_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\controller\\cleanup.stdout.log",
+  "stderr_evidence_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\controller\\cleanup.stderr.log"
+}

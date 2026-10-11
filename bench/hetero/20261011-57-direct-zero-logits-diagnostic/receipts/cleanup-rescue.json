@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-57-w10-all-quality-on",
+  "status": "terminal_owned_cleanup_pass_after_quality_controller_preflight_failure",
+  "cleanup_started_utc": "2026-10-11T02:10:04.955943Z",
+  "cleanup_finished_utc": "2026-10-11T02:10:10.757925Z",
+  "matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+  "authorization_sha256": "01097b027a844c4926bd7772725152d17e0e1521230313cf44c824c2902050df",
+  "adapter_sha256": "44d27e8240bc459dbcc90461134810a09f957d94cb3e2d8ddf44c0d5c5e5ae43",
+  "quality_failure_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\controller\\coordinator-failure.json",
+  "quality_failure_sha256": "4abc67bac5d433366facb985b67cc9d384e9f7b0fce4ca744b6c877c33013033",
+  "quality_controller_requests_sent": 0,
+  "quality_formal_prompts_completed": 0,
+  "cleanup_result": {
+    "status": "terminal_owned_cleanup_pass",
+    "raw_receipt": {
+      "schema_version": 1,
+      "run_id": "20261011-57-w10-all-quality-on",
+      "status": "terminal_owned_server_and_sampler_released",
+      "utc": "2026-10-11T02:10:10.6784935Z",
+      "engine_server_sampler_terminal": true,
+      "listener8081_released": true,
+      "sampler_was_not_killed": true,
+      "resource_summary": {
+        "status": "pass",
+        "sample_count": 239,
+        "terminal_count": 1,
+        "min_ram_gib": 66.955,
+        "min_commit_gib": 43.861,
+        "all_gates_pass": true,
+        "terminal": {
+          "schema_version": 1,
+          "record_type": "sampler_stopped",
+          "observed_at_utc": "2026-10-11T02:10:10.130Z",
+          "monotonic_seconds": 6652.8386385,
+          "reason": "stop_file_exists"
+        }
+      }
+    },
+    "run_id": "20261011-57-w10-all-quality-on",
+    "controller_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\controller"
+  },
+  "live_model_owner_ids": {
+    "launcher_pid": 19016,
+    "server_pid": 15212,
+    "engine_pid": 4356,
+    "sampler_launcher_pid": 12864,
+    "sampler_child_pid": 4444
+  },
+  "cleanup_executed_by_frozen_run41_adapter": true,
+  "no_model_request_or_retry_during_cleanup": true
+}

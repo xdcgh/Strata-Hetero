@@ -1,0 +1,36 @@
+{
+  "schema": "strata-hetero-controller-chain-v1",
+  "nonce": "5fde24674c6f4829b9a0aacc1ef051a7",
+  "created_utc": "2026-10-11T02:06:05.318852+00:00",
+  "expires_utc": "2026-10-11T02:08:05.318852+00:00",
+  "source": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_pool_sweep.py",
+    "sha256": "44d27e8240bc459dbcc90461134810a09f957d94cb3e2d8ddf44c0d5c5e5ae43"
+  },
+  "controller": {
+    "pid": 10032,
+    "parent_pid": 2612,
+    "name": "pwsh.exe",
+    "path": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "create_utc": "2026-10-11T02:06:03.5816660Z",
+    "command_line": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe -NoLogo -NoProfile -NonInteractive -Command \"$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block -Start\""
+  },
+  "python_controllers": [
+    {
+      "pid": 2612,
+      "parent_pid": 17360,
+      "name": "python.exe",
+      "path": "C:\\Python314\\python.exe",
+      "create_utc": "2026-10-11T02:06:03.4664660Z",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\matrix.json --execute --adapter run41 --authorization C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\root-authorization-01.json"
+    },
+    {
+      "pid": 17360,
+      "parent_pid": 16260,
+      "name": "python.exe",
+      "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "create_utc": "2026-10-11T02:06:03.4595680Z",
+      "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\matrix.json --execute --adapter run41 --authorization C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\root-authorization-01.json"
+    }
+  ]
+}

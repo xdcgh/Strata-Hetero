@@ -1,0 +1,65 @@
+{
+  "status": "root_failedrun_terminal_review_pass",
+  "terminal_sha256": "93aad13716056d86c4ee8c416ffac1d36f80fcb9a9c8ceb8bb27e467e2ee4f95",
+  "empty_precreated_request_leaves": 9,
+  "model_requests_sent": 0,
+  "model_quality_NOT_RUN": true,
+  "zero_logits_NOT_CAPTURED": true,
+  "owned_identity_checks": [
+    {
+      "role": "service_launcher",
+      "expected": {
+        "pid": 19016,
+        "create_utc": "2026-10-11T02:06:10.9655530Z",
+        "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+        "command_line": "see process.json"
+      },
+      "current": null,
+      "original_owned_identity_absent": true
+    },
+    {
+      "role": "server_child",
+      "expected": {
+        "pid": 15212,
+        "parent_pid": 19016,
+        "create_utc": "2026-10-11T02:06:10.9984530Z",
+        "exe": "C:\\Python314\\python.exe"
+      },
+      "current": null,
+      "original_owned_identity_absent": true
+    },
+    {
+      "role": "engine",
+      "expected": {
+        "pid": 4356,
+        "create_utc": "2026-10-11T02:06:11.5108630Z",
+        "exe": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe"
+      },
+      "current": null,
+      "original_owned_identity_absent": true
+    },
+    {
+      "role": "sampler_launcher",
+      "expected": {
+        "pid": 12864,
+        "create_utc": "2026-10-11T02:06:11.0176270Z",
+        "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe"
+      },
+      "current": null,
+      "original_owned_identity_absent": true
+    },
+    {
+      "role": "sampler_child",
+      "expected": {
+        "pid": 4444,
+        "parent_pid": 12864,
+        "create_utc": "2026-10-11T02:06:11.0507510Z",
+        "exe": "C:\\Python314\\python.exe"
+      },
+      "current": null,
+      "original_owned_identity_absent": true
+    }
+  ],
+  "port8081_free": true,
+  "run57_reused": false
+}
