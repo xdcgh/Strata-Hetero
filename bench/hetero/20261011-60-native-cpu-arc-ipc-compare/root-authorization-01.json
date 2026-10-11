@@ -1,0 +1,30 @@
+{
+  "schema": "strata-native-ipc-compare-root-authorization-v1",
+  "run_id": "native-cpu-arc-ipc-compare-20261011-60",
+  "execution_authorized": true,
+  "model_matrix_stopped": true,
+  "root_review_complete": true,
+  "client_sha256": "11a0cc3306851fc8b6391b58ee9b6167bff41a61e21169dc45e59641d26ccc84",
+  "contract_sha256": "63e51d33f6b1e0795c11a6288d600549698c49eecfe0f0e8bb358870de61ab00",
+  "source_freeze_sha256": "dce6dcf9d6539b06ebd857e82812bf5afaa95e061406bacb64488bdb0a3bd319",
+  "cpu16_none_authorized": true,
+  "utc": "2026-10-11T01:45:39.176704+00:00",
+  "admission_sha256": "807f097a3abedde3fec65253b522964b537e96d1639c70050a1f0a150d8d87ee",
+  "scope": "one complete solo+joint9shape comparison, bothCPUbackends; strict quality alltrials; no Modelroute; stopfirst",
+  "pure_fixture_count": 13,
+  "source_pins_checked": 14,
+  "cpu_binary_bindings": {
+    "cpu-pool-w10-all": {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "sha256": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57",
+      "bytes": 2128896,
+      "build_receipt_sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c"
+    },
+    "cpu-pool-w16-none": {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "sha256": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57",
+      "bytes": 2128896,
+      "build_receipt_sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c"
+    }
+  }
+}
