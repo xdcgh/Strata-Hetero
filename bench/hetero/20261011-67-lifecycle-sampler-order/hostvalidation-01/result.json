@@ -1,0 +1,14 @@
+{
+  "status": "fail",
+  "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B -m unittest tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_fresh_quality_request_collision_stops_before_controller_or_launch tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_fresh_performance_output_collision_stops_before_controller_or_launch tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_run63_authorization_requires_explicit_single_phase_limit tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_run41_template_parameterization_is_parse_only_and_binds_fake_recipe tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_rendered_cleanup_sampler_failure_still_attempts_each_exact_owner tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_real_run41_adapter_cleanup_schema_crosses_coordinator",
+  "exit_code": 1,
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-67-lifecycle-sampler-order\\hostvalidation-01\\unittest.stdout.txt",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-67-lifecycle-sampler-order\\hostvalidation-01\\unittest.stderr.txt",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "73f3557fc453a9c9dd8a8d59cd499bc8ab649171722ea1d92cf5aff457fa5838",
+  "adapter_source_sha256": "1942736d217f376f82702f62027302de70f8ff222919d38a4916b57627b6bd8f",
+  "test_source_sha256": "585c6b28a7b9c9a256ddad86c59402d9f84bbd4386de1bd096582bcca7497407",
+  "model_started": false,
+  "api_or_device_calls": false,
+  "utc": "2026-10-11T02:43:53.1686586Z"
+}

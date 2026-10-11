@@ -340,11 +340,12 @@ class PoolSweepPlanTests(unittest.TestCase):
     def test_fresh_quality_request_collision_stops_before_controller_or_launch(self):
         with tempfile.TemporaryDirectory(prefix="strata-pool-fresh-output-collision-") as temp:
             matrix = _fixture_run63_matrix(Path(temp))
+            first_leaf = Path(json.loads(matrix.read_text(encoding="utf-8"))["arms"][0]["quality_on"]["path"])
+            (first_leaf / "requests" / "smoke_arithmetic").mkdir(parents=True)
             plan = sweep.build_plan(matrix)
             first = plan["steps"][0]
             leaf = Path(first["config"]).parent
-            collision = leaf / "requests" / "smoke_arithmetic"
-            collision.mkdir(parents=True)
+            self.assertTrue((leaf / "requests" / "smoke_arithmetic").is_dir())
             authorization = _auth(matrix)
             authorization["_resolved_output_root"] = str(matrix.parent.resolve())
             adapter = sweep.Run41LifecycleAdapter(matrix, authorization)
@@ -635,11 +636,71 @@ class PoolSweepPlanTests(unittest.TestCase):
                 text = sweep.render_run41_template(kind, step, repo)
                 self.assertNotIn(sweep.RUN41_ID, text)
                 sweep.validate_powershell_syntax(text)
+            cleanup = sweep.render_run41_template("cleanup", quality, repo)
+            sampler_phase = cleanup.index("# RUN41-SAMPLER-FIRST-FINALIZATION-BEGIN")
+            sampler_wait = cleanup.index("Invoke-Run41StopAndWaitForSampler", sampler_phase)
+            owner_stop = cleanup.index("StopExact $watch.engine_pid", sampler_wait)
+            summary = cleanup.index("$summaryCode=", owner_stop)
+            self.assertLess(sampler_phase, sampler_wait)
+            self.assertLess(sampler_wait, owner_stop)
+            self.assertLess(owner_stop, summary)
+            self.assertIn("finally {", cleanup[sampler_phase:summary])
+            self.assertIn("$samplerStopError", cleanup[sampler_phase:summary])
+            self.assertIn("$ownerStopErrors", cleanup[sampler_phase:summary])
             perf_text = sweep.render_performance_controller(perf, repo)
             self.assertIn("performance-stage.json", perf_text)
             self.assertIn("Get-LatestResourceGate", perf_text)
             self.assertIn("--allow-capped-performance", perf_text)
             sweep.validate_powershell_syntax(perf_text)
+
+    def test_rendered_cleanup_sampler_failure_still_attempts_each_exact_owner(self):
+        with tempfile.TemporaryDirectory(prefix="strata-cleanup-finally-fixture-") as temp:
+            matrix = _fixture_matrix(Path(temp))
+            step = sweep.build_plan(matrix)["steps"][0]
+            repo = Path(sweep.__file__).resolve().parents[1]
+            rendered = sweep.render_run41_template("cleanup", step, repo)
+            begin = "# RUN41-SAMPLER-FIRST-FINALIZATION-BEGIN"
+            end = "# RUN41-SAMPLER-FIRST-FINALIZATION-END"
+            block = rendered[rendered.index(begin):rendered.index(end) + len(end)]
+            harness = r'''
+$script:events = [System.Collections.Generic.List[string]]::new()
+$script:samplerFails = $true
+$script:ownerFails = $true
+function Invoke-Run41StopAndWaitForSampler { $script:events.Add('sampler'); if ($script:samplerFails) { throw 'synthetic sampler wait failure' } }
+function StopExact([long]$ProcessId,[string]$Exe,[string]$Created,[long]$Parent,[string]$Contains) {
+    $script:events.Add("owner:$ProcessId")
+    if ($script:ownerFails -and $ProcessId -eq 501) { throw 'synthetic exact stop failure' }
+    return @{pid=$ProcessId;status='synthetic_stopped'}
+}
+$watch=@{engine_pid=501;engine_create_utc='e';engine_exe='engine.exe'}
+$identity=@{engine=@{path='engine.exe'}}
+$server=@{ProcessId=502}
+$launcher=@{ProcessId=503}
+$process=@{actual_server_child_create_utc='s';launcher_pid=503;launcher_exe='python.exe';launcher_create_utc='l';config='config.json'}
+try {
+__CLEANUP_BLOCK__
+    $failed=$false; $message=$null
+}
+catch { $failed=$true; $message=$_.Exception.Message }
+$failedEvents=@($script:events.ToArray())
+Write-Output (ConvertTo-Json -Compress -InputObject ([ordered]@{failure=$failed;message=$message;events=$failedEvents;owner_error_count=$ownerStopErrors.Count}))
+if (-not $failed -or $message -notmatch 'sampler_error=synthetic sampler wait failure' -or $message -notmatch 'synthetic exact stop failure' -or ($failedEvents -join ',') -ne 'sampler,owner:501,owner:502,owner:503') { throw 'synthetic failure path did not preserve sampler and owner-stop outcomes' }
+$script:events = [System.Collections.Generic.List[string]]::new()
+$script:samplerFails = $false
+$script:ownerFails = $false
+__CLEANUP_BLOCK__
+if (($script:events.ToArray() -join ',') -ne 'sampler,owner:501,owner:502,owner:503') { throw 'successful path did not stop sampler before exact owners' }
+[ordered]@{status='synthetic_cleanup_order_pass';failure_events=$failedEvents;success_events=@($script:events.ToArray())}|ConvertTo-Json -Compress
+'''
+            script = harness.replace("__CLEANUP_BLOCK__", block)
+            completed = subprocess.run(
+                [str(sweep.PWsh7), "-NoLogo", "-NoProfile", "-NonInteractive", "-Command",
+                 "$s=[Console]::In.ReadToEnd();$b=[scriptblock]::Create($s);& $b"],
+                input=script, text=True, encoding="utf-8", errors="replace",
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False,
+                creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0), check=False, timeout=15)
+            self.assertEqual(completed.returncode, 0, completed.stderr + "\n" + completed.stdout)
+            self.assertIn('"status":"synthetic_cleanup_order_pass"', completed.stdout)
 
 
 class ProcessAndTailFixtureTests(unittest.TestCase):

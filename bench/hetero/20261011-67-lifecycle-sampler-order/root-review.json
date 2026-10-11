@@ -1,0 +1,13 @@
+{
+  "status": "root_review_pass_host_only_runtime_NOT_RUN",
+  "adapter_sha256": "1942736d217f376f82702f62027302de70f8ff222919d38a4916b57627b6bd8f",
+  "test_sha256": "59b16532fc0e4a16bceffb820660fb3fb39332fb33fa94f4a74837fc628fe458",
+  "immutable_cleanup_template_sha256": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+  "retained_run63_plan_readable": true,
+  "relaunch_of_used_outputs_rejected": true,
+  "new_cleanup_sequence": "POST unload confirmed idle/unloaded; signal STOP and wait sampler terminal; finally attempt every exact owned model/server/launcher stop; preserve all sampler/stop/history errors",
+  "mocked_sampler_and_owner_error_behavior": "pass",
+  "model_API_device_processkill_used": false,
+  "live_new_cleanup_NOT_RUN": true,
+  "failed_fixture_receipts_preserved": true
+}

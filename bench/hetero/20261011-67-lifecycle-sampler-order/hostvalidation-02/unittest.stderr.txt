@@ -1,0 +1,21 @@
+F
+======================================================================
+FAIL: test_rendered_cleanup_sampler_failure_still_attempts_each_exact_owner (tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_rendered_cleanup_sampler_failure_still_attempts_each_exact_owner)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\test_hetero_pool_sweep.py", line 701, in test_rendered_cleanup_sampler_failure_still_attempts_each_exact_owner
+    self.assertEqual(completed.returncode, 0, completed.stderr + "\n" + completed.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Exception: 
+Line |
+  43 |  \ufffd\ufffd ner:503') { throw 'synthetic failure path did not preserve sampler an \ufffd\ufffd
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | synthetic failure path did not preserve sampler and owner-stop outcomes
+
+{"failure":true,"message":"cleanup terminalization failed; sampler_error=synthetic sampler wait failure; exact_owner_stop_errors={\"pid\":501,\"error\":\"synthetic exact stop failure\"}","events":["sampler","owner:501","owner:502","owner:0"],"owner_error_count":1}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.014s
+
+FAILED (failures=1)

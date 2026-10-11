@@ -519,8 +519,6 @@ def build_plan(matrix_path: Path) -> dict[str, Any]:
                 raise SweepError(f"first diagnostic quality phase lacks STRATA_DIAG_ZERO_LOGITS=1: {run_id}")
             if not expected_diagnostic and diagnostic_value is not None:
                 raise SweepError(f"diagnostic environment escaped the first quality phase: {run_id}")
-            if matrix_run_id == "20261011-63-direct-zero-logits-diagnostic" and phase == "quality_on":
-                validate_fresh_phase_outputs(leaf, quality=True)
             args = config_doc.get("args", [])
             try:
                 workers = args[args.index("--pool-workers") + 1]
@@ -691,6 +689,46 @@ def pinned_template_hashes() -> dict[str, str]:
     return {name: expected for name, (_, expected) in RUN41_TEMPLATES.items()}
 
 
+def _render_sampler_first_cleanup(source: str) -> str:
+    owner_line = "$stopped=@();$stopped+=StopExact $watch.engine_pid $identity.engine.path $watch.engine_create_utc $server.ProcessId ' --serve ';$stopped+=StopExact $server.ProcessId 'C:\\Python314\\python.exe' $process.actual_server_child_create_utc $launcher.ProcessId $process.config;$stopped+=StopExact $launcher.ProcessId $process.launcher_exe $process.launcher_create_utc -1 'serve\\server.py'"
+    sampler_start = "$stop=Join-Path $run 'resource\\STOP';"
+    summary_start = "$summaryCode='import json,pathlib,sys;"
+    if (source.count(owner_line) != 1 or source.count(sampler_start) != 1 or source.count(summary_start) != 1):
+        raise SweepError("pinned cleanup owner/sampler ordering anchors changed")
+    owner_pos, sampler_pos, summary_pos = (source.index(owner_line), source.index(sampler_start), source.index(summary_start))
+    if not owner_pos < sampler_pos < summary_pos:
+        raise SweepError("pinned cleanup sections are not in the expected source order")
+    sampler_end = source.rfind("\n", sampler_pos, summary_pos)
+    sampler_body = source[sampler_pos:sampler_end].strip()
+    source_prefix = source[:owner_pos]
+    source_suffix = source[summary_pos:]
+    replacement = """function Invoke-Run41StopAndWaitForSampler {
+""" + sampler_body + "\n}\n" + r'''# RUN41-SAMPLER-FIRST-FINALIZATION-BEGIN
+$samplerStopError = $null
+$ownerStopErrors = @()
+$stopped = @()
+try {
+    Invoke-Run41StopAndWaitForSampler
+} catch {
+    $samplerStopError = $_
+} finally {
+    try { $stopped += StopExact $watch.engine_pid $identity.engine.path $watch.engine_create_utc $server.ProcessId ' --serve ' }
+    catch { $ownerStopErrors += [ordered]@{pid=$watch.engine_pid;error=$_.Exception.Message} }
+    try { $stopped += StopExact $server.ProcessId 'C:\Python314\python.exe' $process.actual_server_child_create_utc $launcher.ProcessId $process.config }
+    catch { $ownerStopErrors += [ordered]@{pid=$server.ProcessId;error=$_.Exception.Message} }
+    try { $stopped += StopExact $launcher.ProcessId $process.launcher_exe $process.launcher_create_utc -1 'serve\server.py' }
+    catch { $ownerStopErrors += [ordered]@{pid=$launcher.ProcessId;error=$_.Exception.Message} }
+}
+if ($samplerStopError -or $ownerStopErrors.Count -gt 0) {
+    $samplerMessage = if ($samplerStopError) { $samplerStopError.Exception.Message } else { 'none' }
+    $ownerMessage = if ($ownerStopErrors.Count) { ($ownerStopErrors | ConvertTo-Json -Compress) } else { 'none' }
+    throw "cleanup terminalization failed; sampler_error=$samplerMessage; exact_owner_stop_errors=$ownerMessage"
+}
+# RUN41-SAMPLER-FIRST-FINALIZATION-END
+'''
+    return source_prefix + replacement + source_suffix
+
+
 def render_run41_template(template_name: str, step: dict[str, Any], repo: Path) -> str:
     if template_name not in ("launch", "watch", "quality", "cleanup"):
         raise SweepError("unknown run41 template")
@@ -730,6 +768,7 @@ def render_run41_template(template_name: str, step: dict[str, Any], repo: Path) 
         old = "$repo='C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero';$run=Join-Path $repo 'bench\\hetero\\" + run_id + "';"
         if rendered.count(old) != 1: raise SweepError("run41 cleanup run-directory anchor not unique")
         rendered = rendered.replace(old, "$repo='C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero';$run='" + str(run_dir) + "';")
+        rendered = _render_sampler_first_cleanup(rendered)
     if template_name == "quality" and step["phase"] == "performance_off":
         old = "$identity.config.capture_actual_engine_token_ids -ne $true"
         if rendered.count(old) != 1:

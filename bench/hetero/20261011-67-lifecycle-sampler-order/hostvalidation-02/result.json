@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B -m unittest tools.test_hetero_pool_sweep.PoolSweepPlanTests.test_rendered_cleanup_sampler_failure_still_attempts_each_exact_owner",
+  "exit_code": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e9bdbd8aea64d8b82c71848ece316fd96809fbb90b48851856ba7e4f3e806cfc",
+  "adapter_source_sha256": "1942736d217f376f82702f62027302de70f8ff222919d38a4916b57627b6bd8f",
+  "test_source_sha256": "fcc1fa84c9852f1bb68a0d4a306c103b2aa1e87a344e8c56e5756185cecc6ff3",
+  "model_started": false,
+  "api_or_device_calls": false,
+  "utc": "2026-10-11T02:44:16.6888460Z"
+}
