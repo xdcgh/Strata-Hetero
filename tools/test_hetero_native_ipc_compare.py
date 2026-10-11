@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import copy
 import json
 import struct
 import threading
@@ -121,10 +122,77 @@ class CompareProtocolFixtures(unittest.TestCase):
             auth_path.write_text(json.dumps(auth), encoding="utf-8")
             args = SimpleNamespace(execute=True, root_start_confirmed=True,
                 model_matrix_stopped_confirmed=True, root_authorization=auth_path,
-                include_cpu16_none=True)
+                include_cpu16_none=True, paired_only=False)
             result = compare._authorization(args, contract, contract_path)
             self.assertEqual(result["authorization"], auth)
             self.assertEqual(result["path"], str(auth_path))
+
+    def test_paired_only_authorization_pins_prior_receipt_and_root_reviews(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            contract_path = directory / "compare-contract.json"
+            freeze_path = directory / "source-freeze.json"
+            auth_path = directory / "root-authorization.json"
+            baseline_paths = {"baseline_contract_path": directory / "baseline-contract.json",
+                "baseline_receipt_path": directory / "baseline-receipt.json",
+                "root_solo_review_path": directory / "solo-review.json",
+                "root_arc_numerical_review_path": directory / "arc-review.json",
+                "baseline_executed_client_path": directory / "executed-client.py"}
+            for path in [contract_path, freeze_path, *baseline_paths.values()]:
+                path.write_text('{"fixture":true}', encoding="utf-8")
+            hashes = {key.replace("_path", "_sha256"): compare._stable_sha(path)
+                for key, path in baseline_paths.items()}
+            paired = {"baseline_run_id": "native-cpu-arc-ipc-compare-20261011-60",
+                "baseline_client_sha256": hashes["baseline_executed_client_sha256"],
+                **{key: value for key, value in hashes.items() if key != "baseline_executed_client_sha256"}}
+            contract = {"run_id": "native-cpu-arc-ipc-compare-20261011-61",
+                "source_freeze_path": str(freeze_path), "execution_mode": "paired_only", "paired_only": paired}
+            auth = {"schema": "strata-native-ipc-compare-root-authorization-v1",
+                "run_id": contract["run_id"], "execution_authorized": True,
+                "model_matrix_stopped": True, "root_review_complete": True,
+                "client_sha256": compare._stable_sha(Path(compare.__file__)),
+                "contract_sha256": compare._stable_sha(contract_path),
+                "source_freeze_sha256": compare._stable_sha(freeze_path),
+                "execution_mode": "paired_only", **paired, "cpu16_none_authorized": True}
+            auth_path.write_text(json.dumps(auth), encoding="utf-8")
+            args = SimpleNamespace(execute=True, root_start_confirmed=True,
+                model_matrix_stopped_confirmed=True, root_authorization=auth_path,
+                include_cpu16_none=True, paired_only=True)
+            self.assertEqual(compare._authorization(args, contract, contract_path)["authorization"], auth)
+            auth["baseline_receipt_sha256"] = "0" * 64
+            auth_path.write_text(json.dumps(auth), encoding="utf-8")
+            with self.assertRaisesRegex(compare.CompareError, "baseline_receipt_sha256"):
+                compare._authorization(args, contract, contract_path)
+
+    def test_arm_local_worker_logs_do_not_reuse_same_backend_path(self):
+        logs = Path("fixture-logs")
+        solo = compare._worker_stderr_path(logs, "cpu-pool-w10-all-solo", "cpu-pool-w10-all")
+        joint_cpu = compare._worker_stderr_path(logs, "cpu-pool-w10-all+arc-gpu0-concurrent", "cpu-pool-w10-all")
+        joint_arc = compare._worker_stderr_path(logs, "cpu-pool-w10-all+arc-gpu0-concurrent", "arc-gpu0-f32-accuracy")
+        self.assertNotEqual(solo, joint_cpu)
+        self.assertNotEqual(joint_cpu, joint_arc)
+
+    def test_paired_comparison_basis_pins_inputs_sources_and_worker_configuration(self):
+        baseline = {"contract_version": 2, "source_pins": {"service": "a" * 64},
+            "arc": {"device": "GPU.0", "identity_sha256": "b" * 64},
+            "artifacts": {"inputs": "input-receipt"}, "row_cases": [{"rows": 1, "input_sha256": "c" * 64}],
+            "warmup": 1, "formal_repeats": 5,
+            "quality_tolerances": {"max_abs": 0.01, "relative_rmse": 0.001, "row_norm_relative": 0.001},
+            "quality_policy": {"strict": True}, "timing_contract": {"boundary": "same"},
+            "resource_gate": {"physical": 12, "commit": 4}, "concurrency": {"paired": True},
+            "backends": [{"id": "cpu10", "kind": "cpu", "exe": "cpu.exe", "exe_sha256": "d" * 64,
+                "build_receipt_path": "build.json", "build_receipt_sha256": "e" * 64,
+                "pool_workers": 10, "pool_affinity": "all", "optional": False, "build_run_id": "run59"}],
+            "output": {"private_output_root": "old"}, "run_id": "run60"}
+        paired = copy.deepcopy(baseline)
+        paired["run_id"] = "run61"; paired["output"]["private_output_root"] = "new"
+        paired["execution_mode"] = "paired_only"
+        self.assertEqual(compare._comparison_basis(baseline), compare._comparison_basis(paired))
+        paired["row_cases"][0]["input_sha256"] = "f" * 64
+        self.assertNotEqual(compare._comparison_basis(baseline), compare._comparison_basis(paired))
+        paired["row_cases"] = copy.deepcopy(baseline["row_cases"])
+        paired["backends"][0]["pool_affinity"] = "none"
+        self.assertNotEqual(compare._comparison_basis(baseline), compare._comparison_basis(paired))
 
     def test_cpu_binary_verification_binds_explicit_run59_and_legacy_run52(self):
         with tempfile.TemporaryDirectory() as temp:

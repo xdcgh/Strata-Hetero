@@ -1,0 +1,8 @@
+{
+  "failed_check": "nvidia-smi lists protected display processes with unknown names: CIM confirmed 2380=dwm.exe and2300=LogonUI.exe under winlogon1644",
+  "authorization_written": false,
+  "status": "admission_failed_before_any_service",
+  "worker_started": false,
+  "utc": "2026-10-11T01:59:04.0363954+00:00",
+  "model_loaded": false
+}

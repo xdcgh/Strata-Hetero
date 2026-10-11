@@ -1,0 +1,72 @@
+{
+  "schema": "run61-root-admission-v1",
+  "utc": "2026-10-11T01:59:06.289396+00:00",
+  "wsl_running": [
+    "Ubuntu-24.04"
+  ],
+  "wsl_idle_proof": {
+    "process_snapshot": "    PID    PPID COMMAND         COMMAND\n      1       0 systemd         /sbin/init\n      2       1 init-systemd(Ub /init\n      9       2 init            plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate\n     48       1 systemd-journal /usr/lib/systemd/systemd-journald\n     97       1 systemd-udevd   /usr/lib/systemd/systemd-udevd\n    146       1 systemd-resolve /usr/lib/systemd/systemd-resolved\n    147       1 systemd-timesyn /usr/lib/systemd/systemd-timesyncd\n    199       1 cron            /usr/sbin/cron -f -P\n    200       1 dbus-daemon     @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only\n    207       1 systemd-logind  /usr/lib/systemd/systemd-logind\n    210       1 wsl-pro-service /usr/libexec/wsl-pro-service\n    217       1 rsyslogd        /usr/sbin/rsyslogd -n -iNONE\n    220       1 agetty          /sbin/agetty -o -p -- \\u --noclear - linux\n    275       1 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal\n    298       1 sshd            sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups\n    314       1 systemd         /usr/lib/systemd/systemd --user\n    315     314 (sd-pam)        (sd-pam)\n    406       2 SessionLeader   /init\n    412     406 Relay(413)      /init\n    413     412 sleep           /bin/sleep 2147483647\n    414       2 login           /bin/login -f\n    458     414 bash            -bash\n    680       1 codex           codex -c features.code_mode_host=true app-server --listen unix://\n   1521     298 sshd            sshd: ubuntu [priv]\n   1549    1521 sshd            sshd: ubuntu@notty\n   1550    1549 codex           codex app-server proxy\n   1793     298 sshd            sshd: ubuntu [priv]\n   1821    1793 sshd            sshd: ubuntu@notty\n   1822    1821 codex           codex app-server proxy\n   2144       2 login           /bin/login -f\n   2177       1 systemd         /usr/lib/systemd/systemd --user\n   2178    2177 (sd-pam)        (sd-pam)\n   2205    2144 bash            -bash\n   2642      97 (udev-worker)   (udev-worker)\n   2644      97 (udev-worker)   (udev-worker)\n   2646      97 (udev-worker)   (udev-worker)\n   2647      97 (udev-worker)   (udev-worker)\n   2648      97 (udev-worker)   (udev-worker)\n   2649      97 (udev-worker)   (udev-worker)\n   2651      97 (udev-worker)   (udev-worker)\n   2653      97 (udev-worker)   (udev-worker)\n   2655      97 (udev-worker)   (udev-worker)\n   2656       2 SessionLeader   /init\n   2657    2656 Relay(2658)     /init\n   2658    2657 ps              ps -eo pid,ppid,comm,args\n",
+    "comfyui_active": "inactive",
+    "comfyui_enabled": "disabled",
+    "dxg_holders": [],
+    "dxg_fuser_exit": 1,
+    "scope": "idle app keepalive; no Linux model, compiler, Python worker, or GPU device holder"
+  },
+  "competing_processes": [],
+  "owned_ports_listening": [],
+  "gpu_csv": "48398, 231, 0, 610.88",
+  "compute_processes_csv": "2380, [Insufficient Permissions], [N/A]\n2300, [Insufficient Permissions], [N/A]",
+  "verified_display_processes": [
+    {
+      "pid": 2300,
+      "name": "LogonUI.exe",
+      "path": null
+    },
+    {
+      "pid": 2380,
+      "name": "dwm.exe",
+      "path": null
+    }
+  ],
+  "memory": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 114140319744,
+    "physical_used_bytes": 22822928384,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 24153042944,
+    "commit_available_bytes": 121400139776,
+    "commit_total_pages": 5896739,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 121400139776,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "gate_pass": true,
+  "source_freeze_files_checked": 33,
+  "source_pins_checked": 14,
+  "cpu_binary_bindings": {
+    "cpu-pool-w10-all": {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "sha256": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57",
+      "bytes": 2128896,
+      "build_receipt_sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c"
+    },
+    "cpu-pool-w16-none": {
+      "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-59\\hetero_native_cpu_service.exe",
+      "sha256": "8fa5d7614f1e63c9c1aece86aa249f7ac312c6bc4902837bd2de3fd076322e57",
+      "bytes": 2128896,
+      "build_receipt_sha256": "c3b68b350ba785dd57097e902c07d1bf6fe92809a55e3120c7e3ecfd41fbd61c"
+    }
+  },
+  "root_baseline_validator_pass": true,
+  "baseline_raw_responses_checked": 162,
+  "pure_fixture_validation": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-61-native-cpu-arc-ipc-joint-compare\\receipts-validation-04\\validation-receipt.json"
+}

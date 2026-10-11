@@ -1,0 +1,15 @@
+{
+  "schema": "run61-source-only-validation-v2",
+  "status": "pass",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "no_bytecode": true,
+  "pure_test_count": 16,
+  "unittest_exit_code": 0,
+  "baseline_integrity_exit_code": 0,
+  "no_service_or_device": true,
+  "finished_utc": "2026-10-11T01:53:40.8956429Z",
+  "default53_plan_exit_code": 0,
+  "paired61_plan_exit_code": 0,
+  "default53_plan_sha256": "ba3dbe413d68a2e6f381057db84c7232e4c270e2c5e375adf087cc00d0633dd9",
+  "paired61_plan_sha256": "9464eaff0e9ca9ff88657a855079fef62b3d3a4b15990e5c28b39575f1368ed1"
+}

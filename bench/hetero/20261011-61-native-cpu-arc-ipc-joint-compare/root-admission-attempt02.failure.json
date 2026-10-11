@@ -1,0 +1,8 @@
+{
+  "status": "admission_failed_before_any_service",
+  "authorization_written": false,
+  "utc": "2026-10-11T01:58:31.7876965+00:00",
+  "worker_started": false,
+  "model_loaded": false,
+  "failed_check": "System unattended-upgrade-shutdown wait-for-signal matched generic Python filter"
+}

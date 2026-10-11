@@ -1,0 +1,8 @@
+{
+  "authorization_written": false,
+  "model_loaded": false,
+  "utc": "2026-10-11T01:58:15.3085308+00:00",
+  "failed_check": "WSL had been restarted by the app keepalive after shutdown",
+  "status": "admission_failed_before_any_service",
+  "worker_started": false
+}

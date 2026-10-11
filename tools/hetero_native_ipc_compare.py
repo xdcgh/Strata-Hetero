@@ -15,6 +15,7 @@ import os
 from pathlib import Path
 import secrets
 import shutil
+import statistics
 import struct
 import subprocess
 import sys
@@ -70,7 +71,8 @@ def plan_record(contract: dict[str, Any]) -> dict[str, Any]:
                  "optional": b["optional"], "binary_sha256": b["exe_sha256"]}
                 for b in contract["backends"]]
     return {
-        "status": "plan_only", "run_id": contract["run_id"], "execution_authorized": False,
+        "status": "plan_only", "run_id": contract["run_id"], "execution_mode": contract.get("execution_mode", "full"),
+        "execution_authorized": False,
         "rows": [x["rows"] for x in contract["row_cases"]], "warmup": contract["warmup"],
         "formal_repeats": contract["formal_repeats"], "backends": backends,
         "arms": contract["arm_plan"], "arc": {"device": "GPU.0", "precision": "f32", "execution_mode": "ACCURACY"},
@@ -172,6 +174,10 @@ def _safe_component(value: str) -> str:
     result = "".join(c if c.isalnum() or c in "-+_" else "_" for c in value)
     if not result or result in {".", ".."}: raise CompareError("unsafe output path component")
     return result
+
+
+def _worker_stderr_path(logs: Path, arm_id: str, role: str) -> Path:
+    return logs / f"{_safe_component(arm_id)}-{_safe_component(role)}.stderr.log"
 
 
 def _write_raw_response(path: Path, body: bytes) -> dict[str, Any]:
@@ -371,8 +377,25 @@ def _authorization(args, contract, contract_path: Path):
         "execution_authorized": True, "model_matrix_stopped": True, "root_review_complete": True,
         "client_sha256": _stable_sha(Path(__file__)), "contract_sha256": _stable_sha(contract_path),
         "source_freeze_sha256": _stable_sha(source_freeze_path)}
+    execution_mode = contract.get("execution_mode", "full")
+    if execution_mode not in {"full", "paired_only"}:
+        raise CompareError(f"unsupported comparison execution mode: {execution_mode}")
+    if bool(args.paired_only) != (execution_mode == "paired_only"):
+        raise CompareError("--paired-only must exactly match the selected contract execution mode")
     for key, value in expected.items():
         if auth.get(key) != value: raise CompareError(f"root authorization binding mismatch: {key}")
+    if execution_mode == "paired_only":
+        paired = contract.get("paired_only")
+        if not isinstance(paired, dict): raise CompareError("paired-only contract baseline binding is missing")
+        paired_expected = {"execution_mode": "paired_only",
+            "baseline_run_id": paired["baseline_run_id"],
+            "baseline_contract_sha256": paired["baseline_contract_sha256"],
+            "baseline_receipt_sha256": paired["baseline_receipt_sha256"],
+            "baseline_client_sha256": paired["baseline_client_sha256"],
+            "root_solo_review_sha256": paired["root_solo_review_sha256"],
+            "root_arc_numerical_review_sha256": paired["root_arc_numerical_review_sha256"]}
+        for key, value in paired_expected.items():
+            if auth.get(key) != value: raise CompareError(f"paired-only root authorization binding mismatch: {key}")
     if args.include_cpu16_none and not auth.get("cpu16_none_authorized", False):
         raise CompareError("optional CPU pool w16/none needs separate root authorization")
     return {"path": str(path), "sha256": _stable_sha(path), "authorization": auth}
@@ -438,13 +461,180 @@ def _verify_cpu_binary(contract, backend):
             "build_receipt_sha256": backend["build_receipt_sha256"]}
 
 
-def _start_cpu(backend, contract, monitor, logs, psutil):
+def _comparison_basis(contract):
+    backend_keys = ("id", "kind", "exe", "exe_sha256", "build_receipt_path", "build_receipt_sha256",
+                    "pool_workers", "pool_affinity", "optional", "build_run_id")
+    return ({key: contract[key] for key in (
+        "contract_version", "source_pins", "arc", "artifacts", "row_cases", "warmup", "formal_repeats",
+        "quality_tolerances", "quality_policy", "timing_contract", "resource_gate", "concurrency")}
+        | {"backends": [{key: backend.get(key) for key in backend_keys} for backend in contract["backends"]]})
+
+
+def _validate_baseline_trial(trial, mode, row_case, output_root, expected_label, tolerances):
+    if not isinstance(trial, dict) or trial.get("label") != expected_label or trial.get("comparison_pass") is not True:
+        raise CompareError(f"paired-only baseline {mode} trial {expected_label} did not pass")
+    for key in ("output_shape_ok", "finite", "timed_input_hash_match", "resource_gate_pass_after_transfer",
+                "paired_transfer_complete", "owned_output_copy", "output_storage_complete"):
+        if trial.get(key) is not True:
+            raise CompareError(f"paired-only baseline {mode} {expected_label} failed {key}")
+    if trial.get("response_format") != "f32le":
+        raise CompareError(f"paired-only baseline {mode} {expected_label} is not F32LE")
+    if trial.get("rows") != row_case["rows"] or trial.get("input_sha256") != row_case["input_sha256"]:
+        raise CompareError(f"paired-only baseline {mode} {expected_label} input binding changed")
+    if trial.get("input_bytes") != row_case["input_bytes"] or trial.get("output_bytes") != row_case["rows"] * 2560 * 4:
+        raise CompareError(f"paired-only baseline {mode} {expected_label} tensor size changed")
+    if mode == "cpu":
+        if trial.get("bitwise_gold_match") is not True or trial.get("output_sha256") != row_case["native_cpu_output_sha256"]:
+            raise CompareError(f"paired-only CPU baseline {expected_label} did not bitwise match native gold")
+    else:
+        quality = trial.get("numerical_quality_vs_native_cpu")
+        if (not isinstance(quality, dict) or quality.get("pass") is not True or
+            quality.get("shape_ok") is not True or quality.get("finite") is not True):
+            raise CompareError(f"paired-only Arc baseline {expected_label} failed numerical quality")
+        if quality.get("tolerances") != tolerances:
+            raise CompareError(f"paired-only Arc baseline {expected_label} tolerance contract changed")
+    storage = trial.get("raw_output_storage")
+    if not isinstance(storage, dict) or storage.get("exclusive") is not True or storage.get("complete") is not True:
+        raise CompareError(f"paired-only baseline {mode} {expected_label} lacks complete exclusive output storage")
+    output_path = Path(storage.get("path", ""))
+    if not output_path.is_absolute() or not output_path.is_file():
+        raise CompareError(f"paired-only baseline {mode} {expected_label} output is missing")
+    try:
+        if os.path.normcase(os.path.commonpath([os.path.realpath(output_path), os.path.realpath(output_root)])) != os.path.normcase(os.path.realpath(output_root)):
+            raise CompareError(f"paired-only baseline {mode} {expected_label} output escaped its private root")
+    except ValueError as exc:
+        raise CompareError(f"paired-only baseline {mode} {expected_label} output root mismatch") from exc
+    if output_path.stat().st_size != trial["output_bytes"] or storage.get("bytes") != trial["output_bytes"]:
+        raise CompareError(f"paired-only baseline {mode} {expected_label} output byte count changed")
+    if storage.get("sha256") != trial.get("output_sha256") or _stable_sha(output_path) != trial.get("output_sha256"):
+        raise CompareError(f"paired-only baseline {mode} {expected_label} output hash changed")
+
+
+def _verify_paired_baseline(contract):
+    paired = contract.get("paired_only")
+    if contract.get("execution_mode") != "paired_only" or not isinstance(paired, dict):
+        raise CompareError("paired-only baseline requested for a non-paired contract")
+    baseline_contract_path = Path(paired["baseline_contract_path"])
+    baseline_receipt_path = Path(paired["baseline_receipt_path"])
+    review_path = Path(paired["root_solo_review_path"])
+    arc_review_path = Path(paired["root_arc_numerical_review_path"])
+    baseline_client_path = Path(paired["baseline_executed_client_path"])
+    for path in (baseline_contract_path, baseline_receipt_path, review_path, arc_review_path, baseline_client_path):
+        if not path.is_absolute() or not path.is_file():
+            raise CompareError(f"paired-only baseline file is absent or not absolute: {path}")
+    hashes = {"baseline_contract_sha256": _stable_sha(baseline_contract_path),
+              "baseline_receipt_sha256": _stable_sha(baseline_receipt_path),
+              "baseline_client_sha256": _stable_sha(baseline_client_path),
+              "root_solo_review_sha256": _stable_sha(review_path),
+              "root_arc_numerical_review_sha256": _stable_sha(arc_review_path)}
+    for key, value in hashes.items():
+        if paired.get(key) != value:
+            raise CompareError(f"paired-only baseline changed: {key}")
+    baseline_contract = json.loads(baseline_contract_path.read_text(encoding="utf-8-sig"))
+    if baseline_contract.get("run_id") != paired.get("baseline_run_id"):
+        raise CompareError("paired-only baseline contract run id changed")
+    if _comparison_basis(contract) != _comparison_basis(baseline_contract):
+        raise CompareError("paired-only baseline source/timing/tolerance/input/binary/worker contract differs")
+    baseline = json.loads(baseline_receipt_path.read_text(encoding="utf-8-sig"))
+    review = json.loads(review_path.read_text(encoding="utf-8-sig"))
+    arc_review = json.loads(arc_review_path.read_text(encoding="utf-8-sig"))
+    if baseline.get("run_id") != paired["baseline_run_id"] or baseline.get("status") != "failed":
+        raise CompareError("paired-only baseline receipt is not the reviewed partial run60")
+    baseline_auth = baseline.get("root_authorization", {}).get("authorization", {})
+    baseline_freeze_path = Path(baseline_contract.get("source_freeze_path", baseline_contract_path.parent / "source-freeze.json"))
+    if (baseline_auth.get("client_sha256") != hashes["baseline_client_sha256"] or
+        baseline_auth.get("contract_sha256") != hashes["baseline_contract_sha256"] or
+        not baseline_freeze_path.is_file() or
+        baseline_auth.get("source_freeze_sha256") != _stable_sha(baseline_freeze_path)):
+        raise CompareError("paired-only baseline execution authorization does not bind its frozen client/contract/source")
+    failure = baseline.get("failure", {})
+    if (failure.get("type") != "FileExistsError" or failure.get("no_restart") is not True or
+        "cpu-pool-w10-all.stderr.log" not in failure.get("message", "")):
+        raise CompareError("paired-only baseline did not stop at the reviewed solo-to-joint log collision")
+    if baseline.get("raw_output_files_written") is not True or baseline.get("large_f32_outputs_written") is not True:
+        raise CompareError("paired-only baseline raw F32 responses were not retained")
+    if (baseline.get("resource_gate_all_samples_passed") is not True or
+        type(baseline.get("resource_gate_samples")) is not int or baseline["resource_gate_samples"] < 1):
+        raise CompareError("paired-only baseline resource observer has failed or missing samples")
+    if baseline.get("source_pins") != _check_source_pins(contract):
+        raise CompareError("paired-only baseline source pin receipt differs from the current contract")
+    if review.get("status") != "root_raw_hash_review_pass_solo_only" or review.get("receipt_sha256") != hashes["baseline_receipt_sha256"]:
+        raise CompareError("root solo-only raw-response review does not bind the baseline receipt")
+    if (review.get("checked_response_files") != 162 or review.get("concurrent_unrun") is not True or
+        review.get("modelgain_unrun") is not True):
+        raise CompareError("root solo-only review did not check all 162 responses or confirm joint arms were unrun")
+    if (arc_review.get("status") != "root_independent_arc_numerical_replay_pass" or
+        arc_review.get("outputs_checked") != 54 or arc_review.get("formal_outputs") != 45 or
+        arc_review.get("warmups") != 9 or arc_review.get("tolerances") != contract["quality_tolerances"]):
+        raise CompareError("root independent Arc numerical review is incomplete or uses different tolerances")
+    row_cases = {item["rows"]: item for item in contract["row_cases"]}
+    expected_cpu_ids = {b["id"] + "-solo" for b in contract["backends"]}
+    expected_ids = expected_cpu_ids | {"arc-gpu0-f32-accuracy-solo"}
+    arms = baseline.get("arms", [])
+    by_id = {arm.get("id"): arm for arm in arms}
+    if len(by_id) != len(arms) or set(by_id) != expected_ids | {"cpu-pool-w10-all+arc-gpu0-concurrent"}:
+        raise CompareError("paired-only baseline is missing one or more complete solo arms")
+    joint_id = "cpu-pool-w10-all+arc-gpu0-concurrent"
+    interrupted = by_id.get(joint_id)
+    if (interrupted is None or interrupted.get("status") != "running" or interrupted.get("rows") != [] or
+        interrupted.get("process_start") is not None or interrupted.get("cleanup") is not None):
+        raise CompareError("paired-only baseline partial joint arm differs from the reviewed pre-start failure")
+    reviewed = {entry.get("arm"): entry for entry in review.get("arms", [])}
+    if set(reviewed) != expected_ids:
+        raise CompareError("root solo review arm list differs from the completed baseline arms")
+    arc_points = {(point.get("rows"), point.get("label")): point for point in arc_review.get("points", [])}
+    if len(arc_points) != 54:
+        raise CompareError("root independent Arc numerical review has duplicate or missing output points")
+    for arm_id in expected_ids:
+        arm = by_id[arm_id]
+        if arm.get("status") != "complete" or not arm.get("process_start"):
+            raise CompareError(f"paired-only baseline arm did not complete: {arm_id}")
+        cleanup = arm.get("cleanup")
+        if not isinstance(cleanup, dict) or not cleanup:
+            raise CompareError(f"paired-only baseline cleanup receipt missing: {arm_id}")
+        for row in cleanup.values():
+            if row.get("terminal") is not True or row.get("remaining_owned_descendants") != []:
+                raise CompareError(f"paired-only baseline owned process tree did not terminate: {arm_id}")
+        rows = arm.get("rows", [])
+        if [item.get("rows") for item in rows] != list(ROWS) or len(rows) != len(ROWS):
+            raise CompareError(f"paired-only baseline row matrix is incomplete: {arm_id}")
+        review_rows = reviewed[arm_id].get("rows", [])
+        if [item.get("rows") for item in review_rows] != list(ROWS):
+            raise CompareError(f"root solo review row matrix is incomplete: {arm_id}")
+        mode = "arc" if arm_id == "arc-gpu0-f32-accuracy-solo" else "cpu"
+        for row in rows:
+            expected_trials = ["warmup"] + [f"formal-{i:02d}" for i in range(1, contract["formal_repeats"] + 1)]
+            trials = [row.get("warmup"), *row.get("formals", [])]
+            if [trial.get("label") if isinstance(trial, dict) else None for trial in trials] != expected_trials:
+                raise CompareError(f"paired-only baseline trial labels are incomplete: {arm_id}")
+            case = row_cases[row["rows"]]
+            for trial in trials:
+                _validate_baseline_trial(trial, mode, case, Path(baseline_contract["output"]["private_output_root"]),
+                                         trial["label"], contract["quality_tolerances"])
+                if mode == "arc":
+                    point = arc_points.get((row["rows"], trial["label"]))
+                    quality = point.get("quality") if isinstance(point, dict) else None
+                    if (not isinstance(quality, dict) or quality != trial.get("numerical_quality_vs_native_cpu") or
+                        quality.get("pass") is not True or quality.get("shape_ok") is not True or quality.get("finite") is not True or
+                        quality.get("tolerances") != contract["quality_tolerances"] or
+                        point.get("sha256") != trial.get("output_sha256")):
+                        raise CompareError(f"root independent Arc review differs from baseline output: rows={row['rows']} {trial['label']}")
+        reviewed_rows = [
+            {"rows": row["rows"], "rtt_ms": round(statistics.median([x["caller_boundary_rtt_ns"] for x in row["formals"]]) / 1e6, 4),
+             "worker_ms": round(statistics.median([x["worker_wall_ns"] for x in row["formals"]]) / 1e6, 4)} for row in rows]
+        if reviewed[arm_id].get("rows") != reviewed_rows:
+            raise CompareError(f"root solo review statistics differ from receipt: {arm_id}")
+    return {"contract": baseline_contract, "receipt": baseline, "review": review, "arc_review": arc_review,
+        **hashes, "run_id": paired["baseline_run_id"]}
+
+
+def _start_cpu(backend, contract, monitor, logs, psutil, arm_id):
     argv = [backend["exe"], "--serve", "--blob", contract["arc"]["blob_path"], "--blob-sha256",
         contract["arc"]["blob_sha256"], "--identity", contract["arc"]["identity_path"], "--identity-sha256",
         contract["arc"]["identity_sha256"], "--pool-workers", str(backend["pool_workers"]),
         "--pool-affinity", backend["pool_affinity"]]
     t0 = time.perf_counter_ns()
-    worker = RUN42.transport.OwnedPipeWorker(argv, logs / (backend["id"] + ".stderr.log"),
+    worker = RUN42.transport.OwnedPipeWorker(argv, _worker_stderr_path(logs, arm_id, backend["id"]),
         request_timeout=contract["request_timeout_seconds"], shutdown_timeout=5.0).start()
     tree = None
     try:
@@ -467,9 +657,9 @@ def _start_cpu(backend, contract, monitor, logs, psutil):
         raise
 
 
-def _start_arc(contract, monitor, logs, psutil, existing_handles=()):
+def _start_arc(contract, monitor, logs, psutil, arm_id, existing_handles=()):
     arc = contract["arc"]; argv = list(arc["service_argv_template"]); t0 = time.perf_counter_ns()
-    worker = RUN42.transport.OwnedPipeWorker(argv, logs / "arc-gpu0-f32-accuracy.stderr.log",
+    worker = RUN42.transport.OwnedPipeWorker(argv, _worker_stderr_path(logs, arm_id, "arc-gpu0-f32-accuracy"),
         request_timeout=contract["request_timeout_seconds"], shutdown_timeout=5.0).start()
     tree = None
     try:
@@ -657,13 +847,15 @@ def _flatten_solo_rows(arm):
     return {row["rows"]: row for row in arm.get("rows", [])}
 
 
-def _contention_deltas(arms):
-    """Describe solo/concurrent latency deltas; these are not memory-bandwidth measurements."""
+def _contention_deltas(arms, baseline_arms=None, baseline_run_id=None, joint_run_id=None):
+    """Describe latency deltas only; separately executed baselines are labeled cross-run."""
     by_id = {a["id"]: a for a in arms}
+    baseline_by_id = {a["id"]: a for a in (baseline_arms if baseline_arms is not None else arms)}
+    cross_run = baseline_arms is not None
     deltas = []
     for backend in ("cpu-pool-w10-all", "cpu-pool-w16-none"):
-        cpu_solo = by_id.get(backend + "-solo")
-        arc_solo = by_id.get("arc-gpu0-f32-accuracy-solo")
+        cpu_solo = baseline_by_id.get(backend + "-solo")
+        arc_solo = baseline_by_id.get("arc-gpu0-f32-accuracy-solo")
         concurrent = by_id.get(backend + "+arc-gpu0-concurrent")
         if (cpu_solo is None or arc_solo is None or concurrent is None or
             cpu_solo.get("status") != "complete" or arc_solo.get("status") != "complete" or
@@ -687,7 +879,11 @@ def _contention_deltas(arms):
                         during = pair[side]["caller_boundary_rtt_ns"]
                         deltas.append({"backend": backend, "rows": joint["rows"], "label": pair["label"],
                             "service": side, "solo_ns": baseline, "concurrent_ns": during,
-                            "delta_ns": during - baseline, "interpretation": "latency contention only; no bandwidth inference"})
+                            "delta_ns": during - baseline,
+                            "baseline_run_id": baseline_run_id or joint_run_id,
+                            "joint_run_id": joint_run_id,
+                            "comparison_mode": "cross-run baseline; not interleaved" if cross_run else "same-run sequential baseline",
+                            "interpretation": "latency contention only; no bandwidth inference"})
     return deltas
 
 
@@ -697,6 +893,9 @@ def execute(args, contract, authorization):
     from tools import hetero_xpu_service as arc_service, hetero_xpu_worker as worker_api
     from tools.hetero_resources import memory_snapshot
 
+    execution_mode = contract.get("execution_mode", "full")
+    if execution_mode not in {"full", "paired_only"} or bool(args.paired_only) != (execution_mode == "paired_only"):
+        raise CompareError("execution selector does not match the authorized comparison contract")
     if contract.get("warmup") != 1 or contract.get("formal_repeats") != 5 or [r.get("rows") for r in contract.get("row_cases", [])] != list(ROWS):
         raise CompareError("comparison contract differs from the reviewed one-warmup/five-formal nine-shape matrix")
     if contract.get("quality_tolerances") != worker_api.DEFAULT_TOLERANCES:
@@ -707,7 +906,7 @@ def execute(args, contract, authorization):
     resource_path = Path(contract["output"]["resource_log"])
     receipt_path = receipt_dir / "compare-receipt.json"
     if output_root.exists() or receipt_dir.exists() or resource_path.exists():
-        raise FileExistsError("refusing an existing run53 output/receipt/resource path")
+        raise FileExistsError(f"refusing an existing {contract['run_id']} output/receipt/resource path")
     gate = contract["resource_gate"]
     if not output_root.parent.is_dir() or shutil.disk_usage(output_root.parent).free < gate["minimum_free_disk_bytes"]:
         raise CompareError("private E output parent absent or free-space floor not met")
@@ -719,13 +918,19 @@ def execute(args, contract, authorization):
         raise CompareError("fresh PSAPI 12/4 resource gate failed or unknown")
     source_pins = _check_source_pins(contract)
     selected = [b for b in contract["backends"] if not b["optional"] or args.include_cpu16_none]
+    if execution_mode == "paired_only":
+        expected_joint = set(contract.get("paired_only", {}).get("joint_backend_ids", []))
+        if {backend["id"] for backend in selected} != expected_joint:
+            raise CompareError("paired-only selected backends differ from the authorized joint-arm set")
     cpu_binaries = {b["id"]: _verify_cpu_binary(contract, b) for b in selected}
+    paired_baseline = _verify_paired_baseline(contract) if execution_mode == "paired_only" else None
 
     output_root.mkdir(parents=False, exist_ok=False)
     receipt_dir.mkdir(parents=True, exist_ok=False)
     resource_path.parent.mkdir(parents=False, exist_ok=False)
     logs = receipt_dir / "logs"; logs.mkdir(exist_ok=False)
-    record = {"schema_version": 1, "status": "running", "run_id": contract["run_id"], "started_utc": utc(),
+    record = {"schema_version": 1, "status": "running", "run_id": contract["run_id"], "execution_mode": execution_mode,
+        "started_utc": utc(),
         "root_authorization": authorization, "resource_gate_initial": initial, "source_pins": source_pins,
         "controller_identity": _process_with_utc(RUN42._process_record(psutil.Process(os.getpid()))),
         "cpu_binaries": cpu_binaries, "arc_identity_sha256": contract["arc"]["identity_sha256"],
@@ -734,6 +939,11 @@ def execute(args, contract, authorization):
         "arms": [], "model_route_enabled": False,
         "timing_contract": contract["timing_contract"], "quality_tolerances": contract["quality_tolerances"],
         "raw_output_files_written": False, "large_f32_outputs_written": False}
+    if paired_baseline is not None:
+        record["paired_only_baseline"] = {key: paired_baseline[key] for key in (
+            "run_id", "baseline_contract_sha256", "baseline_receipt_sha256", "baseline_client_sha256",
+            "root_solo_review_sha256", "root_arc_numerical_review_sha256")}
+        record["paired_only_baseline"]["comparison_scope"] = "cross-run solo baseline; not interleaved with run61 joint arms"
     monitor = RUN42.ResourceMonitor(resource_path, psutil,
         minimum_physical=gate["minimum_physical_bytes"], minimum_commit=gate["minimum_commit_bytes"])
     handles = []
@@ -756,47 +966,48 @@ def execute(args, contract, authorization):
                 "verified_native_cpu_gold": {str(k): v["stat"] for k, v in gold.items()},
                 "asset_stats": asset_stats, "weights_header": header})
             _update_receipt(receipt, record)
-            # CPU solo backends are completed and reaped before the next arm starts.
-            for backend in selected:
-                arm = {"id": backend["id"] + "-solo", "kind": "cpu_solo", "backend": backend["id"],
-                       "rows": [], "status": "running"}
-                record["arms"].append(arm); _update_receipt(receipt, record)
-                handle = _start_cpu(backend, contract, monitor, logs, psutil); handles = [handle]
-                monitor.attach(handle["worker"], handle["tree"])
-                arm["process_start"] = {k: handle[k] for k in ("argv", "process_startup_wall_ns", "launcher_identity",
-                                                                 "actual_service_process", "service_tree_topology")}
-                try:
-                    _run_single(handle, "cpu", backend, arm["id"], contract, arc_contract,
-                        identity, inputs, gold, monitor, arc_service, np, worker_api, arm["rows"],
-                        lambda: _persist_progress(receipt, record))
-                    arm["status"] = "complete"
-                finally:
-                    arm["cleanup"] = _graceful_close(handles, monitor); handles = []
-                _update_receipt(receipt, record); monitor.require()
+            if execution_mode != "paired_only":
+                # Full runs measure their solo baseline arms in this same run.
+                for backend in selected:
+                    arm = {"id": backend["id"] + "-solo", "kind": "cpu_solo", "backend": backend["id"],
+                           "rows": [], "status": "running"}
+                    record["arms"].append(arm); _update_receipt(receipt, record)
+                    handle = _start_cpu(backend, contract, monitor, logs, psutil, arm["id"]); handles = [handle]
+                    monitor.attach(handle["worker"], handle["tree"])
+                    arm["process_start"] = {k: handle[k] for k in ("argv", "process_startup_wall_ns", "launcher_identity",
+                                                                     "actual_service_process", "service_tree_topology")}
+                    try:
+                        _run_single(handle, "cpu", backend, arm["id"], contract, arc_contract,
+                            identity, inputs, gold, monitor, arc_service, np, worker_api, arm["rows"],
+                            lambda: _persist_progress(receipt, record))
+                        arm["status"] = "complete"
+                    finally:
+                        arm["cleanup"] = _graceful_close(handles, monitor); handles = []
+                    _update_receipt(receipt, record); monitor.require()
 
-            arc_arm = {"id": "arc-gpu0-f32-accuracy-solo", "kind": "arc_solo", "rows": [], "status": "running"}
-            record["arms"].append(arc_arm); _update_receipt(receipt, record)
-            arc_handle = _start_arc(contract, monitor, logs, psutil); handles = [arc_handle]
-            arc_arm["process_start"] = {k: arc_handle[k] for k in ("argv", "process_startup_wall_ns", "launcher_identity",
-                                                                    "actual_service_process", "service_tree_topology")}
-            try:
-                _run_single(arc_handle, "arc", None, arc_arm["id"], contract, arc_contract,
-                    identity, inputs, gold, monitor, arc_service, np, worker_api, arc_arm["rows"],
-                    lambda: _persist_progress(receipt, record))
-                arc_arm["status"] = "complete"
-            finally:
-                arc_arm["cleanup"] = _graceful_close(handles, monitor); handles = []
-            _update_receipt(receipt, record); monitor.require()
+                arc_arm = {"id": "arc-gpu0-f32-accuracy-solo", "kind": "arc_solo", "rows": [], "status": "running"}
+                record["arms"].append(arc_arm); _update_receipt(receipt, record)
+                arc_handle = _start_arc(contract, monitor, logs, psutil, arc_arm["id"]); handles = [arc_handle]
+                arc_arm["process_start"] = {k: arc_handle[k] for k in ("argv", "process_startup_wall_ns", "launcher_identity",
+                                                                        "actual_service_process", "service_tree_topology")}
+                try:
+                    _run_single(arc_handle, "arc", None, arc_arm["id"], contract, arc_contract,
+                        identity, inputs, gold, monitor, arc_service, np, worker_api, arc_arm["rows"],
+                        lambda: _persist_progress(receipt, record))
+                    arc_arm["status"] = "complete"
+                finally:
+                    arc_arm["cleanup"] = _graceful_close(handles, monitor); handles = []
+                _update_receipt(receipt, record); monitor.require()
 
             # Both processes remain attached to one ResourceMonitor through the synchronized pairs.
             for backend in selected:
                 arm = {"id": backend["id"] + "+arc-gpu0-concurrent", "kind": "synchronized_cpu_arc_concurrent",
                        "backend": backend["id"], "rows": [], "status": "running"}
                 record["arms"].append(arm); _update_receipt(receipt, record)
-                cpu_handle = _start_cpu(backend, contract, monitor, logs, psutil)
+                cpu_handle = _start_cpu(backend, contract, monitor, logs, psutil, arm["id"])
                 handles = [cpu_handle]; monitor.attach(cpu_handle["worker"], cpu_handle["tree"])
                 try:
-                    arc_handle = _start_arc(contract, monitor, logs, psutil, existing_handles=handles)
+                    arc_handle = _start_arc(contract, monitor, logs, psutil, arm["id"], existing_handles=handles)
                 except BaseException:
                     arm["cleanup"] = _graceful_close(handles, monitor); handles = []
                     raise
@@ -811,8 +1022,14 @@ def execute(args, contract, authorization):
                 finally:
                     arm["cleanup"] = _graceful_close(handles, monitor); handles = []
                 _update_receipt(receipt, record); monitor.require()
-            record["solo_vs_concurrent_latency_deltas"] = _contention_deltas(record["arms"])
-            record["contention_interpretation"] = "paired latency deltas only; no memory-bandwidth claim without a measured hardware counter"
+            record["solo_vs_concurrent_latency_deltas"] = _contention_deltas(record["arms"],
+                baseline_arms=paired_baseline["receipt"]["arms"] if paired_baseline else None,
+                baseline_run_id=paired_baseline["run_id"] if paired_baseline else None,
+                joint_run_id=contract["run_id"])
+            record["contention_interpretation"] = (
+                "cross-run solo baseline deltas; solo and joint arms were not interleaved; latency contention only, no memory-bandwidth claim"
+                if paired_baseline else
+                "same-run sequential solo baseline deltas; paired latency only, no memory-bandwidth claim without a measured hardware counter")
             source_after = _check_source_pins(contract)
             record["source_sha256_after"] = source_after
             if source_after != source_pins: raise CompareError("pinned code sources changed during comparison")
@@ -850,6 +1067,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--contract", type=Path, default=DEFAULT_CONTRACT_PATH,
         help="comparison contract JSON (defaults to the preserved run53 recipe)")
     parser.add_argument("--execute", action="store_true", help="run only after explicit root review and authorization")
+    parser.add_argument("--paired-only", action="store_true",
+        help="run only concurrent arms against a separately reviewed solo baseline")
     parser.add_argument("--root-start-confirmed", action="store_true")
     parser.add_argument("--model-matrix-stopped-confirmed", action="store_true")
     parser.add_argument("--root-authorization", type=Path)

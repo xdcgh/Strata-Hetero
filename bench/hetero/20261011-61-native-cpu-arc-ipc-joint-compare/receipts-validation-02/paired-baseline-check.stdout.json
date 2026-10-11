@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_native_ipc_compare.py", line 619, in _verify_paired_baseline
+    raise CompareError(f"root solo review statistics differ from receipt: {arm_id}")
+tools.hetero_native_ipc_compare.CompareError: root solo review statistics differ from receipt: cpu-pool-w16-none-solo

@@ -1,0 +1,23 @@
+{
+  "schema": "strata-native-ipc-compare-root-authorization-v1",
+  "run_id": "native-cpu-arc-ipc-joint-compare-20261011-61",
+  "execution_authorized": true,
+  "model_matrix_stopped": true,
+  "root_review_complete": true,
+  "client_sha256": "bbd8a426c012d5f768175cd898e9dffe127a51ee8b4419eb003017332adbc45b",
+  "contract_sha256": "4af7eeb868202cee93d28ad534ee1b3add0642541c7dc9c934e6b72f7a2c1e36",
+  "source_freeze_sha256": "9f5758af2359426ec2e9710cd4f6edcc08f1c54ad8855b1061d2830a33b1bc90",
+  "cpu16_none_authorized": true,
+  "execution_mode": "paired_only",
+  "utc": "2026-10-11T01:59:06.289396+00:00",
+  "admission_sha256": "a9d645bbed964d0e012bad9ac7854b8d7dfaccad4b0a89d7ac907db567a16079",
+  "scope": "Only the two previously unrun synchronized CPU+Arc joint arms; no solo repeats or model route; stop first quality/resource/error gate",
+  "comparison_scope": "cross-run solo baseline; not interleaved",
+  "pure_fixture_count": 16,
+  "baseline_run_id": "native-cpu-arc-ipc-compare-20261011-60",
+  "baseline_contract_sha256": "63e51d33f6b1e0795c11a6288d600549698c49eecfe0f0e8bb358870de61ab00",
+  "baseline_receipt_sha256": "98da9296f66d973759e8701da9dd370053ede77e7cb8e83fdd4a5ffd3dde365f",
+  "baseline_client_sha256": "11a0cc3306851fc8b6391b58ee9b6167bff41a61e21169dc45e59641d26ccc84",
+  "root_solo_review_sha256": "c8f60b5090653a368ea4880500b0cda7f229424e4486f7b2ccf4a674583cacb2",
+  "root_arc_numerical_review_sha256": "1042dc4019039cf0e1a322decdf6b728a4e1c8be509b663b6b114cc57518248b"
+}

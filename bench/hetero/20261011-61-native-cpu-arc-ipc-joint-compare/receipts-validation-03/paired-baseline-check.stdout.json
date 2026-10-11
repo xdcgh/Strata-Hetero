@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "baseline_run_id": "native-cpu-arc-ipc-compare-20261011-60",
+  "baseline_contract_sha256": "63e51d33f6b1e0795c11a6288d600549698c49eecfe0f0e8bb358870de61ab00",
+  "baseline_receipt_sha256": "98da9296f66d973759e8701da9dd370053ede77e7cb8e83fdd4a5ffd3dde365f",
+  "baseline_client_sha256": "11a0cc3306851fc8b6391b58ee9b6167bff41a61e21169dc45e59641d26ccc84",
+  "root_solo_review_sha256": "c8f60b5090653a368ea4880500b0cda7f229424e4486f7b2ccf4a674583cacb2",
+  "root_arc_numerical_review_sha256": "1042dc4019039cf0e1a322decdf6b728a4e1c8be509b663b6b114cc57518248b",
+  "solo_arms": [
+    "cpu-pool-w10-all-solo",
+    "cpu-pool-w16-none-solo",
+    "arc-gpu0-f32-accuracy-solo"
+  ],
+  "raw_outputs_checked": 162,
+  "arc_outputs_replayed": 54,
+  "comparison_scope": "cross-run baseline; not interleaved"
+}

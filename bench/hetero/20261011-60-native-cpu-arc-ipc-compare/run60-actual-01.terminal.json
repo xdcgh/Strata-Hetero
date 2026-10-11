@@ -1,0 +1,7 @@
+{
+  "run_id": "native-cpu-arc-ipc-compare-20261011-60",
+  "exit_code": 1,
+  "finished_utc": "2026-10-11T01:46:34.0974996Z",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\run60-actual-01.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\run60-actual-01.stderr.log"
+}

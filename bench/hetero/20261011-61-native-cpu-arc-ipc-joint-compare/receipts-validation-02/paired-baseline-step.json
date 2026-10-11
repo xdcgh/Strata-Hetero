@@ -1,0 +1,11 @@
+{
+  "step": "paired_baseline_integrity",
+  "exit_code": 1,
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "no_bytecode": true,
+  "checked_prior_raw_outputs_only": true,
+  "services_started": false,
+  "device_accessed": false,
+  "inference_called": false,
+  "finished_utc": "2026-10-11T01:52:43.3755353Z"
+}

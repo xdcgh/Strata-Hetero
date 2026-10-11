@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Python314\Lib\unittest\__main__.py", line 18, in <module>
+    main(module=None)
+    ~~~~^^^^^^^^^^^^^
+  File "C:\Python314\Lib\unittest\main.py", line 103, in __init__
+    self.parseArgs(argv)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\unittest\main.py", line 142, in parseArgs
+    self.createTests()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\unittest\main.py", line 153, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+                                                   self.module)
+                                                   ^^^^^^^^^^^^
+  File "C:\Python314\Lib\unittest\loader.py", line 214, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+              ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\unittest\loader.py", line 141, in loadTestsFromName
+    module = __import__(module_name)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\test_hetero_native_ipc_compare.py", line 16, in <module>
+    from tools import hetero_native_ipc_compare as compare
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_native_ipc_compare.py", line 470
+    | {"backends": [{key: backend.get(key) for key in backend_keys} for backend in contract["backends"]]}
+IndentationError: unexpected indent
