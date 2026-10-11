@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-69-probe69-quality",
+  "prompt_id": "long_1k",
+  "status": "failclosed_fatal_diagnostic",
+  "captured_utc": "2026-10-11T04:35:10.4060474Z",
+  "cursor_start": 19695,
+  "cursor_end": 28511,
+  "complete_record_count": 36,
+  "partial_line_bytes": 0,
+  "partial_line_base64": "",
+  "reader_error": "",
+  "fatal_record_count": 32,
+  "records": [
+    {
+      "source": "prefill_finite_probe",
+      "classification": "normal_begin",
+      "raw_line": "strata pf_nonfinite: {\"event\":\"begin\",\"schema\":1,\"run\":5,\"device\":0,\"pos0\":0,\"tokens\":1035,\"diagnostic_only\":true}",
+      "parsed": {
+        "event": "begin",
+        "schema": 1,
+        "run": 5,
+        "device": 0,
+        "pos0": 0,
+        "tokens": 1035,
+        "diagnostic_only": true
+      },
+      "origin": "during_request"
+    },
+    {
+      "source": "prefill_finite_probe",
+      "classification": "fatal_nonfinite",
+      "raw_line": "strata pf_nonfinite: {\"event\":\"checkpoint\",\"schema\":1,\"run\":5,\"device\":0,\"completed_chunk\":0,\"completed_pos0\":0,\"completed_rows\":1035,\"scans\":290,\"first_bad\":{\"ordinal\":277,\"stage\":\"moe_output\",\"chunk\":0,\"pos0\":0,\"layer\":45,\"half\":1,\"rows\":1035,\"width\":2560,\"index\":394240,\"row\":154,\"column\":0,\"nan\":2560,\"positive_inf\":0,\"negative_inf\":0}}",
+      "parsed": {
+        "event": "checkpoint",
+        "schema": 1,
+        "run": 5,
+        "device": 0,
+        "completed_chunk": 0,
+        "completed_pos0": 0,
+        "completed_rows": 1035,
+        "scans": 290,
+        "first_bad": {
+          "ordinal": 277,
+          "stage": "moe_output",
+          "chunk": 0,
+          "pos0": 0,
+          "layer": 45,
+          "half": 1,
+          "rows": 1035,
+          "width": 2560,
+          "index": 394240,
+          "row": 154,
+          "column": 0,
+          "nan": 2560,
+          "positive_inf": 0,
+          "negative_inf": 0
+        }
+      },
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1035 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1036 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1037 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1038 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1039 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1039 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1041 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1041 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1043 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1043 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1045 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1045 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1047 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1047 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1049 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1049 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1051 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1051 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1053 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1053 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1055 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1055 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1057 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1057 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1059 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1059 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1061 row 0 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "zero_logits",
+      "classification": "fatal_zero_logits",
+      "raw_line": "strata zero-logits diag: position 1061 row 1 selected 0; vocab 248320 finite 0 nan 248320 posinf 0 neginf 0 zeros 0; finite_argmax -1 range nan nan; id0 nan id19 nan",
+      "origin": "during_request"
+    },
+    {
+      "source": "prefill_finite_probe",
+      "classification": "normal_begin",
+      "raw_line": "strata pf_nonfinite: {\"event\":\"begin\",\"schema\":1,\"run\":6,\"device\":0,\"pos0\":0,\"tokens\":1035,\"diagnostic_only\":true}",
+      "parsed": {
+        "event": "begin",
+        "schema": 1,
+        "run": 6,
+        "device": 0,
+        "pos0": 0,
+        "tokens": 1035,
+        "diagnostic_only": true
+      },
+      "origin": "during_request"
+    },
+    {
+      "source": "prefill_finite_probe",
+      "classification": "fatal_nonfinite",
+      "raw_line": "strata pf_nonfinite: {\"event\":\"checkpoint\",\"schema\":1,\"run\":6,\"device\":0,\"completed_chunk\":0,\"completed_pos0\":0,\"completed_rows\":1035,\"scans\":290,\"first_bad\":{\"ordinal\":277,\"stage\":\"moe_output\",\"chunk\":0,\"pos0\":0,\"layer\":45,\"half\":1,\"rows\":1035,\"width\":2560,\"index\":394240,\"row\":154,\"column\":0,\"nan\":2560,\"positive_inf\":0,\"negative_inf\":0}}",
+      "parsed": {
+        "event": "checkpoint",
+        "schema": 1,
+        "run": 6,
+        "device": 0,
+        "completed_chunk": 0,
+        "completed_pos0": 0,
+        "completed_rows": 1035,
+        "scans": 290,
+        "first_bad": {
+          "ordinal": 277,
+          "stage": "moe_output",
+          "chunk": 0,
+          "pos0": 0,
+          "layer": 45,
+          "half": 1,
+          "rows": 1035,
+          "width": 2560,
+          "index": 394240,
+          "row": 154,
+          "column": 0,
+          "nan": 2560,
+          "positive_inf": 0,
+          "negative_inf": 0
+        }
+      },
+      "origin": "during_request"
+    },
+    {
+      "source": "prefill_finite_probe",
+      "classification": "normal_begin",
+      "raw_line": "strata pf_nonfinite: {\"event\":\"begin\",\"schema\":1,\"run\":7,\"device\":0,\"pos0\":0,\"tokens\":1035,\"diagnostic_only\":true}",
+      "parsed": {
+        "event": "begin",
+        "schema": 1,
+        "run": 7,
+        "device": 0,
+        "pos0": 0,
+        "tokens": 1035,
+        "diagnostic_only": true
+      },
+      "origin": "during_request"
+    },
+    {
+      "source": "prefill_finite_probe",
+      "classification": "fatal_nonfinite",
+      "raw_line": "strata pf_nonfinite: {\"event\":\"checkpoint\",\"schema\":1,\"run\":7,\"device\":0,\"completed_chunk\":0,\"completed_pos0\":0,\"completed_rows\":1035,\"scans\":290,\"first_bad\":{\"ordinal\":277,\"stage\":\"moe_output\",\"chunk\":0,\"pos0\":0,\"layer\":45,\"half\":1,\"rows\":1035,\"width\":2560,\"index\":394240,\"row\":154,\"column\":0,\"nan\":2560,\"positive_inf\":0,\"negative_inf\":0}}",
+      "parsed": {
+        "event": "checkpoint",
+        "schema": 1,
+        "run": 7,
+        "device": 0,
+        "completed_chunk": 0,
+        "completed_pos0": 0,
+        "completed_rows": 1035,
+        "scans": 290,
+        "first_bad": {
+          "ordinal": 277,
+          "stage": "moe_output",
+          "chunk": 0,
+          "pos0": 0,
+          "layer": 45,
+          "half": 1,
+          "rows": 1035,
+          "width": 2560,
+          "index": 394240,
+          "row": 154,
+          "column": 0,
+          "nan": 2560,
+          "positive_inf": 0,
+          "negative_inf": 0
+        }
+      },
+      "origin": "during_request"
+    },
+    {
+      "source": "prefill_finite_probe",
+      "classification": "normal_begin",
+      "raw_line": "strata pf_nonfinite: {\"event\":\"begin\",\"schema\":1,\"run\":8,\"device\":0,\"pos0\":0,\"tokens\":1035,\"diagnostic_only\":true}",
+      "parsed": {
+        "event": "begin",
+        "schema": 1,
+        "run": 8,
+        "device": 0,
+        "pos0": 0,
+        "tokens": 1035,
+        "diagnostic_only": true
+      },
+      "origin": "during_request"
+    },
+    {
+      "source": "prefill_finite_probe",
+      "classification": "fatal_nonfinite",
+      "raw_line": "strata pf_nonfinite: {\"event\":\"checkpoint\",\"schema\":1,\"run\":8,\"device\":0,\"completed_chunk\":0,\"completed_pos0\":0,\"completed_rows\":1035,\"scans\":290,\"first_bad\":{\"ordinal\":277,\"stage\":\"moe_output\",\"chunk\":0,\"pos0\":0,\"layer\":45,\"half\":1,\"rows\":1035,\"width\":2560,\"index\":394240,\"row\":154,\"column\":0,\"nan\":2560,\"positive_inf\":0,\"negative_inf\":0}}",
+      "parsed": {
+        "event": "checkpoint",
+        "schema": 1,
+        "run": 8,
+        "device": 0,
+        "completed_chunk": 0,
+        "completed_pos0": 0,
+        "completed_rows": 1035,
+        "scans": 290,
+        "first_bad": {
+          "ordinal": 277,
+          "stage": "moe_output",
+          "chunk": 0,
+          "pos0": 0,
+          "layer": 45,
+          "half": 1,
+          "rows": 1035,
+          "width": 2560,
+          "index": 394240,
+          "row": 154,
+          "column": 0,
+          "nan": 2560,
+          "positive_inf": 0,
+          "negative_inf": 0
+        }
+      },
+      "origin": "during_request"
+    }
+  ]
+}

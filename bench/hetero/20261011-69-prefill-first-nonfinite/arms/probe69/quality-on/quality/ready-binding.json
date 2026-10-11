@@ -1,0 +1,18 @@
+{
+  "run_id": "20261011-69-probe69-quality",
+  "checked_utc": "2026-10-11T04:33:43.6023612Z",
+  "launcher_pid": 14924,
+  "server_pid": 12120,
+  "engine_pid": 24536,
+  "engine_exe": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\strata.exe",
+  "server_child_exe": "C:\\Python314\\python.exe",
+  "server_child_create_utc": "2026-10-11T04:22:35.1769770Z",
+  "engine_child_create_utc": "2026-10-11T04:22:35.8528250Z",
+  "sampler_actual_child_pid": 448,
+  "sampler_actual_child_create_utc": "2026-10-11T04:22:35.2486680Z",
+  "engine_sha256": "96b67b604e6b3b86f2a0bb865d9ffcc87be0a30232a9cfddb805387414243b83",
+  "server_file_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
+  "engine_version": "0.1.42",
+  "loaded": true
+}

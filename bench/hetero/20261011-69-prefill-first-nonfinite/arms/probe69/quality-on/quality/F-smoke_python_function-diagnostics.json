@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-69-probe69-quality",
+  "prompt_id": "smoke_python_function",
+  "status": "no_diagnostic_records",
+  "captured_utc": "2026-10-11T04:34:15.4879143Z",
+  "cursor_start": 14293,
+  "cursor_end": 16289,
+  "complete_record_count": 0,
+  "partial_line_bytes": 0,
+  "partial_line_base64": "",
+  "reader_error": "",
+  "fatal_record_count": 0,
+  "records": []
+}

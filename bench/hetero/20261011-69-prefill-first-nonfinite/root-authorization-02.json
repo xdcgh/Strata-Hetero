@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized",
+  "recorded_utc": "2026-10-11T12:20:33.377513+08:00",
+  "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6",
+  "wrapper_sha256": "bdc6360c223e4c3c344dd5567102a60393e959a6e202311dcedf61aeb5840f1c",
+  "sides": [
+    "probe69"
+  ],
+  "execution_mode": "direct_powershell_controllers",
+  "source_pins": [
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_admission.py",
+      "sha256": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_bench.py",
+      "sha256": "833696199a71a7fc20f6a15d2968d7142851a0e62c778f734d907c789472880f"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_quality.py",
+      "sha256": "e12e0a4f3ecd4225c42e361ec0dd512ac0ac874c250efaa095a90715d2a0b4a2"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_compare_quality.py",
+      "sha256": "bc556866293eaa98deb17cc144280d426a7cdc33865d0e6b0ab974cb533b3f97"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_jsonl_tail.ps1",
+      "sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+      "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\strata.exe",
+      "sha256": "96b67b604e6b3b86f2a0bb865d9ffcc87be0a30232a9cfddb805387414243b83"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-prefill-probe69-01\\build-receipt.json",
+      "sha256": "0bcd13c38cf12eed6d0adf9addb1298ae45847b4cb57b5927dc863e3937fa629"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\preparation\\root-fixture-review.json",
+      "sha256": "57fa3737198a1b7e02ed12389ba64af9dcc04cb773c4feafeb96f71892f9cc6f"
+    }
+  ],
+  "corrected_preflight_attempts": [],
+  "allowed_phases": [
+    "watch",
+    "quality",
+    "cleanup"
+  ],
+  "scope": "one diagnostic model side, same five short prompts then natural1K; warm1+formal3; strict stop first failure",
+  "maximum_active_models": 1,
+  "maximum_prompt_tasks": 6,
+  "maximum_chat_requests": 24,
+  "performance_phases_allowed": false,
+  "unchanged_costly_retry_allowed": false,
+  "root_prelaunch_review_sha256": "c91ce899d0db44aa4e893b2cbb79a7251d7fa2362def6537bc99aa19b049d178",
+  "adopted_active_sides": [
+    "probe69"
+  ],
+  "root_active_adoption_sha256": "bc6201cb6fcf3193a12f1d49bded982d530fc77a9a6754aec3d117f4e277c90b"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "strata-run69-phase-invocation-controller-v1",
+  "phase": "watch",
+  "identity": {
+    "pid": 20764,
+    "parent_pid": 25180,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "created_utc": "2026-10-11T04:27:54.9770670Z",
+    "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\run-phase.ps1 -Side probe69 -Phase watch -Execute -Authorization C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\root-authorization-02.json"
+  },
+  "argv": [
+    "-NoLogo",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\run-phase.ps1",
+    "-Side",
+    "probe69",
+    "-Phase",
+    "watch",
+    "-Execute",
+    "-Authorization",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\root-authorization-02.json"
+  ],
+  "working_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\lifecycle-invocation-01\\watch\\invocation.stdout.raw.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\lifecycle-invocation-01\\watch\\invocation.stderr.raw.log"
+}

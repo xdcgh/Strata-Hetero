@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "Run69 opt-in first-nonfinite CUDA probe compiled; 60 synthetic device cases and 114 JSON checkpoints independently verified; model diagnostic pending; original optimization goal incomplete",
+  "phase": "Run69 diagnostic model first nonfinite boundary layer45 MoE row154 (four identical records), head allNaN, 15short formalH4 IDs pass; 780resource gates pass; exactcleanup terminal; finer MoE/FP16 probes next; original goal incomplete",
   "branch": "codex/45-upstream41-runtime",
   "upstream_base_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -80,7 +80,8 @@
     "Run57 ready diagnostic launch resource239samples allpass min66.955physical/43.861commitGiB; request folders wereprecreated so0prompts sent; no model quality/logits result; exactownedcleanup terminal8081released; failedrun retained unchanged",
     "RootRun63 independentSSE+rawbytes confirms warm+3formal128ID0/128bangs;15short formalTIDs matchH4; sampled1035..1061 head248320/248320NaNs finite0argmax-1; all268RAM/commit12/4gates pass min62.917/43.759GiB, finalpoststopownerunknown preserved; exactmodel/server/samplerterminal8081free",
     "RootRun66 latestunmodifiedupstream61b3/b4e8f reproducesnatural1K warm+3formal128ID0bangloop,15shortTIDs matchH4; logitsNOTCAPTURED; samplerfirstcleanup successall343samplespass min63.770physical/43.468commitGiB; model/server/sampler/listenerterminal; Hetero42/performanceUNRUN",
-    "RootRun69 source1eb85 build/fixture gates pass:436 actual build resource rows; two binaries rehashed;55 metadata copies verified;60 synthetic CUDA cases/114 parsed checkpoints; all exact owners terminal; no model quality or performance claim"
+    "RootRun69 source1eb85 build/fixture gates pass:436 actual build resource rows; two binaries rehashed;55 metadata copies verified;60 synthetic CUDA cases/114 parsed checkpoints; all exact owners terminal; no model quality or performance claim",
+    "RootRun69 reparse:15short formalH4 ID/text passes; warm+3long1K128ID0bang loops; all4first_bad layer45/half1/moe_output/row154 nan2560,28head rows248320allNaN;780PSAPI/resource samples pass min61.974/42.551GiB, loadedfalse/inflight0requests24, exactowners+8081terminal"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -105,11 +106,11 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Finish Run69 one-side model contract host fixtures and no-start validation, then original five smokes + natural1K history with prefill and zero-head diagnostics, strict fresh46k/12/4 admission and sampler-first exact cleanup",
+  "next_experiment": "Run70 source-pinned layer45 MoE buffer inventory then default-off FP32/FP16 fine probes, synthetic fixtures and one controlled changed diagnostic; no unchanged costly retry",
   "completion_status": "active; original full goal remains unfinished, no user decision required",
   "latest_upstream_fetched_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-11T04:10:16.294598Z",
+  "last_checkpoint_utc": "2026-10-11T04:45:38.396586Z",
   "current_run": "20261011-69-prefill-first-nonfinite",
   "current_model_owner": null,
   "upstream_pending_integration": {
@@ -125,6 +126,6 @@
     "branch": "codex/69-prefill-first-nonfinite",
     "head": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
     "pushed": true,
-    "merged_to_main": false
+    "merged_to_main": true
   }
 }

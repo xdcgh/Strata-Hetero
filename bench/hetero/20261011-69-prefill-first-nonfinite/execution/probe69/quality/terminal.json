@@ -1,0 +1,11 @@
+{
+  "side": "probe69",
+  "phase": "quality",
+  "controller_pid": 20832,
+  "exit_code": 1,
+  "finished_utc": "2026-10-11T04:35:10.6160441+00:00",
+  "stdout_sha256": "eb7dd5413834342104791997faca0226532cfea26da2e221e7684e554eccc885",
+  "stderr_sha256": "c9bd1149142a4515c013ddf96ca8bff5e96092e81573fc85d6367855ea118809",
+  "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+  "source_script_sha256": "cc43baa65fe00cb5593b39821e5f17d21ab6817b6e6c4d9598bf1618bf5cd8e6"
+}

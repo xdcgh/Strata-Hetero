@@ -1,0 +1,16 @@
+{
+  "schema": "strata-run69-watch-preflight-v1",
+  "captured_utc": "2026-10-11T04:27:54.9454181Z",
+  "authorization_sha256": "e5d7514ea15ece3d9c9c7dfdeb33c686631d81173075b1706ff6ecc525eb712d",
+  "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6",
+  "wrapper_sha256": "bdc6360c223e4c3c344dd5567102a60393e959a6e202311dcedf61aeb5840f1c",
+  "adopted_side": "probe69",
+  "launch_not_repeated": true,
+  "existing_launch_session_id": 95468,
+  "owner_pids": [
+    14924,
+    12120,
+    16852,
+    448
+  ]
+}

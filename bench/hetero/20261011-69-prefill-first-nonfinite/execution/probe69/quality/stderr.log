@@ -1,0 +1,5 @@
+Exception: C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261011-69-prefill-first-nonfinite\rendered-scripts\probe69\quality.ps1:494
+Line |
+ 494 |              throw "${id}: status/token-count/cache/quality gate faile бн
+     |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | long_1k: status/token-count/cache/quality gate failed; preserve outputs and stop the remaining matrix

@@ -1,0 +1,11 @@
+{
+  "side": "probe69",
+  "phase": "cleanup",
+  "controller_pid": 6512,
+  "exit_code": 0,
+  "finished_utc": "2026-10-11T04:35:36.3333302+00:00",
+  "stdout_sha256": "54382ba9deed605228e2db8f8736fbc02f399b4ccfb928d9c1be88f5f11cc299",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+  "source_script_sha256": "a0bf63b05a678711715e4750e72c3f1f85cde6d07ad50327cd85a752e239f63c"
+}

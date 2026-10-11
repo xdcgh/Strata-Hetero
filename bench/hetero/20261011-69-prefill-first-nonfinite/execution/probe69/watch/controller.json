@@ -1,0 +1,19 @@
+{
+  "pid": 4496,
+  "parent_pid": 20764,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "create_utc": "2026-10-11T04:27:55.5227990Z",
+  "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\startup-watch.ps1 -Monitor -TimeoutSeconds 1800",
+  "argv": [
+    "-NoLogo",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-69-prefill-first-nonfinite\\rendered-scripts\\probe69\\startup-watch.ps1",
+    "-Monitor",
+    "-TimeoutSeconds",
+    "1800"
+  ],
+  "script_sha256": "a228c482118ebe17d5462b56aaac3dede5eff387af9d243dbed6f2201f2b78d9",
+  "matrix_sha256": "7e9f14ee2870446eb520df7ffc687dd1ee3e5f74b85668ff0dce3e5f35bddbd6"
+}

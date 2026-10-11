@@ -1,0 +1,11 @@
+{
+  "side": "probe69",
+  "phase": "watch",
+  "controller_pid": 4496,
+  "exit_code": 0,
+  "finished_utc": "2026-10-11T04:27:56.9620115+00:00",
+  "stdout_sha256": "7b518b818c36d5488d3a1e0779f5bd3ca0a4ef66d49f513293df183d2c169312",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+  "source_script_sha256": "a228c482118ebe17d5462b56aaac3dede5eff387af9d243dbed6f2201f2b78d9"
+}
