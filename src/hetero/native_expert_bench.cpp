@@ -791,6 +791,7 @@ int run(const Args& args, RunContext& context) {
 
 }  // namespace
 
+#ifndef HETERO_NATIVE_NO_MAIN
 int main(int argc, char** argv) {
     Args args;
     RunContext context;
@@ -820,3 +821,4 @@ int main(int argc, char** argv) {
         return 2;
     }
 }
+#endif

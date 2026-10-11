@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "status": "current_service_source_frozen",
+  "head": "b85874e7e06d8a64544c05ad6389eb93bec8f2fd",
+  "ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "files": [
+    {
+      "repo_relative": "CMakeLists.txt",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\CMakeLists.txt",
+      "sha256": "d1c31a33411c89a5de5a210e562113521057d45fec6ef157fe8ccb38b662f1f7",
+      "bytes": 103521
+    },
+    {
+      "repo_relative": "src/kernels/cpu/expert.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\expert.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\expert.cpp",
+      "sha256": "80ed5fea6e782a4f5ff29f78632c9fe798812aadc0d59c78a3b6dfcd1decbfb9",
+      "bytes": 33812
+    },
+    {
+      "repo_relative": "src/kernels/cpu/pool.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\pool.cpp",
+      "sha256": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+      "bytes": 41611
+    },
+    {
+      "repo_relative": "src/kernels/cpu/native_expert.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\native_expert.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\native_expert.cpp",
+      "sha256": "8a20968e4198bb3d52eab651296d4c360b47b380ad603cd9b4f920d4c6a57611",
+      "bytes": 12032
+    },
+    {
+      "repo_relative": "src/kernels/cpu/expert_layout.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\expert_layout.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\expert_layout.cpp",
+      "sha256": "8a9f650ed3e14851dddb42c3e4c3473d76a33a9438ba7cdfe9d98985947b32f1",
+      "bytes": 19796
+    },
+    {
+      "repo_relative": "src/kernels/cpu/iq_avx2.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\iq_avx2.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\iq_avx2.cpp",
+      "sha256": "9e40d799f05dbd593ecf9d077df1488375a6e9db0d5a0564637a9151eabde5c0",
+      "bytes": 29152
+    },
+    {
+      "repo_relative": "src/kernels/cpu/iq_avx512.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\iq_avx512.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\iq_avx512.cpp",
+      "sha256": "e52894730c33e21cc55f4dba136fbb1a8ca8fa1eca26639419f47a9b5fae122c",
+      "bytes": 15505
+    },
+    {
+      "repo_relative": "src/kernels/cpu/kq_avx2.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\kq_avx2.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\kq_avx2.cpp",
+      "sha256": "333e1d06b52711dd1f7f8d8773695fd6f74efc3d2dea6ec7e175737b7ea4c1ef",
+      "bytes": 13432
+    },
+    {
+      "repo_relative": "src/kernels/cpu/kq_avx1.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\kq_avx1.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\kq_avx1.cpp",
+      "sha256": "93c029348834f626c2c76f4b1af65486ff1785465f5edd50bfef9d739239257e",
+      "bytes": 3199
+    },
+    {
+      "repo_relative": "src/kernels/cpu/pool_affinity_win.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool_affinity_win.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\kernels\\cpu\\pool_affinity_win.hpp",
+      "sha256": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+      "bytes": 2860
+    },
+    {
+      "repo_relative": "include/strata/kernels/cpu/expert.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\expert.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\include\\strata\\kernels\\cpu\\expert.hpp",
+      "sha256": "c1c4ac822465b16fd9adbfe85aeb819265f508fa2c48c3cda3837315efa7c0b1",
+      "bytes": 12425
+    },
+    {
+      "repo_relative": "include/strata/kernels/cpu/pool.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "sha256": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+      "bytes": 19269
+    },
+    {
+      "repo_relative": "include/strata/kernels/cpu/native_expert.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\native_expert.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\include\\strata\\kernels\\cpu\\native_expert.hpp",
+      "sha256": "269ab8daef96fc6e14471430ef5c44475af7f166d127d812fb447c4062131b7e",
+      "bytes": 2923
+    },
+    {
+      "repo_relative": "include/strata/kernels/cpu/expert_layout.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\expert_layout.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\include\\strata\\kernels\\cpu\\expert_layout.hpp",
+      "sha256": "c653b2646f06ec967142bc4d4a056f3238e58809df9fa3332cf0f22e00119d11",
+      "bytes": 6663
+    },
+    {
+      "repo_relative": "include/strata/kernels/cpu/iq_avx2.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\iq_avx2.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\include\\strata\\kernels\\cpu\\iq_avx2.hpp",
+      "sha256": "dd596f7ee740be765eb9635fb3de13533f590b3f0517dd66355b13c9720c1a10",
+      "bytes": 2997
+    },
+    {
+      "repo_relative": "include/strata/kernels/cpu/iq_avx512.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\iq_avx512.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\include\\strata\\kernels\\cpu\\iq_avx512.hpp",
+      "sha256": "bed355390929a1bc2668ff098f9ef48fecfc60f8fc05922a9c41ef3aac3a2080",
+      "bytes": 894
+    },
+    {
+      "repo_relative": "include/strata/kernels/cpu/kq_avx2.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\kq_avx2.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\include\\strata\\kernels\\cpu\\kq_avx2.hpp",
+      "sha256": "810cecff725f1cf64d92658409ef1995c1d4473b305bcf0edd2803e1d1fedf0f",
+      "bytes": 1411
+    },
+    {
+      "repo_relative": "src/program/generate.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\program\\generate.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\program\\generate.cpp",
+      "sha256": "2b7077012a7bf7113c05dec701f164ea88b20eeed42e75009e135881bfe2cabd",
+      "bytes": 824699
+    },
+    {
+      "repo_relative": "src/hetero/native_expert_bench.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_bench.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\hetero\\native_expert_bench.cpp",
+      "sha256": "0ad1dbc70fc00ced12f093e111e154de46f253ed84e670e4fe420a6fc90354ed",
+      "bytes": 45332
+    },
+    {
+      "repo_relative": "src/hetero/native_expert_fixture.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_fixture.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\hetero\\native_expert_fixture.cpp",
+      "sha256": "db7cc1bedbe08604c940f4541e5b7c89dd182b7cc58c4c3d1e00d2db1b0023fa",
+      "bytes": 2303
+    },
+    {
+      "repo_relative": "src/hetero/worker_affinity_observation_test.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\worker_affinity_observation_test.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\hetero\\worker_affinity_observation_test.cpp",
+      "sha256": "af5a3edc8b8879f551aefe40de94812e96ac633a388bd58aac1e7630b395e975",
+      "bytes": 1931
+    },
+    {
+      "repo_relative": "src/hetero/native_cpu_service.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_cpu_service.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\hetero\\native_cpu_service.cpp",
+      "sha256": "3194b7e67e3f7781e54785c17f53f127395f7635ec8a4bf36cc454b024130ccc",
+      "bytes": 24790
+    },
+    {
+      "repo_relative": "src/hetero/native_cpu_service_fixture.cpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_cpu_service_fixture.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\src\\hetero\\native_cpu_service_fixture.cpp",
+      "sha256": "1856c997f96970bc7bfd6225abc2438e57403f72c41a893d876acf6bad438c18",
+      "bytes": 3449
+    },
+    {
+      "repo_relative": "tools/hetero_native_cpu/CMakeLists.txt",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "sha256": "1704be49a740bb476ce1c469c32cd9408760f19feecbe19c93753f19d8586592",
+      "bytes": 6995
+    },
+    {
+      "repo_relative": "tools/hetero_native_cpu/sha256.hpp",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\sha256.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\tools\\hetero_native_cpu\\sha256.hpp",
+      "sha256": "5bbdfb8733ec347de4c5ca990ce412cc1241854c5920f81a47ac331d32bc19d8",
+      "bytes": 4226
+    },
+    {
+      "repo_relative": "tools/hetero_native_cpu/cli_fixtures.cmake",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\cli_fixtures.cmake",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\tools\\hetero_native_cpu\\cli_fixtures.cmake",
+      "sha256": "25be0a80057b1b334e843699b5c4af2debc307ebb23427cd0e2532f3e94b8031",
+      "bytes": 5198
+    },
+    {
+      "repo_relative": "tools/hetero_native_cpu/run_build.ps1",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\run_build.ps1",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\tools\\hetero_native_cpu\\run_build.ps1",
+      "sha256": "514f4ded3639069c2e948eec1c28e1b2ffa272020d56f6251a2ab697e3c63ac7",
+      "bytes": 29579
+    },
+    {
+      "repo_relative": "tools/hetero_resources.py",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\tools\\hetero_resources.py",
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+      "bytes": 26316
+    },
+    {
+      "repo_relative": "tools/hetero_verify_existing.py",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_verify_existing.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\tools\\hetero_verify_existing.py",
+      "sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+      "bytes": 14788
+    },
+    {
+      "repo_relative": "bench/hetero/20261009-48-native-cpu-affinity-observe/run_cpu48_build.py",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\run_cpu48_build.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\run_cpu48_build.py",
+      "sha256": "02a8474ee2f44de47376a2c77da1e35fcc7e73f62ec08dc2f531e2a58a67294f",
+      "bytes": 43516
+    },
+    {
+      "repo_relative": "bench/hetero/20261009-28-native-cpu-pool-build/cmake-controls-verified.json",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-28-native-cpu-pool-build\\cmake-controls-verified.json",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\bench\\hetero\\20261009-28-native-cpu-pool-build\\cmake-controls-verified.json",
+      "sha256": "9f29fb9a9e633da1a9ed6aef95c98acf2537e294e4409dc630bdf209016a3f8d",
+      "bytes": 1960
+    },
+    {
+      "repo_relative": "bench/hetero/20261009-48-native-cpu-affinity-observe/receipts-preflight-05/toolchain-preflight.json",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-preflight-05\\toolchain-preflight.json",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\bench\\hetero\\20261009-48-native-cpu-affinity-observe\\receipts-preflight-05\\toolchain-preflight.json",
+      "sha256": "b24b2a862285a26bebd296fdf969539233c439bcdfa64db64158c2be92e4a16d",
+      "bytes": 20007
+    },
+    {
+      "repo_relative": "bench/hetero/20261011-52-native-cpu-service-build/run_cpu52_build.py",
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\run_cpu52_build.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\source-freeze\\bench\\hetero\\20261011-52-native-cpu-service-build\\run_cpu52_build.py",
+      "sha256": "ab8b903aae9afe39ebe184824e6ef2c62b78c1c618a4eed220499dbda0704f15",
+      "bytes": 18405
+    }
+  ],
+  "note": "Current worktree source bytes, including untracked service files; old CPU48 hashes are not substituted."
+}

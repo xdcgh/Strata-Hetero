@@ -1,0 +1,88 @@
+{
+  "command_line_redacted": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+  "process_identity": {
+    "pid": 5152,
+    "parent_pid": 21144,
+    "create_time": 1791679501.0794947,
+    "executable": "c:\\windows\\system32\\cmd.exe",
+    "command_line": [
+      "C:\\Windows\\System32\\cmd.exe",
+      "/d",
+      "/s",
+      "/c",
+      "C:\\Program",
+      "Files",
+      "(x86)\\Microsoft",
+      "Visual",
+      "Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat >nul && set"
+    ]
+  },
+  "exit_code": 0,
+  "resource_before": {
+    "time_utc": "2026-10-11T00:45:01.078359+00:00",
+    "label": "vcvars-environment:prelaunch",
+    "physical_available_bytes": 115996782592,
+    "commit_available_bytes": 123691356160,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "resource_after": {
+    "time_utc": "2026-10-11T00:45:02.739379+00:00",
+    "label": "vcvars-environment:finished",
+    "physical_available_bytes": 115946823680,
+    "commit_available_bytes": 123631575040,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 5152,
+        "parent_pid": 21144,
+        "create_time": 1791679501.0794947,
+        "executable": "c:\\windows\\system32\\cmd.exe",
+        "command_line": [
+          "C:\\Windows\\System32\\cmd.exe",
+          "/d",
+          "/s",
+          "/c",
+          "C:\\Program",
+          "Files",
+          "(x86)\\Microsoft",
+          "Visual",
+          "Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat >nul && set"
+        ]
+      },
+      {
+        "pid": 8396,
+        "parent_pid": 5152,
+        "create_time": 1791679501.0886085,
+        "executable": "c:\\windows\\system32\\conhost.exe",
+        "command_line": [
+          "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+          "0x4"
+        ]
+      },
+      {
+        "pid": 7896,
+        "parent_pid": 5152,
+        "create_time": 1791679501.9927936,
+        "executable": "e:\\codex\\appdata\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "command_line": [
+          "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Unrestricted",
+          "-Command",
+          "iex (get-content \"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\vcpkg\\vcpkg-init.cmd\" -raw)#"
+        ]
+      }
+    ]
+  },
+  "stdout_bytes": 12372,
+  "stdout_sha256": "c2b3f6d049ffcddb9e85c0df5f3ac77dc505c1fe81f4f96ec2c5fb5fe6a61865",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_environment_values_persisted": false
+}

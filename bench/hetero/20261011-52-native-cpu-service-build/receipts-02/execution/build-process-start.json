@@ -1,0 +1,37 @@
+{
+  "identity": {
+    "pid": 18044,
+    "parent_pid": 21668,
+    "create_time": 1791679515.538912,
+    "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "command_line": [
+      "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+      "--build",
+      "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+      "--verbose",
+      "--parallel",
+      "1",
+      "--target",
+      "hetero_native_expert",
+      "hetero_native_expert_metadata_fixture",
+      "hetero_worker_affinity_observation",
+      "hetero_native_cpu_service",
+      "hetero_native_cpu_service_fixture"
+    ]
+  },
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "--build",
+    "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+    "--verbose",
+    "--parallel",
+    "1",
+    "--target",
+    "hetero_native_expert",
+    "hetero_native_expert_metadata_fixture",
+    "hetero_worker_affinity_observation",
+    "hetero_native_cpu_service",
+    "hetero_native_cpu_service_fixture"
+  ],
+  "popen_owned_handle": true
+}

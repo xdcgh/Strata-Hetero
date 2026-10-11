@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "phase": "source_only_preflight",
+  "build_started": false,
+  "no_retry": true,
+  "error": "ModuleNotFoundError: No module named 'psutil'",
+  "failed_utc": "2026-10-11T00:43:29.270560+00:00"
+}

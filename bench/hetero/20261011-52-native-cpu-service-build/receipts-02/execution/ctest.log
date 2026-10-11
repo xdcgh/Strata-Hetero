@@ -1,0 +1,13 @@
+Test project E:/Strata-Hetero-data/build/native-cpu-service-20261011-52
+    Start 1: hetero_worker_affinity_observation
+1/4 Test #1: hetero_worker_affinity_observation ......   Passed    0.06 sec
+    Start 2: hetero_native_expert_metadata_fixture
+2/4 Test #2: hetero_native_expert_metadata_fixture ...   Passed    0.06 sec
+    Start 3: hetero_native_cpu_service_fixture
+3/4 Test #3: hetero_native_cpu_service_fixture .......   Passed    0.03 sec
+    Start 4: hetero_native_expert_cli_fixtures
+4/4 Test #4: hetero_native_expert_cli_fixtures .......   Passed    0.22 sec
+
+100% tests passed out of 4
+
+Total Test time (real) =   0.47 sec

@@ -46,6 +46,8 @@ $repoSourceFiles = @(
     'include/strata/kernels/cpu/kq_avx2.hpp',
     'src/hetero/native_expert_bench.cpp',
     'src/hetero/native_expert_fixture.cpp',
+    'src/hetero/native_cpu_service.cpp',
+    'src/hetero/native_cpu_service_fixture.cpp',
     'tools/hetero_native_cpu/CMakeLists.txt',
     'tools/hetero_native_cpu/sha256.hpp',
     'tools/hetero_native_cpu/cli_fixtures.cmake',
@@ -355,7 +357,7 @@ cl /Bv > "$build\cl-version.log" 2>&1
 set "configure_rc=%errorlevel%"
 >"$build\configure.exit.txt" echo %configure_rc%
 if not "%configure_rc%"=="0" exit /b %configure_rc%
-"$cmake" --build "$build" --target hetero_native_expert hetero_native_expert_metadata_fixture --parallel 1 > "$build\build.log" 2>&1
+"$cmake" --build "$build" --target hetero_native_expert hetero_native_expert_metadata_fixture hetero_worker_affinity_observation hetero_native_cpu_service hetero_native_cpu_service_fixture --parallel 1 > "$build\build.log" 2>&1
 set "build_rc=%errorlevel%"
 >"$build\build.exit.txt" echo %build_rc%
 if not "%build_rc%"=="0" exit /b %build_rc%

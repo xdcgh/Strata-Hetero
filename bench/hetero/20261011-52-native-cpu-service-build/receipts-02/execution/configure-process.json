@@ -1,0 +1,337 @@
+{
+  "name": "configure",
+  "status": "success",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "-S",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu",
+    "-B",
+    "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+    "-G",
+    "Ninja",
+    "-DCMAKE_MAKE_PROGRAM=E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_SYSTEM_VERSION=10.0.26100.0",
+    "-DSTRATA_ENABLE_CUDA=OFF",
+    "-DSTRATA_ENABLE_HIP=OFF",
+    "-DSTRATA_HIP_GFX906=OFF",
+    "-DSTRATA_ENABLE_SYCL=OFF",
+    "-DSTRATA_PREFILL_MMQ=OFF",
+    "-DSTRATA_MMQ_KQUANTS=OFF",
+    "-DSTRATA_ORCA_Q4KS_MMQ=OFF",
+    "-DSTRATA_NATIVE_EXPERTS=ON",
+    "-DSTRATA_BUILD_TESTS=OFF",
+    "-DSTRATA_PORTABLE=ON",
+    "-DSTRATA_ISA_FLOOR=",
+    "-DSTRATA_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "-DHETERO_NATIVE_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "exit_code": 0,
+  "finished_utc": "2026-10-11T00:45:15.526593+00:00",
+  "accepted_exit_codes": [
+    0
+  ],
+  "resource_after": {
+    "time_utc": "2026-10-11T00:45:15.525421+00:00",
+    "label": "configure:finished",
+    "physical_available_bytes": 114843287552,
+    "commit_available_bytes": 122277560320,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 16544,
+        "parent_pid": 21668,
+        "create_time": 1791679511.761419,
+        "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+          "-S",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu",
+          "-B",
+          "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+          "-G",
+          "Ninja",
+          "-DCMAKE_MAKE_PROGRAM=E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_SYSTEM_VERSION=10.0.26100.0",
+          "-DSTRATA_ENABLE_CUDA=OFF",
+          "-DSTRATA_ENABLE_HIP=OFF",
+          "-DSTRATA_HIP_GFX906=OFF",
+          "-DSTRATA_ENABLE_SYCL=OFF",
+          "-DSTRATA_PREFILL_MMQ=OFF",
+          "-DSTRATA_MMQ_KQUANTS=OFF",
+          "-DSTRATA_ORCA_Q4KS_MMQ=OFF",
+          "-DSTRATA_NATIVE_EXPERTS=ON",
+          "-DSTRATA_BUILD_TESTS=OFF",
+          "-DSTRATA_PORTABLE=ON",
+          "-DSTRATA_ISA_FLOOR=",
+          "-DSTRATA_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+          "-DHETERO_NATIVE_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325"
+        ]
+      },
+      {
+        "pid": 1744,
+        "parent_pid": 16544,
+        "create_time": 1791679511.7652807,
+        "executable": "c:\\windows\\system32\\conhost.exe",
+        "command_line": [
+          "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+          "0x4"
+        ]
+      },
+      {
+        "pid": 15040,
+        "parent_pid": 16544,
+        "create_time": 1791679513.6501827,
+        "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+          "-v",
+          "cmTC_9e836"
+        ]
+      },
+      {
+        "pid": 22264,
+        "parent_pid": 15040,
+        "create_time": 1791679513.7140326,
+        "executable": "c:\\windows\\system32\\cmd.exe",
+        "command_line": [
+          "C:\\WINDOWS\\system32\\cmd.exe",
+          "/C",
+          "cd . && E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe -E vs_link_exe --msvc-ver=1951 --intdir=CMakeFiles\\cmTC_9e836.dir --rc=C:\\Program",
+          "Files",
+          "(x86)\\Windows",
+          "Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe --mt=C:\\Program",
+          "Files",
+          "(x86)\\Windows",
+          "Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe --manifests  -- C:\\Program",
+          "Files",
+          "(x86)\\Microsoft",
+          "Visual",
+          "Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_9e836.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_9e836.exe /implib:cmTC_9e836.lib /pdb:cmTC_9e836.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        ]
+      },
+      {
+        "pid": 3004,
+        "parent_pid": 22264,
+        "create_time": 1791679513.7264366,
+        "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+          "-E",
+          "vs_link_exe",
+          "--msvc-ver=1951",
+          "--intdir=CMakeFiles\\cmTC_9e836.dir",
+          "--rc=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe",
+          "--mt=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe",
+          "--manifests",
+          "--",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+          "/nologo",
+          "CMakeFiles\\cmTC_9e836.dir\\CMakeCXXCompilerABI.cpp.obj",
+          "/out:cmTC_9e836.exe",
+          "/implib:cmTC_9e836.lib",
+          "/pdb:cmTC_9e836.pdb",
+          "/version:0.0",
+          "/machine:x64",
+          "/debug",
+          "/INCREMENTAL",
+          "/subsystem:console",
+          "kernel32.lib",
+          "user32.lib",
+          "gdi32.lib",
+          "winspool.lib",
+          "shell32.lib",
+          "ole32.lib",
+          "oleaut32.lib",
+          "uuid.lib",
+          "comdlg32.lib",
+          "advapi32.lib"
+        ]
+      },
+      {
+        "pid": 3496,
+        "parent_pid": 16544,
+        "create_time": 1791679514.784396,
+        "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+          "-v",
+          "cmTC_150cc"
+        ]
+      },
+      {
+        "pid": 15064,
+        "parent_pid": 3496,
+        "create_time": 1791679514.8287413,
+        "executable": "c:\\windows\\system32\\cmd.exe",
+        "command_line": [
+          "C:\\WINDOWS\\system32\\cmd.exe",
+          "/C",
+          "cd . && E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe -E vs_link_exe --msvc-ver=1951 --intdir=CMakeFiles\\cmTC_150cc.dir --rc=C:\\Program",
+          "Files",
+          "(x86)\\Windows",
+          "Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe --mt=C:\\Program",
+          "Files",
+          "(x86)\\Windows",
+          "Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe --manifests  -- C:\\Program",
+          "Files",
+          "(x86)\\Microsoft",
+          "Visual",
+          "Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_150cc.dir\\CheckFunctionExists.c.obj  /out:cmTC_150cc.exe /implib:cmTC_150cc.lib /pdb:cmTC_150cc.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        ]
+      }
+    ]
+  },
+  "process_tree": [
+    {
+      "pid": 16544,
+      "parent_pid": 21668,
+      "create_time": 1791679511.761419,
+      "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+        "-S",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu",
+        "-B",
+        "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+        "-G",
+        "Ninja",
+        "-DCMAKE_MAKE_PROGRAM=E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_SYSTEM_VERSION=10.0.26100.0",
+        "-DSTRATA_ENABLE_CUDA=OFF",
+        "-DSTRATA_ENABLE_HIP=OFF",
+        "-DSTRATA_HIP_GFX906=OFF",
+        "-DSTRATA_ENABLE_SYCL=OFF",
+        "-DSTRATA_PREFILL_MMQ=OFF",
+        "-DSTRATA_MMQ_KQUANTS=OFF",
+        "-DSTRATA_ORCA_Q4KS_MMQ=OFF",
+        "-DSTRATA_NATIVE_EXPERTS=ON",
+        "-DSTRATA_BUILD_TESTS=OFF",
+        "-DSTRATA_PORTABLE=ON",
+        "-DSTRATA_ISA_FLOOR=",
+        "-DSTRATA_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+        "-DHETERO_NATIVE_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325"
+      ]
+    },
+    {
+      "pid": 1744,
+      "parent_pid": 16544,
+      "create_time": 1791679511.7652807,
+      "executable": "c:\\windows\\system32\\conhost.exe",
+      "command_line": [
+        "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+        "0x4"
+      ]
+    },
+    {
+      "pid": 15040,
+      "parent_pid": 16544,
+      "create_time": 1791679513.6501827,
+      "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+        "-v",
+        "cmTC_9e836"
+      ]
+    },
+    {
+      "pid": 22264,
+      "parent_pid": 15040,
+      "create_time": 1791679513.7140326,
+      "executable": "c:\\windows\\system32\\cmd.exe",
+      "command_line": [
+        "C:\\WINDOWS\\system32\\cmd.exe",
+        "/C",
+        "cd . && E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe -E vs_link_exe --msvc-ver=1951 --intdir=CMakeFiles\\cmTC_9e836.dir --rc=C:\\Program",
+        "Files",
+        "(x86)\\Windows",
+        "Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe --mt=C:\\Program",
+        "Files",
+        "(x86)\\Windows",
+        "Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe --manifests  -- C:\\Program",
+        "Files",
+        "(x86)\\Microsoft",
+        "Visual",
+        "Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_9e836.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_9e836.exe /implib:cmTC_9e836.lib /pdb:cmTC_9e836.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+      ]
+    },
+    {
+      "pid": 3004,
+      "parent_pid": 22264,
+      "create_time": 1791679513.7264366,
+      "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+        "-E",
+        "vs_link_exe",
+        "--msvc-ver=1951",
+        "--intdir=CMakeFiles\\cmTC_9e836.dir",
+        "--rc=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe",
+        "--mt=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe",
+        "--manifests",
+        "--",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+        "/nologo",
+        "CMakeFiles\\cmTC_9e836.dir\\CMakeCXXCompilerABI.cpp.obj",
+        "/out:cmTC_9e836.exe",
+        "/implib:cmTC_9e836.lib",
+        "/pdb:cmTC_9e836.pdb",
+        "/version:0.0",
+        "/machine:x64",
+        "/debug",
+        "/INCREMENTAL",
+        "/subsystem:console",
+        "kernel32.lib",
+        "user32.lib",
+        "gdi32.lib",
+        "winspool.lib",
+        "shell32.lib",
+        "ole32.lib",
+        "oleaut32.lib",
+        "uuid.lib",
+        "comdlg32.lib",
+        "advapi32.lib"
+      ]
+    },
+    {
+      "pid": 3496,
+      "parent_pid": 16544,
+      "create_time": 1791679514.784396,
+      "executable": "e:\\strata-hetero-data\\venv\\scripts\\ninja.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+        "-v",
+        "cmTC_150cc"
+      ]
+    },
+    {
+      "pid": 15064,
+      "parent_pid": 3496,
+      "create_time": 1791679514.8287413,
+      "executable": "c:\\windows\\system32\\cmd.exe",
+      "command_line": [
+        "C:\\WINDOWS\\system32\\cmd.exe",
+        "/C",
+        "cd . && E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe -E vs_link_exe --msvc-ver=1951 --intdir=CMakeFiles\\cmTC_150cc.dir --rc=C:\\Program",
+        "Files",
+        "(x86)\\Windows",
+        "Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe --mt=C:\\Program",
+        "Files",
+        "(x86)\\Windows",
+        "Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe --manifests  -- C:\\Program",
+        "Files",
+        "(x86)\\Microsoft",
+        "Visual",
+        "Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_150cc.dir\\CheckFunctionExists.c.obj  /out:cmTC_150cc.exe /implib:cmTC_150cc.lib /pdb:cmTC_150cc.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+      ]
+    }
+  ],
+  "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\receipts-02\\execution\\configure.log",
+  "log_bytes": 2422,
+  "log_sha256": "ac5b7838018b5894c744b625824896f00b460aba4e1df8c57f12d5b8761bc2b4"
+}

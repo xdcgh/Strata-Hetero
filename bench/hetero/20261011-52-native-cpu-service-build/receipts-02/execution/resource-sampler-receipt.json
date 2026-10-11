@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "samples": 34,
+  "physical_available_min_bytes": 114556203008,
+  "commit_available_min_bytes": 121984749568,
+  "samples_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\receipts-02\\execution\\resource-samples.jsonl"
+}

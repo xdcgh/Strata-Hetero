@@ -1,0 +1,62 @@
+{
+  "name": "ctest",
+  "status": "success",
+  "argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "--test-dir",
+    "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+    "--output-on-failure",
+    "--parallel",
+    "1"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "exit_code": 0,
+  "finished_utc": "2026-10-11T00:45:38.083790+00:00",
+  "accepted_exit_codes": [
+    0
+  ],
+  "resource_after": {
+    "time_utc": "2026-10-11T00:45:38.081876+00:00",
+    "label": "ctest:finished",
+    "physical_available_bytes": 114918453248,
+    "commit_available_bytes": 122689277952,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": [
+      {
+        "pid": 7764,
+        "parent_pid": 21668,
+        "create_time": 1791679537.5822322,
+        "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+        "command_line": [
+          "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+          "--test-dir",
+          "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+          "--output-on-failure",
+          "--parallel",
+          "1"
+        ]
+      }
+    ]
+  },
+  "process_tree": [
+    {
+      "pid": 7764,
+      "parent_pid": 21668,
+      "create_time": 1791679537.5822322,
+      "executable": "e:\\strata-hetero-data\\venv\\lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+      "command_line": [
+        "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+        "--test-dir",
+        "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+        "--output-on-failure",
+        "--parallel",
+        "1"
+      ]
+    }
+  ],
+  "log_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\receipts-02\\execution\\ctest.log",
+  "log_bytes": 634,
+  "log_sha256": "b29668e40b633e002919e1f1110b2ee2b0e808f63c91285ccafe7453e9985f3b"
+}

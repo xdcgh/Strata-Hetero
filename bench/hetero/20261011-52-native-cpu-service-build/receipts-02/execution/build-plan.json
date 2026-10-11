@@ -1,0 +1,138 @@
+{
+  "status": "ready_to_build",
+  "head": "b85874e7e06d8a64544c05ad6389eb93bec8f2fd",
+  "ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "build_dir": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+  "source_sha256": {
+    "CMakeLists.txt": "d1c31a33411c89a5de5a210e562113521057d45fec6ef157fe8ccb38b662f1f7",
+    "src/kernels/cpu/expert.cpp": "80ed5fea6e782a4f5ff29f78632c9fe798812aadc0d59c78a3b6dfcd1decbfb9",
+    "src/kernels/cpu/pool.cpp": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639",
+    "src/kernels/cpu/native_expert.cpp": "8a20968e4198bb3d52eab651296d4c360b47b380ad603cd9b4f920d4c6a57611",
+    "src/kernels/cpu/expert_layout.cpp": "8a9f650ed3e14851dddb42c3e4c3473d76a33a9438ba7cdfe9d98985947b32f1",
+    "src/kernels/cpu/iq_avx2.cpp": "9e40d799f05dbd593ecf9d077df1488375a6e9db0d5a0564637a9151eabde5c0",
+    "src/kernels/cpu/iq_avx512.cpp": "e52894730c33e21cc55f4dba136fbb1a8ca8fa1eca26639419f47a9b5fae122c",
+    "src/kernels/cpu/kq_avx2.cpp": "333e1d06b52711dd1f7f8d8773695fd6f74efc3d2dea6ec7e175737b7ea4c1ef",
+    "src/kernels/cpu/kq_avx1.cpp": "93c029348834f626c2c76f4b1af65486ff1785465f5edd50bfef9d739239257e",
+    "src/kernels/cpu/pool_affinity_win.hpp": "e179c53f0b02ddf250ae8244275d62db20efa5e1ac76a6d2dbd392bee09c8cd8",
+    "include/strata/kernels/cpu/expert.hpp": "c1c4ac822465b16fd9adbfe85aeb819265f508fa2c48c3cda3837315efa7c0b1",
+    "include/strata/kernels/cpu/pool.hpp": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff",
+    "include/strata/kernels/cpu/native_expert.hpp": "269ab8daef96fc6e14471430ef5c44475af7f166d127d812fb447c4062131b7e",
+    "include/strata/kernels/cpu/expert_layout.hpp": "c653b2646f06ec967142bc4d4a056f3238e58809df9fa3332cf0f22e00119d11",
+    "include/strata/kernels/cpu/iq_avx2.hpp": "dd596f7ee740be765eb9635fb3de13533f590b3f0517dd66355b13c9720c1a10",
+    "include/strata/kernels/cpu/iq_avx512.hpp": "bed355390929a1bc2668ff098f9ef48fecfc60f8fc05922a9c41ef3aac3a2080",
+    "include/strata/kernels/cpu/kq_avx2.hpp": "810cecff725f1cf64d92658409ef1995c1d4473b305bcf0edd2803e1d1fedf0f",
+    "src/program/generate.cpp": "2b7077012a7bf7113c05dec701f164ea88b20eeed42e75009e135881bfe2cabd",
+    "src/hetero/native_expert_bench.cpp": "0ad1dbc70fc00ced12f093e111e154de46f253ed84e670e4fe420a6fc90354ed",
+    "src/hetero/native_expert_fixture.cpp": "db7cc1bedbe08604c940f4541e5b7c89dd182b7cc58c4c3d1e00d2db1b0023fa",
+    "src/hetero/worker_affinity_observation_test.cpp": "af5a3edc8b8879f551aefe40de94812e96ac633a388bd58aac1e7630b395e975",
+    "src/hetero/native_cpu_service.cpp": "3194b7e67e3f7781e54785c17f53f127395f7635ec8a4bf36cc454b024130ccc",
+    "src/hetero/native_cpu_service_fixture.cpp": "1856c997f96970bc7bfd6225abc2438e57403f72c41a893d876acf6bad438c18",
+    "tools/hetero_native_cpu/CMakeLists.txt": "1704be49a740bb476ce1c469c32cd9408760f19feecbe19c93753f19d8586592",
+    "tools/hetero_native_cpu/sha256.hpp": "5bbdfb8733ec347de4c5ca990ce412cc1241854c5920f81a47ac331d32bc19d8",
+    "tools/hetero_native_cpu/cli_fixtures.cmake": "25be0a80057b1b334e843699b5c4af2debc307ebb23427cd0e2532f3e94b8031",
+    "tools/hetero_native_cpu/run_build.ps1": "514f4ded3639069c2e948eec1c28e1b2ffa272020d56f6251a2ab697e3c63ac7",
+    "tools/hetero_resources.py": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+    "tools/hetero_verify_existing.py": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3",
+    "bench/hetero/20261009-48-native-cpu-affinity-observe/run_cpu48_build.py": "02a8474ee2f44de47376a2c77da1e35fcc7e73f62ec08dc2f531e2a58a67294f",
+    "bench/hetero/20261009-28-native-cpu-pool-build/cmake-controls-verified.json": "9f29fb9a9e633da1a9ed6aef95c98acf2537e294e4409dc630bdf209016a3f8d",
+    "bench/hetero/20261009-48-native-cpu-affinity-observe/receipts-preflight-05/toolchain-preflight.json": "b24b2a862285a26bebd296fdf969539233c439bcdfa64db64158c2be92e4a16d",
+    "bench/hetero/20261011-52-native-cpu-service-build/run_cpu52_build.py": "ab8b903aae9afe39ebe184824e6ef2c62b78c1c618a4eed220499dbda0704f15"
+  },
+  "source_freeze_manifest_sha256": "7ec40bdf349b0da38f31efbaa66182833111d70cb55d161526ac4841cc7988f3",
+  "tool_paths": {
+    "cmake": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "ninja": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "compiler": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "ctest": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\ctest.exe",
+    "vcvars": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat"
+  },
+  "tool_sha256": {
+    "cmake": "ab8247ca4554871e5d75c0ee118ee8663727bd6fdf37ad76b17e9cc8d5f286a8",
+    "ninja": "a7f084e8ee37bff0872aa8bd3d17cc19632d2a37734f6c242dd3dee22d77c0b4",
+    "compiler": "b0a1818ebae6da7f18230a84e76ce839212584ac4c2ab55b97a0d5268085da57",
+    "ctest": "083f482c8656c86932c28906445cb3c10c0c5ee649a90ff3e0080ee4447d3dfc",
+    "vcvars": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209"
+  },
+  "configure_argv": [
+    "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+    "-S",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu",
+    "-B",
+    "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52",
+    "-G",
+    "Ninja",
+    "-DCMAKE_MAKE_PROGRAM=E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_SYSTEM_VERSION=10.0.26100.0",
+    "-DSTRATA_ENABLE_CUDA=OFF",
+    "-DSTRATA_ENABLE_HIP=OFF",
+    "-DSTRATA_HIP_GFX906=OFF",
+    "-DSTRATA_ENABLE_SYCL=OFF",
+    "-DSTRATA_PREFILL_MMQ=OFF",
+    "-DSTRATA_MMQ_KQUANTS=OFF",
+    "-DSTRATA_ORCA_Q4KS_MMQ=OFF",
+    "-DSTRATA_NATIVE_EXPERTS=ON",
+    "-DSTRATA_BUILD_TESTS=OFF",
+    "-DSTRATA_PORTABLE=ON",
+    "-DSTRATA_ISA_FLOOR=",
+    "-DSTRATA_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "-DHETERO_NATIVE_GGML_DIR=E:\\Strata-Hetero-data\\source\\llama-3cf0325"
+  ],
+  "targets": [
+    "hetero_native_expert",
+    "hetero_native_expert_metadata_fixture",
+    "hetero_worker_affinity_observation",
+    "hetero_native_cpu_service",
+    "hetero_native_cpu_service_fixture"
+  ],
+  "parallel_jobs": 1,
+  "windows_sdk": {
+    "version": "10.0.26100.0",
+    "root": "C:\\Program Files (x86)\\Windows Kits\\10",
+    "tools": {
+      "rc.exe": {
+        "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe",
+        "sha256": "65db0d7b4f10ba0f55973fd9356543a556da9ec1c777a0c05f05a0329c8a100a"
+      },
+      "mt.exe": {
+        "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe",
+        "sha256": "fb1ab75294b78619bd6ac8cadf30cb95befbc7324703cbe2654ef800ddd2bf4d"
+      }
+    }
+  },
+  "static_runtime": "/MT",
+  "portable_isa": "/arch:AVX2",
+  "literal_boolean_controls": [
+    "OFF",
+    "OFF",
+    "OFF",
+    "OFF",
+    "OFF",
+    "OFF",
+    "OFF",
+    "ON",
+    "OFF",
+    "ON"
+  ],
+  "gpu_backends": {
+    "CUDA": "OFF",
+    "HIP": "OFF",
+    "SYCL": "OFF"
+  },
+  "native_blob_opened": false,
+  "identity_opened": false,
+  "service_serve_started": false,
+  "inference_called": false,
+  "resource_gate_before_configure": {
+    "time_utc": "2026-10-11T00:45:09.736313+00:00",
+    "label": "build:start",
+    "physical_available_bytes": 115601014784,
+    "commit_available_bytes": 123238703104,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "errors": [],
+    "gate_ok": true,
+    "owned_process_tree": null
+  },
+  "compiler_conflicts": [],
+  "preflight_receipt_sha256": "315bd5d9237f823c5aaaaa75738e7a679e27bb100c94dc7591242e23754653b3"
+}

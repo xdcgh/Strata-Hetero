@@ -1,0 +1,46 @@
+{
+  "schema": "native-cpu-pool-build-controls-v1-corrected",
+  "run_id": "native-cpu-pool-20261009-28",
+  "source_head": "9eb9960ec750b0db97634ea0dfafaed48b015a2a",
+  "ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "cmake": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+  "cmake_version": "cmake version 4.4.3",
+  "cmake_sha256": "ab8247ca4554871e5d75c0ee118ee8663727bd6fdf37ad76b17e9cc8d5f286a8",
+  "ninja": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+  "ninja_version": "1.13.2.git.kitware.jobserver-pipe-1",
+  "ninja_sha256": "a7f084e8ee37bff0872aa8bd3d17cc19632d2a37734f6c242dd3dee22d77c0b4",
+  "compiler": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+  "compiler_sha256": "b0a1818ebae6da7f18230a84e76ce839212584ac4c2ab55b97a0d5268085da57",
+  "generator": "Ninja",
+  "configuration": "Release",
+  "parallel_jobs": 1,
+  "targets": [
+    "hetero_native_expert",
+    "hetero_native_expert_metadata_fixture"
+  ],
+  "backend_options": {
+    "generator": "Ninja",
+    "configuration": "Release",
+    "targets": [
+      "hetero_native_expert",
+      "hetero_native_expert_metadata_fixture"
+    ],
+    "parallel_jobs": 1,
+    "STRATA_ENABLE_CUDA": "OFF",
+    "STRATA_ENABLE_HIP": "OFF",
+    "STRATA_HIP_GFX906": "OFF",
+    "STRATA_ENABLE_SYCL": "OFF",
+    "STRATA_PREFILL_MMQ": "OFF",
+    "STRATA_MMQ_KQUANTS": "OFF",
+    "STRATA_ORCA_Q4KS_MMQ": "OFF",
+    "STRATA_NATIVE_EXPERTS": "ON",
+    "STRATA_BUILD_TESTS": "OFF",
+    "STRATA_PORTABLE": "ON",
+    "STRATA_ISA_FLOOR": "",
+    "STRATA_GGML_DIR": "E:\\Strata-Hetero-data\\source\\llama-3cf0325"
+  },
+  "portable_avx2_compiler_flags": "/arch:AVX2 (as reported by configure log)",
+  "msvc_runtime": "/MT",
+  "expanded_harness_compile_command": "native-expert-compile-command-verified.txt",
+  "cuda_or_hip_compiler_invoked": false
+}

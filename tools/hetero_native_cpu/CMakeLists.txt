@@ -52,13 +52,21 @@ if(NOT _strata_git_rc EQUAL 0)
 endif()
 
 set(HETERO_NATIVE_SOURCE "${STRATA_ROOT}/src/hetero/native_expert_bench.cpp")
+set(HETERO_CPU_SERVICE_SOURCE "${STRATA_ROOT}/src/hetero/native_cpu_service.cpp")
+set(HETERO_CPU_POOL_CPP "${STRATA_ROOT}/src/kernels/cpu/pool.cpp")
+set(HETERO_CPU_POOL_HPP "${STRATA_ROOT}/include/strata/kernels/cpu/pool.hpp")
 set(HETERO_NATIVE_SHA_HEADER "${CMAKE_CURRENT_LIST_DIR}/sha256.hpp")
 set(HETERO_NATIVE_CMAKE "${CMAKE_CURRENT_LIST_FILE}")
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
-  "${HETERO_NATIVE_SOURCE}" "${HETERO_NATIVE_SHA_HEADER}")
+  "${HETERO_NATIVE_SOURCE}" "${HETERO_CPU_SERVICE_SOURCE}" "${HETERO_CPU_POOL_CPP}"
+  "${HETERO_CPU_POOL_HPP}" "${HETERO_NATIVE_SHA_HEADER}")
 file(SHA256 "${HETERO_NATIVE_SOURCE}" HETERO_NATIVE_SOURCE_SHA256)
+file(SHA256 "${HETERO_CPU_SERVICE_SOURCE}" HETERO_CPU_SERVICE_SOURCE_SHA256)
+file(SHA256 "${HETERO_CPU_POOL_CPP}" HETERO_CPU_POOL_CPP_SHA256)
+file(SHA256 "${HETERO_CPU_POOL_HPP}" HETERO_CPU_POOL_HPP_SHA256)
 file(SHA256 "${HETERO_NATIVE_SHA_HEADER}" HETERO_NATIVE_SHA_HEADER_SHA256)
 file(SHA256 "${HETERO_NATIVE_CMAKE}" HETERO_NATIVE_CMAKE_SHA256)
+set(HETERO_CPU_SERVICE_CMAKE_SHA256 "${HETERO_NATIVE_CMAKE_SHA256}")
 
 # Root CMakeLists configures the pinned ggml CPU backend with CUDA and OpenMP disabled.
 add_subdirectory("${STRATA_ROOT}" "${CMAKE_BINARY_DIR}/strata-root" EXCLUDE_FROM_ALL)
@@ -78,11 +86,39 @@ target_compile_definitions(hetero_native_expert PRIVATE
   "HETERO_NATIVE_SHA_HEADER_SHA256=\"${HETERO_NATIVE_SHA_HEADER_SHA256}\""
   "HETERO_NATIVE_CMAKE_SHA256=\"${HETERO_NATIVE_CMAKE_SHA256}\"")
 
+add_executable(hetero_native_cpu_service "${HETERO_CPU_SERVICE_SOURCE}")
+target_include_directories(hetero_native_cpu_service PRIVATE
+  "${STRATA_ROOT}/include"
+  "${CMAKE_CURRENT_LIST_DIR}")
+target_link_libraries(hetero_native_cpu_service PRIVATE strata_kernels_cpu)
+target_compile_definitions(hetero_native_cpu_service PRIVATE
+  "HETERO_STRATA_SOURCE_HEAD=\"${HETERO_STRATA_SOURCE_HEAD}\""
+  "HETERO_GGML_PIN=\"${HETERO_GGML_PIN}\""
+  "HETERO_NATIVE_SOURCE_SHA256=\"${HETERO_NATIVE_SOURCE_SHA256}\""
+  "HETERO_NATIVE_SHA_HEADER_SHA256=\"${HETERO_NATIVE_SHA_HEADER_SHA256}\""
+  "HETERO_NATIVE_CMAKE_SHA256=\"${HETERO_NATIVE_CMAKE_SHA256}\""
+  "HETERO_CPU_SERVICE_SOURCE_SHA256=\"${HETERO_CPU_SERVICE_SOURCE_SHA256}\""
+  "HETERO_CPU_SERVICE_CMAKE_SHA256=\"${HETERO_CPU_SERVICE_CMAKE_SHA256}\""
+  "HETERO_CPU_POOL_CPP_SHA256=\"${HETERO_CPU_POOL_CPP_SHA256}\""
+  "HETERO_CPU_POOL_HPP_SHA256=\"${HETERO_CPU_POOL_HPP_SHA256}\"")
+
 add_executable(hetero_native_expert_metadata_fixture "${STRATA_ROOT}/src/hetero/native_expert_fixture.cpp")
 target_include_directories(hetero_native_expert_metadata_fixture PRIVATE
   "${STRATA_ROOT}/include"
   "${CMAKE_CURRENT_LIST_DIR}")
 target_link_libraries(hetero_native_expert_metadata_fixture PRIVATE strata_kernels_cpu)
+
+add_executable(hetero_native_cpu_service_fixture "${STRATA_ROOT}/src/hetero/native_cpu_service_fixture.cpp")
+target_include_directories(hetero_native_cpu_service_fixture PRIVATE
+  "${STRATA_ROOT}/include"
+  "${CMAKE_CURRENT_LIST_DIR}")
+target_link_libraries(hetero_native_cpu_service_fixture PRIVATE strata_kernels_cpu)
+target_compile_definitions(hetero_native_cpu_service_fixture PRIVATE
+  "HETERO_NATIVE_SOURCE_SHA256=\"${HETERO_NATIVE_SOURCE_SHA256}\""
+  "HETERO_CPU_SERVICE_SOURCE_SHA256=\"${HETERO_CPU_SERVICE_SOURCE_SHA256}\""
+  "HETERO_CPU_SERVICE_CMAKE_SHA256=\"${HETERO_CPU_SERVICE_CMAKE_SHA256}\""
+  "HETERO_CPU_POOL_CPP_SHA256=\"${HETERO_CPU_POOL_CPP_SHA256}\""
+  "HETERO_CPU_POOL_HPP_SHA256=\"${HETERO_CPU_POOL_HPP_SHA256}\"")
 
 enable_testing()
 add_executable(hetero_worker_affinity_observation "${STRATA_ROOT}/src/hetero/worker_affinity_observation_test.cpp")
@@ -90,6 +126,7 @@ target_link_libraries(hetero_worker_affinity_observation PRIVATE strata_kernels_
 add_test(NAME hetero_worker_affinity_observation COMMAND hetero_worker_affinity_observation)
 set_tests_properties(hetero_worker_affinity_observation PROPERTIES TIMEOUT 15)
 add_test(NAME hetero_native_expert_metadata_fixture COMMAND hetero_native_expert_metadata_fixture)
+add_test(NAME hetero_native_cpu_service_fixture COMMAND hetero_native_cpu_service_fixture)
 add_test(NAME hetero_native_expert_cli_fixtures
   COMMAND "${CMAKE_COMMAND}"
     "-DEXECUTABLE=$<TARGET_FILE:hetero_native_expert>"

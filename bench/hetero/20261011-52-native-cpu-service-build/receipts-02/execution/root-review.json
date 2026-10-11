@@ -1,0 +1,13 @@
+{
+  "status": "root_independent_binary_hash_review_pass",
+  "binaries": {
+    "hetero_native_expert": "aa036c5d4cab4c9aa775006f8c16a5a66de982d377432ec38e382f5df68ab373",
+    "hetero_native_expert_metadata_fixture": "c3930d01910a889ea52df2761a8f345ec53d5097bcd6d264c97ad9305f4e8f07",
+    "hetero_worker_affinity_observation": "133a7ef7a379ec0e5fb98ebd81b93bee2db8ea9a1f9155acdb09e175f1ddd731",
+    "hetero_native_cpu_service": "486dedeeba69497dc5d3aebf771833278b8431fc29e0e0c33bab503e5a04caf9",
+    "hetero_native_cpu_service_fixture": "3f1351a5c2ffa299fda82b471eb50b286e12b9646c3b7a5929c286498e31b0b0"
+  },
+  "receipt_sha256": "723bbb8f3805a4ae2ca15ec2c325dea564d475ad30cabd2b841cca8c1b1676f6",
+  "ctest_four_pass": true,
+  "no_actual_native_ipc_or_model_gain_yet": true
+}
