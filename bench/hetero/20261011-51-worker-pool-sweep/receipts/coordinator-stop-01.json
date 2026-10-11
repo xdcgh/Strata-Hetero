@@ -1,0 +1,7 @@
+{
+  "pid": 16592,
+  "exe": "C:\\Python314\\python.exe",
+  "created": "2026-10-11T00:49:52.8370710Z",
+  "command_line": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -B -m tools.hetero_pool_sweep --matrix bench/hetero/20261011-51-worker-pool-sweep/matrix-tokenizer-rebased-05.json --execute --adapter run41 --authorization bench/hetero/20261011-51-worker-pool-sweep/root-authorization-02.json",
+  "action": "stop_only_stuck_coordinator"
+}

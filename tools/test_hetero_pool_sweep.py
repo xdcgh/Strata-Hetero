@@ -556,13 +556,23 @@ class ProcessAndTailFixtureTests(unittest.TestCase):
                 self.calls += 1
                 self.assert_callback()
                 if self.timeout:
+                    self.stdout_file.write(b"partial-out"); self.stdout_file.flush()
+                    self.stderr_file.write(b"partial-err"); self.stderr_file.flush()
                     raise subprocess.TimeoutExpired("fake-pwsh", timeout, output=b"partial-out", stderr=b"partial-err")
-                return b"done", b"warn"
+                self.stdout_file.write(b"done"); self.stdout_file.flush()
+                self.stderr_file.write(b"warn"); self.stderr_file.flush()
+                return None, None
             def assert_callback(self):
                 if not callback_seen[0]: raise AssertionError("script bytes sent before exact owner receipt callback")
 
         callback_seen = [False]
         fake = FakePopen()
+        def attach_capture(process):
+            def factory(*_args, **kwargs):
+                process.stdout_file = kwargs["stdout"]
+                process.stderr_file = kwargs["stderr"]
+                return process
+            return factory
         def callback(actual_owner, process):
             self.assertEqual(actual_owner["create_utc"], owner["create_utc"])
             self.assertEqual(actual_owner["argv_windows"], owner["argv_windows"])
@@ -571,7 +581,7 @@ class ProcessAndTailFixtureTests(unittest.TestCase):
 
         with mock.patch.object(type(sweep.PWsh7), "is_file", return_value=True), \
              mock.patch.object(sweep, "sha256_file", return_value=sweep.PWSH7_SHA256), \
-             mock.patch.object(sweep.subprocess, "Popen", return_value=fake), \
+             mock.patch.object(sweep.subprocess, "Popen", side_effect=attach_capture(fake)), \
              mock.patch.object(sweep, "_query_pwsh_process_identity", return_value=owner):
             code, stdout, stderr, got_owner = sweep._invoke_pwsh_text("fake source", "launch", env={}, cwd=Path.cwd(), on_started=callback)
         self.assertEqual((code, stdout, stderr), (0, b"done", b"warn"))
@@ -586,7 +596,7 @@ class ProcessAndTailFixtureTests(unittest.TestCase):
             callback_seen[0] = True
         with mock.patch.object(type(sweep.PWsh7), "is_file", return_value=True), \
              mock.patch.object(sweep, "sha256_file", return_value=sweep.PWSH7_SHA256), \
-             mock.patch.object(sweep.subprocess, "Popen", return_value=timed), \
+             mock.patch.object(sweep.subprocess, "Popen", side_effect=attach_capture(timed)), \
              mock.patch.object(sweep, "_query_pwsh_process_identity", return_value=owner):
             with self.assertRaises(sweep.LifecycleTimeout) as caught:
                 sweep._invoke_pwsh_text("fake source", "launch", env={}, cwd=Path.cwd(), on_started=timeout_callback)

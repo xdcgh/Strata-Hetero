@@ -15,6 +15,7 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import tempfile
 import sys
 from typing import Any, Callable, Iterable
 
@@ -859,8 +860,13 @@ def _invoke_pwsh_text(script_text: str, action: str, *, env: dict[str, str], cwd
     wrapper = "$source=[Console]::In.ReadToEnd();$block=[scriptblock]::Create($source);& $block " + suffix
     argv = [str(PWsh7), "-NoLogo", "-NoProfile", "-NonInteractive", "-Command", wrapper]
     flags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+    # Long-lived Start-Process descendants can inherit pipe handles after the
+    # PowerShell process exits. File-backed capture waits on the owned process,
+    # rather than on EOF from every descendant holding the pipe.
+    stdout_capture = tempfile.TemporaryFile(mode="w+b")
+    stderr_capture = tempfile.TemporaryFile(mode="w+b")
     proc = subprocess.Popen(argv, cwd=str(cwd), env=env, stdin=subprocess.PIPE,
-                            stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False,
+                            stdout=stdout_capture, stderr=stderr_capture, shell=False,
                             creationflags=flags)
     try:
         owner = _query_pwsh_process_identity(proc.pid)
@@ -869,12 +875,18 @@ def _invoke_pwsh_text(script_text: str, action: str, *, env: dict[str, str], cwd
         on_started(owner, proc)
     except Exception:
         _close_unfed_owned_process(proc)
+        stdout_capture.close(); stderr_capture.close()
         raise
     try:
-        out, err = proc.communicate(script_text.encode("utf-8"), timeout=timeout_seconds)
+        proc.communicate(script_text.encode("utf-8"), timeout=timeout_seconds)
+        stdout_capture.seek(0); stderr_capture.seek(0)
+        out, err = stdout_capture.read(), stderr_capture.read()
     except subprocess.TimeoutExpired as exc:
         # Preserve the exact controller PID for external owner review. Do not kill by PID here.
-        raise LifecycleTimeout(owner, exc.output or b"", exc.stderr or b"", proc) from exc
+        stdout_capture.seek(0); stderr_capture.seek(0)
+        raise LifecycleTimeout(owner, stdout_capture.read(), stderr_capture.read(), proc) from exc
+    finally:
+        stdout_capture.close(); stderr_capture.close()
     return int(proc.returncode), out, err, owner
 
 
@@ -1034,7 +1046,8 @@ class Run41LifecycleAdapter:
                 identity.get("tokenizer_implementation", {}).get("sha256") != step.get("tokenizer_implementation_sha256") or
                 config.get("hetero_capture_token_ids") is not step["token_capture"]):
             raise SweepError("phase config/identity/provenance changed from the immutable matrix recipe")
-        controller_dir = self._controller_dir(step)
+        resume_existing = self.authorization.get("resume_existing_run_id") == step["run_id"]
+        controller_dir = config_path.parent / "controller" if resume_existing else self._controller_dir(step)
         if controller_dir.parent != config_path.parent:
             raise SweepError("controller evidence directory escaped its run leaf")
         self.execution_state["controller_dir"] = str(controller_dir)
@@ -1042,10 +1055,26 @@ class Run41LifecycleAdapter:
             str(config_path.parent / name) for name in ("process.json", "sampler-process.json", "resource/startup-watch-result.json")
         ]
         self.execution_state["stage"] = "launch_controller_starting"
-        launch = self._call(step, "launch", "launch", controller_dir)
-        launch_obj = launch["json"]
-        if launch_obj.get("status") != "launched_not_yet_ready" or launch_obj.get("start_performed") is not True:
-            raise SweepError("run41 launch template did not return its expected owned-launch state")
+        if resume_existing:
+            if step["phase"] != "quality_on" or step["arm"] != "w10-all":
+                raise SweepError("only the first untouched live baseline may be resumed")
+            process_path = config_path.parent / "process.json"
+            sampler_path = config_path.parent / "sampler-process.json"
+            if (sha256_file(process_path) != self.authorization.get("resume_process_sha256") or
+                    sha256_file(sampler_path) != self.authorization.get("resume_sampler_sha256")):
+                raise SweepError("existing owned launch receipts changed before resume")
+            existing_process = json.loads(process_path.read_text())
+            existing_sampler = json.loads(sampler_path.read_text())
+            launch_obj = {"status": "adopted_existing_owned_launch", "start_performed": False,
+                          "launcher_pid": existing_process["launcher_pid"],
+                          "sampler_pid": existing_sampler["sampler_launcher_pid"],
+                          "reason": "launch PowerShell exited while descendants kept capture pipe open; model retained"}
+            _save_exclusive(controller_dir / "launch-resume.json", (json.dumps(launch_obj, indent=2)+"\n").encode())
+        else:
+            launch = self._call(step, "launch", "launch", controller_dir)
+            launch_obj = launch["json"]
+            if launch_obj.get("status") != "launched_not_yet_ready" or launch_obj.get("start_performed") is not True:
+                raise SweepError("run41 launch template did not return its expected owned-launch state")
         self.execution_state.update({"model_launch_reported": True, "live_owner_state": "owned_model_and_sampler_startup_pending",
                                      "launcher_pid": launch_obj.get("launcher_pid"), "sampler_pid": launch_obj.get("sampler_pid"),
                                      "stage": "startup_watch"})
