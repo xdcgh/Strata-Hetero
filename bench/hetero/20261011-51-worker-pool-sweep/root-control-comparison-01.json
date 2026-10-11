@@ -1,0 +1,10 @@
+{
+  "status": "matched_effective_controls",
+  "only_arg_delta": "explicit --pool-affinity all, already candidate default",
+  "env_equal": true,
+  "other_config_delta": "log path",
+  "model_restart_or_diagnostic_run": false,
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41\\src\\program\\generate.cpp",
+  "source_sha256": "85c3123f8508536cf4291eea281df91c96bbaab3d82561948a6b593f0426befc",
+  "cause": "unresolved; no causal attribution from this comparison"
+}
