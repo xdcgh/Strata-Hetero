@@ -1,0 +1,8 @@
+{
+  "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B tools/test_hetero_kv_parking.py",
+  "started_utc": "2026-10-11T01:40:15.3618697Z",
+  "finished_utc": "2026-10-11T01:40:15.5016267Z",
+  "exit_code": 1,
+  "model_or_api_called": false,
+  "device_or_snapshot_used": false
+}

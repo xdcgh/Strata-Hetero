@@ -1,0 +1,8 @@
+{
+  "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B -m tools.hetero_kv_parking --contract bench/hetero/20261009-49-kv-storage-preparation/execution-contract-v2.json",
+  "started_utc": "2026-10-11T01:43:26.9498485Z",
+  "finished_utc": "2026-10-11T01:43:27.0556974Z",
+  "exit_code": 0,
+  "model_or_api_called": false,
+  "device_or_snapshot_used": false
+}

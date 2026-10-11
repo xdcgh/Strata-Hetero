@@ -55,3 +55,9 @@ H21 then used the same H18 binary with only the diagnostic environment flag remo
 | Partial/table hot rows | Tuned jointly | RAM row cache + SSD | Admission, cache workload identity, miss latency and tail behavior |
 
 Each arm needs warmup and three or more formal repetitions on the same natural-text prompts and output caps. Full-prefill experiments disable prompt-cache reuse. Strict output comparison fixes adaptive expert swaps and PCIe placement before evaluating table placement; performance profiles can then re-enable them and report that separate scope. Compare 32K first, then admitted 128K/256K/512K/1M with retrieval/stability checks. The historical 1M failures remain an unresolved quality constraint.
+
+## Private stdio parking adapter
+
+The v2 KV parking tools now include a concrete private-stdio adapter and 46 passing host-only fixtures. They exercise independent A/B references, alternating hot-RAM parking and immutable cold-disk seeds through mocked INFO/READY/GEN/T/DONE/SAVE/RESTORE frames. Actual continuation token IDs, visible JSON and finish reasons are compared with each conversation's uninterrupted reference. Complete seed-file SHA-256 and byte counts are checked before and after every RESTORE. The engine's nine post-GEN FNV1a64 state hashes are supplementary non-cryptographic evidence; L_tokens and ple_prev are compared separately as metadata. No pre-restore tail SHA is invented.
+
+The runner and 6bbc/ffeb binary are pinned in execution-contract-v2.json, while execution remains disabled and runtime validation NOT_RUN. No real snapshot, GPU/model run, speedup, or cold-SSD claim is established. The frozen v1 contract is retained. Real parking remains held pending a valid model baseline and a separately reviewed pretokenized request/calibration manifest. See bench/hetero/20261011-56-kv-v2-hosttest/root-review-final.json.

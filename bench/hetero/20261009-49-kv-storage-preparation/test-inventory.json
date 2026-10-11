@@ -1,0 +1,64 @@
+{
+  "tools/test_conversation_cache_parity.py": {
+    "sha256": "eaa1cfd51160be4bd76a4db2625086097b08ec1e51a80be2127a8e0c0ea46360",
+    "declared_test_methods": [
+      "test_native_iq_single_token_arguments",
+      "test_complete_evidence",
+      "test_incomplete_or_different_evidence_fails",
+      "test_speculative_gate_still_requires_output_parity",
+      "test_dry_run_does_not_read_config_or_start_engine",
+      "test_pressure_budget_hint_uses_individual_sizes",
+      "test_pressure_budget_hint_handles_missing_or_incompatible_sizes",
+      "test_physical_memory_admission_evidence",
+      "test_incoming_exchange_evidence",
+      "test_byte_eviction_evidence",
+      "test_oversized_evidence",
+      "test_insufficient_pressure_evidence_rejected"
+    ],
+    "run_in_this_phase": false
+  },
+  "tools/test_conversation_restore_speed.py": {
+    "sha256": "f9015601c42189f491d98195d05ee1fbf153c92013265cb0a6ae1db4f4f985a8",
+    "declared_test_methods": [
+      "test_override",
+      "test_compare"
+    ],
+    "run_in_this_phase": false
+  },
+  "serve/test_slots.py": {
+    "sha256": "2b8d976e452e8bf4a3c20c022f0bc259a00d9f8fa8fc5fce168808b4eaef33e5",
+    "declared_test_methods": [
+      "test_a_foreign_page_or_a_form_never_reaches_the_engine",
+      "test_save_writes_into_the_slot_save_path",
+      "test_restore_answers_like_llama_server",
+      "test_refused_file_is_an_error_not_a_success",
+      "test_missing_file_is_not_found",
+      "test_filename_cannot_leave_the_directory",
+      "test_ordinary_names_are_accepted",
+      "test_relative_save_dir_becomes_absolute",
+      "test_engine_gets_an_absolute_path_on_one_line",
+      "test_restore_of_a_link_reaches_the_engine_which_decides",
+      "test_progress_lines_keep_a_long_save_alive",
+      "test_a_small_save_reports_its_only_partial_block",
+      "test_a_blocking_step_gets_its_announced_allowance",
+      "test_a_blocking_step_that_never_ends_is_ended",
+      "test_progress_ends_the_allowance",
+      "test_malformed_allowances_end_the_engine",
+      "test_a_silent_engine_is_ended_not_waited_for",
+      "test_engine_death_is_a_server_error",
+      "test_failed_restore_transfer_is_a_server_error",
+      "test_malformed_or_mismatched_reply_is_a_server_error",
+      "test_out_of_protocol_lines_end_the_engine",
+      "test_log_lines_are_not_answers",
+      "test_typed_refusals_have_their_own_codes",
+      "test_published_failure_is_reported",
+      "test_disk_and_ram_refusals_have_their_own_codes",
+      "test_slot_work_counts_as_activity_and_shows_in_status",
+      "test_only_slot_zero_and_known_actions",
+      "test_disabled_without_a_slot_save_path",
+      "test_refused_with_parallel_requests",
+      "test_waits_for_a_running_request"
+    ],
+    "run_in_this_phase": false
+  }
+}

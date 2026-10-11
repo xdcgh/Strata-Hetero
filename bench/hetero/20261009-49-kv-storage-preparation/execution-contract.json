@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "status": "source_inventory_and_runtime_plan_only",
+  "execution_authorized": false,
+  "run_id": "20261009-49-kv-storage",
+  "source_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd",
+  "source_version": "0.1.41",
+  "source_bindings_sha256": "cc798b18a3bdc0c38300fd3985ecf8e5873a93901511b0ba9e1d6a8f789edbd2",
+  "reference_config": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-44-upstream41-direct-quality-resume\\config.json",
+    "sha256": "a46761007969d341c38b87d223bbd1b60257555afbcaaa5af9e55330ba97a515",
+    "identity_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-44-upstream41-direct-quality-resume\\identity.json",
+    "identity_sha256": "72a806b2e28bde9fd5a2ee6a76da2c67164ee9e9fbace92e3ee2027818bf24ab",
+    "known_binary": {
+      "version": "0.1.41",
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream41-03\\strata.exe",
+      "sha256": "a6e2763ffce668e213f12380389223674621c47e4e5cb94c0f724e6ea8e686fc",
+      "size_bytes": 52428800,
+      "source_sha": "fb58e0dbc8399662c0e47c76578c6e878b14f6cf"
+    },
+    "binary_rehash_or_query_performed_now": false
+  },
+  "runtime_binary_binding": null,
+  "runner_implemented": false,
+  "runner_execution_permitted": false,
+  "configs": {
+    "reference-A": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\reference-A.json",
+      "sha256": "2dd651ea60d59069141bc7583a75ee4e0c9f4a8e243e1724abf7833134c664f4",
+      "conversation_cache_mib": 0
+    },
+    "reference-B": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\reference-B.json",
+      "sha256": "cff7d103aac36ff6c0b27d37656074897c3548ae3938e9fcbbb2d868fee62418",
+      "conversation_cache_mib": 0
+    },
+    "ram-pair": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\ram-pair.json",
+      "sha256": "bdc26553989a676c5f6393f1f2c181eb621a7cfd48809d7b37d6a74a9bb90ac8",
+      "conversation_cache_mib": 4096
+    },
+    "disk-pair": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\disk-pair.json",
+      "sha256": "1af715fc10adb44637c9c594c78ff94c2b5bc8e77b2311cc1bbfb6f3aea92c69",
+      "conversation_cache_mib": 0
+    }
+  },
+  "transport": "reuse StrataEngine.generate and StrataEngine.session_file directly; one private engine at a time; no existing API",
+  "context": {
+    "limit_tokens": 32768,
+    "base_prompt_target_tokens": 30720,
+    "base_prompt_tolerance_tokens": 128,
+    "continuation_headroom_tokens": 2048,
+    "max_generated_per_turn": 128,
+    "thinking_enabled": false,
+    "actual_tokenizer_calibration_status": "NOT_RUN",
+    "both_conversations_must_fit_individually": true
+  },
+  "canonical_outputs": {
+    "A": {
+      "conversation": "A",
+      "early": "A-amber-1049",
+      "middle": "A-cobalt-6203",
+      "late": "A-lime-9011"
+    },
+    "B": {
+      "conversation": "B",
+      "early": "B-violet-3907",
+      "middle": "B-gold-8171",
+      "late": "B-cyan-2459"
+    }
+  },
+  "markers_at_fraction": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "quality": {
+    "kind": "strict_json_object_exact",
+    "reject_duplicate_keys": true,
+    "reject_nonfinite_json": true,
+    "canonical_serialization": "UTF8 json sort_keys=true separators comma/colon, ensure_ascii=false",
+    "actual_token_id_lists_must_equal_uninterrupted_reference": true,
+    "canonical_reencoded_ids_are_not_emitted_ids": true,
+    "canonical_expected_objects_must_match": true,
+    "state_hash_keys": [
+      "L",
+      "gdn",
+      "ple",
+      "tail",
+      "dead",
+      "pooled",
+      "pooled_full",
+      "kv",
+      "ple_prev"
+    ],
+    "state_hashes_must_equal_spec1_reference": true,
+    "warmups_per_conversation": 1,
+    "formals_per_conversation_per_arm": 3,
+    "preserve_all_negative_outputs": true,
+    "gate_relaxation_allowed": false
+  },
+  "phases": [
+    {
+      "name": "references",
+      "engines": "reference-A then reference-B; sequential",
+      "requests": "each document warmup then 3 follow-up turns kept live",
+      "must_save": "exact input ids, output ids/text/finish/canonical JSON/state hashes/INFO"
+    },
+    {
+      "name": "ram-pair",
+      "engine": "one private engine with 4096 MiB cache",
+      "sequence": [
+        "A-warm",
+        "B-warm",
+        "A-formal1",
+        "B-formal1",
+        "A-formal2",
+        "B-formal2",
+        "A-formal3",
+        "B-formal3"
+      ],
+      "required_evidence": "actual park/restore logs, cache bytes<=cap, no admission/oversize fallback, >=base-prefix reuse, state hashes and output parity for BOTH A and B; repark retained bytes recorded"
+    },
+    {
+      "name": "disk-pair",
+      "engine": "one private engine with RAM parking disabled",
+      "sequence": [
+        "A-warm",
+        "SAVE A-seed.bin once",
+        "B-warm",
+        "SAVE B-seed.bin once",
+        "RESTORE A-seed.bin; A-formal1",
+        "RESTORE B-seed.bin; B-formal1",
+        "RESTORE A-seed.bin; A-formal2",
+        "RESTORE B-seed.bin; B-formal2",
+        "RESTORE A-seed.bin; A-formal3",
+        "RESTORE B-seed.bin; B-formal3"
+      ],
+      "required_evidence": "SAVED/RESTORED token/byte counts, both independent uninterrupted references, same exact pretokenized reference histories, original two seed file hashes unchanged, parsed SESSION/SWAIT progress, canonical/token/state parity; checkpoint tail re-read recorded"
+    }
+  ],
+  "snapshot_paths": {
+    "directory": "E:/Strata-Hetero-data/kv-experiments/20261009-49-two-conversations/snapshots",
+    "files": [
+      "A-seed.bin",
+      "B-seed.bin"
+    ],
+    "create_now": false,
+    "new_directory_exclusive": true,
+    "path_must_be_absent_before_each_SAVE": true,
+    "SAVE_overwrite_allowed": false,
+    "source_publisher_can_replace_existing_destination": true,
+    "max_file_bytes": 2147483648,
+    "max_total_file_bytes": 4294967296,
+    "no_original_model_or_user_conversation_mutation": true
+  },
+  "resource_budget": {
+    "global_physical_floor_bytes": 12884901888,
+    "global_commit_floor_bytes": 4294967296,
+    "global_interval_seconds": 1,
+    "known_telemetry_required": true,
+    "ram_cache_cap_bytes": 4294967296,
+    "engine_conversation_cache_min_free_mib": 12288,
+    "engine_session_min_free_mib": 4096,
+    "initial_disk_free_required_bytes": 8589934592,
+    "before_capture_memory_need": "available >= 12 GiB + actual incoming capture additional bytes",
+    "restore_read_peak_formula": "file_bytes +16MiB +(file_bytes//16MiB+1)*4096 +1MiB",
+    "save_peak_formula": "17MiB +2*deepest_checkpoint.bytes +live.state_bytes +token/image metadata +KV-source directory; streams KV through 16MiB buffer",
+    "process_ownership": "PID/CreateTime/executable/full ordered argv and actual C-Python launcher child plus native direct CPP root; reap exact owned tree on failed/stale/unknown gate",
+    "total_arm_deadline_seconds": 1800,
+    "session_phase_allowance": "60 +(bytes>>22), capped 3600 seconds; each protocol line resets allowance; total arm deadline takes precedence"
+  },
+  "prefetch_followup": {
+    "execution_authorized": false,
+    "not_part_of_initial_parity_arm": true,
+    "variable": "STRATA_KV_PREFETCH=0 vs 1 in fresh processes",
+    "main_kv_resident_cells": 20480,
+    "max_context": 32768,
+    "must_prove": "INFO streamed state, p0>0, actual positive strata KV prefetch layer-prefix count, identical canonical/token/state outputs and matched baseline controls",
+    "scope": "RAM->VRAM whole-prefix next-QSA prefill copy only; no SSD active KV/selection prediction"
+  },
+  "source_mutations_now": false,
+  "runtime_state_mutation_now": false,
+  "model_api_wsl_affinity_started": false,
+  "snapshots_written": false,
+  "scope_completion": false,
+  "remaining_full_scope": [
+    "real RAM parking quality/performance",
+    "inactive disk session restore quality/performance on this Windows build",
+    "RAM streamed KV prefetch parity and crossover",
+    "cold/warm startup and storage I/O measurements",
+    "long-context admission/retrieval/generation quality beyond32K",
+    "active cold-KV paging/attention-prediction prefetch design is absent, not accepted"
+  ],
+  "microfixtures_complete_these_items": false,
+  "root_cpu48_terminal_and_separate_runtime_authorization_required": true
+}

@@ -1,0 +1,37 @@
+{
+  "status": "source_inventory_and_runtime_plan_only",
+  "execution_authorized": false,
+  "configs": {
+    "reference-A": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\reference-A.json",
+      "sha256": "2dd651ea60d59069141bc7583a75ee4e0c9f4a8e243e1724abf7833134c664f4",
+      "conversation_cache_mib": 0
+    },
+    "reference-B": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\reference-B.json",
+      "sha256": "cff7d103aac36ff6c0b27d37656074897c3548ae3938e9fcbbb2d868fee62418",
+      "conversation_cache_mib": 0
+    },
+    "ram-pair": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\ram-pair.json",
+      "sha256": "bdc26553989a676c5f6393f1f2c181eb621a7cfd48809d7b37d6a74a9bb90ac8",
+      "conversation_cache_mib": 4096
+    },
+    "disk-pair": {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\disk-pair.json",
+      "sha256": "1af715fc10adb44637c9c594c78ff94c2b5bc8e77b2311cc1bbfb6f3aea92c69",
+      "conversation_cache_mib": 0
+    }
+  },
+  "contract_sha256": "463cbb6869e1d750ab13e84393ed2e8ab307664e6e0468837bb9824be201f73c",
+  "source_bindings_sha256": "cc798b18a3bdc0c38300fd3985ecf8e5873a93901511b0ba9e1d6a8f789edbd2",
+  "snapshot_directory_created": false,
+  "known_geometry_budget_source": "include/strata/core/layout.hpp and qsa.hpp; conditional on runtime match",
+  "q8_main_kv_bytes_at32K": 415236096,
+  "q8_indexer_pooled_bytes_at32K": 50337792,
+  "q8_draft_kv_bytes_at32K": 34603008,
+  "gdn_running_state_bytes": 117669888,
+  "rope_table_bytes_at32K": 8388608,
+  "geometry_runtime_verified": false,
+  "all_budget_numbers_are_source_derived_not_measurements": true
+}

@@ -1,0 +1,36 @@
+.......................................E...F
+======================================================================
+ERROR: test_execute_plan_runs_full_sequence_with_fake_engine_and_temp_seed_files (tools.test_hetero_kv_stdio.ExecutePlanMockTests.test_execute_plan_runs_full_sequence_with_fake_engine_and_temp_seed_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\test_hetero_kv_stdio.py", line 184, in test_execute_plan_runs_full_sequence_with_fake_engine_and_temp_seed_files
+    bundle=stdio.create_adapter().execute_plan(plan,manifest,checkpoint)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_kv_stdio.py", line 669, in execute_plan
+    else: raise StdioAdapterError("disk snapshot directory appeared after fresh absent check")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tools.hetero_kv_stdio.StdioAdapterError: disk snapshot directory appeared after fresh absent check
+
+======================================================================
+FAIL: test_save_restore_session_lines_are_typed_and_bounded (tools.test_hetero_kv_stdio.StdioProtocolTests.test_save_restore_session_lines_are_typed_and_bounded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\test_hetero_kv_stdio.py", line 69, in test_save_restore_session_lines_are_typed_and_bounded
+    self.assertEqual(commands, ["SAVE E:/unused/A-seed.bin"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['SAVE E:\\unused\\A-seed.bin'] != ['SAVE E:/unused/A-seed.bin']
+
+First differing element 0:
+'SAVE E:\\unused\\A-seed.bin'
+'SAVE E:/unused/A-seed.bin'
+
+- ['SAVE E:\\unused\\A-seed.bin']
+?          ^^      ^^
+
++ ['SAVE E:/unused/A-seed.bin']
+?          ^      ^
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.181s
+
+FAILED (failures=1, errors=1)

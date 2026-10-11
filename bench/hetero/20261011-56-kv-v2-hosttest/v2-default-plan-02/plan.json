@@ -1,0 +1,155 @@
+{
+  "schema_version": 2,
+  "execution_contract_version": 2,
+  "run_id": "20261011-55-kv-execution-v2",
+  "contract_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\execution-contract-v2.json",
+  "status": "plan_only",
+  "contract_sha256": "374d68010ffa6163011db4b0b0fa2abb68879542d9d64ffcec3af4fb5d337e48",
+  "config_bindings": {
+    "reference-A": {
+      "name": "reference-A",
+      "cache_mib": 0,
+      "prompt_cache": 3,
+      "max_context": 32768,
+      "transport": "private stdio StrataEngine; no HTTP listener",
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "seed": 42
+      },
+      "config_sha256_checked": true,
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\reference-A-v2.json",
+      "sha256": "4b6c39c86dc5667a8a4ef9f241580e8d4ffc143fe45cb87b2234ab404e9deb00"
+    },
+    "reference-B": {
+      "name": "reference-B",
+      "cache_mib": 0,
+      "prompt_cache": 3,
+      "max_context": 32768,
+      "transport": "private stdio StrataEngine; no HTTP listener",
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "seed": 42
+      },
+      "config_sha256_checked": true,
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\reference-B-v2.json",
+      "sha256": "5d9c9b0b1663655d78666e80dbb32b0e85424cfbd3e7f03fc3a47041e15692a2"
+    },
+    "ram-pair": {
+      "name": "ram-pair",
+      "cache_mib": 4096,
+      "prompt_cache": 3,
+      "max_context": 32768,
+      "transport": "private stdio StrataEngine; no HTTP listener",
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "seed": 42
+      },
+      "config_sha256_checked": true,
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\ram-pair-v2.json",
+      "sha256": "abc202111ae282f6992d7119e9fc9a65e318d7cf82728b24e4e99eb5da22983e"
+    },
+    "disk-pair": {
+      "name": "disk-pair",
+      "cache_mib": 0,
+      "prompt_cache": 3,
+      "max_context": 32768,
+      "transport": "private stdio StrataEngine; no HTTP listener",
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "seed": 42
+      },
+      "config_sha256_checked": true,
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-49-kv-storage-preparation\\disk-pair-v2.json",
+      "sha256": "3b706375e2a52e9a5c1da2c88616fb0a2c38d51c69889b56450de8d4454b6efe"
+    }
+  },
+  "phases": [
+    {
+      "phase": "uninterrupted_reference",
+      "conversation": "A",
+      "config": "reference-A",
+      "requests": [
+        "A-warmup",
+        "A-formal1",
+        "A-formal2",
+        "A-formal3"
+      ],
+      "comparison_reference": "independent_same_conversation_uninterrupted_history"
+    },
+    {
+      "phase": "uninterrupted_reference",
+      "conversation": "B",
+      "config": "reference-B",
+      "requests": [
+        "B-warmup",
+        "B-formal1",
+        "B-formal2",
+        "B-formal3"
+      ],
+      "comparison_reference": "independent_same_conversation_uninterrupted_history"
+    },
+    {
+      "phase": "ram-hot-parking",
+      "config": "ram-pair",
+      "sequence": [
+        "A-warm",
+        "B-warm",
+        "A-formal1",
+        "B-formal1",
+        "A-formal2",
+        "B-formal2",
+        "A-formal3",
+        "B-formal3"
+      ],
+      "snapshot_evidence_type": "RamParkingEvidence",
+      "require_both_conversation_references": true
+    },
+    {
+      "phase": "disk-parked-cold",
+      "config": "disk-pair",
+      "sequence": [
+        "A-warm",
+        "SAVE A-seed.bin once",
+        "B-warm",
+        "SAVE B-seed.bin once",
+        "RESTORE A-seed.bin; A-formal1",
+        "RESTORE B-seed.bin; B-formal1",
+        "RESTORE A-seed.bin; A-formal2",
+        "RESTORE B-seed.bin; B-formal2",
+        "RESTORE A-seed.bin; A-formal3",
+        "RESTORE B-seed.bin; B-formal3"
+      ],
+      "snapshot_evidence_type": "DiskSnapshotEvidence",
+      "snapshot_directory": "E:\\Strata-Hetero-data\\20261011-55-kv-execution-v2-snapshots",
+      "require_both_conversation_references": true,
+      "OS_file_cache_state": "uncontrolled; no cold-SSD claim"
+    }
+  ],
+  "request_manifest_sha256": null,
+  "reference_manifest_sha256": null,
+  "blockers": [
+    "contract_execution_authorized_false",
+    "execution_adapter_not_reviewed_or_bound",
+    "prompt_tokenizer_calibration_not_run",
+    "exact_prompt_token_cap_manifest_not_supplied",
+    "independent_A_B_reference_manifest_not_supplied_or_not_yet_captured"
+  ],
+  "execution_authorized": false,
+  "model_or_adapter_imported": false,
+  "snapshot_directory_created": false,
+  "snapshot_written": false,
+  "api_or_ov_used": false,
+  "gpu_used": false,
+  "deadlines": {
+    "total_arm_seconds": 1800,
+    "session_wait_cap_seconds": 3600,
+    "resource_sampling_interval_seconds": 1,
+    "resource_owner_sample_max_gap_seconds": 1.5
+  },
+  "all_storage_tiers_complete": false,
+  "claim_limit": "preparation plan only; hot RAM parking, disk restore, prefetch, and cold-storage performance are unmeasured"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "root_source_review_pass_runtime_NOT_RUN",
+  "source_hashes": {
+    "tools/hetero_kv_stdio.py": "3398f3344cf1b577022be65554bc1c5fdb23b9d6a80303b71dfbf5896b9396f0",
+    "tools/hetero_kv_parking.py": "5cb85e2cd8c34a2476c0523dd0da7a74fe7088e881f33aafda7dc8dc01ebf5cc",
+    "tools/test_hetero_kv_parking.py": "70bc4b227b6df8eed9674d894156b4a21a335cac16b8b6c3b77b8de83824c4f4",
+    "tools/test_hetero_kv_stdio.py": "8724bbbdab3fd9b048b3b4cb73e2214b0197f522653660bd879b8509eedbac51",
+    "bench/hetero/20261009-49-kv-storage-preparation/execution-contract-v2.json": "c54f0461cf5a8975f2783bb38c80ccfd7cc5380cf9fbf6600e0d1d535742f9b8"
+  },
+  "targeted_pure_tests": 46,
+  "concrete_adapter_present": true,
+  "execution_authorized": false,
+  "live_KV_model_run": false,
+  "retained_failures": true,
+  "correction": "FNV1a64 domains separated from L_tokens/ple_prev metadata; true whole-seed SHA256, bytes and SAVE/RESTORE token acknowledgements precede each continuation; ResourceMonitor +00:00 timestamp normalized to UTC Z without changing time",
+  "quality_hold": "run51 model baseline degeneration unresolved; no live parking/performance claim"
+}

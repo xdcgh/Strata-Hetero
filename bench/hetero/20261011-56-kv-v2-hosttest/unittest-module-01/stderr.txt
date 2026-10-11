@@ -1,0 +1,19 @@
+...............................E
+======================================================================
+ERROR: setUpClass (__main__.VersionTwoEvidenceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\test_hetero_kv_parking.py", line 214, in setUpClass
+    cls.contract, cls.contract_sha, cls.configs = kv.load_contract(kv.V2_CONTRACT)
+                                                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_kv_parking.py", line 210, in load_contract
+    configs[name] = validate_config(config, name, contract)
+                    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_kv_parking.py", line 137, in validate_config
+    raise ParkingError(f"{config_name} cache metadata differs from the contract")
+tools.hetero_kv_parking.ParkingError: ram-pair cache metadata differs from the contract
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.062s
+
+FAILED (errors=1)

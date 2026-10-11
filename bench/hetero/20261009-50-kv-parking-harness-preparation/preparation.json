@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-50-kv-parking-harness-preparation",
+  "status": "pure_harness_tests_passed_root_review_pending",
+  "created_utc": "2026-10-09T14:05:29.149326+00:00",
+  "scope": "Plan-only shared KV conversation parking and evidence validation; no model launch, API/OV/GPU import/use, snapshot write, build, or device work.",
+  "source_hashes": {
+    "tools/hetero_kv_parking.py": {
+      "bytes": 55049,
+      "sha256": "bd1c769f94ca989a8a1c7193258bf3daeac8f30d4545fb3b97dac8a862919e76"
+    },
+    "tools/test_hetero_kv_parking.py": {
+      "bytes": 18128,
+      "sha256": "addc7fd7fa498a8099d43d17f2fb87971d9150a35de0b532aa70d7d44bb9ba98"
+    },
+    "bench/hetero/20261009-49-kv-storage-preparation/execution-contract.json": {
+      "bytes": 8644,
+      "sha256": "463cbb6869e1d750ab13e84393ed2e8ab307664e6e0468837bb9824be201f73c"
+    },
+    "bench/hetero/20261009-49-kv-storage-preparation/source-bindings.json": {
+      "bytes": 6398,
+      "sha256": "cc798b18a3bdc0c38300fd3985ecf8e5873a93901511b0ba9e1d6a8f789edbd2"
+    }
+  },
+  "runtime_authorization": false,
+  "execution_adapter_implemented": false,
+  "adapter_imported": false,
+  "model_or_api_started": false,
+  "snapshot_directory_created": false,
+  "snapshot_written": false,
+  "host_tests_status": "Pure Python plan/evidence fixtures passed; no host/runtime/model tests were run.",
+  "test_execution": {
+    "status": "passed_after_bounded_fix",
+    "test_run_id": "pure-tests-20261011-01",
+    "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B -m unittest -v tools.test_hetero_kv_parking",
+    "exit_code": 0,
+    "tests_run": 31,
+    "initial_failures_preserved": true,
+    "evidence": "bench/hetero/20261009-50-kv-parking-harness-preparation/pure-tests-20261011-01/test-run.json"
+  },
+  "claims": {
+    "hot_ram_parking": false,
+    "parked_disk_cold_performance": false,
+    "kv_prefetch": false,
+    "all_storage_tiers_complete": false
+  },
+  "root_review_requested": true
+}

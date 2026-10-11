@@ -1,0 +1,10 @@
+{
+  "command": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe -B -m unittest tools.test_hetero_kv_parking tools.test_hetero_kv_stdio",
+  "started_utc": "2026-10-11T01:42:37.6160608Z",
+  "finished_utc": "2026-10-11T01:42:38.0776400Z",
+  "exit_code": 1,
+  "model_or_api_called": false,
+  "live_strata_process_used": false,
+  "synthetic_temp_seed_files_used": true,
+  "external_model_files_read": false
+}

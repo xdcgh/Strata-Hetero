@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "run_id": "20261009-50-kv-parking-harness-preparation",
+  "test_run_id": "pure-tests-20261011-01",
+  "status": "passed_after_bounded_fix",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv_final": [
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "tools.test_hetero_kv_parking"
+  ],
+  "final_exit_code": 0,
+  "tests_run": 31,
+  "model_runtime_adapter_api_or_device_imported": false,
+  "attempts": [
+    {
+      "argv": [
+        "-B",
+        "tools/test_hetero_kv_parking.py"
+      ],
+      "exit_code": 1,
+      "cause": "direct script invocation omitted repository root from sys.path; no tests ran"
+    },
+    {
+      "argv": [
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "tools.test_hetero_kv_parking"
+      ],
+      "exit_code": 1,
+      "cause": "three failures and one error from SAVED/RESTORED result action parsed as saved/restored instead of save/restore"
+    },
+    {
+      "argv": [
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "tools.test_hetero_kv_parking"
+      ],
+      "exit_code": 0,
+      "result": "31 tests passed"
+    }
+  ],
+  "fix": "Map SAVED to save and RESTORED to restore in parse_session_line.",
+  "contract_file": "bench/hetero/20261009-49-kv-storage-preparation/execution-contract.json",
+  "contract_sha256": "463cbb6869e1d750ab13e84393ed2e8ab307664e6e0468837bb9824be201f73c",
+  "source_bindings_sha256": "cc798b18a3bdc0c38300fd3985ecf8e5873a93901511b0ba9e1d6a8f789edbd2",
+  "contract_execution_authorized": false,
+  "contract_runtime_binary_binding": null,
+  "contract_runner_implemented": false,
+  "contract_runner_execution_permitted": false,
+  "source_hashes_after_test": {
+    "tools/hetero_kv_parking.py": {
+      "bytes": 55049,
+      "sha256": "bd1c769f94ca989a8a1c7193258bf3daeac8f30d4545fb3b97dac8a862919e76"
+    },
+    "tools/test_hetero_kv_parking.py": {
+      "bytes": 18128,
+      "sha256": "addc7fd7fa498a8099d43d17f2fb87971d9150a35de0b532aa70d7d44bb9ba98"
+    }
+  },
+  "log_files": {
+    "stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr.txt": {
+      "bytes": 237,
+      "sha256": "702caeb1283d0652b7ee4120b3d926fe74b6af3dec7185a09da6d99bffeec6dd"
+    },
+    "exitcode.txt": {
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    "module-stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "module-stderr.txt": {
+      "bytes": 8694,
+      "sha256": "090cb307736e113ae02f7287d91399d775f920de638a3c7c88e761194bd8589d"
+    },
+    "module-exitcode.txt": {
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    "final-stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "final-stderr.txt": {
+      "bytes": 5084,
+      "sha256": "931b793ca89051b28a361dc2004f6947228653de30c4529257f4f41d20996de3"
+    },
+    "final-exitcode.txt": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  },
+  "scope": "Pure Python fixtures only; plan/evidence validation; no model process, API, GPU, build, or snapshot write."
+}

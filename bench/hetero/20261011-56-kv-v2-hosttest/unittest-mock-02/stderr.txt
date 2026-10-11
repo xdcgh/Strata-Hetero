@@ -1,0 +1,18 @@
+.......................................E....
+======================================================================
+ERROR: test_execute_plan_runs_full_sequence_with_fake_engine_and_temp_seed_files (tools.test_hetero_kv_stdio.ExecutePlanMockTests.test_execute_plan_runs_full_sequence_with_fake_engine_and_temp_seed_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\test_hetero_kv_stdio.py", line 184, in test_execute_plan_runs_full_sequence_with_fake_engine_and_temp_seed_files
+    bundle=stdio.create_adapter().execute_plan(plan,manifest,checkpoint)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_kv_stdio.py", line 707, in execute_plan
+    response = generate(engine, conv, turn, "disk-pair"); disk_completions[conv].append(response)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_kv_stdio.py", line 591, in generate
+    request = requests[conv][turn]
+              ~~~~~~~~~~~~~~^^^^^^
+KeyError: 'formalm'
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.188s
+
+FAILED (errors=1)

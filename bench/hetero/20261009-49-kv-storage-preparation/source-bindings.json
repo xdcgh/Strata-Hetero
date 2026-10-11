@@ -1,0 +1,172 @@
+{
+  "utc": "2026-10-09T13:13:13.3844103Z",
+  "head": "33ff86704d15dfc893bf2daafb1117f49069f1dd",
+  "source": [
+    {
+      "file": "CMakeLists.txt",
+      "sha256": "d1c31a33411c89a5de5a210e562113521057d45fec6ef157fe8ccb38b662f1f7"
+    },
+    {
+      "file": "docs/DETAILS.md",
+      "sha256": "655672c404fdaf3b86813648bd1a3b76e2916c46aeae1de36c9dccc199540536"
+    },
+    {
+      "file": "include/strata/core/layout.hpp",
+      "sha256": "8948848dadfbb22c5f9928399f4072637b3514e8cb8123c0c95cdcdb0dc5c05e"
+    },
+    {
+      "file": "include/strata/core/layer.hpp",
+      "sha256": "d0050dee1d59fd1ff779b0859eda261ba0bfe020314dab49234017b5831f1c85"
+    },
+    {
+      "file": "src/core/layer.cpp",
+      "sha256": "3b719680537364e61b4a6e3b19cd30eadb744d657f07a49bb7e252ee3c3e84de"
+    },
+    {
+      "file": "src/core/session.cpp",
+      "sha256": "9ce0156024e2a923df5baf913c7474f1b1462b8fec20e6d12775b2e0c992bb00"
+    },
+    {
+      "file": "include/strata/kernels/kv_stream.hpp",
+      "sha256": "42a7a62c4fb33a56c49e898cbd9d35f001fd7af16f9307c93337c3922e00373e"
+    },
+    {
+      "file": "include/strata/kernels/kv_q8.hpp",
+      "sha256": "a387ad25fe13c95d5195fd4d3bb7db22dc68e1370c84ccc2d342ddadeef976ee"
+    },
+    {
+      "file": "include/strata/kernels/kv_q4.hpp",
+      "sha256": "aae15d84b6c5ed0798890a3cd6b96d981326f7eb8ba526e0031428bc8b49c051"
+    },
+    {
+      "file": "src/kernels/cuda/kv_stream.cu",
+      "sha256": "a8877ab90ffa34d4d078cc53d87db00b5ab8dea439af9e0198aba055c573313c"
+    },
+    {
+      "file": "src/prefill/prefill.cpp",
+      "sha256": "85da7eaf25f087f2810b484e2535c948159e477c118a0e81e8200c6a498613d4"
+    },
+    {
+      "file": "include/strata/core/conversation_cache.hpp",
+      "sha256": "b8554b5e766ccf2d4572fbb985fb3ddf153cbf7b3f1a5c21e07428889818fa6f"
+    },
+    {
+      "file": "include/strata/core/conversation_file.hpp",
+      "sha256": "ac40835c3fa9bb507d905f5e589f0f4a60d566edc345ef93e86d3c2cee15869b"
+    },
+    {
+      "file": "include/strata/core/conversation_snapshot.hpp",
+      "sha256": "b4836c88a5bf80c1b8fd489db1cd183182c69599b7bf302add6aa0557da4937d"
+    },
+    {
+      "file": "include/strata/core/conversation_memory.hpp",
+      "sha256": "3bb04c5f0b1ffdacee25b865177cd5012330290762fceac185188046dae89703"
+    },
+    {
+      "file": "src/core/conversation_file.cpp",
+      "sha256": "7981f37d59a6005b2275e5bf79f8ae3625c61675f7c6b98be8a651edd259a33f"
+    },
+    {
+      "file": "src/core/conversation_snapshot.cpp",
+      "sha256": "6e05b626aa56bdf8c0c4e327301d8130c3e998367c5f2de881ba5a716d4ccda5"
+    },
+    {
+      "file": "src/core/conversation_state.cpp",
+      "sha256": "ff37d5df89be53e244f376cee82cc81930b1866125cc82d6ed1ba49c75d07776"
+    },
+    {
+      "file": "src/core/conversation_memory.cpp",
+      "sha256": "77d68cb91e6dab3ece901d7effb9671d1c6d7828b073a4bc555f8ba2ccb99e73"
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "sha256": "2b7077012a7bf7113c05dec701f164ea88b20eeed42e75009e135881bfe2cabd"
+    },
+    {
+      "file": "serve/server.py",
+      "sha256": "0ca2dd70485e5e03b0a6fcb5dfc1ee1a8863d2dc44947257e342ae608326b026"
+    },
+    {
+      "file": "serve/frontend.py",
+      "sha256": "67b5fe3b7465fced09060359f0d86e96a999fb78597cb867f7b556d74fee6993"
+    },
+    {
+      "file": "serve/runconfig.py",
+      "sha256": "b479b7f65067d1b85f8d3f36fca29772cf1307aecf2298d80e5e40f6955ffe4a"
+    },
+    {
+      "file": "tools/conversation_cache_parity.py",
+      "sha256": "f6aa4367c0c431f7622158063b9a1463e129fffff7b3c1367beba291282dd2c2"
+    },
+    {
+      "file": "tools/conversation_restore_speed.py",
+      "sha256": "d25f9425fce79b1bfcffa4ff6278748d158395f8cf9e0d8fa4fb42057e54a55c"
+    },
+    {
+      "file": "tools/parking_test.py",
+      "sha256": "fd03e2c040e03f9086a91dd5dbc402acfdac47e13b20e04349aa7d6a33519c28"
+    },
+    {
+      "file": "tools/hetero_quality.py",
+      "sha256": "e12e0a4f3ecd4225c42e361ec0dd512ac0ac874c250efaa095a90715d2a0b4a2"
+    },
+    {
+      "file": "tools/hetero_compare_quality.py",
+      "sha256": "bc556866293eaa98deb17cc144280d426a7cdc33865d0e6b0ab974cb533b3f97"
+    },
+    {
+      "file": "tools/test_conversation_cache_parity.py",
+      "sha256": "eaa1cfd51160be4bd76a4db2625086097b08ec1e51a80be2127a8e0c0ea46360"
+    },
+    {
+      "file": "tools/test_conversation_restore_speed.py",
+      "sha256": "f9015601c42189f491d98195d05ee1fbf153c92013265cb0a6ae1db4f4f985a8"
+    },
+    {
+      "file": "serve/test_slots.py",
+      "sha256": "2b8d976e452e8bf4a3c20c022f0bc259a00d9f8fa8fc5fce168808b4eaef33e5"
+    },
+    {
+      "file": "src/core/conversation_file_test.cpp",
+      "sha256": "a4656607dcc906298d810121ee3b7b797be2b8874b953cf26d7078ef08943a78"
+    },
+    {
+      "file": "src/core/conversation_snapshot_test.cpp",
+      "sha256": "fc1d6e003be4be74daabb369ce36eb507da347d6dd9f06a9d666bee054ed1dab"
+    },
+    {
+      "file": "src/core/conversation_validation_test.cpp",
+      "sha256": "327ac06193d9dbaaf7d508177af3882d79b05573e029aedca42b9d5f6ad63f73"
+    },
+    {
+      "file": "src/core/conversation_cache_test.cpp",
+      "sha256": "79b2042dae4aeebe32d2ad716a3707d9bfb3523a923a2648f815962bd45444bb"
+    },
+    {
+      "file": "src/core/conversation_memory_test.cpp",
+      "sha256": "f1c9ae8bf6ec85c867d970fa55d63f1715b0f130108630485866d7ff18679c53"
+    },
+    {
+      "file": "src/kernels/kv_stream_parity.cpp",
+      "sha256": "c4ddebdb28ead2722d7cbdae21151cde3c7ed502545f1ff7b1add1572d698da0"
+    }
+  ],
+  "working_tree_status": [
+    " M include/strata/kernels/cpu/pool.hpp",
+    " M src/hetero/native_expert_bench.cpp",
+    " M src/kernels/cpu/pool.cpp",
+    " M src/program/generate.cpp",
+    " M tools/hetero_native_cpu/CMakeLists.txt",
+    "?? bench/hetero/20261009-35-cpu-worker-affinity/affinity-telemetry-insertion-inventory.md",
+    "?? bench/hetero/20261009-47-worker-pool-sweep-preparation/",
+    "?? bench/hetero/20261009-48-native-cpu-affinity-observe/",
+    "?? bench/hetero/20261009-49-cpu-affinity-observations/",
+    "?? src/hetero/worker_affinity_observation_test.cpp",
+    "?? tools/hetero_pool_sweep.py",
+    "?? tools/test_hetero_pool_sweep.py"
+  ],
+  "source_version": "0.1.41",
+  "runtime_queried": false,
+  "model_read": false,
+  "E_free_bytes": 122320224256
+}

@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "status": "source_features_found_local_kv_runtime_unrun",
+  "source_head": "33ff86704d15dfc893bf2daafb1117f49069f1dd",
+  "source_version": "0.1.41",
+  "source_bindings_sha256": "cc798b18a3bdc0c38300fd3985ecf8e5873a93901511b0ba9e1d6a8f789edbd2",
+  "pointers": [
+    {
+      "file": "CMakeLists.txt",
+      "start": 11,
+      "end": 11,
+      "topic": "version",
+      "meaning": "project VERSION0.1.41"
+    },
+    {
+      "file": "include/strata/core/layer.hpp",
+      "start": 209,
+      "end": 276,
+      "topic": "active KV modes",
+      "meaning": "mode0 VRAM, mode1 authoritative pinned RAM+VRAM cache, mode2 MTP ring"
+    },
+    {
+      "file": "src/core/layer.cpp",
+      "start": 629,
+      "end": 668,
+      "topic": "resident plan",
+      "meaning": "kv_plan; g_kv_resident; main residency floor20480; small context remains mode0"
+    },
+    {
+      "file": "src/core/layer.cpp",
+      "start": 802,
+      "end": 816,
+      "topic": "host allocation",
+      "meaning": "cudaHostAllocMapped|Portable authoritative full-context pools; returns0 on pin/allocation failure"
+    },
+    {
+      "file": "src/core/layer.cpp",
+      "start": 904,
+      "end": 908,
+      "topic": "decode demand resolve",
+      "meaning": "qsa_kv_resolve calls after ids/selection known, before attention"
+    },
+    {
+      "file": "include/strata/kernels/kv_stream.hpp",
+      "start": 1,
+      "end": 20,
+      "topic": "KV stream contract",
+      "meaning": "resident epoch/CLOCK map, missed blocks copied from RAM over PCIe; append updates authoritative host and resident slot"
+    },
+    {
+      "file": "src/kernels/cuda/kv_stream.cu",
+      "start": 214,
+      "end": 234,
+      "topic": "resolve implementation",
+      "meaning": "GPU demand resolve then copy_kernel; no disk I/O"
+    },
+    {
+      "file": "src/kernels/cuda/kv_stream.cu",
+      "start": 254,
+      "end": 263,
+      "topic": "prefix stage",
+      "meaning": "DMA through cudaMemcpyDefault using mapped host pointers"
+    },
+    {
+      "file": "src/prefill/prefill.cpp",
+      "start": 1979,
+      "end": 1998,
+      "topic": "prefetch switch",
+      "meaning": "STRATA_KV_PREFETCH default false, read-once atoi; lazy nonblocking stream/two events; drain on early return"
+    },
+    {
+      "file": "src/prefill/prefill.cpp",
+      "start": 2166,
+      "end": 2193,
+      "topic": "prefetch enqueue",
+      "meaning": "p0>0 and mode1; one outstanding ordinal; wait release -> copy next QSA host prefix -> ready event"
+    },
+    {
+      "file": "src/prefill/prefill.cpp",
+      "start": 2571,
+      "end": 2586,
+      "topic": "prefetch consume",
+      "meaning": "current attention stream waits ready for its ordinal; otherwise synchronous-on-current-stream prefix copy"
+    },
+    {
+      "file": "src/prefill/prefill.cpp",
+      "start": 2779,
+      "end": 2779,
+      "topic": "next prefetch",
+      "meaning": "schedule following QSA after this attention/projection"
+    },
+    {
+      "file": "src/prefill/prefill.cpp",
+      "start": 3995,
+      "end": 4002,
+      "topic": "prefetch evidence",
+      "meaning": "final drain and positive layer-prefix count log"
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "start": 592,
+      "end": 596,
+      "topic": "budgets",
+      "meaning": "cache0 default, slots4, RAM floor2560MiB, session disk reserve4096MiB"
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "start": 6998,
+      "end": 7217,
+      "topic": "RAM park",
+      "meaning": "cache construction, full/incremental capture estimate, incoming held bytes, eviction, physical before/after admission, put/reused_kv_bytes log"
+    },
+    {
+      "file": "include/strata/core/conversation_cache.hpp",
+      "start": 191,
+      "end": 255,
+      "topic": "RAM cache metadata",
+      "meaning": "exact prefix/images/cvec match; take consumes entries; byte/slot bounded oldest-first eviction with held bytes"
+    },
+    {
+      "file": "src/core/conversation_state.cpp",
+      "start": 195,
+      "end": 221,
+      "topic": "snapshot sizing",
+      "meaning": "used QSA KV, optional draft, live running state, checkpoints, ids/images; no read needed for estimates"
+    },
+    {
+      "file": "src/core/conversation_state.cpp",
+      "start": 247,
+      "end": 273,
+      "topic": "snapshot capture",
+      "meaning": "device sync; new host SavedConversation; refresh draft final page; no partial publication"
+    },
+    {
+      "file": "src/core/conversation_state.cpp",
+      "start": 328,
+      "end": 358,
+      "topic": "whole restore",
+      "meaning": "validate geometry/carve/checkpoints/all KV before transfer; writes authoritative KV and running state"
+    },
+    {
+      "file": "src/core/conversation_snapshot.cpp",
+      "start": 203,
+      "end": 224,
+      "topic": "residency restore",
+      "meaning": "restore authoritative pools/indexer; reset mode1 VRAM map; refill mode2 draft ring"
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "start": 9170,
+      "end": 9294,
+      "topic": "request switch",
+      "meaning": "validate incoming; park outgoing before overwrite; restore and replace live token/image/checkpoint metadata"
+    },
+    {
+      "file": "src/program/generate.cpp",
+      "start": 8731,
+      "end": 8940,
+      "topic": "disk CLI",
+      "meaning": "SAVE/RESTORE; unsupported split/peer/batch/prompt-cache0; validation before device writes; transfer failure FATAL"
+    },
+    {
+      "file": "include/strata/core/conversation_file.hpp",
+      "start": 24,
+      "end": 96,
+      "topic": "file identities",
+      "meaning": "sampled model-role fingerprint and version/backend/KV/rope/math config; no binary build hash"
+    },
+    {
+      "file": "src/core/conversation_file.cpp",
+      "start": 274,
+      "end": 325,
+      "topic": "Windows publish mutation",
+      "meaning": "exclusive owned temp, flush, write-through replacing rename; published flag; only own temp cleanup"
+    },
+    {
+      "file": "src/core/conversation_file.cpp",
+      "start": 1020,
+      "end": 1025,
+      "topic": "read RAM peak",
+      "meaning": "file+16MiB+4096 per segment+1MiB"
+    },
+    {
+      "file": "src/core/conversation_file.cpp",
+      "start": 1043,
+      "end": 1054,
+      "topic": "disk admission",
+      "meaning": "new file size plus configured min_free before temp/publish; not a quota"
+    },
+    {
+      "file": "src/core/conversation_file.cpp",
+      "start": 1127,
+      "end": 1160,
+      "topic": "save RAM peak/deepest",
+      "meaning": "deepest checkpoint (deepest pinned if pin exists);17MiB+2checkpoint+live state+metadata; no full KV host clone"
+    },
+    {
+      "file": "src/core/conversation_file.cpp",
+      "start": 1180,
+      "end": 1248,
+      "topic": "read guards",
+      "meaning": "regular/no link/one-name file, size/header/fingerprints/admission/limits/parse/hash before runtime restore"
+    },
+    {
+      "file": "src/core/conversation_memory.cpp",
+      "start": 36,
+      "end": 47,
+      "topic": "physical telemetry",
+      "meaning": "Windows GlobalMemoryStatusEx, Linux MemAvailable; no commit/job reservation"
+    },
+    {
+      "file": "include/strata/core/conversation_memory.hpp",
+      "start": 16,
+      "end": 21,
+      "topic": "physical admission",
+      "meaning": "known telemetry and available>=allocation+floor"
+    },
+    {
+      "file": "serve/server.py",
+      "start": 1656,
+      "end": 1749,
+      "topic": "engine file protocol",
+      "meaning": "SAVE/RESTORE methods; parse SESSION/SWAIT typed SERR/FATAL and finite SAVED/RESTORED metrics"
+    },
+    {
+      "file": "serve/server.py",
+      "start": 2565,
+      "end": 2601,
+      "topic": "server file paths",
+      "meaning": "plain filename validation; private absolute slot-save-path; directory creation at server startup"
+    },
+    {
+      "file": "serve/server.py",
+      "start": 2679,
+      "end": 2742,
+      "topic": "HTTP slot work",
+      "meaning": "slot0, no parallel, same FIFO, status/idle mutations, disabled501, typed refusal mapping"
+    },
+    {
+      "file": "serve/server.py",
+      "start": 4730,
+      "end": 4731,
+      "topic": "HTTP route",
+      "meaning": "POST /slots/{id}?action=save|restore calls Service.slot_action"
+    },
+    {
+      "file": "serve/server.py",
+      "start": 5700,
+      "end": 5701,
+      "topic": "server CLI",
+      "meaning": "--slot-save-path DIR; config slot_save_path"
+    },
+    {
+      "file": "serve/server.py",
+      "start": 5834,
+      "end": 5843,
+      "topic": "save-dir start",
+      "meaning": "resolve config path vs cwd; enable slot persistence"
+    },
+    {
+      "file": "tools/conversation_cache_parity.py",
+      "start": 104,
+      "end": 133,
+      "topic": "quality gate",
+      "meaning": "ids and state hashes; real restore/reuse and matching INFO; spec1 requires complete main state"
+    },
+    {
+      "file": "tools/conversation_cache_parity.py",
+      "start": 161,
+      "end": 178,
+      "topic": "dry-run boundary",
+      "meaning": "default returns before config/tokenizer/model reads"
+    },
+    {
+      "file": "tools/conversation_restore_speed.py",
+      "start": 66,
+      "end": 80,
+      "topic": "A-only gap",
+      "meaning": "pair mode alternates but compare checks A turns only; not both-conversation correctness gate"
+    },
+    {
+      "file": "tools/parking_test.py",
+      "start": 28,
+      "end": 71,
+      "topic": "legacy test",
+      "meaning": "direct greedy park/resume and draft readback; /tmp hardcoded log makes it unsuitable unchanged on Windows"
+    },
+    {
+      "file": "serve/test_slots.py",
+      "start": 1,
+      "end": 13,
+      "topic": "HTTP tests",
+      "meaning": "mock engine/local HTTP unit coverage; no GPU/model"
+    },
+    {
+      "file": "CMakeLists.txt",
+      "start": 100,
+      "end": 117,
+      "topic": "host tests",
+      "meaning": "standalone cache/memory/file/split tests no CUDA"
+    },
+    {
+      "file": "CMakeLists.txt",
+      "start": 511,
+      "end": 520,
+      "topic": "snapshot tests",
+      "meaning": "snapshot can skip77 without device; validation no GPU env; transfer test is GPU opt-in"
+    },
+    {
+      "file": "CMakeLists.txt",
+      "start": 934,
+      "end": 937,
+      "topic": "KV parity test",
+      "meaning": "device kernel streamed-KV parity fixture, not long-context/model quality"
+    },
+    {
+      "file": "tools/hetero_quality.py",
+      "start": 35,
+      "end": 46,
+      "topic": "strict JSON helper",
+      "meaning": "existing strict_json quality helper, separate actual ids from visible-text reencoding"
+    },
+    {
+      "file": "tools/hetero_quality.py",
+      "start": 390,
+      "end": 418,
+      "topic": "canonical quality",
+      "meaning": "evaluate_text structured/exact output status; no reencoded-token equality claim"
+    }
+  ],
+  "hierarchy": {
+    "active": "VRAM mode0 or authoritative pinned RAM+VRAM mode1; draft ring mode2",
+    "parked": "bounded RAM SavedConversation cache",
+    "inactive_persistent": "explicit version1 opaque session files on SSD via SAVE/RESTORE; not attention backing"
+  },
+  "prefetch": {
+    "available": true,
+    "default": "off",
+    "latched_once": true,
+    "activation": "p0>0, future QSA state kv_mode1, no outstanding prefetch",
+    "extra_data_pool": "none; one existing full-layer staging pool",
+    "metadata_resources": "one lazy nonblocking stream and release/ready events",
+    "unit": "whole immutable RAM prefix of next QSA layer",
+    "attention_block_prediction": false,
+    "SSD_reads": false
+  },
+  "source_state_mutations": {
+    "park": "host cache entries/LRU/byte accounting/reuse buffers; copy running state/checkpoints/KV; sync; active state retained until switch",
+    "restore_RAM": "authoritative QSA/draft KV, GDN/PLE/indexer state, mode1 page map reset/mode2 ring refill, live ids/images/checkpoints/check_clock/cvec cached; optional KV growth unless disabled",
+    "SAVE": "own temporary/new destination file; flush/publish replaces existing destination if caller allows; sampled identity/progress/log/cache metadata; active model buffers read after sync",
+    "RESTORE_disk": "parsed host image then same device/runtime restore; drops retained outgoing KV; does not park outgoing conversation; FATAL if transfer fails after writes",
+    "HTTP_adapter": "FIFO/status/queued/busy/last_request_at; no erase API; save-dir created at startup",
+    "prefetch": "staging pool/stream events/pending ordinal/count; active authoritative host prefix stays immutable"
+  },
+  "missing_capabilities": [
+    "automatic parked-RAM-to-SSD eviction/admission/index manager",
+    "active attention KV backed by SSD/blockwise file faulting",
+    "prediction of next query attention-selected blocks before selection"
+  ],
+  "reuse_helpers": {
+    "direct": "serve.server.StrataEngine.generate +session_file with new owned logs and external memory/tree/deadline guard",
+    "RAM_parity": "tools/conversation_cache_parity.py checks real restore+ids/state; paragraph count is not exact32K calibration",
+    "pair_speed": "tools/conversation_restore_speed.py --mode pair; only A correctness compared, no global12/4/tree guard",
+    "legacy_parking": "tools/parking_test.py lacks dry-run and owns /tmp fixed log; do not invoke unchanged",
+    "strict_json": "tools.hetero_quality.strict_json rejects nonfinite JSON; it does not reject duplicate keys, so the new adapter must add that predeclared check"
+  },
+  "feature_presence_is_runtime_acceptance": false,
+  "microfixtures_satisfy_RAM_storage_startup_longcontext": false,
+  "no_runtime_no_snapshot": true,
+  "source_revalidation_required_before_execution": true,
+  "unrun_acceptance": [
+    "CPU-only whole-model session snapshot runtime acceptance",
+    "Windows/HIP/multibackend and restart parity for this exact build",
+    "cold-media read claim when Windows buffered reads may hit OS cache"
+  ]
+}
