@@ -1,0 +1,12 @@
+{
+  "schema": "run64-build-terminal-v1",
+  "run": "upstream-v0.1.42-run64-01",
+  "controller_pid": 4844,
+  "exit_code": 0,
+  "finished_utc": "2026-10-11T02:44:53.4431319Z",
+  "build_receipt_path": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\build-receipt.json",
+  "build_receipt_exists": true,
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\upstream\\driver.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\upstream\\driver.stderr.log",
+  "build_receipt_sha256": "4aa32aa084c832bdf01f0209bd8a735f780f5207e34d2737ad2426cfea592e81"
+}

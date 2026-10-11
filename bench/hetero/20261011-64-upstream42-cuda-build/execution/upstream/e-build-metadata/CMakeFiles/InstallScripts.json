@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/Strata-Hetero-data/build/cuda-upstream42-run64-01/cmake_install.cmake",
+		"E:/Strata-Hetero-data/build/cuda-upstream42-run64-01/ggml/cmake_install.cmake",
+		"E:/Strata-Hetero-data/build/cuda-upstream42-run64-01/ggml/src/cmake_install.cmake",
+		"E:/Strata-Hetero-data/build/cuda-upstream42-run64-01/ggml/src/ggml-cpu/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

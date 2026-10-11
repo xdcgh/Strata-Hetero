@@ -1,0 +1,34 @@
+{
+  "schema": "run64-build-launch-recovered-v1",
+  "recovered_after_outer_wrapper_failure": true,
+  "outer_wrapper_failure": "PowerShell hashtable used bare false after Start-Process; build controller had already started and was not restarted",
+  "run": "upstream-v0.1.42-run64-01",
+  "argv": [
+    "-NoProfile",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\run_cuda_build_42.ps1",
+    "-SourcePath",
+    "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+    "-BuildPath",
+    "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01",
+    "-ExpectedHead",
+    "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "-ExpectedProjectVersion",
+    "0.1.42",
+    "-RunName",
+    "upstream-v0.1.42-run64-01",
+    "-Execute"
+  ],
+  "working_directory": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+  "controller_identity": {
+    "pid": 4844,
+    "parent_pid": 9584,
+    "executable": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\run_cuda_build_42.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01 -ExpectedHead 61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406 -ExpectedProjectVersion 0.1.42 -RunName upstream-v0.1.42-run64-01 -Execute",
+    "create_time": "2026-10-11T02:37:31.0511360Z"
+  },
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\upstream\\driver.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\upstream\\driver.stderr.log",
+  "outer_start_utc": "2026-10-11T02:37:31Z",
+  "build_observed_phase": "compile"
+}

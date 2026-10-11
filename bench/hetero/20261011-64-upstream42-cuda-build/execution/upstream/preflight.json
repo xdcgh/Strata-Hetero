@@ -1,0 +1,41 @@
+{
+  "schema": "run64-upstream-precompile-admission-v1",
+  "observed_utc": "2026-10-11T02:37:15.7008506Z",
+  "pass": true,
+  "target": "upstream-v0.1.42-run64-01",
+  "source_head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+  "source_tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+  "source_clean": true,
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01",
+  "build_path_absent": true,
+  "contract_sha256": "6fda6c756cd0bc46aa331e0e3336278339aea081f6634588def266facc5cefa2",
+  "source_freeze_sha256": "68e0408dff97f62307d9b11ebc63caea59b8c669072b16e54f83ac5809d90b66",
+  "driver_sha256": "3bc879a2b421321ccffbbf6f47a5edb139f665f27df3abd3115a61877b449472",
+  "root_authorization_sha256": "ab2f53af497a1ad8dbc01d2d29aa082009193750721d5ea0fe1f6f30a50c6f8e",
+  "psapi": {
+    "memory": {
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "sources": {
+        "physical": "GlobalMemoryStatusEx",
+        "system_commit": "PSAPI GetPerformanceInfo",
+        "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+      },
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 112630345728,
+      "physical_used_bytes": 24332902400,
+      "commit_limit_bytes": 145553182720,
+      "commit_used_bytes": 25688608768,
+      "commit_available_bytes": 119864573952,
+      "commit_total_pages": 6271633,
+      "commit_limit_pages": 35535445,
+      "commit_page_size_bytes": 4096,
+      "gms_pagefile_total_bytes": 145553182720,
+      "gms_pagefile_avail_bytes_unclassified": 119864573952,
+      "pagefile_total_bytes": null,
+      "pagefile_used_bytes": null
+    },
+    "errors": []
+  },
+  "compiler_conflicts": [],
+  "tests_or_device_started": false
+}

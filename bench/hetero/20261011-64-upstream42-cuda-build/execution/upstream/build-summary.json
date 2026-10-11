@@ -1,0 +1,116 @@
+{
+  "schema": "run64-build-result-summary-v1",
+  "run": "upstream-v0.1.42-run64-01",
+  "status": "success",
+  "failure": null,
+  "source_before": {
+    "path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+    "head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+    "branch": "",
+    "clean": true,
+    "status": []
+  },
+  "source_after": {
+    "path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+    "head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+    "branch": "",
+    "clean": true,
+    "status": []
+  },
+  "source_unchanged": true,
+  "configure_exit": 0,
+  "build_exit": 0,
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\strata.exe",
+    "size_bytes": 52763648,
+    "sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786"
+  },
+  "resource": {
+    "sample_count": 440,
+    "interval_seconds": 1,
+    "minimum_ram_available_bytes": 112068907008.0,
+    "minimum_commit_available_bytes": 119313117184.0,
+    "ram_floor_bytes": 12884901888,
+    "commit_floor_bytes": 4294967296,
+    "all_samples_pass": true
+  },
+  "toolchain_before": {
+    "cmake": {
+      "sha256": "ab8247ca4554871e5d75c0ee118ee8663727bd6fdf37ad76b17e9cc8d5f286a8",
+      "version": "cmake version 4.4.3",
+      "path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe"
+    },
+    "ninja": {
+      "sha256": "a7f084e8ee37bff0872aa8bd3d17cc19632d2a37734f6c242dd3dee22d77c0b4",
+      "version": "1.13.2.git.kitware.jobserver-pipe-1",
+      "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe"
+    },
+    "nvcc": {
+      "sha256": "92d993c6e7025e1597d0d895e65e8658f5f1d41576a477656647a7eece2cd35f",
+      "version": "Cuda compilation tools, release 13.3, V13.3.73",
+      "path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe"
+    },
+    "cuda_header_sha256": "31df84e16179b6d97db4b3c0bae7697392a370b41983f4a8962f0e5a8069b577",
+    "sdk_root": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+    "vcvars64": {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+      "sha256": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209"
+    }
+  },
+  "toolchain_after": {
+    "cmake": {
+      "path": "E:\\Strata-Hetero-data\\venv\\Lib\\site-packages\\cmake\\data\\bin\\cmake.exe",
+      "sha256": "ab8247ca4554871e5d75c0ee118ee8663727bd6fdf37ad76b17e9cc8d5f286a8"
+    },
+    "ninja": {
+      "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+      "sha256": "a7f084e8ee37bff0872aa8bd3d17cc19632d2a37734f6c242dd3dee22d77c0b4"
+    },
+    "nvcc": {
+      "path": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\nvcc.exe",
+      "sha256": "92d993c6e7025e1597d0d895e65e8658f5f1d41576a477656647a7eece2cd35f"
+    },
+    "vcvars64": {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+      "sha256": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209"
+    },
+    "cuda_header_sha256": "31df84e16179b6d97db4b3c0bae7697392a370b41983f4a8962f0e5a8069b577"
+  },
+  "root_controller_exit": 0,
+  "processes": [
+    {
+      "pid": 4844,
+      "running": false,
+      "name": null
+    },
+    {
+      "pid": 24360,
+      "running": false,
+      "name": null
+    },
+    {
+      "pid": 13224,
+      "running": false,
+      "name": null
+    },
+    {
+      "pid": 13104,
+      "running": false,
+      "name": null
+    },
+    {
+      "pid": 9340,
+      "running": false,
+      "name": null
+    }
+  ],
+  "all_exact_owned_processes_terminal": true,
+  "metadata_copy": {
+    "target_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\upstream\\e-build-metadata",
+    "file_count": 48,
+    "total_bytes": 9485494,
+    "manifest_path": null
+  }
+}

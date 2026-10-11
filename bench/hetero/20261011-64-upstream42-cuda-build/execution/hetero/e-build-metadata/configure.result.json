@@ -1,0 +1,24 @@
+{
+  "phase": "configure",
+  "exit_code": 0,
+  "batch_exit_file": 0,
+  "duration_seconds": 9.1477088,
+  "process": {
+    "pid": 3236,
+    "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+    "created": "2026-10-11T02:45:49.1559060Z",
+    "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.cmd\"",
+    "batch": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.cmd"
+  },
+  "log": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.log",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.cmd",
+  "last_resource": {
+    "sampled_at_utc": "2026-10-11T02:45:58.005Z",
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 113571295232,
+    "commit_limit_bytes": 145553182720,
+    "commit_available_bytes": 120887103488,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "error": null
+  }
+}

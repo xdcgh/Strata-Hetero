@@ -1,0 +1,36 @@
+{
+  "status": "root_upstream42_build_review_pass_hetero_still_building",
+  "source": {
+    "path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+    "head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+    "branch": "",
+    "clean": true,
+    "status": []
+  },
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\strata.exe",
+    "size_bytes": 52763648,
+    "sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786"
+  },
+  "receipt_resource_summary": {
+    "sample_count": 440,
+    "interval_seconds": 1,
+    "minimum_ram_available_bytes": 112068907008.0,
+    "minimum_commit_available_bytes": 119313117184.0,
+    "ram_floor_bytes": 12884901888,
+    "commit_floor_bytes": 4294967296,
+    "all_samples_pass": true
+  },
+  "metadata_files_checked": 48,
+  "metadata_bytes_checked": 9485494,
+  "actual_retained_samples_checked": 441,
+  "receipt_summary_sample_count": 440,
+  "sample_count_note": "Receipt summary was taken before sampler fully stopped; one additional retained sample was independently checked and passed. Do not report440as complete retained-file count.",
+  "all_retained_resource_samples_pass": true,
+  "model_quality_NOT_RUN": true,
+  "paired_model_performance_NOT_RUN": true,
+  "build_receipt_sha256": "4aa32aa084c832bdf01f0209bd8a735f780f5207e34d2737ad2426cfea592e81",
+  "toolchain_hashes_unchanged": true,
+  "source_unchanged": true
+}

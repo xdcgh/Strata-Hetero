@@ -1,0 +1,36 @@
+{
+  "schema": "run64-build-launch-v1",
+  "run": "hetero-v0.1.42-run64-01",
+  "argv": [
+    "-NoProfile",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\run_cuda_build_42.ps1",
+    "-SourcePath",
+    "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+    "-BuildPath",
+    "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01",
+    "-ExpectedHead",
+    "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+    "-ExpectedProjectVersion",
+    "0.1.42",
+    "-RunName",
+    "hetero-v0.1.42-run64-01",
+    "-Execute"
+  ],
+  "working_directory": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+  "expected_source_head": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+  "source_tree": "bb4e73468f85ccc85bb9c511980b4e51a8f1738c",
+  "controller_identity": {
+    "pid": 12612,
+    "parent_pid": 10408,
+    "executable": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\run_cuda_build_42.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-0-1-42 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01 -ExpectedHead 8cf0e89be5da8485cbeb6ac1b527089add25fbcf -ExpectedProjectVersion 0.1.42 -RunName hetero-v0.1.42-run64-01 -Execute",
+    "created_utc": "2026-10-11T02:45:47.9086280Z"
+  },
+  "started_utc": "2026-10-11T02:45:47.8992245Z",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\driver.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\driver.stderr.log",
+  "compile_only": true,
+  "tests": false,
+  "runtime": false
+}

@@ -1,0 +1,348 @@
+{
+  "schema": "run64-e-build-metadata-copy-v1",
+  "status": "copied_no_binary_objects",
+  "recorded_utc": "2026-10-11T02:53:14.324916+00:00",
+  "source_build_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01",
+  "target_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata",
+  "file_count": 48,
+  "total_bytes": 9465244,
+  "excluded_binary_or_object_files": true,
+  "files": [
+    {
+      "relative_path": "build-receipt.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build-receipt.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\build-receipt.json",
+      "bytes": 13149,
+      "sha256": "b700c40c0113f0419e04546170c3cf945d23b989fa5151b19add0d0e79ba47c6"
+    },
+    {
+      "relative_path": "build.cmd",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build.cmd",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\build.cmd",
+      "bytes": 1118,
+      "sha256": "2e9239fb63c9bde18b6a8961c3bb99ea1df8fd3ad9ac6222a1afe767457e9c7d"
+    },
+    {
+      "relative_path": "build.exit.txt",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build.exit.txt",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\build.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "relative_path": "build.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\build.log",
+      "bytes": 1400924,
+      "sha256": "5bdd223eba931cb83d123e3e22f3ca7ac717e58a4d51211701067cd1c9d1befa"
+    },
+    {
+      "relative_path": "build.ninja",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build.ninja",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\build.ninja",
+      "bytes": 390317,
+      "sha256": "05d82fdeff900e85bebef41a8e5cd04e91c1143a1e71bbec5c9e360cd6e33cf7"
+    },
+    {
+      "relative_path": "build.process.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build.process.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\build.process.json",
+      "bytes": 322,
+      "sha256": "894da6f36706b84ad5045a0da588579679f01d3f4db983e99c344664cbb12993"
+    },
+    {
+      "relative_path": "build.result.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build.result.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\build.result.json",
+      "bytes": 975,
+      "sha256": "a83bfb59e940e49129b3a69222df1ce73a7848e737d175d9f79e595281fd156c"
+    },
+    {
+      "relative_path": "build.vcvars.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\build.vcvars.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\build.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "relative_path": "cl-version.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\cl-version.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\cl-version.log",
+      "bytes": 1291,
+      "sha256": "061fe6b537e9c01b47465b86ed2a6e087510d2007be8738ec3c69f52b5f1f3a0"
+    },
+    {
+      "relative_path": "cmake-version.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\cmake-version.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\cmake-version.log",
+      "bytes": 90,
+      "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+    },
+    {
+      "relative_path": "cmake_install.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\cmake_install.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\cmake_install.cmake",
+      "bytes": 1953,
+      "sha256": "8cdd9e1a748cd2bf6ca418eefd7bd043ba4507cde28169b1857bbee1f2dc58bf"
+    },
+    {
+      "relative_path": "CMakeCache.txt",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeCache.txt",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeCache.txt",
+      "bytes": 49254,
+      "sha256": "c0e664a9a7b0f6295a19ab69d6dbcb05c7bfc2a88875ccd7c44f0b875d039aea"
+    },
+    {
+      "relative_path": "CMakeFiles/4.4.3/CMakeASMCompiler.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\4.4.3\\CMakeASMCompiler.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\4.4.3\\CMakeASMCompiler.cmake",
+      "bytes": 1454,
+      "sha256": "38a376397f84b7fb06a7479604c3b8d939ae4132795133ab63beb15b76cea714"
+    },
+    {
+      "relative_path": "CMakeFiles/4.4.3/CMakeCCompiler.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\4.4.3\\CMakeCCompiler.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\4.4.3\\CMakeCCompiler.cmake",
+      "bytes": 3424,
+      "sha256": "ca12a5b612e3286d6517896763de348602fa2fca3f39d21e3523335cbf6cd709"
+    },
+    {
+      "relative_path": "CMakeFiles/4.4.3/CMakeCUDACompiler.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\4.4.3\\CMakeCUDACompiler.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\4.4.3\\CMakeCUDACompiler.cmake",
+      "bytes": 4524,
+      "sha256": "9929c9279b34b48deb8efeb3ccc4cf5e49bb6d1ecbd75bcfd3632da146eb4e18"
+    },
+    {
+      "relative_path": "CMakeFiles/4.4.3/CMakeCXXCompiler.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\4.4.3\\CMakeCXXCompiler.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\4.4.3\\CMakeCXXCompiler.cmake",
+      "bytes": 6740,
+      "sha256": "32f0eb370724a64da20de9803e1fd5cc96a97a0be0932f85021cbbcc46f6cf75"
+    },
+    {
+      "relative_path": "CMakeFiles/4.4.3/CMakeRCCompiler.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\4.4.3\\CMakeRCCompiler.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\4.4.3\\CMakeRCCompiler.cmake",
+      "bytes": 276,
+      "sha256": "f1c96e7b6bc035d04a44733638743f28bf70450e870a3095a55cff6ad81924fa"
+    },
+    {
+      "relative_path": "CMakeFiles/4.4.3/CMakeSystem.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\4.4.3\\CMakeSystem.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\4.4.3\\CMakeSystem.cmake",
+      "bytes": 395,
+      "sha256": "cf05e982232c22b6fe58288ef10f11c1d5ba2af1e7e050ea9d8037095b59d948"
+    },
+    {
+      "relative_path": "CMakeFiles/CMakeConfigureLog.yaml",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\CMakeConfigureLog.yaml",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\CMakeConfigureLog.yaml",
+      "bytes": 7192270,
+      "sha256": "6d362c6ea7805d72b988082aede15cb4c4b294e3033a677aba42df2709a74ce2"
+    },
+    {
+      "relative_path": "CMakeFiles/InstallScripts.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\InstallScripts.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\InstallScripts.json",
+      "bytes": 397,
+      "sha256": "a12019ed111c19a48dd47b35dd664bec1cda2761d5303c9d96173e448052c763"
+    },
+    {
+      "relative_path": "CMakeFiles/rules.ninja",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\rules.ninja",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\rules.ninja",
+      "bytes": 180513,
+      "sha256": "19460c08aec28726b787b3cd435ccbb65686a4ef32ab9bb4ae23419006f660b3"
+    },
+    {
+      "relative_path": "CMakeFiles/TargetDirectories.txt",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CMakeFiles\\TargetDirectories.txt",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CMakeFiles\\TargetDirectories.txt",
+      "bytes": 8098,
+      "sha256": "b5333c164530b6282a20f1ad9da66cb4cdfd21a47c7162637a8f67f54f608f00"
+    },
+    {
+      "relative_path": "compile_commands.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\compile_commands.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\compile_commands.json",
+      "bytes": 29819,
+      "sha256": "58b1f10a6997a74c2b0ec2f9e8268e907b8eb34150a127b6487dbacd443b23ce"
+    },
+    {
+      "relative_path": "configure.cmd",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.cmd",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\configure.cmd",
+      "bytes": 2497,
+      "sha256": "0f58bd7c6683628e131af05e3a2b1c5adb464d2309453db97def73dfcc14cc7b"
+    },
+    {
+      "relative_path": "configure.exit.txt",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.exit.txt",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\configure.exit.txt",
+      "bytes": 3,
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "relative_path": "configure.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\configure.log",
+      "bytes": 3278,
+      "sha256": "a7f451d1ea6cc5620caf611fc74bcaaca5a7ddd115aa30ed3a731a3780117909"
+    },
+    {
+      "relative_path": "configure.process.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.process.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\configure.process.json",
+      "bytes": 330,
+      "sha256": "896e3080d7599bb525533ab4042384ac4ac607fceb6b8ea590f0c2656857a788"
+    },
+    {
+      "relative_path": "configure.result.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.result.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\configure.result.json",
+      "bytes": 993,
+      "sha256": "d20d21168b32944f412ce01ff30c3867db91b6ebbc5d935aa48e671ae0cfe6e2"
+    },
+    {
+      "relative_path": "configure.vcvars.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\configure.vcvars.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\configure.vcvars.log",
+      "bytes": 298,
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42"
+    },
+    {
+      "relative_path": "CTestTestfile.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\CTestTestfile.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\CTestTestfile.cmake",
+      "bytes": 16845,
+      "sha256": "4f8d4709a77b1ce05b9dc175923823587540bc2a11d8a04513b11ae4bf1fe9b1"
+    },
+    {
+      "relative_path": "ggml/cmake_install.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ggml\\cmake_install.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ggml\\cmake_install.cmake",
+      "bytes": 3925,
+      "sha256": "b5f23465ce1307d270b09b9541d6166e7ba4fdbff29c1f8dff5c5f0ba0c3be1e"
+    },
+    {
+      "relative_path": "ggml/CTestTestfile.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ggml\\CTestTestfile.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ggml\\CTestTestfile.cmake",
+      "bytes": 337,
+      "sha256": "671f4eeaef97582631c165d0873b693c187b6854e5fa3117b42442953d2fc10d"
+    },
+    {
+      "relative_path": "ggml/ggml-config-version.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ggml\\ggml-config-version.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ggml\\ggml-config-version.cmake",
+      "bytes": 2830,
+      "sha256": "77585509b3e33a0c106d28bc7ea15f10193b5b8f9af42dd8f5f005f1d36d41af"
+    },
+    {
+      "relative_path": "ggml/ggml-config.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ggml\\ggml-config.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ggml\\ggml-config.cmake",
+      "bytes": 13602,
+      "sha256": "b1fc781806ca5c89067d9fe52ee6be27bf12fa82fd9ae99828e5dcebe899edd5"
+    },
+    {
+      "relative_path": "ggml/src/cmake_install.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ggml\\src\\cmake_install.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ggml\\src\\cmake_install.cmake",
+      "bytes": 1802,
+      "sha256": "17e608a3304cd0bd754e82488a4c42cc4d20a305afdbb1e0914f037b4294368f"
+    },
+    {
+      "relative_path": "ggml/src/CTestTestfile.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ggml\\src\\CTestTestfile.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ggml\\src\\CTestTestfile.cmake",
+      "bytes": 350,
+      "sha256": "a9a96c83e3ee2f23406359260b62a90b4c8099ac517b244c4824aa4f3bfff59b"
+    },
+    {
+      "relative_path": "ggml/src/ggml-cpu/cmake_install.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ggml\\src\\ggml-cpu\\cmake_install.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ggml\\src\\ggml-cpu\\cmake_install.cmake",
+      "bytes": 1364,
+      "sha256": "94e72a527a686590856271c76325b0a515893e2030154d242cf58db64d5ce488"
+    },
+    {
+      "relative_path": "ggml/src/ggml-cpu/CTestTestfile.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ggml\\src\\ggml-cpu\\CTestTestfile.cmake",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ggml\\src\\ggml-cpu\\CTestTestfile.cmake",
+      "bytes": 347,
+      "sha256": "e0bb7ad63c34179494c7901709edf806f84a1aecb7c08f6d37cb585a03acbfd8"
+    },
+    {
+      "relative_path": "ninja-version.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\ninja-version.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\ninja-version.log",
+      "bytes": 37,
+      "sha256": "cc30d39e321dcb24ca5c4c5d5b7730e25ab769876a825616360194c634824754"
+    },
+    {
+      "relative_path": "nvcc-version.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\nvcc-version.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\nvcc-version.log",
+      "bytes": 231,
+      "sha256": "c9a2d15f807013db977d10dd509b539cdd30059caa01fbc42c23f19d4bfd4c59"
+    },
+    {
+      "relative_path": "resource-preflight.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\resource-preflight.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\resource-preflight.json",
+      "bytes": 520,
+      "sha256": "4bef1d2fe64d4c5822269844f089f5a7d2b65a1200b328e60ef853100aed6c25"
+    },
+    {
+      "relative_path": "resource-sampler-process.json",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\resource-sampler-process.json",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\resource-sampler-process.json",
+      "bytes": 760,
+      "sha256": "022979103abfa889e2fbecb1544a85e9e8fea6dcf297a2d2eda7cd69e5c69b35"
+    },
+    {
+      "relative_path": "resource-sampler.stderr.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\resource-sampler.stderr.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\resource-sampler.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "resource-sampler.stdout.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\resource-sampler.stdout.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\resource-sampler.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relative_path": "resource_sampler.py",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\resource_sampler.py",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\resource_sampler.py",
+      "bytes": 971,
+      "sha256": "9281c59e8bbd1f499b821ffc93633a745d298fead48baa837df8efdd2c5e8beb"
+    },
+    {
+      "relative_path": "resources.jsonl",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\resources.jsonl",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\resources.jsonl",
+      "bytes": 126150,
+      "sha256": "6eeb83c8c88edd1f5efd7f1766c411826e1616155d3430d33ca8a956011b3079"
+    },
+    {
+      "relative_path": "where-cl.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\where-cl.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\where-cl.log",
+      "bytes": 111,
+      "sha256": "4a7478a9bfd9a41d57cfdd05f4396905c804b400414ac9dc4267625208f6837f"
+    },
+    {
+      "relative_path": "where-nvcc.log",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\where-nvcc.log",
+      "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\hetero\\e-build-metadata\\where-nvcc.log",
+      "bytes": 59,
+      "sha256": "20b5b6c89d5294d6d5c9d15b003810aa73007e16a3d11d9843c57351a83c6c71"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "status": "root_matched_v042_build_pair_review_pass_model_NOT_RUN",
+  "results": [
+    {
+      "side": "upstream",
+      "binary": {
+        "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\strata.exe",
+        "size_bytes": 52763648,
+        "sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786"
+      },
+      "source": {
+        "path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+        "head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+        "tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+        "branch": "",
+        "clean": true,
+        "status": []
+      },
+      "controls": {
+        "CMAKE_PROJECT_VERSION": "0.1.42",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CUDA_ARCHITECTURES": "89",
+        "CMAKE_CUDA_COMPILER": "E:/Strata-Hetero-data/toolchains/cuda-13.3.1/bin/nvcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+        "STRATA_ENABLE_CUDA": "ON",
+        "STRATA_ENABLE_HIP": "OFF",
+        "STRATA_HIP_GFX906": "OFF",
+        "STRATA_ENABLE_SYCL": "OFF",
+        "STRATA_BUILD_TESTS": "OFF",
+        "STRATA_NATIVE_EXPERTS": "ON",
+        "STRATA_PORTABLE": "ON",
+        "STRATA_MMQ_KQUANTS": "OFF",
+        "STRATA_Q6K_EXPERTS": "OFF",
+        "STRATA_PREFILL_MMQ": "OFF",
+        "STRATA_ORCA_Q4KS_MMQ": "OFF",
+        "STRATA_ISA_FLOOR": "",
+        "STRATA_GGML_DIR": "E:/Strata-Hetero-data/source/llama-3cf0325",
+        "CUDAToolkit_ROOT": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+        "CMAKE_MAKE_PROGRAM": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+        "GGML_CUDA": "OFF"
+      },
+      "resource": {
+        "sample_count": 440,
+        "interval_seconds": 1,
+        "minimum_ram_available_bytes": 112068907008.0,
+        "minimum_commit_available_bytes": 119313117184.0,
+        "ram_floor_bytes": 12884901888,
+        "commit_floor_bytes": 4294967296,
+        "all_samples_pass": true
+      },
+      "retained_sample_count": 441,
+      "receipt_snapshot_sample_count": 440,
+      "all_retained_samples_pass": true,
+      "copied_metadata_files_checked": 48,
+      "metadata_copy_manifest_sha256": "8f306a4e15f53a8aadb39d2c7df33ad050359f81bf60bb9d775d75f0f5591148",
+      "build_receipt_sha256": "4aa32aa084c832bdf01f0209bd8a735f780f5207e34d2737ad2426cfea592e81",
+      "toolchain_hashes_unchanged": true
+    },
+    {
+      "side": "hetero",
+      "binary": {
+        "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\strata.exe",
+        "size_bytes": 52769792,
+        "sha256": "deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0"
+      },
+      "source": {
+        "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+        "head": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+        "tree": "bb4e73468f85ccc85bb9c511980b4e51a8f1738c",
+        "branch": "codex/62-upstream42-runtime",
+        "clean": true,
+        "status": []
+      },
+      "controls": {
+        "CMAKE_PROJECT_VERSION": "0.1.42",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CUDA_ARCHITECTURES": "89",
+        "CMAKE_CUDA_COMPILER": "E:/Strata-Hetero-data/toolchains/cuda-13.3.1/bin/nvcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+        "STRATA_ENABLE_CUDA": "ON",
+        "STRATA_ENABLE_HIP": "OFF",
+        "STRATA_HIP_GFX906": "OFF",
+        "STRATA_ENABLE_SYCL": "OFF",
+        "STRATA_BUILD_TESTS": "OFF",
+        "STRATA_NATIVE_EXPERTS": "ON",
+        "STRATA_PORTABLE": "ON",
+        "STRATA_MMQ_KQUANTS": "OFF",
+        "STRATA_Q6K_EXPERTS": "OFF",
+        "STRATA_PREFILL_MMQ": "OFF",
+        "STRATA_ORCA_Q4KS_MMQ": "OFF",
+        "STRATA_ISA_FLOOR": "",
+        "STRATA_GGML_DIR": "E:/Strata-Hetero-data/source/llama-3cf0325",
+        "CUDAToolkit_ROOT": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+        "CMAKE_MAKE_PROGRAM": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+        "GGML_CUDA": "OFF"
+      },
+      "resource": {
+        "sample_count": 434,
+        "interval_seconds": 1,
+        "minimum_ram_available_bytes": 112731512832.0,
+        "minimum_commit_available_bytes": 119980101632.0,
+        "ram_floor_bytes": 12884901888,
+        "commit_floor_bytes": 4294967296,
+        "all_samples_pass": true
+      },
+      "retained_sample_count": 435,
+      "receipt_snapshot_sample_count": 434,
+      "all_retained_samples_pass": true,
+      "copied_metadata_files_checked": 48,
+      "metadata_copy_manifest_sha256": "aebc94488ac11d988b2ad3afa297cbd852c5907b467138e0315f0959f49ddaff",
+      "build_receipt_sha256": "b700c40c0113f0419e04546170c3cf945d23b989fa5151b19add0d0e79ba47c6",
+      "toolchain_hashes_unchanged": true
+    }
+  ],
+  "source_snapshots_previous_root_review_checked": 96,
+  "metadata_files_rehashed": 96,
+  "retained_samples_rechecked": 876,
+  "controls_equal": true,
+  "model_quality_NOT_RUN": true,
+  "performance_NOT_RUN": true,
+  "scope": "Source/compiler/binary integrity and build resource control only; not runtime acceptance",
+  "receipt_summary_tail_discrepancy_retained": true
+}

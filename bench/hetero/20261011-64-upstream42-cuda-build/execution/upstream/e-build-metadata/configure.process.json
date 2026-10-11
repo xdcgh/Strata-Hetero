@@ -1,0 +1,7 @@
+{
+  "pid": 24360,
+  "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+  "created": "2026-10-11T02:37:32.3032590Z",
+  "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\configure.cmd\"",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\configure.cmd"
+}
