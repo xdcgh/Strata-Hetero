@@ -10,7 +10,12 @@ Set-StrictMode -Version 2.0
 $repo='C:\Users\DC\Documents\ChatGPT\Strata-Hetero'
 $root=$PSScriptRoot
 $pwsh='C:\Users\DC\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe'
-function Sha([string]$Path){(Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant()}
+function Sha([string]$Path){
+    $stream=[IO.File]::Open($Path,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::ReadWrite)
+    $hasher=[Security.Cryptography.SHA256]::Create()
+    try{[Convert]::ToHexString($hasher.ComputeHash($stream)).ToLowerInvariant()}
+    finally{$hasher.Dispose();$stream.Dispose()}
+}
 function WriteNew([string]$Path,$Value){
     $raw=[Text.UTF8Encoding]::new($false).GetBytes(($Value|ConvertTo-Json -Depth 15)+"`n")
     $file=[IO.File]::Open($Path,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read)
@@ -37,6 +42,7 @@ if(-not $Authorization -or -not [IO.Path]::IsPathRooted($Authorization)){throw '
 $auth=Get-Content -LiteralPath $Authorization -Raw|ConvertFrom-Json -DateKind String
 if($auth.status -ne 'root_reviewed_authorized' -or $auth.matrix_sha256 -ne (Sha $matrixPath) -or $auth.wrapper_sha256 -ne (Sha $PSCommandPath) -or $Side -notin $auth.sides -or $auth.execution_mode -ne 'direct_powershell_controllers'){throw 'Root execution binding mismatch'}
 if($Attempt -gt 1 -and ($Side+'.'+$Phase+'.'+$Attempt) -notin $auth.corrected_preflight_attempts){throw 'This corrected preflight attempt is not explicitly authorized'}
+if($Phase -eq 'launch' -and $auth.PSObject.Properties.Name -contains 'adopted_active_sides' -and $Side -in $auth.adopted_active_sides){throw 'This side already has an adopted active launch; do not relaunch'}
 foreach($pin in $auth.source_pins){if((Sha $pin.path) -ne $pin.sha256){throw "Runtime source changed: $($pin.path)"}}
 if($Phase -eq 'launch'){
     foreach($prompt in $matrix.quality_recipe.prompt_ids){if(Test-Path -LiteralPath (Join-Path $arm ('requests\'+$prompt))){throw 'Request output leaf must be absent before launch'}}
@@ -63,6 +69,6 @@ $ownerRow=Get-CimInstance Win32_Process -Filter "ProcessId=$($child.Id)"
 if(-not $ownerRow -or $ownerRow.ExecutablePath -ne $pwsh){throw 'Phase controller identity missing; inspect exact process before further work'}
 WriteNew (Join-Path $evidence 'controller.json') ([ordered]@{pid=$child.Id;parent_pid=$ownerRow.ParentProcessId;exe=$ownerRow.ExecutablePath;create_utc=$ownerRow.CreationDate.ToUniversalTime().ToString('o');command_line=$ownerRow.CommandLine;argv=$argv;script_sha256=(Sha $scriptPath);matrix_sha256=(Sha $matrixPath)})
 $child.WaitForExit();$child.Refresh();$exitCode=$child.ExitCode
-WriteNew (Join-Path $evidence 'terminal.json') ([ordered]@{side=$Side;phase=$Phase;controller_pid=$child.Id;exit_code=$exitCode;finished_utc=[DateTimeOffset]::UtcNow.ToString('o');stdout_sha256=(Sha $out);stderr_sha256=(Sha $err);source_script_sha256=(Sha $scriptPath)})
+WriteNew (Join-Path $evidence 'terminal.json') ([ordered]@{side=$Side;phase=$Phase;controller_pid=$child.Id;exit_code=$exitCode;finished_utc=[DateTimeOffset]::UtcNow.ToString('o');stdout_sha256=(Sha $out);stderr_sha256=(Sha $err);log_hash_scope='snapshot after controller exit; descendant handles may remain open until model cleanup';source_script_sha256=(Sha $scriptPath)})
 [ordered]@{side=$Side;phase=$Phase;exit_code=$exitCode;evidence=$evidence}|ConvertTo-Json -Compress
 exit $exitCode
