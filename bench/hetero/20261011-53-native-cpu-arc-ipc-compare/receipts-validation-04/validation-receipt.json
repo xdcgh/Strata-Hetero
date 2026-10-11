@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "run_id": "native-cpu-arc-ipc-compare-20261011-53",
+  "interpreter": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "no_bytecode": true,
+  "steps": [
+    {
+      "name": "unittest",
+      "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "tools.test_hetero_native_ipc_compare"
+      ],
+      "pid": 5424,
+      "exit_code": 0,
+      "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-04\\unittest.stdout.txt",
+      "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-04\\unittest.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "3c09be86e2352ee4b1ec648358c6e598ed458d38575f51f6398b648d8f3f9925"
+    },
+    {
+      "name": "default-plan",
+      "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "arguments": [
+        "-B",
+        "tools/hetero_native_ipc_compare.py"
+      ],
+      "pid": 18880,
+      "exit_code": 0,
+      "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-04\\plan.stdout.json",
+      "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-04\\plan.stderr.txt",
+      "stdout_sha256": "b57b4db13d575638d3aec36175baefd609496195c4f3800ebaa038f4d28f695b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "execution_authorized": false,
+  "tests": "pure fixtures passed 8/8",
+  "payloads_read": false,
+  "cpu_service_started": false,
+  "arc_service_started": false,
+  "device_accessed": false,
+  "inference_called": false
+}

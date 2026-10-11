@@ -1,0 +1,17 @@
+.....E..
+======================================================================
+ERROR: test_real_init_and_trial_loops_use_service_protocol_constants (tools.test_hetero_native_ipc_compare.CompareProtocolFixtures.test_real_init_and_trial_loops_use_service_protocol_constants)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\test_hetero_native_ipc_compare.py", line 174, in test_real_init_and_trial_loops_use_service_protocol_constants
+    result = compare._trial(handle, "cpu", backend, "cpu-solo", 1, input_record, gold_record,
+        contract, monitor, protocol, FakeNumpy(), None, "formal-01", output_writer=fake_writer)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\tools\hetero_native_ipc_compare.py", line 515, in _trial
+    base = Path(contract["output"]["private_output_root"]) / _safe_component(arm) / _safe_component(backend_id) / f"rows-{rows:03d}" / _safe_component(label)
+                ~~~~~~~~^^^^^^^^^^
+KeyError: 'output'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.066s
+
+FAILED (errors=1)

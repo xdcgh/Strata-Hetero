@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "status": "source_only_prepared",
+  "run_id": "native-cpu-arc-ipc-compare-20261011-53",
+  "contract_version": 2,
+  "contract_v1_sha256": "8a0f1c472d56a9caa68b328bb0517ee80cd396c04baf89755f25d3b482c381e0",
+  "contract_v2_sha256": "ccb9f1ff3a746688ab7c2f4a8d88709258b841cec53a22fd96ad54c479645e8c",
+  "execution_authorized": false,
+  "tests": "10 pure fixtures passed; default plan validation passed",
+  "model_payloads_read": false,
+  "cpu_service_started": false,
+  "arc_service_started": false,
+  "inference_called": false,
+  "files": [
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_ipc_compare.py",
+      "bytes": 50416,
+      "sha256": "82d93ac18cf70acd23f8850089b18b260f9ae18cd8422c89ddee619ca7e7fc44"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_native_ipc_compare.py",
+      "bytes": 16750,
+      "sha256": "66c8d0bae365c7aac435b3bdc7913a4b94700364a9f1113c31e200598d83a587"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\compare-contract-v1.json",
+      "bytes": 17338,
+      "sha256": "8a0f1c472d56a9caa68b328bb0517ee80cd396c04baf89755f25d3b482c381e0"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\compare-contract.json",
+      "bytes": 18524,
+      "sha256": "ccb9f1ff3a746688ab7c2f4a8d88709258b841cec53a22fd96ad54c479645e8c"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\executed-client.py",
+      "bytes": 36849,
+      "sha256": "49cd6b59af5d01c28522f4a51f6d7e8d92e90438e76080ebae26534a450b7d83"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-42-native-q4k-q5_1-ipc\\execution-contract.json",
+      "bytes": 15845,
+      "sha256": "69fb26ea65dd9ae228dde8e3edd2a13265eb4c7329fe2cdc518ac9b19131b6e6"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_transport.py",
+      "bytes": 21907,
+      "sha256": "537a15a7284919741bb8e33a910ec5452644169c81fa6fd9edeaa69cbe5fcb91"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_service.py",
+      "bytes": 33838,
+      "sha256": "069d77d31e7b19a7d119ff14819694ce479a9393e7273c6217fb12e636d991d2"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_xpu_worker.py",
+      "bytes": 26679,
+      "sha256": "068bb1324a7eb6d3c36f0538031ef0bf3e0476e0bbadf80762691be541541d72"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_activation.py",
+      "bytes": 6864,
+      "sha256": "31323455274a50236a6274464e51fc622c717f09bead8ab96337e133ce0dacaf"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "bytes": 26316,
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_verify_existing.py",
+      "bytes": 14788,
+      "sha256": "6a2ecc6d13db0a9d726ad26d92c54d7d05ecc5b9a1898b81293b157f362519e3"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_cpu_service.cpp",
+      "bytes": 24790,
+      "sha256": "3194b7e67e3f7781e54785c17f53f127395f7635ec8a4bf36cc454b024130ccc"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\hetero\\native_expert_bench.cpp",
+      "bytes": 45332,
+      "sha256": "0ad1dbc70fc00ced12f093e111e154de46f253ed84e670e4fe420a6fc90354ed"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "bytes": 6995,
+      "sha256": "1704be49a740bb476ce1c469c32cd9408760f19feecbe19c93753f19d8586592"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\src\\kernels\\cpu\\pool.cpp",
+      "bytes": 41611,
+      "sha256": "cfe2f0f916b8dfec81ce84cc511cdea15a41932d959d95fd0cddbd29a7906639"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "bytes": 19269,
+      "sha256": "e83157f6d6cd8af2905f1667e9cffe196ba719107503f5e3c8321ecce4627eff"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-52-native-cpu-service-build\\receipts-02\\execution\\build-receipt.json",
+      "bytes": 100450,
+      "sha256": "723bbb8f3805a4ae2ca15ec2c325dea564d475ad30cabd2b841cca8c1b1676f6"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-03\\unittest-step.json",
+      "bytes": 757,
+      "sha256": "54fe429075c97ea59675cf57cf03013e32cbd1fff5a29a60269e42124d6362eb"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-08\\unittest-step.json",
+      "bytes": 756,
+      "sha256": "64dc054dabbe821147536188ef4d8703a6defd1f414061bb9b44aa98f5bb0a6e"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-08\\plan-step.json",
+      "bytes": 723,
+      "sha256": "86e9297e76d8e510dfeb3f39c68eb54e45899fbcd2d0d2361beb3ae4e7038c1a"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-08\\validation-receipt.json",
+      "bytes": 2048,
+      "sha256": "b38a66919c339fe19904e54d97462fd84854b944dba60866a9dfc7c219b78fc4"
+    }
+  ],
+  "cpu_service_binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\native-cpu-service-20261011-52\\hetero_native_cpu_service.exe",
+    "bytes": 2128896,
+    "sha256": "486dedeeba69497dc5d3aebf771833278b8431fc29e0e0c33bab503e5a04caf9"
+  },
+  "pure_validation": {
+    "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-08\\validation-receipt.json",
+    "receipt_sha256": "b38a66919c339fe19904e54d97462fd84854b944dba60866a9dfc7c219b78fc4",
+    "plan_output_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-08\\plan.stdout.json",
+    "plan_output_sha256": "b73f9f1ebdcb361c2a093e6afb51b02297dbe740cd5506219ab7c56e9cf11321",
+    "unittest_exit_code": 0,
+    "plan_exit_code": 0,
+    "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "no_bytecode": true,
+    "payloads_read": false,
+    "cpu_service_started": false,
+    "arc_service_started": false,
+    "device_accessed": false,
+    "inference_called": false
+  },
+  "preserved_preflight_failure": {
+    "step_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-03\\unittest-step.json",
+    "exit_code": 1,
+    "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-03\\unittest.stderr.txt",
+    "note": "fixture-only missing mock contract output root; corrected before validation-04; v2 validation subsequently passed"
+  },
+  "root_review_delta": [
+    "Bound INIT_KIND/INFER_KIND to actual tools.hetero_xpu_service constants; fake worker tests execute real _init/_trial loops.",
+    "READY pool readback requires complete typed fields and verified pin/mask agreement for requested pinned cores.",
+    "Run52 source_sha256_before uses repository-relative keys; lookup matched those exact keys.",
+    "Arc zero-child snapshot is observational; await_actual_child separately waits for verified C Python child.",
+    "V2 preserves v1 recipe and saves each raw service response exclusively under E private root after a second shared end barrier.",
+    "The end barrier precedes monitor/hash/quality/output work; request/parse failures abort barriers and bound peer cleanup, retaining completed peer responses.",
+    "All Arc warmup and formal trials use strict quality bounds; gate/quality failure prevents later arms while preserving raw response and receipt evidence."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "default-plan",
+  "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "arguments": [
+    "-B",
+    "tools/hetero_native_ipc_compare.py"
+  ],
+  "pid": 3084,
+  "exit_code": 0,
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-02\\plan.stdout.json",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-02\\plan.stderr.txt",
+  "stdout_sha256": "72e93cb34b6ad29671ab3fb60355c8d9f79f64c64448b3c0f3334c7913322eaf",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

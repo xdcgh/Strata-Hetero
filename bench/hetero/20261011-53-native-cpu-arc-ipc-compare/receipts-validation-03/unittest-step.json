@@ -1,0 +1,16 @@
+{
+  "name": "unittest",
+  "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "arguments": [
+    "-B",
+    "-m",
+    "unittest",
+    "tools.test_hetero_native_ipc_compare"
+  ],
+  "pid": 21984,
+  "exit_code": 1,
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-03\\unittest.stdout.txt",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-03\\unittest.stderr.txt",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "5579f5a03e067c96c91846d581c8a964b79e69a2a4ff4e236e11f553571ef5af"
+}

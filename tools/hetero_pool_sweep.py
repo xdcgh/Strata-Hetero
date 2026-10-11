@@ -27,7 +27,7 @@ EXPECTED_ARMS = {
 ARM_EXECUTION_ORDER = ("w10-all", "w04-all", "w06-all", "w16-all", "w06-auto")
 EXPECTED_QUALITY_PROMPT_IDS = ("smoke_arithmetic", "smoke_unicode", "smoke_json_arithmetic", "smoke_python_function",
                               "smoke_three_key_retrieval", "long_1k", "long_4k", "long_16k", "long_30k7")
-RUN_ID_RE = re.compile(r"^(?:20261009-47|20261011-51)-(?:w10-all|w04-all|w06-all|w16-all|w06-auto)-(?:quality-on|performance-off)$")
+RUN_ID_RE = re.compile(r"^(?:20261009-47|20261011-51|20261011-57)-(?:w10-all|w04-all|w06-all|w16-all|w06-auto)-(?:quality-on|performance-off)$")
 RUN41_REL = Path("bench/hetero/20261009-41-hetero41-direct-quality")
 RUN41_TEMPLATES = {
     "launch": (RUN41_REL / "launch-owned.ps1", "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679"),
@@ -546,7 +546,10 @@ def execute_controlled_coordinator(plan: dict[str, Any], authorization: dict[str
         raise SweepError("authorization does not bind this exact immutable plan hash")
     results = []
     previous = None
-    for step in plan["steps"]:
+    phase_limit = authorization.get("max_phases", len(plan["steps"]))
+    if type(phase_limit) is not int or not 1 <= phase_limit <= len(plan["steps"]):
+        raise SweepError("authorized phase limit must be a positive bounded integer")
+    for step in plan["steps"][:phase_limit]:
         if step["arm"] not in authorization["arms"]:
             raise SweepError("step arm is not authorized")
         if previous is not None:
@@ -925,6 +928,8 @@ class Run41LifecycleAdapter:
     def _call(self, step: dict[str, Any], template: str, action: str, controller_dir: Path,
               *, launcher_pid: int | None = None, sampler_pid: int | None = None,
               scenarios: list[dict[str, Any]] | None = None, admission_only: bool = False) -> dict[str, Any]:
+        if action == "cleanup":
+            (Path(step["config"]).resolve(strict=True).parent / "cleanup").mkdir(exist_ok=True)
         script_text = render_performance_controller(step, self.repo) if action == "performance" else render_run41_template(template, step, self.repo)
         if admission_only:
             if template != "launch" or action != "launch": raise SweepError("admission probe must use the launch gate")
@@ -1220,7 +1225,10 @@ def main(argv: list[str] | None = None) -> int:
                 print(json.dumps(adapter.probe_admission(plan["steps"][0]), indent=2, ensure_ascii=False))
                 return 0
             results = execute_controlled_coordinator(plan, authorization, adapter)
-            print(json.dumps({"status": "matrix_phases_complete_last_service_left_for_root_review",
+            matrix_complete = len(results) == len(plan["steps"])
+            print(json.dumps({"status": ("matrix_phases_complete_last_service_left_for_root_review" if matrix_complete
+                                          else "authorized_phase_subset_complete_last_service_left_for_root_review"),
+                              "matrix_complete": matrix_complete, "planned_phase_count": len(plan["steps"]),
                               "phase_count": len(results), "results": results}, indent=2, ensure_ascii=False))
             return 0
         print(json.dumps(plan, indent=2, ensure_ascii=False))

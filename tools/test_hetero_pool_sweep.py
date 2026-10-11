@@ -441,6 +441,33 @@ class PoolSweepPlanTests(unittest.TestCase):
             self.assertEqual(events[-1][0], "run")
             self.assertEqual(events[-2][0], "cleanup")
 
+    def test_authorized_diagnostic_limit_preserves_full_plan_and_leaves_one_owned_phase(self):
+        with tempfile.TemporaryDirectory(prefix="strata-phase-limit-") as temp:
+            matrix = _fixture_matrix(Path(temp))
+            plan = sweep.build_plan(matrix)
+            auth = _auth(matrix)
+            auth["_resolved_output_root"] = str(matrix.parent.resolve())
+            calls = []
+
+            class Adapter:
+                def run_phase(self, step):
+                    calls.append(step["run_id"])
+                    target = matrix.parent / "diagnostic-result.json"
+                    target.write_text("{}")
+                    return {"status": "pass", "path": str(target)}
+                def cleanup_previous(self, _prior):
+                    raise AssertionError("one phase must remain owned for root review")
+
+            for limit in (0, True, 11):
+                auth["max_phases"] = limit
+                with self.assertRaises(sweep.SweepError):
+                    sweep.execute_controlled_coordinator(plan, auth, Adapter())
+            self.assertEqual(calls, [])
+            auth["max_phases"] = 1
+            self.assertEqual(len(sweep.execute_controlled_coordinator(plan, auth, Adapter())), 1)
+            self.assertEqual(len(plan["steps"]), 10)
+            self.assertEqual(calls, [plan["steps"][0]["run_id"]])
+
     def test_real_run41_adapter_cleanup_schema_crosses_coordinator(self):
         with tempfile.TemporaryDirectory(prefix="strata-run41-adapter-mock-") as temp:
             matrix = _fixture_matrix(Path(temp))

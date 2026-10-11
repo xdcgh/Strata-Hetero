@@ -1,0 +1,4842 @@
+{
+  "schema": "strata-run51-vs-run41-direct-regression-review-v1",
+  "scope": "read-only artifact comparison; no model/API/device calls",
+  "claims": {
+    "run41_is_complete_nine_prompt_baseline": "nine_prompt_matrix_complete",
+    "run51_is_stopped_after_first_failure": "failed_stopped",
+    "failing_prompt": "smoke_three_key_retrieval"
+  },
+  "prompt_manifest": {
+    "run51_equals_legacy_prompt_and_expectation_fields": true,
+    "run51_prompt_rows": {
+      "smoke_arithmetic": {
+        "bytes": 48,
+        "sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+        "body_tokens_local": 15,
+        "chat_prompt_tokens_local": 27,
+        "max_output_tokens": 128,
+        "quality": {
+          "kind": "exact_text",
+          "expected": "4"
+        }
+      },
+      "smoke_unicode": {
+        "bytes": 82,
+        "sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+        "body_tokens_local": 20,
+        "chat_prompt_tokens_local": 32,
+        "max_output_tokens": 128,
+        "quality": {
+          "kind": "exact_text",
+          "expected": "你好，世界！🌏 é"
+        }
+      },
+      "smoke_json_arithmetic": {
+        "bytes": 143,
+        "sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+        "body_tokens_local": 38,
+        "chat_prompt_tokens_local": 50,
+        "max_output_tokens": 128,
+        "quality": {
+          "kind": "json_arithmetic",
+          "expected_result": 156,
+          "expected_expression": "12*13"
+        }
+      },
+      "smoke_python_function": {
+        "bytes": 126,
+        "sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+        "body_tokens_local": 27,
+        "chat_prompt_tokens_local": 39,
+        "max_output_tokens": 128,
+        "quality": {
+          "kind": "python_ast",
+          "function": "add_two",
+          "arguments": [
+            "x"
+          ],
+          "return_expression": {
+            "left_name": "x",
+            "operator": "Add",
+            "right_constant": 2
+          }
+        }
+      },
+      "smoke_three_key_retrieval": {
+        "bytes": 265,
+        "sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+        "body_tokens_local": 102,
+        "chat_prompt_tokens_local": 114,
+        "max_output_tokens": 128,
+        "quality": {
+          "kind": "json_retrieval",
+          "expected": {
+            "ARCHIVE-1CA3B1799D": "126855092",
+            "ARCHIVE-46BDD640FB": "362950628",
+            "ARCHIVE-23392456DE": "890779946"
+          }
+        }
+      },
+      "long_1k": {
+        "bytes": 2838,
+        "sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+        "body_tokens_local": 1024,
+        "chat_prompt_tokens_local": 1036,
+        "max_output_tokens": 1024,
+        "quality": {
+          "kind": "json_retrieval",
+          "expected": {
+            "ARCHIVE-1CA3B1799D": "126855092",
+            "ARCHIVE-46BDD640FB": "362950628",
+            "ARCHIVE-23392456DE": "890779946"
+          }
+        }
+      },
+      "long_4k": {
+        "bytes": 14249,
+        "sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+        "body_tokens_local": 4097,
+        "chat_prompt_tokens_local": 4109,
+        "max_output_tokens": 1024,
+        "quality": {
+          "kind": "json_retrieval",
+          "expected": {
+            "ARCHIVE-1CA3B1799D": "126855092",
+            "ARCHIVE-46BDD640FB": "362950628",
+            "ARCHIVE-23392456DE": "890779946"
+          }
+        }
+      },
+      "long_16k": {
+        "bytes": 66202,
+        "sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+        "body_tokens_local": 16384,
+        "chat_prompt_tokens_local": 16396,
+        "max_output_tokens": 1024,
+        "quality": {
+          "kind": "json_retrieval",
+          "expected": {
+            "ARCHIVE-1CA3B1799D": "126855092",
+            "ARCHIVE-46BDD640FB": "362950628",
+            "ARCHIVE-23392456DE": "890779946"
+          }
+        }
+      },
+      "long_30k7": {
+        "bytes": 127193,
+        "sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+        "body_tokens_local": 30700,
+        "chat_prompt_tokens_local": 30712,
+        "max_output_tokens": 1024,
+        "quality": {
+          "kind": "json_retrieval",
+          "expected": {
+            "ARCHIVE-1CA3B1799D": "126855092",
+            "ARCHIVE-46BDD640FB": "362950628",
+            "ARCHIVE-23392456DE": "890779946"
+          }
+        }
+      }
+    },
+    "run51_manifest_sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
+    "legacy_manifest_sha256": "ac749f67d3205760785b7f8d0cf67b813f9759944cfd033ee76003b2d8fdfbbd"
+  },
+  "controls": {
+    "config_differences": {
+      "args": {
+        "run41": [
+          "--pack",
+          "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+          "--native",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+          "--expert-profile",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+          "--expert-cache",
+          "auto",
+          "--prefill",
+          "auto",
+          "--spec",
+          "4",
+          "--spec-min-p",
+          "0.5",
+          "--mtp",
+          "F:\\Strata-data\\mtp\\rt",
+          "--max-context",
+          "32768",
+          "--kv",
+          "int8",
+          "--resident-budget-gib",
+          "20",
+          "--vram-reserve-mib",
+          "4096",
+          "--pool-workers",
+          "10",
+          "--prompt-cache",
+          "0",
+          "--adapt-swaps",
+          "0",
+          "--pcie-frac",
+          "0",
+          "--ple-io",
+          "direct",
+          "--native-dense-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+          "--native-dense-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+          "--native-dense-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+          "--native-dense-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+          "--ple-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+        ],
+        "run51": [
+          "--pack",
+          "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+          "--native",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+          "--expert-profile",
+          "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+          "--expert-cache",
+          "auto",
+          "--prefill",
+          "auto",
+          "--spec",
+          "4",
+          "--spec-min-p",
+          "0.5",
+          "--mtp",
+          "F:\\Strata-data\\mtp\\rt",
+          "--max-context",
+          "32768",
+          "--kv",
+          "int8",
+          "--resident-budget-gib",
+          "20",
+          "--vram-reserve-mib",
+          "4096",
+          "--pool-workers",
+          "10",
+          "--pool-affinity",
+          "all",
+          "--prompt-cache",
+          "0",
+          "--adapt-swaps",
+          "0",
+          "--pcie-frac",
+          "0",
+          "--ple-io",
+          "direct",
+          "--native-dense-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+          "--native-dense-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+          "--native-dense-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+          "--native-dense-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+          "--ple-gguf",
+          "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+        ]
+      },
+      "log": {
+        "run41": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\logs\\engine.log",
+        "run51": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\logs\\engine.log"
+      }
+    },
+    "args": {
+      "run41": [
+        "--pack",
+        "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+        "--native",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--expert-profile",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "auto",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "F:\\Strata-data\\mtp\\rt",
+        "--max-context",
+        "32768",
+        "--kv",
+        "int8",
+        "--resident-budget-gib",
+        "20",
+        "--vram-reserve-mib",
+        "4096",
+        "--pool-workers",
+        "10",
+        "--prompt-cache",
+        "0",
+        "--adapt-swaps",
+        "0",
+        "--pcie-frac",
+        "0",
+        "--ple-io",
+        "direct",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+        "--ple-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+      ],
+      "run51": [
+        "--pack",
+        "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+        "--native",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--expert-profile",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "auto",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "F:\\Strata-data\\mtp\\rt",
+        "--max-context",
+        "32768",
+        "--kv",
+        "int8",
+        "--resident-budget-gib",
+        "20",
+        "--vram-reserve-mib",
+        "4096",
+        "--pool-workers",
+        "10",
+        "--pool-affinity",
+        "all",
+        "--prompt-cache",
+        "0",
+        "--adapt-swaps",
+        "0",
+        "--pcie-frac",
+        "0",
+        "--ple-io",
+        "direct",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+        "--ple-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+      ],
+      "run51_without_explicit_default_affinity": [
+        "--pack",
+        "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+        "--native",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--expert-profile",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+        "--expert-cache",
+        "auto",
+        "--prefill",
+        "auto",
+        "--spec",
+        "4",
+        "--spec-min-p",
+        "0.5",
+        "--mtp",
+        "F:\\Strata-data\\mtp\\rt",
+        "--max-context",
+        "32768",
+        "--kv",
+        "int8",
+        "--resident-budget-gib",
+        "20",
+        "--vram-reserve-mib",
+        "4096",
+        "--pool-workers",
+        "10",
+        "--prompt-cache",
+        "0",
+        "--adapt-swaps",
+        "0",
+        "--pcie-frac",
+        "0",
+        "--ple-io",
+        "direct",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+        "--native-dense-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+        "--ple-gguf",
+        "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+      ],
+      "same_after_default_affinity_removed": true
+    },
+    "environment_exact_equal": true,
+    "identity": {
+      "source_sha_and_tree_equal": true,
+      "engine_equal": true,
+      "model_id_equal": true,
+      "native_model_path_equal": true,
+      "shared_model_identity_fields_equal": true,
+      "server_python_bridge_equal": true,
+      "config_identity_differences": {
+        "sha256": {
+          "run41": "157d933e10b441da8b1290648a757f49ff3cd54d840dab470885d680172e31d7",
+          "run51": "7cf5649a5b22f61f73ea1f5643dde9a99be635ac36ac2d001c6641bf039930d6"
+        },
+        "scope": {
+          "run41": "v0.1.41-matched-F-ple-placement",
+          "run51": "v0.1.41-cpu-pool-full-model-comparison"
+        },
+        "only_runtime_difference": {
+          "run41": "--ple-gguf path, excluding run-specific log path",
+          "run51": "Pool workers and affinity differ by arm; token capture and the run-specific log differ by phase."
+        },
+        "pool_workers": {
+          "run41": null,
+          "run51": 10
+        },
+        "pool_affinity": {
+          "run41": null,
+          "run51": "all"
+        },
+        "token_capture": {
+          "run41": null,
+          "run51": true
+        },
+        "arm_id": {
+          "run41": null,
+          "run51": "w10-all"
+        }
+      }
+    },
+    "root_control_comparison": {
+      "status": "matched_effective_controls",
+      "only_arg_delta": "explicit --pool-affinity all, already candidate default",
+      "env_equal": true,
+      "other_config_delta": "log path",
+      "model_restart_or_diagnostic_run": false,
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41\\src\\program\\generate.cpp",
+      "source_sha256": "85c3123f8508536cf4291eea281df91c96bbaab3d82561948a6b593f0426befc",
+      "cause": "unresolved; no causal attribution from this comparison"
+    },
+    "inputs": [
+      {
+        "path": "E:\\Strata-Hetero-data\\models\\ple-nvme-ud-q4_k_xl\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "present_both": true,
+        "size_equal": true,
+        "mtime_equal": true,
+        "device_equal": true,
+        "file_index_equal": true,
+        "fstat_equal": true,
+        "sha256_prior_receipt_equal": true,
+        "run41_prior_sha256": null,
+        "run51_prior_sha256": null
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+        "present_both": true,
+        "size_equal": true,
+        "mtime_equal": true,
+        "device_equal": true,
+        "file_index_equal": true,
+        "fstat_equal": true,
+        "sha256_prior_receipt_equal": true,
+        "run41_prior_sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082",
+        "run51_prior_sha256": "4448186216b3af4cc558bbce2c3213f01608f8f8b2e5267a9767971dd3ec8082"
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+        "present_both": true,
+        "size_equal": true,
+        "mtime_equal": true,
+        "device_equal": true,
+        "file_index_equal": true,
+        "fstat_equal": true,
+        "sha256_prior_receipt_equal": true,
+        "run41_prior_sha256": null,
+        "run51_prior_sha256": null
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+        "present_both": true,
+        "size_equal": true,
+        "mtime_equal": true,
+        "device_equal": true,
+        "file_index_equal": true,
+        "fstat_equal": true,
+        "sha256_prior_receipt_equal": true,
+        "run41_prior_sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3",
+        "run51_prior_sha256": "56758f40269cad5cd9b0d3d6fbae0f40f6d5be6de49e4ab392dbe83157d9cbd3"
+      },
+      {
+        "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+        "present_both": true,
+        "size_equal": true,
+        "mtime_equal": true,
+        "device_equal": true,
+        "file_index_equal": true,
+        "fstat_equal": true,
+        "sha256_prior_receipt_equal": true,
+        "run41_prior_sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a",
+        "run51_prior_sha256": "753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a"
+      }
+    ],
+    "engine_startup_runtime": {
+      "run41": {
+        "sha256": "583f594e72da2ee44b0067035add042864abaa88c2aff40939ee0d412a3a4668",
+        "startup_lines": [
+          "[strata] 2026-10-09 19:41:23 engine started: E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io direct --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf --ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+          "strata mtp: draft layer loaded, 839 MiB of VRAM (experts 675, dense 111), files read in 0.27 s (2912 MiB/s)",
+          "strata generate: CPU pool tasks/phase: 33 (automatic), participating threads: 11",
+          "strata generate: 10 pool workers on logical processors 1,10,11,12,13,2,3,4,5,6, the host thread on 0 (draining too) (--host-core first)",
+          "strata generate: expert cache auto: 39.95 GiB free, 4096 MiB reserved (+281 MiB for the draft head) -> 9590 slots",
+          "strata generate: expert cache 12213 slots, 35.67 GiB of VRAM; policy is",
+          "strata generate: session is up (engine 0.1.41)",
+          "FileExpertSource: mapped pinned cache complement ready: resident 20.00 GiB, pinned 20.00 GiB in 21 s; page-locked and mapped",
+          "strata generate: resident RAM mode: 20.00 GiB of experts in RAM (page-locked), 12213 in the GPU cache; adaptive swaps off"
+        ]
+      },
+      "run51": {
+        "sha256": "ea033c6394f67bdaffc1b16f40e6db0e784416449ca37357a867d9c96286355e",
+        "startup_lines": [
+          "[strata] 2026-10-11 08:50:00 engine started: E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe --serve --pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl --native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin --expert-cache auto --prefill auto --spec 4 --spec-min-p 0.5 --mtp F:\\Strata-data\\mtp\\rt --max-context 32768 --kv int8 --resident-budget-gib 20 --vram-reserve-mib 4096 --pool-workers 10 --pool-affinity all --prompt-cache 0 --adapt-swaps 0 --pcie-frac 0 --ple-io direct --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf --native-dense-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf --ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+          "strata mtp: draft layer loaded, 839 MiB of VRAM (experts 675, dense 111), files read in 2.47 s (318 MiB/s)",
+          "strata generate: CPU pool tasks/phase: 33 (automatic), participating threads: 11",
+          "strata generate: 10 pool workers on logical processors 1,10,11,12,13,2,3,4,5,6, the host thread on 0 (draining too) (--host-core first)",
+          "strata generate: expert cache auto: 39.95 GiB free, 4096 MiB reserved (+281 MiB for the draft head) -> 9590 slots",
+          "strata generate: expert cache 12213 slots, 35.67 GiB of VRAM; policy is",
+          "strata generate: session is up (engine 0.1.41)",
+          "FileExpertSource: mapped pinned cache complement ready: resident 20.00 GiB, pinned 20.00 GiB in 65 s; page-locked and mapped",
+          "strata generate: resident RAM mode: 20.00 GiB of experts in RAM (page-locked), 12213 in the GPU cache; adaptive swaps off"
+        ]
+      }
+    },
+    "python_executables": {
+      "C:\\Python314\\python.exe": "Windows PE ProductVersion/FileVersion 3.14.8 (read-only file metadata)",
+      "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe": "Windows PE ProductVersion/FileVersion 3.14.8 (read-only file metadata)"
+    }
+  },
+  "successful_first_five_against_run41_h4": {
+    "smoke_arithmetic": {
+      "prompt_sha256_equal": true,
+      "local_chat_tokens": {
+        "run41": 27,
+        "run51": 27
+      },
+      "max_tokens": {
+        "run41": 128,
+        "run51": 128
+      },
+      "formal_prompt_tokens": {
+        "run41": [
+          27,
+          27,
+          27
+        ],
+        "run51": [
+          27,
+          27,
+          27
+        ]
+      },
+      "cache_n": {
+        "run41": [
+          0,
+          0,
+          0
+        ],
+        "run51": [
+          0,
+          0,
+          0
+        ]
+      },
+      "warmup_ids": {
+        "run41": {
+          "ids": [
+            19,
+            248046
+          ],
+          "count": 2,
+          "sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 27,
+            "completion_tokens": 2,
+            "total_tokens": 29,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "829298900da3c06739323d151566f1c81d56358f3d15d1c12a638289b97d4fd6"
+        },
+        "run51": {
+          "ids": [
+            19,
+            248046
+          ],
+          "count": 2,
+          "sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 27,
+            "completion_tokens": 2,
+            "total_tokens": 29,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "7a21d263e0c9fb091aa7573a9943261c8082ad1b3896328957061d27ab867184"
+        },
+        "match": true
+      },
+      "formal_ids": [
+        {
+          "run41": {
+            "ids": [
+              19,
+              248046
+            ],
+            "count": 2,
+            "sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "70be1c456ffbf08fd5fe356b8c8c145ba79aad265f3c3c10e2b1587c404bc463"
+          },
+          "run51": {
+            "ids": [
+              19,
+              248046
+            ],
+            "count": 2,
+            "sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "96ddea13e8fda9a06f1e1f3ff56ec68274b0f96a40f9c01483e2cf15e20f50a2"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              19,
+              248046
+            ],
+            "count": 2,
+            "sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "d0b5a1b726c39b33344d736ccc09edfef2684e0ab01af2eb81a248b8775ae3cb"
+          },
+          "run51": {
+            "ids": [
+              19,
+              248046
+            ],
+            "count": 2,
+            "sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "0710a916b7b4707f33fd2e3ea97019a9d224d34607c20041889260afec8af162"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              19,
+              248046
+            ],
+            "count": 2,
+            "sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "f51c951ffe7f1b31b49f3998ce66ab6f22629f57d071671e24b8638fa60ab4cf"
+          },
+          "run51": {
+            "ids": [
+              19,
+              248046
+            ],
+            "count": 2,
+            "sha256": "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "e9a7d4ae4502838e5735c1057e0391739a80a04d52cc7ea10b34c3db9e06154b"
+          },
+          "match": true
+        }
+      ],
+      "quality": {
+        "run41": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "run51": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "request_history": {
+        "run41": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 27,
+              "prompt_ms": 318.7,
+              "prompt_per_token_ms": 11.804,
+              "prompt_per_second": 84.7,
+              "predicted_n": 2,
+              "predicted_ms": 241.3,
+              "predicted_per_token_ms": 120.65,
+              "predicted_per_second": 8.3,
+              "draft_n": 3,
+              "draft_n_accepted": 3
+            },
+            "client_e2e_s": 0.5716906000016024,
+            "request_start_monotonic_ns": 31840520427200,
+            "request_end_monotonic_ns": 31841092246400,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 27,
+              "prompt_ms": 415.5,
+              "prompt_per_token_ms": 15.389,
+              "prompt_per_second": 65.0,
+              "predicted_n": 2,
+              "predicted_ms": 168.8,
+              "predicted_per_token_ms": 84.4,
+              "predicted_per_second": 11.8,
+              "draft_n": 3,
+              "draft_n_accepted": 3
+            },
+            "client_e2e_s": 0.5889109999989159,
+            "request_start_monotonic_ns": 31841094569300,
+            "request_end_monotonic_ns": 31841683567800,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 27,
+              "prompt_ms": 385.0,
+              "prompt_per_token_ms": 14.259,
+              "prompt_per_second": 70.1,
+              "predicted_n": 2,
+              "predicted_ms": 218.7,
+              "predicted_per_token_ms": 109.35,
+              "predicted_per_second": 9.1,
+              "draft_n": 3,
+              "draft_n_accepted": 3
+            },
+            "client_e2e_s": 0.6243574000000081,
+            "request_start_monotonic_ns": 31841685662400,
+            "request_end_monotonic_ns": 31842310138300,
+            "reasoning_effort": "none"
+          }
+        ],
+        "run51": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 27,
+              "prompt_ms": 423.5,
+              "prompt_per_token_ms": 15.685,
+              "prompt_per_second": 63.8,
+              "predicted_n": 2,
+              "predicted_ms": 153.0,
+              "predicted_per_token_ms": 76.5,
+              "predicted_per_second": 13.1,
+              "draft_n": 3,
+              "draft_n_accepted": 3
+            },
+            "client_e2e_s": 0.5800021000000015,
+            "request_start_monotonic_ns": 2766429950300,
+            "request_end_monotonic_ns": 2767010049900,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 27,
+              "prompt_ms": 344.8,
+              "prompt_per_token_ms": 12.77,
+              "prompt_per_second": 78.3,
+              "predicted_n": 2,
+              "predicted_ms": 159.9,
+              "predicted_per_token_ms": 79.95,
+              "predicted_per_second": 12.5,
+              "draft_n": 3,
+              "draft_n_accepted": 3
+            },
+            "client_e2e_s": 0.5153675999999905,
+            "request_start_monotonic_ns": 2767011858600,
+            "request_end_monotonic_ns": 2767527348300,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 27,
+              "completion_tokens": 2,
+              "total_tokens": 29,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 27,
+              "prompt_ms": 399.5,
+              "prompt_per_token_ms": 14.796,
+              "prompt_per_second": 67.6,
+              "predicted_n": 2,
+              "predicted_ms": 226.1,
+              "predicted_per_token_ms": 113.05,
+              "predicted_per_second": 8.8,
+              "draft_n": 3,
+              "draft_n_accepted": 3
+            },
+            "client_e2e_s": 0.6293347999999241,
+            "request_start_monotonic_ns": 2767529970200,
+            "request_end_monotonic_ns": 2768159468600,
+            "reasoning_effort": "none"
+          }
+        ]
+      }
+    },
+    "smoke_unicode": {
+      "prompt_sha256_equal": true,
+      "local_chat_tokens": {
+        "run41": 32,
+        "run51": 32
+      },
+      "max_tokens": {
+        "run41": 128,
+        "run51": 128
+      },
+      "formal_prompt_tokens": {
+        "run41": [
+          32,
+          32,
+          32
+        ],
+        "run51": [
+          32,
+          32,
+          32
+        ]
+      },
+      "cache_n": {
+        "run41": [
+          0,
+          0,
+          0
+        ],
+        "run51": [
+          0,
+          0,
+          0
+        ]
+      },
+      "warmup_ids": {
+        "run41": {
+          "ids": [
+            109266,
+            3709,
+            96748,
+            6115,
+            9008,
+            234,
+            237,
+            378,
+            52033,
+            248046
+          ],
+          "count": 10,
+          "sha256": "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 32,
+            "completion_tokens": 10,
+            "total_tokens": 42,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "02f3316fb5c39175a807b65ef8277e751871e66e11eded5607964cb1e8e2e85f"
+        },
+        "run51": {
+          "ids": [
+            109266,
+            3709,
+            96748,
+            6115,
+            9008,
+            234,
+            237,
+            378,
+            52033,
+            248046
+          ],
+          "count": 10,
+          "sha256": "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 32,
+            "completion_tokens": 10,
+            "total_tokens": 42,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "4f5c3c1b26d547c8df29e3b43e27cef40fca8492214876b7f2b52df457783f15"
+        },
+        "match": true
+      },
+      "formal_ids": [
+        {
+          "run41": {
+            "ids": [
+              109266,
+              3709,
+              96748,
+              6115,
+              9008,
+              234,
+              237,
+              378,
+              52033,
+              248046
+            ],
+            "count": 10,
+            "sha256": "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "7e8ca0ba9aed5c28b6d7e6a69c3944f4ac3333377f44917e3ed0a4ff6d070d95"
+          },
+          "run51": {
+            "ids": [
+              109266,
+              3709,
+              96748,
+              6115,
+              9008,
+              234,
+              237,
+              378,
+              52033,
+              248046
+            ],
+            "count": 10,
+            "sha256": "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "6e9f83f1f17ac9bba614106438823ca93480a9984b6a4da845327a7588a0d254"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              109266,
+              3709,
+              96748,
+              6115,
+              9008,
+              234,
+              237,
+              378,
+              52033,
+              248046
+            ],
+            "count": 10,
+            "sha256": "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "245f63a6d1797302672a7b4f0a1ffb5f7a416d6281de1df4c0df4f60438658fd"
+          },
+          "run51": {
+            "ids": [
+              109266,
+              3709,
+              96748,
+              6115,
+              9008,
+              234,
+              237,
+              378,
+              52033,
+              248046
+            ],
+            "count": 10,
+            "sha256": "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "addf72f9be532bd28329fbf861b17ac55bfcbb095325327a2f179528e9d7d484"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              109266,
+              3709,
+              96748,
+              6115,
+              9008,
+              234,
+              237,
+              378,
+              52033,
+              248046
+            ],
+            "count": 10,
+            "sha256": "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "624971b258a91891aacec6d7c79bd2adb1b9a361395f536d15907c3f29110381"
+          },
+          "run51": {
+            "ids": [
+              109266,
+              3709,
+              96748,
+              6115,
+              9008,
+              234,
+              237,
+              378,
+              52033,
+              248046
+            ],
+            "count": 10,
+            "sha256": "adaf319bb8e310efbe4cfdff0d80ac0f41bb3db03d2587c1f4d1df48a0a2948c",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "92c930377a2cb5c95d63043d35c446d4ad69aa91ac07c6eab19c6670d8b5248b"
+          },
+          "match": true
+        }
+      ],
+      "quality": {
+        "run41": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "run51": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "request_history": {
+        "run41": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 32,
+              "prompt_ms": 335.7,
+              "prompt_per_token_ms": 10.491,
+              "prompt_per_second": 95.3,
+              "predicted_n": 10,
+              "predicted_ms": 288.6,
+              "predicted_per_token_ms": 28.86,
+              "predicted_per_second": 34.7,
+              "draft_n": 9,
+              "draft_n_accepted": 7
+            },
+            "client_e2e_s": 0.6299931000030483,
+            "request_start_monotonic_ns": 31845498842500,
+            "request_end_monotonic_ns": 31846128961800,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 32,
+              "prompt_ms": 360.3,
+              "prompt_per_token_ms": 11.259,
+              "prompt_per_second": 88.8,
+              "predicted_n": 10,
+              "predicted_ms": 296.1,
+              "predicted_per_token_ms": 29.61,
+              "predicted_per_second": 33.8,
+              "draft_n": 9,
+              "draft_n_accepted": 7
+            },
+            "client_e2e_s": 0.6606904000000213,
+            "request_start_monotonic_ns": 31846130809000,
+            "request_end_monotonic_ns": 31846791602600,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 32,
+              "prompt_ms": 407.8,
+              "prompt_per_token_ms": 12.744,
+              "prompt_per_second": 78.5,
+              "predicted_n": 10,
+              "predicted_ms": 267.2,
+              "predicted_per_token_ms": 26.72,
+              "predicted_per_second": 37.4,
+              "draft_n": 9,
+              "draft_n_accepted": 7
+            },
+            "client_e2e_s": 0.697284199999558,
+            "request_start_monotonic_ns": 31846794210000,
+            "request_end_monotonic_ns": 31847491628100,
+            "reasoning_effort": "none"
+          }
+        ],
+        "run51": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 32,
+              "prompt_ms": 366.1,
+              "prompt_per_token_ms": 11.441,
+              "prompt_per_second": 87.4,
+              "predicted_n": 10,
+              "predicted_ms": 246.2,
+              "predicted_per_token_ms": 24.62,
+              "predicted_per_second": 40.6,
+              "draft_n": 9,
+              "draft_n_accepted": 7
+            },
+            "client_e2e_s": 0.6389148000002933,
+            "request_start_monotonic_ns": 2774366479800,
+            "request_end_monotonic_ns": 2775005506300,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 32,
+              "prompt_ms": 414.1,
+              "prompt_per_token_ms": 12.941,
+              "prompt_per_second": 77.3,
+              "predicted_n": 10,
+              "predicted_ms": 396.4,
+              "predicted_per_token_ms": 39.64,
+              "predicted_per_second": 25.2,
+              "draft_n": 9,
+              "draft_n_accepted": 7
+            },
+            "client_e2e_s": 0.8219122999998945,
+            "request_start_monotonic_ns": 2775007154000,
+            "request_end_monotonic_ns": 2775829193300,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 32,
+              "completion_tokens": 10,
+              "total_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 32,
+              "prompt_ms": 329.2,
+              "prompt_per_token_ms": 10.287,
+              "prompt_per_second": 97.2,
+              "predicted_n": 10,
+              "predicted_ms": 311.7,
+              "predicted_per_token_ms": 31.17,
+              "predicted_per_second": 32.1,
+              "draft_n": 9,
+              "draft_n_accepted": 7
+            },
+            "client_e2e_s": 0.6610149999996793,
+            "request_start_monotonic_ns": 2775831349400,
+            "request_end_monotonic_ns": 2776492454700,
+            "reasoning_effort": "none"
+          }
+        ]
+      }
+    },
+    "smoke_json_arithmetic": {
+      "prompt_sha256_equal": true,
+      "local_chat_tokens": {
+        "run41": 50,
+        "run51": 50
+      },
+      "max_tokens": {
+        "run41": 128,
+        "run51": 128
+      },
+      "formal_prompt_tokens": {
+        "run41": [
+          50,
+          50,
+          50
+        ],
+        "run51": [
+          50,
+          50,
+          50
+        ]
+      },
+      "cache_n": {
+        "run41": [
+          0,
+          0,
+          0
+        ],
+        "run51": [
+          0,
+          0,
+          0
+        ]
+      },
+      "warmup_ids": {
+        "run41": {
+          "ids": [
+            4754,
+            1334,
+            763,
+            220,
+            16,
+            20,
+            21,
+            11,
+            328,
+            27188,
+            763,
+            328,
+            16,
+            17,
+            9,
+            16,
+            18,
+            8934,
+            248046
+          ],
+          "count": 19,
+          "sha256": "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 50,
+            "completion_tokens": 19,
+            "total_tokens": 69,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "2609401a89857c622cd345a7c1d16d4d69ce48d04012c03c434b1fb5145a107b"
+        },
+        "run51": {
+          "ids": [
+            4754,
+            1334,
+            763,
+            220,
+            16,
+            20,
+            21,
+            11,
+            328,
+            27188,
+            763,
+            328,
+            16,
+            17,
+            9,
+            16,
+            18,
+            8934,
+            248046
+          ],
+          "count": 19,
+          "sha256": "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 50,
+            "completion_tokens": 19,
+            "total_tokens": 69,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "03fbf1420e231a4ac2984c87bff04d72fa791c680ea48f419217a0e3e62e0f5b"
+        },
+        "match": true
+      },
+      "formal_ids": [
+        {
+          "run41": {
+            "ids": [
+              4754,
+              1334,
+              763,
+              220,
+              16,
+              20,
+              21,
+              11,
+              328,
+              27188,
+              763,
+              328,
+              16,
+              17,
+              9,
+              16,
+              18,
+              8934,
+              248046
+            ],
+            "count": 19,
+            "sha256": "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "7fef275aac04ec29d390ba84721c3e212d433d717acf35a58c5f7b20336a1470"
+          },
+          "run51": {
+            "ids": [
+              4754,
+              1334,
+              763,
+              220,
+              16,
+              20,
+              21,
+              11,
+              328,
+              27188,
+              763,
+              328,
+              16,
+              17,
+              9,
+              16,
+              18,
+              8934,
+              248046
+            ],
+            "count": 19,
+            "sha256": "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "fe5a2de6d2b9fdb0cdd62c43246dbd27d6e51de603d178447ab1f39cff726edb"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              4754,
+              1334,
+              763,
+              220,
+              16,
+              20,
+              21,
+              11,
+              328,
+              27188,
+              763,
+              328,
+              16,
+              17,
+              9,
+              16,
+              18,
+              8934,
+              248046
+            ],
+            "count": 19,
+            "sha256": "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "b2690a720860541c02624416dff6cdc8839c697824e610831fa2b232a0519c9b"
+          },
+          "run51": {
+            "ids": [
+              4754,
+              1334,
+              763,
+              220,
+              16,
+              20,
+              21,
+              11,
+              328,
+              27188,
+              763,
+              328,
+              16,
+              17,
+              9,
+              16,
+              18,
+              8934,
+              248046
+            ],
+            "count": 19,
+            "sha256": "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "3a2d2ae3e42a4d7fa955a698e5d6b65bb2a21a7d1f139ac0102fa2fa6b7f2245"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              4754,
+              1334,
+              763,
+              220,
+              16,
+              20,
+              21,
+              11,
+              328,
+              27188,
+              763,
+              328,
+              16,
+              17,
+              9,
+              16,
+              18,
+              8934,
+              248046
+            ],
+            "count": 19,
+            "sha256": "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "ca67ac62cdcd60d7f472023b9719e543dee2fab59ca4371c6fc251634ebf5a29"
+          },
+          "run51": {
+            "ids": [
+              4754,
+              1334,
+              763,
+              220,
+              16,
+              20,
+              21,
+              11,
+              328,
+              27188,
+              763,
+              328,
+              16,
+              17,
+              9,
+              16,
+              18,
+              8934,
+              248046
+            ],
+            "count": 19,
+            "sha256": "e9fd9eacdb9c333b48d6e78a7d81c60ebb6c56e3eb7d124605c736340aa5a7ec",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "30c26b275a36c9223baf6a6f4d8a0581fc89f58293d34cca34dc5ef5459d7f7e"
+          },
+          "match": true
+        }
+      ],
+      "quality": {
+        "run41": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "run51": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "request_history": {
+        "run41": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 50,
+              "prompt_ms": 594.8,
+              "prompt_per_token_ms": 11.896,
+              "prompt_per_second": 84.1,
+              "predicted_n": 19,
+              "predicted_ms": 795.4,
+              "predicted_per_token_ms": 41.863,
+              "predicted_per_second": 23.9,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.4010954999976093,
+            "request_start_monotonic_ns": 31851793414100,
+            "request_end_monotonic_ns": 31853194641100,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 50,
+              "prompt_ms": 528.2,
+              "prompt_per_token_ms": 10.564,
+              "prompt_per_second": 94.7,
+              "predicted_n": 19,
+              "predicted_ms": 796.2,
+              "predicted_per_token_ms": 41.905,
+              "predicted_per_second": 23.9,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.3275501000025542,
+            "request_start_monotonic_ns": 31853197023200,
+            "request_end_monotonic_ns": 31854524693200,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 50,
+              "prompt_ms": 552.7,
+              "prompt_per_token_ms": 11.054,
+              "prompt_per_second": 90.5,
+              "predicted_n": 19,
+              "predicted_ms": 722.2,
+              "predicted_per_token_ms": 38.011,
+              "predicted_per_second": 26.3,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.3020252999995137,
+            "request_start_monotonic_ns": 31854527028000,
+            "request_end_monotonic_ns": 31855829107400,
+            "reasoning_effort": "none"
+          }
+        ],
+        "run51": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 50,
+              "prompt_ms": 558.5,
+              "prompt_per_token_ms": 11.17,
+              "prompt_per_second": 89.5,
+              "predicted_n": 19,
+              "predicted_ms": 723.0,
+              "predicted_per_token_ms": 38.053,
+              "predicted_per_second": 26.3,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.2843087000001105,
+            "request_start_monotonic_ns": 2783194305500,
+            "request_end_monotonic_ns": 2784478805200,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 50,
+              "prompt_ms": 560.2,
+              "prompt_per_token_ms": 11.204,
+              "prompt_per_second": 89.3,
+              "predicted_n": 19,
+              "predicted_ms": 763.6,
+              "predicted_per_token_ms": 40.189,
+              "predicted_per_second": 24.9,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.3445059999999103,
+            "request_start_monotonic_ns": 2784480958200,
+            "request_end_monotonic_ns": 2785825602100,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 50,
+              "completion_tokens": 19,
+              "total_tokens": 69,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 50,
+              "prompt_ms": 532.1,
+              "prompt_per_token_ms": 10.642,
+              "prompt_per_second": 94.0,
+              "predicted_n": 19,
+              "predicted_ms": 630.1,
+              "predicted_per_token_ms": 33.163,
+              "predicted_per_second": 30.2,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.165194899999733,
+            "request_start_monotonic_ns": 2785827934000,
+            "request_end_monotonic_ns": 2786993254900,
+            "reasoning_effort": "none"
+          }
+        ]
+      }
+    },
+    "smoke_python_function": {
+      "prompt_sha256_equal": true,
+      "local_chat_tokens": {
+        "run41": 39,
+        "run51": 39
+      },
+      "max_tokens": {
+        "run41": 256,
+        "run51": 256
+      },
+      "formal_prompt_tokens": {
+        "run41": [
+          39,
+          39,
+          39
+        ],
+        "run51": [
+          39,
+          39,
+          39
+        ]
+      },
+      "cache_n": {
+        "run41": [
+          0,
+          0,
+          0
+        ],
+        "run51": [
+          0,
+          0,
+          0
+        ]
+      },
+      "warmup_ids": {
+        "run41": {
+          "ids": [
+            71093,
+            12305,
+            198,
+            727,
+            884,
+            22517,
+            2007,
+            1590,
+            198,
+            262,
+            460,
+            830,
+            478,
+            220,
+            17,
+            198,
+            71093,
+            248046
+          ],
+          "count": 18,
+          "sha256": "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 39,
+            "completion_tokens": 18,
+            "total_tokens": 57,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "8244ac21eddce608aa7440973907de8e1aafb86a540d7422c144b69114313998"
+        },
+        "run51": {
+          "ids": [
+            71093,
+            12305,
+            198,
+            727,
+            884,
+            22517,
+            2007,
+            1590,
+            198,
+            262,
+            460,
+            830,
+            478,
+            220,
+            17,
+            198,
+            71093,
+            248046
+          ],
+          "count": 18,
+          "sha256": "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 39,
+            "completion_tokens": 18,
+            "total_tokens": 57,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "b9b02fd2f52e3ff57b5083dfa8ee2e0cd98fee95370dd22c435375a53d28ec39"
+        },
+        "match": true
+      },
+      "formal_ids": [
+        {
+          "run41": {
+            "ids": [
+              71093,
+              12305,
+              198,
+              727,
+              884,
+              22517,
+              2007,
+              1590,
+              198,
+              262,
+              460,
+              830,
+              478,
+              220,
+              17,
+              198,
+              71093,
+              248046
+            ],
+            "count": 18,
+            "sha256": "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "95f0ee23570a5e6ffa30acde8356c0bd9e51c477a073dcabab8c16dd703e9737"
+          },
+          "run51": {
+            "ids": [
+              71093,
+              12305,
+              198,
+              727,
+              884,
+              22517,
+              2007,
+              1590,
+              198,
+              262,
+              460,
+              830,
+              478,
+              220,
+              17,
+              198,
+              71093,
+              248046
+            ],
+            "count": 18,
+            "sha256": "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "322313e82fa24ed42ea6eaa6ee0f57f032c85919c9876ddca4cbeefb6eb3943c"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              71093,
+              12305,
+              198,
+              727,
+              884,
+              22517,
+              2007,
+              1590,
+              198,
+              262,
+              460,
+              830,
+              478,
+              220,
+              17,
+              198,
+              71093,
+              248046
+            ],
+            "count": 18,
+            "sha256": "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "5238b4bd341459770488c26d526b8b25dd0fb490ac2ef2458e8f5323582846a7"
+          },
+          "run51": {
+            "ids": [
+              71093,
+              12305,
+              198,
+              727,
+              884,
+              22517,
+              2007,
+              1590,
+              198,
+              262,
+              460,
+              830,
+              478,
+              220,
+              17,
+              198,
+              71093,
+              248046
+            ],
+            "count": 18,
+            "sha256": "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "84e2c28ea35ff4c11e5028e1f6de27251d060766c8dbe8aea0c2b5c8cd6d2dd3"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              71093,
+              12305,
+              198,
+              727,
+              884,
+              22517,
+              2007,
+              1590,
+              198,
+              262,
+              460,
+              830,
+              478,
+              220,
+              17,
+              198,
+              71093,
+              248046
+            ],
+            "count": 18,
+            "sha256": "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "998a4c1ecc3a0f54fa5a754efe59aeb2685ee844eeaf85ee4dfcde864013f0bb"
+          },
+          "run51": {
+            "ids": [
+              71093,
+              12305,
+              198,
+              727,
+              884,
+              22517,
+              2007,
+              1590,
+              198,
+              262,
+              460,
+              830,
+              478,
+              220,
+              17,
+              198,
+              71093,
+              248046
+            ],
+            "count": 18,
+            "sha256": "9edad1376318fd0faedc73e6cd92a7d684afc28eac414d9e927200c43ceb75cb",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "247396e17792b8c98935934ed5755ce4ac1c6960d64c8849617a5eb146b169d3"
+          },
+          "match": true
+        }
+      ],
+      "quality": {
+        "run41": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "run51": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "request_history": {
+        "run41": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 39,
+              "prompt_ms": 434.9,
+              "prompt_per_token_ms": 11.151,
+              "prompt_per_second": 89.7,
+              "predicted_n": 18,
+              "predicted_ms": 876.0,
+              "predicted_per_token_ms": 48.667,
+              "predicted_per_second": 20.5,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.339870100000553,
+            "request_start_monotonic_ns": 31860317865600,
+            "request_end_monotonic_ns": 31861657831200,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 39,
+              "prompt_ms": 452.2,
+              "prompt_per_token_ms": 11.595,
+              "prompt_per_second": 86.2,
+              "predicted_n": 18,
+              "predicted_ms": 787.3,
+              "predicted_per_token_ms": 43.739,
+              "predicted_per_second": 22.9,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.2423921000008704,
+            "request_start_monotonic_ns": 31861659699900,
+            "request_end_monotonic_ns": 31862902250500,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 39,
+              "prompt_ms": 443.3,
+              "prompt_per_token_ms": 11.367,
+              "prompt_per_second": 88.0,
+              "predicted_n": 18,
+              "predicted_ms": 895.2,
+              "predicted_per_token_ms": 49.733,
+              "predicted_per_second": 20.1,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.3554608999984339,
+            "request_start_monotonic_ns": 31862904670300,
+            "request_end_monotonic_ns": 31864260266300,
+            "reasoning_effort": "none"
+          }
+        ],
+        "run51": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 39,
+              "prompt_ms": 523.6,
+              "prompt_per_token_ms": 13.426,
+              "prompt_per_second": 74.5,
+              "predicted_n": 18,
+              "predicted_ms": 1048.0,
+              "predicted_per_token_ms": 58.222,
+              "predicted_per_second": 17.2,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.5903536999999233,
+            "request_start_monotonic_ns": 2793817724400,
+            "request_end_monotonic_ns": 2795408192100,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 39,
+              "prompt_ms": 457.4,
+              "prompt_per_token_ms": 11.728,
+              "prompt_per_second": 85.3,
+              "predicted_n": 18,
+              "predicted_ms": 852.8,
+              "predicted_per_token_ms": 47.378,
+              "predicted_per_second": 21.1,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.3355246000000989,
+            "request_start_monotonic_ns": 2795410131800,
+            "request_end_monotonic_ns": 2796745796100,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 39,
+              "completion_tokens": 18,
+              "total_tokens": 57,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 39,
+              "prompt_ms": 380.7,
+              "prompt_per_token_ms": 9.762,
+              "prompt_per_second": 102.4,
+              "predicted_n": 18,
+              "predicted_ms": 951.1,
+              "predicted_per_token_ms": 52.839,
+              "predicted_per_second": 18.9,
+              "draft_n": 15,
+              "draft_n_accepted": 15
+            },
+            "client_e2e_s": 1.3349976000004062,
+            "request_start_monotonic_ns": 2796748070400,
+            "request_end_monotonic_ns": 2798083208600,
+            "reasoning_effort": "none"
+          }
+        ]
+      }
+    },
+    "smoke_three_key_retrieval": {
+      "prompt_sha256_equal": true,
+      "local_chat_tokens": {
+        "run41": 114,
+        "run51": 114
+      },
+      "max_tokens": {
+        "run41": 128,
+        "run51": 128
+      },
+      "formal_prompt_tokens": {
+        "run41": [
+          114,
+          114,
+          114
+        ],
+        "run51": [
+          114,
+          114,
+          114
+        ]
+      },
+      "cache_n": {
+        "run41": [
+          0,
+          0,
+          0
+        ],
+        "run51": [
+          0,
+          0,
+          0
+        ]
+      },
+      "warmup_ids": {
+        "run41": {
+          "ids": [
+            90,
+            198,
+            220,
+            328,
+            10473,
+            6334,
+            12,
+            16,
+            4887,
+            18,
+            33,
+            16,
+            22,
+            24,
+            24,
+            35,
+            763,
+            328,
+            16,
+            17,
+            21,
+            23,
+            20,
+            20,
+            15,
+            24,
+            17,
+            487,
+            198,
+            220,
+            328,
+            10473,
+            6334,
+            12,
+            19,
+            21,
+            33,
+            3967,
+            21,
+            19,
+            15,
+            15731,
+            763,
+            328,
+            18,
+            21,
+            17,
+            24,
+            20,
+            15,
+            21,
+            17,
+            23,
+            487,
+            198,
+            220,
+            328,
+            10473,
+            6334,
+            12,
+            17,
+            18,
+            18,
+            24,
+            17,
+            19,
+            20,
+            21,
+            1113,
+            763,
+            328,
+            23,
+            24,
+            15,
+            22,
+            22,
+            24,
+            24,
+            19,
+            21,
+            1,
+            198,
+            92,
+            248046
+          ],
+          "count": 84,
+          "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 114,
+            "completion_tokens": 84,
+            "total_tokens": 198,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "b4656b3a180f64c68642bf312fea0e90d495ae4de9cf29c06e2ac937f70adac2"
+        },
+        "run51": {
+          "ids": [
+            90,
+            198,
+            220,
+            328,
+            10473,
+            6334,
+            12,
+            16,
+            4887,
+            18,
+            33,
+            16,
+            22,
+            24,
+            24,
+            35,
+            763,
+            328,
+            16,
+            17,
+            21,
+            23,
+            20,
+            20,
+            15,
+            24,
+            17,
+            487,
+            198,
+            220,
+            328,
+            10473,
+            6334,
+            12,
+            19,
+            21,
+            33,
+            3967,
+            21,
+            19,
+            15,
+            15731,
+            763,
+            328,
+            18,
+            21,
+            17,
+            24,
+            20,
+            15,
+            21,
+            17,
+            23,
+            487,
+            198,
+            220,
+            328,
+            10473,
+            6334,
+            12,
+            17,
+            18,
+            18,
+            24,
+            17,
+            19,
+            20,
+            21,
+            1113,
+            763,
+            328,
+            23,
+            24,
+            15,
+            22,
+            22,
+            24,
+            24,
+            19,
+            21,
+            1,
+            198,
+            92,
+            248046
+          ],
+          "count": 84,
+          "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+          "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+          "include_stop": true,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 114,
+            "completion_tokens": 84,
+            "total_tokens": 198,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "sse_file_sha256": "0a050aed4f7e1d3da145f9380055d6db571e86623b4b05d64051ff82d4162d30"
+        },
+        "match": true
+      },
+      "formal_ids": [
+        {
+          "run41": {
+            "ids": [
+              90,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              16,
+              4887,
+              18,
+              33,
+              16,
+              22,
+              24,
+              24,
+              35,
+              763,
+              328,
+              16,
+              17,
+              21,
+              23,
+              20,
+              20,
+              15,
+              24,
+              17,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              19,
+              21,
+              33,
+              3967,
+              21,
+              19,
+              15,
+              15731,
+              763,
+              328,
+              18,
+              21,
+              17,
+              24,
+              20,
+              15,
+              21,
+              17,
+              23,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              17,
+              18,
+              18,
+              24,
+              17,
+              19,
+              20,
+              21,
+              1113,
+              763,
+              328,
+              23,
+              24,
+              15,
+              22,
+              22,
+              24,
+              24,
+              19,
+              21,
+              1,
+              198,
+              92,
+              248046
+            ],
+            "count": 84,
+            "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "66a583393adfd2bb9406cd59b7c22f58563dde8455da7908e6d8a88c497b6140"
+          },
+          "run51": {
+            "ids": [
+              90,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              16,
+              4887,
+              18,
+              33,
+              16,
+              22,
+              24,
+              24,
+              35,
+              763,
+              328,
+              16,
+              17,
+              21,
+              23,
+              20,
+              20,
+              15,
+              24,
+              17,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              19,
+              21,
+              33,
+              3967,
+              21,
+              19,
+              15,
+              15731,
+              763,
+              328,
+              18,
+              21,
+              17,
+              24,
+              20,
+              15,
+              21,
+              17,
+              23,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              17,
+              18,
+              18,
+              24,
+              17,
+              19,
+              20,
+              21,
+              1113,
+              763,
+              328,
+              23,
+              24,
+              15,
+              22,
+              22,
+              24,
+              24,
+              19,
+              21,
+              1,
+              198,
+              92,
+              248046
+            ],
+            "count": 84,
+            "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "936c98d6500266a013d9b5262925ea5e53861c42a78d78748a569b6fe4ecc20a"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              90,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              16,
+              4887,
+              18,
+              33,
+              16,
+              22,
+              24,
+              24,
+              35,
+              763,
+              328,
+              16,
+              17,
+              21,
+              23,
+              20,
+              20,
+              15,
+              24,
+              17,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              19,
+              21,
+              33,
+              3967,
+              21,
+              19,
+              15,
+              15731,
+              763,
+              328,
+              18,
+              21,
+              17,
+              24,
+              20,
+              15,
+              21,
+              17,
+              23,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              17,
+              18,
+              18,
+              24,
+              17,
+              19,
+              20,
+              21,
+              1113,
+              763,
+              328,
+              23,
+              24,
+              15,
+              22,
+              22,
+              24,
+              24,
+              19,
+              21,
+              1,
+              198,
+              92,
+              248046
+            ],
+            "count": 84,
+            "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "0f26c9bd41bef8fea5e5ea7a43daa1da5aaeeb645bed063791d944d7364a8c93"
+          },
+          "run51": {
+            "ids": [
+              90,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              16,
+              4887,
+              18,
+              33,
+              16,
+              22,
+              24,
+              24,
+              35,
+              763,
+              328,
+              16,
+              17,
+              21,
+              23,
+              20,
+              20,
+              15,
+              24,
+              17,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              19,
+              21,
+              33,
+              3967,
+              21,
+              19,
+              15,
+              15731,
+              763,
+              328,
+              18,
+              21,
+              17,
+              24,
+              20,
+              15,
+              21,
+              17,
+              23,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              17,
+              18,
+              18,
+              24,
+              17,
+              19,
+              20,
+              21,
+              1113,
+              763,
+              328,
+              23,
+              24,
+              15,
+              22,
+              22,
+              24,
+              24,
+              19,
+              21,
+              1,
+              198,
+              92,
+              248046
+            ],
+            "count": 84,
+            "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "b64ddae0c55a8de72e43757e2285aacd5eef1c0f88c678247ce38d4ae0e91f6b"
+          },
+          "match": true
+        },
+        {
+          "run41": {
+            "ids": [
+              90,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              16,
+              4887,
+              18,
+              33,
+              16,
+              22,
+              24,
+              24,
+              35,
+              763,
+              328,
+              16,
+              17,
+              21,
+              23,
+              20,
+              20,
+              15,
+              24,
+              17,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              19,
+              21,
+              33,
+              3967,
+              21,
+              19,
+              15,
+              15731,
+              763,
+              328,
+              18,
+              21,
+              17,
+              24,
+              20,
+              15,
+              21,
+              17,
+              23,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              17,
+              18,
+              18,
+              24,
+              17,
+              19,
+              20,
+              21,
+              1113,
+              763,
+              328,
+              23,
+              24,
+              15,
+              22,
+              22,
+              24,
+              24,
+              19,
+              21,
+              1,
+              198,
+              92,
+              248046
+            ],
+            "count": 84,
+            "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "4499c9bc713bb1c582352031a62372489ed16680e9e350bcc9f371c4bf58bf8d"
+          },
+          "run51": {
+            "ids": [
+              90,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              16,
+              4887,
+              18,
+              33,
+              16,
+              22,
+              24,
+              24,
+              35,
+              763,
+              328,
+              16,
+              17,
+              21,
+              23,
+              20,
+              20,
+              15,
+              24,
+              17,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              19,
+              21,
+              33,
+              3967,
+              21,
+              19,
+              15,
+              15731,
+              763,
+              328,
+              18,
+              21,
+              17,
+              24,
+              20,
+              15,
+              21,
+              17,
+              23,
+              487,
+              198,
+              220,
+              328,
+              10473,
+              6334,
+              12,
+              17,
+              18,
+              18,
+              24,
+              17,
+              19,
+              20,
+              21,
+              1113,
+              763,
+              328,
+              23,
+              24,
+              15,
+              22,
+              22,
+              24,
+              24,
+              19,
+              21,
+              1,
+              198,
+              92,
+              248046
+            ],
+            "count": 84,
+            "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+            "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": true,
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "sse_file_sha256": "5da3dc9842c4952c1218699ae775e740c86af3d56ca64be5374c22bb90de52d8"
+          },
+          "match": true
+        }
+      ],
+      "quality": {
+        "run41": [
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "run51": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "request_history": {
+        "run41": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 114,
+              "prompt_ms": 1036.0,
+              "prompt_per_token_ms": 9.088,
+              "prompt_per_second": 110.0,
+              "predicted_n": 84,
+              "predicted_ms": 3795.2,
+              "predicted_per_token_ms": 45.181,
+              "predicted_per_second": 22.1,
+              "draft_n": 69,
+              "draft_n_accepted": 65
+            },
+            "client_e2e_s": 4.841555800001515,
+            "request_start_monotonic_ns": 31872930566700,
+            "request_end_monotonic_ns": 31877772281400,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 114,
+              "prompt_ms": 1054.6,
+              "prompt_per_token_ms": 9.251,
+              "prompt_per_second": 108.1,
+              "predicted_n": 84,
+              "predicted_ms": 3446.3,
+              "predicted_per_token_ms": 41.027,
+              "predicted_per_second": 24.4,
+              "draft_n": 63,
+              "draft_n_accepted": 62
+            },
+            "client_e2e_s": 4.5169228999984625,
+            "request_start_monotonic_ns": 31877774826200,
+            "request_end_monotonic_ns": 31882291867800,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 114,
+              "prompt_ms": 1006.4,
+              "prompt_per_token_ms": 8.828,
+              "prompt_per_second": 113.3,
+              "predicted_n": 84,
+              "predicted_ms": 3439.6,
+              "predicted_per_token_ms": 40.948,
+              "predicted_per_second": 24.4,
+              "draft_n": 63,
+              "draft_n_accepted": 62
+            },
+            "client_e2e_s": 4.450931000003038,
+            "request_start_monotonic_ns": 31882294297500,
+            "request_end_monotonic_ns": 31886745344400,
+            "reasoning_effort": "none"
+          }
+        ],
+        "run51": [
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 114,
+              "prompt_ms": 976.6,
+              "prompt_per_token_ms": 8.567,
+              "prompt_per_second": 116.7,
+              "predicted_n": 84,
+              "predicted_ms": 3284.5,
+              "predicted_per_token_ms": 39.101,
+              "predicted_per_second": 25.6,
+              "draft_n": 63,
+              "draft_n_accepted": 62
+            },
+            "client_e2e_s": 4.265609499999755,
+            "request_start_monotonic_ns": 2810636447600,
+            "request_end_monotonic_ns": 2814902184100,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 114,
+              "prompt_ms": 1072.1,
+              "prompt_per_token_ms": 9.404,
+              "prompt_per_second": 106.3,
+              "predicted_n": 84,
+              "predicted_ms": 3424.6,
+              "predicted_per_token_ms": 40.769,
+              "predicted_per_second": 24.5,
+              "draft_n": 63,
+              "draft_n_accepted": 62
+            },
+            "client_e2e_s": 4.499704699999711,
+            "request_start_monotonic_ns": 2814904733500,
+            "request_end_monotonic_ns": 2819404582300,
+            "reasoning_effort": "none"
+          },
+          {
+            "status": "completed",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 114,
+              "completion_tokens": 84,
+              "total_tokens": 198,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 114,
+              "prompt_ms": 1058.1,
+              "prompt_per_token_ms": 9.282,
+              "prompt_per_second": 107.7,
+              "predicted_n": 84,
+              "predicted_ms": 3500.0,
+              "predicted_per_token_ms": 41.667,
+              "predicted_per_second": 24.0,
+              "draft_n": 63,
+              "draft_n_accepted": 62
+            },
+            "client_e2e_s": 4.561086100000011,
+            "request_start_monotonic_ns": 2819406984700,
+            "request_end_monotonic_ns": 2823968186500,
+            "reasoning_effort": "none"
+          }
+        ]
+      }
+    }
+  },
+  "long_1k_regression": {
+    "prompt_sha256_equal": true,
+    "token_count": {
+      "run41": 1036,
+      "run51": 1036
+    },
+    "max_tokens": {
+      "run41": 128,
+      "run51": 128
+    },
+    "run41_h4_actual_id_hashes": [
+      "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+    ],
+    "run41_h4_reference_hashes": [
+      "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b"
+    ],
+    "run51_quality_records": [
+      {
+        "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\requests\\long_1k\\formal-0000.text.txt",
+        "response_text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+        "prompt_id": "long_1k",
+        "run_status": "truncated_by_length",
+        "response_bytes_utf8": 128,
+        "canonical_visible_text_reencoded_tokens": null,
+        "actual_emitted_token_ids": null,
+        "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+        "quality_status": "generation_degenerate_bang_loop",
+        "generation_stability": "fail_single_character_bang_loop"
+      },
+      {
+        "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\requests\\long_1k\\formal-0001.text.txt",
+        "response_text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+        "prompt_id": "long_1k",
+        "run_status": "truncated_by_length",
+        "response_bytes_utf8": 128,
+        "canonical_visible_text_reencoded_tokens": null,
+        "actual_emitted_token_ids": null,
+        "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+        "quality_status": "generation_degenerate_bang_loop",
+        "generation_stability": "fail_single_character_bang_loop"
+      },
+      {
+        "artifact": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\arms\\w10-all\\quality-on\\requests\\long_1k\\formal-0002.text.txt",
+        "response_text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+        "prompt_id": "long_1k",
+        "run_status": "truncated_by_length",
+        "response_bytes_utf8": 128,
+        "canonical_visible_text_reencoded_tokens": null,
+        "actual_emitted_token_ids": null,
+        "canonical_reencoding_note": "optional count re-encodes saved visible text only; no claim of agreement with actual emitted token IDs",
+        "quality_status": "generation_degenerate_bang_loop",
+        "generation_stability": "fail_single_character_bang_loop"
+      }
+    ],
+    "run41_warmup_ids": {
+      "ids": [
+        90,
+        198,
+        220,
+        328,
+        10473,
+        6334,
+        12,
+        16,
+        4887,
+        18,
+        33,
+        16,
+        22,
+        24,
+        24,
+        35,
+        763,
+        328,
+        16,
+        17,
+        21,
+        23,
+        20,
+        20,
+        15,
+        24,
+        17,
+        487,
+        198,
+        220,
+        328,
+        10473,
+        6334,
+        12,
+        19,
+        21,
+        33,
+        3967,
+        21,
+        19,
+        15,
+        15731,
+        763,
+        328,
+        18,
+        21,
+        17,
+        24,
+        20,
+        15,
+        21,
+        17,
+        23,
+        487,
+        198,
+        220,
+        328,
+        10473,
+        6334,
+        12,
+        17,
+        18,
+        18,
+        24,
+        17,
+        19,
+        20,
+        21,
+        1113,
+        763,
+        328,
+        23,
+        24,
+        15,
+        22,
+        22,
+        24,
+        24,
+        19,
+        21,
+        1,
+        198,
+        92,
+        248046
+      ],
+      "count": 84,
+      "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+      "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+      "include_stop": true,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 1036,
+        "completion_tokens": 84,
+        "total_tokens": 1120,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "sse_file_sha256": "d361aac7896788392b52174eb0d2a26abc5cc30da4ba722d80c65d3211874d27"
+    },
+    "run51_warmup_ids": {
+      "ids": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "count": 128,
+      "sha256": "1b912946d3fd584649a7924a6d699d2bd0ee0da2ebc320bd53135fa9b1ec21a0",
+      "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+      "include_stop": true,
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 1036,
+        "completion_tokens": 128,
+        "total_tokens": 1164,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "sse_file_sha256": "d0abc03abe7feb8e0f4974e9ec8627141bccb96f6684ac8a6363ba14515e077e"
+    },
+    "run41_formals": [
+      {
+        "ids": [
+          90,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          16,
+          4887,
+          18,
+          33,
+          16,
+          22,
+          24,
+          24,
+          35,
+          763,
+          328,
+          16,
+          17,
+          21,
+          23,
+          20,
+          20,
+          15,
+          24,
+          17,
+          487,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          19,
+          21,
+          33,
+          3967,
+          21,
+          19,
+          15,
+          15731,
+          763,
+          328,
+          18,
+          21,
+          17,
+          24,
+          20,
+          15,
+          21,
+          17,
+          23,
+          487,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          17,
+          18,
+          18,
+          24,
+          17,
+          19,
+          20,
+          21,
+          1113,
+          763,
+          328,
+          23,
+          24,
+          15,
+          22,
+          22,
+          24,
+          24,
+          19,
+          21,
+          1,
+          198,
+          92,
+          248046
+        ],
+        "count": 84,
+        "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+        "include_stop": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 1036,
+          "completion_tokens": 84,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "sse_file_sha256": "d8e041566361accd50553432a757a8c1a606f0bdf0e86196e504efe95fd8552d"
+      },
+      {
+        "ids": [
+          90,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          16,
+          4887,
+          18,
+          33,
+          16,
+          22,
+          24,
+          24,
+          35,
+          763,
+          328,
+          16,
+          17,
+          21,
+          23,
+          20,
+          20,
+          15,
+          24,
+          17,
+          487,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          19,
+          21,
+          33,
+          3967,
+          21,
+          19,
+          15,
+          15731,
+          763,
+          328,
+          18,
+          21,
+          17,
+          24,
+          20,
+          15,
+          21,
+          17,
+          23,
+          487,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          17,
+          18,
+          18,
+          24,
+          17,
+          19,
+          20,
+          21,
+          1113,
+          763,
+          328,
+          23,
+          24,
+          15,
+          22,
+          22,
+          24,
+          24,
+          19,
+          21,
+          1,
+          198,
+          92,
+          248046
+        ],
+        "count": 84,
+        "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+        "include_stop": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 1036,
+          "completion_tokens": 84,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "sse_file_sha256": "9ece28fed51ccba655d74c7edb49e5c59c6219e0d5bb6224b134fcc660ba204f"
+      },
+      {
+        "ids": [
+          90,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          16,
+          4887,
+          18,
+          33,
+          16,
+          22,
+          24,
+          24,
+          35,
+          763,
+          328,
+          16,
+          17,
+          21,
+          23,
+          20,
+          20,
+          15,
+          24,
+          17,
+          487,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          19,
+          21,
+          33,
+          3967,
+          21,
+          19,
+          15,
+          15731,
+          763,
+          328,
+          18,
+          21,
+          17,
+          24,
+          20,
+          15,
+          21,
+          17,
+          23,
+          487,
+          198,
+          220,
+          328,
+          10473,
+          6334,
+          12,
+          17,
+          18,
+          18,
+          24,
+          17,
+          19,
+          20,
+          21,
+          1113,
+          763,
+          328,
+          23,
+          24,
+          15,
+          22,
+          22,
+          24,
+          24,
+          19,
+          21,
+          1,
+          198,
+          92,
+          248046
+        ],
+        "count": 84,
+        "sha256": "51ea5b6dcea27d599ff6e68093486be46b29af9b06c2f57677cc27bc0f90099b",
+        "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+        "include_stop": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 1036,
+          "completion_tokens": 84,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "sse_file_sha256": "c7d07201761dffb7800d7fb83989edbe94a6976030467adc6487ade2ae36ba90"
+      }
+    ],
+    "run51_formals": [
+      {
+        "ids": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "count": 128,
+        "sha256": "1b912946d3fd584649a7924a6d699d2bd0ee0da2ebc320bd53135fa9b1ec21a0",
+        "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+        "include_stop": true,
+        "finish_reason": "length",
+        "usage": {
+          "prompt_tokens": 1036,
+          "completion_tokens": 128,
+          "total_tokens": 1164,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "sse_file_sha256": "223ca8174048b1075e1de45ac417596f40bb90301354ac6f19eb25c1243cc15a"
+      },
+      {
+        "ids": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "count": 128,
+        "sha256": "1b912946d3fd584649a7924a6d699d2bd0ee0da2ebc320bd53135fa9b1ec21a0",
+        "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+        "include_stop": true,
+        "finish_reason": "length",
+        "usage": {
+          "prompt_tokens": 1036,
+          "completion_tokens": 128,
+          "total_tokens": 1164,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "sse_file_sha256": "30e88d51a9d9d9d8733abf07a47d48169d22c95a8a1f7f2bcc636001bb103919"
+      },
+      {
+        "ids": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "count": 128,
+        "sha256": "1b912946d3fd584649a7924a6d699d2bd0ee0da2ebc320bd53135fa9b1ec21a0",
+        "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; excludes server-inserted wrap/forced-opening IDs",
+        "include_stop": true,
+        "finish_reason": "length",
+        "usage": {
+          "prompt_tokens": 1036,
+          "completion_tokens": 128,
+          "total_tokens": 1164,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "sse_file_sha256": "1abfeaa3552b1718884bdabf4eeea32fdfd1bc924671359e7f35ad87c0abc49f"
+      }
+    ],
+    "request_history": {
+      "run41": [
+        {
+          "first_generated_s": 3.5618591999991622,
+          "first_visible_content_s": 3.5618591999991622,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1036,
+            "completion_tokens": 84,
+            "total_tokens": 1120,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1036,
+            "prompt_ms": 3502.4,
+            "prompt_per_token_ms": 3.381,
+            "prompt_per_second": 295.8,
+            "predicted_n": 84,
+            "predicted_ms": 3297.6,
+            "predicted_per_token_ms": 39.257,
+            "predicted_per_second": 25.5,
+            "draft_n": 63,
+            "draft_n_accepted": 62
+          },
+          "client_e2e_s": 6.825134299997444,
+          "status": "completed",
+          "error": null,
+          "request_start_monotonic_ns": 31900636196900,
+          "request_end_monotonic_ns": 31907461461500,
+          "reasoning_effort": "none",
+          "content_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "reasoning_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_artifact_encoding": "utf-8 bytes without newline translation",
+          "content_chars": 113,
+          "reasoning_chars": 0,
+          "batch_index": 0
+        },
+        {
+          "first_generated_s": 3.525865100000374,
+          "first_visible_content_s": 3.525865100000374,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1036,
+            "completion_tokens": 84,
+            "total_tokens": 1120,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1036,
+            "prompt_ms": 3499.9,
+            "prompt_per_token_ms": 3.378,
+            "prompt_per_second": 296.0,
+            "predicted_n": 84,
+            "predicted_ms": 3807.6,
+            "predicted_per_token_ms": 45.329,
+            "predicted_per_second": 22.1,
+            "draft_n": 63,
+            "draft_n_accepted": 62
+          },
+          "client_e2e_s": 7.311266199998499,
+          "status": "completed",
+          "error": null,
+          "request_start_monotonic_ns": 31907464172400,
+          "request_end_monotonic_ns": 31914775540300,
+          "reasoning_effort": "none",
+          "content_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "reasoning_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_artifact_encoding": "utf-8 bytes without newline translation",
+          "content_chars": 113,
+          "reasoning_chars": 0,
+          "batch_index": 1
+        },
+        {
+          "first_generated_s": 3.5043515999968804,
+          "first_visible_content_s": 3.5043515999968804,
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1036,
+            "completion_tokens": 84,
+            "total_tokens": 1120,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1036,
+            "prompt_ms": 3464.2,
+            "prompt_per_token_ms": 3.344,
+            "prompt_per_second": 299.1,
+            "predicted_n": 84,
+            "predicted_ms": 3249.9,
+            "predicted_per_token_ms": 38.689,
+            "predicted_per_second": 25.8,
+            "draft_n": 63,
+            "draft_n_accepted": 62
+          },
+          "client_e2e_s": 6.725671000000148,
+          "status": "completed",
+          "error": null,
+          "request_start_monotonic_ns": 31914778265300,
+          "request_end_monotonic_ns": 31921504056500,
+          "reasoning_effort": "none",
+          "content_sha256": "f9fe9239af3ddadba8f9202b89700af0b9e439f6f6077906bdbcab79c732450e",
+          "reasoning_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_artifact_encoding": "utf-8 bytes without newline translation",
+          "content_chars": 113,
+          "reasoning_chars": 0,
+          "batch_index": 2
+        }
+      ],
+      "run51": [
+        {
+          "first_generated_s": 3.5652208999999857,
+          "first_visible_content_s": 3.5652208999999857,
+          "finish_reason": "length",
+          "usage": {
+            "prompt_tokens": 1036,
+            "completion_tokens": 128,
+            "total_tokens": 1164,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1036,
+            "prompt_ms": 3505.1,
+            "prompt_per_token_ms": 3.383,
+            "prompt_per_second": 295.6,
+            "predicted_n": 128,
+            "predicted_ms": 2783.3,
+            "predicted_per_token_ms": 21.745,
+            "predicted_per_second": 46.0,
+            "draft_n": 62,
+            "draft_n_accepted": 62
+          },
+          "client_e2e_s": 6.307550100000299,
+          "status": "truncated_by_length",
+          "error": null,
+          "request_start_monotonic_ns": 2849234678200,
+          "request_end_monotonic_ns": 2855542371200,
+          "reasoning_effort": "none",
+          "content_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+          "reasoning_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_artifact_encoding": "utf-8 bytes without newline translation",
+          "content_chars": 128,
+          "reasoning_chars": 0,
+          "batch_index": 0
+        },
+        {
+          "first_generated_s": 3.5513560999997935,
+          "first_visible_content_s": 3.5513560999997935,
+          "finish_reason": "length",
+          "usage": {
+            "prompt_tokens": 1036,
+            "completion_tokens": 128,
+            "total_tokens": 1164,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1036,
+            "prompt_ms": 3507.8,
+            "prompt_per_token_ms": 3.386,
+            "prompt_per_second": 295.3,
+            "predicted_n": 128,
+            "predicted_ms": 2714.2,
+            "predicted_per_token_ms": 21.205,
+            "predicted_per_second": 47.2,
+            "draft_n": 62,
+            "draft_n_accepted": 62
+          },
+          "client_e2e_s": 6.240813399999752,
+          "status": "truncated_by_length",
+          "error": null,
+          "request_start_monotonic_ns": 2855545936200,
+          "request_end_monotonic_ns": 2861786846700,
+          "reasoning_effort": "none",
+          "content_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+          "reasoning_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_artifact_encoding": "utf-8 bytes without newline translation",
+          "content_chars": 128,
+          "reasoning_chars": 0,
+          "batch_index": 1
+        },
+        {
+          "first_generated_s": 3.485343699999703,
+          "first_visible_content_s": 3.485343699999703,
+          "finish_reason": "length",
+          "usage": {
+            "prompt_tokens": 1036,
+            "completion_tokens": 128,
+            "total_tokens": 1164,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1036,
+            "prompt_ms": 3444.0,
+            "prompt_per_token_ms": 3.324,
+            "prompt_per_second": 300.8,
+            "predicted_n": 128,
+            "predicted_ms": 2986.2,
+            "predicted_per_token_ms": 23.33,
+            "predicted_per_second": 42.9,
+            "draft_n": 46,
+            "draft_n_accepted": 46
+          },
+          "client_e2e_s": 6.433775699999842,
+          "status": "truncated_by_length",
+          "error": null,
+          "request_start_monotonic_ns": 2861789153300,
+          "request_end_monotonic_ns": 2868223083500,
+          "reasoning_effort": "none",
+          "content_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+          "reasoning_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_artifact_encoding": "utf-8 bytes without newline translation",
+          "content_chars": 128,
+          "reasoning_chars": 0,
+          "batch_index": 2
+        }
+      ]
+    }
+  },
+  "monotonic_clock_evidence": {
+    "run41": {
+      "first_observed_at_utc": "2026-10-09T11:41:23.530Z",
+      "first_monotonic_seconds": 31709.1391194,
+      "boot_id": null
+    },
+    "run51": {
+      "first_observed_at_utc": "2026-10-11T00:49:59.797Z",
+      "first_monotonic_seconds": 1842.5051205,
+      "boot_id": null
+    }
+  },
+  "evidence_sha256": {
+    "run41_config": "157d933e10b441da8b1290648a757f49ff3cd54d840dab470885d680172e31d7",
+    "run51_config": "7cf5649a5b22f61f73ea1f5643dde9a99be635ac36ac2d001c6641bf039930d6",
+    "run41_identity": "f00faab421cd3aaa372de2fd31e857eb1368ab74bd6b690ff8a86c8c929e0d30",
+    "run51_identity": "21a28b06d8d9208d32e459b128aac8d184a8bdcbe0578374c61b5de8f9544991",
+    "run41_provenance": "b07a05571798f9e1b513d65a030841651cd44c500e14ce05c1bbf5d302207816",
+    "run51_provenance": "bf8be8197a8876b1abca171dc4b9eb15fa1fcc88c936f0a23fcbf8604c93d0f7",
+    "run41_engine_log": "583f594e72da2ee44b0067035add042864abaa88c2aff40939ee0d412a3a4668",
+    "run51_engine_log": "ea033c6394f67bdaffc1b16f40e6db0e784416449ca37357a867d9c96286355e",
+    "run41_h4_short_stage": "88a10e0a925c71a9b84bd62837da3527cb103d1a6fb16a1c2124064af559a9d3",
+    "run41_h4_long": "445e8e858f6ae48b9e139a4b7432daf2811860ca31e9093ddf54fe3067772320",
+    "run51_failure": "5c045f6edd29e34efe597095abc16913ce2a1d26a3bc50575e40ab7ba11602f2",
+    "run51_long_failure": "24944a6ca79adb1ae478a237cb924910c5e1117f7e6b834fb46917f8cba959b7"
+  }
+}

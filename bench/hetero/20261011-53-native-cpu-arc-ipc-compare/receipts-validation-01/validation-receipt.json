@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "run_id": "native-cpu-arc-ipc-compare-20261011-53",
+  "interpreter": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "no_bytecode": true,
+  "steps": [
+    {
+      "name": "unittest",
+      "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "tools.test_hetero_native_ipc_compare"
+      ],
+      "pid": 3204,
+      "exit_code": 0,
+      "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-01\\unittest.stdout.txt",
+      "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-01\\unittest.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c660c811f40747fc6b588448afeb78ec33ca207233c07f90d7fced8196669cbc"
+    },
+    {
+      "name": "default-plan",
+      "executable": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "arguments": [
+        "-B",
+        "tools/hetero_native_ipc_compare.py"
+      ],
+      "pid": 12836,
+      "exit_code": 0,
+      "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-01\\plan.stdout.json",
+      "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-53-native-cpu-arc-ipc-compare\\receipts-validation-01\\plan.stderr.txt",
+      "stdout_sha256": "72e93cb34b6ad29671ab3fb60355c8d9f79f64c64448b3c0f3334c7913322eaf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "executed_utc": "2026-10-11T01:14:34.2641440Z",
+  "payloads_read": false,
+  "cpu_service_started": false,
+  "arc_service_started": false,
+  "device_accessed": false,
+  "inference_called": false
+}

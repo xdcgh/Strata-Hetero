@@ -1,0 +1,21 @@
+{
+  "schema": "strata-run51-vs-run41-evidence-correction-v1",
+  "supersedes_sha256": "fd3697b40b034919d1f71daaee78c952de3ab396adb9f40f9c96b386ddf1c621",
+  "json_pointer": "/claims/failing_prompt",
+  "prior_value": "smoke_three_key_retrieval",
+  "corrected_value": "long_1k",
+  "basis": {
+    "failed_quality_artifact": "bench/hetero/20261011-51-worker-pool-sweep/arms/w10-all/quality-on/quality/F-long_1k-quality.json",
+    "failed_quality_sha256": "24944a6ca79adb1ae478a237cb924910c5e1117f7e6b834fb46917f8cba959b7",
+    "artifact_prompt_ids": [
+      "long_1k",
+      "long_1k",
+      "long_1k"
+    ],
+    "failure_record": "bench/hetero/20261011-51-worker-pool-sweep/arms/w10-all/quality-on/quality/F-quality-failure.json",
+    "failure_record_sha256": "5c045f6edd29e34efe597095abc16913ce2a1d26a3bc50575e40ab7ba11602f2",
+    "status": "failed_stopped",
+    "last_completed_prompt_id": "smoke_three_key_retrieval"
+  },
+  "interpretation": "The old JSON derived failing_prompt from the last completed prompt. It did not identify the prompt which caused the stop. The direct failure artifact identifies long_1k."
+}
