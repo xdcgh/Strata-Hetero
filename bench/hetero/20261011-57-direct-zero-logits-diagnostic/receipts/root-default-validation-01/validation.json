@@ -1,0 +1,56 @@
+[
+  {
+    "name": "launch",
+    "exit": 0,
+    "value": {
+      "status": "prepared_validated",
+      "run_id": "20261011-57-w10-all-quality-on",
+      "start_performed": false,
+      "config_sha256": "228b731440b8a770f1499c79c1c0d01fd95b1d4402e0fbc1f0abefc93971d05a",
+      "engine_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+      "server_file_sha256": "0ca2dd70485e5e03b0a6fcb5dfc1ee1a8863d2dc44947257e342ae608326b026",
+      "manifest_sha256": "54902b4c2098c5505259568e15f1567dd0cc81ab6baa717581f9d6bf02640d49",
+      "f_model_files_stat_rechecked": 4,
+      "pack_mtp_runtime_files_stat_rechecked": 14,
+      "expert_profile": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+        "size_bytes": 196632,
+        "sha256": "8f59b4aa8873209dff11c11e37bcda9529a1335b724a1afeea37bf6388975baf"
+      },
+      "admission_required": {
+        "minimum_commit_gib": 4,
+        "wsl_shutdown_before_observe": true,
+        "required_vram_mib": 46000,
+        "minimum_ram_gib": 12
+      }
+    }
+  },
+  {
+    "name": "watch",
+    "exit": 0,
+    "value": {
+      "status": "startup_watch_prepared",
+      "monitor_started": false,
+      "run_id": "20261011-57-w10-all-quality-on",
+      "physical_floor_gib": 12,
+      "commit_floor_gib": 4,
+      "sampling_interval_s": 1,
+      "exact_process_tree_check": true,
+      "on_gate_failure": "stop only exact revalidated owned model tree; preserve read-only sampler"
+    }
+  },
+  {
+    "name": "quality",
+    "exit": 0,
+    "value": {
+      "status": "prepared_quality_validated",
+      "run_started": false,
+      "prompt_count": 9,
+      "formal_per_prompt": 3,
+      "warmups_per_prompt": 1,
+      "caps": "128 for eight non-code tasks, 256 for smoke_python_function",
+      "manifest_sha256": "54902b4c2098c5505259568e15f1567dd0cc81ab6baa717581f9d6bf02640d49",
+      "expected_h4_configured_status": "passed"
+    }
+  }
+]

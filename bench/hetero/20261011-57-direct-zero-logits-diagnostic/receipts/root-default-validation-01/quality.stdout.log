@@ -1,0 +1,1 @@
+{"status":"prepared_quality_validated","run_started":false,"prompt_count":9,"formal_per_prompt":3,"warmups_per_prompt":1,"caps":"128 for eight non-code tasks, 256 for smoke_python_function","manifest_sha256":"54902b4c2098c5505259568e15f1567dd0cc81ab6baa717581f9d6bf02640d49","expected_h4_configured_status":"passed"}

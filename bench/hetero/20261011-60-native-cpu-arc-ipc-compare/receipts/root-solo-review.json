@@ -1,0 +1,159 @@
+{
+  "status": "root_raw_hash_review_pass_solo_only",
+  "checked_response_files": 162,
+  "receipt_sha256": "98da9296f66d973759e8701da9dd370053ede77e7cb8e83fdd4a5ffd3dde365f",
+  "arms": [
+    {
+      "arm": "cpu-pool-w10-all-solo",
+      "rows": [
+        {
+          "rows": 1,
+          "rtt_ms": 0.2706,
+          "worker_ms": 0.0334
+        },
+        {
+          "rows": 2,
+          "rtt_ms": 0.3037,
+          "worker_ms": 0.0603
+        },
+        {
+          "rows": 4,
+          "rtt_ms": 0.3713,
+          "worker_ms": 0.1122
+        },
+        {
+          "rows": 8,
+          "rtt_ms": 0.5919,
+          "worker_ms": 0.232
+        },
+        {
+          "rows": 16,
+          "rtt_ms": 1.0284,
+          "worker_ms": 0.4943
+        },
+        {
+          "rows": 32,
+          "rtt_ms": 1.7716,
+          "worker_ms": 0.7823
+        },
+        {
+          "rows": 64,
+          "rtt_ms": 3.9706,
+          "worker_ms": 1.4681
+        },
+        {
+          "rows": 128,
+          "rtt_ms": 8.1702,
+          "worker_ms": 2.9938
+        },
+        {
+          "rows": 256,
+          "rtt_ms": 16.0446,
+          "worker_ms": 6.672
+        }
+      ]
+    },
+    {
+      "arm": "cpu-pool-w16-none-solo",
+      "rows": [
+        {
+          "rows": 1,
+          "rtt_ms": 17.9314,
+          "worker_ms": 12.7676
+        },
+        {
+          "rows": 2,
+          "rtt_ms": 22.0242,
+          "worker_ms": 19.8346
+        },
+        {
+          "rows": 4,
+          "rtt_ms": 24.4156,
+          "worker_ms": 11.2065
+        },
+        {
+          "rows": 8,
+          "rtt_ms": 23.3026,
+          "worker_ms": 14.8447
+        },
+        {
+          "rows": 16,
+          "rtt_ms": 27.3365,
+          "worker_ms": 15.8492
+        },
+        {
+          "rows": 32,
+          "rtt_ms": 14.7231,
+          "worker_ms": 12.2564
+        },
+        {
+          "rows": 64,
+          "rtt_ms": 29.793,
+          "worker_ms": 26.1616
+        },
+        {
+          "rows": 128,
+          "rtt_ms": 21.0564,
+          "worker_ms": 15.8748
+        },
+        {
+          "rows": 256,
+          "rtt_ms": 18.9196,
+          "worker_ms": 6.475
+        }
+      ]
+    },
+    {
+      "arm": "arc-gpu0-f32-accuracy-solo",
+      "rows": [
+        {
+          "rows": 1,
+          "rtt_ms": 1.2111,
+          "worker_ms": 0.908
+        },
+        {
+          "rows": 2,
+          "rtt_ms": 1.228,
+          "worker_ms": 0.9275
+        },
+        {
+          "rows": 4,
+          "rtt_ms": 1.652,
+          "worker_ms": 1.1634
+        },
+        {
+          "rows": 8,
+          "rtt_ms": 1.6152,
+          "worker_ms": 1.2424
+        },
+        {
+          "rows": 16,
+          "rtt_ms": 2.2451,
+          "worker_ms": 1.4531
+        },
+        {
+          "rows": 32,
+          "rtt_ms": 2.6754,
+          "worker_ms": 1.3793
+        },
+        {
+          "rows": 64,
+          "rtt_ms": 4.1059,
+          "worker_ms": 1.977
+        },
+        {
+          "rows": 128,
+          "rtt_ms": 8.6024,
+          "worker_ms": 2.9985
+        },
+        {
+          "rows": 256,
+          "rtt_ms": 17.518,
+          "worker_ms": 5.2566
+        }
+      ]
+    }
+  ],
+  "concurrent_unrun": true,
+  "modelgain_unrun": true
+}

@@ -1,0 +1,1206 @@
+{
+  "schema_version": 1,
+  "status": "all_run57_preparation_contract_checks_passed",
+  "run_id": "20261011-57-direct-zero-logits-diagnostic",
+  "created_utc": "2026-10-11T01:30:37.492706Z",
+  "matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+  "source_run51_v05_sha256": "971c55ef00feb4184a4a2bbe6fc9859b1385c794ae18f9a7f930590b34b42024",
+  "config_deltas": [
+    {
+      "arm": "w10-all",
+      "phase": "quality_on",
+      "diagnostic_phase": true,
+      "added_environment": {
+        "STRATA_DIAG_ZERO_LOGITS": "1"
+      },
+      "source_config_sha256": "7cf5649a5b22f61f73ea1f5643dde9a99be635ac36ac2d001c6641bf039930d6",
+      "run57_config_sha256": "228b731440b8a770f1499c79c1c0d01fd95b1d4402e0fbc1f0abefc93971d05a"
+    },
+    {
+      "arm": "w10-all",
+      "phase": "performance_off",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "a92475bc72fa618921cfc6a6c341a8d456597f15493e542b72c90b18f9cc5805",
+      "run57_config_sha256": "2d1aa6916ca15792e193834ed5046d4e89f9a422a83d366b7df89153675442f4"
+    },
+    {
+      "arm": "w04-all",
+      "phase": "quality_on",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "e7fb8b324fa039fdfc3c38301f09c39a729af5bc01cbffd8142f7469be319dff",
+      "run57_config_sha256": "fb4ca1a1c06f751c4ba4a66eaddf8104d1effa39372f5f6c13c5d858dc89da7d"
+    },
+    {
+      "arm": "w04-all",
+      "phase": "performance_off",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "eec965e11e081b8ebbace5df3de87a96fa63691fba90ea14b109988f3403c29d",
+      "run57_config_sha256": "0dcebca72602b0a02326908ff7f1f994a489e4e48c7ecde9e24e194d9d383cdc"
+    },
+    {
+      "arm": "w06-all",
+      "phase": "quality_on",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "83f32f34d51c968ae26f7915c527abb54ccfd0a97f2422e7039e43c17126c2d8",
+      "run57_config_sha256": "7f6802266854f20ac1e57d9565296b64e70333f802ee87c719054530c0855d74"
+    },
+    {
+      "arm": "w06-all",
+      "phase": "performance_off",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "6565cf82d5f8c994d39055e3e56c644a246fadd19100572ab1f582098447af4a",
+      "run57_config_sha256": "bc4a0d78b905d305aed5c0155f070a4a43e0e5c05cef30e4a2ac09ee405477f7"
+    },
+    {
+      "arm": "w16-all",
+      "phase": "quality_on",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "22fb5a29bcf5fa090336463599471c7286fc63207a8f178e96b5a9e51ec08d70",
+      "run57_config_sha256": "3bf5e0547205858f70a7ff78f92c70fff36d1f871d950d6a81fc065af117c791"
+    },
+    {
+      "arm": "w16-all",
+      "phase": "performance_off",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "eab1fc6088cec0aba7916019718a494f8516a3aafbe6044f22dea72af85c7e44",
+      "run57_config_sha256": "c438971deab39575a69ac2d566765c42caab5bcca9bec873817abd4b1ad7f12e"
+    },
+    {
+      "arm": "w06-auto",
+      "phase": "quality_on",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "0bdc69c0723863155b6478ae1c5572d8c25ecc4dcfba5ff72dc8fc98e62f29e1",
+      "run57_config_sha256": "e8e2f420c80384273a4884b960929d89ab0c6bb82cf1c6d4eeb9345ae31d8f5d"
+    },
+    {
+      "arm": "w06-auto",
+      "phase": "performance_off",
+      "diagnostic_phase": false,
+      "added_environment": {},
+      "source_config_sha256": "b40dcecff2378d0ecf757bc023e9376a69a8995301461a2eaa0743c7f7707fb2",
+      "run57_config_sha256": "2dceca2e65db90349f1ecc5907d77e9ddd3b83cec291c69db12b7de4c81a9cf2"
+    }
+  ],
+  "quality_prompts": [
+    {
+      "id": "smoke_arithmetic",
+      "bytes": 48,
+      "sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd"
+    },
+    {
+      "id": "smoke_unicode",
+      "bytes": 82,
+      "sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008"
+    },
+    {
+      "id": "smoke_json_arithmetic",
+      "bytes": 143,
+      "sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52"
+    },
+    {
+      "id": "smoke_python_function",
+      "bytes": 126,
+      "sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74"
+    },
+    {
+      "id": "smoke_three_key_retrieval",
+      "bytes": 265,
+      "sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f"
+    },
+    {
+      "id": "long_1k",
+      "bytes": 2838,
+      "sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3"
+    },
+    {
+      "id": "long_4k",
+      "bytes": 14249,
+      "sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065"
+    },
+    {
+      "id": "long_16k",
+      "bytes": 66202,
+      "sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751"
+    },
+    {
+      "id": "long_30k7",
+      "bytes": 127193,
+      "sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af"
+    }
+  ],
+  "checks": [
+    {
+      "check": "run_id_and_source_pins",
+      "status": "pass",
+      "detail": {
+        "binary_sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+        "source": "ffeb748d190ddeedff23587ce848596d4db0c752"
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w10-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": true,
+        "environment_added": [
+          "STRATA_DIAG_ZERO_LOGITS"
+        ],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w10-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "228b731440b8a770f1499c79c1c0d01fd95b1d4402e0fbc1f0abefc93971d05a"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w10-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "31497990906f0633f2fb69440d2e763b74eddd57ffcab942b875ee05565711b8"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w10-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "a49fb525438b5500856e12208896071a8294971ed299536ae95653b44af49d99"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w10-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:quality_on:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:quality_on:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:quality_on:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:quality_on:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:quality_on:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\quality-on\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w10-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w10-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w10-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w10-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "2d1aa6916ca15792e193834ed5046d4e89f9a422a83d366b7df89153675442f4"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w10-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "c439db8253171f65ec9f081a4bc41974342f02b597e91769353b5ff8910984e5"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w10-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "a889e6a6fddc2e588d84cd13ec540c47ed685e4e374867b2bb6458a456ddee3b"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w10-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:performance_off:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:performance_off:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:performance_off:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:performance_off:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w10-all:performance_off:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w10-all\\performance-off\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w10-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w10-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w04-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w04-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "fb4ca1a1c06f751c4ba4a66eaddf8104d1effa39372f5f6c13c5d858dc89da7d"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w04-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "68d8f0889aa7d4104cdbe5f3fa3e087035e911744090dbaacb8a2d23201a4531"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w04-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "9fa4525a402673c6baa6d6a5ef6d6ab8827e6534d2cb3a5786f6ad515a9d85cf"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w04-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:quality_on:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:quality_on:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:quality_on:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:quality_on:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:quality_on:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\quality-on\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w04-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w04-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w04-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w04-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "0dcebca72602b0a02326908ff7f1f994a489e4e48c7ecde9e24e194d9d383cdc"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w04-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "3d3637ff3ba52cfa5d1f5f9687c2b3d739407d0cee304c50dc68e739ab24078f"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w04-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "6efd67cec162f44cba06ce5b9761b207e622e21bb068ae7fd7fd563ffe57c486"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w04-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:performance_off:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:performance_off:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:performance_off:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:performance_off:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w04-all:performance_off:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w04-all\\performance-off\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w04-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w04-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w06-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w06-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "7f6802266854f20ac1e57d9565296b64e70333f802ee87c719054530c0855d74"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w06-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "3a57793193ee9cfe6a5a758419331a8ec767e91c619447d49c2e89b5b5a52117"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w06-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "f546b60e594e829fe779f04e71e9aa0e5a40e15213315b3e6c3a0989b86b646c"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w06-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:quality_on:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:quality_on:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:quality_on:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:quality_on:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:quality_on:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\quality-on\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w06-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w06-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w06-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w06-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "bc4a0d78b905d305aed5c0155f070a4a43e0e5c05cef30e4a2ac09ee405477f7"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w06-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "cdcbd394f0d201b5e447b7ba922d1af421b225ed6060249af798fd6796d86ce4"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w06-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "36009ace6d9632c3c3029ac5a126c9f84974f6aad7f0f07619cdaacb5454a86d"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w06-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:performance_off:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:performance_off:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:performance_off:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:performance_off:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-all:performance_off:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-all\\performance-off\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w06-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w06-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w16-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w16-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "3bf5e0547205858f70a7ff78f92c70fff36d1f871d950d6a81fc065af117c791"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w16-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "bd65de890a4c83df7d3626b165e7855ffd8d5dfb8a66eec37dce1e7f91b668a9"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w16-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "e58d219f7be371dc54775b311a144977de87b415d30de2320531e730390473ce"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w16-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:quality_on:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:quality_on:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:quality_on:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:quality_on:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:quality_on:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\quality-on\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w16-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w16-all:quality_on",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w16-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w16-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "c438971deab39575a69ac2d566765c42caab5bcca9bec873817abd4b1ad7f12e"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w16-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "02aa2eeaf627c6c96450a422c821250ab970ea551a4b8273eddbbc05b14abca6"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w16-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "07ed3857b0239fdc16aed25d99fc19a83d134bfb9a2827a5c381026744ad2a4d"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w16-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:performance_off:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:performance_off:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:performance_off:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:performance_off:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w16-all:performance_off:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w16-all\\performance-off\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w16-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w16-all:performance_off",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w06-auto:quality_on",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w06-auto:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "e8e2f420c80384273a4884b960929d89ab0c6bb82cf1c6d4eeb9345ae31d8f5d"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w06-auto:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "451238e5bf46ab1eeed5e4f99c16dda8b2155bcb5a3a46747c1f32176809baed"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w06-auto:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "52e64405e3b5334270fcbbca37dd2952d63ad961b3ec3e234c2fd499c39eb9c6"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w06-auto:quality_on",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:quality_on:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:quality_on:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:quality_on:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:quality_on:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:quality_on:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\quality-on\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w06-auto:quality_on",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w06-auto:quality_on",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "config_only_runid_log_and_expected_diagnostic:w06-auto:performance_off",
+      "status": "pass",
+      "detail": {
+        "diagnostic_phase": false,
+        "environment_added": [],
+        "log": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off\\logs\\engine.log"
+      }
+    },
+    {
+      "check": "config_hash_binding:w06-auto:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "2dceca2e65db90349f1ecc5907d77e9ddd3b83cec291c69db12b7de4c81a9cf2"
+      }
+    },
+    {
+      "check": "identity_hash_binding:w06-auto:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "b63733716e7d4ea481dcc63188cc722c1f3623207acf21b9e94b81924bca3822"
+      }
+    },
+    {
+      "check": "provenance_hash_binding:w06-auto:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "18b3e796767be7f5b75b0d3a5aff35ff2bf311e531fc602eb7263599ec42afe5"
+      }
+    },
+    {
+      "check": "fresh_identity_hash_binding:w06-auto:performance_off",
+      "status": "pass",
+      "detail": {
+        "sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:performance_off:logs",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off\\logs"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:performance_off:resource",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off\\resource"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:performance_off:quality",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off\\quality"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:performance_off:performance",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off\\performance"
+      }
+    },
+    {
+      "check": "empty_runtime_dir:w06-auto:performance_off:cleanup",
+      "status": "pass",
+      "detail": {
+        "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\arms\\w06-auto\\performance-off\\cleanup"
+      }
+    },
+    {
+      "check": "empty_request_dirs:w06-auto:performance_off",
+      "status": "pass",
+      "detail": {
+        "prompt_dirs": 9
+      }
+    },
+    {
+      "check": "phase_controller_absent:w06-auto:performance_off",
+      "status": "pass",
+      "detail": {
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "exactly_ten_phase_configs",
+      "status": "pass",
+      "detail": {
+        "phase_configs": 10
+      }
+    },
+    {
+      "check": "diagnostic_in_one_phase_only",
+      "status": "pass",
+      "detail": {
+        "phase": "w10-all/quality_on",
+        "env": "STRATA_DIAG_ZERO_LOGITS=1"
+      }
+    },
+    {
+      "check": "nine_prompt_records_and_expectations_identical",
+      "status": "pass",
+      "detail": {
+        "prompt_ids": [
+          "smoke_arithmetic",
+          "smoke_unicode",
+          "smoke_json_arithmetic",
+          "smoke_python_function",
+          "smoke_three_key_retrieval",
+          "long_1k",
+          "long_4k",
+          "long_16k",
+          "long_30k7"
+        ]
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:smoke_arithmetic",
+      "status": "pass",
+      "detail": {
+        "sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+        "bytes": 48
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:smoke_unicode",
+      "status": "pass",
+      "detail": {
+        "sha256": "6e8616dbd5214d4bd87fbb77cd0a5cbda3e4574271a707a609b01cff4473b008",
+        "bytes": 82
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:smoke_json_arithmetic",
+      "status": "pass",
+      "detail": {
+        "sha256": "d9e163e7042e801f477834e669740fa31dcc902be580145fe56c598437e8fa52",
+        "bytes": 143
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:smoke_python_function",
+      "status": "pass",
+      "detail": {
+        "sha256": "31dc6bf0d28a533daccafaa22e5c683eda9d52fd03f7520f1658c1751dfb5c74",
+        "bytes": 126
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:smoke_three_key_retrieval",
+      "status": "pass",
+      "detail": {
+        "sha256": "90eb2a340e74c9c0c8260c9d39483bcea1d9862a141f98767d18b07b28077e5f",
+        "bytes": 265
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:long_1k",
+      "status": "pass",
+      "detail": {
+        "sha256": "12d899fe296a48659188a7441d313a01842ba9bc4baf0c84a2bba6d5cf4fabe3",
+        "bytes": 2838
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:long_4k",
+      "status": "pass",
+      "detail": {
+        "sha256": "d045d348767cd69d5f6596f1cdeecc474ff35ddaf56eff45a334faa7171aa065",
+        "bytes": 14249
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:long_16k",
+      "status": "pass",
+      "detail": {
+        "sha256": "20286bfab8a87981945507c6a52b9a295a16ec28afc086e5e88a6a5e6e7e9751",
+        "bytes": 66202
+      }
+    },
+    {
+      "check": "prompt_bytes_identical:long_30k7",
+      "status": "pass",
+      "detail": {
+        "sha256": "d6e8de2b1c51a78f2604dc5488971fa8a9336ab434acd157db232b5d6b87b7af",
+        "bytes": 127193
+      }
+    },
+    {
+      "check": "manifest_and_tokenizer_bindings",
+      "status": "pass",
+      "detail": {
+        "manifest_sha256": "54902b4c2098c5505259568e15f1567dd0cc81ab6baa717581f9d6bf02640d49",
+        "tokenizer_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00"
+      }
+    },
+    {
+      "check": "manifest_provenance_binding",
+      "status": "pass",
+      "detail": {
+        "sha256": "c28648fd2173e2ede57389a801e1d9dac675d70312bedd30571096456a2a2600"
+      }
+    },
+    {
+      "check": "equivalence_binding",
+      "status": "pass",
+      "detail": {
+        "sha256": "739a23ed05c2bd8bae91539169a107bd018042eb35a94946ba8c6d46fbe96a64"
+      }
+    },
+    {
+      "check": "engine_source_diagnostic_order",
+      "status": "pass",
+      "detail": {
+        "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41\\src\\core\\verify.cpp",
+        "captured_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-capture\\engine-source\\src\\core\\verify.cpp",
+        "sha256": "1c069ed7ad66b53186aca6c367f0668424225581c3e880219c4c831eae9764e7",
+        "bytes": 184399,
+        "diagnostic_env": "STRATA_DIAG_ZERO_LOGITS=1",
+        "readback_after_sampling_selected_id_zero_and_window_sync": true,
+        "adds_prefill_gemm_synchronization": false,
+        "source_lines": [
+          2103,
+          2127,
+          2129
+        ],
+        "note": "source inspection only; no build or device execution"
+      }
+    },
+    {
+      "check": "default_scripts_parser_only",
+      "status": "pass",
+      "detail": {
+        "actions": [
+          {
+            "template": "launch",
+            "pid": 14312,
+            "exit_code": 0,
+            "stdout_sha256": "9a4d5cacd153face1ddd8be5c25e7f0ec42e8c83a750e85179dc01f9594cf0a0",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "template": "watch",
+            "pid": 5780,
+            "exit_code": 0,
+            "stdout_sha256": "9a4d5cacd153face1ddd8be5c25e7f0ec42e8c83a750e85179dc01f9594cf0a0",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "template": "quality",
+            "pid": 3000,
+            "exit_code": 0,
+            "stdout_sha256": "9a4d5cacd153face1ddd8be5c25e7f0ec42e8c83a750e85179dc01f9594cf0a0",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      }
+    },
+    {
+      "check": "no_authorization_or_controller",
+      "status": "pass",
+      "detail": {
+        "authorization_absent": true,
+        "controller_absent": true
+      }
+    },
+    {
+      "check": "diagnostic_not_launched",
+      "status": "pass",
+      "detail": {
+        "runtime_start_request_build": false
+      }
+    }
+  ],
+  "scope": "file/config/hash/manifest verification only; no hardware, process-tree, admission, server, API, request, GPU, WSL, or build observation",
+  "diagnostic_source_git": {
+    "head": "ffeb748d190ddeedff23587ce848596d4db0c752",
+    "blob": "7277d5e30a9a92f26f2ff038f96059cfe357c8ef",
+    "matches_source_commit": true
+  }
+}

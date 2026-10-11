@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "source_recipe_and_hash_lineage",
+  "source_run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep",
+  "source_matrix": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\matrix-tokenizer-rebased-05.json",
+  "source_matrix_sha256": "971c55ef00feb4184a4a2bbe6fc9859b1385c794ae18f9a7f930590b34b42024",
+  "run57_matrix": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\matrix.json",
+  "run57_matrix_sha256": "7389eef7d02418eaad9d12a85918fffae7b7d26e3aa47213119715280379dc19",
+  "runtime_evidence_copied": false,
+  "admission_or_process_files_copied": false,
+  "model_or_pack_files_copied": false
+}

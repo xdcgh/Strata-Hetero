@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "prepared_and_static_validations_passed_no_lifecycle_execution",
+  "run_id": "20261011-57-direct-zero-logits-diagnostic",
+  "preparation_sha256": "24040b0405645495b159ed2d1cecdd8403829bc67d84bcec9071b70e20d8d581",
+  "matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+  "dry_validation_sha256": "9935da9afe1e34e53f3f16bbbafdb50bff236661d63f1766ed4c69853b159fd8",
+  "source_template_capture_sha256": "cfcb8236a4f37fca01f28aee2776ecbbe3dff4df762782628ccbd30060afdf99",
+  "config_count": 10,
+  "plan_step_count": 10,
+  "validated_default_scripts": [
+    "launch",
+    "watch",
+    "quality"
+  ],
+  "validated_first_phase": "20261011-57-w10-all-quality-on",
+  "runtime_or_admission_evidence_created": false,
+  "authorization_created": false,
+  "contract_audit_sha256": "98829da114e7f1c036ee36efe93f4645186b65eff9ff2666c0f860038b80f6f2",
+  "contract_audit_source_sha256": "b531efb609fb706ce85597477fdeed4d3a8e13f14b3ed6023c45b2e8359eee0a",
+  "contract_audit_status": "all_run57_preparation_contract_checks_passed"
+}

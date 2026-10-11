@@ -1,0 +1,23 @@
+{
+  "run_id": "native-cpu-arc-ipc-compare-20261011-60",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-B",
+    "-m",
+    "tools.hetero_native_ipc_compare",
+    "--contract",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\compare-contract.json",
+    "--execute",
+    "--root-start-confirmed",
+    "--model-matrix-stopped-confirmed",
+    "--include-cpu16-none",
+    "--root-authorization",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\root-authorization-01.json"
+  ],
+  "cwd": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+  "wrapper_pid": 3252,
+  "started_utc": "2026-10-11T01:46:25.4831759Z",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\run60-actual-01.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-60-native-cpu-arc-ipc-compare\\run60-actual-01.stderr.log",
+  "controller_identity_recorded_by_client": true
+}

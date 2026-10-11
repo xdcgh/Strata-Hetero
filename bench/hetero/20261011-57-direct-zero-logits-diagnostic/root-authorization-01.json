@@ -1,0 +1,29 @@
+{
+  "status": "root_reviewed_authorized",
+  "matrix_sha256": "0c0f8b363fa9a6821e64238bd30f5fb40a3b2cbba51e0eb80426a888e4699bc4",
+  "adapter_sha256": "44d27e8240bc459dbcc90461134810a09f957d94cb3e2d8ddf44c0d5c5e5ae43",
+  "template_sha256s": {
+    "launch": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+    "watch": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+    "quality": "dcb68b86b81c0d2a7db92cc0ec7343d72123c8b48e2a2f76d6a383b32932a078",
+    "cleanup": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+    "jsonl_reader": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d"
+  },
+  "gate_source_sha256s": {
+    "hetero_admission.py": "b9dfad2e25840ea27afbbb39f08555607448a85db3bf6f10eb41699f73f1ca3e",
+    "hetero_resources.py": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+  },
+  "nonce": "5fde24674c6f4829b9a0aacc1ef051a7",
+  "arms": [
+    "w10-all",
+    "w04-all",
+    "w06-all",
+    "w16-all",
+    "w06-auto"
+  ],
+  "output_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic",
+  "max_phases": 1,
+  "utc": "2026-10-11T01:49:13.965988+00:00",
+  "scope": "one diagnostic firstqualityarm only; same9prompts/history plus post-selected-zero logitsreadback; no prefillGEMM synchronization, no performance claim; stopfirst; no blindretry",
+  "host_fixtures": 31
+}

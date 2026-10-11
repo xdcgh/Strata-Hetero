@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "captured_fixed_sources_read_only",
+  "created_utc": "2026-10-11T01:28:19.929796Z",
+  "run_id": "20261011-57-direct-zero-logits-diagnostic",
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero41-01\\strata.exe",
+    "sha256": "6bbc426bc6299cd8030b50634845c3f07d68ab2fe8168128ce66645fa5715fbb",
+    "bytes": 52433920,
+    "source_commit": "ffeb748d190ddeedff23587ce848596d4db0c752"
+  },
+  "server_bridge_sha256": "0ca2dd70485e5e03b0a6fcb5dfc1ee1a8863d2dc44947257e342ae608326b026",
+  "templates": {
+    "launch": {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\launch-owned.ps1",
+      "captured_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-capture\\run41-templates\\launch-owned.ps1",
+      "bytes": 20840,
+      "sha256": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+      "expected_sha256": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+      "matches_pinned_source": true
+    },
+    "watch": {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\startup-watch.ps1",
+      "captured_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-capture\\run41-templates\\startup-watch.ps1",
+      "bytes": 11992,
+      "sha256": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+      "expected_sha256": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+      "matches_pinned_source": true
+    },
+    "quality": {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\run-quality-after-ready.ps1",
+      "captured_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-capture\\run41-templates\\run-quality-after-ready.ps1",
+      "bytes": 32533,
+      "sha256": "dcb68b86b81c0d2a7db92cc0ec7343d72123c8b48e2a2f76d6a383b32932a078",
+      "expected_sha256": "dcb68b86b81c0d2a7db92cc0ec7343d72123c8b48e2a2f76d6a383b32932a078",
+      "matches_pinned_source": true
+    },
+    "cleanup": {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\cleanup-owned-model.ps1",
+      "captured_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-capture\\run41-templates\\cleanup-owned-model.ps1",
+      "bytes": 9504,
+      "sha256": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+      "expected_sha256": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+      "matches_pinned_source": true
+    },
+    "jsonl_reader": {
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_jsonl_tail.ps1",
+      "captured_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-capture\\run41-templates\\hetero_jsonl_tail.ps1",
+      "bytes": 9978,
+      "sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d",
+      "expected_sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d",
+      "matches_pinned_source": true
+    }
+  },
+  "diagnostic_source": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-41\\src\\core\\verify.cpp",
+    "captured_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-57-direct-zero-logits-diagnostic\\source-capture\\engine-source\\src\\core\\verify.cpp",
+    "sha256": "1c069ed7ad66b53186aca6c367f0668424225581c3e880219c4c831eae9764e7",
+    "bytes": 184399,
+    "diagnostic_env": "STRATA_DIAG_ZERO_LOGITS=1",
+    "readback_after_sampling_selected_id_zero_and_window_sync": true,
+    "adds_prefill_gemm_synchronization": false,
+    "source_lines": [
+      2103,
+      2127,
+      2129
+    ],
+    "note": "source inspection only; no build or device execution"
+  }
+}

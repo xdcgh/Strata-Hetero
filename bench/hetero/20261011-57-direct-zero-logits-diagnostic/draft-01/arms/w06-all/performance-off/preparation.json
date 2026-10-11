@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "run_id": "20261011-57-w06-all-performance-off",
+  "status": "prepared_not_launched",
+  "config_sha256": "bc4a0d78b905d305aed5c0155f070a4a43e0e5c05cef30e4a2ac09ee405477f7",
+  "identity_sha256": "1d3dee1c01330420579ec1ab55f5dbaec47bcafb7f36aee16d02cae1473424f4",
+  "provenance_sha256": "183192c15059112609aee619734d1d8e5a81397eaf368074de4492c42f8f3311",
+  "fresh_identities_sha256": "ab684b7a03b589113385137a02c2d6c438dd72a740297e59479f110be13b0a7d",
+  "source_fresh_identities_sha256": "a64cb90f8d7302980453d9cf97bef50d63ae2f48d5813b6c2a042a27d99e2568",
+  "worker_count": 6,
+  "affinity": "all",
+  "quality_capture": false,
+  "diagnostic_environment_delta": {},
+  "source_run51_recipe": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\matrix-tokenizer-rebased-05.json",
+  "current_admission_required": true
+}
