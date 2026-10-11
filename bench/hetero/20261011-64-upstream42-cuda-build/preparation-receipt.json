@@ -1,0 +1,93 @@
+{
+  "schema": "upstream42-cuda-pair-preparation-receipt-v1",
+  "status": "both_targets_validated_not_started",
+  "recorded_utc": "2026-10-11T02:21:10.802471+00:00",
+  "run_id": "upstream42-cuda-build-pair-20261011-64",
+  "contract_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\cuda-build-pair-42.json",
+  "contract_sha256": "6fda6c756cd0bc46aa331e0e3336278339aea081f6634588def266facc5cefa2",
+  "source_freeze_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-freeze.json",
+  "source_freeze_sha256": "68e0408dff97f62307d9b11ebc63caea59b8c669072b16e54f83ac5809d90b66",
+  "driver_original_sha256": "79dd9d544277d781f141db90067eedd951f4a4415b1aa23178ab9044d023c2dc",
+  "driver_adapted_sha256": "3bc879a2b421321ccffbbf6f47a5edb139f665f27df3abd3115a61877b449472",
+  "snapshot_count": 96,
+  "snapshot_files_rehashed_unchanged": true,
+  "validated_targets": [
+    {
+      "run": "upstream-v0.1.42-run64-01",
+      "source_head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+      "source_tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+      "preflight_status": "validated_not_started",
+      "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\validation\\upstream-v0.1.42-run64-01.preflight.json",
+      "receipt_sha256": "c145378bba75fdc4aa1b2b84f0e4c56a83a8dc0ad9b89ff3d0b48d2f231b9689",
+      "stdout_sha256": "987f9a5e8b23291c8e5d56da7c2f0ac529f31cbce114a0042637cded52fddd6c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "resource": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114489839616,
+        "physical_used_bytes": 22473408512,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 23772729344,
+        "commit_available_bytes": 121780453376,
+        "commit_total_pages": 5803889,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121780453376,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null,
+        "errors": []
+      },
+      "build_path_absent": true
+    },
+    {
+      "run": "hetero-v0.1.42-run64-01",
+      "source_head": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+      "source_tree": "bb4e73468f85ccc85bb9c511980b4e51a8f1738c",
+      "preflight_status": "validated_not_started",
+      "receipt_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\validation\\hetero-v0.1.42-run64-01.preflight.json",
+      "receipt_sha256": "8f8c9d73e65916f65cca6256ecf3c78c0d627b7ed89affcfd80b9edd8bc8e1be",
+      "stdout_sha256": "193249395ccf5327db0da49e091bf47e6a6c5cde21fd9186330a6a8f8c611d09",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "resource": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114471407616,
+        "physical_used_bytes": 22491840512,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 23800111104,
+        "commit_available_bytes": 121753071616,
+        "commit_total_pages": 5810574,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121753071616,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null,
+        "errors": []
+      },
+      "build_path_absent": true
+    }
+  ],
+  "validation_only": true,
+  "cmake_configure_started": false,
+  "compiler_started": false,
+  "build_started": false,
+  "tests_built": false,
+  "tests_run": false,
+  "gpu_executed": false,
+  "model_payload_opened": false,
+  "build_directories_created": false,
+  "execution_authorized": false,
+  "no_commit": true
+}

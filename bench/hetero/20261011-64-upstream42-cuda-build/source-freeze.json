@@ -1,0 +1,887 @@
+{
+  "schema": "strata-upstream42-hetero-cuda-source-freeze-v1",
+  "status": "prepared_no_build",
+  "recorded_utc": "2026-10-11T02:19:48.691117+00:00",
+  "upstream": {
+    "path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+    "head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+    "branch": "",
+    "clean": true,
+    "status": [],
+    "tag": "v0.1.42",
+    "parent": "c2cbf8c11235aeeece972d25b37a8ebac84c79fe",
+    "delta_from_parent": [
+      "docs/DETAILS.md",
+      "src/program/generate.cpp"
+    ]
+  },
+  "hetero": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+    "head": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+    "tree": "bb4e73468f85ccc85bb9c511980b4e51a8f1738c",
+    "branch": "codex/62-upstream42-runtime",
+    "clean": true,
+    "status": [],
+    "upstream_merge_parent": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "build_code_overlay_paths": [
+      "include/strata/kernels/cpu/pool.hpp",
+      "include/strata/kernels/ngram.hpp",
+      "serve/server.py",
+      "serve/test_server.py",
+      "src/core/verify.cpp",
+      "src/hetero/native_cpu_service.cpp",
+      "src/hetero/native_cpu_service_fixture.cpp",
+      "src/hetero/native_expert_bench.cpp",
+      "src/hetero/native_expert_fixture.cpp",
+      "src/hetero/ple_table_parity.cpp",
+      "src/hetero/storage_profile.cpp",
+      "src/hetero/storage_profile_test.cpp",
+      "src/hetero/worker_affinity_observation_test.cpp",
+      "src/kernels/cpu/pool.cpp",
+      "src/kernels/ngram.cpp",
+      "src/ngram/ple_reader_test.cpp",
+      "src/program/generate.cpp",
+      "tools/hetero_admission.py",
+      "tools/hetero_bench.py",
+      "tools/hetero_compare_quality.py",
+      "tools/hetero_copy_verified.py",
+      "tools/hetero_cpu_topology.py",
+      "tools/hetero_extract_expert.py",
+      "tools/hetero_host/CMakeLists.txt",
+      "tools/hetero_host/ple_table_parity_cli_fixtures.cmake",
+      "tools/hetero_inventory.py",
+      "tools/hetero_jsonl_tail.ps1",
+      "tools/hetero_kv_parking.py",
+      "tools/hetero_kv_stdio.py",
+      "tools/hetero_native_activation.py",
+      "tools/hetero_native_cpu/CMakeLists.txt",
+      "tools/hetero_native_cpu/cli_fixtures.cmake",
+      "tools/hetero_native_cpu/run_build.ps1",
+      "tools/hetero_native_cpu/sha256.hpp",
+      "tools/hetero_native_inputs.py",
+      "tools/hetero_native_ipc_compare.py",
+      "tools/hetero_native_openvino.py",
+      "tools/hetero_planner.py",
+      "tools/hetero_pool_sweep.py",
+      "tools/hetero_prepare_cuda.py",
+      "tools/hetero_quality.py",
+      "tools/hetero_resources.py",
+      "tools/hetero_runtime.py",
+      "tools/hetero_verify_existing.py",
+      "tools/hetero_vision_cpu_compare.py",
+      "tools/hetero_vision_payload.py",
+      "tools/hetero_vision_qwen3vl.py",
+      "tools/hetero_xpu_service.py",
+      "tools/hetero_xpu_transport.py",
+      "tools/hetero_xpu_worker.py",
+      "tools/test_hetero_admission.py",
+      "tools/test_hetero_bench.py",
+      "tools/test_hetero_compare_quality.py",
+      "tools/test_hetero_copy_verified.py",
+      "tools/test_hetero_cpu_topology.py",
+      "tools/test_hetero_extract_expert.py",
+      "tools/test_hetero_inventory.py",
+      "tools/test_hetero_jsonl_tail.ps1",
+      "tools/test_hetero_kv_parking.py",
+      "tools/test_hetero_kv_stdio.py",
+      "tools/test_hetero_native_activation.py",
+      "tools/test_hetero_native_inputs.py",
+      "tools/test_hetero_native_ipc_compare.py",
+      "tools/test_hetero_planner.py",
+      "tools/test_hetero_pool_sweep.py",
+      "tools/test_hetero_prepare_cuda.py",
+      "tools/test_hetero_quality.py",
+      "tools/test_hetero_resources.py",
+      "tools/test_hetero_runtime.py",
+      "tools/test_hetero_vision_preparation.py",
+      "tools/test_hetero_vision_qwen3vl.py",
+      "tools/test_hetero_xpu_service.py",
+      "tools/test_hetero_xpu_transport.py",
+      "tools/test_hetero_xpu_worker.py",
+      "tools/vision/strata_vision.cpp",
+      "tools/vision/vision_stage_trace.hpp"
+    ]
+  },
+  "ggml": {
+    "path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325",
+    "head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "tree": "d255198f04f9b8349f1dff24501d513f83cbfeda",
+    "branch": "",
+    "clean": true,
+    "status": []
+  },
+  "matched_cuda_reference_build": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01",
+  "files": [
+    {
+      "role": "upstream42",
+      "relative_path": "CMakeLists.txt",
+      "source_path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01\\CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\upstream42\\CMakeLists.txt",
+      "bytes": 111240,
+      "sha256": "54074bd12a6b5b0d718a02222a222afff1a481ef6bacb110ed7208984fcff41e"
+    },
+    {
+      "role": "upstream42",
+      "relative_path": "docs/DETAILS.md",
+      "source_path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01\\docs\\DETAILS.md",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\upstream42\\docs\\DETAILS.md",
+      "bytes": 175341,
+      "sha256": "53dfc9b4d8f14798418e79a4be5015bb53fcacf3fa74b8f29e2d87e48d8b6987"
+    },
+    {
+      "role": "upstream42",
+      "relative_path": "serve/server.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01\\serve\\server.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\upstream42\\serve\\server.py",
+      "bytes": 382411,
+      "sha256": "34b0410b831e17d67de6124eab5ffc8adc8d643904b4555f735e9cb4e88c4956"
+    },
+    {
+      "role": "upstream42",
+      "relative_path": "src/core/expert_source.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01\\src\\core\\expert_source.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\upstream42\\src\\core\\expert_source.cpp",
+      "bytes": 249238,
+      "sha256": "108e6f07f87e80e47d5a1d3f50815c897f9df51f5827b22639080f615d54116e"
+    },
+    {
+      "role": "upstream42",
+      "relative_path": "src/prefill/prefill.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01\\src\\prefill\\prefill.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\upstream42\\src\\prefill\\prefill.cpp",
+      "bytes": 274391,
+      "sha256": "1601ef385799e46e0e63066c76cdaf9de94b0c091c40a419641a033947e2a851"
+    },
+    {
+      "role": "upstream42",
+      "relative_path": "src/program/generate.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01\\src\\program\\generate.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\upstream42\\src\\program\\generate.cpp",
+      "bytes": 896195,
+      "sha256": "23b3fba82c48756a4546f970ca97a7949218baa482c12cfe4cc528fd6d975553"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "CMakeLists.txt",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\CMakeLists.txt",
+      "bytes": 111240,
+      "sha256": "54074bd12a6b5b0d718a02222a222afff1a481ef6bacb110ed7208984fcff41e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "include/strata/kernels/cpu/pool.hpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\include\\strata\\kernels\\cpu\\pool.hpp",
+      "bytes": 19296,
+      "sha256": "962f6f97b9816d1b5498de12fc8bbb60478ded0cb709bf2668a519396714726a"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "include/strata/kernels/ngram.hpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\include\\strata\\kernels\\ngram.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\include\\strata\\kernels\\ngram.hpp",
+      "bytes": 16584,
+      "sha256": "d227de527a74ce8bbafe2eab5ec2df0aa2a1a512765fcf7aac961bf57be8febb"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "serve/server.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\serve\\server.py",
+      "bytes": 385455,
+      "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "serve/test_server.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\test_server.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\serve\\test_server.py",
+      "bytes": 297195,
+      "sha256": "8941790fb213740f8e045aaf295b3f36265e973dac55ce1d3948630d830294cb"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/core/expert_source.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\core\\expert_source.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\core\\expert_source.cpp",
+      "bytes": 249238,
+      "sha256": "108e6f07f87e80e47d5a1d3f50815c897f9df51f5827b22639080f615d54116e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/core/verify.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\core\\verify.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\core\\verify.cpp",
+      "bytes": 188829,
+      "sha256": "5e201d0197d74a408810e809cef485ffd1b46f390ae6c476a415b814904de0f4"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/hetero/native_cpu_service.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\hetero\\native_cpu_service.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\hetero\\native_cpu_service.cpp",
+      "bytes": 25251,
+      "sha256": "215626d936418329ffd8a64b52447a0777ec7cac4664ce49e21cb05b7f2b2e61"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/hetero/native_cpu_service_fixture.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\hetero\\native_cpu_service_fixture.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\hetero\\native_cpu_service_fixture.cpp",
+      "bytes": 6314,
+      "sha256": "d00e72c6961a15c0488a536b9800b59cfc65bfa53ea23333426f9fc3b935e330"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/hetero/native_expert_bench.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\hetero\\native_expert_bench.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\hetero\\native_expert_bench.cpp",
+      "bytes": 46156,
+      "sha256": "9cf3963bd1ded68227837ca57ba93c12be5517a41a0f100526df76d12359edc4"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/hetero/native_expert_fixture.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\hetero\\native_expert_fixture.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\hetero\\native_expert_fixture.cpp",
+      "bytes": 2358,
+      "sha256": "db2c8caab2cfaf6fa1f6e08be7989918c697ea19801472915ad926d7c10fc25e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/hetero/ple_table_parity.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\hetero\\ple_table_parity.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\hetero\\ple_table_parity.cpp",
+      "bytes": 31855,
+      "sha256": "6ed5bc1a489067215655fa9d655fa334516ad6f5e1929122352ffdba67143a06"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/hetero/storage_profile.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\hetero\\storage_profile.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\hetero\\storage_profile.cpp",
+      "bytes": 28129,
+      "sha256": "c537154be80ac12b0ec66ab06456cacb9809a687857b82043a5634e6cf7640b2"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/hetero/storage_profile_test.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\hetero\\storage_profile_test.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\hetero\\storage_profile_test.cpp",
+      "bytes": 13297,
+      "sha256": "b1129657f5f0ed156c48fda553935d482a2e5c5576b4b60ad8a32e20bbbe6f6c"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/hetero/worker_affinity_observation_test.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\hetero\\worker_affinity_observation_test.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\hetero\\worker_affinity_observation_test.cpp",
+      "bytes": 1977,
+      "sha256": "6c2eb1e70cd415beddd4a1e9f64207aba88ccb1c3d926996389891d31e1909a9"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/kernels/cpu/pool.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\kernels\\cpu\\pool.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\kernels\\cpu\\pool.cpp",
+      "bytes": 41780,
+      "sha256": "ab421cfe795c41f9f3adabe33ec5a3d68863dfe31f84928e891d3978b1a01935"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/kernels/ngram.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\kernels\\ngram.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\kernels\\ngram.cpp",
+      "bytes": 31216,
+      "sha256": "3c73cb1636be8e55fc7aa592f20aa0bedcff6d422ff134199ef3f7225ab6079a"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/ngram/ple_reader_test.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\ngram\\ple_reader_test.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\ngram\\ple_reader_test.cpp",
+      "bytes": 27962,
+      "sha256": "1f676eceba78dde84ccc942e7092918203f928a9ca02cbe517027988fcff9d3e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/prefill/prefill.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\prefill\\prefill.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\prefill\\prefill.cpp",
+      "bytes": 274391,
+      "sha256": "1601ef385799e46e0e63066c76cdaf9de94b0c091c40a419641a033947e2a851"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "src/program/generate.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\src\\program\\generate.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\src\\program\\generate.cpp",
+      "bytes": 898408,
+      "sha256": "62905497998df909001683a38729f2b526094a11761add9234a307fb313ca263"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_admission.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_admission.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_admission.py",
+      "bytes": 26948,
+      "sha256": "54f34671fbae5a101bd7f57148a4f08c2f0375d53479cdf02bea8e7b1d1781e2"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_bench.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_bench.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_bench.py",
+      "bytes": 26322,
+      "sha256": "13d49f1b2fb6364920641089e79aa2384ab31831cbccfe18817f916aea86cd7d"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_compare_quality.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_compare_quality.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_compare_quality.py",
+      "bytes": 73380,
+      "sha256": "cdfe5610c052e170f0b653fdf7fdf56a2a5850e9c3734e9f038441d7b9a465a8"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_copy_verified.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_copy_verified.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_copy_verified.py",
+      "bytes": 21635,
+      "sha256": "c6b8304cc55ec7efbdfa01b7ffbf370b27b753cc1d59845db7a5cfb98f0bd5f6"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_cpu_topology.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_cpu_topology.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_cpu_topology.py",
+      "bytes": 21064,
+      "sha256": "d04bb88d9bd1b9e5c27272ac76b4d5954d11d2cc198336f1836bf79d5247d8c4"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_extract_expert.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_extract_expert.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_extract_expert.py",
+      "bytes": 20969,
+      "sha256": "8be6b0d8795869cd9b1846941ca9494a6acc5d4420ad164d6ee1b0c88ebd1962"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_host/CMakeLists.txt",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_host\\CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_host\\CMakeLists.txt",
+      "bytes": 2835,
+      "sha256": "bd040802c5998e415a30d8777432df0faf202e26d71fb273073b76ac6c70bb2c"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_host/ple_table_parity_cli_fixtures.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_host\\ple_table_parity_cli_fixtures.cmake",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_host\\ple_table_parity_cli_fixtures.cmake",
+      "bytes": 2418,
+      "sha256": "c476df73047d2b08af6abb4df8622b844e62db9db370ca73d1486af7ad00789b"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_inventory.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_inventory.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_inventory.py",
+      "bytes": 17380,
+      "sha256": "631008fcc5e907424c8ad1b4ddca3dbcc4bd8440f585553e5312678e8c380b1a"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_jsonl_tail.ps1",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_jsonl_tail.ps1",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_jsonl_tail.ps1",
+      "bytes": 10170,
+      "sha256": "8d6fa9cf15d20c3b26e547ce61af8e4bab963b1834c7fb703e697323cbcf9fdd"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_kv_parking.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_kv_parking.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_kv_parking.py",
+      "bytes": 64061,
+      "sha256": "194e3f9c3c18cf57a7380d78b3121d22035d0776231505ed6180c527d2e89128"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_kv_stdio.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_kv_stdio.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_kv_stdio.py",
+      "bytes": 47634,
+      "sha256": "5b014c1c84043c93b8e78d8178839c058545801f4473cdf9e1be029f12a78375"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_native_activation.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_native_activation.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_native_activation.py",
+      "bytes": 7020,
+      "sha256": "af7f6a7605c2e6ce1c0fe4e871cc3f75a067e9b71c7d66f705ee7f29d914695e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_native_cpu/CMakeLists.txt",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_native_cpu\\CMakeLists.txt",
+      "bytes": 7129,
+      "sha256": "045b657cdf5123bbebf9ab83d4a0c7735d0631ec097fa62c227026656ef62e57"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_native_cpu/cli_fixtures.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_native_cpu\\cli_fixtures.cmake",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_native_cpu\\cli_fixtures.cmake",
+      "bytes": 5290,
+      "sha256": "4caf7cee134ed9a9fa2a97abefe2aceb162c57b509c88f98a619d111c14f2675"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_native_cpu/run_build.ps1",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_native_cpu\\run_build.ps1",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_native_cpu\\run_build.ps1",
+      "bytes": 30168,
+      "sha256": "f0bfdd1e47069db143347105eb212c0bdcca7b01cf004cd850565236105dee66"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_native_cpu/sha256.hpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_native_cpu\\sha256.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_native_cpu\\sha256.hpp",
+      "bytes": 4328,
+      "sha256": "2d474fb968072dd70d9a14192cc4f04dce69ee120ee0122ab99b0d09c013445c"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_native_inputs.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_native_inputs.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_native_inputs.py",
+      "bytes": 10023,
+      "sha256": "1536af06cdcf5076c5b2f494448baa719b225c4a189b786f99415575130b9d79"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_native_ipc_compare.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_native_ipc_compare.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_native_ipc_compare.py",
+      "bytes": 70068,
+      "sha256": "93cc8ea538c09f2ffc4a9a483b8d446f955087c5ab3c91715e227483ab6b1f67"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_native_openvino.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_native_openvino.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_native_openvino.py",
+      "bytes": 4477,
+      "sha256": "2555c1191eddc4a7b52b5e39ac5177339c6258a49b43bf29d4460e096f324efa"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_planner.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_planner.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_planner.py",
+      "bytes": 10069,
+      "sha256": "4387546d93dc5982f67ed8c727e66c50cfff18b1d833970ef576174d586b5d98"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_pool_sweep.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_pool_sweep.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_pool_sweep.py",
+      "bytes": 84244,
+      "sha256": "a70090fe6c96f60a7859c75afd3562748f05e189bfd7830438a339b9d7fcd85e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_prepare_cuda.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_prepare_cuda.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_prepare_cuda.py",
+      "bytes": 26719,
+      "sha256": "ce5da488fab7439958722b31d0a6a68e24c1fc1742a1d2d5c2fe3a01fdb07f90"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_quality.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_quality.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_quality.py",
+      "bytes": 33578,
+      "sha256": "a5365e43897596c894bca567eb75039a302c76a412809857cca46f303abc19f7"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_resources.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_resources.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_resources.py",
+      "bytes": 26803,
+      "sha256": "f015359c34e6b17b6cd229044e9563a8deb5d9d99ca9736fd8a6eb745214a77b"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_runtime.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_runtime.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_runtime.py",
+      "bytes": 10506,
+      "sha256": "f4d86df0124d92669cbd46ef4f00dc142203aab6b02ed7fcaf81124e6468c22f"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_verify_existing.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_verify_existing.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_verify_existing.py",
+      "bytes": 15098,
+      "sha256": "74f095511933321eabb2ccf960a0db10c342d46d8b903b6429f41686515b45c0"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_vision_cpu_compare.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_vision_cpu_compare.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_vision_cpu_compare.py",
+      "bytes": 19199,
+      "sha256": "f122f9bc0fbc1c7e49f2f2caac3a5b8c88ef3d4a6402df3de3204bec2d6531b5"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_vision_payload.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_vision_payload.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_vision_payload.py",
+      "bytes": 15208,
+      "sha256": "5ad43b87255a751d673cca6a30661efeb2780366f2181fa356429db7fd5427a0"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_vision_qwen3vl.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_vision_qwen3vl.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_vision_qwen3vl.py",
+      "bytes": 32450,
+      "sha256": "b14e03a355a0eb4230947c1ed9b7a29a1061ba1ffea3ebeda7b815c582cd9612"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_xpu_service.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_xpu_service.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_xpu_service.py",
+      "bytes": 34446,
+      "sha256": "7a1c0159140545a286ce2b878ed311fc21d22c51f428b7160e6b3d33be8a324e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_xpu_transport.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_xpu_transport.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_xpu_transport.py",
+      "bytes": 22391,
+      "sha256": "564258e67b5c6a0fd4ff2019cbc6f3c3a1b2912671743855ad56719937ea94a4"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/hetero_xpu_worker.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\hetero_xpu_worker.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\hetero_xpu_worker.py",
+      "bytes": 27163,
+      "sha256": "856fb10fb63db05216d9f44d40e7af6219c5e530c4cbce035885c3d646ad5f17"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_admission.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_admission.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_admission.py",
+      "bytes": 12731,
+      "sha256": "867c4542ceb6db1f0a510f45bdcacec828fa2d5d99991db3b4606e1e2e1645b9"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_bench.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_bench.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_bench.py",
+      "bytes": 13804,
+      "sha256": "0b3520a1a6208b80a3f8ee523e3861df5eca0b636af1983331005daa564ab74e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_compare_quality.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_compare_quality.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_compare_quality.py",
+      "bytes": 27845,
+      "sha256": "784ff1e9a02427fa33f1f00008e2013f45e74468d96557c84f38f25ee8002125"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_copy_verified.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_copy_verified.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_copy_verified.py",
+      "bytes": 14399,
+      "sha256": "aac86a4d6e193c292839e260f40293fc1f409bdddd0b752ae10811eac32f45ab"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_cpu_topology.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_cpu_topology.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_cpu_topology.py",
+      "bytes": 7597,
+      "sha256": "08682b6a26c1d14fa96dd30dc25b1d11e96f65ae2036b6da6e59847b05d3ec49"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_extract_expert.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_extract_expert.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_extract_expert.py",
+      "bytes": 3811,
+      "sha256": "9e5b26e8427f4da248eb1915ed2a90763c6b6edd4724ec6a381bea37c136b3b1"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_inventory.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_inventory.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_inventory.py",
+      "bytes": 4623,
+      "sha256": "4e2b5333b218fcf07507988f22f9205fb9789634c143163a094a5bccf7c4ee3e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_jsonl_tail.ps1",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_jsonl_tail.ps1",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_jsonl_tail.ps1",
+      "bytes": 8398,
+      "sha256": "39ee8e102634f3e010e276d33f8a062dc8666538f8bcf99e16537c71b8cc9c8b"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_kv_parking.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_kv_parking.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_kv_parking.py",
+      "bytes": 25641,
+      "sha256": "ab5653b0d979dc2a368445d8ab6f5ef32e0925b37892a34d5c9532ef9dda4445"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_kv_stdio.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_kv_stdio.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_kv_stdio.py",
+      "bytes": 14368,
+      "sha256": "64710ef5535b52b049c557414a44a5fac783d15a1f35bc230f10ff57dcfa514e"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_native_activation.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_native_activation.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_native_activation.py",
+      "bytes": 4403,
+      "sha256": "ff0544b1fb361424134e156f2046497b4518a74302a3efa3a90545e08cfc1362"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_native_inputs.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_native_inputs.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_native_inputs.py",
+      "bytes": 4785,
+      "sha256": "9b6fc85bc23d8eb69d8539d3d1192d2443301cc400365b14331f6244f5e2f018"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_native_ipc_compare.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_native_ipc_compare.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_native_ipc_compare.py",
+      "bytes": 26318,
+      "sha256": "4dd02b9c147fa4089092fb98ba6965879c19b11b910dd53c1b0d962b6406079f"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_planner.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_planner.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_planner.py",
+      "bytes": 6578,
+      "sha256": "21d99ceb29ffa19d6f0829f7b0906ae5cd9a5229782716bcc98bbc9bbaa37412"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_pool_sweep.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_pool_sweep.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_pool_sweep.py",
+      "bytes": 48210,
+      "sha256": "7ab5d2ac3ebd51e1b466de9634084a2da28c84dd398815e686cb72167c0b20b8"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_prepare_cuda.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_prepare_cuda.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_prepare_cuda.py",
+      "bytes": 14129,
+      "sha256": "2edbea6c3bb28727ae22237f9796f28a1f289caced093c33d7b0c7699620dd3b"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_quality.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_quality.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_quality.py",
+      "bytes": 8652,
+      "sha256": "962bcfe59fb4d04e384cf5e5bf2b7747c4a89801429bc456c5c6bdc7a8afb925"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_resources.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_resources.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_resources.py",
+      "bytes": 14644,
+      "sha256": "28c8ce2fd0ab08090660a24b47f1e5abd32cf36fa06991a21d3288873f0c3fc1"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_runtime.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_runtime.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_runtime.py",
+      "bytes": 8328,
+      "sha256": "d809713c4937604f9426dc62b0e3a7751a76f2a5b55899beca5a7d5572324d1b"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_vision_preparation.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_vision_preparation.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_vision_preparation.py",
+      "bytes": 16951,
+      "sha256": "6f8b3218d98cbae6cc39c44b89763191487957bf81281c34d4820d2f6086a4ab"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_vision_qwen3vl.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_vision_qwen3vl.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_vision_qwen3vl.py",
+      "bytes": 26396,
+      "sha256": "b35bd2c08a1c960f5fb9e2927e9c967a488a838edc0139841871ff8e600edf08"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_xpu_service.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_xpu_service.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_xpu_service.py",
+      "bytes": 25913,
+      "sha256": "1d2af236e472dc7f7c56bf33d6ad1e809e601174762bc3923d14fba076567aea"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_xpu_transport.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_xpu_transport.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_xpu_transport.py",
+      "bytes": 16021,
+      "sha256": "a540034044b3cf91d5051ae2d7bc43c8e6d76638222f817ab29029492b2bc617"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/test_hetero_xpu_worker.py",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\test_hetero_xpu_worker.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\test_hetero_xpu_worker.py",
+      "bytes": 11409,
+      "sha256": "939ce16d5809b8b08323269d1b4a64f145f07060db4b0202c984fc33331f200b"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/vision/strata_vision.cpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\vision\\strata_vision.cpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\vision\\strata_vision.cpp",
+      "bytes": 14661,
+      "sha256": "d9c8b5f4bfa7e140523aa440f0c4b75a0ceb19d2f7e1b536042688e3df472ce8"
+    },
+    {
+      "role": "hetero42",
+      "relative_path": "tools/vision/vision_stage_trace.hpp",
+      "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\tools\\vision\\vision_stage_trace.hpp",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\hetero42\\tools\\vision\\vision_stage_trace.hpp",
+      "bytes": 9934,
+      "sha256": "5f2e3b1f325407d2202455f8b6c7337255d6d675ff62707486f96c8c7cb793a6"
+    },
+    {
+      "role": "ggml",
+      "relative_path": "CMakeLists.txt",
+      "source_path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\CMakeLists.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\ggml\\CMakeLists.txt",
+      "bytes": 11236,
+      "sha256": "f90f9c9a7ce9fa1a9da5b47c9ef87d585e8a307af4eaf939119d009868b95bc9"
+    },
+    {
+      "role": "ggml",
+      "relative_path": "ggml/include/ggml-cpu.h",
+      "source_path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\\ggml-cpu.h",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\ggml\\ggml\\include\\ggml-cpu.h",
+      "bytes": 7905,
+      "sha256": "696a54474002227a7f73b967b643055d6829853464244a8d3f4fe2e7d0b85abe"
+    },
+    {
+      "role": "ggml",
+      "relative_path": "ggml/include/ggml.h",
+      "source_path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\include\\ggml.h",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\ggml\\ggml\\include\\ggml.h",
+      "bytes": 119166,
+      "sha256": "62e4d28730f96924bfc3ec46771b38c30a8d4397584769fd636d6327354d5430"
+    },
+    {
+      "role": "ggml",
+      "relative_path": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "source_path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml-cpu\\ggml-cpu.c",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\ggml\\ggml\\src\\ggml-cpu\\ggml-cpu.c",
+      "bytes": 136540,
+      "sha256": "2f0a37f6c00c230a783cf078ee0c99f248095c501dff56b8ee47fb356dae3538"
+    },
+    {
+      "role": "ggml",
+      "relative_path": "ggml/src/ggml.c",
+      "source_path": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\ggml\\src\\ggml.c",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\ggml\\ggml\\src\\ggml.c",
+      "bytes": 268856,
+      "sha256": "28f8e72ba3f96e044c78b7a6f75511a9afdc61d5ef5a14de00969f2faa55fff1"
+    },
+    {
+      "role": "matched_cuda_reference",
+      "relative_path": "CMakeCache.txt",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\CMakeCache.txt",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\cuda-reference\\CMakeCache.txt",
+      "bytes": 49275,
+      "sha256": "ed5e16c5c7fb587cd21b2761ed72994219034df450f7fa4fbea8bd0fba193e16"
+    },
+    {
+      "role": "matched_cuda_reference",
+      "relative_path": "CMakeFiles/4.4.3/CMakeCXXCompiler.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\CMakeFiles\\4.4.3\\CMakeCXXCompiler.cmake",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\cuda-reference\\CMakeFiles\\4.4.3\\CMakeCXXCompiler.cmake",
+      "bytes": 6740,
+      "sha256": "32f0eb370724a64da20de9803e1fd5cc96a97a0be0932f85021cbbcc46f6cf75"
+    },
+    {
+      "role": "matched_cuda_reference",
+      "relative_path": "CMakeFiles/4.4.3/CMakeCUDACompiler.cmake",
+      "source_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero-upstream04-01\\CMakeFiles\\4.4.3\\CMakeCUDACompiler.cmake",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\cuda-reference\\CMakeFiles\\4.4.3\\CMakeCUDACompiler.cmake",
+      "bytes": 4524,
+      "sha256": "9929c9279b34b48deb8efeb3ccc4cf5e49bb6d1ecbd75bcfd3632da146eb4e18"
+    },
+    {
+      "role": "run39-original-driver",
+      "relative_path": "run_cuda_build.ps1",
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-39-upstream41-build\\pair\\run_cuda_build.ps1",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\drivers\\run_cuda_build.ps1",
+      "bytes": 31747,
+      "sha256": "79dd9d544277d781f141db90067eedd951f4a4415b1aa23178ab9044d023c2dc"
+    },
+    {
+      "role": "run64-adapted-driver",
+      "relative_path": "run_cuda_build_42.ps1",
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\run_cuda_build_42.ps1",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\drivers\\run_cuda_build_42.ps1",
+      "bytes": 32020,
+      "sha256": "3bc879a2b421321ccffbbf6f47a5edb139f665f27df3abd3115a61877b449472"
+    },
+    {
+      "role": "canonical-resource-monitor",
+      "relative_path": "hetero_resources.py",
+      "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\source-snapshot\\drivers\\hetero_resources.py",
+      "bytes": 26316,
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    }
+  ],
+  "file_count": 96,
+  "scope": "Exact commit/tree bind plus snapshots for v0.1.42 upstream delta, Hetero42 build/source overlay, run39 build-key inputs, pinned GGML inputs, H4 compiler/cache reference, and copied run39/adapted driver. No compiler, test, model, or device launched."
+}

@@ -1,0 +1,211 @@
+import json
+import datetime as dt
+import copy
+import os
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import Mock, patch
+
+from hetero_admission import _probe_wsl, _risky_windows_processes, decode_wsl_list, evaluate, main, parse_nvidia_csv, verify_controller_chain
+
+
+def fixture(**changes):
+    raw = {
+        "observed_at_utc": "2026-10-06T00:00:00+00:00",
+        "windows_memory": {"total_bytes": 64 * 1024**3, "available_bytes": 32 * 1024**3,
+                           "available_commit_bytes": 32 * 1024**3},
+        "nvidia": {"gpus": [{"name": "RTX 4090 D", "vram_total_mib": 49140,
+                              "vram_free_mib": 48000, "vram_used_mib": 1140,
+                              "utilization_percent": 0, "driver_version": "x"}],
+                   "compute_pids": [], "processes": [], "process_telemetry_unknown": False},
+        "risky_windows_processes": [],
+        "wsl": {"available": True, "running_list_raw": [], "ubuntu_running": []},
+    }
+    raw.update(changes)
+    return raw
+
+
+class AdmissionTests(unittest.TestCase):
+    def test_system_commit_floor_is_required_independently_of_physical_ram(self):
+        for value in (None, 4 * 1024**3 - 1):
+            memory = {"available_bytes": 32 * 1024**3, "available_commit_bytes": value}
+            result = evaluate(fixture(windows_memory=memory), 46000, 12)
+            self.assertTrue(result["gates"]["ram"]["pass"])
+            self.assertFalse(result["gates"]["system_commit"]["pass"])
+            self.assertEqual(result["status"], "blocked")
+    def controller_fixture(self):
+        now = dt.datetime(2026, 10, 11, 1, 2, 3, tzinfo=dt.timezone.utc)
+        controller = {"pid": 10, "parent_pid": 11, "name": "pwsh.exe",
+                      "path": r"C:\Users\DC\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe",
+                      "create_utc": "2026-10-11T01:02:01.1234567Z", "command_line": "pwsh -Command ReadToEnd -Start"}
+        py = {"pid": 11, "parent_pid": 12, "name": "python.exe", "path": r"C:\Python314\python.exe",
+              "create_utc": "2026-10-11T01:02:00.1234567Z", "command_line": "python -B -m tools.hetero_pool_sweep --matrix m --execute --adapter run41 --authorization a"}
+        launcher = {**py, "pid": 12, "parent_pid": 13, "path": r"E:\Strata-Hetero-data\venv\Scripts\python.exe"}
+        proof = {"schema": "strata-hetero-controller-chain-v1", "nonce": "a"*32,
+                 "created_utc": (now-dt.timedelta(seconds=1)).isoformat(),
+                 "expires_utc": (now+dt.timedelta(seconds=119)).isoformat(),
+                 "controller": controller, "python_controllers": [py, launcher]}
+        return proof, [controller, py, launcher], now
+
+    def test_exact_owned_coordinator_chain_allowed_but_other_python_blocked(self):
+        proof, live, now = self.controller_fixture()
+        allowed = verify_controller_chain(proof, live, 10, now)
+        raw = fixture(risky_windows_processes=live[1:],
+                      owned_controller_validation={"status": "pass", "verified_python_controllers": allowed})
+        self.assertTrue(evaluate(raw, 46000, 12)["gates"]["windows_processes"]["pass"])
+        raw["risky_windows_processes"].append({"pid": 88, "name": "python.exe", "path": r"C:\other\python.exe"})
+        self.assertFalse(evaluate(raw, 46000, 12)["gates"]["windows_processes"]["pass"])
+
+    def test_controller_pid_reuse_and_parent_changes_rejected(self):
+        proof, live, now = self.controller_fixture()
+        for field, value in (("create_utc", "2026-10-11T01:02:00.1234568Z"), ("parent_pid", 42),
+                             ("path", r"C:\other\python.exe"), ("command_line", "python model.py")):
+            changed = copy.deepcopy(live)
+            changed[1][field] = value
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                verify_controller_chain(proof, changed, 10, now)
+
+    def test_missing_expired_future_and_non_ancestor_proofs_rejected(self):
+        proof, live, now = self.controller_fixture()
+        with self.assertRaises(ValueError): verify_controller_chain(proof, live[:-1], 10, now)
+        with self.assertRaises(ValueError): verify_controller_chain(proof, live, 44, now)
+        with self.assertRaises(ValueError): verify_controller_chain(proof, live, 10, now+dt.timedelta(seconds=121))
+        with self.assertRaises(ValueError): verify_controller_chain(proof, live, 10, now-dt.timedelta(seconds=2))
+
+    def test_owned_coordinator_never_exempted_from_gpu_process_gate(self):
+        proof, live, now = self.controller_fixture()
+        allowed = verify_controller_chain(proof, live, 10, now)
+        raw = fixture(risky_windows_processes=live[1:],
+                      owned_controller_validation={"status": "pass", "verified_python_controllers": allowed})
+        raw["nvidia"]["processes"] = [live[1]]
+        result = evaluate(raw, 46000, 12)
+        self.assertTrue(result["gates"]["windows_processes"]["pass"])
+        self.assertFalse(result["gates"]["gpu_processes"]["pass"])
+
+    def test_raw_risky_identity_must_still_match_proof(self):
+        proof, live, now = self.controller_fixture()
+        allowed = verify_controller_chain(proof, live, 10, now)
+        risky = copy.deepcopy(live[1:])
+        risky[0]["create_utc"] = "2026-10-11T01:02:00.9999999Z"
+        raw = fixture(risky_windows_processes=risky,
+                      owned_controller_validation={"status": "pass", "verified_python_controllers": allowed})
+        self.assertFalse(evaluate(raw, 46000, 12)["gates"]["windows_processes"]["pass"])
+
+    def test_zero_gpu_utilization_with_persistent_strata_process_is_blocked(self):
+        raw = fixture(nvidia={"gpus": [{"name": "RTX 4090 D", "vram_free_mib": 48000,
+                                        "utilization_percent": 0}], "processes": [
+            {"pid": 77, "name": "strata.exe", "path": "C:\\Strata\\engine\\strata.exe"}],
+            "process_telemetry_unknown": False})
+        result = evaluate(raw, 46000, 12)
+        self.assertEqual(result["status"], "blocked")
+        self.assertTrue(result["gates"]["vram"]["pass"])
+        self.assertFalse(result["gates"]["gpu_processes"]["pass"])
+
+    def test_active_wsl_comfyui_blocks_even_without_dxg_users(self):
+        raw = fixture(wsl={"available": True, "ubuntu_running": [
+            {"name": "Ubuntu-24.04", "comfy_active": True, "dxg_exists": True, "dxg_users": []}]})
+        result = evaluate(raw, 46000, 12)
+        self.assertFalse(result["gates"]["wsl"]["pass"])
+        self.assertIn("running Linux distro", result["gates"]["wsl"]["blocked"][0]["reason"])
+
+    def test_missing_gpu_telemetry_fails_closed(self):
+        result = evaluate(fixture(nvidia={"telemetry_error": "denied", "gpus": []}), 46000, 12)
+        self.assertFalse(result["gates"]["vram"]["pass"])
+        self.assertIn("NVIDIA GPU telemetry unknown", result["reasons"])
+
+    def test_unknown_compute_process_identity_fails_closed(self):
+        raw = fixture(nvidia={"gpus": [{"name": "GPU", "vram_free_mib": 48000}],
+                              "compute_pids": [99], "processes": [{"pid": 99, "name": None, "path": None}],
+                              "process_telemetry_unknown": False})
+        result = evaluate(raw, 46000, 12)
+        self.assertFalse(result["gates"]["gpu_processes"]["pass"])
+
+    def test_known_os_display_process_with_null_path_is_allowed(self):
+        raw = fixture(nvidia={"gpus": [{"name": "GPU", "vram_free_mib": 48000}],
+                              "compute_pids": [99], "processes": [{"pid": 99, "name": "dwm.exe", "path": None}],
+                              "process_telemetry_unknown": False})
+        result = evaluate(raw, 46000, 12, check_wsl=False)
+        self.assertTrue(result["gates"]["gpu_processes"]["pass"])
+
+    def test_windows_display_path_basename_is_platform_independent(self):
+        raw = fixture(nvidia={"gpus": [{"name": "GPU", "vram_free_mib": 48000}],
+                              "compute_pids": [99], "processes": [{"pid": 99, "name": "dwm.exe",
+                                                                        "path": r"C:\Windows\System32\dwm.exe"}],
+                              "process_telemetry_unknown": False})
+        result = evaluate(raw, 46000, 12, check_wsl=False)
+        self.assertTrue(result["gates"]["gpu_processes"]["pass"])
+
+    def test_process_scan_excludes_only_exact_observer_pid(self):
+        self_pid = os.getpid()
+        payload = json.dumps([
+            {"ProcessId": self_pid, "Name": "python.exe", "ExecutablePath": "C:\\observer.exe"},
+            {"ProcessId": self_pid + 1000, "Name": "python.exe", "ExecutablePath": "C:\\test\\python.exe"},
+        ])
+        runner = Mock(return_value=Mock(returncode=0, stdout=payload, stderr=""))
+        with patch("hetero_admission.shutil.which", return_value="powershell.exe"):
+            found = _risky_windows_processes(runner)
+        self.assertEqual([row["pid"] for row in found], [self_pid + 1000])
+        script = runner.call_args.args[0][-1]
+        self.assertIn(f"ProcessId -ne {self_pid}", script)
+        decision = evaluate(fixture(risky_windows_processes=found), 46000, 12, check_wsl=False)
+        self.assertFalse(decision["gates"]["windows_processes"]["pass"])
+
+    def test_installed_codex_desktop_context_requires_exact_package_path_and_idle_resources(self):
+        path = r"C:\Program Files\WindowsApps\OpenAI.Codex_26.1002.7124.0_x64__2p2nqsd0c76g0\app\ChatGPT.exe"
+        gpu = {"name": "GPU", "vram_free_mib": 48000, "vram_used_mib": 250, "utilization_percent": 0}
+        rows = [{"pid": 99, "name": "ChatGPT.exe", "path": path}]
+        def allowed(current_gpu, current_rows):
+            raw = fixture(nvidia={"gpus": [current_gpu], "compute_pids": [99], "processes": current_rows,
+                                  "process_telemetry_unknown": False})
+            return evaluate(raw, 46000, 12, check_wsl=False)["gates"]["gpu_processes"]["pass"]
+        self.assertTrue(allowed(gpu, rows))
+        self.assertFalse(allowed(gpu, [{**rows[0], "path": r"C:\Temp\ChatGPT.exe"}]))
+        self.assertFalse(allowed({**gpu, "utilization_percent": 70}, rows))
+        self.assertFalse(allowed({**gpu, "vram_used_mib": 4096}, rows))
+
+    def test_wsl_observer_only_enumerates_running_distros_never_executes_inside(self):
+        called = []
+
+        def fake_which(_name):
+            return "C:\\Windows\\System32\\wsl.exe"
+
+        def fake_runner(args, **kwargs):
+            called.append(args)
+            return Mock(returncode=0, stdout="Ubuntu-24.04\r\n".encode("utf-16le"), stderr=b"")
+
+        with patch("hetero_admission.shutil.which", side_effect=fake_which):
+            result = _probe_wsl(fake_runner)
+        self.assertEqual(result["running_list_raw"], ["Ubuntu-24.04"])
+        self.assertEqual(len(called), 1)
+        self.assertEqual(called[0][1:], ["--list", "--running", "--quiet"])
+        self.assertFalse(any("-d" in arg or "--distribution" in arg for call in called for arg in call))
+
+    def test_strict_nvidia_csv_and_utf16_wsl_list(self):
+        parsed = parse_nvidia_csv("GPU,49140,48000,1140,0,610\n", "12\n")
+        self.assertEqual(parsed["gpus"][0]["utilization_percent"], 0.0)
+        self.assertEqual(parsed["compute_pids"], [12])
+        with self.assertRaises(ValueError):
+            parse_nvidia_csv("GPU,49140,unknown,1140,0,610\n", "")
+        self.assertEqual(decode_wsl_list("\ufeffUbuntu-22.04\r\n".encode("utf-16le")), ["Ubuntu-22.04"])
+
+    def test_validate_only_does_not_observe_or_write_output(self):
+        with tempfile.TemporaryDirectory() as td:
+            output = Path(td) / "admission.json"
+            observer = Mock(side_effect=AssertionError("observer must not run"))
+            self.assertEqual(main(["--output", str(output), "--validate-only"], observer=observer), 0)
+            observer.assert_not_called()
+            self.assertFalse(output.exists())
+
+    def test_existing_output_is_never_overwritten(self):
+        with tempfile.TemporaryDirectory() as td:
+            output = Path(td) / "admission.json"
+            output.write_text("keep", encoding="utf-8")
+            observer = Mock(side_effect=AssertionError("output check must precede observe"))
+            self.assertEqual(main(["--output", str(output), "--observe"], observer=observer), 1)
+            observer.assert_not_called()
+            self.assertEqual(output.read_text(encoding="utf-8"), "keep")
+
+
+if __name__ == "__main__":
+    unittest.main()
