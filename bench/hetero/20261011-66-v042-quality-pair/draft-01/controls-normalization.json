@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "exact_normalized_json_pair_match",
+  "normalization": {
+    "replace_executable_path_with": "@ENGINE_PATH@",
+    "replace_model_name_with": "@SIDE_LABEL@",
+    "replace_run_local_log_path_with": "@SIDE_LOG@",
+    "do_not_normalize_or_reorder_args": true,
+    "do_not_normalize_environment": true
+  },
+  "common_arguments": [
+    "--pack F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+    "--native F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "--expert-profile C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+    "--expert-cache auto",
+    "--prefill auto",
+    "--spec 4",
+    "--spec-min-p 0.5",
+    "--mtp F:\\Strata-data\\mtp\\rt",
+    "--max-context 32768",
+    "--kv int8",
+    "--resident-budget-gib 20",
+    "--vram-reserve-mib 4096",
+    "--pool-workers 10",
+    "--pool-affinity all",
+    "--prompt-cache 0",
+    "--adapt-swaps 0",
+    "--pcie-frac 0",
+    "--ple-io direct",
+    "four --native-dense-gguf shards (same paths, same order)",
+    "--ple-gguf F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf"
+  ],
+  "common_environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "STRATA_IQ_MT_MIN": "1",
+    "STRATA_GGUF_PY": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py",
+    "STRATA_UNBUFFERED_LOAD": "0",
+    "STRATA_PREFILL_CPU_SHARE": "0",
+    "STRATA_STAGE_PIN": "0",
+    "STRATA_ROUTE_TAIL_SKIP": "0"
+  },
+  "common_sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 42
+  },
+  "quality": {
+    "captured_actual_engine_token_ids": true,
+    "warmups_per_prompt": 1,
+    "formal_repeats_per_prompt": 3,
+    "prompts": 9,
+    "performance_phase": false
+  },
+  "comparison_only_differences": [
+    "source commit",
+    "binary path/hash",
+    "config model_name",
+    "run-local paths and owned receipts"
+  ],
+  "current_stat_identity": "not captured; must be fresh at root launch admission",
+  "source_and_binary_hashes": "binary SHA/size pending both active builds; source commits pinned above",
+  "canonical_normalized_config_sha256": "f26ddd8f9e8f2f34a96c9e5bcb92353e81de652ba4a8f40fe6a0c366c0d999c3",
+  "normalized_config_equality": "pass_exact_json_equality_after_only_exe_model_name_log_replacement",
+  "normalization_status": "exact_normalized_json_pair_match",
+  "config_hashes": {
+    "upstream42": "8703ae9037f7dc6d2058ab6953c33407e8c6d8b9f4729d4d51aec7ade816d430",
+    "hetero42": "8c883346e5482e549d37a95f39f2138c2b5a5ab52090427e9bf0eeda15ae02d8"
+  },
+  "identity_hashes": {
+    "upstream42": "27b9d324fea2db7ec34de03d2a47a71856abbac77a78465f94abdddacec15b34",
+    "hetero42": "2f79bdd22b7519908f01d0d93ca35d5bf7c914beec5326097a3dca53a8c04071"
+  },
+  "provenance_hashes": {
+    "upstream42": "3ec1ebb16b075a81a02260ddae623721cf2d49ed1ce01951b6f427e45b6f3191",
+    "hetero42": "0ab86d5fcf15bbd88180112f3dc24840c9905c6c788c86ec266b80b6be2061e6"
+  },
+  "normalization_verification": {
+    "status": "pass_exact_json_equality",
+    "normalized_fields": [
+      "exe",
+      "model_name",
+      "log"
+    ],
+    "all_other_config_fields_equal": true,
+    "canonical_normalized_config_sha256": "f26ddd8f9e8f2f34a96c9e5bcb92353e81de652ba4a8f40fe6a0c366c0d999c3",
+    "route_tail_skip": "0 on both",
+    "strata_diag_zero_logits": "absent on both"
+  }
+}

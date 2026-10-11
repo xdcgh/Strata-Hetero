@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "finalized_source_and_metadata_preparation_pending_root_review_and_authorization",
+  "run_id": "20261011-66-v042-quality-pair",
+  "matrix_sha256": "55f1e5f75959ebee1615446f047550af36c912c643787977f989789e4c566536",
+  "preparation_sha256": "e915ff69fb4175690d347bbf9356e4ae0e0276bb7a129fc3f319ae39442101dc",
+  "template_bindings_sha256": "26712e0eb3c14dd34ae67eb5a0c5b0ed5950145e3ac334741c89f44e2cb2756a",
+  "controls_normalization_sha256": "5e9600f1bd635c0f9eef4dd0a80c36eede160e7f297d618d82c707f3b4e62f43",
+  "fresh_input_identity_snapshot_sha256": "5cd2b83334ed8c091f2640f156d6dada1ddc92c6b343311387aa06bb4c618539",
+  "binary_hash_inventory_sha256": "b4042dbfc4cc6ac3382b0a8803eb704c6a68065572dbfa14975c8c0c65453090",
+  "both_binary_hashes_bound": true,
+  "model_shards": 4,
+  "pack_mtp_runtime_files": 14,
+  "fresh_identity_match": true,
+  "payload_bytes_read": 0,
+  "rendered_scripts": 8,
+  "parser_checks": "pass_parse_only from rendered preparation",
+  "scripts_invoked": false,
+  "api_model_device_build_test_or_admission_invoked": false,
+  "authorization": null,
+  "launch_time_asset_recheck_required": true
+}

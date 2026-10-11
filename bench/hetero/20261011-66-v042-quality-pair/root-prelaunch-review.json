@@ -1,0 +1,13 @@
+{
+  "status": "root_source_scripts_controls_and_binary_review_pass_not_started",
+  "matrix_sha256": "bfee74aca86651b0a10aac95379708091b3f28613b1bfee960784a3928b24d79",
+  "scripts_checked": 8,
+  "source_pins_checked": 7,
+  "configs_equal_except3labels": true,
+  "both_binaries_rehashed": true,
+  "launch_output_paths_fresh": true,
+  "wrapper_no_start_validation": "upstream launch passed; all8wrapper modes will be checked beforeactualfirstlaunch",
+  "tail_skip_both_zero": true,
+  "diagnostic_both_off": true,
+  "actual_model_NOT_RUN": true
+}

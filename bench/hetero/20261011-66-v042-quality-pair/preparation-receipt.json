@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "finalized_direct_powershell_preparation_pending_root_authorization",
+  "run_id": "20261011-66-v042-quality-pair",
+  "sides": 2,
+  "quality_phases": 2,
+  "performance_phases": 0,
+  "binary_hashes": "BOTH_RUN64_RECEIPTS_AND_LOCAL_GETHASH_VERIFIED; LAUNCH REHASH REQUIRED",
+  "fresh_input_stat_recheck": "snapshot_passed_against_prior_receipts; fresh launch stat/fstat recheck still required",
+  "template_render_hashes": "BOUND; all 8 scripts parser-checked only; none invoked",
+  "authorization": null,
+  "model_api_or_device_execution": false,
+  "source_commit_upstream42": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+  "source_commit_hetero42": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+  "shared_bridge_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+  "matrix_sha256": "bfee74aca86651b0a10aac95379708091b3f28613b1bfee960784a3928b24d79",
+  "preparation_sha256": "f58bc48f70c8e9b215517d4e29280bb8328bc3255656d928d1d793937f88e35f",
+  "template_bindings_sha256": "7950618c75b29c438204c4349dec1ab3552bcf2f4b407e46d328d865d825c882",
+  "controls_normalization_sha256": "51f54a8e09ccdace67dd00adf0dfa308f48e9091def293851eaae421d5ea4102",
+  "rendered_script_count": 8,
+  "rendered_script_execution": false,
+  "upstream_binary_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+  "upstream_binary_bytes": 52763648,
+  "hetero_binary_sha256": null,
+  "hetero_binary_bytes": null,
+  "binary_hashes_bound": {
+    "upstream42": {
+      "sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+      "bytes": 52763648
+    },
+    "hetero42": {
+      "sha256": "deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0",
+      "bytes": 52769792
+    }
+  },
+  "fresh_input_identity_snapshot_sha256": "5cd2b83334ed8c091f2640f156d6dada1ddc92c6b343311387aa06bb4c618539",
+  "execution_mode": "direct_powershell_controllers",
+  "scripts_invoked": false
+}

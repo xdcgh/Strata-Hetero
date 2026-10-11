@@ -1,0 +1,9 @@
+# v0.1.42 matched quality-pair preparation
+
+This is a source-only, unlaunched two-side quality-pair preparation. It reuses the nine-prompt capture-on recipe and the pinned run41 launch/watch/quality/cleanup scripts rendered for v0.1.42. The original template files are copied byte-for-byte under source-templates/raw and remain unchanged; rendered script hashes and parser-only validation results are in template-bindings.json.
+
+Both binaries now match their run64 build receipts and an independent local `Get-FileHash`: upstream `b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786` (52,763,648 bytes), Hetero `deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0` (52,769,792 bytes). The exact build receipt paths and hashes are in `finalization-01/binary-hash-inventory-01.json`. A fresh stat/fstat snapshot of the four F model shards and fourteen pack/MTP runtime files matched the prior full-integrity identities without reading payload bytes; `fresh-input-identities-01.json` and the per-arm `fresh-identities.json` bind that snapshot. Fresh source, binary, and asset checks remain mandatory at launch admission. No root authorization is present.
+
+Both configs explicitly set STRATA_ROUTE_TAIL_SKIP=0 to keep the new v0.1.42 default output-changing route policy out of the comparison. STRATA_DIAG_ZERO_LOGITS is absent from both matched defaults. The Hetero-side diagnostic can be considered separately by root; no diagnostic variant is pre-created here.
+
+Each quality-on phase has fresh logs/resource/requests/quality/cleanup directories. Only the requests parent and its preparation marker exist; no per-prompt output leaves, controller, process, admission, or result artifacts have been created. The rendered watch, quality, and cleanup scripts can monitor, issue requests, or unload on invocation, so the eight scripts were parser-checked only. No performance phase is included.

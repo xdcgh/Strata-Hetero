@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "schema": "strata-v042-two-side-quality-pair-preparation-v1",
+  "run_id": "20261011-66-v042-quality-pair",
+  "status": "finalized_source_and_input_identity_preparation_pending_root_review_and_authorization",
+  "prepared_utc": "2026-10-11",
+  "upstream": {
+    "release": "v0.1.42",
+    "commit": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "source_path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+    "source_tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+    "binary_path": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\strata.exe",
+    "binary_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+    "binary_bytes": 52763648,
+    "binary_identity_status": "run64 receipt and local Get-FileHash verified; fresh launch rehash required"
+  },
+  "hetero": {
+    "release": "v0.1.42",
+    "commit": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+    "source_tree": "bb4e73468f85ccc85bb9c511980b4e51a8f1738c",
+    "source_path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+    "binary_path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\strata.exe",
+    "binary_sha256": "deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0",
+    "binary_bytes": 52769792,
+    "binary_identity_status": "run64 receipt and local Get-FileHash verified; fresh launch rehash required"
+  },
+  "shared_server_bridge": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+    "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+    "bytes": 385455,
+    "used_by_both_sides": true,
+    "capture_actual_engine_token_ids": true
+  },
+  "quality_recipe": {
+    "source_run": "20261009-41-hetero41-direct-quality",
+    "base_h4_run": "20261009-04-hetero04-direct-quality",
+    "manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\manifest.json",
+    "manifest_sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
+    "tokenizer_snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\tokenizer-source-01\\strata_tokenizer-current-461b8afb.py",
+    "tokenizer_snapshot_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+    "tokenizer_equivalence_receipt_sha256": "aa0921ffc49be8e9c54212fc3e59ed113607ff568d7b2f89880d0912a3c1271d",
+    "prompt_ids": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k",
+      "long_4k",
+      "long_16k",
+      "long_30k7"
+    ],
+    "warmups_per_prompt": 1,
+    "formals_per_prompt": 3,
+    "quality_capture": true,
+    "strict_quality_stop_first": true,
+    "performance_phase": false
+  },
+  "quality_pair_order": [
+    "upstream42",
+    "hetero42"
+  ],
+  "sides": [
+    {
+      "id": "upstream42",
+      "run_id": "20261011-66-upstream42-quality",
+      "arm_path": "arms/upstream42/quality-on",
+      "config_path": "arms/upstream42/quality-on/config.json",
+      "identity_path": "arms/upstream42/quality-on/identity.json",
+      "provenance_path": "arms/upstream42/quality-on/provenance.json",
+      "preparation_path": "arms/upstream42/quality-on/preparation.json",
+      "model_name": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-upstream42",
+      "source_commit": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+      "binary_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+      "config_sha256": "8703ae9037f7dc6d2058ab6953c33407e8c6d8b9f4729d4d51aec7ade816d430",
+      "identity_sha256": "c9b7e1371c47970a3640c311a1a0defead2c2dc11083d9cb3b4a7afa066f7def",
+      "provenance_sha256": "3ec1ebb16b075a81a02260ddae623721cf2d49ed1ce01951b6f427e45b6f3191",
+      "status": "prepared_not_launched",
+      "binary_bytes": 52763648,
+      "preparation_sha256": "f44bc806b78b2aeb40178807e1f6b0a9e675c1fd680c47e9a1e9ead81e696fb5",
+      "rendered_scripts": {
+        "launch": {
+          "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\launch-owned.ps1",
+          "raw_sha256": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+          "raw_bytes": 20595,
+          "run_id_replacements": 7,
+          "engine_version_replacements": 0,
+          "server_root_replacements": 1,
+          "rendered_sha256": "744bdc159e3e3537a407a02553240fece510d487e54cf4a41af037200b8e00df",
+          "rendered_bytes": 20714,
+          "status": "rendered_not_executed",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\launch.ps1",
+          "parser_status": "pass_parse_only"
+        },
+        "watch": {
+          "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\startup-watch.ps1",
+          "raw_sha256": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+          "raw_bytes": 11936,
+          "run_id_replacements": 1,
+          "engine_version_replacements": 2,
+          "server_root_replacements": 1,
+          "rendered_sha256": "9f795e25198fb5d6d801c3d45f5ea702f4f5fd8ac094899a0359b67c2c88ff69",
+          "rendered_bytes": 12006,
+          "status": "rendered_not_executed",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\startup-watch.ps1",
+          "parser_status": "pass_parse_only"
+        },
+        "quality": {
+          "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\run-quality-after-ready.ps1",
+          "raw_sha256": "dcb68b86b81c0d2a7db92cc0ec7343d72123c8b48e2a2f76d6a383b32932a078",
+          "raw_bytes": 32153,
+          "run_id_replacements": 4,
+          "engine_version_replacements": 2,
+          "server_root_replacements": 1,
+          "rendered_sha256": "ebb9d1d88a579d3cf88c99a34ef1a8d16e2efecba5a964525da6091b4f87a12d",
+          "rendered_bytes": 32206,
+          "status": "rendered_not_executed",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\quality.ps1",
+          "parser_status": "pass_parse_only"
+        },
+        "cleanup": {
+          "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\cleanup-owned-model.ps1",
+          "raw_sha256": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+          "raw_bytes": 9504,
+          "run_id_replacements": 1,
+          "engine_version_replacements": 1,
+          "server_root_replacements": 0,
+          "rendered_sha256": "6edcf72c66ee7c317e8adac840b0de5d372587c00fd9709725efaaa651baa9a9",
+          "rendered_bytes": 10543,
+          "status": "rendered_not_executed",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\cleanup.ps1",
+          "parser_status": "pass_parse_only"
+        }
+      },
+      "binary_identity_status": "run64 receipt and local Get-FileHash verified; fresh launch rehash required",
+      "fresh_identities_sha256": "5cd2b83334ed8c091f2640f156d6dada1ddc92c6b343311387aa06bb4c618539"
+    },
+    {
+      "id": "hetero42",
+      "run_id": "20261011-66-hetero42-quality",
+      "arm_path": "arms/hetero42/quality-on",
+      "config_path": "arms/hetero42/quality-on/config.json",
+      "identity_path": "arms/hetero42/quality-on/identity.json",
+      "provenance_path": "arms/hetero42/quality-on/provenance.json",
+      "preparation_path": "arms/hetero42/quality-on/preparation.json",
+      "model_name": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
+      "source_commit": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+      "binary_sha256": "deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0",
+      "config_sha256": "8c883346e5482e549d37a95f39f2138c2b5a5ab52090427e9bf0eeda15ae02d8",
+      "identity_sha256": "1b92c8c5039e424328a573d7460dc4643d61422fdd26d53996e2a9afa1b36841",
+      "provenance_sha256": "4fd6c2a8f32280f564d022ecff7036e5d9f90715d4a8f7eb32d6cbb8f4a32ba2",
+      "status": "prepared_not_launched",
+      "binary_bytes": 52769792,
+      "preparation_sha256": "770167d3caff7102e41970cbc6a53efdd93adafca6344978605d74828ed1d73b",
+      "rendered_scripts": {
+        "launch": {
+          "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\launch-owned.ps1",
+          "raw_sha256": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+          "raw_bytes": 20595,
+          "run_id_replacements": 7,
+          "engine_version_replacements": 0,
+          "server_root_replacements": 1,
+          "rendered_sha256": "3f11d7866214318bc05517076791e7bb54b370037998f967fd17f33698d3cf29",
+          "rendered_bytes": 20700,
+          "status": "rendered_not_executed",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\launch.ps1",
+          "parser_status": "pass_parse_only"
+        },
+        "watch": {
+          "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\startup-watch.ps1",
+          "raw_sha256": "e976655be126686081d2c17823f35cf356d4311f91a57f840bed0cfc09f020d7",
+          "raw_bytes": 11936,
+          "run_id_replacements": 1,
+          "engine_version_replacements": 2,
+          "server_root_replacements": 1,
+          "rendered_sha256": "ec26cdff6c643a9dd25b73074dceac8b3ce82157a1549d5a42f7eef03deefe42",
+          "rendered_bytes": 12002,
+          "status": "rendered_not_executed",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\startup-watch.ps1",
+          "parser_status": "pass_parse_only"
+        },
+        "quality": {
+          "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\run-quality-after-ready.ps1",
+          "raw_sha256": "dcb68b86b81c0d2a7db92cc0ec7343d72123c8b48e2a2f76d6a383b32932a078",
+          "raw_bytes": 32153,
+          "run_id_replacements": 4,
+          "engine_version_replacements": 2,
+          "server_root_replacements": 1,
+          "rendered_sha256": "a34e3228f72d409c8d4bfbc69e0952d2ce01948e434e9d77ebffff6d427f7d10",
+          "rendered_bytes": 32198,
+          "status": "rendered_not_executed",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\quality.ps1",
+          "parser_status": "pass_parse_only"
+        },
+        "cleanup": {
+          "raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-41-hetero41-direct-quality\\cleanup-owned-model.ps1",
+          "raw_sha256": "6ee4aff158730b04b3def8b9feafa62d6658bb6a964ddd9edced79f8c65663ef",
+          "raw_bytes": 9504,
+          "run_id_replacements": 1,
+          "engine_version_replacements": 1,
+          "server_root_replacements": 0,
+          "rendered_sha256": "e528d014dccc5914d0a97d2cad7cef1997436020548bd55fb055aab8ccf83ef1",
+          "rendered_bytes": 10541,
+          "status": "rendered_not_executed",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\cleanup.ps1",
+          "parser_status": "pass_parse_only"
+        }
+      },
+      "binary_identity_status": "run64 receipt and local Get-FileHash verified; fresh launch rehash required",
+      "fresh_identities_sha256": "5cd2b83334ed8c091f2640f156d6dada1ddc92c6b343311387aa06bb4c618539"
+    }
+  ],
+  "fixed_controls": {
+    "max_context": 32768,
+    "kv": "int8",
+    "resident_budget_gib": 20,
+    "vram_reserve_mib": 4096,
+    "spec": 4,
+    "spec_min_p": 0.5,
+    "pool_workers": 10,
+    "pool_affinity": "all",
+    "prompt_cache": 0,
+    "adapt_swaps": 0,
+    "pcie_frac": 0,
+    "ple_io": "direct",
+    "prefill_cpu_share": "0",
+    "stage_pin": "0",
+    "route_tail_skip": "0",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 1,
+      "seed": 42
+    },
+    "hetero_capture_token_ids": true,
+    "capture_actual_engine_token_ids": true,
+    "quality_prompts": 9,
+    "performance": false
+  },
+  "fresh_launch_gates": {
+    "minimum_ram_gib": 12,
+    "minimum_commit_gib": 4,
+    "minimum_vram_mib": 46000,
+    "wsl_shutdown_before_observation": true,
+    "exact_current_binary_hash_and_size": true,
+    "fresh_asset_stat_recheck": true,
+    "authorization": null
+  },
+  "only_control_differences": [
+    "source/binary identity",
+    "model_name",
+    "run-local log and owner-evidence paths"
+  ],
+  "normalization_audit": "controls-normalization.json",
+  "template_bindings": "template-bindings.json",
+  "execution_enabled": false,
+  "no_model_api_device_or_build_action": true,
+  "template_bindings_sha256": "26712e0eb3c14dd34ae67eb5a0c5b0ed5950145e3ac334741c89f44e2cb2756a",
+  "controls_normalization_sha256": "5e9600f1bd635c0f9eef4dd0a80c36eede160e7f297d618d82c707f3b4e62f43",
+  "prepared_at_utc": "2026-10-11T02:54:52.458820Z",
+  "fresh_input_identity_snapshot": {
+    "path": "fresh-input-identities-01.json",
+    "sha256": "5cd2b83334ed8c091f2640f156d6dada1ddc92c6b343311387aa06bb4c618539",
+    "model_shards": 4,
+    "pack_mtp_runtime_files": 14,
+    "all_current_identities_match_prior_receipts": true,
+    "payload_bytes_read": 0,
+    "fresh_launch_stat_recheck_required": true
+  },
+  "run64_build_receipts": {
+    "upstream42": {
+      "path": "bench/hetero/20261011-64-upstream42-cuda-build/execution/upstream/e-build-metadata/build-receipt.json",
+      "sha256": "4aa32aa084c832bdf01f0209bd8a735f780f5207e34d2737ad2426cfea592e81",
+      "status": "success",
+      "source_clean": true
+    },
+    "hetero42": {
+      "path": "bench/hetero/20261011-64-upstream42-cuda-build/execution/hetero/e-build-metadata/build-receipt.json",
+      "sha256": "b700c40c0113f0419e04546170c3cf945d23b989fa5151b19add0d0e79ba47c6",
+      "status": "success",
+      "source_clean": true
+    }
+  },
+  "root_authorization": null
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "method": "independent PowerShell Get-FileHash SHA-256 and Get-Item size after run64 builds terminal",
+  "local_rehash": {
+    "tool": "PowerShell Get-FileHash -Algorithm SHA256",
+    "independent_from_run64_receipt": true,
+    "matches_run64_receipts": true
+  },
+  "observed_date": "2026-10-11",
+  "binaries": {
+    "upstream42": {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\strata.exe",
+      "sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+      "bytes": 52763648,
+      "source_commit": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+      "build_receipt": "bench/hetero/20261011-64-upstream42-cuda-build/execution/upstream/e-build-metadata/build-receipt.json",
+      "build_receipt_sha256": "4aa32aa084c832bdf01f0209bd8a735f780f5207e34d2737ad2426cfea592e81"
+    },
+    "hetero42": {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-hetero42-run64-01\\strata.exe",
+      "sha256": "deba5179200e3d1a934d7fd800e482dcbde27c655c03ea66c217aa58e6792db0",
+      "bytes": 52769792,
+      "source_commit": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+      "build_receipt": "bench/hetero/20261011-64-upstream42-cuda-build/execution/hetero/e-build-metadata/build-receipt.json",
+      "build_receipt_sha256": "b700c40c0113f0419e04546170c3cf945d23b989fa5151b19add0d0e79ba47c6"
+    }
+  },
+  "verified_against_run64_receipts": true,
+  "launch_time_rehash_required": true
+}

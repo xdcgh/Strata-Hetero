@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "title": "Strata v0.1.42 Hetero capability inventory",
+  "status": "source_only_no_tests_builds_or_runtime",
+  "scope": {
+    "upstream_commit": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+    "hetero_worktree_commit": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+    "hetero_worktree_parents": [
+      "fb3fc9ce640b352c591263475085bc9cc019404c",
+      "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406"
+    ],
+    "no_network": true,
+    "no_model_reads": true,
+    "no_runtime_or_device_observation": true,
+    "no_tests_or_builds": true,
+    "no_performance_or_quality_claims": true,
+    "entry_count": 13
+  },
+  "findings": [
+    {
+      "id": "expert_residency_tiers",
+      "class": "implemented_upstream_inherited",
+      "summary": "VRAM cache, budgeted resident-RAM complement, and file/mmap expert source already form the product placement tiers. RAM/commit-aware clamping and file fallback exist.",
+      "refs": [
+        {
+          "revision": "v0.1.42 upstream",
+          "path": "src/program/generate.cpp",
+          "lines": "446-450; 2077-2080; 6519-6529",
+          "blob": "ff3f2e1a65939d4c1e7b80746179a55d780615b4"
+        },
+        {
+          "revision": "Hetero v42",
+          "path": "src/program/generate.cpp",
+          "lines": "440-450; 2070-2073; 6519-6529",
+          "blob": "e6d490c086e929bebd7a2639a9e8c8f1c473a124"
+        },
+        {
+          "revision": "both",
+          "path": "src/core/expert_source.cpp",
+          "lines": "2526-2625; 2983-3051",
+          "blob": "4604eb8d4c195ae66bb743ada485908e6a081fd9"
+        },
+        {
+          "revision": "both",
+          "path": "include/strata/core/expert_source.hpp",
+          "lines": "540-564; 638-648",
+          "blob": "b51c8f99d33288122feeaa3012048014a151b4c5"
+        }
+      ],
+      "runtime_unmeasured_by_this_review": true
+    },
+    {
+      "id": "expert_profile_and_heat",
+      "class": "implemented_upstream_inherited",
+      "summary": "Static routing profiles rank experts for placement; adaptive heat can be saved and reused. They are rankings, not backend cost/quality profiles.",
+      "refs": [
+        {
+          "revision": "both",
+          "path": "tools/make_profile.py",
+          "lines": "1-25; 37-58; 73-97",
+          "blob": "ba041879df6e26726252e297f5d6a454937a2206"
+        },
+        {
+          "revision": "Hetero v42",
+          "path": "src/program/generate.cpp",
+          "lines": "484-493; 3397-3443; 8130-8143; 8666-8669",
+          "blob": "e6d490c086e929bebd7a2639a9e8c8f1c473a124"
+        },
+        {
+            "revision": "upstream v0.1.42",
+            "path": "serve/server.py",
+            "lines": "2357-2377",
+            "blob": "a0fb2b88ce3ae5dbfe4a44f2c034ba50ebc37976"
+          },
+          {
+            "revision": "Hetero v42",
+            "path": "serve/server.py",
+            "lines": "2357-2377",
+            "blob": "185faedf4357dff744e0781050cbb0fa2a8e83a7"
+          },
+        {
+          "revision": "v0.1.42 upstream",
+          "path": "src/program/generate.cpp",
+          "lines": "843-848; 2060-2062",
+          "blob": "ff3f2e1a65939d4c1e7b80746179a55d780615b4"
+        }
+      ]
+    },
+    {
+      "id": "parallel_startup_and_file_io",
+      "class": "implemented_upstream_inherited",
+      "summary": "Pinned arena expert loading and resident-complement copy use worker threads. FileExpertSource has separate prefetch/direct-I/O paths; these move bytes, not compute assignments.",
+      "refs": [
+        {
+          "revision": "both",
+          "path": "src/core/pinned.cu",
+          "lines": "576-579; 748-751",
+          "blob": "12cda84758845ca8f761d2aa19e6d7445f61c376"
+        },
+        {
+          "revision": "both",
+          "path": "src/core/expert_source.cpp",
+          "lines": "601-645; 3045-3051",
+          "blob": "4604eb8d4c195ae66bb743ada485908e6a081fd9"
+        },
+        {
+          "revision": "both",
+          "path": "include/strata/core/expert_source.hpp",
+          "lines": "710-812",
+          "blob": "b51c8f99d33288122feeaa3012048014a151b4c5"
+        }
+      ]
+    },
+    {
+      "id": "multi_gpu_expert_tiers",
+      "class": "implemented_upstream_inherited",
+      "summary": "Peer expert cache, remote CUDA expert caches and layer splits already support multi-GPU placement and compute.",
+      "refs": [
+        {
+          "revision": "v0.1.42 upstream",
+          "path": "src/program/generate.cpp",
+          "lines": "858-866; 1903-1908; 2064; 5275-5367",
+          "blob": "ff3f2e1a65939d4c1e7b80746179a55d780615b4"
+        },
+        {
+          "revision": "both",
+          "path": "src/core/peer_experts.cpp",
+          "lines": "81-206",
+          "blob": "6c8f567e62bbf39274975a1812ff9bb8e5a5379c"
+        },
+        {
+          "revision": "both",
+          "path": "src/core/remote_experts.cpp",
+          "lines": "125-206",
+          "blob": "9af13abfb288cbf53cee387e88ae7f934eb90d26"
+        }
+      ],
+      "boundary": "These mechanisms do not consume the HeteroCostModel profile."
+    },
+    {
+      "id": "cpu_hybrid_roles",
+      "class": "implemented_upstream_inherited_with_hetero_telemetry_delta",
+      "summary": "Affinity modes are all, auto, and P-cores. Windows reads ProcessorRelationship efficiency classes and group masks; Linux uses topology/sysfs. API distinguishes P/E only; no LP role or E-only mode found.",
+      "refs": [
+        {
+          "revision": "upstream v0.1.42",
+          "path": "include/strata/kernels/cpu/pool.hpp",
+          "lines": "66-72",
+          "blob": "6796e39173a0015ff7e397b71a6b3170415897ec"
+        },
+        {
+          "revision": "Hetero v42",
+          "path": "include/strata/kernels/cpu/pool.hpp",
+          "lines": "66-79",
+          "blob": "678b2de0998cfd76f572b6d5b0e476e9c2b3f2b9"
+        },
+        {
+          "revision": "upstream v0.1.42",
+          "path": "src/kernels/cpu/pool.cpp",
+          "lines": "59-179",
+          "blob": "af1eb5a59b8eb66a862a91210930e66bbc0793f1"
+        },
+        {
+          "revision": "Hetero v42",
+          "path": "src/kernels/cpu/pool.cpp",
+          "lines": "59-179; 437-497",
+          "blob": "e1f7311a0fdd7e707d6987fbb060b6a72fa412fb"
+        },
+        {
+          "revision": "both",
+          "path": "src/kernels/cpu/pool_affinity_win.hpp",
+          "lines": "1-64",
+          "blob": "6f0e4020227a576269a07d5449cb05f936c020f9"
+        }
+      ]
+    },
+    {
+      "id": "product_calibration",
+      "class": "implemented_upstream_inherited",
+      "summary": "Built-in calibration searches PCIe share, MTP floor, worker count, and adaptive-tier knobs. Setup persists selected engine settings by hardware/model key. It does not create per-backend quality-gated costs.",
+      "refs": [
+        {
+          "revision": "both",
+          "path": "tools/calibrate.py",
+          "lines": "1-22; 37-48; 202-295",
+          "blob": "3ed6a4c85c21a596aa1fec7a762441fe203eaae1"
+        },
+        {
+          "revision": "both",
+          "path": "setup.py",
+          "lines": "3929-3962; 3965-3977",
+          "blob": "be2b8670b93ff7164623c3624f2a4fa14a5b9f8e"
+        },
+        {
+          "revision": "Hetero v42",
+          "path": "serve/server.py",
+          "lines": "2285-2289",
+          "blob": "185faedf4357dff744e0781050cbb0fa2a8e83a7"
+        }
+      ],
+      "caveat": "The built-in path measures decode rate and restarts for some knobs; it does not establish task correctness for each alternate backend."
+    },
+    {
+      "id": "prefill_kv_prefetch",
+      "class": "implemented_upstream_inherited",
+      "summary": "Optional asynchronous staging of the next streamed KV prefix exists inside the CUDA prefill pipeline; it is not an external KV tier.",
+      "refs": [
+        {
+          "revision": "both",
+          "path": "src/prefill/prefill.cpp",
+          "lines": "2008-2027; 2197-2224; 2811; 4055-4061",
+          "blob": "e36bb6884ad4e50f34ca12cb6141f63f704ace03"
+        }
+      ],
+      "default": "STRATA_KV_PREFETCH is opt-in (default false)."
+    },
+    {
+      "id": "conversation_cache_parking",
+      "class": "implemented_upstream_inherited",
+      "summary": "The serve engine parks/restores conversation snapshots in RAM, honors token and free-RAM thresholds, and samples cgroup limits. This overlaps RAM/session reuse, not expert backend dispatch.",
+      "refs": [
+        {
+          "revision": "both",
+          "path": "src/program/generate.cpp",
+          "lines": "615-619; 767-772; 1978-1991; 7726-7865",
+          "blob": "ff3f2e1a65939d4c1e7b80746179a55d780615b4"
+        },
+        {
+          "revision": "both",
+          "path": "src/core/conversation_memory.cpp",
+          "lines": "181-200; 294-298",
+          "blob": "78a8aa0a065333303d275de1325a06ed7b10334e"
+        }
+      ]
+    },
+    {
+      "id": "hetero_cost_model",
+      "class": "hetero_only_unintegrated",
+      "summary": "Identity-bound exact-shape costs; phases prefill/decode/vision; 3+ formal full-job timings; quality boolean, expiry, readiness/busy clocks and shared-memory contention are inputs. Acceptance requires 3+ model formals and known quality/performance gates.",
+      "refs": [
+        {
+          "revision": "Hetero v42 and current main tools",
+          "path": "tools/hetero_planner.py",
+          "lines": "17-22; 31-73; 75-105; 116-209",
+          "blob": "413b7d4355d0526692778aaac08d06dbf5553216"
+        }
+      ],
+      "upstream_v0_1_42": "file absent"
+    },
+    {
+      "id": "hetero_profile_format",
+      "class": "hetero_only_unintegrated",
+      "summary": "Bounded JSON profile stores the identity, expiry, exact observations and acceptance objects; load requires hash-matching evidence files. Model acceptance evidence cannot be replaced by kernel/IPC evidence.",
+      "refs": [
+        {
+          "revision": "Hetero v42 and current main tools",
+          "path": "tools/hetero_runtime.py",
+          "lines": "20-23; 40-125",
+          "blob": "7bda9a24fd2b7be1d0e9559981de141109b8ac11"
+        }
+      ],
+      "upstream_v0_1_42": "file absent"
+    },
+    {
+      "id": "hetero_dispatch_wrapper",
+      "class": "hetero_only_unintegrated",
+      "summary": "A synchronous one-job-at-a-time wrapper takes immutable bytes, calls a ready helper, verifies output, quarantines failures, runs exact helper cleanup, then falls back to primary with unchanged input. KV/session mutation is excluded.",
+      "refs": [
+        {
+          "revision": "Hetero v42 and current main tools",
+          "path": "tools/hetero_runtime.py",
+          "lines": "141-210",
+          "blob": "7bda9a24fd2b7be1d0e9559981de141109b8ac11"
+        }
+      ],
+      "production_callsite_found": false,
+      "search_scope": [
+        "serve/",
+        "src/",
+        "tools/"
+      ],
+      "observed_callers": [
+        "tools/hetero_runtime.py",
+        "tools/test_hetero_runtime.py"
+      ]
+    },
+    {
+      "id": "native_activation_candidate",
+      "class": "experimental_source_candidate",
+      "summary": "The OpenVINO Q4_K/Q5_1 activation graph declares itself uncompiled, uninferred and production-route-disabled. It is candidate code, not a production model backend.",
+      "refs": [
+        {
+          "revision": "Hetero v42",
+          "path": "tools/hetero_native_openvino.py",
+          "lines": "1-8; 73-81",
+          "blob": "b672ee1ef36d3968e5d3a61a5aeb2f6f141c5047"
+        },
+        {
+          "revision": "Hetero v42",
+          "path": "tools/hetero_xpu_service.py",
+          "lines": "1-4; 18-28",
+          "blob": "40e6c589ef4a09d8fc4025cbbd469c575462483d"
+        }
+      ],
+      "upstream_v0_1_42": "files absent"
+    },
+    {
+      "id": "hetero_kv_experiment_plumbing",
+      "class": "experiment_only",
+      "summary": "Hetero private-stdio KV parking modules are experiment adapters; upstream conversation cache already owns product snapshot park/restore. Keep the distinction explicit before adding another KV surface.",
+      "refs": [
+        {
+          "revision": "Hetero v42",
+          "path": "tools/hetero_kv_parking.py",
+          "lines": "1-6; 40-65",
+          "blob": "e2a240d03134d22f4b4825857691f05c45839b30"
+        },
+        {
+          "revision": "Hetero v42",
+          "path": "tools/hetero_kv_stdio.py",
+          "lines": "1-18; 20-45",
+          "blob": "97ecbdc1e052561b1fcfe39299982ce23444ef9b"
+        },
+        {
+          "revision": "upstream v0.1.42",
+          "path": "src/program/generate.cpp",
+          "lines": "7726-7865",
+          "blob": "ff3f2e1a65939d4c1e7b80746179a55d780615b4"
+        }
+      ],
+      "upstream_v0_1_42": "experiment modules absent; product conversation cache present"
+    }
+  ],
+  "integration_hooks": [
+    {
+      "id": "profile_producer",
+      "location": "tools/calibrate.py::measure / new separate Hetero calibration command",
+      "rationale": "Keep existing hardware-setting calibrator semantics; emit identity, exact shapes, complete-boundary timing, quality acceptance, expiry and evidence hashes in Hetero profile schema."
+    },
+    {
+      "id": "profile_argument",
+      "location": "src/program/generate.cpp Params/argument parser near --expert-profile plus serve/server.py::engine_args/config forwarding",
+      "rationale": "Introduce a separate opt-in Hetero profile path; do not overload the existing ranked expert placement file."
+    },
+    {
+      "id": "quality_gated_dispatch",
+      "location": "tools/hetero_runtime.py::HeteroRuntimeScheduler.dispatch for a future explicitly owned stateless operator adapter",
+      "rationale": "Existing wrapper has primary fallback, output verification and helper cleanup, but no production call site. Do not route stateful verifier/KV mutation through it."
+    }
+  ],
+  "missing_capabilities": [
+    "No upstream --hetero-calibrate or --hetero-profile interface.",
+    "No production import/call site for HeteroCostModel or HeteroRuntimeScheduler.",
+    "No unified runtime scheduler for CPU, ARC/NPU, storage and GPU tiers or shared resource reservations.",
+    "No LP-core role; upstream affinity API exposes All, Auto and PCores with P/E handling.",
+    "Current built-in expert profiles rank residency/frequency; they do not bind per-backend latency and model-quality acceptance."
+  ],
+  "verification": {
+    "read_only_source_and_git_object_metadata": true,
+    "tests_run": false,
+    "builds_run": false,
+    "hardware_or_device_calls": false,
+    "model_or_raw_weight_reads": false,
+    "runtime_measurement": false,
+    "external_network": false
+  }
+}
