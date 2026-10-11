@@ -1,0 +1,26 @@
+{
+  "status": "root_isolated_merge_and_server_tests_pass_cuda_NOT_BUILT",
+  "base": "fb3fc9ce640b352c591263475085bc9cc019404c",
+  "upstream_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+  "merged_source_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+  "source_worktree": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+  "phase_branch": "codex/62-upstream42-runtime",
+  "main_branch": "codex/45-upstream41-runtime",
+  "main_branch_merged": false,
+  "server_tests_passed": 302,
+  "server_terminal_sha256": "11fec08fcaa3649ebef62532ae8797360a23d3a7559eefb4a2e682b4b4ffbfbd",
+  "conflicts_resolved": [
+    "src/kernels/cpu/pool.cpp: preserve worker readback plus upstream aux-thread ownership",
+    "src/program/generate.cpp: retain PLE RAM reserve and explicit I/O mode tracking",
+    "serve/server.py: keep-awake run wrapper forwards exact token capture into _run",
+    "serve/test_server.py: retain both capture and tool-order tests"
+  ],
+  "control_for_future_replay": {
+    "STRATA_ROUTE_TAIL_SKIP": "0",
+    "pcie_fraction": 0
+  },
+  "cuda_binaries_built": false,
+  "model_quality_verified": false,
+  "no_causal_run51_fix_claim": true,
+  "upstream_raw_artifacts_preserved": true
+}

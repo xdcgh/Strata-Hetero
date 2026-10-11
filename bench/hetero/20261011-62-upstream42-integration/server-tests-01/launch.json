@@ -1,0 +1,16 @@
+{
+  "schema": "upstream42-server-tests-launch-v1",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-B",
+    "-m",
+    "unittest",
+    "serve.test_server",
+    "serve.test_keepawake"
+  ],
+  "cwd": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+  "wrapper_pid": 20036,
+  "started_utc": "2026-10-11T02:12:23.4116646Z",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-62-upstream42-integration\\server-tests-01\\unittest.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-62-upstream42-integration\\server-tests-01\\unittest.stderr.log"
+}

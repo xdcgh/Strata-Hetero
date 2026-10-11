@@ -1,0 +1,87 @@
+{
+  "schema": "upstream42-server-tests-terminal-v1",
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "argv": [
+    "-B",
+    "-m",
+    "unittest",
+    "serve.test_server",
+    "serve.test_keepawake"
+  ],
+  "cwd": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+  "wrapper_pid": 20036,
+  "exit_code": 0,
+  "finished_utc": "2026-10-11T02:13:59.4834571Z",
+  "test_counts": {
+    "ran_tests": 302,
+    "passed_lines": 0,
+    "failed_lines": 0,
+    "error_lines": 0,
+    "contains_overall_ok": true,
+    "contains_failure_summary": false,
+    "passed_tests": 302,
+    "failed_tests": 0
+  },
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-62-upstream42-integration\\server-tests-01\\unittest.stdout.log",
+  "stdout_bytes": 31239,
+  "stdout_sha256": "30f819a51c9a42699597191f2a94efd33dac2117c08438407634381fa1135725",
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-62-upstream42-integration\\server-tests-01\\unittest.stderr.log",
+  "stderr_bytes": 3264,
+  "stderr_sha256": "5b3f7fa0f23777bb15a722f827daec2688ef95d52e3f33b3ccd47d64bb02c048",
+  "source_files_before": [
+    {
+      "relative_path": "serve\\server.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+      "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+      "bytes": 385455
+    },
+    {
+      "relative_path": "serve\\test_server.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\test_server.py",
+      "sha256": "8941790fb213740f8e045aaf295b3f36265e973dac55ce1d3948630d830294cb",
+      "bytes": 297195
+    },
+    {
+      "relative_path": "serve\\test_keepawake.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\test_keepawake.py",
+      "sha256": "2c51a4a29a5789e201e60445e5db9cfd65205c79165950c51c0821aa5423ec2c",
+      "bytes": 3789
+    }
+  ],
+  "source_files_after": [
+    {
+      "relative_path": "serve\\server.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+      "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+      "bytes": 385455
+    },
+    {
+      "relative_path": "serve\\test_server.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\test_server.py",
+      "sha256": "8941790fb213740f8e045aaf295b3f36265e973dac55ce1d3948630d830294cb",
+      "bytes": 297195
+    },
+    {
+      "relative_path": "serve\\test_keepawake.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\test_keepawake.py",
+      "sha256": "2c51a4a29a5789e201e60445e5db9cfd65205c79165950c51c0821aa5423ec2c",
+      "bytes": 3789
+    }
+  ],
+  "source_files_unchanged": true,
+  "gpu_device_accessed": false,
+  "model_payloads_accessed": false,
+  "external_api_called": false,
+  "compiler_started": false,
+  "nonfatal_resource_warnings": [
+    "ResourceWarning: implicitly cleaning up HTTPError 503 Service Unavailable",
+    "ResourceWarning: unclosed localhost socket fd=1236",
+    "ResourceWarning: implicitly cleaning up HTTPError 401 Unauthorized"
+  ],
+  "final_process_poll": {
+    "python_launcher_pid": 10508,
+    "python_child_pid": 21600,
+    "wrapper_pid": 20036,
+    "all_absent": true
+  }
+}

@@ -1,0 +1,30 @@
+..................................................................................E:\Strata-Hetero-data\source\hetero-0-1-42\serve\server.py:2437: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\DC\\AppData\\Local\\Temp\\tmprg56z0fk\\0\\properties' mode='r' encoding='cp936'>
+  props = dict(line.split() for line in open(os.path.join(root, str(n), "properties")) if len(line.split()) == 2)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+E:\Strata-Hetero-data\source\hetero-0-1-42\serve\server.py:2437: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\DC\\AppData\\Local\\Temp\\tmprg56z0fk\\1\\properties' mode='r' encoding='cp936'>
+  props = dict(line.split() for line in open(os.path.join(root, str(n), "properties")) if len(line.split()) == 2)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+E:\Strata-Hetero-data\source\hetero-0-1-42\serve\server.py:2437: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\DC\\AppData\\Local\\Temp\\tmprg56z0fk\\2\\properties' mode='r' encoding='cp936'>
+  props = dict(line.split() for line in open(os.path.join(root, str(n), "properties")) if len(line.split()) == 2)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+E:\Strata-Hetero-data\source\hetero-0-1-42\serve\server.py:2437: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\DC\\AppData\\Local\\Temp\\tmprg56z0fk\\3\\properties' mode='r' encoding='cp936'>
+  props = dict(line.split() for line in open(os.path.join(root, str(n), "properties")) if len(line.split()) == 2)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+..........strata serve: AMD: HIP_PATH=Z:\definitely\not\here does not exist: not passed to the engine
+.strata serve: AMD: HIP_PATH=C:\Users\DC\AppData\Local\Temp\tmpx90t711o\TheRock\build does not exist: not passed to the engine
+strata serve: AMD: HIP_DEVICE_LIB_PATH=C:\Users\DC\AppData\Local\Temp\tmpx90t711o\TheRock\build does not exist: not passed to the engine
+.strata serve: AMD: TEMP=C:\Users\DC\AppData\Local\Temp\tmpmasewemx\no\such\dir is not writable: using C:\Users\DC\AppData\Local\Temp\tmpmasewemx\tmp
+......C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 404: 'Not Found'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+............................C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 503: 'Service Unavailable'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+.................................C:\Python314\Lib\unittest\case.py:615: ResourceWarning: unclosed <socket.socket fd=1236, family=2, type=1, proto=0, laddr=('127.0.0.1', 6795)>
+  result = method()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+...........................................................................................................................C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 401: 'Unauthorized'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+..................
+----------------------------------------------------------------------
+Ran 302 tests in 95.564s
+
+OK

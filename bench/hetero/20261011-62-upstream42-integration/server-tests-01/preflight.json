@@ -1,0 +1,41 @@
+{
+  "schema": "upstream42-server-tests-preflight-v1",
+  "observed_utc": "2026-10-11T02:12:23.3942784Z",
+  "cwd": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42",
+  "branch": "codex/62-upstream42-runtime",
+  "head": "fb3fc9ce640b352c591263475085bc9cc019404c",
+  "merge_head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+  "merge_in_progress": true,
+  "python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "python_args": [
+    "-B",
+    "-m",
+    "unittest",
+    "serve.test_server",
+    "serve.test_keepawake"
+  ],
+  "source_files_before": [
+    {
+      "relative_path": "serve\\server.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+      "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+      "bytes": 385455
+    },
+    {
+      "relative_path": "serve\\test_server.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\test_server.py",
+      "sha256": "8941790fb213740f8e045aaf295b3f36265e973dac55ce1d3948630d830294cb",
+      "bytes": 297195
+    },
+    {
+      "relative_path": "serve\\test_keepawake.py",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\test_keepawake.py",
+      "sha256": "2c51a4a29a5789e201e60445e5db9cfd65205c79165950c51c0821aa5423ec2c",
+      "bytes": 3789
+    }
+  ],
+  "gpu_device_accessed": false,
+  "model_payloads_accessed": false,
+  "external_api_called": false,
+  "compiler_started": false
+}
