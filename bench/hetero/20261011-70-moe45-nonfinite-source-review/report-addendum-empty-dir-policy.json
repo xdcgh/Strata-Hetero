@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "filesystem_path_correction_and_policy_record",
+  "recorded_utc": "2026-10-11T04:47:52.4675328+00:00",
+  "unintended_empty_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\hetero\\20261011-70-moe45-nonfinite-source-review",
+  "state": "The two generated report files were moved into the requested Strata-Hetero directory. This old Strata directory was verified empty (zero children) and remains present. No Strata source/report files remain in it.",
+  "rejected_command": "$wrong='C:\\Users\\DC\\Documents\\ChatGPT\\Strata\\bench\\hetero\\20261011-70-moe45-nonfinite-source-review'; if((Test-Path -LiteralPath $wrong) -and @(Get-ChildItem -LiteralPath $wrong -Force).Count -eq 0){Remove-Item -LiteralPath $wrong}",
+  "tool_error_visible": "exec_command failed: CreateProcess { message: \"Rejected(\\\"... rejected: blocked by policy\\\")\" }",
+  "tool_error_note": "The tool renderer reported 831 characters truncated in the rejected command/error payload; the complete visible policy reason was: blocked by policy. The command did not execute.",
+  "followup": "No retry or alternate deletion method was attempted.",
+  "target_report_dir": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-70-moe45-nonfinite-source-review"
+}

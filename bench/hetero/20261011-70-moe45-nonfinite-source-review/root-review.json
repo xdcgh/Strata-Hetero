@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "root_source_inventory_accepted_not_causal_diagnosis",
+  "recorded_utc": "2026-10-11T04:50:24.035101+00:00",
+  "report_json_sha256": "d0ac840f73f38ded7829fe9667e95e161ca953f503bce7f4d5c12934b536c0d5",
+  "report_md_sha256": "b6450729dff4216304628e6368373c276a33dc15e65271a294ba1a842f186f59",
+  "source_files_rehashed": 7,
+  "runtime_metadata_rehashed": 5,
+  "build_receipt_rehashed": true,
+  "findings": [
+    "MoE combine consumes routed Dm via slot map, routing weights, shared output and scalar gate",
+    "Mixed FP32 finiteness does not prove its FP16 image finite",
+    "GU/H are non-float byte data on fused branches; do not reinterpret untyped scratch as floats",
+    "Both routed and shared SwiGLU FP16 conversions already use hf_sat",
+    "Effective path/format and finer intermediate NaN cause remain unresolved"
+  ],
+  "next_probe_requirements": [
+    "Default compile/runtime off retained",
+    "Selected layer45 typed FP16 mixed/shared/routed images and FP32 router/shared/Dm/weights/gate checks",
+    "Emit effective path/type/shape context before relying on buffer sizes",
+    "Preserve same-stream producer-before-scan-before-reuse ordering",
+    "Synthetic bitpattern fixtures for FP16 finite/subnormal/NaN/Inf and first-record order",
+    "No unchanged costly model retry or performance promotion"
+  ],
+  "legacy_empty_dir_cleanup_policy": "rejected blocked by policy; left empty and no alternate deletion; old source unchanged"
+}

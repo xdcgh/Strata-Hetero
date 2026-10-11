@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "status": "read_only_source_and_runtime_metadata_inventory",
+  "recorded_utc": "2026-10-11",
+  "source": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-prefill-probe-69",
+    "head": "1eb85d2a5d27cb2f054a9c757c3b074d7d3d7c86",
+    "tree": "4fccda1c3a4a10952fa2e1079a43b98fb78ca548",
+    "clean": true,
+    "files": [
+      {
+        "path": "CMakeLists.txt",
+        "sha256": "53ae876f94d07ca73837e2436416c26094085fa91fefb8f92416a417d8ee0280"
+      },
+      {
+        "path": "src/prefill/prefill.cpp",
+        "sha256": "eb22e2018b269d924546c4da5e8fdd6e3011376a3b7c3368eb7901e6b4b35374"
+      },
+      {
+        "path": "src/prefill/kernels.cu",
+        "sha256": "d6211043318f3dad6ccf890a2b12d8170940216b8e7cb75b649785789d5afe62"
+      },
+      {
+        "path": "src/prefill/moe_fused.cu",
+        "sha256": "d1ca97b200bfb98fa60071cbee3d332a98bcceabb6db90fd10606e577c02d68b"
+      },
+      {
+        "path": "src/prefill/moe_fused_iq.cu",
+        "sha256": "805687c9568716fd1d39c411817e98896f193e6c5f49311c4ecc6a1214022e0d"
+      },
+      {
+        "path": "src/prefill/moe_mmq.cu",
+        "sha256": "3e7cd5947e7b1195a2c9e605c5d78c086cb95448c9abe860dfbe4bff73dafb04"
+      },
+      {
+        "path": "src/kernels/cuda/shared_expert.cu",
+        "sha256": "b515a036e9341623dbe9fcd0f0cba01ce76ef91dfe8639e57673fb4254e37a7f"
+      }
+    ]
+  },
+  "run_evidence": {
+    "run_id": "20261011-69-probe69-quality",
+    "first_bad": {
+      "repeat_count": 4,
+      "identical_unique_records": 1,
+      "stage": "moe_output",
+      "layer": 45,
+      "half": 1,
+      "chunk": 0,
+      "pos0": 0,
+      "rows": 1035,
+      "width": 2560,
+      "index": 394240,
+      "row": 154,
+      "column": 0,
+      "nan": 2560,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "ordinal": 277
+    },
+    "zero_logits": "Sampled head rows report vocab=248320, finite=0, nan=248320; this is head evidence, not an upstream location.",
+    "metadata_pins": [
+      {
+        "path": "bench/hetero/20261011-69-prefill-first-nonfinite/arms/probe69/quality-on/quality/F-long_1k-diagnostics.json",
+        "sha256": "1b90f113a59d99d7f6a77f161d8ac434ff9b1af06da745767390d915ac5fab17"
+      },
+      {
+        "path": "bench/hetero/20261011-69-prefill-first-nonfinite/arms/probe69/quality-on/logs/engine.log",
+        "sha256": "66e5f03efde4b4961eeb51733ba851096d32c0eddfd200a3b7b6e13fee80d0fa"
+      },
+      {
+        "path": "bench/hetero/20261011-69-prefill-first-nonfinite/arms/probe69/quality-on/config.json",
+        "sha256": "e672977613f11a27c1da3b941deea8852fe14d33c24db158f9b60a7d06d6f6c4"
+      },
+      {
+        "path": "bench/hetero/20261011-69-prefill-first-nonfinite/arms/probe69/quality-on/provenance.json",
+        "sha256": "c0bd99bfd1b04419daee9c5c0f9e46b9102eeb817f885057b6cd2bca1b60696b"
+      },
+      {
+        "path": "bench/hetero/20261011-69-prefill-first-nonfinite/arms/probe69/quality-on/process.json",
+        "sha256": "32ec193932b7e70461bc097c38326905b5b1f61c53f9643c2c4504fd3ad559ee"
+      }
+    ],
+    "branch_log": "No fused banner or per-layer MMQ/peer marker in the available engine log/diagnostics."
+  },
+  "build": {
+    "receipt_sha256": "0bcd13c38cf12eed6d0adf9addb1298ae45847b4cb57b5927dc863e3937fa629",
+    "cache": {
+      "STRATA_ENABLE_CUDA": "ON",
+      "STRATA_MMQ_KQUANTS": "OFF",
+      "STRATA_Q6K_EXPERTS": "OFF",
+      "STRATA_PREFILL_MMQ": "OFF",
+      "STRATA_PREFILL_FINITE_PROBE": "ON",
+      "STRATA_ENABLE_HIP": "OFF",
+      "STRATA_BUILD_TESTS": "OFF"
+    },
+    "interpretation": "CMakeLists.txt:1354-1399 still adds CUDA strata_mmq. STRATA_PREFILL_MMQ is HIP-only and must be OFF on CUDA (76-90); OFF does not disable CUDA MMQ. STRATA_MMQ_KQUANTS=OFF omits Q4_K/Q5_K/Q5_1 instances (1368-1377); the layer-45 format/effective branch is not logged."
+  },
+  "shape_constants": {
+    "anchors": "prefill.cpp:105",
+    "N": 2560,
+    "K": 10,
+    "T_at_first_bad": 1035,
+    "E": "m.g->n_expert runtime value; not read from model"
+  },
+  "producer_chain": [
+    {
+      "stage": "router",
+      "anchors": "prefill.cpp:2845-2846,1899-1904; kernels.cu:1491,2005-2012",
+      "buffers": [
+        {
+          "name": "m.logits",
+          "type": "float32",
+          "shape": "[T,E]"
+        },
+        {
+          "name": "m.ids",
+          "type": "int32",
+          "shape": "[T,K]"
+        },
+        {
+          "name": "m.w",
+          "type": "float32",
+          "shape": "[T,K]"
+        }
+      ]
+    },
+    {
+      "stage": "HC activation images",
+      "anchors": "prefill.cpp:1175-1176,2572,2845,2909-2910; kernels.cu:44-55,116-136,247-266",
+      "buffers": [
+        {
+          "name": "m.mixed",
+          "type": "float32",
+          "shape": "[T,N]",
+          "use": "coarse hc_mixed probe input"
+        },
+        {
+          "name": "m.mixed_h",
+          "type": "IEEE FP16/binary16",
+          "shape": "[T,N]",
+          "producer": "hf(s)",
+          "use": "shared native projections and selected routed inputs"
+        },
+        {
+          "name": "m.mixed_bf",
+          "type": "BF16 on CUDA",
+          "shape": "[T,N]",
+          "producer": "act16(s)=bf(s) on CUDA",
+          "use": "router and scalar-gate projections"
+        }
+      ],
+      "lifetime": "FP32 probe of m.mixed does not prove binary16 m.mixed_h finite. FP16 has 5 exponent bits; BF16 has 8."
+    },
+    {
+      "stage": "shared expert",
+      "anchors": "prefill.cpp:735-738,1219-1220,2907-2916; kernels.cu:48,1555-1568",
+      "buffers": [
+        {
+          "name": "m.sgate,m.sup",
+          "type": "float32",
+          "shape": "[T,640]"
+        },
+        {
+          "name": "m.sh_h",
+          "type": "IEEE FP16",
+          "shape": "[T,640]",
+          "producer": "swiglu_pair/hf_sat; consumed by shared down projection"
+        },
+        {
+          "name": "m.shared",
+          "type": "float32",
+          "shape": "[T,N]"
+        },
+        {
+          "name": "m.sg",
+          "type": "float32",
+          "shape": "[T]"
+        }
+      ],
+      "lifetime": "hf_sat clamps finite values to FP16 range and preserves NaN."
+    },
+    {
+      "stage": "slot/src mapping",
+      "anchors": "prefill.cpp:3022-3032,3146-3151,3224-3252; moe_fused.cu:168-176,687-702",
+      "buffers": [
+        {
+          "name": "m.slot_dev",
+          "type": "int32",
+          "shape": "[T,K]",
+          "meaning": "original route position -> grouped Dm row"
+        },
+        {
+          "name": "m.src_dev",
+          "type": "int32",
+          "shape": "[T,K]",
+          "meaning": "grouped row -> original token"
+        }
+      ],
+      "lifetime": "Host path writes slot_h[i]=p and src_h[p]=i/K; fused path creates equivalent maps on device."
+    },
+    {
+      "stage": "FP16 fallback experts",
+      "anchors": "prefill.cpp:1215-1219,3758-3775; kernels.cu:1555-1560",
+      "buffers": [
+        {
+          "name": "m.Xs",
+          "type": "uint16 activation image",
+          "shape": "[T,K,N]"
+        },
+        {
+          "name": "m.GU",
+          "type": "float32",
+          "shape": "[T,K,1280]"
+        },
+        {
+          "name": "m.Hh",
+          "type": "IEEE FP16",
+          "shape": "[T,K,640]",
+          "producer": "swiglu_interleaved/hf_sat; consumed by down FP16 GEMM"
+        },
+        {
+          "name": "m.Dm",
+          "type": "float32",
+          "shape": "[T,K,N]"
+        }
+      ],
+      "lifetime": "dq_gu/dq_d are uint16 weights; Hh is used only by FP16 fallback."
+    },
+    {
+      "stage": "MMQ experts",
+      "anchors": "prefill.cpp:739-744,1214-1224,3742-3755; moe_mmq.cu",
+      "buffers": [
+        {
+          "name": "m.GU,m.H,m.Dm",
+          "type": "float32",
+          "shape": "GU [T,K,1280], H [T,K,640], Dm [T,K,N]"
+        },
+        {
+          "name": "m.Xq,m.Hq",
+          "type": "packed Q8 bytes",
+          "shape": "q8_bytes(T*K,N), q8_bytes(T*K,640)"
+        },
+        {
+          "name": "m.ids_identity,m.bounds_dev",
+          "type": "int32",
+          "shape": "identity [T,K]; bounds [2*(E+floor(E/MMQ_GROUP)+2)]"
+        },
+        {
+          "name": "m.grp_gu,m.grp_d",
+          "type": "uint8",
+          "shape": "MMQ_GROUP*gu_max+tail; MMQ_GROUP*d_max+tail"
+        }
+      ]
+    },
+    {
+      "stage": "fused int8 experts",
+      "anchors": "prefill.cpp:983-992,2929-2938,2964-3012; moe_fused.cu:82-105,168-176,687-724",
+      "buffers": [
+        {
+          "name": "m.GU",
+          "type": "opaque grouping bytes, not float activations"
+        },
+        {
+          "name": "m.Xq",
+          "type": "int8 activation bytes with scale/sum records"
+        },
+        {
+          "name": "m.H",
+          "type": "opaque int8 intermediate despite float* storage declaration"
+        },
+        {
+          "name": "m.Dm",
+          "type": "float32",
+          "shape": "[T,K,N]"
+        }
+      ]
+    },
+    {
+      "stage": "combine",
+      "anchors": "prefill.cpp:3842-3879,1170,1177-1178; kernels.cu:1577-1613,2165-2176",
+      "buffers": [
+        {
+          "name": "m.Dm",
+          "type": "float32; indexed by slot[t*10+k]"
+        },
+        {
+          "name": "m.w",
+          "type": "float32; original route order"
+        },
+        {
+          "name": "m.shared,m.sg",
+          "type": "float32"
+        },
+        {
+          "name": "m.bo",
+          "type": "float32",
+          "shape": "[T,N]",
+          "meaning": "m.emb alias"
+        }
+      ],
+      "operation": "sum_k w[t*10+k]*Dm[slot[t*10+k]*N+d] + shared[d]*sigmoid(sg[t]); existing probe scans bo after combine at prefill.cpp:3877-3879."
+    },
+    {
+      "stage": "native IQ fused expert variant",
+      "anchors": "prefill.cpp:2937,3005-3009; moe_fused_iq.cu:426-432,1118-1148",
+      "buffers": [
+        {
+          "name": "fused H output",
+          "type": "uint8/int8 bytes"
+        },
+        {
+          "name": "Dm",
+          "shape": "[T,K,N]",
+          "type": "float32"
+        }
+      ],
+      "lifetime": "Dispatch requires the fused native format gate and STRATA_PF_FUSED=1 opt-in; source metadata does not establish that this layer took it."
+    }
+  ],
+  "other_half_buffers": {
+    "anchors": "prefill.cpp:722-726,1201,1206",
+    "y_h": "GDN half-output scratch; not direct input in MoE branch at 2837-2846.",
+    "attn_h": "QSA half-output scratch; not direct input in MoE branch at 2837-2846.",
+    "sh_h": "Consumed by shared down projection.",
+    "Hh": "Consumed only by FP16 fallback routed down projection.",
+    "note": "FP32 finiteness does not establish finiteness of any 16-bit image."
+  },
+  "path_evidence": {
+    "recorded": {
+      "STRATA_PREFILL_CPU_SHARE": "0",
+      "STRATA_STAGE_PIN": "0",
+      "STRATA_ROUTE_TAIL_SKIP": "0",
+      "pcie_frac": "0",
+      "peer_device": "absent",
+      "STRATA_PF_FUSED": "not recorded in config env",
+      "STRATA_PREFILL_MMQ": "not recorded in config env"
+    },
+    "cpu_share_semantics": "Source maps explicit 0 to zero (prefill.cpp:171-184); config/provenance record it, but no per-layer effective-share trace.",
+    "effective_layer45_branch": "Unknown. Metadata do not identify layer-45 expert format or effective MMQ/FP16/fused/peer path; do not infer one.",
+    "native_iq_fused": "moe_fused_iq.cu:1118-1131 requires STRATA_PF_FUSED=1 and supported gate/up/down types; experts_native accepts byte intermediate storage and float* Dm (1141-1148), with CUDA native kernel signature uint8 out/float dm (426-432). Effective layer-45 selection is not in available runtime metadata."
+  },
+  "candidate_probe_windows": [
+    {
+      "buffer": "m.mixed_h",
+      "window": "After gr_mix/gr_mix_r at kernels.cu:136 or 266 and before native projection/row-gather; inspect IEEE FP16 separately from FP32 m.mixed."
+    },
+    {
+      "buffer": "m.Dm",
+      "window": "After producer waits/copies at prefill.cpp:3842-3870 and before combine at 3872-3876; handle peer aggregate/sum layouts explicitly."
+    },
+    {
+      "buffer": "m.bo",
+      "window": "Existing post-combine scan at prefill.cpp:3877-3879; it does not localize the first bad combine input."
+    }
+  ],
+  "limits": [
+    "No model/raw tensor reads.",
+    "No source edits, build, test, device or engine invocation.",
+    "No cause, fix, or performance claim.",
+    "Any added probe/copy can perturb timing or races."
+  ]
+}
