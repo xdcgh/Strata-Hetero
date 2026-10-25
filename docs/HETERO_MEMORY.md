@@ -2,6 +2,14 @@
 
 Hot model data goes to VRAM or system RAM when it fits with the session, staging buffers and system reserve. SSD remains a cold capacity tier. The RTX 4090 D stays the primary compute device. A RAM budget is evaluated by end-to-end latency and memory pressure, not by allocated gigabytes.
 
+The 2026-10-25 [integrity investigation](HETERO_BENCHMARK.md#model-data-integrity-finding-on-2026-10-25)
+found model-shard cached read views that differ from verified uncached bytes.
+An exact native expert replay isolates one observed NaN chain to those weight
+bytes. Earlier RAM-mode failures stay preserved, but do not independently
+isolate a RAM-mode arithmetic defect. Repeat the direct and RAM cases with
+verified restored bytes and post-run integrity checks before accepting either
+a regression attribution or a memory-tier speedup.
+
 ## Existing expert and KV paths
 
 Upstream already keeps GPU-missed experts in a resident CPU complement and supports budgeted file-backed experts. Preserve its native expert bytes and CPU arithmetic. The historical Q4 configuration reported 35.21 GiB of GPU experts and 36.52 GiB of page-locked CPU experts on this 127.56 GiB host. A requested resident budget of 71 GiB is not proof of a 71 GiB private CPU copy: complement selection, prefill borrowing and available-memory/commit guards affect the actual allocation.

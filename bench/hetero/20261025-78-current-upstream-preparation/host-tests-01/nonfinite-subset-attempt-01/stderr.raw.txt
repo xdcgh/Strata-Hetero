@@ -1,0 +1,10 @@
+test_nothing_emitted_is_retried_once (serve.test_server.NonFiniteLogits.test_nothing_emitted_is_retried_once) ... ok
+test_mid_reply_ends_without_retry (serve.test_server.NonFiniteLogits.test_mid_reply_ends_without_retry) ... ok
+test_twice_is_an_error (serve.test_server.NonFiniteLogits.test_twice_is_an_error) ... ok
+test_engine_done_line_raises (serve.test_server.NonFiniteLogits.test_engine_done_line_raises)
+StrataEngine.generate: `DONE ... nonfinite` raises EngineNonFinite after the tokens before it. ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.065s
+
+OK

@@ -1,0 +1,16 @@
+test_actual_alias_and_eos_survive_with_no_heartbeat_or_visible_reencoding (serve.test_hetero_token_ids.TokenEvidence.test_actual_alias_and_eos_survive_with_no_heartbeat_or_visible_reencoding) ... ok
+test_config_on_still_requires_literal_stream_true (serve.test_hetero_token_ids.TokenEvidence.test_config_on_still_requires_literal_stream_true) ... ok
+test_default_off_and_request_cannot_enable_it (serve.test_hetero_token_ids.TokenEvidence.test_default_off_and_request_cannot_enable_it) ... ok
+test_interleaved_parallel_requests_keep_distinct_id_lists (serve.test_hetero_token_ids.TokenEvidence.test_interleaved_parallel_requests_keep_distinct_id_lists) ... ok
+test_mcp_rounds_aggregate_actual_ids (serve.test_hetero_token_ids.TokenEvidence.test_mcp_rounds_aggregate_actual_ids) ... ok
+test_on_and_off_have_identical_non_diagnostic_chunks (serve.test_hetero_token_ids.TokenEvidence.test_on_and_off_have_identical_non_diagnostic_chunks) ... ok
+test_partial_nonfinite_keeps_only_already_accepted_ids (serve.test_hetero_token_ids.TokenEvidence.test_partial_nonfinite_keeps_only_already_accepted_ids) ... ok
+test_reasoning_wrap_ids_are_excluded_across_continuations (serve.test_hetero_token_ids.TokenEvidence.test_reasoning_wrap_ids_are_excluded_across_continuations) ... ok
+test_stop_string_filter_does_not_rewrite_accepted_ids (serve.test_hetero_token_ids.TokenEvidence.test_stop_string_filter_does_not_rewrite_accepted_ids) ... ok
+test_twice_nonfinite_has_no_successful_final_diagnostics (serve.test_hetero_token_ids.TokenEvidence.test_twice_nonfinite_has_no_successful_final_diagnostics) ... ok
+test_zero_token_nonfinite_retry_does_not_add_ids (serve.test_hetero_token_ids.TokenEvidence.test_zero_token_nonfinite_retry_does_not_add_ids) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.250s
+
+OK

@@ -12,7 +12,7 @@ bytes. Its up projection contains seven nonfinite Q4_K half headers; NaNs
 appear in up before the hidden Q8_1 quantizer. This observed failure therefore
 cannot be repaired by clamping that later quantizer.
 
-The full local fourth shard now hashes to
+The buffered/mapped read of the local fourth shard hashes to
 `a361af99f18611dda584dfb63ff4af065b6c084e7d73a692a2a5d83fbc554095`,
 which differs from the pinned expected
 `753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a`.
@@ -23,12 +23,25 @@ read content are unknown. File-stat identity alone is not current integrity
 proof. See `20261025-75-route41-snapshot/cpu-stage-replay-03/` for the retained
 hash, readback and native replay receipts.
 
+Subsequent aligned Windows `FILE_FLAG_NO_BUFFERING` reads match the pinned
+remote bytes where the buffered/mapped view differs. A complete uncached copy
+of shard 4 to a new E file hashes to the expected value, and an independent
+buffered reread of that new file matches too. This demonstrates a cached
+read-view mismatch; it does not establish damaged storage media or incorrect
+bytes in the underlying file. The native replay with the same executable and
+input becomes entirely finite after substituting the verified up bytes, with
+no arithmetic change. Fresh buffered checks also find a shard 3 mismatch;
+shards 1/2 and all fourteen pack/MTP assets match. Restoration must therefore
+cover both implicated views. The complete real model and post-run view/hash
+checks remain pending; one good copy or offline replay does not prove a
+permanent runtime repair.
+
 Earlier NaN and RAM-mode failures remain valid observations, but their
 attribution needs review because the integrity of the shared source at each
 failure time is unresolved. They do not by themselves establish a RAM-mode,
 driver or engine-arithmetic defect. Prior bounded quality passes remain
 bounded passes of their retained outputs. No failed arm contributes an
-accepted speedup. A new copy of the exact pinned shard, fresh checks of the
+accepted speedup. New copies of the exact pinned shards, fresh checks of the
 other shards and same-history direct/RAM model regressions are required
 before using the restored model for performance acceptance. The original
 abnormal file and all failed evidence are preserved.

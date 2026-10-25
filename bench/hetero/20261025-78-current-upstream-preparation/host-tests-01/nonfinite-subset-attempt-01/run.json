@@ -1,0 +1,23 @@
+{
+  "run": "python -X utf8 -B -m unittest serve.test_server.NonFiniteLogits.test_nothing_emitted_is_retried_once serve.test_server.NonFiniteLogits.test_mid_reply_ends_without_retry serve.test_server.NonFiniteLogits.test_twice_is_an_error serve.test_server.NonFiniteLogits.test_engine_done_line_raises -v",
+  "cwd": "E:\\Strata-Hetero-data\\source\\upstream-7dd5cf18-bridge-20261025",
+  "interpreter": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "started_utc": "2026-10-25T07:00:27.7997138Z",
+  "branch": "codex/78-upstream-current-bridge",
+  "head": "ddb19224de601fdd0eaee5f011e2ef1c3e7c4feb",
+  "hashes": [
+    {
+      "path": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "sha256": "16A377D348C3A0C8D3A58D222D96807065DD0DCD9438C6025900C842EC836603"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\source\\upstream-7dd5cf18-bridge-20261025\\serve\\server.py",
+      "sha256": "6420EA86C75B2209F3789336C9577E0FA42E5D1C994A87CAA318836A0BCBEFA7"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\source\\upstream-7dd5cf18-bridge-20261025\\serve\\test_server.py",
+      "sha256": "65ADB6CAE04AE99F539ACC7D3E58810EBBAF5867D8C1363E8CB6C6DB7E8D38B9"
+    }
+  ],
+  "scope": "four explicitly authorized fake-engine/in-memory-queue methods only; excludes test_twice_over_http; no sockets, devices, models, network, compiler"
+}
