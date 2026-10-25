@@ -1,0 +1,2 @@
+{"sampled_at_utc":"2026-10-25T05:06:23.399Z","physical_total_bytes":136963248128,"physical_available_bytes":119313117184,"commit_limit_bytes":145553182720,"commit_available_bytes":126968483840,"source":"GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit","error":null}
+{"sampled_at_utc":"2026-10-25T05:06:24.400Z","physical_total_bytes":136963248128,"physical_available_bytes":119296700416,"commit_limit_bytes":145553182720,"commit_available_bytes":126964371456,"source":"GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit","error":null}

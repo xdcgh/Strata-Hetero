@@ -1,0 +1,24 @@
+{
+  "phase": "build",
+  "exit_code": 0,
+  "batch_exit_file": 0,
+  "duration_seconds": 420.2176306,
+  "process": {
+    "pid": 24508,
+    "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+    "created": "2026-10-11T05:18:04.9166010Z",
+    "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\build.cmd\"",
+    "batch": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\build.cmd"
+  },
+  "log": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\build.log",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\build.cmd",
+  "last_resource": {
+    "sampled_at_utc": "2026-10-11T05:25:05.196Z",
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 113412685824,
+    "commit_limit_bytes": 145553182720,
+    "commit_available_bytes": 120602890240,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "error": null
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized_synthetic_only",
+  "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "driver_sha256": "0c7797529cf259856601504afbf1c392b25f9966e4074a9beb1bb4eece872a23",
+  "admission_source_sha256": "cd7b0293588981ecc36e47e5d826c6b60377222ee0aee5af33fc6f18d9292143",
+  "admission_test_receipt_sha256": "917c6ec993d2831eb000442d661f9ceedc145315e17955a010542226745eda89",
+  "live_inspected_admission_sha256": "42922a7cb43fafbdfedc84ca17accfa1b428e2e2db4ed4469f341e55c37c3b6d",
+  "test_binary_sha256": "8fde934007b8a341cae9427fdc0a675143e28742059a5c4616dc1423be51a545",
+  "driver_current": "621.01",
+  "model_allowed": false,
+  "fresh_inspected_admission_required": true,
+  "default_strict_wsl_gate_preserved": true,
+  "prior_attempt_test_or_model_started": false
+}

@@ -1,0 +1,14 @@
+{
+  "mode": "synthetic",
+  "pid": 2568,
+  "exit_code": 0,
+  "stdout_sha256": "21bba7b6691ad8a268f6d4854dd7209baf67204a55247cab040a3c18ebb28c6a",
+  "stderr_sha256": "2cb041e308d2f4704aea6863da45485b02ca2efe55251945acc30b07135c14f5",
+  "identity": {
+    "pid": 2568,
+    "parent": 8652,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe",
+    "created": "2026-10-25T05:07:32.3327390Z",
+    "command": "\"E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe\""
+  }
+}

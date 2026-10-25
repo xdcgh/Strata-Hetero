@@ -1,0 +1,11 @@
+{
+  "original_pid": 2568,
+  "original_handle_has_exited": false,
+  "observed_current_pid_identity": {
+    "pid": 2568,
+    "parent": 8652,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe",
+    "created": "2026-10-25T05:07:32.3327390Z",
+    "command": "\"E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe\""
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "root_typed_probe_synthetic_verified_not_model_acceptance",
+  "recorded_utc": "2026-10-25T05:08:12.949576+00:00",
+  "test_binary_sha256": "8fde934007b8a341cae9427fdc0a675143e28742059a5c4616dc1423be51a545",
+  "fixture_receipt_sha256": "264c13dc2e3b5b832ef7e9ae59d1825456d63303553c021189889c0bfe6b9003",
+  "device_cases": 64,
+  "begin_records": 66,
+  "checkpoint_records": 119,
+  "bad_records_by_format": {
+    "f32": 78,
+    "f16": 2,
+    "bf16": 1
+  },
+  "resource_samples": 2,
+  "resource_all_pass": true,
+  "owners_terminal": true,
+  "gpu_driver": "621.01",
+  "model_tested": false,
+  "performance_claim": false,
+  "prior_attempts": [
+    "WSL idle observation absent; no tests started",
+    "disabled-only passed, outer live identity query rejected after fast exit; no synthetic started"
+  ]
+}

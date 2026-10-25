@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "failure": "System.Management.Automation.RuntimeException: Fixture worker identity mismatch",
+  "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "binary": {
+    "sha256": "8fde934007b8a341cae9427fdc0a675143e28742059a5c4616dc1423be51a545",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe"
+  },
+  "build_receipt": {
+    "sha256": "bf689b65c9fe2301b9f19720d082ff9d14e9a4ec9c67d35e7df983b96333e317",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\build-receipt.json"
+  },
+  "runs": [],
+  "resource": {
+    "physical_min_bytes": 119296700416.0,
+    "count": 2,
+    "commit_min_bytes": 126964371456.0,
+    "all_pass": true
+  },
+  "sampler_terminal": true,
+  "sampler_launcher_identity": {
+    "pid": 25332,
+    "parent": 8652,
+    "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "created": "2026-10-25T05:06:23.2906910Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\fixture-execution-02\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\fixture-execution-02\\resources.STOP"
+  },
+  "sampler_child_identity": {
+    "pid": 23408,
+    "parent": 25332,
+    "exe": "C:\\Python314\\python.exe",
+    "created": "2026-10-25T05:06:23.3264380Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\fixture-execution-02\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\fixture-execution-02\\resources.STOP"
+  },
+  "stop_actions": [],
+  "worker_terminal": true,
+  "model_executed": false,
+  "synthetic_process_started": false,
+  "gpu_synthetic_status": "not_started",
+  "performance_claim": false
+}

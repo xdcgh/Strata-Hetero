@@ -1,0 +1,82 @@
+{
+  "schema": "strata-run71-build-preflight-v1",
+  "captured_utc": "2026-10-11T05:17:41.5921119Z",
+  "authorization_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\root-build-authorization.json",
+  "authorization_status": "root_reviewed_authorized_build_only",
+  "authorization_sha256": "28a0263bffcf4b5c1adee78d624c9c4ba38d0be9006fc60c2fa00e348d8d1496",
+  "driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1",
+  "driver_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+  "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "source_clean": true,
+  "source_key_files": [
+    {
+      "path": "include/strata/prefill/finite_probe.hpp",
+      "bytes": 5652,
+      "sha256": "63833441f044e82ed6f43e428653197d9d69bd75ab4a8a3f9293220d1065b5df"
+    },
+    {
+      "path": "src/prefill/finite_probe.cu",
+      "bytes": 8914,
+      "sha256": "e6ef51535cc7a650df00c9117e077f3cb20cb6d5dd287d444cbe1d7058cf0a19"
+    },
+    {
+      "path": "src/prefill/prefill.cpp",
+      "bytes": 283401,
+      "sha256": "77da085ae07b132fe326ad0ee989064651d3ef146807b9ff88c161ee97668a0d"
+    },
+    {
+      "path": "tests/cuda/prefill_finite_probe_test.cpp",
+      "bytes": 21216,
+      "sha256": "eb445286d4ff208018a76a240b2c667546b81833c0133e22ae57408142bd3dd6"
+    },
+    {
+      "path": "docs/HETERO_PREFILL_DIAGNOSTICS.md",
+      "bytes": 5722,
+      "sha256": "254f8257836af1be205dd19b609f17a7948dc796ae132e5c524a9a980d139d69"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 112272,
+      "sha256": "167c4154fce2d2d8076ce4d6a71331a1a647a7e1326b92446304834bce67e490"
+    }
+  ],
+  "main_head": "8b0cedac83f02b088861069d998112279f550792",
+  "main_tracked_clean": true,
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01",
+  "build_path_absent": true,
+  "resource_helper": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+    "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+    "git_blob": "a7ae863b48ae8b94a0e057195be2142045a4f22a"
+  },
+  "memory": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 113602699264,
+    "physical_used_bytes": 23360548864,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 24771661824,
+    "commit_available_bytes": 120781520896,
+    "commit_total_pages": 6047769,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 120781520896,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null,
+    "errors": []
+  },
+  "ram_floor_bytes": 12884901888,
+  "commit_floor_bytes": 4294967296,
+  "pwsh_path": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "pwsh_version": "7.6.5",
+  "compiler_processes": [],
+  "model_engine_processes": [],
+  "pass": true
+}

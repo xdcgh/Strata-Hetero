@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "test_command": [
+    "C:\\Python314\\python.exe",
+    "-u",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\test_prepare_moe71_model.py"
+  ],
+  "exit_code": 0,
+  "python_executable": "C:\\Python314\\python.exe",
+  "python_version": "Python 3.14.8",
+  "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\prepare_moe71_model.py",
+  "source_sha256": "f0a2bf90ca425f21fd98a073c1e11ef77878f55e3a9850c98055f4a3727dc08f",
+  "test_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\test_prepare_moe71_model.py",
+  "test_sha256": "a273e4a451f01b32a0727623d55a51f00e168995a70fe53a4eebc19cfacec217",
+  "powershell7_path": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "powershell7_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\host-tests-01\\stdout.txt",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\host-tests-01\\stderr.txt",
+  "stderr_sha256": "2cb77bfc24e872d25ed2db21c56780b50fe417abe26a063a2d3c0d2ce611290b",
+  "stderr_bytes": 119,
+  "scope": "pure host unittest only; temporary prep fixture, pinned PowerShell classifier and parser; no real prep/API/device/model/build"
+}

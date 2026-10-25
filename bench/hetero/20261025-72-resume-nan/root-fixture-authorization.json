@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized_synthetic_only",
+  "user_resume": "User explicitly requested finish original goal, first fix NaN, then real model hetero and full comparison",
+  "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "driver_sha256": "2d868fbbb28c78f087c499392f1e1ff3ec459b21896d807444b27722257dde62",
+  "test_binary_sha256": "8fde934007b8a341cae9427fdc0a675143e28742059a5c4616dc1423be51a545",
+  "gpu_driver_current": "621.01",
+  "gpu_driver_historical": "610.88",
+  "model_allowed": false,
+  "performance_claim_allowed": false,
+  "minimum_physical_gib": 12,
+  "minimum_system_commit_gib": 4,
+  "required_vram_mib": 46000,
+  "fresh_admission_required": true
+}

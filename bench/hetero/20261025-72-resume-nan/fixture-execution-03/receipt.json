@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "failure": null,
+  "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "binary": {
+    "sha256": "8fde934007b8a341cae9427fdc0a675143e28742059a5c4616dc1423be51a545",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe"
+  },
+  "build_receipt": {
+    "sha256": "bf689b65c9fe2301b9f19720d082ff9d14e9a4ec9c67d35e7df983b96333e317",
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\build-receipt.json"
+  },
+  "runs": [
+    {
+      "mode": "disabled",
+      "pid": 8988,
+      "exit_code": 0,
+      "stdout_sha256": "3efcc7fe02ae1c12c4ca5f3a6a6ac78ba3b57d3085372185b9055f0f0ea1a6ff",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identity": null
+    },
+    {
+      "mode": "synthetic",
+      "pid": 2568,
+      "exit_code": 0,
+      "stdout_sha256": "21bba7b6691ad8a268f6d4854dd7209baf67204a55247cab040a3c18ebb28c6a",
+      "stderr_sha256": "2cb041e308d2f4704aea6863da45485b02ca2efe55251945acc30b07135c14f5",
+      "identity": {
+        "pid": 2568,
+        "parent": 8652,
+        "exe": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe",
+        "created": "2026-10-25T05:07:32.3327390Z",
+        "command": "\"E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe\""
+      }
+    }
+  ],
+  "resource": {
+    "commit_min_bytes": 120501714944.0,
+    "count": 2,
+    "all_pass": true,
+    "physical_min_bytes": 113099190272.0
+  },
+  "sampler_terminal": true,
+  "sampler_launcher_identity": {
+    "pid": 25864,
+    "parent": 8652,
+    "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "created": "2026-10-25T05:07:31.7362250Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\fixture-execution-03\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\fixture-execution-03\\resources.STOP"
+  },
+  "sampler_child_identity": {
+    "pid": 7064,
+    "parent": 25864,
+    "exe": "C:\\Python314\\python.exe",
+    "created": "2026-10-25T05:07:31.7744250Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\fixture-execution-03\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\fixture-execution-03\\resources.STOP"
+  },
+  "stop_actions": [],
+  "worker_terminal": true,
+  "model_executed": false,
+  "synthetic_process_started": true,
+  "gpu_synthetic_status": "executed_exit_zero",
+  "performance_claim": false
+}

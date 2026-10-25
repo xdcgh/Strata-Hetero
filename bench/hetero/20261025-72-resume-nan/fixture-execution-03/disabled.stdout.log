@@ -1,0 +1,2 @@
+PASS disabled: no probe CUDA calls (before any context creation)
+PASS host: detail layer parser boundaries and MoE stage/format names

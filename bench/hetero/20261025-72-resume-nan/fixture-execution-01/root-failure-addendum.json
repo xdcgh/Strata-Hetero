@@ -1,0 +1,9 @@
+{
+  "scope": "pre-fixture admission failure, no test/model started",
+  "failure": "WSL keepalive and Comfy MCP restarted distro after authorized shutdown; strict observer only enumerated running distro and blocked unknown GPU use",
+  "secondary_failure": "finally assumed Measure-Object Minimum exists on zero resource samples; no receipt written",
+  "admission_sha256": "7647f65a11a552ad0f6e08ca9578dd2b04d07d7f4932969d1c5c24e9ec283457",
+  "correction": "new explicit inspected-running-WSL gate preserves strict default; actual root fd scan, no GPU users, stopped Comfy service, boot/freshness evidence; newdriver null-safe zero samples",
+  "test_executed": false,
+  "model_executed": false
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-25T05:06:22.752876+00:00",
+  "observer_only": true,
+  "is_model_test": false,
+  "raw": {
+    "observed_at_utc": "2026-10-25T05:06:22.752876+00:00",
+    "errors": [],
+    "windows_memory": {
+      "total_bytes": 136963248128,
+      "available_bytes": 119315214336,
+      "commit_limit_bytes": 145553182720,
+      "available_commit_bytes": 126973333504,
+      "source": "GlobalMemoryStatusEx physical RAM; PSAPI GetPerformanceInfo system commit"
+    },
+    "risky_windows_processes": [],
+    "nvidia": {
+      "gpus": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "vram_total_mib": 49140,
+          "vram_free_mib": 48394,
+          "vram_used_mib": 235,
+          "utilization_percent": 0.0,
+          "driver_version": "621.01"
+        }
+      ],
+      "compute_pids": [],
+      "process_telemetry_unknown": false,
+      "raw_gpu_csv": "NVIDIA GeForce RTX 4090 D, 49140, 48394, 235, 0, 621.01\n",
+      "raw_process_csv": "",
+      "processes": [],
+      "telemetry_error": null
+    },
+    "wsl": {
+      "available": true,
+      "running_list_raw": [],
+      "running_distros": []
+    }
+  },
+  "chosen_gates": {
+    "required_vram_mib": 46000,
+    "minimum_available_ram_gib": 12.0,
+    "check_wsl_current": true,
+    "ram": {
+      "pass": true,
+      "available_gib": 111.121,
+      "reason": null
+    },
+    "system_commit": {
+      "pass": true,
+      "minimum_gib": 4,
+      "available_bytes": 126973333504,
+      "reason": null
+    },
+    "vram": {
+      "pass": true,
+      "selected_gpu": "NVIDIA GeForce RTX 4090 D",
+      "available_mib": 48394,
+      "reason": null
+    },
+    "gpu_processes": {
+      "pass": true,
+      "blocked": [],
+      "reason": null
+    },
+    "windows_processes": {
+      "pass": true,
+      "found": [],
+      "exact_owned_controllers": [],
+      "reason": null
+    },
+    "wsl": {
+      "pass": true,
+      "blocked": [],
+      "reason": null
+    }
+  },
+  "status": "pass",
+  "pass": true,
+  "reasons": []
+}

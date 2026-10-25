@@ -1,0 +1,68 @@
+PASS disabled: no probe CUDA calls (before any context creation)
+PASS host: detail layer parser boundaries and MoE stage/format names
+PASS device: elements=1 bad=0 overwrite=0 repeat=0
+PASS device: elements=1 bad=1 overwrite=0 repeat=0
+PASS device: elements=1 bad=1 overwrite=1 repeat=0
+PASS device: elements=255 bad=0 overwrite=0 repeat=0
+PASS device: elements=255 bad=1 overwrite=0 repeat=0
+PASS device: elements=255 bad=1 overwrite=1 repeat=0
+PASS device: elements=256 bad=0 overwrite=0 repeat=0
+PASS device: elements=256 bad=1 overwrite=0 repeat=0
+PASS device: elements=256 bad=1 overwrite=1 repeat=0
+PASS device: elements=257 bad=0 overwrite=0 repeat=0
+PASS device: elements=257 bad=1 overwrite=0 repeat=0
+PASS device: elements=257 bad=1 overwrite=1 repeat=0
+PASS device: elements=1025 bad=0 overwrite=0 repeat=0
+PASS device: elements=1025 bad=1 overwrite=0 repeat=0
+PASS device: elements=1025 bad=1 overwrite=1 repeat=0
+PASS device: elements=1048577 bad=0 overwrite=0 repeat=0
+PASS device: elements=1048577 bad=1 overwrite=0 repeat=0
+PASS device: elements=1048577 bad=1 overwrite=1 repeat=0
+PASS device: finite stage before later NaN, nonzero minimum index
+PASS device: all-NaN count across blocks and invalid API guards
+PASS device: elements=1 bad=0 overwrite=0 repeat=1
+PASS device: elements=1 bad=1 overwrite=0 repeat=1
+PASS device: elements=1 bad=1 overwrite=1 repeat=1
+PASS device: elements=255 bad=0 overwrite=0 repeat=1
+PASS device: elements=255 bad=1 overwrite=0 repeat=1
+PASS device: elements=255 bad=1 overwrite=1 repeat=1
+PASS device: elements=256 bad=0 overwrite=0 repeat=1
+PASS device: elements=256 bad=1 overwrite=0 repeat=1
+PASS device: elements=256 bad=1 overwrite=1 repeat=1
+PASS device: elements=257 bad=0 overwrite=0 repeat=1
+PASS device: elements=257 bad=1 overwrite=0 repeat=1
+PASS device: elements=257 bad=1 overwrite=1 repeat=1
+PASS device: elements=1025 bad=0 overwrite=0 repeat=1
+PASS device: elements=1025 bad=1 overwrite=0 repeat=1
+PASS device: elements=1025 bad=1 overwrite=1 repeat=1
+PASS device: elements=1048577 bad=0 overwrite=0 repeat=1
+PASS device: elements=1048577 bad=1 overwrite=0 repeat=1
+PASS device: elements=1048577 bad=1 overwrite=1 repeat=1
+PASS device: finite stage before later NaN, nonzero minimum index
+PASS device: all-NaN count across blocks and invalid API guards
+PASS device: elements=1 bad=0 overwrite=0 repeat=2
+PASS device: elements=1 bad=1 overwrite=0 repeat=2
+PASS device: elements=1 bad=1 overwrite=1 repeat=2
+PASS device: elements=255 bad=0 overwrite=0 repeat=2
+PASS device: elements=255 bad=1 overwrite=0 repeat=2
+PASS device: elements=255 bad=1 overwrite=1 repeat=2
+PASS device: elements=256 bad=0 overwrite=0 repeat=2
+PASS device: elements=256 bad=1 overwrite=0 repeat=2
+PASS device: elements=256 bad=1 overwrite=1 repeat=2
+PASS device: elements=257 bad=0 overwrite=0 repeat=2
+PASS device: elements=257 bad=1 overwrite=0 repeat=2
+PASS device: elements=257 bad=1 overwrite=1 repeat=2
+PASS device: elements=1025 bad=0 overwrite=0 repeat=2
+PASS device: elements=1025 bad=1 overwrite=0 repeat=2
+PASS device: elements=1025 bad=1 overwrite=1 repeat=2
+PASS device: elements=1048577 bad=0 overwrite=0 repeat=2
+PASS device: elements=1048577 bad=1 overwrite=0 repeat=2
+PASS device: elements=1048577 bad=1 overwrite=1 repeat=2
+PASS device: finite stage before later NaN, nonzero minimum index
+PASS device: all-NaN count across blocks and invalid API guards
+PASS device: f16 signed zeros, subnormal, and maximum finite
+PASS device: f16 signed NaN/Inf counts, cross-block min, and first-format metadata
+PASS device: bf16 finite 0x7c00 distinction and signed NaN/Inf counts
+PASS device: finite FP32 65520 rounds to FP16 +Inf
+PASS host: MoE path emits one metadata-only event
+PASS all synthetic CUDA finite probe cases; no model or performance claim

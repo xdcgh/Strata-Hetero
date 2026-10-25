@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "review": "Run71 harness static read-only review",
+  "scope": [
+    "bench/hetero/20261011-71-moe45-finite-detail/preparation/prepare_moe71_model.py",
+    "bench/hetero/20261011-71-moe45-finite-detail/preparation/test_prepare_moe71_model.py",
+    "bench/hetero/20261011-69-prefill-first-nonfinite/preparation/prepare_probe69_model.py"
+  ],
+  "checks": {
+    "python_ast_parse": "pass for all three files; no imports or execution",
+    "stage_and_typed_nonfinite_contract": "static pass; Python and generated PowerShell validators inspected",
+    "moe_path_metadata": "mismatch found: Python permits layer -1; PowerShell rejects it",
+    "manifest_and_six_prompt_recipe": "static pass",
+    "strict_stop_and_diagnostics_order": "static pass",
+    "lf_framing_and_partial_lines": "static pass",
+    "source_build_identity_provenance": "static binding pass; external artifacts not independently checked",
+    "exclusive_no_model_preparation": "static pass; no request leaves created by preparation code",
+    "tests_source_coverage": "static coverage pass with gap: moe_path layer-boundary parity not tested; tests not run",
+    "full_original_comparison_or_model_success": "not established by these scripts"
+  },
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "bench/hetero/20261011-71-moe45-finite-detail/preparation/prepare_moe71_model.py",
+      "lines": "241-254",
+      "detail": "valid_moe_path accepts layer=-1, while generated PowerShell Convert-DiagnosticLine requires layer>=0 at line 325. A valid sentinel event may be classified normal in Python and fatal_invalid by the real quality controller.",
+      "fix": "Confirm the permitted layer range from the frozen C++ contract, align both validators, and test layer=-1, 0, and below-minimum parity in both classifiers."
+    }
+  ],
+  "execution": {
+    "tests_run": false,
+    "preparation_run": false,
+    "api_device_model_or_build_actions": false,
+    "source_modified": false
+  }
+}

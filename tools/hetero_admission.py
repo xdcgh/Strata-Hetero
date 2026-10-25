@@ -154,7 +154,7 @@ def verify_controller_chain(proof: dict[str, Any], live: list[dict[str, Any]],
 
 
 def evaluate(raw: dict[str, Any], required_vram_mib: int, minimum_ram_gib: float,
-             check_wsl: bool = True) -> dict[str, Any]:
+             check_wsl: bool = True, *, inspect_running_wsl: bool = False) -> dict[str, Any]:
     reasons: list[str] = []
     gates: dict[str, Any] = {"required_vram_mib": required_vram_mib,
                              "minimum_available_ram_gib": minimum_ram_gib,
@@ -242,6 +242,8 @@ def evaluate(raw: dict[str, Any], required_vram_mib: int, minimum_ram_gib: float
                 if distro.get("error"):
                     blocked_wsl.append({"distro": distro.get("name"), "reason": "WSL inspection unknown"})
                     continue
+                if inspect_running_wsl and verified_wsl_idle(distro):
+                    continue
                 blocked_wsl.append({"distro": distro.get("name"),
                                     "reason": "WSL device users unknown: running Linux distro"})
             passed = not blocked_wsl
@@ -303,7 +305,78 @@ def _risky_windows_processes(runner: Runner) -> list[dict[str, Any]]:
             for item in data or [] if int(item["ProcessId"]) != observer_pid]
 
 
-def _probe_wsl(runner: Runner) -> dict[str, Any]:
+WSL_GPU_PROBE = r'''import datetime,errno,json,os,stat,subprocess
+result={"schema":"strata-wsl-gpu-idle-v1","uid":os.geteuid(),"clients":[],"errors":[],"scanned_pids":0,"scanned_fds":0,"complete":False}
+def error(message):
+ if len(result["errors"])<32: result["errors"].append(str(message))
+try:
+ result["boot_id"]=open("/proc/sys/kernel/random/boot_id").read().strip()
+ device=os.stat("/dev/dxg")
+ result["device"]={"path":"/dev/dxg","rdev":device.st_rdev,"character":stat.S_ISCHR(device.st_mode)}
+ if result["uid"]!=0: raise RuntimeError("root required for complete fd observation")
+ for entry in os.listdir("/proc"):
+  if not entry.isdigit(): continue
+  root="/proc/"+entry
+  try: descriptors=os.listdir(root+"/fd")
+  except FileNotFoundError: continue
+  except OSError as exc: error("pid "+entry+" fd list: "+str(exc));continue
+  result["scanned_pids"]+=1
+  for fd in descriptors:
+   path=root+"/fd/"+fd
+   try: item=os.stat(path)
+   except FileNotFoundError: continue
+   except OSError as exc: error("pid "+entry+" fd "+fd+": "+str(exc));continue
+   result["scanned_fds"]+=1
+   if stat.S_ISCHR(item.st_mode) and item.st_rdev==device.st_rdev:
+    try: command=open(root+"/cmdline","rb").read(8192).replace(b"\0",b" ").decode("utf-8","replace")
+    except OSError: command=None
+    result["clients"].append({"pid":int(entry),"fd":fd,"command":command})
+ status=subprocess.run(["systemctl","show","comfyui.service","-p","ActiveState","-p","MainPID","-p","LoadState"],capture_output=True,text=True,timeout=5)
+ values=dict(line.split("=",1) for line in status.stdout.splitlines() if "=" in line)
+ result["comfy"]={"active":values.get("ActiveState"),"main_pid":int(values.get("MainPID","-1")),"load":values.get("LoadState"),"exit_code":status.returncode}
+ if result["boot_id"]!=open("/proc/sys/kernel/random/boot_id").read().strip(): error("boot changed during fd scan")
+ result["complete"]=not result["errors"] and result["scanned_pids"]>0
+except Exception as exc: error(type(exc).__name__+": "+str(exc))
+print(json.dumps(result,separators=(",",":"),ensure_ascii=True))
+'''
+
+
+def verified_wsl_idle(distro: dict[str, Any], now: dt.datetime | None = None) -> bool:
+    """Accept only a fresh, complete root fd inspection with no GPU clients.
+
+    Opt-in callers still use the independent NVIDIA/process/RAM/commit gates.
+    An idle service or low utilization alone is never sufficient.
+    """
+    import hashlib
+    proof = distro.get("gpu_inspection")
+    if not isinstance(proof, dict) or distro.get("inspection_script_sha256") != hashlib.sha256(WSL_GPU_PROBE.encode()).hexdigest():
+        return False
+    try:
+        at = dt.datetime.fromisoformat(distro["inspected_at_utc"].replace("Z", "+00:00"))
+        if at.tzinfo is None: return False
+        age = ((now or dt.datetime.now(dt.timezone.utc)) - at).total_seconds()
+        if not 0 <= age <= 10: return False
+    except (KeyError, TypeError, ValueError):
+        return False
+    device, comfy = proof.get("device"), proof.get("comfy")
+    return bool(
+        proof.get("schema") == "strata-wsl-gpu-idle-v1" and type(proof.get("uid")) is int and proof["uid"] == 0
+        and proof.get("complete") is True and proof.get("errors") == [] and proof.get("clients") == []
+        and type(proof.get("scanned_pids")) is int and proof["scanned_pids"] > 0
+        and type(proof.get("scanned_fds")) is int and proof["scanned_fds"] > 0
+        and isinstance(proof.get("boot_id"), str)
+        and re.fullmatch(r"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}", proof["boot_id"])
+        and isinstance(device, dict) and device.get("path") == "/dev/dxg" and device.get("character") is True
+        and type(device.get("rdev")) is int and device["rdev"] > 0
+        and isinstance(comfy, dict) and comfy.get("active") in ("inactive", "failed")
+        and type(comfy.get("main_pid")) is int and comfy["main_pid"] == 0
+        and comfy.get("load") in ("loaded", "not-found")
+        and type(comfy.get("exit_code")) is int
+        and (comfy["exit_code"] == 0 or comfy["load"] == "not-found" and comfy["exit_code"] == 4)
+    )
+
+
+def _probe_wsl(runner: Runner, *, inspect_running: bool = False) -> dict[str, Any]:
     wsl = shutil.which("wsl.exe") or shutil.which("wsl")
     if not wsl:
         return {"available": False, "running_list_raw": "", "running_distros": []}
@@ -312,6 +385,30 @@ def _probe_wsl(runner: Runner) -> dict[str, Any]:
     names = decode_wsl_list(raw_bytes)
     records = [{"name": name, "comfy_active": None, "dxg_users": None,
                 "reason": "WSL device users unknown: running Linux distro"} for name in names]
+    if inspect_running:
+        import hashlib
+        for record in records:
+            # Recheck before exec so the opt-in inspection is requested only
+            # for a distro observed running now, never every installed distro.
+            current = decode_wsl_list(_execute([wsl, "--list", "--running", "--quiet"], runner, text=False).stdout or b"")
+            if record["name"] not in current:
+                record["error"] = "distro state changed before inspection"
+                continue
+            try:
+                observed = _execute([wsl, "--distribution", record["name"], "--user", "root", "--exec",
+                                     "python3", "-I", "-S", "-B", "-c", WSL_GPU_PROBE], runner)
+                proof = json.loads(observed.stdout)
+                record.update({"gpu_inspection": proof,
+                               "inspection_script_sha256": hashlib.sha256(WSL_GPU_PROBE.encode()).hexdigest(),
+                               "inspected_at_utc": dt.datetime.now(dt.timezone.utc).isoformat()})
+                if verified_wsl_idle(record):
+                    record.update({"comfy_active": False, "dxg_users": [], "reason": None})
+            except Exception as exc:
+                record["error"] = f"{type(exc).__name__}: {exc}"
+        after = decode_wsl_list(_execute([wsl, "--list", "--running", "--quiet"], runner, text=False).stdout or b"")
+        if set(after) != set(names):
+            return {"available": True, "running_list_raw": after, "running_distros": records,
+                    "error": "running distro set changed during inspection"}
     return {"available": True, "running_list_raw": names, "running_distros": records}
 
 
@@ -355,7 +452,7 @@ def _controller_process_observation(path: Path, runner: Runner) -> tuple[list[di
 
 
 def observe(runner: Runner = subprocess.run, check_wsl: bool = True,
-            owned_controller_proof: Path | None = None) -> dict[str, Any]:
+             owned_controller_proof: Path | None = None, inspect_running_wsl: bool = False) -> dict[str, Any]:
     raw: dict[str, Any] = {"observed_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "errors": []}
     if os.name != "nt":
         raw["windows_memory"] = None
@@ -390,7 +487,7 @@ def observe(runner: Runner = subprocess.run, check_wsl: bool = True,
             raw["nvidia"] = {"telemetry_error": str(exc), "gpus": [], "raw_gpu_csv": None, "raw_process_csv": None}
             raw["errors"].append({"section": "nvidia", "error": str(exc)})
     if check_wsl:
-        try: raw["wsl"] = _probe_wsl(runner)
+        try: raw["wsl"] = _probe_wsl(runner, inspect_running=inspect_running_wsl)
         except Exception as exc:
             raw["wsl"] = {"error": str(exc), "running_list_raw": None, "ubuntu_running": []}
             raw["errors"].append({"section": "wsl", "error": str(exc)})
@@ -418,6 +515,8 @@ def main(argv: list[str] | None = None, *, observer: Callable[..., dict[str, Any
     parser.add_argument("--required-vram-mib", type=int, default=46000)
     parser.add_argument("--minimum-ram-gib", type=float, default=12)
     parser.add_argument("--check-wsl-current", action=argparse.BooleanOptionalAction, default=(os.name == "nt"))
+    parser.add_argument("--inspect-running-wsl", action="store_true",
+                        help="inspect already-running WSL GPU file descriptors; unknown or non-idle state still blocks")
     parser.add_argument("--owned-controller-proof", type=Path,
                         help="fresh exact launch-controller ancestry proof; never exempts GPU workloads")
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -434,9 +533,11 @@ def main(argv: list[str] | None = None, *, observer: Callable[..., dict[str, Any
                               "output_available": str(output)}, ensure_ascii=False))
             return 0
         kwargs = {"check_wsl": args.check_wsl_current}
+        if args.inspect_running_wsl: kwargs["inspect_running_wsl"] = True
         if args.owned_controller_proof is not None: kwargs["owned_controller_proof"] = args.owned_controller_proof
         raw = observer(**kwargs)
-        decision = evaluate(raw, args.required_vram_mib, args.minimum_ram_gib, args.check_wsl_current)
+        decision = evaluate(raw, args.required_vram_mib, args.minimum_ram_gib, args.check_wsl_current,
+                            inspect_running_wsl=args.inspect_running_wsl)
         manifest = {"schema_version": 1, "observed_at_utc": raw.get("observed_at_utc"),
                     "observer_only": True, "is_model_test": False,
                     "raw": raw, "chosen_gates": decision["gates"], "status": decision["status"],

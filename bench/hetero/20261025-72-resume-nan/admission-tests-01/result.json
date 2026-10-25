@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "test_command": [
+    "C:\\Python314\\python.exe",
+    "-u",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tools",
+    "-p",
+    "test_hetero_admission*.py"
+  ],
+  "exit_code": 0,
+  "python_executable": "C:\\Python314\\python.exe",
+  "python_version": "Python 3.14.8",
+  "module_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_admission.py",
+  "module_sha256": "cd7b0293588981ecc36e47e5d826c6b60377222ee0aee5af33fc6f18d9292143",
+  "existing_test_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_admission.py",
+  "existing_test_sha256": "71e4a64e40d570bd3f3bccbf7dc076444a62dd75f098532c4b5aa926e37bc738",
+  "new_test_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\test_hetero_admission_wsl_idle.py",
+  "new_test_sha256": "c5a605349f65a9169f8c1f39ecc8ae0797ea45270d02916b286724ade5499ff1",
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\admission-tests-01\\stdout.txt",
+  "stdout_sha256": "5875aad9703a9abb6232d4721cf055af5c986a85f1c7c21892d5776e85c96125",
+  "stdout_bytes": 160,
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\admission-tests-01\\stderr.txt",
+  "stderr_sha256": "214ecf91e02bbbe983998dc1f2abf4480ea4ce6ac4dc07969408920468fc4bef",
+  "stderr_bytes": 155,
+  "scope": "mock-only host tests; no actual WSL, external API, model, GPU, or compiler",
+  "recorded_at_utc": "2026-10-25T05:05:07.4397564Z"
+}

@@ -1,0 +1,7 @@
+{
+  "pid": 14944,
+  "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+  "created": "2026-10-11T05:17:55.0080610Z",
+  "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\configure.cmd\"",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\configure.cmd"
+}

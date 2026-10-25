@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_executed_root_review_required",
+  "run_id": "20261011-71-moe45-finite-detail",
+  "matrix_sha256": "0aabc746f487a7d607bd56aa2eab8cdaa352b0f4eb292d4dde11f8ee8ba5e13e",
+  "preparation_sha256": "79a90daa85978259b5c3cf314148f16535fd8c85b36d2d1abd9e314b87a101f5",
+  "template_bindings_sha256": "130b0945ab86210881495662764946acb882e3971e7b2ddb0fd559b9d5bfdccf",
+  "controls_normalization_sha256": "35701aec0669089d916ad9c121fe61e3ef4021a78f6296725c80001767d01da7",
+  "rendered_script_count": 4,
+  "request_output_leaves_created": 0,
+  "authorization_present": false,
+  "script_or_lifecycle_execution": false,
+  "no_model_payload_read_or_hashed": true
+}

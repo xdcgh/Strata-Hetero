@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized",
+  "recorded_utc": "2026-10-25T05:10:33.669441+00:00",
+  "matrix_sha256": "0aabc746f487a7d607bd56aa2eab8cdaa352b0f4eb292d4dde11f8ee8ba5e13e",
+  "wrapper_sha256": "083f68dc617318456c73878f84591c7dbd4442a487f8ea9538eb5922b360c20c",
+  "sides": [
+    "moe71"
+  ],
+  "execution_mode": "direct_powershell_controllers",
+  "source_pins": [
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_admission.py",
+      "sha256": "cd7b0293588981ecc36e47e5d826c6b60377222ee0aee5af33fc6f18d9292143"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+      "sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_bench.py",
+      "sha256": "833696199a71a7fc20f6a15d2968d7142851a0e62c778f734d907c789472880f"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_quality.py",
+      "sha256": "e12e0a4f3ecd4225c42e361ec0dd512ac0ac874c250efaa095a90715d2a0b4a2"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_compare_quality.py",
+      "sha256": "bc556866293eaa98deb17cc144280d426a7cdc33865d0e6b0ab974cb533b3f97"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_jsonl_tail.ps1",
+      "sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+      "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\strata.exe",
+      "sha256": "7d1758b24ee0f177a81c4e0f8440250f6abb5a268e6a9f197b1d93e13f351555"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\build-receipt.json",
+      "sha256": "bf689b65c9fe2301b9f19720d082ff9d14e9a4ec9c67d35e7df983b96333e317"
+    },
+    {
+      "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\root-fixture-review.json",
+      "sha256": "ab8420ec5380a833589240b2e5aa693210898dc8039a80a97a57dcc01d7df7c6"
+    }
+  ],
+  "corrected_preflight_attempts": [],
+  "allowed_phases": [
+    "launch",
+    "watch",
+    "quality",
+    "cleanup"
+  ],
+  "maximum_active_models": 1,
+  "maximum_prompt_tasks": 6,
+  "maximum_chat_requests": 24,
+  "gpu_driver": "621.01",
+  "scope": "one changed diagnostic with same5smokes+long1k history; fine selectedlayer45; warm1/formal3; stop failedtask; always exactcleanup",
+  "performance_allowed": false,
+  "unchanged_costly_retry_allowed": false,
+  "prerequisites": {
+    "typed_synthetic_cases": 64,
+    "host_harness_tests": 15,
+    "admission_tests": 28,
+    "no_start_validation": {
+      "launch": {
+        "status": "prepared_validated",
+        "run_id": "20261011-71-moe45-quality",
+        "start_performed": false,
+        "config_sha256": "0c51e4573aee705f121f6d144746b0c925592a4992a81ddf7bb62a4131f37e45",
+        "engine_sha256": "7d1758b24ee0f177a81c4e0f8440250f6abb5a268e6a9f197b1d93e13f351555",
+        "server_file_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+        "manifest_sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
+        "f_model_files_stat_rechecked": 4,
+        "pack_mtp_runtime_files_stat_rechecked": 14,
+        "expert_profile": {
+          "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\data\\expert-profile.bin",
+          "size_bytes": 196632,
+          "sha256": "8f59b4aa8873209dff11c11e37bcda9529a1335b724a1afeea37bf6388975baf"
+        },
+        "admission_required": {
+          "wsl_shutdown_before_observe": true,
+          "minimum_ram_gib": 12,
+          "required_vram_mib": 46000,
+          "minimum_commit_gib": 4
+        }
+      },
+      "startup-watch": {
+        "status": "startup_watch_prepared",
+        "monitor_started": false,
+        "run_id": "20261011-71-moe45-quality",
+        "physical_floor_gib": 12,
+        "commit_floor_gib": 4,
+        "sampling_interval_s": 1,
+        "exact_process_tree_check": true,
+        "on_gate_failure": "stop only exact revalidated owned model tree; preserve read-only sampler"
+      },
+      "quality": {
+        "status": "prepared_quality_validated",
+        "run_started": false,
+        "prompt_count": 6,
+        "manifest_prompt_count": 9,
+        "formal_per_prompt": 3,
+        "warmups_per_prompt": 1,
+        "caps": "128 for five prompts, 256 for smoke_python_function",
+        "manifest_sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
+        "expected_h4_configured_status": "passed"
+      }
+    },
+    "current_environment_patch_receipt_sha256": "d5339f266cc85807d0a480495ad144317b49d54c05051edd6d3744cf487a0226"
+  },
+  "original_goal_complete": false
+}

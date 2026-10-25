@@ -1,0 +1,149 @@
+{
+  "schema": "strata-run71-build-final-review-v1",
+  "status": "build_success_build_only",
+  "authorization_sha256": "28a0263bffcf4b5c1adee78d624c9c4ba38d0be9006fc60c2fa00e348d8d1496",
+  "driver_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397",
+  "source_before": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+    "head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+    "tree": "b1591b9221e754b397dbc722d06792b804c7406a",
+    "branch": "codex/71-moe45-finite-detail",
+    "clean": true,
+    "status": []
+  },
+  "source_after": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+    "head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+    "tree": "b1591b9221e754b397dbc722d06792b804c7406a",
+    "branch": "codex/71-moe45-finite-detail",
+    "clean": true,
+    "status": []
+  },
+  "source_current_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "source_current_clean": true,
+  "configure_exit_code": 0,
+  "build_exit_code": 0,
+  "build_argv": [
+    "--build",
+    "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01",
+    "--target",
+    "strata",
+    "prefill_finite_probe_test",
+    "--parallel",
+    "1",
+    "--verbose"
+  ],
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\strata.exe",
+    "size_bytes": 52804608,
+    "sha256": "7d1758b24ee0f177a81c4e0f8440250f6abb5a268e6a9f197b1d93e13f351555"
+  },
+  "binary_sha256_verified": "7d1758b24ee0f177a81c4e0f8440250f6abb5a268e6a9f197b1d93e13f351555",
+  "test_binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\prefill_finite_probe_test.exe",
+    "size_bytes": 270336,
+    "sha256": "8fde934007b8a341cae9427fdc0a675143e28742059a5c4616dc1423be51a545"
+  },
+  "test_binary_sha256_verified": "8fde934007b8a341cae9427fdc0a675143e28742059a5c4616dc1423be51a545",
+  "tests_built": true,
+  "tests_run": false,
+  "test_binary_executed": false,
+  "model_or_engine_cli_executed": false,
+  "device_executed": false,
+  "resource_receipt": {
+    "sample_count": 431,
+    "interval_seconds": 1,
+    "minimum_ram_available_bytes": 112769867776.0,
+    "minimum_commit_available_bytes": 119955648512.0,
+    "ram_floor_bytes": 12884901888,
+    "commit_floor_bytes": 4294967296,
+    "all_samples_pass": true
+  },
+  "actual_resources_jsonl_line_count": 432,
+  "resource_record_type_counts": [
+    {
+      "record_type": "",
+      "count": 432
+    }
+  ],
+  "receipt_to_jsonl_row_delta": 1,
+  "actual_bad_resource_rows": 0,
+  "actual_min_ram_bytes": 112769867776.0,
+  "actual_min_psapi_commit_bytes": 119955648512.0,
+  "all_actual_resource_rows_pass": true,
+  "resource_sha256": "1259e775db99eed9f66388932ce6b7c5db29cb9d7accf0318f1e49bc3d8591f2",
+  "resource_bytes": 125280,
+  "recorded_processes": [
+    {
+      "phase": "configure.process.json",
+      "pid": 14944,
+      "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+      "created": "2026-10-11T05:17:55.0080610Z",
+      "terminal_absent": true
+    },
+    {
+      "phase": "build.process.json",
+      "pid": 24508,
+      "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+      "created": "2026-10-11T05:18:04.9166010Z",
+      "terminal_absent": true
+    },
+    {
+      "phase": "resource-sampler",
+      "pid": 23684,
+      "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "terminal_absent": true
+    },
+    {
+      "phase": "resource-sampler",
+      "pid": 24260,
+      "exe": "C:\\Python314\\python.exe",
+      "terminal_absent": true
+    }
+  ],
+  "all_recorded_phase_and_sampler_processes_terminal": true,
+  "controller_terminal": {
+    "schema": "strata-run71-build-controller-terminal-v1",
+    "identity": {
+      "schema": "strata-run71-build-controller-start-v1",
+      "pid": 25020,
+      "parent_pid": 1972,
+      "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "created_utc": "2026-10-11T05:17:53.6877670Z",
+      "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01 -ExpectedHead 3fbad60f479481333254f5ac1e6b04630ca37e49 -ExpectedProjectVersion 0.1.42 -RunName moe45-finite-detail-20261011-71-build01 -Execute",
+      "argv": [
+        "-NoLogo",
+        "-NoProfile",
+        "-File",
+        "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1",
+        "-SourcePath",
+        "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+        "-BuildPath",
+        "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01",
+        "-ExpectedHead",
+        "3fbad60f479481333254f5ac1e6b04630ca37e49",
+        "-ExpectedProjectVersion",
+        "0.1.42",
+        "-RunName",
+        "moe45-finite-detail-20261011-71-build01",
+        "-Execute"
+      ],
+      "working_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+      "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\build-execution-01\\controller.stdout.raw.log",
+      "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\build-execution-01\\controller.stderr.raw.log",
+      "authorization_sha256": "28a0263bffcf4b5c1adee78d624c9c4ba38d0be9006fc60c2fa00e348d8d1496",
+      "driver_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397"
+    },
+    "ended_utc": "2026-10-11T05:25:06.3376512+00:00",
+    "exit_code": 0,
+    "terminal": true,
+    "stdout_bytes": 11665,
+    "stdout_sha256": "7d380d3a66ad5833a4ac3436003ec652c4423c699c2a3702782f9dae947bb814",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "metadata_copy_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\build-execution-01\\metadata-copy-manifest.json",
+  "metadata_copy_count": 55,
+  "metadata_copy_bytes": 9645491,
+  "excluded_compiled_file_count": 189
+}

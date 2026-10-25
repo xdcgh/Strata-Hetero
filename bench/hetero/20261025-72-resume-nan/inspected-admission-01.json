@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-25T05:05:49.680271+00:00",
+  "observer_only": true,
+  "is_model_test": false,
+  "raw": {
+    "observed_at_utc": "2026-10-25T05:05:49.680271+00:00",
+    "errors": [],
+    "windows_memory": {
+      "total_bytes": 136963248128,
+      "available_bytes": 112979820544,
+      "commit_limit_bytes": 145553182720,
+      "available_commit_bytes": 120426700800,
+      "source": "GlobalMemoryStatusEx physical RAM; PSAPI GetPerformanceInfo system commit"
+    },
+    "risky_windows_processes": [],
+    "nvidia": {
+      "gpus": [
+        {
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "vram_total_mib": 49140,
+          "vram_free_mib": 48394,
+          "vram_used_mib": 235,
+          "utilization_percent": 0.0,
+          "driver_version": "621.01"
+        }
+      ],
+      "compute_pids": [],
+      "process_telemetry_unknown": false,
+      "raw_gpu_csv": "NVIDIA GeForce RTX 4090 D, 49140, 48394, 235, 0, 621.01\n",
+      "raw_process_csv": "",
+      "processes": [],
+      "telemetry_error": null
+    },
+    "wsl": {
+      "available": true,
+      "running_list_raw": [
+        "Ubuntu-24.04"
+      ],
+      "running_distros": [
+        {
+          "name": "Ubuntu-24.04",
+          "comfy_active": false,
+          "dxg_users": [],
+          "reason": null,
+          "gpu_inspection": {
+            "schema": "strata-wsl-gpu-idle-v1",
+            "uid": 0,
+            "clients": [],
+            "errors": [],
+            "scanned_pids": 58,
+            "scanned_fds": 884,
+            "complete": true,
+            "boot_id": "fd9ff236-d2e2-4111-b75f-3e8f69dca5d1",
+            "device": {
+              "path": "/dev/dxg",
+              "rdev": 1051138,
+              "character": true
+            },
+            "comfy": {
+              "active": "inactive",
+              "main_pid": 0,
+              "load": "loaded",
+              "exit_code": 0
+            }
+          },
+          "inspection_script_sha256": "4ae5372b504fd3552bba57afe2cb1d37e634189fb517e23ed865951c1733b507",
+          "inspected_at_utc": "2026-10-25T05:05:50.335731+00:00"
+        }
+      ]
+    }
+  },
+  "chosen_gates": {
+    "required_vram_mib": 46000,
+    "minimum_available_ram_gib": 12.0,
+    "check_wsl_current": true,
+    "ram": {
+      "pass": true,
+      "available_gib": 105.221,
+      "reason": null
+    },
+    "system_commit": {
+      "pass": true,
+      "minimum_gib": 4,
+      "available_bytes": 120426700800,
+      "reason": null
+    },
+    "vram": {
+      "pass": true,
+      "selected_gpu": "NVIDIA GeForce RTX 4090 D",
+      "available_mib": 48394,
+      "reason": null
+    },
+    "gpu_processes": {
+      "pass": true,
+      "blocked": [],
+      "reason": null
+    },
+    "windows_processes": {
+      "pass": true,
+      "found": [],
+      "exact_owned_controllers": [],
+      "reason": null
+    },
+    "wsl": {
+      "pass": true,
+      "blocked": [],
+      "reason": null
+    }
+  },
+  "status": "pass",
+  "pass": true,
+  "reasons": []
+}

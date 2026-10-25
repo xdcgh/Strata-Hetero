@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "prepared_moe71_pending_root_review_not_launched",
+  "run_id": "20261011-71-moe45-finite-detail",
+  "side_id": "moe71",
+  "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "source_tree": "b1591b9221e754b397dbc722d06792b804c7406a",
+  "build_receipt": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\build-receipt.json",
+  "build_receipt_sha256": "bf689b65c9fe2301b9f19720d082ff9d14e9a4ec9c67d35e7df983b96333e317",
+  "binary_path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01\\strata.exe",
+  "binary_sha256": "7d1758b24ee0f177a81c4e0f8440250f6abb5a268e6a9f197b1d93e13f351555",
+  "binary_bytes": 52804608,
+  "matrix_sha256": "0aabc746f487a7d607bd56aa2eab8cdaa352b0f4eb292d4dde11f8ee8ba5e13e",
+  "template_bindings_sha256": "130b0945ab86210881495662764946acb882e3971e7b2ddb0fd559b9d5bfdccf",
+  "controls_normalization_sha256": "35701aec0669089d916ad9c121fe61e3ef4021a78f6296725c80001767d01da7",
+  "quality_prompt_ids": [
+    "smoke_arithmetic",
+    "smoke_unicode",
+    "smoke_json_arithmetic",
+    "smoke_python_function",
+    "smoke_three_key_retrieval",
+    "long_1k"
+  ],
+  "manifest_prompt_ids": [
+    "smoke_arithmetic",
+    "smoke_unicode",
+    "smoke_json_arithmetic",
+    "smoke_python_function",
+    "smoke_three_key_retrieval",
+    "long_1k",
+    "long_4k",
+    "long_16k",
+    "long_30k7"
+  ],
+  "warmups_per_prompt": 1,
+  "formal_per_prompt": 3,
+  "request_output_leaves_created": 0,
+  "model_or_runtime_assets_copied": false,
+  "authorization_present": false,
+  "scripts_invoked": false,
+  "no_start_cli_validation_performed": false
+}

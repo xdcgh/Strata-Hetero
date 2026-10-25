@@ -1,0 +1,40 @@
+{
+  "schema": "strata-run71-build-controller-terminal-v1",
+  "identity": {
+    "schema": "strata-run71-build-controller-start-v1",
+    "pid": 25020,
+    "parent_pid": 1972,
+    "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "created_utc": "2026-10-11T05:17:53.6877670Z",
+    "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01 -ExpectedHead 3fbad60f479481333254f5ac1e6b04630ca37e49 -ExpectedProjectVersion 0.1.42 -RunName moe45-finite-detail-20261011-71-build01 -Execute",
+    "argv": [
+      "-NoLogo",
+      "-NoProfile",
+      "-File",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\preparation\\run_cuda_build_probe71.ps1",
+      "-SourcePath",
+      "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
+      "-BuildPath",
+      "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01",
+      "-ExpectedHead",
+      "3fbad60f479481333254f5ac1e6b04630ca37e49",
+      "-ExpectedProjectVersion",
+      "0.1.42",
+      "-RunName",
+      "moe45-finite-detail-20261011-71-build01",
+      "-Execute"
+    ],
+    "working_directory": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero",
+    "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\build-execution-01\\controller.stdout.raw.log",
+    "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\build-execution-01\\controller.stderr.raw.log",
+    "authorization_sha256": "28a0263bffcf4b5c1adee78d624c9c4ba38d0be9006fc60c2fa00e348d8d1496",
+    "driver_sha256": "22d7d43d30dd7644f99839ececdec3f3781ae8c5df46429fc2f89b477cc61397"
+  },
+  "ended_utc": "2026-10-11T05:25:06.3376512+00:00",
+  "exit_code": 0,
+  "terminal": true,
+  "stdout_bytes": 11665,
+  "stdout_sha256": "7d380d3a66ad5833a4ac3436003ec652c4423c699c2a3702782f9dae947bb814",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

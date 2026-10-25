@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-10-25T05:09:38.798069+00:00",
+  "old_hashes": {
+    "matrix.json": "396f3bb40c66b7d1befaa5577c9349476612f84fc0983e2cfbff79af2e315b6f",
+    "template-bindings.json": "b5a5723d782f1dfc6c2b5fd572e5c8d8d6c506e6a90b61be09365c43a9c2da6b",
+    "controls-normalization.json": "85c55de4a8521dfad3039016c671aa0e207df0b025d07d338750641c1a0c4d83",
+    "preparation.json": "ce25ca14b3223b4af16dc6054b69a9a27200eee4d80cae10aa3dda503d373f92",
+    "preparation-receipt.json": "9f9f24d3f3609507d07d0bfef85074656ed251eb9ff477c5f903187556f4ca2e",
+    "rendered-scripts/moe71/launch.ps1": "579727883fd201aadf44abaa8c913138710d6e56114d00a7a20f5faf62b8a454"
+  },
+  "new_hashes": {
+    "matrix.json": "0aabc746f487a7d607bd56aa2eab8cdaa352b0f4eb292d4dde11f8ee8ba5e13e",
+    "template-bindings.json": "130b0945ab86210881495662764946acb882e3971e7b2ddb0fd559b9d5bfdccf",
+    "controls-normalization.json": "35701aec0669089d916ad9c121fe61e3ef4021a78f6296725c80001767d01da7",
+    "preparation.json": "79a90daa85978259b5c3cf314148f16535fd8c85b36d2d1abd9e314b87a101f5",
+    "preparation-receipt.json": "5d1aac2003c5d56acdd4c0baa9e40854557a1bc08dbfe9c6f69699af74598ffe",
+    "rendered-scripts/moe71/launch.ps1": "600a96b4f7314416451147c854e472adf390d129e83bbf451a0b15c585022dee"
+  },
+  "patch": {
+    "scope": "fresh admission only; no model math, args, prompt, sampler or resource-floor change",
+    "method": "explicit root fd inspection for already-running WSL; default strict enumeration behavior remains unchanged; unknown or active GPU still blocked",
+    "prior_launch_sha256": "579727883fd201aadf44abaa8c913138710d6e56114d00a7a20f5faf62b8a454",
+    "new_launch_sha256": "600a96b4f7314416451147c854e472adf390d129e83bbf451a0b15c585022dee",
+    "admission_source_sha256": "cd7b0293588981ecc36e47e5d826c6b60377222ee0aee5af33fc6f18d9292143",
+    "gpu_driver_current": "621.01",
+    "execution_date": "2026-10-25",
+    "source_build_date": "2026-10-11",
+    "root_synthetic_review_sha256": "ab8420ec5380a833589240b2e5aa693210898dc8039a80a97a57dcc01d7df7c6"
+  }
+}
