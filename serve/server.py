@@ -3828,6 +3828,7 @@ class Service:
         self.aliases: list[str] = []                  # #297: other names of the model (the config's `aliases`)
         self.answer_room = True                       # 0.1.45: see ANSWER_ROOM_MIN_CAP (the config's "answer_room": false turns it off)
         self.reasoning_close_retry = False            # #1053 (opt-in): close the thinking once when a reply ends inside it
+        self.hetero_capture_token_ids = False           # local A/B evidence; opt-in OpenAI SSE only
         self.codex_compaction_cache = False           # #924 (opt-in): a Codex compaction is rendered with its conversation's tools
         self.codex_thread_titles = False              # #923 (opt-in): answer Codex's thread-title turns without the engine
         self.sampling_defaults = dict(sampling_defaults or {})   # the run config's `sampling` block
@@ -5064,19 +5065,20 @@ class Service:
         return now
 
     def run(self, ids, thinking, tools, max_new, sampling, cancel, force=None,
-            declared_only=False) -> Iterator[tuple[str, object]]:
+            declared_only=False, capture_token_ids=False) -> Iterator[tuple[str, object]]:
         """The request's events (see _run); with "prevent_sleep" in the config, the PC stays awake while it runs or waits."""
         ka = self.keep_awake
         if ka is not None:
             ka.acquire()
         try:
-            yield from self._run(ids, thinking, tools, max_new, sampling, cancel, force, declared_only)
+            yield from self._run(ids, thinking, tools, max_new, sampling, cancel, force, declared_only,
+                                 capture_token_ids)
         finally:
             if ka is not None:
                 ka.release()
 
     def _run(self, ids, thinking, tools, max_new, sampling, cancel, force=None,
-             declared_only=False) -> Iterator[tuple[str, object]]:
+             declared_only=False, capture_token_ids=False) -> Iterator[tuple[str, object]]:
         """Yields ("event", Event) as text arrives, then ("done", {"finish": .., "completion_tokens": ..}).
         `force` (forced_call): the opening of the call the reply must make - see prepare()."""
         # the model card's sampling for this thinking state, then the config's block, then the Chat settings shared with
@@ -5148,6 +5150,7 @@ class Service:
         recovery_count, reasoning_text, repeat_coverage = 0, "", 0.0
         looped, next_loop_check = False, LOOP_CHECK_EVERY       # #728: reasoning that repeats whole passages
         raw_ids = []                                    # every generated id (STRATA_DEBUG: dump raw model text)
+        engine_generated_ids = [] if capture_token_ids else None  # request-local, including parallel slots
         emb, self.embeddings.path = getattr(self.embeddings, "path", None), None   # this run's to delete now
         img_keys, self.embeddings.keys = getattr(self.embeddings, "keys", None), None
         if emb and img_keys:
@@ -5277,6 +5280,8 @@ class Service:
                                     last_out = time.perf_counter()
                                     yield "ping", None
                                     continue
+                                if engine_generated_ids is not None:
+                                    engine_generated_ids.append(t)  # before EOS/filtering/detokenization; no wrappers
                                 n += 1
                                 if first_engine_token_s is None:
                                     first_engine_token_s = round(time.perf_counter() - waiting, 3)
@@ -5606,6 +5611,13 @@ class Service:
         done = {"finish": finish, "completion_tokens": n, "reused": (timings or {}).get("cache_n", 0),
                 "timings": timings, "reasoning_tokens": thinking_n,
                 "reasoning_recoveries": recovery_count}
+        if engine_generated_ids is not None:
+            done["strata_diagnostics"] = {
+                "actual_generated_token_ids": engine_generated_ids,
+                "source": "non-None integer IDs yielded by engine.generate; includes emitted stop/EOS IDs; "
+                          "excludes server-inserted wrap/forced-opening IDs",
+                "include_stop": True,
+            }
         if stops is not None and stops.hit is not None:
             done["stop_sequence"] = stops.hit
         yield "done", done
@@ -5715,7 +5727,7 @@ def _debug_req(api, req, messages, tools, max_new, thinking, prompt_tokens):
 
 # ------------------------------------------------------------------------------------------------ MCP tool loop
 def run_with_mcp(svc: Service, hub, messages, tools, kw, ids, thinking, max_new, max_req, sampling, cancel,
-                 mcp_names):
+                 mcp_names, capture_token_ids=False):
     """Service.run with the MCP tools executed here: the model writes a call to an MCP tool, the server runs it, adds
     the call and its result to the conversation and lets the model continue - up to `max_rounds` times.  Yields what
     Service.run yields (text, thinking, the request's own tool calls) plus ("mcp", {...}) for the tool activity, and
@@ -5726,12 +5738,18 @@ def run_with_mcp(svc: Service, hub, messages, tools, kw, ids, thinking, max_new,
     could not reach the model before the client's)."""
     max_rounds = int(hub.settings["max_rounds"])
     total, rounds, done = 0, 0, None
+    engine_token_ids = [] if capture_token_ids else None
     messages = list(messages)
     while True:
         text, reasoning, calls, own_calls = [], [], [], 0
-        for kind, x in svc.run(ids, thinking, tools, max_new, sampling, cancel, declared_only=True):
+        request_run = (svc.run(ids, thinking, tools, max_new, sampling, cancel, declared_only=True,
+                               capture_token_ids=True) if capture_token_ids else
+                       svc.run(ids, thinking, tools, max_new, sampling, cancel, declared_only=True))
+        for kind, x in request_run:
             if kind == "done":
                 done = x
+                if engine_token_ids is not None:
+                    engine_token_ids.extend(x.get("strata_diagnostics", {}).get("actual_generated_token_ids", []))
                 continue
             if kind == "event":
                 ev: Event = x
@@ -5802,7 +5820,15 @@ def run_with_mcp(svc: Service, hub, messages, tools, kw, ids, thinking, max_new,
         except ClientGone:                                      # #1999: the client left while a picture was prepared
             done = {**done, "finish": "cancel"}
             break
-    yield "done", {**done, "completion_tokens": total, "prompt_tokens": len(ids)}
+    final = {**done, "completion_tokens": total, "prompt_tokens": len(ids)}
+    if engine_token_ids is not None:
+        final["strata_diagnostics"] = {
+            "actual_generated_token_ids": engine_token_ids,
+            "source": "non-None integer IDs yielded by engine.generate across MCP rounds; includes emitted stop/EOS "
+                      "IDs; excludes server-inserted wrap/forced-opening IDs",
+            "include_stop": True,
+        }
+    yield "done", final
 
 
 # ------------------------------------------------------------------------------------------------ OpenAI
@@ -5841,6 +5867,7 @@ def openai_chunks(svc: Service, req: dict, ids, thinking, tools, max_new, cancel
     # llama.cpp's flag, and its default: a client that wants prompt progress asks for it, and nothing changes for one
     # that does not.  Strata already sends a keep-alive comment on every PP line, so this only fills that line in.
     want_progress = bool(req.get("return_progress"))
+    capture_token_ids = req.get("stream") is True and getattr(svc, "hetero_capture_token_ids", False) is True
 
     def chunk(delta, finish=None):
         return {"id": cid, "object": "chat.completion.chunk", "created": created, "model": model,
@@ -5850,7 +5877,14 @@ def openai_chunks(svc: Service, req: dict, ids, thinking, tools, max_new, cancel
     calls = 0
     streamed = {}                                  # tool call id -> index, for calls sent piece by piece
     finished = set()                               # ... and the ones whose final tool_call came (#211)
-    for kind, x in run if run is not None else svc.run(ids, thinking, tools, max_new, req, cancel, force=force, declared_only=True):
+    if run is not None:
+        request_run = run
+    elif capture_token_ids:
+        request_run = svc.run(ids, thinking, tools, max_new, req, cancel, force=force, declared_only=True,
+                              capture_token_ids=True)
+    else:
+        request_run = svc.run(ids, thinking, tools, max_new, req, cancel, force=force, declared_only=True)
+    for kind, x in request_run:
         if kind == "ping":
             # a PP line: the prompt is being read and there is nothing to say yet.  It used to be only the SSE comment;
             # now it carries the progress when the client asked, and stays the comment when there is nothing to report.
@@ -5892,6 +5926,8 @@ def openai_chunks(svc: Service, req: dict, ids, thinking, tools, max_new, cancel
                              "prompt_tokens_details": {"cached_tokens": x.get("reused") or 0}}
             if x.get("timings"):
                 last["timings"] = x["timings"]          # llama.cpp's field: the speed its clients show
+            if capture_token_ids and x.get("strata_diagnostics") is not None:
+                last["strata_diagnostics"] = x["strata_diagnostics"]
             yield last
 
 
@@ -7164,8 +7200,9 @@ def make_handler(svc: Service):
             self._watch_client(cancel)                       # #430 #431 (#1999: before prepare, which can take long)
             ids, thinking, max_new = svc.prepare(messages, tools, kw, max_new, force=force, req=req, cancel=cancel)
             _debug_req("openai", req, messages, tools, max_new, thinking, len(ids))
+            capture_token_ids = req.get("stream") is True and svc.hetero_capture_token_ids is True
             run = run_with_mcp(svc, svc.mcp, messages, tools, kw, ids, thinking, max_new, max_req, req, cancel,
-                               {t["name"] for t in extra}) if use_mcp else None
+                               {t["name"] for t in extra}, capture_token_ids=capture_token_ids) if use_mcp else None
             chunks = openai_chunks(svc, req, ids, thinking, tools, max_new, cancel, run=run, force=force)
             if validator is not None:
                 chunks = structured_chunks(chunks, validator)
@@ -8460,6 +8497,7 @@ def main(argv=None, *, lifecycle_event=None, interrupt_exit_code: int = 0) -> in
         svc.requested_slots = per_replica * len(groups) if groups else per_replica
     svc.answer_room = cfg.get("answer_room") is not False
     svc.reasoning_close_retry = cfg.get("reasoning_close_retry") is True    # #1053: opt-in, off by default
+    svc.hetero_capture_token_ids = cfg.get("hetero_capture_token_ids") is True
     if cfg.get("images"):                               # image generation (serve/images.py), set up by setup --images
         icfg = {k: (os.path.abspath(os.path.join(cfg.get("cwd") or ".", v))
                     if k in ("exe", "diffusion_model", "vae", "llm", "out_dir") and isinstance(v, str)
