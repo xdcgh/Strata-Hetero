@@ -1,0 +1,9 @@
+test_actual_payload_roundtrip_and_static_rows_reuse (tools.test_hetero_live_bridge.LiveTests.test_actual_payload_roundtrip_and_static_rows_reuse) ... ok
+test_changed_engine_blob_never_reaches_worker (tools.test_hetero_live_bridge.LiveTests.test_changed_engine_blob_never_reaches_worker) ... ok
+test_device_and_output_shape_rejection (tools.test_hetero_live_bridge.LiveTests.test_device_and_output_shape_rejection) ... ok
+test_nonfinite_and_unsupported_rows_rejected (tools.test_hetero_live_bridge.LiveTests.test_nonfinite_and_unsupported_rows_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.033s
+
+OK

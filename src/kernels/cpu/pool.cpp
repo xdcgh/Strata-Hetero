@@ -1,5 +1,6 @@
 // src/kernels/cpu/pool.cpp - P2.S3: the CPU expert pool.  Read pool.hpp first; it explains the protocol.
 #include "strata/kernels/cpu/pool.hpp"
+#include "strata/kernels/cpu/live_helper.hpp"
 #include "strata/core/progress.hpp"
 #include "strata/platform/aux_cpus.hpp"
 #include "strata/kernels/cpu/expert_layout.hpp"
@@ -12,6 +13,7 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <cstring>
 #include <stdexcept>
 
 #if defined(_WIN32)
@@ -794,6 +796,18 @@ void ExpertPool::run_split_multi(ExpertJobMulti* jobs, int n) {
 
 void ExpertPool::run_split_multi_native(const NativeFmt& f, ExpertJobMulti* jobs, int n) {
     if (n <= 0) return;
+    // Only forced mode filters the CPU batch. Successful helper results retain
+    // their original output rows for the existing model combine.
+    std::vector<ExpertJobMulti> pending;
+    const char* helper = std::getenv("STRATA_EXPERT_HELPER");
+    if (helper && !std::strcmp(helper, "forced")) {
+        pending.reserve((size_t)n);
+        for (int i = 0; i < n; ++i)
+            if (!live_helper(f, jobs[i], jobs[i].raw, jobs[i].layer, jobs[i].expert, jobs[i].phase))
+                pending.push_back(jobs[i]);
+        jobs = pending.data(); n = (int)pending.size();
+        if (n == 0) return;
+    }
     const auto t0 = std::chrono::steady_clock::now();
     // more distinct experts than buffers: run them in batches
     for (int b0 = 0; b0 < n; b0 += kMaxSplitMulti) {

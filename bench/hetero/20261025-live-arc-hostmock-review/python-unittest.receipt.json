@@ -1,0 +1,39 @@
+{
+  "schema": "strata-live-helper-hostmock-receipt-v1",
+  "started_utc": "2026-10-25T06:07:34.5594018Z",
+  "finished_utc": "2026-10-25T06:07:34.9327417Z",
+  "command": "C:\\Python314\\python.exe -m unittest -v tools.test_hetero_live_bridge",
+  "cwd": "E:\\Strata-Hetero-data\\source\\hetero-live-arc-20261025",
+  "exit_code": 0,
+  "device_accessed": false,
+  "model_loaded": false,
+  "compiled": false,
+  "scope": "four Python typed mock tests only",
+  "files": [
+    {
+      "path": "tools\\test_hetero_live_bridge.py",
+      "sha256": "a670b2cbe90487c822c7e11ba5928eb4b5710caadddfa3763f5789e030e9e002",
+      "bytes": 3481
+    },
+    {
+      "path": "tools\\hetero_live_bridge.py",
+      "sha256": "286ced2a3e9f89786e2915a90ebd4697e68b1aad95e7159d436bf71a4cc06265",
+      "bytes": 7314
+    },
+    {
+      "path": "tools\\hetero_xpu_transport.py",
+      "sha256": "564258e67b5c6a0fd4ff2019cbc6f3c3a1b2912671743855ad56719937ea94a4",
+      "bytes": 22391
+    },
+    {
+      "path": "bench\\hetero\\20261025-live-arc-hostmock-review\\python-unittest.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "bench\\hetero\\20261025-live-arc-hostmock-review\\python-unittest.stderr.txt",
+      "sha256": "f6296016da955bc18b469b62e48b835b5f38e7257b129fb100af2aad78d98e27",
+      "bytes": 667
+    }
+  ]
+}

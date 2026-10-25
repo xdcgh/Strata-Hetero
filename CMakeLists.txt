@@ -1160,7 +1160,7 @@ if(STRATA_BUILD_TESTS OR STRATA_BUILD_CONVERSATION_TESTS)
   add_test(NAME batch_groups_test COMMAND batch_groups_test)
 endif()
 
-add_library(strata_kernels_cpu STATIC src/kernels/cpu/expert.cpp src/kernels/cpu/pool.cpp
+add_library(strata_kernels_cpu STATIC src/kernels/cpu/expert.cpp src/kernels/cpu/pool.cpp src/kernels/cpu/live_helper.cpp
             src/kernels/cpu/expert_layout.cpp src/kernels/cpu/q2_avx2.cpp)
 target_include_directories(strata_kernels_cpu PUBLIC include)
 # Plan v0.3 P6: only the kernel files get the AVX-512 / AVX2 flags; the pool and the probe run on any x86-64,
@@ -1317,6 +1317,9 @@ if(STRATA_NATIVE_EXPERTS)
   target_link_libraries(router_dot_parity PRIVATE strata_kernels_cpu)
   if(STRATA_BUILD_TESTS)
     add_executable(pool_tasks_test src/kernels/cpu/pool_tasks_test.cpp)
+    add_executable(live_helper_host_fixture src/kernels/cpu/live_helper_host_fixture.cpp)
+    target_link_libraries(live_helper_host_fixture PRIVATE strata_kernels_cpu)
+    add_test(NAME live_helper_host_fixture COMMAND live_helper_host_fixture)
     target_link_libraries(pool_tasks_test PRIVATE strata_kernels_cpu)
     add_test(NAME pool_tasks_test COMMAND pool_tasks_test)
     set_tests_properties(pool_tasks_test PROPERTIES TIMEOUT 180)

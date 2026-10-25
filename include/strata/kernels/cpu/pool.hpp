@@ -61,6 +61,10 @@ struct ExpertJobMulti {
     float* out[MAXT] = {};
     /// Plan v0.3 P6: a native pack's activations (the layer's `vec_dot_type`), one per token.
     const void* nact[MAXT] = {};
+    // Actual model inputs, only consumed by the explicitly forced live helper.
+    const float* raw[MAXT] = {};
+    int layer = -1, expert = -1;
+    const char* phase = "unspecified";
 };
 
 /// How worker threads are allocated across physical/logical CPU cores (#272).  `All` is the layout the pool has

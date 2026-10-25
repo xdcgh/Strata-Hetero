@@ -17,6 +17,7 @@
 #include "strata/kernels/native_router.hpp"
 #include "strata/kernels/native_moe.hpp"
 #include "strata/kernels/cpu/expert.hpp"
+#include "strata/kernels/cpu/live_helper.hpp"
 #include "strata/kernels/elementwise.hpp"
 #include "strata/kernels/fused_gr.hpp"
 #include "strata/kernels/route_prior.hpp"
@@ -715,6 +716,13 @@ bool Verifier::init(const WeightTable& wt, const ModelGeometry& g, SessionState&
         // (not with set_always_publish: the device table may lag the host's while windows are in flight)
         device_plan_ = !all_resident_ && !always_publish_ && (v != nullptr && std::atoi(v) != 0);
     }
+    if (strata::kernels::cpu::live_helper_forced()) {
+        // Both shortcuts can bypass host routing. The forced experiment needs
+        // the host plan so the frozen expert cannot run concurrently on CUDA.
+        all_resident_ = false;
+        device_plan_ = false;
+        std::fprintf(stderr,"hetero_live forced_host_plan=1 resident_shortcut=0 device_plan=0\n");
+    }
     // (halo's STRATA_VERIFY_RESIDENT=1 is this window's all_resident_ graph above, which 0.1.39 has on by default)
     if (g_qfuse()) {   // S26: the HC read's q8_1 group counters, zeroed once (each launch leaves them zero)
         if (cudaMalloc((void**) &qcnt_, sizeof(unsigned) * (size_t) (g.n_embd / 32)) != cudaSuccess ||
@@ -1409,7 +1417,7 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
 #endif
             // #578: the helper GPUs reduce with the routing weights - publish them; set_always_publish: the rows
             // whatever the device's residency table says (pipelined windows)
-            if (remote_opt_ || always_publish_)
+            if (remote_opt_ || always_publish_ || strata::kernels::cpu::live_helper_forced())
                 doorbell_publish(xm, ids_ + tb * K, w_ + tb * K, (int64_t) n * N, (int64_t) n * K, m_x_ + tb * N,
                                  m_ids_ + tb * K, m_w_ + tb * K, m_seq_, cs);
             else {

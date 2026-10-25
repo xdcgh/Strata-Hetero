@@ -6,6 +6,7 @@
 #include "strata/core/remote_experts.hpp"
 #include "strata/core/peer_experts.hpp"
 #include "strata/kernels/cpu/expert_layout.hpp"
+#include "strata/kernels/cpu/live_helper.hpp"
 #include "strata/artifact/gguf_reader.hpp"
 
 #include "strata/core/pinned.hpp"
@@ -3548,6 +3549,12 @@ void expert_pool_dispatch_multi(ExpertDispatch& d, const float* x_f, const int32
     if ((int64_t) d.act_multi.size() < n_tok) d.act_multi.resize((size_t) MAXT);
     const ExpertLayout& lay = expert_layout();
     const bool native = lay.native;
+    // Experimental direct route: remove the frozen expert from the HOST GPU
+    // plan before publication, even if resident. Its original CPU job remains
+    // the fallback if helper startup, identity or inference fails.
+    const bool force_live = native && live_helper_forced() && d.layers == 28 &&
+                            d.peer == nullptr && d.remote_count == 0 && d.plan != nullptr &&
+                            n_tok * k <= d.plan->cap;
     if (native && d.nact_multi.size() < (size_t) MAXT * kNativeActBytes) d.nact_multi.resize((size_t) MAXT * kNativeActBytes);
     if (d.job_of.size() != (size_t) d.n_expert) d.job_of.assign((size_t) d.n_expert, (int16_t) -1);
     if (d.jobs_multi.size() < (size_t) (n_tok * k)) d.jobs_multi.resize((size_t) (MAXT * k));
@@ -3585,7 +3592,7 @@ void expert_pool_dispatch_multi(ExpertDispatch& d, const float* x_f, const int32
             if (first_of[i] == i) {
                 distinct[nd++] = i;
                 const int32_t e = ids[i];
-                if (e >= 0 && e < d.n_expert && d.host_res[(size_t) d.layers * (size_t) d.n_expert + (size_t) e] < 0 &&
+                if (!(force_live && e == 288) && e >= 0 && e < d.n_expert && d.host_res[(size_t) d.layers * (size_t) d.n_expert + (size_t) e] < 0 &&
                     !(d.peer != nullptr && d.peer->has(d.layers, e)) && !helper_holds(e)) ++nmiss;
             }
         }
@@ -3605,6 +3612,7 @@ void expert_pool_dispatch_multi(ExpertDispatch& d, const float* x_f, const int32
             }
             for (int q = 0; q < nd; ++q) {
                 const int32_t e = ids[distinct[q]];
+                if (force_live && e == 288) continue;
                 if (e < 0 || e >= d.n_expert || minr[q] < tail_rank) continue;
                 if (d.host_res[(size_t) d.layers * (size_t) d.n_expert + (size_t) e] >= 0) continue;   // resident
                 skip_d[q] = true;
@@ -3623,6 +3631,13 @@ void expert_pool_dispatch_multi(ExpertDispatch& d, const float* x_f, const int32
             const int32_t e = ids[i0];
             int kd = -1;
             unsigned long long ptr = 0;
+            if (force_live && e == 288) {
+                for (int64_t i = i0; i < n; ++i)
+                    if (first_of[i] == i0) kind[i] = -1;
+                std::fprintf(stderr,"hetero_live route=host_plan_override phase=generation layer=28 expert=288 cached=%d\n",
+                             d.host_res[(size_t)d.layers*(size_t)d.n_expert+288] >= 0 ? 1 : 0);
+                continue; // no GPU group, PCIe transfer, peer result or tail skip
+            }
             if (skip_d[q]) {                       // STRATA_ROUTE_TAIL_SKIP: neither copied nor computed
                 for (int64_t i = i0; i < n; ++i)
                     if (first_of[i] == i0) kind[i] = -2;
@@ -3721,7 +3736,7 @@ void expert_pool_dispatch_multi(ExpertDispatch& d, const float* x_f, const int32
     static const bool dec_batch = [] { const char* v = std::getenv("STRATA_DEC_BATCH"); return v == nullptr || std::atoi(v) != 0; }();
     // the GPU's copy_rows_from_mapped zeroes the rows it computed itself (dec_batch); STRATA_VERIFY_DEVICE_PLAN's
     // copy_or_zero_from_mapped copies every row, so there the host still zeroes them
-    static const bool device_plan = [] { const char* v = std::getenv("STRATA_VERIFY_DEVICE_PLAN"); return v != nullptr && std::atoi(v) != 0; }();
+    static const bool device_plan = [] { const char* v = std::getenv("STRATA_VERIFY_DEVICE_PLAN"); return v != nullptr && std::atoi(v) != 0 && !live_helper_forced(); }();
     const bool gpu_zeroes_hits = (d.plan != nullptr && n <= kMaxWindowEntries && n <= d.plan->cap && dec_batch && !device_plan);
     bool any_cpu = false;
     for (int64_t i = 0; i < n; ++i)
@@ -3795,11 +3810,13 @@ void expert_pool_dispatch_multi(ExpertDispatch& d, const float* x_f, const int32
                 ExpertJobMulti& nj = d.jobs_multi[(size_t) jo];
                 nj.blob = b;
                 nj.nt = 0;
+                nj.layer = d.layers; nj.expert = (int)e; nj.phase = "generation";
             }
             ExpertJobMulti& jb = d.jobs_multi[(size_t) jo];
             jb.act[jb.nt] = &d.act_multi[(size_t) t];
             jb.nact[jb.nt] = native ? d.nact_multi.data() + (size_t) t * kNativeActBytes : nullptr;
             jb.out[jb.nt] = row;
+            jb.raw[jb.nt] = x_f + (size_t)t * H;
             ++jb.nt;
             ++d.multi_entries;
         }

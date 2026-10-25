@@ -16,6 +16,7 @@
 #include "strata/kernels/native_qsa.hpp"
 #include "strata/kernels/cpu/native_expert.hpp"
 #include "strata/kernels/cpu/pool.hpp"
+#include "strata/kernels/cpu/live_helper.hpp"
 #include "strata/kernels/native_qsa_indexer.hpp"
 #include "strata/kernels/ngram.hpp"
 #include "strata/kernels/ple.hpp"
@@ -2244,7 +2245,8 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
             bool held = false;
             ~PoolHold() { if (held) g_cpu_pool_busy.store(false, std::memory_order_release); }
         } pool_hold;
-        if (cpu_pool_ != nullptr && cpu_share_on() && !stream_all) {
+        const bool live_forced = strata::kernels::cpu::live_helper_forced();
+        if (cpu_pool_ != nullptr && (cpu_share_on() || live_forced) && !stream_all) {
             bool expect = false;
             pool_hold.held = g_cpu_pool_busy.compare_exchange_strong(expect, true, std::memory_order_acq_rel);
         }
@@ -3061,6 +3063,9 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                             cpu_set = (int) (i & 1);
                             cudaEventRecord(m.cpu_wall[2 * cpu_set], m.cs);
                         }
+                        // Forced demonstration cannot lose the frozen layer to
+                        // the adaptive CPU-share off arm before raw rows are copied.
+                        if (cpu_maybe && live_forced && l == 28) cpu_arm = true;
                         if (cpu_maybe && cpu_arm) {
                             const size_t want = (size_t) T * N;
                             if (m.cpu_x_n < want) {
@@ -3182,6 +3187,25 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                                 rows_cpu += cand[i].first;
                                 ++n_cpu;
                             }
+                            // Even a hot resident expert is explicitly removed
+                            // from this layer's GPU order in forced mode. Read
+                            // its actual stable model blob; no fixture data enters.
+                            if (live_forced && l == 28 && m.g->n_expert > 288 &&
+                                m.cnt[288] > 0 && m.cnt[288] <= strata::kernels::cpu::MAXT &&
+                                (on_cpu.empty() || !on_cpu[288])) {
+                                const uint8_t* b = m.src->blob_stable(l, 288);
+                                if (b) {
+                                    if (on_cpu.empty()) {
+                                        on_cpu.assign((size_t)m.g->n_expert,0);
+                                        cpu_blob.assign((size_t)m.g->n_expert,nullptr);
+                                    }
+                                    on_cpu[288]=1;cpu_blob[288]=b;
+                                    rows_cpu+=m.cnt[288];++n_cpu;
+                                    std::fprintf(stderr,"hetero_live route=prefill_override phase=prefill layer=28 expert=288 rows=%d\n",m.cnt[288]);
+                                } else {
+                                    std::fprintf(stderr,"hetero_live route=prefill_unavailable phase=prefill layer=28 expert=288 reason=no_stable_blob\n");
+                                }
+                            }
                         }
                         // multi-GPU: the rows of the experts the peer computes go last, as one block [rows_local, T*K)
                         const bool pre_mmq = mmq_plan().any && mmq_plan().layer[(size_t) l];
@@ -3240,7 +3264,7 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                         // run through MMQ groups takes them in row-count order, so each 16-expert group's max_rows
                         // (its padded tile rows) is close to its experts' own; slot/src/off are rebuilt coherently
                         // before the upload, the routed ids, weights and the within-expert row order stay as they are.
-                        if (detail::mmq_resident_sort_eligible(detail::mmq_resident_sort_requested() && on_peer.empty(), use_mmq, lay.native,
+                        if (detail::mmq_resident_sort_eligible(detail::mmq_resident_sort_requested() && on_peer.empty() && on_cpu.empty(), use_mmq, lay.native,
                                 m.cache != nullptr, m.host_res ? m.host_res + (size_t) l * m.g->n_expert : nullptr,
                                 m.g->n_expert, stream_all, !stream_all || seq_start[(size_t) l] == seq_start[(size_t) l + 1]))
                             detail::mmq_resident_sort_rows(ids_h, T * K, (int32_t) K, m.cnt, m.off, order, slot_h, src_h);
@@ -3298,11 +3322,13 @@ bool Prefill::run_impl(const int64_t* tokens, int64_t n, int64_t pos0, std::stri
                                     strata::kernels::cpu::ExpertJobMulti j;
                                     j.blob = cpu_blob[(size_t) e];
                                     j.nt = m.cnt[(size_t) e];
+                                    j.layer = l; j.expert = e; j.phase = "prefill";
                                     for (int r = 0; r < j.nt; ++r) {
                                         const int64_t p = (int64_t) m.off[(size_t) e] + r;
                                         if (q2) j.act[r] = &m.cpu_actq[(size_t) src_h[(size_t) p]];
                                         else j.nact[r] = m.cpu_nact.data() + (size_t) src_h[(size_t) p] * AB;
                                         j.out[r] = m.cpu_rows + (size_t) (p - r0c) * N;
+                                        j.raw[r] = m.cpu_x + (size_t) src_h[(size_t)p] * N;
                                     }
                                     m.cpu_jobs.push_back(j);
                                 }

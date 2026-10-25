@@ -31,6 +31,8 @@ $repoSourceFiles = @(
     'CMakeLists.txt',
     'src/kernels/cpu/expert.cpp',
     'src/kernels/cpu/pool.cpp',
+    'src/kernels/cpu/live_helper.cpp',
+    'include/strata/kernels/cpu/live_helper.hpp',
     'src/kernels/cpu/native_expert.cpp',
     'src/kernels/cpu/expert_layout.cpp',
     'src/kernels/cpu/iq_avx2.cpp',
