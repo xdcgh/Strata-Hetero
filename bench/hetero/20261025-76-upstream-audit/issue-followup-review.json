@@ -1,0 +1,32 @@
+{
+  "status": "primary_source_followup_review_only",
+  "fetched_upstream": "7dd5cf18e68c639a8773e096c5c79f971ea2a9f5",
+  "commits_since_previous_frozen_upstream": 2246,
+  "merged_to_active_sources": false,
+  "sources": [
+    {
+      "url": "https://github.com/Niko1221/Strata/issues/3465#issuecomment-6295023835",
+      "reported_scope": "Another Windows sm89/AVX2 IQ3_S host",
+      "finding": "The reporter initially observed successful prompts with short-read disabled. This has not been tested as a repair on this host."
+    },
+    {
+      "url": "https://github.com/Niko1221/Strata/issues/3465#issuecomment-6308099388",
+      "reported_scope": "Maintainer explanation of the retry change",
+      "finding": "Retry switches to batched prompt reading after a bad prompt window; the numerical cause remained unresolved."
+    },
+    {
+      "url": "https://github.com/Niko1221/Strata/issues/3465#issuecomment-6317260603",
+      "reported_scope": "Later IQ3_S 0.1.47 release tests on the reporting host",
+      "finding": "Direct PLE still failed with short-read disabled; mmap passed bounded first-output checks. Its diagnostic first bad boundary was uploaded PLE embeddings. Process history and chunk changes prevent a clean I/O-causality conclusion."
+    },
+    {
+      "url": "https://github.com/Niko1221/Strata/issues/879#issuecomment-6278026795",
+      "reported_scope": "Different Windows RTX3080 IQ3_S MMQ prompt path",
+      "finding": "A reporter observed first bad gate/up outputs on MMQ and passing output with MMQ off. Quantization/borrowed-slot causes were candidates, not measured causes."
+    }
+  ],
+  "local_interpretation": "These reports motivate controlled experiments. They do not establish that this host's layer41 routed slot has the same cause. Run75 remains frozen and captures its actual producer/input first.",
+  "model_acceptance": false,
+  "speedup_acceptance": false,
+  "next_upstream_work": "Separately build and validate the new unmodified upstream and integration before calling any comparison current-upstream."
+}

@@ -1,0 +1,7 @@
+commit 7dd5cf18e68c639a8773e096c5c79f971ea2a9f5
+Author:     Niko1221 <Niko1221@users.noreply.github.com>
+AuthorDate: Sat Oct 24 10:52:25 2026 +0200
+Commit:     Niko1221 <Niko1221@users.noreply.github.com>
+CommitDate: Sat Oct 24 10:52:25 2026 +0200
+
+    release notes 0.2.4.2: the picture-file and already-have-files fixes (#3927, #3917, #3914); no environment variable in the conversations line

@@ -1,0 +1,65 @@
+{
+  "status": "read_only_source_audit",
+  "observed_utc": "2026-10-25T06:15:13.928070+00:00",
+  "previous_frozen_upstream": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+  "fetched_upstream": "7dd5cf18e68c639a8773e096c5c79f971ea2a9f5",
+  "current_tag": "v0.2.4.2",
+  "working_source_changed": false,
+  "model_run": false,
+  "guard_commit": "f332a85570282466a37293eb6be4eeada9566f29",
+  "short_read_retry_commit": "894f133b7d492382513cbe9673012d6c8e937bb8",
+  "artifacts": [
+    {
+      "path": "guard-commit.txt",
+      "git_arguments": [
+        "show",
+        "--format=fuller",
+        "--stat",
+        "f332a85570282466a37293eb6be4eeada9566f29"
+      ],
+      "bytes": 5873,
+      "sha256": "b64cc7b951f413432abcbf17005e8a56e7906eeb93d2a99ae70ce4669e9d3af3"
+    },
+    {
+      "path": "short-read-retry.patch",
+      "git_arguments": [
+        "show",
+        "--format=fuller",
+        "894f133b7d492382513cbe9673012d6c8e937bb8"
+      ],
+      "bytes": 5465,
+      "sha256": "5cfc727a75fc6f48f67c5c721f3f1926237847111605bee344d1e4cc5275e8f4"
+    },
+    {
+      "path": "native-cpu-changes.patch",
+      "git_arguments": [
+        "diff",
+        "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+        "7dd5cf18e68c639a8773e096c5c79f971ea2a9f5",
+        "--",
+        "src/kernels/cpu/native_expert.cpp"
+      ],
+      "bytes": 17718,
+      "sha256": "a616d28736448d6162fd087b73a54f469332ca84426a7fcfe35fd456f8758bdf"
+    },
+    {
+      "path": "upstream-head.txt",
+      "git_arguments": [
+        "show",
+        "-s",
+        "--format=fuller",
+        "7dd5cf18e68c639a8773e096c5c79f971ea2a9f5"
+      ],
+      "bytes": 395,
+      "sha256": "e6c82865e942021f6509fd0ad37cae4fb6ac4781be5adafcb601b3cd5e6d6217"
+    }
+  ],
+  "findings": [
+    "Upstream guard detects nonfinite head logits, drops contaminated session/cache state and supports one server retry.",
+    "The later retry change reads a prompt fully batched after nonfinite logits in its short prompt window.",
+    "Its reported short-read-zero success is external evidence, not a verified result on this host.",
+    "The native CPU Q8_1 from_float/dot route has no observed new sum-overflow fix in the retained diff.",
+    "Neither guard nor retry establishes a numerical root-cause repair.",
+    "Run75 retains its prior frozen source. A new current-upstream baseline needs separate build, admission and quality gates."
+  ]
+}

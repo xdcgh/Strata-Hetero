@@ -1,0 +1,93 @@
+commit f332a85570282466a37293eb6be4eeada9566f29
+Author:     lask3802 <5467042+lask3802@users.noreply.github.com>
+AuthorDate: Sun Oct 11 04:27:42 2026 +0800
+Commit:     Niko1221 <Niko1221@users.noreply.github.com>
+CommitDate: Sun Oct 11 12:01:22 2026 +0200
+
+    Non-finite logits (#879): a guard with self-healing
+    
+    Rarely a window's logits become NaN and the reply degenerates into token 0
+    ('!') repeated (#606); the poison sits in the conversation's K/V and
+    recurrent state, so with the prompt cache every later turn stays poisoned
+    until it is read again from token 0. The q8_1 clamps (2b726ba, f6601bf,
+    7a0e302) remove the overflows found so far; this guard catches whatever
+    cause is left, and drops the poisoned state instead of serving it again.
+    
+    On by default, as a fix: STRATA_NAN_GUARD=0 turns it off. It only reads
+    flags, so an answer without a NaN is the one the engine gives with the
+    guard off (compared byte for byte on a GPU, below).
+    
+    Engine:
+    - every verify-window graph checks its head logits beside the greedy pick
+      (logits_nonfinite_rows: 16 blocks a row, one flag word each, into mapped
+      memory); Verifier::note_nonfinite reads them after the sync the window
+      already does (run, run_slot_rows, batch_poll, pl_finish). No extra sync.
+      With STRATA_NAN_GUARD=0 no kernel is recorded.
+    - --serve: a flagged window emits none of its tokens, one stderr line names
+      the position and row, and the request ends with `DONE ... nonfinite` (a
+      batch slot: `BDONE <slot> <n> nonfinite`; an admission: BADM <slot> 0).
+      The next request first drops the live session, every checkpoint, every
+      parked conversation (ConversationCache::clear) and every idle slot, and
+      reads its prompt from token 0; a slot still running then finishes its
+      reply and is not kept as a cache after it. A request that ends on it does
+      not keep its conversation live (#1620's cancelled-read path is skipped
+      for it).
+      Covered: the serial decode loop (one GPU or a layer split), the
+      --pipeline-windows decode loop of a layer split, the prompt's short tail
+      (read_windows, and read_windows_pl with --pipeline-windows), and both
+      batch-slot loops (run_slot_rows, and the --batch-groups pipeline's
+      batch_poll). Not covered: the one-shot command line (no --serve) and the
+      SYCL port in sycl/, which has its own verify.cpp and generate.cpp.
+    - STRATA_NAN_INJECT=<n>[,<n>...] (debug): the n-th window the guard checks
+      reports row 0 as non-finite.
+    
+    Server: EngineNonFinite on that finish. A request that has sent nothing yet
+    is sent again once (its usage is the retry's: the failed pass's DONE is
+    dropped); a reply that had started ends as "length"; a second fire on the
+    retry ends with an error (503 before an answer, an error event in a
+    stream). With replicas the router forgets what that replica held.
+    repeat_stop_tokens stays as the backstop.
+    
+    Checks: serve tests (python -m unittest discover -s serve -t . -p
+    "test_*.py": 697 tests, OK, 11 skipped; NonFiniteLogits,
+    test_nonfinite_in_batch_mode and test_nonfinite_forgets_the_replica are
+    new). ctest with CUDA_VISIBLE_DEVICES=-1: 24 pass (conversation_cache_test
+    with clear() among them), 3 skip for want of a GPU, and the 43 GPU parity
+    tests were not run on a GPU. Built for CUDA 13.0 on Linux (GCC, sm_75 +
+    sm_86); generate.cpp, verify.cpp and verify_kernels.cu compile with
+    MSVC 2022 + CUDA 13.0, and conversation_cache_test and conv_cache_test
+    pass there; built for HIP (ROCm 7.0, gfx1100, compile only) and SYCL
+    (oneAPI 2026.1.1; it takes only the new declaration in verify_kernels.hpp
+    and the new inline ConversationCache::clear(), and calls neither).
+    
+    On a GPU (RTX 3080, RVN IQ3_S, strata.service's one-GPU config):
+    - Answers, guard on vs STRATA_NAN_GUARD=0, at fixed expert sets
+      (--pcie-frac 0 --adapt-every 0 --adapt-swaps 0 --mtp-max-t 1
+      --suffix-draft 0, STRATA_IQ_MT_MIN=1 STRATA_PREFILL_CPU_SHARE=0), a chat
+      replay of 2 x 4 turns on a 16K-token system prompt: byte-identical in 3
+      pairs (one with STRATA_ROUTE_TAIL_SKIP=0, one with STRATA_SH_STREAM=0),
+      and two guard-on runs 8 of 8. One more guard-off run differed from every
+      other run from its first answer, and a second guard-off run matched the
+      guard-on runs: a difference between runs of this config, not the guard.
+    - Cost, Nsight Systems: logits_nonfinite_kernel 424 launches, 4.77 us on
+      average (7.78 us at most), 2.0 ms against 21.6 s of decode: 0.009%.
+    - STRATA_NAN_INJECT=1,60: the first window of a new chat flagged, the
+      server sent the request again from token 0 and the client saw one normal
+      answer; the 60th, mid-reply in the next turn, ended that reply as
+      "length" after 58 tokens; the turn after it reused 0 cached tokens and
+      answered normally. The engine logged exactly the two injected windows.
+
+ docs/DETAILS.md                            |  26 ++++++
+ include/strata/core/conversation_cache.hpp |  10 +++
+ include/strata/core/verify.hpp             |  20 +++++
+ include/strata/kernels/verify_kernels.hpp  |   5 ++
+ serve/replicas.py                          |  10 ++-
+ serve/server.py                            |  58 +++++++++++++
+ serve/test_parallel.py                     |  50 ++++++++++++
+ serve/test_replicas.py                     |  23 ++++++
+ serve/test_server.py                       | 126 ++++++++++++++++++++++++++++-
+ src/core/conversation_cache_test.cpp       |  11 +++
+ src/core/verify.cpp                        |  62 +++++++++++++-
+ src/kernels/cuda/verify_kernels.cu         |  23 ++++++
+ src/program/generate.cpp                   | 125 +++++++++++++++++++++++++---
+ 13 files changed, 536 insertions(+), 13 deletions(-)
