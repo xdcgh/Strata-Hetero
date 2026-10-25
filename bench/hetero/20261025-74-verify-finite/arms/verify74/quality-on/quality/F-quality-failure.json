@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "failed_stopped",
+  "phase": "run-quality-after-ready",
+  "utc": "2026-10-25T06:03:03.1342017Z",
+  "error_type": "RuntimeException",
+  "error": "smoke_unicode: status/token-count/cache/quality gate failed; preserve outputs and stop the remaining matrix",
+  "failed_prompt": "smoke_unicode",
+  "diagnostics_file": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\arms\\verify74\\quality-on\\quality\\F-smoke_unicode-diagnostics.json",
+  "completed_prompts": [
+    {
+      "prompt_id": "smoke_arithmetic",
+      "prompt_sha256": "3721fc3f68527dcbe1659d6a95a9d26429def35a7f96d72f0c2212bff865cbfd",
+      "local_chat_tokens": 27,
+      "max_tokens": 128,
+      "warmups": 1,
+      "formal": 3,
+      "runner_exit": 0,
+      "quality_statuses": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "actual_sse_token_ids_valid": true,
+      "actual_token_id_hashes": [
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea"
+      ],
+      "h4_token_id_hashes": [
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea",
+        "4dd3ee4160e8b5bdf760dcbb375872781732b63023d7779e1afb0e0d9d7f2cea"
+      ],
+      "actual_token_ids_match_h4": [
+        true,
+        true,
+        true
+      ],
+      "formal_prompt_tokens": [
+        27,
+        27,
+        27
+      ],
+      "cache_n": [
+        0,
+        0,
+        0
+      ],
+      "diagnostic_observed": false,
+      "verify_diagnostic_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\arms\\verify74\\quality-on\\quality\\F-smoke_arithmetic-diagnostics.json",
+      "verify_diagnostic_status": "normal_diagnostic_records"
+    }
+  ]
+}

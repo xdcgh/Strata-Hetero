@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-74-verify-finite",
+  "sampler_launcher_pid": 13040,
+  "sampler_launcher_exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "sampler_launcher_create_utc": "2026-10-25T06:00:14.1603290Z",
+  "configured_python": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+  "actual_child_pid": 9548,
+  "actual_child_parent_pid": 13040,
+  "actual_child_exe": "C:\\Python314\\python.exe",
+  "actual_child_create_utc": "2026-10-25T06:00:14.1948770Z",
+  "argv": [
+    "-u",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\tools\\hetero_resources.py",
+    "--output",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\arms\\verify74\\quality-on\\resource\\samples.jsonl",
+    "--pid",
+    "19828",
+    "--interval",
+    "1",
+    "--max-seconds",
+    "10800",
+    "--minimum-commit-gib",
+    "4",
+    "--stop-file",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\arms\\verify74\\quality-on\\resource\\STOP"
+  ],
+  "owner_pid": 19828,
+  "output": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\arms\\verify74\\quality-on\\resource\\samples.jsonl"
+}

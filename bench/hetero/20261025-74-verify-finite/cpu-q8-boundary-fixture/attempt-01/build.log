@@ -1,0 +1,5 @@
+cpu_q8_1_boundary.cpp
+ggml-cpu.lib(ggml-cpu.cpp.obj) : error LNK2019: 无法解析的外部符号 __imp_RegCloseKey，函数 "public: __cdecl ggml_backend_cpu_device_context::ggml_backend_cpu_device_context(void)" (??0ggml_backend_cpu_device_context@@QEAA@XZ) 中引用了该符号
+ggml-cpu.lib(ggml-cpu.cpp.obj) : error LNK2019: 无法解析的外部符号 __imp_RegOpenKeyExA，函数 "public: __cdecl ggml_backend_cpu_device_context::ggml_backend_cpu_device_context(void)" (??0ggml_backend_cpu_device_context@@QEAA@XZ) 中引用了该符号
+ggml-cpu.lib(ggml-cpu.cpp.obj) : error LNK2019: 无法解析的外部符号 __imp_RegQueryValueExA，函数 "public: __cdecl ggml_backend_cpu_device_context::ggml_backend_cpu_device_context(void)" (??0ggml_backend_cpu_device_context@@QEAA@XZ) 中引用了该符号
+E:\Strata-Hetero-data\build\cpu-q8-boundary74-01\boundary.exe : fatal error LNK1120: 3 个无法解析的外部命令

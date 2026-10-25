@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-74-verify-finite",
+  "recorded_at_utc": "2026-10-25T06:04:16.4306891Z",
+  "note": "Resource fields in first-bad-window-summary.json are superseded; Measure-Object scriptblock did not produce a valid numeric projection.",
+  "source_samples_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\arms\\verify74\\quality-on\\resource\\samples.jsonl",
+  "source_samples_sha256": "94c369cf9eb3fdaea2e177ff8b3f487f833eff22e09e4f6646c1976fc0974ad7",
+  "cleanup_resource_summary_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\arms\\verify74\\quality-on\\cleanup\\final.json",
+  "cleanup_resource_summary_sha256": "3ab4e3c689a413d3a944629e86df5e34d7aa659d17135776c1e0a2508f5f57ad",
+  "sample_count": 188,
+  "minimum_ram_gib": 67.547,
+  "minimum_commit_gib": 43.918,
+  "gate_failed_sample_count": 0,
+  "all_resource_samples_pass": true,
+  "diagnostics_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\arms\\verify74\\quality-on\\quality\\F-smoke_unicode-diagnostics.json",
+  "diagnostics_sha256": "df700397e628263f0673f76596860edaa558421f5b02c0bd24d92867911f428b"
+}

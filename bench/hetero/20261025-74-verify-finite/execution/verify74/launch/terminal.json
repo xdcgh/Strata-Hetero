@@ -1,0 +1,11 @@
+{
+  "side": "verify74",
+  "phase": "launch",
+  "controller_pid": 3960,
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T06:00:14.6531976+00:00",
+  "stdout_sha256": "e697a1085ffa217062cbbc860ffb1160655840f91f9eed882f8e295fcf2fe1a0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+  "source_script_sha256": "a76602ff7a3a6095ea2e2658c32efc9bf049d294ff42e0285a8a2a2c69284fea"
+}

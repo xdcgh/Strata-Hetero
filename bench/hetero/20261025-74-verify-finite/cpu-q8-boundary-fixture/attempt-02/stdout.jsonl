@@ -1,0 +1,4 @@
+{"value":1,"d":0.00787353516,"sum_finite":true,"out_finite":true}
+{"value":2047,"d":16.125,"sum_finite":true,"out_finite":true}
+{"value":2048,"d":16.125,"sum_finite":false,"out_finite":false}
+{"candidate_boundary_fixture":"pass","model_cause_established":false,"scaled_zero_weight_dot":0}

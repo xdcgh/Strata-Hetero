@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-74-verify-finite",
+  "status": "exact_owned_cleanup_preflight_pass",
+  "utc": "2026-10-25T06:03:19.2976544Z",
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
+  "engine": "0.1.42",
+  "loaded": true,
+  "requests": 8,
+  "in_flight": 0,
+  "listener_pid": 3656,
+  "pids": [
+    19828,
+    3656,
+    13856,
+    13040,
+    9548
+  ]
+}

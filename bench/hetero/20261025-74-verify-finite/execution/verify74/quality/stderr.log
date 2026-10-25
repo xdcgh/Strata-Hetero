@@ -1,0 +1,5 @@
+Exception: C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261025-74-verify-finite\rendered-scripts\verify74\quality.ps1:505
+Line |
+ 505 |              throw "${id}: status/token-count/cache/quality gate faile бн
+     |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | smoke_unicode: status/token-count/cache/quality gate failed; preserve outputs and stop the remaining matrix

@@ -1,0 +1,18 @@
+{
+  "run_id": "20261025-74-verify-finite",
+  "checked_utc": "2026-10-25T06:02:36.0844422Z",
+  "launcher_pid": 19828,
+  "server_pid": 3656,
+  "engine_pid": 13856,
+  "engine_exe": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\strata.exe",
+  "server_child_exe": "C:\\Python314\\python.exe",
+  "server_child_create_utc": "2026-10-25T06:00:14.0975340Z",
+  "engine_child_create_utc": "2026-10-25T06:00:14.7699390Z",
+  "sampler_actual_child_pid": 9548,
+  "sampler_actual_child_create_utc": "2026-10-25T06:00:14.1948770Z",
+  "engine_sha256": "3a76d5ededc8b00e3f02e35506b69f599c3562a731211ec683a4cebada99f088",
+  "server_file_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+  "model": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
+  "engine_version": "0.1.42",
+  "loaded": true
+}

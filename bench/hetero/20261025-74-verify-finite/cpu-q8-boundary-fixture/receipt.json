@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "status": "candidate_numeric_boundary_demonstrated_not_model_cause",
+  "recorded_utc": "2026-10-25T06:07:08.847841+00:00",
+  "fixture_source": "preparation/cpu_q8_1_boundary.cpp",
+  "fixture_source_sha256": "e31208b9cf96401a8cc486cfac71e5081feab726e792490c624c972cab54cacf",
+  "ggml_head": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "linked_libraries": [
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\ggml\\src\\ggml-cpu.lib",
+      "sha256": "11b38e459bb62b05710e535857b676df589d1c417c6acf3c8105edf6bcc83aa3"
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\ggml\\src\\ggml-base.lib",
+      "sha256": "042ea6b01b22e49ace166c3b684990183067150502452c86d18de18abcdd7211"
+    }
+  ],
+  "first_build": {
+    "exit_code": 2,
+    "reason": "missing Advapi32 link dependency; preserved"
+  },
+  "corrected_build": {
+    "exit_code": 0,
+    "change": "add Advapi32.lib, fresh output directory"
+  },
+  "execution_exit": 0,
+  "synthetic_input_only": true,
+  "gpu_executed": false,
+  "model_executed": false,
+  "claim": "Pinned real CPU Q8_1 from_float quantizer turns 32 finite values of2048 into infinite FP16 sum; native Q5_1 vec_dot against zero weights returns nonfinite.2047 remainsfinite. Power-of-two input scaling2 with output inverse rescale preserves zero result. No production fix or model-cause attribution."
+}
