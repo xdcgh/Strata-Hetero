@@ -44,6 +44,23 @@ static void full_capture(VisionStageTrace& trace) {
     auto merged=tensor("norm_b-27 (reshaped)",4608,9);
     merged.op=GGML_OP_RESHAPE; merged.view_src=merged.src[0]=&post; emit(trace,merged);
 }
+static void block0_capture(VisionStageTrace& trace) {
+    auto ln=tensor("ln1-0",1152,72); emit(trace,ln);
+    auto mm=tensor("SYNTHETIC_MM"); mm.op=GGML_OP_MUL_MAT;
+    auto parent=tensor("SYNTHETIC_QKV",3456,72); parent.src[0]=&mm;
+    auto q=tensor("Qcur-0",72,16); q.op=GGML_OP_VIEW;
+    q.ne[2]=72; q.nb[1]=288; q.nb[2]=13824; q.nb[3]=72*13824;
+    q.view_src=q.src[0]=&parent; emit(trace,q);
+    for (const char* name : {"attn_out-0","ffn_inp-0","ffn_inp_normed-0"}) {
+        auto t=tensor(name,1152,72); emit(trace,t);
+    }
+    for (const char* name : {"ffn_up_b-0","ffn_gelu-0"}) {
+        auto t=tensor(name,4304,72); emit(trace,t);
+    }
+    for (const char* name : {"ffn_out-0","layer_out-0"}) {
+        auto t=tensor(name,1152,72); emit(trace,t);
+    }
+}
 
 int main(int argc, char** argv) {
     try {
@@ -115,6 +132,25 @@ int main(int argc, char** argv) {
         try { VisionStageTrace again; again.begin(image,(root/"unused.sve").string(),(root/"formal-1").string()); }
         catch (...) { rejected=true; }
         check(rejected,"preexisting prefix accepted");
+        VisionStageTrace block0;
+        block0.set_profile("block0");
+        for (int i=1;i<=3;++i) {
+            const auto prefix=root/("block0-"+std::to_string(i));
+            block0.begin(image,(root/("block0-"+std::to_string(i)+".sve")).string(),prefix.string());
+            block0_capture(block0);
+            check(block0.finish().empty(),"block0 profile coverage/budget failed");
+            check(std::filesystem::file_size(prefix/"ffn_pre_gelu.0.f32")==4304*72*4,"FFN width differs");
+            std::ifstream manifest(prefix/"manifest.json");
+            const std::string body((std::istreambuf_iterator<char>(manifest)),std::istreambuf_iterator<char>{});
+            check(body.find("\"capture_bytes\":5465088")!=std::string::npos,"block0 capture bytes differ");
+            if (i==3) check(body.find("\"image_total_bytes\":16395264")!=std::string::npos,"block0 total exceeds original bound");
+        }
+        rejected=false;
+        try { block0.set_profile("original"); } catch (...) { rejected=true; }
+        check(rejected,"profile changed after capture");
+        rejected=false;
+        try { VisionStageTrace invalid; invalid.set_profile("unknown"); } catch (...) { rejected=true; }
+        check(rejected,"unknown profile accepted");
         std::cout << "{\"status\":\"synthetic_fixture_pass\",\"real_tensor_read\":false,\"model_run\":false}\n";
         return 0;
     } catch (const std::exception& e) { std::cerr << "fixture: " << e.what() << '\n'; return 1; }

@@ -6,6 +6,7 @@
 //
 //   strata-vision --mmproj <mmproj.gguf> --model <text model .gguf, first split> [--gpu] [--threads N]
 //                 [--max-tokens N] [--min-tokens N] [--flash-attn on|off|auto] [--enable-stage-taps]
+//                 [--stage-tap-profile original|block0]
 // Flash attention defaults to auto, and to off on the CPU when ggml is built with AVX-512 (see main).
 //
 // Resident: prints "READY <n_embd>", then per stdin line
@@ -60,6 +61,7 @@ int main(int argc, char** argv) {
     std::string mmproj, model;
     bool gpu = false;
     bool stage_taps_enabled = false;
+    std::string stage_tap_profile = "original";
     VisionStageTrace stage_trace;
     int threads = 0, max_tokens = 0, min_tokens = 0;
     llama_flash_attn_type fa = LLAMA_FLASH_ATTN_TYPE_AUTO;
@@ -74,6 +76,7 @@ int main(int argc, char** argv) {
         else if (a == "--model") model = next();
         else if (a == "--gpu") gpu = true;
         else if (a == "--enable-stage-taps") stage_taps_enabled = true;
+        else if (a == "--stage-tap-profile") stage_tap_profile = next();
         else if (a == "--threads") threads = std::atoi(next().c_str());
         else if (a == "--max-tokens") max_tokens = std::atoi(next().c_str());
         else if (a == "--min-tokens") min_tokens = std::atoi(next().c_str());   // mtmd image_min_tokens (#767)
@@ -87,10 +90,16 @@ int main(int argc, char** argv) {
     }
     if (mmproj.empty() || model.empty()) {
         std::fprintf(stderr, "usage: strata-vision --mmproj <mmproj.gguf> --model <model.gguf> [--gpu] [--threads N] "
-                             "[--max-tokens N] [--min-tokens N] [--flash-attn on|off|auto] [--enable-stage-taps]\n");
+                             "[--max-tokens N] [--min-tokens N] [--flash-attn on|off|auto] [--enable-stage-taps] "
+                             "[--stage-tap-profile original|block0]\n");
         return 2;
     }
     if (stage_taps_enabled && gpu) { std::fprintf(stderr,"stage taps require CPU mode\n"); return 2; }
+    if (!stage_taps_enabled && stage_tap_profile != "original") {
+        std::fprintf(stderr,"stage profile requires --enable-stage-taps\n"); return 2;
+    }
+    try { stage_trace.set_profile(stage_tap_profile); }
+    catch (const std::exception& e) { std::fprintf(stderr,"%s\n",e.what()); return 2; }
     // On the CPU the GPU stays unseen: a CUDA build otherwise opens a context there (measured: 0.4-0.7 GB of VRAM,
     // 150-260 expert slots less for the engine beside it).  Before anything reaches the CUDA runtime.
     if (!gpu) {

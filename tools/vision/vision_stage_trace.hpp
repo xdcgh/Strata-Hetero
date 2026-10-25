@@ -25,10 +25,11 @@ class VisionStageTrace {
     using Path = std::filesystem::path;
     static constexpr int64_t E = 1152;
     static constexpr const char* revision = "3cf03257f219afbe7334045ff7c6a06ac68c627d";
-    const std::array<const char*,11> names{{"patch_bias","inp_pos_emb","ln1-0","ln1-1","ln1-26",
-        "Qcur-0","layer_out-0","layer_out-1","layer_out-26","norm_b-27","norm_b-27 (reshaped)"}};
-    const std::array<const char*,11> labels{{"patch_merge","positioned","ln1.0","ln1.1","ln1.26",
-        "qkv.0","block.0","block.1","block.26","post_norm","merged"}};
+    std::vector<const char*> names{"patch_bias","inp_pos_emb","ln1-0","ln1-1","ln1-26",
+        "Qcur-0","layer_out-0","layer_out-1","layer_out-26","norm_b-27","norm_b-27 (reshaped)"};
+    std::vector<const char*> labels{"patch_merge","positioned","ln1.0","ln1.1","ln1.26",
+        "qkv.0","block.0","block.1","block.26","post_norm","merged"};
+    std::string profile_ = "original";
     bool active_ = false, failed_ = false;
     int64_t n_ = 0;
     size_t cap_, bytes_ = 0;
@@ -75,7 +76,8 @@ class VisionStageTrace {
     void capture(ggml_tensor* selected, int index) {
         require(seen_.count(index) == 0,"duplicate stage selector");
         ggml_tensor* t = selected;
-        if (index == 5) {
+        const std::string label(labels[index]);
+        if (label == "qkv.0") {
             t = selected->src[0];
             require(selected->op == GGML_OP_VIEW && t && selected->view_src == t && selected->view_offs == 0,
                     "Qcur-0 is not the expected combined-QKV view");
@@ -87,14 +89,16 @@ class VisionStageTrace {
                     "unexpected Qcur-0 axes or strides");
         }
         if (!n_) { require(index == 0 && (t->ne[1] == 36 || t->ne[1] == 72),"expected aligned fixture patch count"); n_ = t->ne[1]; }
-        const int64_t features = index == 5 ? 3*E : (index == 10 ? 4*E : E);
-        const int64_t rows = index == 10 ? n_/4 : n_;
+        const bool merged = label == "merged";
+        const bool ffn_wide = label == "ffn_pre_gelu.0" || label == "ffn_post_gelu.0";
+        const int64_t features = label == "qkv.0" ? 3*E : (merged ? 4*E : (ffn_wide ? 4304 : E));
+        const int64_t rows = merged ? n_/4 : n_;
         require(t->type == GGML_TYPE_F32 && t->ne[0] == features && t->ne[1] == rows &&
                 t->ne[2] == 1 && t->ne[3] == 1,"unexpected stage dtype or axes");
         size_t stride = 4;
         for (int axis=0;axis<4;++axis) { require(t->nb[axis] == stride,"noncontiguous stage tensor"); stride *= size_t(t->ne[axis]); }
         require(t->data && (t->buffer || (t->view_src && t->view_src->buffer)),"stage tensor is not allocated");
-        if (index == 10) require(t->op == GGML_OP_RESHAPE && t->view_src && t->view_offs == 0 &&
+        if (merged) require(t->op == GGML_OP_RESHAPE && t->view_src && t->view_offs == 0 &&
             std::string(t->view_src->name) == "norm_b-27","unexpected four-patch merger parent");
         require(stride <= cap_ && image_bytes_[key_] <= cap_-stride,"per-image stage byte budget exceeded");
         image_bytes_[key_] += stride; bytes_ += stride;  // Failed partial writes remain charged.
@@ -116,6 +120,17 @@ public:
     static constexpr size_t max_image_bytes = 16*1024*1024;
     explicit VisionStageTrace(size_t cap=max_image_bytes) : cap_(cap) {
         require(cap_ > 0 && cap_ <= max_image_bytes,"invalid stage byte cap");
+    }
+    void set_profile(const std::string& profile) {
+        require(!active_ && image_captures_.empty(),"stage profile must be selected before any capture");
+        require(profile == "original" || profile == "block0","unknown stage profile");
+        if (profile == profile_) return;
+        require(profile_ == "original","stage profile cannot be reset after selection");
+        names = {"ln1-0","Qcur-0","attn_out-0","ffn_inp-0","ffn_inp_normed-0",
+                 "ffn_up_b-0","ffn_gelu-0","ffn_out-0","layer_out-0"};
+        labels = {"ln1.0","qkv.0","attn_out.0","ffn_inp.0","ln2.0",
+                  "ffn_pre_gelu.0","ffn_post_gelu.0","ffn_out.0","block.0"};
+        profile_ = profile;
     }
     static FILE* exclusive_output(const std::string& path) noexcept {
         try { return create_new(Path(path)); } catch (...) { return nullptr; }
@@ -143,9 +158,11 @@ public:
             require(encoded,"stage image encode failed");
             require(!failed_,error_.empty()?"stage callback failed":error_.c_str());
             require(seen_.size() == names.size(),"missing stage coverage");
-            require(bytes_ == size_t(13*n_*E*4),"stage byte total differs from whitelist");
+            const int64_t row_features = profile_ == "block0" ? 9*E + 2*4304 : 13*E;
+            require(bytes_ == size_t(row_features*n_*4),"stage byte total differs from whitelist");
             std::ostringstream manifest;
             manifest << "{\"schema_version\":1,\"status\":\"stages_captured\",\"source_revision\":" << quote(revision)
+                << ",\"profile\":" << quote(profile_)
                 << ",\"image\":" << quote(image_.generic_string()) << ",\"sve_output\":" << quote(output_.generic_string())
                 << ",\"capture_bytes\":" << bytes_ << ",\"image_total_bytes\":" << image_bytes_[key_]
                 << ",\"image_byte_cap\":" << cap_ << ",\"capture_number\":" << image_captures_[key_]

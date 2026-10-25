@@ -434,6 +434,8 @@ def build_openvino_model(spec: VisionSpec, arrays: Mapping[str, Any], identity: 
     known_taps.update(f"block.{i}" for i in range(spec.blocks))
     known_taps.update(f"ln1.{i}" for i in (0, 1, 26) if i < spec.blocks)
     known_taps.add("qkv.0")
+    known_taps.update(("attn_out.0", "ffn_inp.0", "ln2.0", "ffn_pre_gelu.0",
+                      "ffn_post_gelu.0", "ffn_out.0"))
     if len(set(output_taps)) != len(output_taps) or set(output_taps) - known_taps:
         raise VisionPortError("duplicate or unsupported diagnostic output tap")
     validate_decoded_weights(spec, arrays, identity)
@@ -569,9 +571,16 @@ def build_openvino_model(spec: VisionSpec, arrays: Mapping[str, Any], identity: 
         scale = _f32(1.0 / _f32(math.sqrt(d)))  # clip.cpp:264 uses 1.0f / sqrtf(d_head)
         attention = ops.softmax(ops.multiply(ops.matmul(q, k, False, True), c(scale)), -1)
         attention = reshape(transpose(ops.matmul(attention, v, False, False), [1, 0, 2]), [n, e])
-        hidden = ops.add(hidden, linear(attention, prefix + "attn_out"))
-        ff = gelu(linear(norm(hidden, prefix + "ln2"), prefix + "ffn_up"))
-        hidden = ops.add(hidden, linear(ff, prefix + "ffn_down"))
+        attention_out = linear(attention, prefix + "attn_out")
+        hidden = ops.add(hidden, attention_out)
+        normed_ff = norm(hidden, prefix + "ln2")
+        ff_up = linear(normed_ff, prefix + "ffn_up")
+        ff = gelu(ff_up)
+        ff_out = linear(ff, prefix + "ffn_down")
+        if i == 0:
+            taps.update({"attn_out.0": attention_out, "ffn_inp.0": hidden, "ln2.0": normed_ff,
+                         "ffn_pre_gelu.0": ff_up, "ffn_post_gelu.0": ff, "ffn_out.0": ff_out})
+        hidden = ops.add(hidden, ff_out)
         taps[f"block.{i}"] = hidden
 
     if "v.post_ln.weight" in arrays:
