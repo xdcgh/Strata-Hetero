@@ -54,7 +54,13 @@ For each captured window, the base name is
   FP16 fields (`d`, `s`) followed by 32 signed quantized bytes. This is the
   native grouped expert input, not its hidden activation or the CPU activation
   quantizer's output.
-* `.gpu-hit.f32` or `.mapped-non-gpu.f32`: only when its validity flag is true.
+* `.gpu-hit.f32`: only when `gpu_hit_valid` is true.
+* `.mapped-non-gpu.f32` and `.mapped-input.f32`: both only when
+  `mapped_non_gpu_valid` is true. The latter captures the actual published
+  `m_x_` input read by the pool, independently of the device `mixed_` input.
+  The harness should check their finite values, hashes, and byte equality;
+  capturing `mixed_` alone would not exclude a stale or incorrect doorbell
+  publication.
 * `.json`: completion metadata, written last, then logged with the prefix
   `strata verify_route_snapshot: `.
 

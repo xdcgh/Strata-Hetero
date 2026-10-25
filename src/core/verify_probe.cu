@@ -63,7 +63,10 @@ __global__ void capture_route_kernel(const Record* r, RouteSnapshot* s, RouteVie
         s->mixed[i]=v.mixed[(unsigned long long)token*v.width+i];
         s->parts[i]=v.parts[local_row*v.width+i];
         if(s->gpu_valid)s->hit[i]=v.hit[local_row*v.width+i];
-        if(s->cpu_valid)s->cpu[i]=v.cpu[local_row*v.width+i];
+        if(s->cpu_valid) {
+            s->cpu[i]=v.cpu[local_row*v.width+i];
+            s->cpu_input[i]=v.cpu_input[(unsigned long long)token*v.width+i];
+        }
     }
     if(s->native_q8_valid) {
         const int bytes=v.width/32*36;
@@ -164,6 +167,7 @@ bool Probe::report_route(std::string& err) {
     if(s.native_q8_valid && !exclusive_bytes(base+".native.q8_1",s.native_q8,s.width/32*36,err))return false;
     if(s.gpu_valid && !exclusive_bytes(base+".gpu-hit.f32",s.hit,s.width*sizeof(float),err))return false;
     if(s.cpu_valid && !exclusive_bytes(base+".mapped-non-gpu.f32",s.cpu,s.width*sizeof(float),err))return false;
+    if(s.cpu_valid && !exclusive_bytes(base+".mapped-input.f32",s.cpu_input,s.width*sizeof(float),err))return false;
     double maxabs=0;int nonfinite=0,ds_nan=0,ds_posinf=0,ds_neginf=0;
     for(int i=0;i<s.width;++i)if(std::isfinite(s.mixed[i]))maxabs=std::max(maxabs,(double)std::fabs(s.mixed[i]));else ++nonfinite;
     if(s.native_q8_valid)for(int b=0;b<s.width/32;++b)for(int j=0;j<2;++j) {
@@ -259,7 +263,7 @@ bool Probe::end_graph(std::string& err) {
 }
 bool Probe::capture_route(RouteView v,std::string& err) {
     if(!device_route_)return true;
-    if(!v.ids || !v.weights || !v.mixed || !v.parts || !v.counts || !v.dst || !v.start2 || !v.hit || !v.cpu || v.experts<=0 ||
+    if(!v.ids || !v.weights || !v.mixed || !v.parts || !v.counts || !v.dst || !v.start2 || !v.hit || !v.cpu || !v.cpu_input || v.experts<=0 ||
        v.rows<=0 || v.k<=0 || v.rows>std::numeric_limits<int>::max()/v.k || v.width<=0 ||
        v.width>kRouteMaxWidth || v.width%32 || (v.native_q8_valid && !v.native_q8)) {
         err="verify route snapshot: invalid/bounded view";return false;

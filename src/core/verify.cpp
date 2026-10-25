@@ -1601,6 +1601,7 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
         verify_probe::RouteView rv;
         rv.ids=ids_+tb*K;rv.weights=w_+tb*K;rv.mixed=mixed_+tb*N;
         rv.parts=parts_out;rv.hit=hit_out;rv.cpu=m_ymiss_+(size_t)tb*K*N;
+        rv.cpu_input=m_x_+tb*N;
         rv.counts=p_counts;rv.dst=p_dst;rv.start2=p_start2;
         rv.native_q8=lay.native?nat_xq_+(size_t)tb*(N/32)*36:nullptr;
         rv.native_q8_valid=lay.native;rv.rows=n;rv.width=(int)N;rv.k=(int)K;

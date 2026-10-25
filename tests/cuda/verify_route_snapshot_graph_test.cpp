@@ -6,6 +6,7 @@
 #include <cstring>
 #include <stdexcept>
 #include <limits>
+#include <filesystem>
 using namespace strata::core::verify_probe;
 namespace {
 void need(bool ok,const char* message){if(!ok)throw std::runtime_error(message);}
@@ -31,7 +32,7 @@ int main(int argc,char** argv){
   {
    Probe p;std::string e;need(p.init(true,stream,0,e,argv[2]),e.c_str());
    RouteView v;v.ids=ids;v.counts=counts;v.dst=dst;v.start2=start2;v.weights=weights;v.mixed=mixed;
-   v.parts=parts;v.hit=hit;v.cpu=cpu;v.native_q8=q8;v.native_q8_valid=true;
+   v.parts=parts;v.hit=hit;v.cpu=cpu;v.cpu_input=hit;v.native_q8=q8;v.native_q8_valid=true;
    v.rows=2;v.width=32;v.k=2;v.experts=512;v.ring=83;v.gu_type=12;v.down_type=7;
    Graphs graphs;auto& graph=graphs.graph;auto& exec=graphs.exec;
    cu(cudaStreamBeginCapture(stream,cudaStreamCaptureModeThreadLocal));
@@ -64,13 +65,17 @@ int main(int argc,char** argv){
    replay();auto s=p.completed_route();
    need(s&&s->valid&&!s->error&&s->expert==409&&s->local_token==1&&s->slot==1,"route identity");
    need(s->gpu_entry==-1&&!s->gpu_valid&&s->cpu_valid,"mapped membership");
-   need(s->mixed[0]==1032&&s->cpu[0]==3096&&s->native_q8[3]==0x7c,"producer lifetime/raw snapshot");
+   need(s->mixed[0]==1032&&s->cpu_input[0]==2032&&s->cpu[0]==3096&&s->native_q8[3]==0x7c,"producer lifetime/raw snapshot");
    need(p.report(4,900)==903,"runtime offset");need(p.report_route(e),e.c_str());
+   const std::string base=std::string(argv[2])+".owner-1.window-";
+   need(std::filesystem::file_size(base+"1.mapped-input.f32")==32*sizeof(float),"mapped input sidecar size");
    need(!p.report_route(e),"exclusive files must reject overwrite");e.clear();
    d[0]=3;replay();s=p.completed_route();
    need(s->gpu_entry==0&&s->gpu_valid&&!s->cpu_valid&&s->hit[0]==2096,"GPU membership reset");
    const int64_t positions[4]={10,20,30,90001};need(p.report(4,-1,positions)==90001,"runtime per-row positions");
    need(p.report_route(e),e.c_str());
+   need(!std::filesystem::exists(base+"2.mapped-input.f32"),"GPU row wrote invalid mapped input");
+   need(!std::filesystem::exists(base+"2.mapped-non-gpu.f32"),"GPU row wrote invalid mapped output");
    count[1]=5;replay();need(p.completed_route()->error==1,"invalid count bounds fail closed");
    p.report(4,1900);need(!p.report_route(e),"invalid plan must fail report");e.clear();
    count[1]=1;part.fill(0);replay();need(!p.completed_route()->valid,"finite replay leaked snapshot");

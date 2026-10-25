@@ -25,7 +25,7 @@ constexpr int kRouteMaxQ8Bytes = kRouteMaxWidth / 32 * 36;
 // bytes are never inspected as FP32. counts[1] is the number of GPU entries.
 struct RouteView {
     const int32_t *ids = nullptr, *counts = nullptr, *dst = nullptr, *start2 = nullptr;
-    const float *weights = nullptr, *mixed = nullptr, *parts = nullptr, *hit = nullptr, *cpu = nullptr;
+    const float *weights = nullptr, *mixed = nullptr, *parts = nullptr, *hit = nullptr, *cpu = nullptr, *cpu_input = nullptr;
     const uint8_t* native_q8 = nullptr;
     const uint32_t* skip = nullptr;
     int rows = 0, width = 0, k = 0, experts = 0;
@@ -40,7 +40,7 @@ struct RouteSnapshot {
     int all_resident = 0, device_plan = 0, remote = 0, skipped = 0, gu_type = -1, down_type = -1;
     float weight = 0;
     uint32_t ring = 0;
-    float mixed[kRouteMaxWidth], parts[kRouteMaxWidth], hit[kRouteMaxWidth], cpu[kRouteMaxWidth];
+    float mixed[kRouteMaxWidth], parts[kRouteMaxWidth], hit[kRouteMaxWidth], cpu[kRouteMaxWidth], cpu_input[kRouteMaxWidth];
     uint8_t native_q8[kRouteMaxQ8Bytes];
 };
 // One owner per Verifier/device. Allocate before graph capture; reset/scan/read
