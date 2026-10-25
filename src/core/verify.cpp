@@ -424,6 +424,9 @@ Verifier::~Verifier() {
         if (kv.second) cudaGraphExecDestroy(kv.second);
     for (auto& kv : commit_bm_)
         if (kv.second) cudaGraphExecDestroy(kv.second);
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    finite_probe_.release(); // graphs gone; compute stream still alive
+#endif
     if (arena_b_) cudaFree(arena_b_);
     if (h_commitb_) cudaFreeHost(h_commitb_);
     if (qcnt_) cudaFree(qcnt_);
@@ -667,6 +670,10 @@ bool Verifier::init(const WeightTable& wt, const ModelGeometry& g, SessionState&
         err = "verify: stream create failed";
         return false;
     }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    if (!finite_probe_.init(verify_probe::requested(std::getenv("STRATA_VERIFY_FINITE_PROBE")),
+                            cs_, device_, err)) return false;
+#endif
     if (cudaEventCreateWithFlags(&commit_done_, cudaEventDisableTiming) != cudaSuccess ||
         cudaEventCreateWithFlags(&ev_fork_, cudaEventDisableTiming) != cudaSuccess ||
         cudaEventCreateWithFlags(&ev_join_, cudaEventDisableTiming) != cudaSuccess) {
@@ -761,6 +768,13 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
     const int64_t N = g.n_embd, HC = g.hc, K = ss.k, C = g.ssm_conv_channels, ZV = g.ssm_value_dim;
     const int64_t HV = g.ssm_v_heads, HK = g.ssm_k_heads, NH = g.n_head, HD = g.head_dim, NKV = g.n_head_kv;
     const int64_t IQ = g.idx_q_heads, ID = g.idx_key_dim, NE = g.n_expert, MT = max_t_;
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    if (!finite_probe_.begin_graph(err)) return false;
+    auto finite = [&](const float* p, int64_t layer, int half, verify_probe::Stage stage,
+                      int64_t rows, int64_t width, int64_t offset = 0) {
+        return finite_probe_.scan(p, {layer, rows, width, offset, half, stage, verify_probe::Format::f32}, err);
+    };
+#endif
     const QsaShapes s = shapes_of(g);
     const GrShapes gs{g.n_embd, g.hc, g.hc_lr};
     const uint64_t gdn_floats = (uint64_t) g.ssm_state_size * g.ssm_v_heads * g.ssm_state_size +
@@ -855,6 +869,9 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
         broadcast_streams(emb_, R_, N, (int) HC, T, cs);
     }
 
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    if (!finite(R_, lb_, -1, verify_probe::Stage::input_residual, T, HC * N)) return false;
+#endif
     // per-layer state indices (GDN and QSA layers are numbered separately)
     std::vector<int64_t> gdn_idx((size_t) g.n_layers, -1), qsa_idx((size_t) g.n_layers, -1);
     {
@@ -1002,6 +1019,9 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
                                 (int) (l * kProfPer + (half == 0 ? 27 : 30)));
         };
         const bool q8_attn = gr_read_group(0, pending, inj2_, inj_);   // true: xq_ holds mixed's q8_1 (STRATA_QFUSE)
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        if (!finite(mixed_ + tb * N, l, 0, verify_probe::Stage::hc_attention, n, N, tb)) return false;
+#endif
         if (inputs_pending) {   // the window's steps and positions, before the first mixer reads them
             join(1);
             inputs_pending = false;
@@ -1331,7 +1351,13 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
             return false;
         }
         stamp(l, 16, grp);
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        if (!finite(bo_ + tb * N, l, 0, verify_probe::Stage::attention_output, n, N, tb)) return false;
+#endif
         const bool q8_ffn = gr_read_group(1, true, inj_, inj2_);   // true: nat_xq_ holds the MoE input's q8_1 (STRATA_QFUSE)
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        if (!finite(mixed_ + tb * N, l, 1, verify_probe::Stage::hc_ffn, n, N, tb)) return false;
+#endif
         // with CPU experts in the window the shared expert forks off once the doorbell is published (it no longer
         // competes with it for the GPU's first microseconds); STRATA_SH_FORK_LATE=0 forks at the top as before
         static const bool sh_fork_late_env = [] {
@@ -1378,6 +1404,9 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
             mb.logits = logits_ + t * NE; mb.ids = ids_ + t * K; mb.weights = w_ + t * K;
             if (!moe_route(wt, g, l, K, mb, mixed_ + t * N, cs, err, nullptr)) return false;
         }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        if (!finite(logits_ + tb * NE, l, 1, verify_probe::Stage::route_logits, n, NE, tb)) return false;
+#endif
         // STRATA_ROUTE_PRIOR=lambda (opt-in, changes the output): the top-10 picked again with a logit bonus for the
         // resident experts; the weights stay the router's (route_prior.cu)
         static const float route_prior = [] { const char* v = std::getenv("STRATA_ROUTE_PRIOR"); return v ? (float) std::atof(v) : 0.0f; }();
@@ -1391,6 +1420,9 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
                                       rr_stats_ != nullptr ? rr_stats_ + (n <= 8 ? 4 : 0) : nullptr, cs);
             } catch (const std::exception& e) { err = "verify route-resident: " + std::string(e.what()); return false; }
         }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        if (!finite(w_ + tb * K, l, 1, verify_probe::Stage::route_weights, n, K, tb)) return false;
+#endif
         if (ar_on()) {
             resident_plan(ids_ + tb * K, n * (int) K, (int) K, hits_.d_res + l * g.n_expert, (int) g.n_expert,
                           hits_.cache_base, slot_off_d_, (long long) hits_.blob,
@@ -1553,6 +1585,20 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
         if (sh_stream_on() && !prof_on_ && sh_cs_ != nullptr && ev_fork_ != nullptr && ev_join_ != nullptr) {
             cudaStreamWaitEvent(cs, ev_join_, 0);
         }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        // All CPU/GPU parts are ready and the existing side-stream join has
+        // completed. These are consumed immediately by combine below.
+        // gate_deferred leaves scalar gating to combine. Otherwise it happened
+        // inside shared_expert_multi; inspect its output rather than old scratch.
+        if (!sg_gated_[grp] && !shared_expert_native_bf16_enabled() &&
+            !finite_probe_.scan(sh_bf16_ + tb * N, {l, n, N, tb, 1,
+                verify_probe::Stage::shared_input_bf16, verify_probe::Format::bf16}, err)) return false;
+        if (sg_gated_[grp] &&
+            !finite(sh_g_ + tb, l, 1, verify_probe::Stage::shared_scalar_gate, n, 1, tb)) return false;
+        if (!finite(shared_ + tb * N, l, 1, verify_probe::Stage::shared_output, n, N, tb)) return false;
+        if (!finite_probe_.scan(parts_out, {l, n * K, N, tb * K, 1,
+                verify_probe::Stage::routed_parts, verify_probe::Format::f32, K}, err)) return false;
+#endif
         if (sg_gated_[grp]) {   // STRATA_LFUSE: the shared expert's gate was not applied: the combine applies it (all rows are hits)
             try {
                 native_moe_combine_multi_hits_gated(parts_out, w_ + tb * K, shared_ + tb * N, sh_g_ + tb, bo_ + tb * N, N, K, n, cs);
@@ -1570,6 +1616,9 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
         }
         if (remote_opt_) remote_opt_->combine(bo_ + tb * N, y_dummy_ + tb * N, tb, n,
                               device_plan_ ? skip_ + grp : nullptr, ring, cs);
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        if (!finite(bo_ + tb * N, l, 1, verify_probe::Stage::moe_output, n, N, tb)) return false;
+#endif
         stamp(l, 24, grp);
         if (l == g.n_layers - 1) {
             if (!fuse_head_gr) {
@@ -1595,6 +1644,9 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
         copy_from_mapped(hout, R_, (int64_t) T * HC * N, cs);
         copy_from_mapped(hout + (size_t) T * HC * N, bo_, (int64_t) T * N, cs);
         copy_from_mapped(hout + (size_t) T * (HC + 1) * N, inj2_, (int64_t) T * HC, cs);
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        if (!finite_probe_.end_graph(err)) return false;
+#endif
         return true;
     }
 
@@ -1664,6 +1716,12 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
                 }
             }
         }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        // Every successful branch above produces this image: native fused and
+        // multi mixers write head_mixed_; canonical lm_head calls lm_head_mix
+        // with bb.mixed=head_mixed_+t*N, then consumes it in quantize_q8_K.
+        if (!finite(head_mixed_, g.n_layers, -1, verify_probe::Stage::head_mixed, T, N)) return false;
+#endif
         if (head_ != nullptr && head_->loaded()) {
             try {
                 native_quantize_q8_1(head_mixed_, xq_, (int) N, T, cs);
@@ -1678,6 +1736,9 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
                 return false;
             }
         }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        if (!finite(head_logits_, g.n_layers, -1, verify_probe::Stage::head_logits, T, n_vocab_)) return false;
+#endif
         // Greedy, the default, is recorded here as before (no extra launch or sync per window). A request that
         // samples or penalizes is sampled again host-side after the replay (run()) with its own parameters and a
         // fresh draw counter: a captured sampler would bake them in and replay the same draws forever.
@@ -1691,6 +1752,9 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
         }
     }
     stamp(g.n_layers, 1, 0);
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    if (!finite_probe_.end_graph(err)) return false;
+#endif
     return true;
 }
 
@@ -1927,6 +1991,9 @@ void Verifier::stage_inputs(int T, const int32_t* tokens, int64_t pos0) {
     std::atomic_thread_fence(std::memory_order_seq_cst);
     last_t_ = T;
     last_pos0_ = pos0;
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    finite_positions_.clear(); // consecutive runtime positions for this replay
+#endif
     for (int t = 0; t < T; ++t) last_tokens_[t] = tokens[t];
     staged_ = true;
 }
@@ -2117,6 +2184,9 @@ bool Verifier::run(int T, const int32_t* tokens, int64_t pos0, PoolMultiFn pool,
     const cudaError_t se = cudaStreamSynchronize(cs_);
     trace_ev("SYNCED", -1, -1, (int64_t) se);
     if (se != cudaSuccess) { err = std::string("verify: ") + cudaGetErrorString(se); return false; }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    finite_probe_.report(T, last_pos0_);
+#endif
     if (ar_on() && h_plan_err_ != nullptr && *(volatile uint32_t*) h_plan_err_ != 0) {   // #871: refresh_ar saw the table whole
         *(volatile uint32_t*) h_plan_err_ = 0;
         err = "verify: the all-resident plan met an expert that is not in VRAM (the residency table changed during the window)";
@@ -2700,6 +2770,9 @@ bool Verifier::stage_batch(const int* rows, int S, int hbase, const int32_t* tok
     *(volatile uint32_t*) h_flagB_ = 0;
     std::atomic_thread_fence(std::memory_order_seq_cst);
     last_t_ = S;
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    if (finite_probe_.allocated()) finite_positions_.assign(pos, pos + S);
+#endif
     for (int t = 0; t < S; ++t) last_rows_[t] = rows[t];
     row_base_ = hbase;   // the graphs' key (and nothing else) reads it until the next stage_batch
     last_batch_ = true;
@@ -2743,6 +2816,9 @@ bool Verifier::run_slot_rows(const int* rows, int S, const int32_t* tokens, cons
         }
         const cudaError_t se = cudaStreamSynchronize(cs_);
         if (se != cudaSuccess) { err = std::string("verify batch: ") + cudaGetErrorString(se); return false; }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+        finite_probe_.report(S, -1, finite_positions_.data());
+#endif
         cudaStreamSynchronize(copy_);
         if (prof_on_) collect_profile();
         ++windows;
@@ -2806,6 +2882,9 @@ bool Verifier::run_slot_rows(const int* rows, int S, const int32_t* tokens, cons
     }
     const cudaError_t se = cudaStreamSynchronize(cs_);
     if (se != cudaSuccess) { err = std::string("verify batch: ") + cudaGetErrorString(se); return false; }
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    finite_probe_.report(S, -1, finite_positions_.data());
+#endif
     cudaStreamSynchronize(copy_);
     if (prof_on_) collect_profile();
     ++windows;
@@ -2964,6 +3043,9 @@ int Verifier::batch_poll(PoolMultiFn pool, void* user, std::string& err) {
     if (q != cudaSuccess) { err = std::string("verify batch: ") + cudaGetErrorString(q); b_running_ = false; return -1; }
     const cudaError_t qc = cudaStreamQuery(copy_);   // no host function of this window may raise flag B in the next
     if (qc == cudaErrorNotReady) return 0;
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    finite_probe_.report(S, -1, finite_positions_.data());
+#endif
     if (prof_on_) collect_profile();
     if (last_stage()) {
         if (!sample_rows(S, err)) { b_running_ = false; return -1; }
@@ -3216,6 +3298,10 @@ bool Verifier::pl_finish(int32_t* out, std::string& err) {
     using namespace strata::kernels;
     const OnDevice on_device(device_);
     const ModelGeometry& g = *g_;
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    // The caller's done() observed ev_done_ after the graph's receipt copy.
+    finite_probe_.report(fl_T_, last_pos0_);
+#endif
     fl_active_ = false;
     if (fl_prof_) accumulate_profile(prof_pin_);
     ++windows;

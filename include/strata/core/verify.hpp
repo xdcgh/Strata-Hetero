@@ -27,6 +27,9 @@
 #include "strata/core/layer.hpp"
 #include "strata/core/session.hpp"
 #include "strata/kernels/sampler.hpp"
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+#include "strata/core/verify_probe.hpp"
+#endif
 
 #include <cuda_runtime.h>
 
@@ -273,6 +276,10 @@ public:
     std::string profile_report();
 
 private:
+#if defined(STRATA_VERIFY_FINITE_PROBE)
+    verify_probe::Probe finite_probe_;
+    std::vector<int64_t> finite_positions_;
+#endif
     RemoteExpertOpt* remote_opt_ = nullptr;
     bool capture(int T, std::string& err);
     // batch windows (see init_slots)
