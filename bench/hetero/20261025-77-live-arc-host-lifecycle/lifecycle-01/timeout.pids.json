@@ -1,0 +1,1 @@
+{"mock": {"pid": 18092, "creation_filetime": 134373828255480399, "state": "running"}, "descendant": {"pid": 21880, "creation_filetime": 134373828256339334, "state": "running"}, "scenario": "timeout", "synthetic_payload": true, "model_loaded": false, "device_accessed": false}

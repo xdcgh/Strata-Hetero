@@ -1,0 +1,147 @@
+{
+  "status": "host_lifecycle_independently_verified",
+  "scenarios": 6,
+  "owned_mock_and_descendant_identities_gone": 12,
+  "hashed_files": 31,
+  "source_commit": "238a452e0096b3078513298e819d3acb2324a030",
+  "executable": {
+    "path": "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe",
+    "sha256": "b74c5ba71ace161fac7d8b9b6906cb10e06627898ea4c94b37f6510480652552",
+    "bytes": 226816
+  },
+  "claim_limit": "Real C++ pipe with synthetic stdlib children only. No Arc, NPU, expert math, model output or end-to-end performance acceptance.",
+  "artifacts": {
+    "build-receipt.json": {
+      "sha256": "942108385f358dd5b3fc819f3ce7a6b972bbbf37d94afd19d76c58d1699e7df0",
+      "bytes": 3409
+    },
+    "build.cmd": {
+      "sha256": "10af812d58c87c43fe41f27c0e15d8a7a32230ba816ef9946d710c0c9c269f3b",
+      "bytes": 580
+    },
+    "build.log": {
+      "sha256": "bc2ace037c391c59ab6bf2295bbee979a44257a82c5bde1c72b6276e3a764381",
+      "bytes": 64
+    },
+    "build.py": {
+      "sha256": "1a3b482987e8ca14a10f82fff5b6c79ff5c92b8612a139f60a820dc954b7cee2",
+      "bytes": 4128
+    },
+    "disabled-receipt.json": {
+      "sha256": "462648bb11801579f1889c6ec72fa39d590d4a951791d50d7734b7bd0302d243",
+      "bytes": 156
+    },
+    "disabled.stderr.txt": {
+      "sha256": "13c0a88199fd1bcc71ee1e7d0f3d33d735ba323de98ba3b5f2f2419731f5e2e3",
+      "bytes": 182
+    },
+    "disabled.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "lifecycle-01\\nan.pids.json": {
+      "sha256": "9ea1fc2349b93758261f0e7a5f8f7e8cb2c6b3d71b0a85edccd2ca1b95589758",
+      "bytes": 271
+    },
+    "lifecycle-01\\nan.stderr.txt": {
+      "sha256": "d58f4ce964cfc6f9b38a151b8b3ee67674a963defe8eb911d9195beb74eee846",
+      "bytes": 395
+    },
+    "lifecycle-01\\nan.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "lifecycle-01\\partial.pids.json": {
+      "sha256": "3cccdd8d825b70d48ff7ec6af3c49cef579c3b2d120fa3fe0f506f86796383db",
+      "bytes": 274
+    },
+    "lifecycle-01\\partial.stderr.txt": {
+      "sha256": "5cc7005a8a782d0979941f352dfc3934aa0c52c10b7275eb91271a2cc77948c4",
+      "bytes": 391
+    },
+    "lifecycle-01\\partial.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "lifecycle-01\\receipt.json": {
+      "sha256": "5b6f6de918ff9b97905450c90fcc0d56b1cdd5ad976557dac1f436fbae872584",
+      "bytes": 12650
+    },
+    "lifecycle-01\\reject.pids.json": {
+      "sha256": "9822c0529af0d5518a4c237dd88e22e9e6118eb809eb50c511b71461da3a1907",
+      "bytes": 274
+    },
+    "lifecycle-01\\reject.stderr.txt": {
+      "sha256": "721839886f904fac65b87e933ee65f6ffad37a4e7d98b4c0438de4510ab1aa93",
+      "bytes": 438
+    },
+    "lifecycle-01\\reject.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "lifecycle-01\\short-output.pids.json": {
+      "sha256": "0f54456ab30a4d131bc24407946e740637734bf12e9528ef25c5aa5b95585d5d",
+      "bytes": 280
+    },
+    "lifecycle-01\\short-output.stderr.txt": {
+      "sha256": "c72556d1f15a87ef2d8ecb13f2b2e727493e091ae72a9bd9b4e988c83927e110",
+      "bytes": 391
+    },
+    "lifecycle-01\\short-output.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "lifecycle-01\\success.pids.json": {
+      "sha256": "bf8bf23635736c9878208c117132c00218f63001e6b660968da8731919edf610",
+      "bytes": 275
+    },
+    "lifecycle-01\\success.stderr.txt": {
+      "sha256": "90f2a56f13c85144ad098513264f16b8a2a4e983c6448be82f0744006785cf61",
+      "bytes": 180
+    },
+    "lifecycle-01\\success.stdout.txt": {
+      "sha256": "c27991f40a9cbce5fac7cc04fc9e7646b203626ebf7fa0342c6fd00bfd88de7b",
+      "bytes": 68
+    },
+    "lifecycle-01\\timeout.pids.json": {
+      "sha256": "bf9beba2c83b4ef809b1fecfb4f9d35d8bc3a64309b2a3a796d0c3818420f85e",
+      "bytes": 275
+    },
+    "lifecycle-01\\timeout.stderr.txt": {
+      "sha256": "76bd4977626130a44237b86c6203ed7b545f7cf6119ba899c4d9cc44ea1ee24f",
+      "bytes": 394
+    },
+    "lifecycle-01\\timeout.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "lifecycle-01.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "lifecycle-01.stdout.txt": {
+      "sha256": "14b56e37b22758b61bf281d0f4289d1246e4dda48f98d38eea9c605778ae1437",
+      "bytes": 12652
+    },
+    "outer.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "outer.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "review.py": {
+      "sha256": "b2c3b5fcfa87ff38a902f7be32580e4576fbd87861ebf456079cfbd4f5d03e05",
+      "bytes": 3740
+    },
+    "terminal-process-check.json": {
+      "sha256": "dcd59044dc784ab4a53308914b42a38bef1d1919b62737960496d4766367bf63",
+      "bytes": 116
+    },
+    "vcvars.log": {
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42",
+      "bytes": 298
+    }
+  }
+}

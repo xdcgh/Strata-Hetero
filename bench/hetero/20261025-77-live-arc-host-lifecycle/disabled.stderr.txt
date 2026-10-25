@@ -1,0 +1,1 @@
+hetero_live phase=host_fixture layer=28 expert=288 rows=1 attempt=1 completed=0 fallback=1 reason=unsupported_native_contract input_bytes=0 output_bytes=0 wall_ms=0.037 worker_ns=0

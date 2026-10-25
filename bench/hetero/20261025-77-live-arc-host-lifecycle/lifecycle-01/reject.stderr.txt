@@ -1,0 +1,2 @@
+hetero_live phase=eligible_host_fixture layer=28 expert=288 rows=2 attempt=1 completed=0 fallback=1 reason=bridge_rejected_request:{"message":"explicit mock rejection"} input_bytes=3092500 output_bytes=0 wall_ms=105.436 worker_ns=0
+hetero_live phase=eligible_host_fixture_retry layer=28 expert=288 rows=2 attempt=1 completed=0 fallback=1 reason=bridge_disabled_after_failure input_bytes=3092500 output_bytes=0 wall_ms=0.899 worker_ns=0

@@ -71,3 +71,31 @@ The CPU-only build `20261011-52-native-cpu-service-build` built five targets and
 Run60 measures the same complete caller boundary for CPU10/all, CPU16/none and Arc GPU.0: serialization, framed exchange and owned output copy, with resource/hash/quality/file work excluded. All 135 formal and 27 warmup responses pass native numerical gates. CPU10/all has lower median caller RTT than Arc at each measured row count 1/2/4/8/16/32/64/128/256. At rows 1 and 256 the respective CPU/Arc medians are 0.2706/1.2111 ms and 16.0446/17.5180 ms. No crossover was established in this range.
 
 Run61 executes only the two previously unrun synchronized joint arms against those reviewed run60 solo baselines. All 216 responses pass, including 108 independently replayed Arc comparisons; CPU outputs remain byte-identical to native gold. At rows 256, CPU10/all and Arc joint medians are 19.7789 and 19.5307 ms; CPU16/none and Arc are 27.9015 and 28.6046 ms. The solo and joint arms were not interleaved, and no memory-bandwidth counter was measured. These observations do not establish a full-model speedup or its cause. Arc model dispatch remains disabled by default. See bench/hetero/20261011-61-native-cpu-arc-ipc-joint-compare/DECISIONS.md and comparison.csv.
+
+## Forced live-model route source and host boundary
+
+The isolated `codex/20261025-live-arc` source at `238a452e` connects actual
+generation/verify and bounded prefill CPU jobs to the Arc bridge. Its forced
+mode can remove the frozen layer 28/expert 288 from the GPU plan and pass the
+actual model input/blob through the bridge, then return validated output to
+the existing combine. It supports only that Q4_K/Q5_1 expert at 1..8 rows;
+the router must select it. Default and auto modes dispatch nothing. The
+synchronous implementation does not yet overlap Arc and the remaining CPU
+batch, and earlier microbenchmarks do not predict a model gain.
+
+On 2026-10-25, Run77 compiled only the real Windows pipe implementation and
+its host fixture with MSVC 19.51, C++20, Release /O2 and static CRT. Off/auto
+and unsupported fallback passed. Six eligible host scenarios also passed:
+success, explicit rejection, truncated frame, wrong output length,
+last-element NaN and the production 120-second timeout. The fixture checks
+both output rows completely before accepting success or unchanged fallback.
+All twelve mock/descendant process identities were gone after their scenarios;
+root's subsequent CIM check also found no fixture, runner or mock owners.
+Raw files and independent hash/outcome review are under
+`bench/hetero/20261025-77-live-arc-host-lifecycle/`.
+
+Those children use synthetic bytes and stdlib protocol replies. They never
+load OpenVINO, run expert math or access Arc. The changed engine callsites
+still need a complete engine build, an actual router hit and successful Arc
+completion in a real model, finite/correct output and matched end-to-end
+timing. No helper route or speedup is accepted by this host check.

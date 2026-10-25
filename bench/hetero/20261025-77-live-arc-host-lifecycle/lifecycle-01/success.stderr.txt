@@ -1,0 +1,1 @@
+hetero_live phase=eligible_host_fixture layer=28 expert=288 rows=2 attempt=1 completed=1 fallback=0 reason=ok input_bytes=3092500 output_bytes=20480 wall_ms=106.362 worker_ns=123

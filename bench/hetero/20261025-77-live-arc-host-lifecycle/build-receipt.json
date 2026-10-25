@@ -1,0 +1,81 @@
+{
+  "status": "host_fixture_compiled",
+  "pid": 20672,
+  "source": "E:\\Strata-Hetero-data\\source\\hetero-live-arc-20261025",
+  "source_commit": "238a452e0096b3078513298e819d3acb2324a030",
+  "source_sha256": {
+    "src/kernels/cpu/live_helper.cpp": "8d6879412bd5dc008223b60dfd815bc94104940fd13ad9124f4f46568b1fba63",
+    "src/kernels/cpu/live_helper_host_fixture.cpp": "3be1cf98096c06f4b6f7333da4f2bffaf406e4b5dfdaab3cc7ce717649c09ea1",
+    "include/strata/kernels/cpu/live_helper.hpp": "279486bfe6ea974338c380ae25d88b24548d5860f13e10de23b6ca9a08810361",
+    "include/strata/kernels/cpu/pool.hpp": "a4cb69dd8991d19ca6829afb54d1d7e6c247db60a1f103a01afbdddfd3e2d747",
+    "include/strata/kernels/cpu/native_expert.hpp": "269ab8daef96fc6e14471430ef5c44475af7f166d127d812fb447c4062131b7e"
+  },
+  "build": "E:\\Strata-Hetero-data\\build\\live-arc-host77-01",
+  "memory_before": {
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "sources": {
+      "physical": "GlobalMemoryStatusEx",
+      "system_commit": "PSAPI GetPerformanceInfo",
+      "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+    },
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 112676839424,
+    "physical_used_bytes": 24286408704,
+    "commit_limit_bytes": 145553182720,
+    "commit_used_bytes": 25632669696,
+    "commit_available_bytes": 119920513024,
+    "commit_total_pages": 6257976,
+    "commit_limit_pages": 35535445,
+    "commit_page_size_bytes": 4096,
+    "gms_pagefile_total_bytes": 145553182720,
+    "gms_pagefile_avail_bytes_unclassified": 119920513024,
+    "pagefile_total_bytes": null,
+    "pagefile_used_bytes": null
+  },
+  "started_utc": "2026-10-25T06:20:00.883792+00:00",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/c",
+    "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\build.cmd"
+  ],
+  "cuda_compiled": false,
+  "device_accessed": false,
+  "model_loaded": false,
+  "compiler_parent_pid": 4956,
+  "exit_code": 0,
+  "source_unchanged": true,
+  "executable": {
+    "path": "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe",
+    "sha256": "b74c5ba71ace161fac7d8b9b6906cb10e06627898ea4c94b37f6510480652552",
+    "bytes": 226816
+  },
+  "artifacts": [
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\build.cmd",
+      "sha256": "10af812d58c87c43fe41f27c0e15d8a7a32230ba816ef9946d710c0c9c269f3b",
+      "bytes": 580
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\build.log",
+      "sha256": "bc2ace037c391c59ab6bf2295bbee979a44257a82c5bde1c72b6276e3a764381",
+      "bytes": 64
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\vcvars.log",
+      "sha256": "6664802d83954305451c9926511ccce391905fa7964da6947c4c0ac4b6277a42",
+      "bytes": 298
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\outer.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\outer.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "finished_utc": "2026-10-25T06:20:04.389782+00:00"
+}

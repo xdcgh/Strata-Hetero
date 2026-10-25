@@ -1,0 +1,366 @@
+{
+  "schema": "strata-live-helper-eligible-host-fixture-v1",
+  "records": [
+    {
+      "scenario": "success",
+      "command": [
+        "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe",
+        "eligible-success"
+      ],
+      "exit_code": 0,
+      "runner_timed_out": false,
+      "wall_seconds": 0.12394550000044546,
+      "process_cleanup": [
+        {
+          "role": "mock",
+          "original": {
+            "pid": 11304,
+            "creation_filetime": 134373828248801967,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 11304,
+              "creation_filetime": 134373828248801967,
+              "state": "exited"
+            }
+          ],
+          "owned_process_gone": true
+        },
+        {
+          "role": "descendant",
+          "original": {
+            "pid": 10264,
+            "creation_filetime": 134373828249599463,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 10264,
+              "state": "absent",
+              "winerror": 87
+            }
+          ],
+          "owned_process_gone": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "reject",
+      "command": [
+        "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe",
+        "eligible-failure"
+      ],
+      "exit_code": 0,
+      "runner_timed_out": false,
+      "wall_seconds": 0.12341029999970488,
+      "process_cleanup": [
+        {
+          "role": "mock",
+          "original": {
+            "pid": 11348,
+            "creation_filetime": 134373828250110608,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 11348,
+              "creation_filetime": 134373828250110608,
+              "state": "exited"
+            }
+          ],
+          "owned_process_gone": true
+        },
+        {
+          "role": "descendant",
+          "original": {
+            "pid": 23596,
+            "creation_filetime": 134373828250901985,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 23596,
+              "state": "absent",
+              "winerror": 87
+            }
+          ],
+          "owned_process_gone": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "partial",
+      "command": [
+        "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe",
+        "eligible-failure"
+      ],
+      "exit_code": 0,
+      "runner_timed_out": false,
+      "wall_seconds": 0.13230960000055347,
+      "process_cleanup": [
+        {
+          "role": "mock",
+          "original": {
+            "pid": 13284,
+            "creation_filetime": 134373828251350225,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 13284,
+              "creation_filetime": 134373828251350225,
+              "state": "exited"
+            }
+          ],
+          "owned_process_gone": true
+        },
+        {
+          "role": "descendant",
+          "original": {
+            "pid": 8368,
+            "creation_filetime": 134373828252138273,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 8368,
+              "state": "absent",
+              "winerror": 87
+            }
+          ],
+          "owned_process_gone": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "short-output",
+      "command": [
+        "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe",
+        "eligible-failure"
+      ],
+      "exit_code": 0,
+      "runner_timed_out": false,
+      "wall_seconds": 0.1268406999997751,
+      "process_cleanup": [
+        {
+          "role": "mock",
+          "original": {
+            "pid": 23848,
+            "creation_filetime": 134373828252759265,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 23848,
+              "creation_filetime": 134373828252759265,
+              "state": "exited"
+            }
+          ],
+          "owned_process_gone": true
+        },
+        {
+          "role": "descendant",
+          "original": {
+            "pid": 24788,
+            "creation_filetime": 134373828253558178,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 24788,
+              "state": "absent",
+              "winerror": 87
+            }
+          ],
+          "owned_process_gone": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "nan",
+      "command": [
+        "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe",
+        "eligible-failure"
+      ],
+      "exit_code": 0,
+      "runner_timed_out": false,
+      "wall_seconds": 0.12978930000008404,
+      "process_cleanup": [
+        {
+          "role": "mock",
+          "original": {
+            "pid": 25616,
+            "creation_filetime": 134373828254076193,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 25616,
+              "state": "absent",
+              "winerror": 87
+            }
+          ],
+          "owned_process_gone": true
+        },
+        {
+          "role": "descendant",
+          "original": {
+            "pid": 27340,
+            "creation_filetime": 134373828254879406,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 27340,
+              "state": "absent",
+              "winerror": 87
+            }
+          ],
+          "owned_process_gone": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "timeout",
+      "command": [
+        "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe",
+        "eligible-failure"
+      ],
+      "exit_code": 0,
+      "runner_timed_out": false,
+      "wall_seconds": 120.03208129999985,
+      "process_cleanup": [
+        {
+          "role": "mock",
+          "original": {
+            "pid": 18092,
+            "creation_filetime": 134373828255480399,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 18092,
+              "state": "absent",
+              "winerror": 87
+            }
+          ],
+          "owned_process_gone": true
+        },
+        {
+          "role": "descendant",
+          "original": {
+            "pid": 21880,
+            "creation_filetime": 134373828256339334,
+            "state": "running"
+          },
+          "observations": [
+            {
+              "pid": 21880,
+              "state": "absent",
+              "winerror": 87
+            }
+          ],
+          "owned_process_gone": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "files": {
+    "E:\\Strata-Hetero-data\\build\\live-arc-host77-01\\live_helper_host_fixture.exe": {
+      "sha256": "b74c5ba71ace161fac7d8b9b6906cb10e06627898ea4c94b37f6510480652552",
+      "bytes": 226816
+    },
+    "E:\\Strata-Hetero-data\\source\\hetero-live-arc-20261025\\tools\\hetero_live_mock_child.py": {
+      "sha256": "362d48c3846ea853c745f1ff2f43877d8cefaaa28027dfd327535cd3d8c7d13d",
+      "bytes": 3064
+    },
+    "E:\\Strata-Hetero-data\\source\\hetero-live-arc-20261025\\tools\\hetero_live_host_lifecycle.py": {
+      "sha256": "e4aac215904f9e7b3c4b73b5e19e8a58a9a0cd82724e56ac21e345fc8afee273",
+      "bytes": 6026
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\nan.stderr.txt": {
+      "sha256": "d58f4ce964cfc6f9b38a151b8b3ee67674a963defe8eb911d9195beb74eee846",
+      "bytes": 395
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\nan.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\partial.stderr.txt": {
+      "sha256": "5cc7005a8a782d0979941f352dfc3934aa0c52c10b7275eb91271a2cc77948c4",
+      "bytes": 391
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\partial.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\reject.stderr.txt": {
+      "sha256": "721839886f904fac65b87e933ee65f6ffad37a4e7d98b4c0438de4510ab1aa93",
+      "bytes": 438
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\reject.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\short-output.stderr.txt": {
+      "sha256": "c72556d1f15a87ef2d8ecb13f2b2e727493e091ae72a9bd9b4e988c83927e110",
+      "bytes": 391
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\short-output.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\success.stderr.txt": {
+      "sha256": "90f2a56f13c85144ad098513264f16b8a2a4e983c6448be82f0744006785cf61",
+      "bytes": 180
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\success.stdout.txt": {
+      "sha256": "c27991f40a9cbce5fac7cc04fc9e7646b203626ebf7fa0342c6fd00bfd88de7b",
+      "bytes": 68
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\timeout.stderr.txt": {
+      "sha256": "76bd4977626130a44237b86c6203ed7b545f7cf6119ba899c4d9cc44ea1ee24f",
+      "bytes": 394
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\timeout.stdout.txt": {
+      "sha256": "e5f2e53d3a04b8adecdaf05c544af4984702ddd93912b66317e0f8178c292af8",
+      "bytes": 68
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\nan.pids.json": {
+      "sha256": "9ea1fc2349b93758261f0e7a5f8f7e8cb2c6b3d71b0a85edccd2ca1b95589758",
+      "bytes": 271
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\partial.pids.json": {
+      "sha256": "3cccdd8d825b70d48ff7ec6af3c49cef579c3b2d120fa3fe0f506f86796383db",
+      "bytes": 274
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\reject.pids.json": {
+      "sha256": "9822c0529af0d5518a4c237dd88e22e9e6118eb809eb50c511b71461da3a1907",
+      "bytes": 274
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\short-output.pids.json": {
+      "sha256": "0f54456ab30a4d131bc24407946e740637734bf12e9528ef25c5aa5b95585d5d",
+      "bytes": 280
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\success.pids.json": {
+      "sha256": "bf8bf23635736c9878208c117132c00218f63001e6b660968da8731919edf610",
+      "bytes": 275
+    },
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-77-live-arc-host-lifecycle\\lifecycle-01\\timeout.pids.json": {
+      "sha256": "bf9beba2c83b4ef809b1fecfb4f9d35d8bc3a64309b2a3a796d0c3818420f85e",
+      "bytes": 275
+    }
+  },
+  "device_accessed": false,
+  "model_loaded": false,
+  "compiler_invoked": false,
+  "timeout_scenario_run": true,
+  "all_passed": true
+}
