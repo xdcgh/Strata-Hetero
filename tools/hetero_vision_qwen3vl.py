@@ -483,7 +483,14 @@ def build_openvino_model(spec: VisionSpec, arrays: Mapping[str, Any], identity: 
         axis = c([-1], np.int64)
         centered = ops.subtract(node, ops.reduce_mean(node, axis, True))
         variance = ops.reduce_mean(ops.multiply(centered, centered), axis, True)
-        node = ops.divide(centered, ops.sqrt(ops.add(variance, c(spec.layer_norm_epsilon))))
+        denominator = ops.sqrt(ops.add(variance, c(spec.layer_norm_epsilon)))
+        if rounded_cpu:
+            # ops.cpp:3869-3870 rounds the reciprocal before scaling each
+            # centered element. Direct division is algebraically equivalent,
+            # but can cross a following BF16 conversion's midpoint.
+            node = ops.multiply(centered, ops.divide(c(1), denominator))
+        else:
+            node = ops.divide(centered, denominator)
         node = ops.multiply(node, weight(name + ".weight"))
         if name + ".bias" in arrays:
             node = ops.add(node, weight(name + ".bias"))
@@ -587,6 +594,7 @@ def build_openvino_model(spec: VisionSpec, arrays: Mapping[str, Any], identity: 
         "schema_version": 1, "status": "constructed_uncompiled", "source_revision": spec.source_revision,
         "asset_sha256": spec.asset_sha256, "identity_kind": spec.identity_kind, "shape_plan": plan,
         "arithmetic_policy": arithmetic_policy,
+        "norm_scale_order": "f32_reciprocal_then_multiply" if rounded_cpu else "direct_divide",
         "gelu_variant": "ggml_tanh" if not rounded_cpu else "ggml_cpu_f16_lut_math_rounding",
         "openvino_imported": True, "device_queried": False, "compiled": False, "inference_run": False,
         "decoded_array_hashes_verified": True, "asset_payload_reverified": False,
