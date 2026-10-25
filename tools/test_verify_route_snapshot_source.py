@@ -39,6 +39,7 @@ class SourceContracts(unittest.TestCase):
         self.assertIn("rv.ids=ids_+tb*K;rv.weights=w_+tb*K;rv.mixed=mixed_+tb*N", source)
         self.assertIn("rv.cpu=m_ymiss_+(size_t)tb*K*N", source)
         self.assertIn("rv.cpu_input=m_x_+tb*N", source)
+        self.assertIn("rv.cpu_ids=m_ids_+tb*K", source)
         self.assertEqual(source.count("finite_probe_.report_route(err)"), 5)
         poll = source[source.index("int Verifier::batch_poll"):source.index("bool Verifier::", source.index("int Verifier::batch_poll"))]
         self.assertIn("if (!finite_probe_.report_route(err)) { b_running_ = false; return -1; }", poll)
@@ -68,6 +69,7 @@ class SourceContracts(unittest.TestCase):
         self.assertLess(report.index('base+".parts.f32"'), report.index('base+".json"'))
         self.assertLess(report.index('base+".mapped-input.f32"'), report.index('base+".json"'))
         self.assertIn('if(s.cpu_valid && !exclusive_bytes(base+".mapped-input.f32"', report)
+        self.assertIn('if(s.cpu_valid && !exclusive_bytes(base+".mapped-ids.i32"', report)
         self.assertIn('float_number((float)maxabs)', report)
 
 

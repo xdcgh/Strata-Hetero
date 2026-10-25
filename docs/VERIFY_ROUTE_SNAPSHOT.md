@@ -9,7 +9,8 @@ No arithmetic, routing, sampling, or placement setting is changed.
 
 The extra allocation and transfers are absent when the prefix is unset. An
 entirely disabled finite probe makes no CUDA calls, even with a prefix supplied.
-The current bound is an embedding width of 4096, divisible by 32. Unsupported
+The current bounds are an embedding width of 4096, divisible by 32, and 64
+routed slots per token. Unsupported
 diagnostic shapes fail rather than truncating the captured row.
 
 After a routed-parts scan finds the window's first bad checkpoint, one kernel
@@ -61,6 +62,11 @@ For each captured window, the base name is
   The harness should check their finite values, hashes, and byte equality;
   capturing `mixed_` alone would not exclude a stale or incorrect doorbell
   publication.
+* `.mapped-ids.i32`: under the same `mapped_non_gpu_valid` flag, all `k`
+  published IDs for this token from `m_ids_`, as native-endian int32 values.
+  Compare its selected slot against metadata `expert` before choosing a blob
+  for a CPU replay. The device router's ID alone does not exclude stale
+  published IDs.
 * `.json`: completion metadata, written last, then logged with the prefix
   `strata verify_route_snapshot: `.
 

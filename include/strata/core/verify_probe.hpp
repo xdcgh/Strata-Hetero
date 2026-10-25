@@ -20,11 +20,12 @@ struct Record {
     unsigned long long index = ~0ull, nan = 0, positive_inf = 0, negative_inf = 0;
 };
 constexpr int kRouteMaxWidth = 4096;
+constexpr int kRouteMaxK = 64;
 constexpr int kRouteMaxQ8Bytes = kRouteMaxWidth / 32 * 36;
 // Group-local pointers, valid only at the post/scan boundary. Packed q8_1
 // bytes are never inspected as FP32. counts[1] is the number of GPU entries.
 struct RouteView {
-    const int32_t *ids = nullptr, *counts = nullptr, *dst = nullptr, *start2 = nullptr;
+    const int32_t *ids = nullptr, *cpu_ids = nullptr, *counts = nullptr, *dst = nullptr, *start2 = nullptr;
     const float *weights = nullptr, *mixed = nullptr, *parts = nullptr, *hit = nullptr, *cpu = nullptr, *cpu_input = nullptr;
     const uint8_t* native_q8 = nullptr;
     const uint32_t* skip = nullptr;
@@ -42,6 +43,7 @@ struct RouteSnapshot {
     uint32_t ring = 0;
     float mixed[kRouteMaxWidth], parts[kRouteMaxWidth], hit[kRouteMaxWidth], cpu[kRouteMaxWidth], cpu_input[kRouteMaxWidth];
     uint8_t native_q8[kRouteMaxQ8Bytes];
+    int32_t cpu_ids[kRouteMaxK];
 };
 // One owner per Verifier/device. Allocate before graph capture; reset/scan/read
 // enqueue only capture-safe operations. A captured reset runs on EVERY replay.

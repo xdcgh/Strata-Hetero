@@ -72,6 +72,8 @@ __global__ void capture_route_kernel(const Record* r, RouteSnapshot* s, RouteVie
         const int bytes=v.width/32*36;
         for(int i=threadIdx.x;i<bytes;i+=blockDim.x)s->native_q8[i]=v.native_q8[(unsigned long long)token*bytes+i];
     }
+    if(s->cpu_valid)
+        for(int i=threadIdx.x;i<v.k;i+=blockDim.x)s->cpu_ids[i]=v.cpu_ids[token*v.k+i];
 }
 template<Format format>
 __global__ void inspect(const void* values, unsigned long long count, Record* record, Point point, unsigned ordinal) {
@@ -158,7 +160,7 @@ bool Probe::report_route(std::string& err) {
     if(!host_route_ || !host_route_->valid)return true;
     const auto& s=*host_route_;const auto& r=*host_record_;
     if(s.error || r.point.stage!=Stage::routed_parts || s.ordinal!=(int)r.ordinal ||
-       s.width<=0 || s.width>kRouteMaxWidth || s.width%32 || !window_ || !std::isfinite(s.weight)) {
+       s.width<=0 || s.width>kRouteMaxWidth || s.width%32 || s.k<=0 || s.k>kRouteMaxK || !window_ || !std::isfinite(s.weight)) {
         err="verify route snapshot: invalid captured plan/context (error="+std::to_string(s.error)+")";return false;
     }
     const auto base=route_prefix_+".owner-"+std::to_string(owner_)+".window-"+std::to_string(window_);
@@ -168,6 +170,7 @@ bool Probe::report_route(std::string& err) {
     if(s.gpu_valid && !exclusive_bytes(base+".gpu-hit.f32",s.hit,s.width*sizeof(float),err))return false;
     if(s.cpu_valid && !exclusive_bytes(base+".mapped-non-gpu.f32",s.cpu,s.width*sizeof(float),err))return false;
     if(s.cpu_valid && !exclusive_bytes(base+".mapped-input.f32",s.cpu_input,s.width*sizeof(float),err))return false;
+    if(s.cpu_valid && !exclusive_bytes(base+".mapped-ids.i32",s.cpu_ids,s.k*sizeof(int32_t),err))return false;
     double maxabs=0;int nonfinite=0,ds_nan=0,ds_posinf=0,ds_neginf=0;
     for(int i=0;i<s.width;++i)if(std::isfinite(s.mixed[i]))maxabs=std::max(maxabs,(double)std::fabs(s.mixed[i]));else ++nonfinite;
     if(s.native_q8_valid)for(int b=0;b<s.width/32;++b)for(int j=0;j<2;++j) {
@@ -263,8 +266,8 @@ bool Probe::end_graph(std::string& err) {
 }
 bool Probe::capture_route(RouteView v,std::string& err) {
     if(!device_route_)return true;
-    if(!v.ids || !v.weights || !v.mixed || !v.parts || !v.counts || !v.dst || !v.start2 || !v.hit || !v.cpu || !v.cpu_input || v.experts<=0 ||
-       v.rows<=0 || v.k<=0 || v.rows>std::numeric_limits<int>::max()/v.k || v.width<=0 ||
+    if(!v.ids || !v.cpu_ids || !v.weights || !v.mixed || !v.parts || !v.counts || !v.dst || !v.start2 || !v.hit || !v.cpu || !v.cpu_input || v.experts<=0 ||
+       v.rows<=0 || v.k<=0 || v.k>kRouteMaxK || v.rows>std::numeric_limits<int>::max()/v.k || v.width<=0 ||
        v.width>kRouteMaxWidth || v.width%32 || (v.native_q8_valid && !v.native_q8)) {
         err="verify route snapshot: invalid/bounded view";return false;
     }
