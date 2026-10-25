@@ -496,6 +496,8 @@ if(STRATA_ENABLE_CUDA OR STRATA_ENABLE_HIP)
     # STRATA_BUILD_TESTS=OFF controls; do not enable the repository's test suite.
     add_executable(verify_finite_probe_graph_test tests/cuda/verify_finite_probe_graph_test.cpp)
     target_link_libraries(verify_finite_probe_graph_test PRIVATE strata_verify_finite_probe)
+    add_executable(verify_route_snapshot_graph_test tests/cuda/verify_route_snapshot_graph_test.cpp)
+    target_link_libraries(verify_route_snapshot_graph_test PRIVATE strata_verify_finite_probe)
     if(STRATA_BUILD_TESTS)
       add_test(NAME verify_finite_probe_graph_test COMMAND verify_finite_probe_graph_test)
     endif()

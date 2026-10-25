@@ -672,7 +672,7 @@ bool Verifier::init(const WeightTable& wt, const ModelGeometry& g, SessionState&
     }
 #if defined(STRATA_VERIFY_FINITE_PROBE)
     if (!finite_probe_.init(verify_probe::requested(std::getenv("STRATA_VERIFY_FINITE_PROBE")),
-                            cs_, device_, err)) return false;
+                            cs_, device_, err, std::getenv("STRATA_VERIFY_ROUTE_SNAPSHOT_PREFIX"))) return false;
 #endif
     if (cudaEventCreateWithFlags(&commit_done_, cudaEventDisableTiming) != cudaSuccess ||
         cudaEventCreateWithFlags(&ev_fork_, cudaEventDisableTiming) != cudaSuccess ||
@@ -1598,6 +1598,17 @@ bool Verifier::record_window(int T, cudaStream_t cs, std::string& err) {
         if (!finite(shared_ + tb * N, l, 1, verify_probe::Stage::shared_output, n, N, tb)) return false;
         if (!finite_probe_.scan(parts_out, {l, n * K, N, tb * K, 1,
                 verify_probe::Stage::routed_parts, verify_probe::Format::f32, K}, err)) return false;
+        verify_probe::RouteView rv;
+        rv.ids=ids_+tb*K;rv.weights=w_+tb*K;rv.mixed=mixed_+tb*N;
+        rv.parts=parts_out;rv.hit=hit_out;rv.cpu=m_ymiss_+(size_t)tb*K*N;
+        rv.counts=p_counts;rv.dst=p_dst;rv.start2=p_start2;
+        rv.native_q8=lay.native?nat_xq_+(size_t)tb*(N/32)*36:nullptr;
+        rv.native_q8_valid=lay.native;rv.rows=n;rv.width=(int)N;rv.k=(int)K;
+        rv.experts=(int)NE;
+        rv.all_resident=ar_on();rv.device_plan=device_plan_;rv.remote=remote_opt_!=nullptr;
+        rv.skip=device_plan_?skip_+grp:nullptr;rv.ring=ring;
+        if(lay.native){rv.gu_type=lay.fmt[(size_t)l].gu_type;rv.down_type=lay.fmt[(size_t)l].d_type;}
+        if(!finite_probe_.capture_route(rv,err))return false;
 #endif
         if (sg_gated_[grp]) {   // STRATA_LFUSE: the shared expert's gate was not applied: the combine applies it (all rows are hits)
             try {
@@ -2186,6 +2197,7 @@ bool Verifier::run(int T, const int32_t* tokens, int64_t pos0, PoolMultiFn pool,
     if (se != cudaSuccess) { err = std::string("verify: ") + cudaGetErrorString(se); return false; }
 #if defined(STRATA_VERIFY_FINITE_PROBE)
     finite_probe_.report(T, last_pos0_);
+    if (!finite_probe_.report_route(err)) return false;
 #endif
     if (ar_on() && h_plan_err_ != nullptr && *(volatile uint32_t*) h_plan_err_ != 0) {   // #871: refresh_ar saw the table whole
         *(volatile uint32_t*) h_plan_err_ = 0;
@@ -2818,6 +2830,7 @@ bool Verifier::run_slot_rows(const int* rows, int S, const int32_t* tokens, cons
         if (se != cudaSuccess) { err = std::string("verify batch: ") + cudaGetErrorString(se); return false; }
 #if defined(STRATA_VERIFY_FINITE_PROBE)
         finite_probe_.report(S, -1, finite_positions_.data());
+        if (!finite_probe_.report_route(err)) return false;
 #endif
         cudaStreamSynchronize(copy_);
         if (prof_on_) collect_profile();
@@ -2884,6 +2897,7 @@ bool Verifier::run_slot_rows(const int* rows, int S, const int32_t* tokens, cons
     if (se != cudaSuccess) { err = std::string("verify batch: ") + cudaGetErrorString(se); return false; }
 #if defined(STRATA_VERIFY_FINITE_PROBE)
     finite_probe_.report(S, -1, finite_positions_.data());
+    if (!finite_probe_.report_route(err)) return false;
 #endif
     cudaStreamSynchronize(copy_);
     if (prof_on_) collect_profile();
@@ -3045,6 +3059,7 @@ int Verifier::batch_poll(PoolMultiFn pool, void* user, std::string& err) {
     if (qc == cudaErrorNotReady) return 0;
 #if defined(STRATA_VERIFY_FINITE_PROBE)
     finite_probe_.report(S, -1, finite_positions_.data());
+    if (!finite_probe_.report_route(err)) { b_running_ = false; return -1; }
 #endif
     if (prof_on_) collect_profile();
     if (last_stage()) {
@@ -3301,6 +3316,7 @@ bool Verifier::pl_finish(int32_t* out, std::string& err) {
 #if defined(STRATA_VERIFY_FINITE_PROBE)
     // The caller's done() observed ev_done_ after the graph's receipt copy.
     finite_probe_.report(fl_T_, last_pos0_);
+    if (!finite_probe_.report_route(err)) return false;
 #endif
     fl_active_ = false;
     if (fl_prof_) accumulate_profile(prof_pin_);
