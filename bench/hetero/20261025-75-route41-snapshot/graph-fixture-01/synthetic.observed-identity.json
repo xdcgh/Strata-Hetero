@@ -1,0 +1,11 @@
+{
+  "original_pid": 27192,
+  "original_handle_has_exited": false,
+  "observed_current_pid_identity": {
+    "pid": 27192,
+    "parent": 21948,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\verify_route_snapshot_graph_test.exe",
+    "created": "2026-10-25T06:25:16.8489210Z",
+    "command": "\"E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\verify_route_snapshot_graph_test.exe\" --prefix C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "failure": null,
+  "source_head": "293b504b0437614d62ada9845c8210659bf0e31a",
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\verify_route_snapshot_graph_test.exe",
+    "sha256": "63dee150a64c10e20b65c1ed0f87333a13e65d54c5921711bd18ba6537659159"
+  },
+  "build_receipt": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\build-receipt.json",
+    "sha256": "2389e9ef44a38fdd4f077ddb3f8d572453a25acc1e1f57d5ec97a99afbe0122e"
+  },
+  "runs": [
+    {
+      "mode": "disabled",
+      "pid": 26588,
+      "exit_code": 0,
+      "stdout_sha256": "f71392be9bc577a9ecb68a474b8bcbaef12cf023802debc6dcea728c284c0961",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identity": null
+    },
+    {
+      "mode": "synthetic",
+      "pid": 27192,
+      "exit_code": 0,
+      "stdout_sha256": "9d36abc8946dec84b23885fbe7c034217b2ba2661957a73a840213d08fcd3009",
+      "stderr_sha256": "b20702fd753a38476457acb120b63e4d2f41a2b1e4a0123d480fcf9dfc2eeab6",
+      "identity": {
+        "pid": 27192,
+        "parent": 21948,
+        "exe": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\verify_route_snapshot_graph_test.exe",
+        "created": "2026-10-25T06:25:16.8489210Z",
+        "command": "\"E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\verify_route_snapshot_graph_test.exe\" --prefix C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route"
+      }
+    }
+  ],
+  "resource": {
+    "commit_min_bytes": 119709507584.0,
+    "physical_min_bytes": 112507604992.0,
+    "all_pass": true,
+    "count": 2
+  },
+  "sampler_terminal": true,
+  "sampler_launcher_identity": {
+    "pid": 25652,
+    "parent": 21948,
+    "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "created": "2026-10-25T06:25:16.2203480Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\resources.STOP"
+  },
+  "sampler_child_identity": {
+    "pid": 12188,
+    "parent": 25652,
+    "exe": "C:\\Python314\\python.exe",
+    "created": "2026-10-25T06:25:16.2545920Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\resources.STOP"
+  },
+  "stop_actions": [],
+  "worker_terminal": true,
+  "model_executed": false,
+  "synthetic_process_started": true,
+  "gpu_synthetic_status": "executed_exit_zero",
+  "performance_claim": false
+}

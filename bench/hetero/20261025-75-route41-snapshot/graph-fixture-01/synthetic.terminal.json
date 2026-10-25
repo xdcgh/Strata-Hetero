@@ -1,0 +1,14 @@
+{
+  "mode": "synthetic",
+  "pid": 27192,
+  "exit_code": 0,
+  "stdout_sha256": "9d36abc8946dec84b23885fbe7c034217b2ba2661957a73a840213d08fcd3009",
+  "stderr_sha256": "b20702fd753a38476457acb120b63e4d2f41a2b1e4a0123d480fcf9dfc2eeab6",
+  "identity": {
+    "pid": 27192,
+    "parent": 21948,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\verify_route_snapshot_graph_test.exe",
+    "created": "2026-10-25T06:25:16.8489210Z",
+    "command": "\"E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\verify_route_snapshot_graph_test.exe\" --prefix C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route"
+  }
+}

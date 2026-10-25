@@ -1,0 +1,64 @@
+{
+  "schema": "strata-run75-build01-owned-process-terminal-audit-v1",
+  "observed_utc": "2026-10-25T06:23:48.0830032+00:00",
+  "records": [
+    {
+      "role": "driver",
+      "pid": 14648,
+      "expected_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "expected_created_utc": "10/25/2026 06:20:30",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "configure-cmd",
+      "pid": 25240,
+      "expected_exe": "C:\\WINDOWS\\System32\\cmd.exe",
+      "expected_created_utc": "10/25/2026 06:20:31",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "build-cmd",
+      "pid": 26400,
+      "expected_exe": "C:\\WINDOWS\\System32\\cmd.exe",
+      "expected_created_utc": "10/25/2026 06:20:44",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "resource-sampler-launcher",
+      "pid": 27340,
+      "expected_exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "expected_created_utc": "10/25/2026 06:20:31",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "resource-sampler-actual-python",
+      "pid": 24812,
+      "expected_exe": "C:\\Python314\\python.exe",
+      "expected_created_utc": "10/25/2026 06:20:31",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    }
+  ],
+  "all_original_identities_terminal": true,
+  "resource_stop_sentinel_present": true,
+  "interpretation": "Recorded driver, configure/build command roots, resource sampler launcher and actual Python sampler are all terminal by executable+creation identity."
+}

@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "status": "execution_owner_reviewed_source_contracts_not_gpu_acceptance",
+  "recorded_utc": "2026-10-25T06:18:21.471652+00:00",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-route41-probe-20261025",
+  "source_head": "293b504b0437614d62ada9845c8210659bf0e31a",
+  "files": {
+    "CMakeLists.txt": "53b4710a5d09851d38b21a7ba4ab6c24af270eaf05ce2893f31925a129392dd9",
+    "include/strata/core/verify_probe.hpp": "60836025c0fc750bc91280c0f4bd3eca5f417a309aa412a691f1cb18d4f74807",
+    "src/core/verify.cpp": "a86e6e7c7b3dc95befd3560bb01f549734dae8327a60813cf6ad144506ecd4c9",
+    "src/core/verify_probe.cu": "55f1300a1c0588953fa6e02fbe2be352f6f8d80db8f81de342b2c0b792644540",
+    "tests/cuda/verify_route_snapshot_graph_test.cpp": "490458e0bdc3c0aa3411a99805758e83056f3f9c294aea569331de12b6734bc4",
+    "tools/test_verify_route_snapshot_source.py": "a9437af4697a41f7592bf87dde680ee8cef6b5365fc7a3e2a80a4a01a415712e",
+    "docs/VERIFY_ROUTE_SNAPSHOT.md": "18e1798ac2c18a4645038e69923d5f077716f8770183dd88654553b2185cec31"
+  },
+  "source_tests": {
+    "exit_code": 0,
+    "count": 4,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "28d4f5f08bdf1f3e856a5967ccf2d2b6455660575684ba603f3ececa776826e8"
+  },
+  "review": [
+    "persistent allocation outsidecapture; disabled no CUDA; capture afterparts scan before overwritten producer",
+    "exact p_dst membership plus separatelyvalid mapped/GPU output; no CPU provenance invented",
+    "actual m_x and m_ids captured independently for mapped producer",
+    "normalfinite JSON schema preserved; bounded shapes and exclusive sidecars last manifest; runtime positions outside capture",
+    "batch_poll file error stopsrunning and returns-1",
+    "source macro-off math matches frozen404d source; mathematicalfix not implemented"
+  ],
+  "build_planned_targets": [
+    "strata",
+    "verify_route_snapshot_graph_test"
+  ],
+  "parallel": 4,
+  "gpu_executed": false,
+  "model_executed": false,
+  "original_goal_complete": false
+}

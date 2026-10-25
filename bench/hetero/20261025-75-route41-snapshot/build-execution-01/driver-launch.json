@@ -1,0 +1,38 @@
+{
+  "schema": "strata-run75-build-launch-v1",
+  "authorization_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\preparation\\root-build-authorization.json",
+  "authorization_sha256": "3b682c098971ad600c4475f1d76187f401aa333ed7188a07cd63b9acb08a6a84",
+  "driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\preparation\\run_cuda_build_route75.ps1",
+  "driver_sha256": "5e6993964d08546351fbcb3b18224e0040d27b7af9e57d34bc340bde79546570",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-route41-probe-20261025",
+  "source_head": "293b504b0437614d62ada9845c8210659bf0e31a",
+  "source_clean": true,
+  "source_file_hash_count": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "resource_helper_sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+  "no_execute_sha256": "7705b0977d73b2c54e48513ecefb54c5cd4981054c9a752d7fde545aa8201bab",
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01",
+  "build_directory_absent": true,
+  "expected_project_version": "0.1.42",
+  "targets": [
+    "strata",
+    "verify_route_snapshot_graph_test"
+  ],
+  "parallel": 4,
+  "arguments": "-NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\preparation\\run_cuda_build_route75.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-route41-probe-20261025 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01 -ExpectedHead 293b504b0437614d62ada9845c8210659bf0e31a -ExpectedProjectVersion 0.1.42 -RunName route41-snapshot-20261025-75-build01 -Execute",
+  "launcher": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\build-execution-01\\driver.stdout.txt",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\build-execution-01\\driver.stderr.txt",
+  "launched_at_utc": "2026-10-25T06:20:30.3010968+00:00",
+  "pid": 14648,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "created_utc": "2026-10-25T06:20:30.3312540Z",
+  "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\preparation\\run_cuda_build_route75.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-route41-probe-20261025 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01 -ExpectedHead 293b504b0437614d62ada9845c8210659bf0e31a -ExpectedProjectVersion 0.1.42 -RunName route41-snapshot-20261025-75-build01 -Execute"
+}

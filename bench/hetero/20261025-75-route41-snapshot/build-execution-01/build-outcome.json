@@ -1,0 +1,129 @@
+{
+  "schema": "strata-run75-build01-outcome-v1",
+  "run_name": "route41-snapshot-20261025-75-build01",
+  "status": "success",
+  "source_head_before": "293b504b0437614d62ada9845c8210659bf0e31a",
+  "source_head_after": "293b504b0437614d62ada9845c8210659bf0e31a",
+  "source_clean_before": true,
+  "source_clean_after": true,
+  "source_key_files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "53b4710a5d09851d38b21a7ba4ab6c24af270eaf05ce2893f31925a129392dd9",
+      "bytes": 113915
+    },
+    {
+      "path": "src/program/generate.cpp",
+      "sha256": "9846d88f22e3b1e98dd05cf774566e1d737664b0f82621a0c706e6148031ad3e",
+      "bytes": 898411
+    },
+    {
+      "path": "src/prefill/prefill.cpp",
+      "sha256": "6c6ffe94121dd4c3fc4099723ceba0106f0b9d812de6223a94897d016340118b",
+      "bytes": 283520
+    },
+    {
+      "path": "src/core/expert_source.cpp",
+      "sha256": "108e6f07f87e80e47d5a1d3f50815c897f9df51f5827b22639080f615d54116e",
+      "bytes": 249238
+    },
+    {
+      "path": "serve/server.py",
+      "sha256": "32866083d6cb45872653790562adf5a27bc97395570ad8e3065e28a8ec298dbe",
+      "bytes": 385462
+    },
+    {
+      "path": "include/strata/prefill/finite_probe.hpp",
+      "sha256": "991a87b815852f45b0be1569af8807a34551c3f06129332ebff5c6794d431e2b",
+      "bytes": 5731
+    },
+    {
+      "path": "src/prefill/finite_probe.cu",
+      "sha256": "d6619f69b299368dcdd0ef7c36dc118b7ac060d085a4b06f2da85d3f017799d2",
+      "bytes": 8979
+    },
+    {
+      "path": "tests/cuda/prefill_finite_probe_test.cpp",
+      "sha256": "ca93f4870d6f2a21964562712abe9313dece49bdcb2382f19d455a027f02255e",
+      "bytes": 21490
+    },
+    {
+      "path": "include/strata/core/verify.hpp",
+      "sha256": "3828105a372463512784a9d16c6e1fcb1d5062c5fc2bc64ac9ccd03d7d5913cf",
+      "bytes": 34190
+    },
+    {
+      "path": "src/core/verify.cpp",
+      "sha256": "a86e6e7c7b3dc95befd3560bb01f549734dae8327a60813cf6ad144506ecd4c9",
+      "bytes": 194407
+    },
+    {
+      "path": "include/strata/core/verify_probe.hpp",
+      "sha256": "60836025c0fc750bc91280c0f4bd3eca5f417a309aa412a691f1cb18d4f74807",
+      "bytes": 4082
+    },
+    {
+      "path": "src/core/verify_probe.cu",
+      "sha256": "55f1300a1c0588953fa6e02fbe2be352f6f8d80db8f81de342b2c0b792644540",
+      "bytes": 17877
+    },
+    {
+      "path": "tests/cuda/verify_route_snapshot_graph_test.cpp",
+      "sha256": "490458e0bdc3c0aa3411a99805758e83056f3f9c294aea569331de12b6734bc4",
+      "bytes": 6497
+    },
+    {
+      "path": "docs/VERIFY_ROUTE_SNAPSHOT.md",
+      "sha256": "18e1798ac2c18a4645038e69923d5f077716f8770183dd88654553b2185cec31",
+      "bytes": 5306
+    },
+    {
+      "path": "tools/test_verify_route_snapshot_source.py",
+      "sha256": "a9437af4697a41f7592bf87dde680ee8cef6b5365fc7a3e2a80a4a01a415712e",
+      "bytes": 4320
+    }
+  ],
+  "cache_controls": {
+    "STRATA_PREFILL_FINITE_PROBE": "OFF",
+    "STRATA_VERIFY_FINITE_PROBE": "ON",
+    "STRATA_BUILD_TESTS": "OFF"
+  },
+  "targets": [
+    "--build",
+    "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01",
+    "--target",
+    "strata",
+    "verify_route_snapshot_graph_test",
+    "--parallel",
+    "4",
+    "--verbose"
+  ],
+  "configure_exit": 0,
+  "build_exit": 0,
+  "build_batch_exit": "0",
+  "last_ninja_progress": "142/142",
+  "built_executables": {
+    "strata": {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\strata.exe",
+      "size_bytes": 52843008,
+      "sha256": "1ae4567fdea5152acb11b0f26c95d3713ec2ae5c91b858bdfc633ade6ba78f96"
+    },
+    "verify_route_snapshot_graph_test": {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\verify_route_snapshot_graph_test.exe",
+      "size_bytes": 300032,
+      "sha256": "63dee150a64c10e20b65c1ed0f87333a13e65d54c5921711bd18ba6537659159"
+    }
+  },
+  "tests_built": true,
+  "tests_run": false,
+  "test_binary_executed": false,
+  "gpu_executed": false,
+  "model_or_engine_cli_executed": false,
+  "raw_resource_rows": 144,
+  "receipt_resource_count": 143,
+  "resource_sha256": "16f3784800554b5eb0a1927877bf4754ec1f2040610169a6efca612276876764",
+  "resource_audit": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\build-execution-01\\resource-audit.json",
+  "process_audit": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\build-execution-01\\owned-pid-terminal-audit.json",
+  "driver_status": "success",
+  "driver_stderr_bytes": 0
+}

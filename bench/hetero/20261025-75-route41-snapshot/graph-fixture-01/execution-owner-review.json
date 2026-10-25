@@ -1,0 +1,159 @@
+{
+  "status": "independent_route_snapshot_graph_raw_acceptance_pass",
+  "manifests": [
+    {
+      "manifest": {
+        "schema": 1,
+        "diagnostic_only": true,
+        "timing_may_perturb": true,
+        "owner": 1,
+        "window": 1,
+        "layer": 41,
+        "position": 903,
+        "row_offset": 4,
+        "local_token": 1,
+        "slot": 1,
+        "expert": 409,
+        "width": 32,
+        "k": 2,
+        "gpu_entry": -1,
+        "gpu_entries": 1,
+        "gpu_pcie": false,
+        "gpu_hit_valid": false,
+        "mapped_non_gpu_valid": true,
+        "cpu_producer_proven": false,
+        "native_q8_valid": true,
+        "all_resident": false,
+        "device_plan": false,
+        "skipped": false,
+        "remote": false,
+        "ring": 83,
+        "gu_type": 12,
+        "down_type": 7,
+        "counts": [
+          1,
+          1,
+          0
+        ],
+        "route_weight": 0.400000006,
+        "input_maxabs_finite": 1063,
+        "input_nonfinite": 0,
+        "q8_half_ds_nan": 0,
+        "q8_half_ds_posinf": 1,
+        "q8_half_ds_neginf": 0,
+        "path_base": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-1"
+      },
+      "files": [
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-1.json",
+          "bytes": 741,
+          "sha256": "f962e2f79ae912e739a42ad2e481cd21d0b3aa32b23759c58b96c0991ffe1985"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-1.mapped-ids.i32",
+          "bytes": 8,
+          "sha256": "53a5746a7a328f6e178b525129bef35d44adc93db3d918cb0389c0805c1c3ee0"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-1.mapped-input.f32",
+          "bytes": 128,
+          "sha256": "f6e9edb16fd63835cd33139222ed2c08718e7cbd7eaa1184a57bec17b1277cde"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-1.mapped-non-gpu.f32",
+          "bytes": 128,
+          "sha256": "c14b3a96ec9aae96625c7218326d5fd4e7118e4c63cf11a9c28d0e462a9386f9"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-1.mixed.f32",
+          "bytes": 128,
+          "sha256": "d410cebfe3312ed95907b9d63194355b5cc8ebcdbf3e890d631975bccf1d8543"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-1.native.q8_1",
+          "bytes": 36,
+          "sha256": "beb33dc5be93ff3bcba7211be9c0a9874c49219b8daa6336bbdedca59fd87bf2"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-1.parts.f32",
+          "bytes": 128,
+          "sha256": "1ac2ed7b085f15eaf18b0a8c7f5c480fe68458ef8f4d93f26a50d9c1d7f6506b"
+        }
+      ]
+    },
+    {
+      "manifest": {
+        "schema": 1,
+        "diagnostic_only": true,
+        "timing_may_perturb": true,
+        "owner": 1,
+        "window": 2,
+        "layer": 41,
+        "position": 90001,
+        "row_offset": 4,
+        "local_token": 1,
+        "slot": 1,
+        "expert": 409,
+        "width": 32,
+        "k": 2,
+        "gpu_entry": 0,
+        "gpu_entries": 1,
+        "gpu_pcie": false,
+        "gpu_hit_valid": true,
+        "mapped_non_gpu_valid": false,
+        "cpu_producer_proven": false,
+        "native_q8_valid": true,
+        "all_resident": false,
+        "device_plan": false,
+        "skipped": false,
+        "remote": false,
+        "ring": 83,
+        "gu_type": 12,
+        "down_type": 7,
+        "counts": [
+          1,
+          1,
+          0
+        ],
+        "route_weight": 0.400000006,
+        "input_maxabs_finite": 1063,
+        "input_nonfinite": 0,
+        "q8_half_ds_nan": 0,
+        "q8_half_ds_posinf": 1,
+        "q8_half_ds_neginf": 0,
+        "path_base": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-2"
+      },
+      "files": [
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-2.gpu-hit.f32",
+          "bytes": 128,
+          "sha256": "120e51157befab3c67c64359fd9a0bff4bee0def22af9eeeb4c007ed720630b9"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-2.json",
+          "bytes": 742,
+          "sha256": "4a6f8902eb6a8fe5d89915c51e3b6d76226d01a48b4e2cb6fd3efe8cf5bd21ca"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-2.mixed.f32",
+          "bytes": 128,
+          "sha256": "d410cebfe3312ed95907b9d63194355b5cc8ebcdbf3e890d631975bccf1d8543"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-2.native.q8_1",
+          "bytes": 36,
+          "sha256": "beb33dc5be93ff3bcba7211be9c0a9874c49219b8daa6336bbdedca59fd87bf2"
+        },
+        {
+          "path": "bench\\hetero\\20261025-75-route41-snapshot\\graph-fixture-01\\route.owner-1.window-2.parts.f32",
+          "bytes": 128,
+          "sha256": "1ac2ed7b085f15eaf18b0a8c7f5c480fe68458ef8f4d93f26a50d9c1d7f6506b"
+        }
+      ]
+    }
+  ],
+  "actual_producer_validity_and_lifetime_checked": true,
+  "raw_q8_half_header_checked": true,
+  "gpu_fixture_only": true,
+  "model_executed": false
+}

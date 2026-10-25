@@ -1,0 +1,24 @@
+{
+  "phase": "configure",
+  "exit_code": 0,
+  "batch_exit_file": 0,
+  "duration_seconds": 11.8964427,
+  "process": {
+    "pid": 25240,
+    "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+    "created": "2026-10-25T06:20:31.8638890Z",
+    "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\configure.cmd\"",
+    "batch": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\configure.cmd"
+  },
+  "log": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\configure.log",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\configure.cmd",
+  "last_resource": {
+    "sampled_at_utc": "2026-10-25T06:20:43.564Z",
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 112466055168,
+    "commit_limit_bytes": 145553182720,
+    "commit_available_bytes": 119688757248,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "error": null
+  }
+}

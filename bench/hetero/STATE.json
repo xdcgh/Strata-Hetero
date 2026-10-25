@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "User-resumed full original goal; current-driver upstream reproduces Unicode bangloop; Run74 graph-safe real Verifier firstbad is layer41 routed_parts position15 slot6, actual expert/producer still unknown; Run75 fine snapshot source/harness preparation",
+  "phase": "User-resumed full goal; Run74 firstbad layer41 routed_parts position15 slot6; Run75 exact-producer snapshot source293b built and synthetic graph/raw lifetime gates passed; actual model snapshot pending final harness host gates",
   "branch": "codex/45-upstream41-runtime",
   "upstream_base_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -86,7 +86,8 @@
     "Run73 unmodified upstream61b3/b4 on driver621.01: arithmetic3formalH4 pass, Unicode warm+3formal128ID0bangloops; no logits readback; exact cleanup terminal with182resourcegatespass",
     "Run74 source404d graph-safe Verifier probe built; original build Tail1 unknownsample false stop preserved; completeLF v2 freshbuildsuccess472rawsamplespass; disabled and 5 typedgraphreplayJSON checks pass; no numerical production change",
     "Run74 real samehistory arithmetic3formalH4 pass; Unicode warm+3formal128ID0bangloops; four firstbad routed_partsF32 layer41 half1 pos15 tokenrow3 slot6 nan2560, actualexpert and CPU/GPU producer remain unknown; 188resourcegatespass min67.547physical43.918commitGiB; exactownedcleanup0allowners8081released",
-    "Pinned ggml CPU Q8_1/Q5_1 synthetic candidate fixture:32finite2048 values overflow halfsum and produce nonfinite zero-weight dot,2047finite; no model-cause or production-fix claim; firstlinkmissingAdvapi32 retained and freshcorrectedfixturepass"
+    "Pinned ggml CPU Q8_1/Q5_1 synthetic candidate fixture:32finite2048 values overflow halfsum and produce nonfinite zero-weight dot,2047finite; no model-cause or production-fix claim; firstlinkmissingAdvapi32 retained and freshcorrectedfixturepass",
+    "Run75 source293b macro-off source contracts4pass; frozen CUDA SM89 build parallel4 succeeds with144rawresource samples all12/4pass; route graph fixture disabled/synthetic and independent2manifest rawinput/IDs/output/nativehalfds lifetime/reset/runtimeposition/exclusive checks pass; no actual model or numerical-fix claim"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -115,7 +116,7 @@
   "completion_status": "in progress by explicit user resume; full original objective unfinished; no new user decision needed",
   "latest_upstream_fetched_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-25T06:11:15.670612+00:00",
+  "last_checkpoint_utc": "2026-10-25T06:26:56.354431+00:00",
   "current_run": "20261025-75-route41-snapshot",
   "current_model_owner": null,
   "upstream_pending_integration": {
@@ -130,9 +131,10 @@
     "path": "E:\\Strata-Hetero-data\\source\\hetero-route41-probe-20261025",
     "branch": "codex/20261025-route41-snapshot",
     "base_head": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
-    "status": "fine snapshot source implementation in progress; not built or run",
-    "pushed": false,
-    "merged_to_main": false
+    "status": "frozen source, CUDA build and graph fixture accepted; actual model not run yet",
+    "pushed": true,
+    "merged_to_main": false,
+    "head": "293b504b0437614d62ada9845c8210659bf0e31a"
   },
   "current_driver": "621.01",
   "prior_driver": "610.88",

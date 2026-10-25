@@ -1,0 +1,22 @@
+{
+  "schema": "strata-run75-build01-resource-audit-v1",
+  "source_path": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01\\resources.jsonl",
+  "copy_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\build-execution-01\\resources.jsonl",
+  "raw_line_count": 144,
+  "parsed_row_count": 144,
+  "invalid_rows": 0,
+  "receipt_sample_count": 143,
+  "extra_rows_after_receipt": 1,
+  "receipt_last_sample_utc": "2026-10-25T06:22:52.719Z",
+  "first_sample_utc": "2026-10-25T06:20:31.5540000+00:00",
+  "last_sample_utc": "2026-10-25T06:22:54.7200000+00:00",
+  "maximum_interval_seconds": 1.009,
+  "intervals_over_5s": 0,
+  "minimum_ram_bytes": 110780227584.0,
+  "minimum_commit_bytes": 118053953536.0,
+  "ram_floor_bytes": 12884901888,
+  "commit_floor_bytes": 4294967296,
+  "all_receipt_samples_pass": true,
+  "all_error_fields_null": true,
+  "interpretation": "Raw JSONL preserved in full. The single extra valid row is a final sampler row written during normal sampler shutdown after receipt sample_count was calculated."
+}

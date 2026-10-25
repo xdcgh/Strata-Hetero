@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized_build_only",
+  "recorded_utc": "2026-10-25T06:18:36.182596+00:00",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-route41-probe-20261025",
+  "source_head": "293b504b0437614d62ada9845c8210659bf0e31a",
+  "source_files": {
+    "CMakeLists.txt": "53b4710a5d09851d38b21a7ba4ab6c24af270eaf05ce2893f31925a129392dd9",
+    "include/strata/core/verify_probe.hpp": "60836025c0fc750bc91280c0f4bd3eca5f417a309aa412a691f1cb18d4f74807",
+    "src/core/verify.cpp": "a86e6e7c7b3dc95befd3560bb01f549734dae8327a60813cf6ad144506ecd4c9",
+    "src/core/verify_probe.cu": "55f1300a1c0588953fa6e02fbe2be352f6f8d80db8f81de342b2c0b792644540",
+    "tests/cuda/verify_route_snapshot_graph_test.cpp": "490458e0bdc3c0aa3411a99805758e83056f3f9c294aea569331de12b6734bc4",
+    "tools/test_verify_route_snapshot_source.py": "a9437af4697a41f7592bf87dde680ee8cef6b5365fc7a3e2a80a4a01a415712e",
+    "docs/VERIFY_ROUTE_SNAPSHOT.md": "18e1798ac2c18a4645038e69923d5f077716f8770183dd88654553b2185cec31"
+  },
+  "driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-75-route41-snapshot\\preparation\\run_cuda_build_route75.ps1",
+  "driver_sha256": "5e6993964d08546351fbcb3b18224e0040d27b7af9e57d34bc340bde79546570",
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-route41-probe75-01",
+  "run_name": "route41-snapshot-20261025-75-build01",
+  "expected_project_version": "0.1.42",
+  "targets": [
+    "strata",
+    "verify_route_snapshot_graph_test"
+  ],
+  "parallel": 4,
+  "root_source_review_sha256": "8c802600864fa9d0448d42afc3d5c50ec4bdb0f28eb90961573af12023545695",
+  "no_execute_sha256": "7705b0977d73b2c54e48513ecefb54c5cd4981054c9a752d7fde545aa8201bab",
+  "flags": {
+    "prefill_probe": "OFF",
+    "verify_probe": "ON",
+    "global_tests": "OFF"
+  },
+  "limits": {
+    "model_or_engine_cli": false,
+    "test_binary_execution": false,
+    "device_execution": false,
+    "unchanged_retry": false,
+    "physical_gib": 12,
+    "psapi_system_commit_gib": 4
+  },
+  "authorized_by": "Root delegated NaN execution owner /root/nan_execution_lead; Root confirmation in team messages",
+  "change": "Graphsafe exactroute producer/input snapshot source293b; freshbuild; parallel4 only build scheduling, same SDK/compiler/SM89/mathflags; unchanged TTL5/12GiB/4GiB. No numerical fix.",
+  "reader_pure_tests": {
+    "status": "inherited identical completeLFreader from validated Run74 v2",
+    "original_count": 14,
+    "script_reference": "bench/hetero/20261025-74-verify-finite/preparation/test_resource_reader74.ps1"
+  }
+}
