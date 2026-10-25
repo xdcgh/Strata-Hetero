@@ -3,9 +3,10 @@
 This source connects actual model jobs to the existing native Arc SXPU service.
 It is not a full-model acceptance result. Four Python typed mock tests passed;
 their raw logs and source/output SHA256 receipt are in
-`bench/hetero/20261025-live-arc-hostmock-review/`. No C++ build, compiled fixture
-run, device run, quality check or end-to-end A/B has been performed for this
-integration yet.
+`bench/hetero/20261025-live-arc-hostmock-review/`. The Windows pipe and host
+fixture have compiled and passed synthetic lifecycle checks. The changed
+engine callsites have not been built or tested in a real model; device
+execution, model quality and end-to-end A/B remain pending.
 Earlier isolated CPU/Arc measurements did not establish a stable joint speedup.
 
 The default is off. `STRATA_EXPERT_HELPER=auto` also routes nothing: no model
@@ -137,5 +138,14 @@ five seconds allowed for exit propagation. Access errors are failures.
 Add `--include-timeout` to exercise the unchanged production 120 second IPC
 wait and descendant cleanup after timeout. The runner bounds this scenario
 at 145 seconds; its own timeout is a fixture failure, even if cleanup succeeds.
-All compiled eligible scenarios remain **NOT RUN / UNBUILT** in this revision.
-Source additions alone provide no child lifecycle validation.
+Run77 on 2026-10-25 compiled `live_helper.cpp` and this host fixture with
+MSVC 19.51, C++20, /O2 and static CRT from source commit `238a452e`.
+Off/auto/unsupported fallback and all six eligible scenarios passed. The
+production timeout scenario finished in 120.032 seconds. All twelve mock and
+descendant identities were gone; a separate final CIM check found no fixture,
+runner or mock owners. Root rehashed the retained files and checked complete
+output/fallback assertions. Evidence is in the main engineering branch at
+`bench/hetero/20261025-77-live-arc-host-lifecycle/` (commits `0b2f4f44` and
+`1d44c29d`). No OpenVINO, Arc, expert math or model ran in those checks. The
+full engine and actual model participation remain **NOT RUN / UNBUILT** for
+this integration.
