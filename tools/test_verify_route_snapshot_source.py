@@ -65,6 +65,7 @@ class SourceContracts(unittest.TestCase):
         self.assertEqual(len(keys), len(expected))
         self.assertIn('O_CREAT|O_EXCL|O_WRONLY', source)
         self.assertLess(report.index('base+".parts.f32"'), report.index('base+".json"'))
+        self.assertIn('float_number((float)maxabs)', report)
 
 
 if __name__ == "__main__":

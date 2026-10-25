@@ -183,7 +183,7 @@ bool Probe::report_route(std::string& err) {
         ",\"remote\":"+(s.remote?"true":"false")+",\"ring\":"+std::to_string(s.ring)+
         ",\"gu_type\":"+std::to_string(s.gu_type)+",\"down_type\":"+std::to_string(s.down_type)+
         ",\"counts\":["+std::to_string(s.counts[0])+","+std::to_string(s.counts[1])+","+std::to_string(s.counts[2])+
-        "],\"route_weight\":"+float_number(s.weight)+",\"input_maxabs_finite\":"+std::to_string(maxabs)+
+        "],\"route_weight\":"+float_number(s.weight)+",\"input_maxabs_finite\":"+float_number((float)maxabs)+
         ",\"input_nonfinite\":"+std::to_string(nonfinite)+",\"q8_half_ds_nan\":"+std::to_string(ds_nan)+
         ",\"q8_half_ds_posinf\":"+std::to_string(ds_posinf)+",\"q8_half_ds_neginf\":"+std::to_string(ds_neginf)+
         ",\"path_base\":"+json_string(base)+"}\n";
