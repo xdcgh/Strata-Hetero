@@ -1,0 +1,11 @@
+{
+  "side": "moe71",
+  "phase": "watch",
+  "controller_pid": 22520,
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T05:17:43.3022033+00:00",
+  "stdout_sha256": "04dfd057c2f1467af9a54eb7090b590157f609706480facc87a137ad2a931bea",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+  "source_script_sha256": "99bd25f76de7aaa2ebcaf28bfaa3772e320ad53882edccad11dc3a819e8b8f71"
+}

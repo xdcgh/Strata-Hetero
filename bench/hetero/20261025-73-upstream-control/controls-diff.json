@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-73-upstream-control",
+  "unchanged_from_run66_upstream42": [
+    "model/input paths",
+    "all model args",
+    "env",
+    "sampling",
+    "port",
+    "shared captured-token bridge",
+    "quality checks",
+    "sampler-first cleanup"
+  ],
+  "changed": {
+    "run_id": [
+      "20261011-66-upstream42-quality",
+      "20261025-73-upstream-control"
+    ],
+    "side_id": [
+      "upstream42",
+      "upstream73"
+    ],
+    "engine_path": [
+      "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\strata.exe",
+      "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\strata.exe"
+    ],
+    "engine_source_commit": [
+      "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+      "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406"
+    ],
+    "run_local_log": [
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\arms\\upstream42\\quality-on\\logs\\engine.log",
+      "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\arms\\upstream73\\quality-on\\logs\\engine.log"
+    ],
+    "quality_prompt_ids": {
+      "from": [
+        "smoke_arithmetic",
+        "smoke_unicode",
+        "smoke_json_arithmetic",
+        "smoke_python_function",
+        "smoke_three_key_retrieval",
+        "long_1k",
+        "long_4k",
+        "long_16k",
+        "long_30k7"
+      ],
+      "to": [
+        "smoke_arithmetic",
+        "smoke_unicode",
+        "smoke_json_arithmetic",
+        "smoke_python_function",
+        "smoke_three_key_retrieval",
+        "long_1k"
+      ]
+    },
+    "manifest_validation_ids": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k",
+      "long_4k",
+      "long_16k",
+      "long_30k7"
+    ],
+    "launch_admission": {
+      "removed": "pre-admission wsl.exe --shutdown",
+      "added": "--inspect-running-wsl opt-in on launch admission only"
+    }
+  },
+  "runtime_environment_delta": {},
+  "probe_environment_added": [],
+  "build_option_claims_added": [],
+  "request_output_leaves_created": 0,
+  "model_or_api_started": false,
+  "device_observed": false
+}

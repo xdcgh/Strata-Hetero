@@ -1,0 +1,24 @@
+{
+  "pid": 21692,
+  "parent": 25368,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "created": "2026-10-25T05:11:22.6248190Z",
+  "command": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\run-phase.ps1 -Side moe71 -Phase launch -Execute -Authorization C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\root-authorization-01.json",
+  "argv": [
+    "-NoLogo",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\run-phase.ps1",
+    "-Side",
+    "moe71",
+    "-Phase",
+    "launch",
+    "-Execute",
+    "-Authorization",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\root-authorization-01.json"
+  ],
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\root-launch-20261025.stdout.log",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-71-moe45-finite-detail\\root-launch-20261025.stderr.log",
+  "source_sha256": "083f68dc617318456c73878f84591c7dbd4442a487f8ea9538eb5922b360c20c"
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-73-upstream-control",
+  "recorded_at_utc": "2026-10-25T05:26:40.4571320Z",
+  "stage": "python_ast_parse_only",
+  "status": "failed_before_preparation_no_retry",
+  "error": "SyntaxError at line 162: f-string: single } is not allowed",
+  "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\preparation\\prepare_upstream73.py",
+  "source_sha256": "fbf2941908f4ecb91da216ce14663ca79664c6bbffd9d0df55882f2b69b416bb",
+  "preparation_program_invoked": false,
+  "run_outputs_created": false,
+  "model_api_device_wsl_or_compiler_actions": false
+}

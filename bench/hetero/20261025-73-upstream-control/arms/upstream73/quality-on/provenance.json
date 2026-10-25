@@ -1,0 +1,129 @@
+{
+  "prepared_utc": "2026-10-25T05:27:43.437826+00:00",
+  "run_id": "20261025-73-upstream-control",
+  "arm": "upstream73",
+  "status": "prepared_not_launched_current_environment_baseline_replay",
+  "base_h4_run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+  "base_h4_config_sha256": "fa27117900dd16bae7f5af7ced1149448fce7296f035906a726ddbc9d59082ee",
+  "engine_cpp_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+  "engine_version": "0.1.42",
+  "engine_path": "E:\\Strata-Hetero-data\\build\\cuda-upstream42-run64-01\\strata.exe",
+  "engine_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+  "server_python_checkout_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+  "server_file_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+  "shared_controls": {
+    "model_id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-upstream42",
+    "pack": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+    "native_model_shard_1": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "native_dense_gguf_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "resident_budget_gib": 20,
+    "max_context": 32768,
+    "kv": "int8",
+    "pool_workers": 10,
+    "spec": 4,
+    "prompt_cache": 0,
+    "adapt_swaps": 0,
+    "pcie_frac": 0,
+    "ple_io": "direct",
+    "expert_file_io": "buffered (STRATA_UNBUFFERED_LOAD=0)",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 1,
+      "seed": 42
+    },
+    "quality_prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\manifest.json",
+    "quality_prompt_manifest_sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
+    "capture_actual_engine_token_ids": true,
+    "ple_gguf_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "environment_frozen": {
+      "PATH": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64;E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin;C:\\Windows\\System32;C:\\Windows",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "STRATA_IQ_MT_MIN": "1",
+      "STRATA_GGUF_PY": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py",
+      "STRATA_UNBUFFERED_LOAD": "0",
+      "STRATA_PREFILL_CPU_SHARE": "0",
+      "STRATA_STAGE_PIN": "0",
+      "STRATA_ROUTE_TAIL_SKIP": "0"
+    },
+    "new_v0_1_42_controls": {
+      "STRATA_PREFILL_CPU_SHARE": "0",
+      "STRATA_STAGE_PIN": "0",
+      "STRATA_ROUTE_TAIL_SKIP": "0"
+    }
+  },
+  "placement_contrast": {
+    "flag": "--ple-gguf",
+    "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "physical_device": "F: USB Realtek RTL9201",
+    "file_bytes": 49859583136,
+    "sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+    "copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json"
+  },
+  "comparison_contract": {
+    "native_dense_paths_same": true,
+    "native_dense_contains_original_F_shard_2_in_both_arms": true,
+    "prompt_set_same_as_H4": true,
+    "no_performance_or_model_quality_claim_yet": true,
+    "normalized_controls_sha256": "f26ddd8f9e8f2f34a96c9e5bcb92353e81de652ba4a8f40fe6a0c366c0d999c3",
+    "only_runtime_setting_difference": "v0.1.42 engine source/binary identity; configs and token-ID bridge are matched",
+    "normalization": "Canonical JSON with only executable path and run-specific log replaced by fixed sentinels; all repeated dense paths and exact --ple-gguf path retained.",
+    "server_bridge_identical_for_both_runs": true,
+    "normalized_config_sha256": "f26ddd8f9e8f2f34a96c9e5bcb92353e81de652ba4a8f40fe6a0c366c0d999c3",
+    "new_0_1_42_defaults_disabled": {
+      "STRATA_PREFILL_CPU_SHARE": "0",
+      "STRATA_STAGE_PIN": "0",
+      "STRATA_ROUTE_TAIL_SKIP": "0"
+    }
+  },
+  "source_review": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\source-review.json",
+  "input_identity_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\fresh-identities.json",
+  "launch_admission": {
+    "status": "not_run_prepared_only",
+    "must_be_fresh_at_launch": true,
+    "inspect_running_wsl": true,
+    "minimum_vram_mib": 46000,
+    "minimum_ram_gib": 12,
+    "minimum_commit_gib": 4
+  },
+  "process_receipt": null,
+  "acceptance_status": "prepared_not_launched",
+  "root_review": {
+    "reviewed_utc": "2026-10-09T04:39:55.873907+00:00",
+    "correction": "Initially prepared from upstream03; now uses the integrated H4 binary and identical frozen Python bridge bytes. Never launched."
+  },
+  "build_receipt": {
+    "pair_summary": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\preparation-receipt.json",
+    "source_tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+    "gpu_executed": false,
+    "engine_cli_executed": false,
+    "binary_size_bytes": 52763648,
+    "binary_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+    "build_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-64-upstream42-cuda-build\\execution\\upstream\\e-build-metadata\\build-receipt.json"
+  },
+  "server_bridge": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+    "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+    "source_checkout_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf"
+  },
+  "controller_source": {
+    "launch_owned_sha256": "108039fab6c479d3528834533e45115ae794ac9e65c510ee8a739aa057c8fee6",
+    "quality_controller_sha256": "f135f742799712b8b8265057f1d08e9a3d88032caad09c552fd5c353422b1399",
+    "reviewed_base_launch_sha256": "faf61fb3c02de0074bc4148e5d91089ab727adcb102370e8d8d56e5aa7be28ec",
+    "reviewed_base_quality_sha256": "ecd2836a2888a21414a8bba2dfd4ed9a5b2a4215dcb73fca769ad1ac7c77f1ee",
+    "pre_fix_quality_controller_sha256": "ada724ef4a98333ca3fe2a99b78ddace2da6fcc3f26859ea7b535634e5365c3f",
+    "startup_watch_sha256": "ef1503979359781db97f082d272c4f64b1223aa8ad355b83a7fde8d80d8daa4c",
+    "startup_watch_fixture_sha256": "18736fc59ec05ba55221ed71b2a1cac9361a2c01b803c2dac35bd0b9f327fc7e",
+    "startup_watch_root_review_sha256": "820102096cb79ea64d459110ce1d3a50dae9e084e7d53000fe90fd0a6ea50730"
+  },
+  "jsonl_tail_reader_sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d",
+  "current_source_path": "E:\\Strata-Hetero-data\\source\\upstream-61b3fb5d-build-01",
+  "current_source_tree": "7417abeee74c20912310306a2b1dc16f9ea7515b",
+  "current_source_clean": true,
+  "current_binary_size_bytes": 52763648,
+  "comparison_scope": "replay of the same first-six-prompt prefix in the current host environment; no performance or model acceptance claim"
+}

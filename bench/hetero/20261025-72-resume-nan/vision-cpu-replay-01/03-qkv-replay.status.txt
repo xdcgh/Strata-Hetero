@@ -1,0 +1,7 @@
+exit_code=0
+command=E:\Strata-Hetero-data\venv\Scripts\python.exe -B tools/hetero_vision_qkv_replay.py --run --output E:\Strata-Hetero-data\vision-replays\20261025-72-qkv\qkv.json
+working_directory=E:\Strata-Hetero-data\source\hetero-npu-20261025
+stdout=E:\Strata-Hetero-data\source\hetero-npu-20261025\bench\hetero\20261025-72-resume-nan\vision-cpu-replay-01\03-qkv-replay.stdout.txt
+stderr=E:\Strata-Hetero-data\source\hetero-npu-20261025\bench\hetero\20261025-72-resume-nan\vision-cpu-replay-01\03-qkv-replay.stderr.txt
+output=E:\Strata-Hetero-data\vision-replays\20261025-72-qkv\qkv.json
+output_exists=True

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-73-upstream-control",
+  "status": "prepared_no_start_review_not_invoked",
+  "wrapper": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\run-phase.ps1",
+  "wrapper_sha256": "14dc8cf62378401bda4d596a1efa9d95c6b7cc98f0ee0f1473d0c390bf771e11",
+  "command": "& 'C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\run-phase.ps1' -Side upstream73 -Phase launch",
+  "expected_status": "phase_wrapper_validated_no_start",
+  "lifecycle_scripts_invoked": false,
+  "authorization_required_for_lifecycle": true
+}

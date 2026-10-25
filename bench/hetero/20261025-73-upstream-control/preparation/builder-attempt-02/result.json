@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-73-upstream-control",
+  "recorded_at_utc": "2026-10-25T05:27:18.1569078Z",
+  "stage": "pure_data_preparation_and_powershell_ast_parse_only",
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-u",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\preparation\\prepare_upstream73.py"
+  ],
+  "exit_code": 1,
+  "python_version": "Python 3.14.8",
+  "program_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\preparation\\prepare_upstream73.py",
+  "program_sha256": "0ee5b4ec58f4bdc8b23e0a445ce4c376ec388781da503eede91db6e895225b17",
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\preparation\\builder-attempt-02\\stdout.txt",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\preparation\\builder-attempt-02\\stderr.txt",
+  "stderr_sha256": "eb4f16afe0bfb98c95ddb5ba2328156bcb9c7c3ac5c1be1ebd789f226cf78630",
+  "stderr_bytes": 932,
+  "model_api_device_wsl_compiler_or_lifecycle_actions": false
+}

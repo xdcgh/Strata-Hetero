@@ -1,0 +1,22 @@
+{
+  "pid": 21968,
+  "parent_pid": 24436,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "create_utc": "2026-10-25T05:31:39.3482060Z",
+  "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\rendered-scripts\\upstream73\\quality.ps1 -Run -RootReadyConfirmed -LauncherPid 22996 -SamplerPid 1648",
+  "argv": [
+    "-NoLogo",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\rendered-scripts\\upstream73\\quality.ps1",
+    "-Run",
+    "-RootReadyConfirmed",
+    "-LauncherPid",
+    "22996",
+    "-SamplerPid",
+    "1648"
+  ],
+  "script_sha256": "055c3093c67b9c324bc87ec492a1a54deb3e611d1eefd2d6c44acd8ed33cb559",
+  "matrix_sha256": "f9a8122ee701ec0d30ada01fba2aabf7f238151044630307655f6ec9369a6b2a"
+}

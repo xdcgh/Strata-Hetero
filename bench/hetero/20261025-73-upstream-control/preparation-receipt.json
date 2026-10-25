@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-73-upstream-control",
+  "status": "prepared_not_executed",
+  "matrix_sha256": "f9a8122ee701ec0d30ada01fba2aabf7f238151044630307655f6ec9369a6b2a",
+  "preparation_sha256": "b189333961320a6729b1007a0ff04da144db952b259578f3c6f747a3213c1f8e",
+  "preparation_source_sha256": "31f6e13423c765db4e612c0a5fe11b173fb98bd258a6befce2fee5e91bf32793",
+  "template_bindings_sha256": "b849f7a2787d90e6d184c4982f7daf80c580e5ed5d524d5d56f220c9f123e941",
+  "rendered_scripts": 4,
+  "request_output_leaves_created": 0,
+  "authorization_present": false,
+  "script_or_lifecycle_execution": false,
+  "model_payload_read_or_hashed": false
+}

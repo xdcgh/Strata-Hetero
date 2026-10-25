@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "status": "real_model_nan_in_short_teacherforced_verifier_windows",
+  "recorded_utc": "2026-10-25T05:23:44.703637+00:00",
+  "driver": "621.01",
+  "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "engine_sha256": "7d1758b24ee0f177a81c4e0f8440250f6abb5a268e6a9f197b1d93e13f351555",
+  "arithmetic_formal_h4_pass": 3,
+  "arithmetic_sse_hashes": [
+    "9ddbe4732712c55d9357d62e99f232c704ceaf31d4d1438e70fa66427f55efd7",
+    "fbd7b0549dd264535460cd248f177cb8d441852e214a20948d554053f7107303",
+    "beefe5ece2ca956b7fd6df50d9c984a470f274dfe3b5a6cd7aa67a0ca4e8c843"
+  ],
+  "unicode_warm_and_formals": [
+    {
+      "stem": "warmup-0000",
+      "actual_token_count": 128,
+      "actual_unique_ids": [
+        0
+      ],
+      "sse_sha256": "b45cb3ebe5aa15e3ad905ddd433a20415c1f0965578697a790f52de125d3f94d",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44"
+    },
+    {
+      "stem": "formal-0000",
+      "actual_token_count": 128,
+      "actual_unique_ids": [
+        0
+      ],
+      "sse_sha256": "fc92b541b69be132232165fc887e27191d7161c03e951360d950defab60afd2b",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44"
+    },
+    {
+      "stem": "formal-0001",
+      "actual_token_count": 128,
+      "actual_unique_ids": [
+        0
+      ],
+      "sse_sha256": "41919664eaa78441094426057b68e716262654ecf5fd3e866c7f783e3d5f8f3e",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44"
+    },
+    {
+      "stem": "formal-0002",
+      "actual_token_count": 128,
+      "actual_unique_ids": [
+        0
+      ],
+      "sse_sha256": "53f0ecd58107b7dd4bc41157cdb82f1908a120e270ecd53fe541645b63f0f04d",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44"
+    }
+  ],
+  "head_readback": {
+    "rows": 31,
+    "all_vocab_nan": true,
+    "vocab": 248320,
+    "first_observed": {
+      "window_pos": 12,
+      "row": 3,
+      "absolute_position": 15
+    },
+    "not_proof_of_global_first_nan": true
+  },
+  "prefill_probe_records": 0,
+  "first_nonfinite_layer_proven": false,
+  "resources": {
+    "sample_rows": 464,
+    "terminal_rows": 1,
+    "all_pass": true,
+    "physical_min_gib": 63.22443771362305,
+    "commit_min_gib": 43.53532409667969
+  },
+  "cleanup": {
+    "exit_code": 0,
+    "loaded": false,
+    "in_flight": 0,
+    "requests": 8,
+    "owners_terminal": true,
+    "port8081_released": true
+  },
+  "later_tasks_run": false,
+  "performance_claim": false,
+  "next": "current-driver upstream control; graph-safe Verifier probe for actual short-prompt path",
+  "review_attempt_correction": "initial no-zero-logits assumption from tail was false; assertion blocked publication; full log has31allNaNheadrows. Actual short read uses teacherforced Verifier windows, not coarse prefill."
+}

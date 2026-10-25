@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261025-73-upstream-control\preparation\prepare_upstream73.py", line 487, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261025-73-upstream-control\preparation\prepare_upstream73.py", line 472, in main
+    result = build_preparation()
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261025-73-upstream-control\preparation\prepare_upstream73.py", line 323, in build_preparation
+    ps_parse = parse_powershell_only(scripts)
+  File "C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261025-73-upstream-control\preparation\prepare_upstream73.py", line 243, in parse_powershell_only
+    raise ValueError("PowerShell parse-only output was incomplete")
+ValueError: PowerShell parse-only output was incomplete

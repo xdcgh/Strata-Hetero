@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "phase": "Run71 selected-layer typed MoE probe frozen3fbad60, compile currently active; Run69 firstbad45/154 established, fine cause stillunknown; original optimization goal incomplete",
+  "phase": "User resumed full original goal; current driver621.01; typedProbe64cases verified; actual model now fails shortUnicode with allNaN head in teacherforced Verifier windows; original upstream current-driver control and graph-safe Verifier probe in preparation",
   "branch": "codex/45-upstream41-runtime",
   "upstream_base_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "historical_source_sha": "6f32ec070f23ced9f50e704d854d775da52591ab",
@@ -81,7 +81,8 @@
     "RootRun63 independentSSE+rawbytes confirms warm+3formal128ID0/128bangs;15short formalTIDs matchH4; sampled1035..1061 head248320/248320NaNs finite0argmax-1; all268RAM/commit12/4gates pass min62.917/43.759GiB, finalpoststopownerunknown preserved; exactmodel/server/samplerterminal8081free",
     "RootRun66 latestunmodifiedupstream61b3/b4e8f reproducesnatural1K warm+3formal128ID0bangloop,15shortTIDs matchH4; logitsNOTCAPTURED; samplerfirstcleanup successall343samplespass min63.770physical/43.468commitGiB; model/server/sampler/listenerterminal; Hetero42/performanceUNRUN",
     "RootRun69 source1eb85 build/fixture gates pass:436 actual build resource rows; two binaries rehashed;55 metadata copies verified;60 synthetic CUDA cases/114 parsed checkpoints; all exact owners terminal; no model quality or performance claim",
-    "RootRun69 reparse:15short formalH4 ID/text passes; warm+3long1K128ID0bang loops; all4first_bad layer45/half1/moe_output/row154 nan2560,28head rows248320allNaN;780PSAPI/resource samples pass min61.974/42.551GiB, loadedfalse/inflight0requests24, exactowners+8081terminal"
+    "RootRun69 reparse:15short formalH4 ID/text passes; warm+3long1K128ID0bang loops; all4first_bad layer45/half1/moe_output/row154 nan2560,28head rows248320allNaN;780PSAPI/resource samples pass min61.974/42.551GiB, loadedfalse/inflight0requests24, exactowners+8081terminal",
+    "Resume72 typed64GPUcases/119checkpoints pass; explicit complete/fresh rootWSLfd idle proof tested28purecases and observed; realE71 arithmetic3formalH4 IDs pass, Unicodewarm+3formal128ID0/! with31allNaNheadrows; first observed pos12row3(abs15), no PF trace, actualVerifier teacherforcedwindows;464physical/PSAPI gatespass min63.224/43.535GiB,cleanup0loadedfalse/inflight0requests8allowners8081terminal"
   ],
   "hypotheses": [
     "PLE table plus resident expert complement fits safe RAM budget",
@@ -106,12 +107,12 @@
     "decision_required": null,
     "old_strata_service": "unloaded and exact server stopped; original config identity captured for restoration"
   },
-  "next_experiment": "Verify Run71 serial CUDA build then extended typed format synthetic fixtures and validated one-side fine model diagnostic; unchanged model recipe/strict12/4/46k gates; no unchanged expensive retry",
-  "completion_status": "active; original full goal remains unfinished, no user decision required",
+  "next_experiment": "Fresh current-driver upstream6prefix control; graph-safe Verifier firstbad probe for actual shortwindow path; after numerical fix, real model forced/auto hetero and full matched A/B; bounded CPUvision replay in parallel only outside GPU requests",
+  "completion_status": "in progress by explicit user resume; full original objective unfinished; no new user decision needed",
   "latest_upstream_fetched_sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
   "frozen_cpp_quality_reference_sha": "82f46a8c8f475f001ad76d92f58f4a4f8ffb0253",
-  "last_checkpoint_utc": "2026-10-11T05:20:16.748762Z",
-  "current_run": "20261011-71-moe45-finite-detail",
+  "last_checkpoint_utc": "2026-10-25T05:26:03.607769Z",
+  "current_run": "20261025-72-resume-nan",
   "current_model_owner": null,
   "upstream_pending_integration": {
     "sha": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
@@ -120,19 +121,28 @@
     "isolated_source_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
     "review": "bench/hetero/20261011-64-upstream42-cuda-build/execution/root-pair-review.json"
   },
-  "current_build_owner": {
-    "controller_pid": 25020,
-    "source_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
-    "source_path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
-    "build_path": "E:\\Strata-Hetero-data\\build\\cuda-moe45-probe71-01",
-    "status": "authorized_build_only_active",
-    "gpu_tests_or_model_started": false
-  },
+  "current_build_owner": null,
   "diagnostic_source_worktree": {
     "path": "E:\\Strata-Hetero-data\\source\\hetero-moe45-probe-71",
     "branch": "codex/71-moe45-finite-detail",
     "head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
     "pushed": true,
     "merged_to_main": false
+  },
+  "current_driver": "621.01",
+  "prior_driver": "610.88",
+  "parallel_work": {
+    "nan_verifier_probe": {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-verify-probe-20261025",
+      "status": "source implementation, not built or run"
+    },
+    "actual_live_arc": {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-live-arc-20261025",
+      "status": "forced frozen expert actual model callsites source complete/staticreviewed; not tested/built/modelverified"
+    },
+    "vision_npu_quality": {
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-npu-20261025",
+      "status": "source faithfulness/replay; bounded CPUtests underway, no NPU/modelacceptance"
+    }
   }
 }

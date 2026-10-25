@@ -1,0 +1,5 @@
+exit_code=0
+command=E:\Strata-Hetero-data\venv\Scripts\python.exe -B -m unittest discover -s tools -p test_hetero_vision_qwen3vl.py
+working_directory=E:\Strata-Hetero-data\source\hetero-npu-20261025
+stdout=E:\Strata-Hetero-data\source\hetero-npu-20261025\bench\hetero\20261025-72-resume-nan\vision-cpu-replay-01\02-qwen3vl.stdout.txt
+stderr=E:\Strata-Hetero-data\source\hetero-npu-20261025\bench\hetero\20261025-72-resume-nan\vision-cpu-replay-01\02-qwen3vl.stderr.txt

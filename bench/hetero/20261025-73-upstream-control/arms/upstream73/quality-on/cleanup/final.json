@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-73-upstream-control",
+  "status": "terminal_owned_server_and_sampler_released",
+  "utc": "2026-10-25T05:32:34.4718709Z",
+  "engine_server_sampler_terminal": true,
+  "listener8081_released": true,
+  "sampler_was_not_killed": true,
+  "resource_summary": {
+    "status": "pass",
+    "sample_count": 182,
+    "terminal_count": 1,
+    "min_ram_gib": 64.174,
+    "min_commit_gib": 44.738,
+    "all_gates_pass": true,
+    "terminal": {
+      "schema_version": 1,
+      "record_type": "sampler_stopped",
+      "observed_at_utc": "2026-10-25T05:32:33.621Z",
+      "monotonic_seconds": 4929.5958799,
+      "reason": "stop_file_exists"
+    }
+  }
+}

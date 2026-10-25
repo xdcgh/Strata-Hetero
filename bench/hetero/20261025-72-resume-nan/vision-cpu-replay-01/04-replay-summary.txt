@@ -1,0 +1,12 @@
+selected_elements=84
+bits_equal=9
+bits_different=75
+abs_error_min=0
+abs_error_max=3.57627868652344E-07
+abs_error_gt_0.001=0
+rounded_fsum_equals_native=16
+status=selected_qkv_source_replay
+npu_accepted=False
+original_reference_replaced=False
+gate_relaxed=False
+scope=Source AVX2 operation order; compiler fusion/dispatch unproven

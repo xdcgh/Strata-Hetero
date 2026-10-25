@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "unmodified_upstream_current_driver_same_short_unicode_failure",
+  "recorded_utc": "2026-10-25T05:34:20.103710+00:00",
+  "driver": "621.01",
+  "source_head": "61b3fb5dd3f1e8ec09cf7e4e05208bc6d3c46406",
+  "engine_sha256": "b4e8f28eebd012c015905c1ffae461ba22d069d1c997a0b3ef91f1edd8e6a786",
+  "arithmetic_formal_h4_pass": 3,
+  "unicode_warm_formals": [
+    {
+      "stem": "warmup-0000",
+      "sse_sha256": "cb3b185329beee262cf956b72c60ab7cc723f3ca806a68426e2fb0f6720fb43a",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+      "actual_unique_ids": [
+        0
+      ],
+      "actual_token_count": 128
+    },
+    {
+      "stem": "formal-0000",
+      "sse_sha256": "c98fe569b9907ca67be8546cb6ec9a9a4c9528a7a5a59198f4fdd2ba479b3b3a",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+      "actual_unique_ids": [
+        0
+      ],
+      "actual_token_count": 128
+    },
+    {
+      "stem": "formal-0001",
+      "sse_sha256": "333b154495ac0a46a3d78a29ccf2524427a33928d46e2039313fddd9b1a3f123",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+      "actual_unique_ids": [
+        0
+      ],
+      "actual_token_count": 128
+    },
+    {
+      "stem": "formal-0002",
+      "sse_sha256": "007870bdbf4d68a33e993d94a5e9d790b64eb0a28040d7f444f97ac60b087f7d",
+      "text_sha256": "cb5285b34080738d510107dec7b6e8394aa425efe7a30fdafca780be709c2f44",
+      "actual_unique_ids": [
+        0
+      ],
+      "actual_token_count": 128
+    }
+  ],
+  "logit_or_firstlayer_readback": false,
+  "resources": {
+    "samples": 182,
+    "terminal_rows": 1,
+    "all_pass": true,
+    "physical_min_gib": 64.17427825927734,
+    "commit_min_gib": 44.73842239379883
+  },
+  "cleanup": {
+    "exit": 0,
+    "loaded": false,
+    "inflight": 0,
+    "requests": 8,
+    "owners_and8081_released": true
+  },
+  "performance_accepted": false,
+  "later_prompts_run": false,
+  "scope": "Same bang loop occurs in unmodified current-driver control, not attributable only to new heterogeneous code; driver causal effect unproven; no head NaN claim for control lacking readback"
+}

@@ -1,0 +1,11 @@
+{
+  "side": "upstream73",
+  "phase": "cleanup",
+  "controller_pid": 316,
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T05:32:34.5531943+00:00",
+  "stdout_sha256": "4873d2347b51b4a7562b4a1bfa7ca0f5384a601b763f3997f1bbcd42559ea098",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "log_hash_scope": "snapshot after controller exit; descendant handles may remain open until model cleanup",
+  "source_script_sha256": "2b31b531a4f9a5853838b451d051f958f820154d44dcd2ea06785e018b4cd217"
+}

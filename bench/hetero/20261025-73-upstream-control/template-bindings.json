@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-73-upstream-control",
+  "side_id": "upstream73",
+  "source_run66_root": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair",
+  "rendered_scripts": {
+    "launch": {
+      "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\launch.ps1",
+      "source_run66_sha256": "de0825a75187d72c99beaae4e34a66de0400f6eb7debc4ed34eee66e612d348d",
+      "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\rendered-scripts\\upstream73\\launch.ps1",
+      "rendered_sha256": "6f26c4c211801a02e1524ebe077143bd6b4f65e78e6d3f8ee2039b17936f15bd",
+      "rendered_bytes": 20437,
+      "status": "prepared_not_invoked"
+    },
+    "watch": {
+      "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\startup-watch.ps1",
+      "source_run66_sha256": "9f795e25198fb5d6d801c3d45f5ea702f4f5fd8ac094899a0359b67c2c88ff69",
+      "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\rendered-scripts\\upstream73\\startup-watch.ps1",
+      "rendered_sha256": "ddb65c7323e960641b5dba990c56d831574ff108645c941c992c27bacba3f90f",
+      "rendered_bytes": 12003,
+      "status": "prepared_not_invoked"
+    },
+    "quality": {
+      "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\quality.ps1",
+      "source_run66_sha256": "836e4bed436fbda07d13a36f4b65c1fd2b11d90c9f9620fe3cfcf78943ad0548",
+      "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\rendered-scripts\\upstream73\\quality.ps1",
+      "rendered_sha256": "055c3093c67b9c324bc87ec492a1a54deb3e611d1eefd2d6c44acd8ed33cb559",
+      "rendered_bytes": 33549,
+      "status": "prepared_not_invoked"
+    },
+    "cleanup": {
+      "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\upstream42\\cleanup.ps1",
+      "source_run66_sha256": "6edcf72c66ee7c317e8adac840b0de5d372587c00fd9709725efaaa651baa9a9",
+      "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\rendered-scripts\\upstream73\\cleanup.ps1",
+      "rendered_sha256": "2b31b531a4f9a5853838b451d051f958f820154d44dcd2ea06785e018b4cd217",
+      "rendered_bytes": 10542,
+      "status": "prepared_not_invoked"
+    },
+    "run_phase": {
+      "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\run-phase.ps1",
+      "source_run66_sha256": "9fe49e2701c4c5f8dbb97d9bd0f2e91092b75e72d4a51d915a442c40428c83af",
+      "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-73-upstream-control\\run-phase.ps1",
+      "rendered_sha256": "14dc8cf62378401bda4d596a1efa9d95c6b7cc98f0ee0f1473d0c390bf771e11",
+      "rendered_bytes": 5826,
+      "status": "prepared_not_invoked"
+    }
+  },
+  "powershell_parse_only": {
+    "launch.ps1": {
+      "status": "parse-only pass",
+      "stdout": "launch.ps1 parse-only pass"
+    },
+    "startup-watch.ps1": {
+      "status": "parse-only pass",
+      "stdout": "startup-watch.ps1 parse-only pass"
+    },
+    "quality.ps1": {
+      "status": "parse-only pass",
+      "stdout": "quality.ps1 parse-only pass"
+    },
+    "cleanup.ps1": {
+      "status": "parse-only pass",
+      "stdout": "cleanup.ps1 parse-only pass"
+    },
+    "run-phase.ps1": {
+      "status": "parse-only pass",
+      "stdout": "run-phase.ps1 parse-only pass"
+    }
+  },
+  "script_invocations": false
+}
