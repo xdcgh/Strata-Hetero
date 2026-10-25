@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "schema": "strata-v042-single-side-verify-diagnostic-preparation-v1",
+  "run_id": "20261025-74-verify-finite",
+  "status": "prepared_verify74_review_pending_no_execution",
+  "prepared_utc": "2026-10-11",
+  "hetero": {
+    "release": "v0.1.42",
+    "source_path": "E:\\Strata-Hetero-data\\source\\hetero-verify-probe-20261025",
+    "source_commit": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+    "source_tree": "e79dfe5adaa8b2cdb305502887fa52bf601faa7d",
+    "binary_path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\strata.exe",
+    "binary_sha256": "3a76d5ededc8b00e3f02e35506b69f599c3562a731211ec683a4cebada99f088",
+    "binary_bytes": 52804096,
+    "binary_identity_status": "root build receipt bound; fresh launch-time identity recheck required",
+    "build_receipt": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\build-receipt.json",
+    "build_receipt_sha256": "e0cc3af69ac82976c762acbdc8fdb287b90e4c146dd88f48d83783f8f03e740e",
+    "cmake_probe_option": "STRATA_VERIFY_FINITE_PROBE=ON",
+    "cmake_controls": {
+      "CMAKE_PROJECT_VERSION": "0.1.42",
+      "CMAKE_BUILD_TYPE": "Release",
+      "CMAKE_CUDA_ARCHITECTURES": "89",
+      "CMAKE_CUDA_COMPILER": "E:/Strata-Hetero-data/toolchains/cuda-13.3.1/bin/nvcc.exe",
+      "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+      "STRATA_ENABLE_CUDA": "ON",
+      "STRATA_ENABLE_HIP": "OFF",
+      "STRATA_HIP_GFX906": "OFF",
+      "STRATA_ENABLE_SYCL": "OFF",
+      "STRATA_BUILD_TESTS": "OFF",
+      "STRATA_NATIVE_EXPERTS": "ON",
+      "STRATA_PORTABLE": "ON",
+      "STRATA_MMQ_KQUANTS": "OFF",
+      "STRATA_Q6K_EXPERTS": "OFF",
+      "STRATA_PREFILL_MMQ": "OFF",
+      "STRATA_ORCA_Q4KS_MMQ": "OFF",
+      "STRATA_PREFILL_FINITE_PROBE": "OFF",
+      "STRATA_VERIFY_FINITE_PROBE": "ON",
+      "STRATA_ISA_FLOOR": "",
+      "STRATA_GGML_DIR": "E:/Strata-Hetero-data/source/llama-3cf0325",
+      "CUDAToolkit_ROOT": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+      "CMAKE_MAKE_PROGRAM": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+      "GGML_CUDA": "OFF"
+    }
+  },
+  "shared_server_bridge": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+    "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+    "bytes": 385455,
+    "used_by_both_sides": false,
+    "capture_actual_engine_token_ids": true
+  },
+  "quality_recipe": {
+    "source_run": "20261009-41-hetero41-direct-quality",
+    "base_h4_run": "20261009-04-hetero04-direct-quality",
+    "manifest_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\manifest.json",
+    "manifest_sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
+    "tokenizer_snapshot_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\tokenizer-source-01\\strata_tokenizer-current-461b8afb.py",
+    "tokenizer_snapshot_sha256": "461b8afb2139f5efee58ee8f725039634bb38c3f6040d3004555ddb912b1cf00",
+    "tokenizer_equivalence_receipt_sha256": "aa0921ffc49be8e9c54212fc3e59ed113607ff568d7b2f89880d0912a3c1271d",
+    "prompt_ids": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k"
+    ],
+    "warmups_per_prompt": 1,
+    "formals_per_prompt": 3,
+    "quality_capture": true,
+    "strict_quality_stop_first": true,
+    "performance_phase": false,
+    "manifest_prompt_ids": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k",
+      "long_4k",
+      "long_16k",
+      "long_30k7"
+    ],
+    "scope": "five short prompts followed by long_1k; no later long prompts"
+  },
+  "quality_pair_order": [
+    "verify74"
+  ],
+  "sides": [
+    {
+      "id": "verify74",
+      "run_id": "20261025-74-verify-finite",
+      "arm_path": "arms/verify74/quality-on",
+      "config_path": "arms/verify74/quality-on/config.json",
+      "identity_path": "arms/verify74/quality-on/identity.json",
+      "provenance_path": "arms/verify74/quality-on/provenance.json",
+      "preparation_path": "arms/verify74/quality-on/preparation.json",
+      "model_name": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
+      "source_commit": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+      "binary_sha256": "3a76d5ededc8b00e3f02e35506b69f599c3562a731211ec683a4cebada99f088",
+      "config_sha256": "f591ca8b0b0d5ec0c4a7b9dde24289c35a752b2f6ebcea7b1a3af7a6bca37bb0",
+      "identity_sha256": "ff856b52d4c2d0d9d27580e9bdaabc452d40e57a4530eaaf7678c728b5a4f050",
+      "provenance_sha256": "4a3a8ab72be5d9ecc542bb0956c2f5a1dc8090cc4c7e44c1e4ff3a6f28c736f4",
+      "status": "prepared_not_launched_root_build_receipt_bound_fresh_launch_recheck_required",
+      "binary_bytes": 52804096,
+      "preparation_sha256": "98c41b2fd58d12d0c0dcca0c14206c805f75b15cdf43af8b598df134a5e9e218",
+      "rendered_scripts": {
+        "launch": {
+          "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\launch.ps1",
+          "source_run66_sha256": "d7089b54ffc537115fa76602fc1b19019aa087453c0cf4e209fb9a1fb360b112",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\rendered-scripts\\verify74\\launch.ps1",
+          "rendered_sha256": "a76602ff7a3a6095ea2e2658c32efc9bf049d294ff42e0285a8a2a2c69284fea",
+          "rendered_bytes": 20414,
+          "status": "prepared_not_executed_parser_validation_required"
+        },
+        "watch": {
+          "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\startup-watch.ps1",
+          "source_run66_sha256": "ec26cdff6c643a9dd25b73074dceac8b3ce82157a1549d5a42f7eef03deefe42",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\rendered-scripts\\verify74\\startup-watch.ps1",
+          "rendered_sha256": "c0615be9196f870f60ccf811e01734fb79c4bd919bddcfa3e38c2cae8ebe4f0f",
+          "rendered_bytes": 11995,
+          "status": "prepared_not_executed_parser_validation_required"
+        },
+        "quality": {
+          "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\quality.ps1",
+          "source_run66_sha256": "8e12d43d5c85adeaf739657959d0c877c75424f9edf0e370a1dd6f822ce0d899",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\rendered-scripts\\verify74\\quality.ps1",
+          "rendered_sha256": "602fc598fb892a66531e5cb30c31318f3a0e851a2607bff1ecc8cafd67c83ebb",
+          "rendered_bytes": 45660,
+          "status": "prepared_not_executed_parser_validation_required"
+        },
+        "cleanup": {
+          "source_run66_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\rendered-scripts\\hetero42\\cleanup.ps1",
+          "source_run66_sha256": "e528d014dccc5914d0a97d2cad7cef1997436020548bd55fb055aab8ccf83ef1",
+          "rendered_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\rendered-scripts\\verify74\\cleanup.ps1",
+          "rendered_sha256": "1b86f77cd1fdd09c662d48a975220a3005fea92f343a2e67963876e445b0ddb4",
+          "rendered_bytes": 10537,
+          "status": "prepared_not_executed_parser_validation_required"
+        }
+      },
+      "binary_identity_status": "root_build_receipt_bound_fresh_launch_rehash_required",
+      "fresh_identities_sha256": "803e54fed3d836f4e1cb8a44d924b196a010e57776daaf9c2bcdb43948788b55"
+    }
+  ],
+  "fixed_controls": {
+    "max_context": 32768,
+    "kv": "int8",
+    "resident_budget_gib": 20,
+    "vram_reserve_mib": 4096,
+    "spec": 4,
+    "spec_min_p": 0.5,
+    "pool_workers": 10,
+    "pool_affinity": "all",
+    "prompt_cache": 0,
+    "adapt_swaps": 0,
+    "pcie_frac": 0,
+    "ple_io": "direct",
+    "prefill_cpu_share": "0",
+    "stage_pin": "0",
+    "route_tail_skip": "0",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 1,
+      "seed": 42
+    },
+    "hetero_capture_token_ids": true,
+    "capture_actual_engine_token_ids": true,
+    "quality_prompts": 6,
+    "performance": false,
+    "manifest_prompts": 9
+  },
+  "fresh_launch_gates": {
+    "minimum_ram_gib": 12,
+    "minimum_commit_gib": 4,
+    "minimum_vram_mib": 46000,
+    "wsl_shutdown_before_observation": false,
+    "exact_current_binary_hash_and_size": true,
+    "fresh_asset_stat_recheck": true,
+    "authorization": null,
+    "inspect_running_wsl": true
+  },
+  "only_control_differences": [
+    "E74 source/binary identity",
+    "STRATA_VERIFY_FINITE_PROBE=ON with STRATA_PREFILL_FINITE_PROBE=OFF and STRATA_BUILD_TESTS=OFF",
+    "STRATA_VERIFY_FINITE_PROBE=1 and STRATA_DIAG_ZERO_LOGITS=1 runtime diagnostics",
+    "run-local executable/log/evidence paths"
+  ],
+  "normalization_audit": "controls-normalization.json",
+  "template_bindings": "template-bindings.json",
+  "execution_enabled": false,
+  "no_model_api_device_or_build_action": true,
+  "template_bindings_sha256": "4298188142a8ac62641fdffbf6e3211040a3c635a387505ddfac631c1f976b67",
+  "controls_normalization_sha256": "03e6b568854eae9be4a8c054d08d0f218993612e56a4a0f54502634f8efa3a9e",
+  "prepared_at_utc": "2026-10-25T05:57:19.701415Z",
+  "fresh_input_identity_snapshot": {
+    "source": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\fresh-input-identities-01.json",
+    "status": "prior-reference-only; fresh launch-time identity recheck required"
+  },
+  "root_authorization": null,
+  "execution_mode": "direct_powershell_controllers",
+  "controller_wrapper": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\run-phase.ps1",
+    "sha256": "90e2c69c5716f6b39f358556370ef8bf917ef62aed56c1222f712ce214835985",
+    "bytes": 5822,
+    "owner": "Run74 preparation",
+    "mutated_by_pool_coordinator": false
+  },
+  "controller_contract": {
+    "controllers": "direct PowerShell scripts; no Python pool coordinator",
+    "admission_required": {
+      "wsl_shutdown_before_observe": false,
+      "minimum_ram_gib": 12,
+      "minimum_commit_gib": 4,
+      "minimum_vram_mib": 46000,
+      "inspect_running_wsl": true
+    },
+    "foreign_python_and_gpu_workload_gates": "strict and unchanged",
+    "gate_exemptions": []
+  },
+  "authorization_file_status": "not created; fresh Run74 authorization required after root review",
+  "identity_provenance_schema_sources": {
+    "upstream42": {
+      "identity_template": "bench\\hetero\\20261009-40-upstream41-direct-quality\\identity.json",
+      "identity_template_sha256": "db2dc0037180fc7bf77a0adeb384bbb9c031950165221bcfea67dba690f28b8e",
+      "provenance_template": "bench\\hetero\\20261009-40-upstream41-direct-quality\\provenance.json",
+      "provenance_template_sha256": "ab10666f11efe173a4e7e063e2f788d8aae666233ba548116895c625e23a0e86",
+      "identity_sha256": "4543a92a0d1324e460e1b29008859a0b3245ebd9dc6e1df1bf870c212cb887f0",
+      "provenance_sha256": "142acf6f379604d8b2b79465a75ce231a669399039eff5bc898d00bb94db8afc",
+      "full_original_schema_copied": true,
+      "placements_contrast_retained_from_prior_full_hash_and_copy_receipt": true
+    },
+    "hetero42": {
+      "identity_template": "bench\\hetero\\20261009-41-hetero41-direct-quality\\identity.json",
+      "identity_template_sha256": "f00faab421cd3aaa372de2fd31e857eb1368ab74bd6b690ff8a86c8c929e0d30",
+      "provenance_template": "bench\\hetero\\20261009-41-hetero41-direct-quality\\provenance.json",
+      "provenance_template_sha256": "b07a05571798f9e1b513d65a030841651cd44c500e14ce05c1bbf5d302207816",
+      "identity_sha256": "42518197e8973b3ba427bb7738723d5a667785420dc44d70d1861f765ea6aa40",
+      "provenance_sha256": "8363944fd4d1c97e9f247b4b2bab79b51099b1272ad35f382b83f5dfb6446225",
+      "full_original_schema_copied": true,
+      "placements_contrast_retained_from_prior_full_hash_and_copy_receipt": true
+    }
+  },
+  "verify74_diagnostic_contract": {
+    "compile_option": "STRATA_VERIFY_FINITE_PROBE=ON",
+    "prefill_compile_option": "STRATA_PREFILL_FINITE_PROBE=OFF",
+    "global_tests_compile_option": "STRATA_BUILD_TESTS=OFF",
+    "runtime_environment": {
+      "STRATA_VERIFY_FINITE_PROBE": "1",
+      "STRATA_DIAG_ZERO_LOGITS": "1"
+    },
+    "invalid_or_unknown_probe_records_fail_closed": true,
+    "bad_false_record_is_normal_metadata": true,
+    "bad_true_typed_record_or_zero_logits_is_fatal_after_current_prompt_is_preserved": true,
+    "position_kind_consecutive_checked_against_pos0_plus_token_row": true,
+    "position_kind_per_row_preserves_runtime_position_value": true,
+    "formats": [
+      "bf16",
+      "f16",
+      "f32"
+    ],
+    "stages": [
+      "attention_output",
+      "hc_attention",
+      "hc_ffn",
+      "head_logits",
+      "head_mixed",
+      "input_residual",
+      "moe_output",
+      "route_logits",
+      "route_weights",
+      "routed_parts",
+      "shared_input_bf16",
+      "shared_output",
+      "shared_scalar_gate"
+    ],
+    "coordinates": [
+      "row_offset",
+      "local_row",
+      "row",
+      "rows_per_token",
+      "token_row",
+      "position",
+      "column"
+    ],
+    "partial_log_line_cursor_advances_only_after_lf": true
+  },
+  "source_run66_history_reference": {
+    "matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\matrix.json",
+    "history_arm_id": "upstream42",
+    "history_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\arms\\upstream42\\quality-on\\quality\\F-quality-failure.json",
+    "root_authorization_03_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\root-authorization-03.json",
+    "copied_runtime_or_request_outputs": false
+  },
+  "preparation_source": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\prepare_verify74_model.py",
+    "sha256": "095e7eb281b7685acab2064a8dd99569da41c26433289137ff4ca6015c27e573"
+  }
+}

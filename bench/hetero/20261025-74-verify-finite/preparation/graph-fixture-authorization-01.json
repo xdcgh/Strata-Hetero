@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "status": "delegated_owner_review_pass_authorized_graph_fixture_only",
+  "recorded_utc": "2026-10-25T05:57:18.409920+00:00",
+  "build_receipt_path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\build-receipt.json",
+  "build_receipt_sha256": "e0cc3af69ac82976c762acbdc8fdb287b90e4c146dd88f48d83783f8f03e740e",
+  "source_head": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+  "binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\strata.exe",
+    "size_bytes": 52804096,
+    "sha256": "3a76d5ededc8b00e3f02e35506b69f599c3562a731211ec683a4cebada99f088"
+  },
+  "test_binary": {
+    "path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\verify_finite_probe_graph_test.exe",
+    "size_bytes": 218112,
+    "sha256": "78940e65a23a3ae115042b36540268f7332e6b434bc0263ff461fafd80f0418c"
+  },
+  "resource": {
+    "sample_count": 471,
+    "interval_seconds": 1,
+    "minimum_ram_available_bytes": 112016822272.0,
+    "minimum_commit_available_bytes": 119144071168.0,
+    "ram_floor_bytes": 12884901888,
+    "commit_floor_bytes": 4294967296,
+    "all_samples_pass": true
+  },
+  "fixture_driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\run_verify_fixture74.ps1",
+  "fixture_driver_sha256": "cac41f28bae2d5a9f41d2a0368a9e38cc7a1c62feca069c74856985078796520",
+  "output_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\graph-fixture-01",
+  "nostart_status": "fixture_prepared_no_start",
+  "fixed_receipt_source_auth_and_compile_controls_reviewed": true,
+  "admission_required": true,
+  "model_authorized_by_this_record": false,
+  "original_goal_complete": false
+}

@@ -1,0 +1,12 @@
+{
+  "pid": 24676,
+  "identity": {
+    "pid": 24676,
+    "parent": 10896,
+    "exe": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\verify_finite_probe_graph_test.exe",
+    "created": "2026-10-25T05:59:17.7780030Z",
+    "command": "\"E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\verify_finite_probe_graph_test.exe\""
+  },
+  "binary_sha256": "78940e65a23a3ae115042b36540268f7332e6b434bc0263ff461fafd80f0418c",
+  "argv": null
+}

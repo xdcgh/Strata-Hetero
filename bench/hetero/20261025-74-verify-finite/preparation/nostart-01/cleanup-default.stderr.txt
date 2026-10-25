@@ -1,0 +1,6 @@
+Get-Content: C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261025-74-verify-finite\rendered-scripts\verify74\cleanup.ps1:4
+Line |
+   4 |  $process=Get-Content (Join-Path $run 'process.json') -Raw|ConvertFrom …
+     |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path
+     | 'C:\Users\DC\Documents\ChatGPT\Strata-Hetero\bench\hetero\20261025-74-verify-finite\arms\verify74\quality-on\process.json' because it does not exist.

@@ -1,0 +1,17 @@
+{
+  "launcher": {
+    "pid": 21600,
+    "parent": 10896,
+    "exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+    "created": "2026-10-25T05:59:17.3399490Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\graph-fixture-01\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\graph-fixture-01\\resources.STOP"
+  },
+  "child": {
+    "pid": 11556,
+    "parent": 21600,
+    "exe": "C:\\Python314\\python.exe",
+    "created": "2026-10-25T05:59:17.3723180Z",
+    "command": "\"E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe\" -u -B -X utf8 E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\resource_sampler.py C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\graph-fixture-01\\resources.jsonl C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\graph-fixture-01\\resources.STOP"
+  },
+  "script_sha256": "9281c59e8bbd1f499b821ffc93633a745d298fead48baa837df8efdd2c5e8beb"
+}

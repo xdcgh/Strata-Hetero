@@ -1,0 +1,53 @@
+{
+  "schema": "strata-run74-build02-outcome-v1",
+  "run_name": "verify-finite-20261025-74-build02",
+  "status": "success",
+  "source_head_before": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+  "source_head_after": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+  "source_clean_before": true,
+  "source_clean_after": true,
+  "project_version": "0.1.42",
+  "cmake_flags": {
+    "STRATA_PREFILL_FINITE_PROBE": "OFF",
+    "STRATA_VERIFY_FINITE_PROBE": "ON",
+    "STRATA_BUILD_TESTS": "OFF"
+  },
+  "targets": [
+    "--build",
+    "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02",
+    "--target",
+    "strata",
+    "verify_finite_probe_graph_test",
+    "--parallel",
+    "1",
+    "--verbose"
+  ],
+  "configure_exit": 0,
+  "build_exit": 0,
+  "build_batch_exit": "0",
+  "last_ninja_progress": "142/142",
+  "built_executables": {
+    "strata": {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\strata.exe",
+      "size_bytes": 52804096,
+      "sha256": "3a76d5ededc8b00e3f02e35506b69f599c3562a731211ec683a4cebada99f088"
+    },
+    "verify_finite_probe_graph_test": {
+      "path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\verify_finite_probe_graph_test.exe",
+      "size_bytes": 218112,
+      "sha256": "78940e65a23a3ae115042b36540268f7332e6b434bc0263ff461fafd80f0418c"
+    }
+  },
+  "tests_built": true,
+  "tests_run": false,
+  "test_binary_executed": false,
+  "gpu_executed": false,
+  "model_or_engine_cli_executed": false,
+  "resource_sample_count_in_receipt": 471,
+  "raw_resource_rows": 472,
+  "raw_resource_sha256": "f822e0ce91dd28c4d392876d7a2d998f3fa96a531598489648d6467105a9191c",
+  "resource_audit": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\build-execution-02\\resource-audit.json",
+  "process_audit": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\build-execution-02\\owned-pid-terminal-audit.json",
+  "stdout_status": "success",
+  "stderr_bytes": 0
+}

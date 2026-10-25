@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "root_source_review_pass_build_fixture_model_pending",
+  "recorded_utc": "2026-10-25T05:36:35.871002+00:00",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-verify-probe-20261025",
+  "base_head": "3fbad60f479481333254f5ac1e6b04630ca37e49",
+  "source_sha256": {
+    "CMakeLists.txt": "cb1e6068651c578a327afc43858456752409b0f5beabaa1faa1b678017edeaa5",
+    "include/strata/core/verify.hpp": "3828105a372463512784a9d16c6e1fcb1d5062c5fc2bc64ac9ccd03d7d5913cf",
+    "src/core/verify.cpp": "123aaac9c2d815502bfeab12e8df505d12b395221f201881bfd370022f4fd0b2",
+    "include/strata/core/verify_probe.hpp": "c598ee13ab9d2f3530a6d294a9f42b12efc321dd6299653f7bbf5b0e539e7e2a",
+    "src/core/verify_probe.cu": "7493de3444bc939b737facbab2f5728149d6b7eab64032e5f64d72e6278c527e",
+    "tests/cuda/verify_finite_probe_graph_test.cpp": "37a5fafa0d2f7d90eb8503d04f4042178e96caebf273a641583befbecff0b30b",
+    "docs/VERIFY_FINITE_PROBE.md": "5d1ba67c364c39f8be8bae6876e03b14c0883c90a0a12ba3d2d0f9edf43c5aee"
+  },
+  "default_off_checks": [
+    {
+      "path": "src/core/verify.cpp",
+      "default_off_equal": true,
+      "guard_blocks": 22
+    },
+    {
+      "path": "include/strata/core/verify.hpp",
+      "default_off_equal": true,
+      "guard_blocks": 2
+    }
+  ],
+  "review": [
+    "allocation before capture, reset/typed scans/small pinned receipt are captured and run on each replay",
+    "runtime positions from host lastpos/per-row positions, not baked into captured graph",
+    "shared producer joined before scan; scalar/BF16 scanned only consumer branch",
+    "routed parts are token*K order and point rows_per_token records this",
+    "head native/canonical both write same sampled head_mixed",
+    "readback observed only at existing sync/query/done boundaries; graph destroyed before probe buffers",
+    "fixture target explicit with BUILD_TESTS OFF, no engine-prefill circular dependency"
+  ],
+  "scope_limits": [
+    "probe work can perturb races",
+    "no CUDA/HIP/SYCL runtime acceptance yet; enabled backend NVIDIA only",
+    "no numerical fix or endtoend performance claim"
+  ]
+}

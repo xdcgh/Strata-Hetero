@@ -1,0 +1,47 @@
+{
+  "schema": "strata-run74-build-outcome-v1",
+  "run_name": "verify-finite-20261025-74-build01",
+  "status": "failed",
+  "failure": "System.Management.Automation.RuntimeException: build terminated on resource gate; see preserved exact-owner stop receipt",
+  "gate_failure": {
+    "phase": "build",
+    "reason": "resource sample stale, unknown, or below 12GiB physical/4GiB commit gate",
+    "observed_utc": "2026-10-25T13:43:48.5140495+08:00",
+    "sample": null,
+    "owned_stop": {
+      "complete": true,
+      "stopped": [
+        11076
+      ],
+      "diagnostics": []
+    }
+  },
+  "configured_version": "0.1.42",
+  "configure_exit": 0,
+  "build_batch_exit": "255",
+  "build_result_json_present": false,
+  "last_ninja_progress": "120/142",
+  "build_log_failure_lines": [
+    "FAILED: [code=255] CMakeFiles/strata_mmq.dir/E_/Strata-Hetero-data/source/llama-3cf0325/ggml/src/ggml-cuda/template-instances/mmq-instance-iq2_xxs.cu.obj ",
+    "ninja: build stopped: subcommand failed."
+  ],
+  "source_head_before": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+  "source_clean_before": true,
+  "source_head_after": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+  "source_clean_after": true,
+  "cache_flags": {
+    "STRATA_PREFILL_FINITE_PROBE": "OFF",
+    "STRATA_VERIFY_FINITE_PROBE": "ON",
+    "STRATA_BUILD_TESTS": "OFF"
+  },
+  "tests_built": false,
+  "tests_run": false,
+  "test_binary_executed": false,
+  "gpu_executed": false,
+  "model_or_engine_cli_executed": false,
+  "binary": null,
+  "test_binary": null,
+  "resource_audit": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\build-execution-01\\resource-tail-audit.json",
+  "owned_process_audit": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\build-execution-01\\owned-pid-terminal-audit.json",
+  "interpretation": "Ninja was terminated at the resource gate; FAILED code 255 is the stopped build command result, not evidence of a compiler diagnostic. The exact failing command was mmq-instance-iq2_xxs.cu.obj at progress 120/142."
+}

@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "status": "reader_unknown_with_fresh_abundant_samples",
+  "original_failure": {
+    "phase": "build",
+    "reason": "resource sample stale, unknown, or below 12GiB physical/4GiB commit gate",
+    "observed_utc": "2026-10-25T05:43:48.5140495+00:00",
+    "sample": null,
+    "owned_stop": {
+      "complete": true,
+      "stopped": [
+        11076
+      ],
+      "diagnostics": []
+    }
+  },
+  "raw_sha256": "1b8b209244da7a448666dc5367aad0572c1ebf20bdfc12a657f3c2814603d0f6",
+  "sample_count": 281,
+  "all_json_valid": true,
+  "max_interval_seconds": 1.029,
+  "around_failure": [
+    {
+      "sampled_at_utc": "2026-10-25T05:43:45.038Z",
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 114293506048,
+      "commit_limit_bytes": 145553182720,
+      "commit_available_bytes": 121166094336,
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "error": null
+    },
+    {
+      "sampled_at_utc": "2026-10-25T05:43:46.039Z",
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 114102312960,
+      "commit_limit_bytes": 145553182720,
+      "commit_available_bytes": 120968261632,
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "error": null
+    },
+    {
+      "sampled_at_utc": "2026-10-25T05:43:47.040Z",
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 114342449152,
+      "commit_limit_bytes": 145553182720,
+      "commit_available_bytes": 121233047552,
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "error": null
+    },
+    {
+      "sampled_at_utc": "2026-10-25T05:43:48.041Z",
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 114222448640,
+      "commit_limit_bytes": 145553182720,
+      "commit_available_bytes": 121103716352,
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "error": null
+    },
+    {
+      "sampled_at_utc": "2026-10-25T05:43:49.042Z",
+      "physical_total_bytes": 136963248128,
+      "physical_available_bytes": 114419580928,
+      "commit_limit_bytes": 145553182720,
+      "commit_available_bytes": 121303621632,
+      "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+      "error": null
+    }
+  ],
+  "diagnosis": "Tail1 reader exception was swallowed; exact exception unavailable. Concurrent partial tail or transient read failure suspected. v2 reads shared snapshot complete LF records; unchanged TTL5 and 12GiB/4GiB thresholds.",
+  "model_failure": false
+}

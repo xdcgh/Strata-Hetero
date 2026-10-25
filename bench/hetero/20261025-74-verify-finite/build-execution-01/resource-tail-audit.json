@@ -1,0 +1,45 @@
+{
+  "schema": "strata-run74-resource-tail-audit-v2",
+  "raw_path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-01\\resources.jsonl",
+  "copied_raw_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\build-execution-01\\resources.jsonl",
+  "raw_line_count": 281,
+  "parsed_rows": 281,
+  "invalid_rows": 0,
+  "receipt_sample_count": 281,
+  "count_delta": 0,
+  "first_sample_utc": "2026-10-25T05:39:08.7610000+00:00",
+  "last_sample_utc": "2026-10-25T05:43:49.0420000+00:00",
+  "gate_failure_utc": "2026-10-25T05:43:48.5140495+00:00",
+  "nearest_sample_before_gate": {
+    "line": 280,
+    "sampled_at_utc": "2026-10-25T05:43:48.0410000+00:00",
+    "age_seconds": 0.4730495,
+    "physical_available_bytes": 114222448640,
+    "commit_available_bytes": 121103716352,
+    "error": null
+  },
+  "nearest_sample_after_gate": {
+    "line": 281,
+    "sampled_at_utc": "2026-10-25T05:43:49.0420000+00:00",
+    "seconds_after_gate": 0.5279505,
+    "physical_available_bytes": 114419580928,
+    "commit_available_bytes": 121303621632,
+    "error": null
+  },
+  "minimum_interval_seconds": 1.0,
+  "maximum_interval_seconds": 1.029,
+  "intervals_over_5s": 0,
+  "minimum_physical_bytes": 113776082944.0,
+  "minimum_commit_bytes": 120648499200.0,
+  "ram_floor_bytes": 12884901888,
+  "commit_floor_bytes": 4294967296,
+  "all_samples_above_floors": true,
+  "all_sampler_error_null": true,
+  "script_gate_sample": null,
+  "script_stop_complete": true,
+  "script_stopped_pids": [
+    11076
+  ],
+  "script_stop_diagnostics": [],
+  "interpretation": "Latest finalized row before failure was 0.473 seconds old and thresholds/cadence all passed. Driver recorded sample=null, but swallowed the underlying LatestSample exception. The file ends with one finalized sample 0.528 seconds after gate during sampler shutdown; exact read exception is unavailable."
+}

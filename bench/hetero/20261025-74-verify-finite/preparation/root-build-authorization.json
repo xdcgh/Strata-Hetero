@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "root_reviewed_authorized_build_only",
+  "recorded_utc": "2026-10-25T05:38:13.378916+00:00",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-verify-probe-20261025",
+  "source_head": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+  "source_files": {
+    "CMakeLists.txt": "cb1e6068651c578a327afc43858456752409b0f5beabaa1faa1b678017edeaa5",
+    "include/strata/core/verify.hpp": "3828105a372463512784a9d16c6e1fcb1d5062c5fc2bc64ac9ccd03d7d5913cf",
+    "src/core/verify.cpp": "123aaac9c2d815502bfeab12e8df505d12b395221f201881bfd370022f4fd0b2",
+    "include/strata/core/verify_probe.hpp": "c598ee13ab9d2f3530a6d294a9f42b12efc321dd6299653f7bbf5b0e539e7e2a",
+    "src/core/verify_probe.cu": "7493de3444bc939b737facbab2f5728149d6b7eab64032e5f64d72e6278c527e",
+    "tests/cuda/verify_finite_probe_graph_test.cpp": "37a5fafa0d2f7d90eb8503d04f4042178e96caebf273a641583befbecff0b30b",
+    "docs/VERIFY_FINITE_PROBE.md": "5d1ba67c364c39f8be8bae6876e03b14c0883c90a0a12ba3d2d0f9edf43c5aee"
+  },
+  "driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\run_cuda_build_verify74.ps1",
+  "driver_sha256": "fbc8110ea3660d308944587812960f8f7b4957d04057ffb65941f6e1ddb4b0df",
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-01",
+  "run_name": "verify-finite-20261025-74-build01",
+  "expected_project_version": "0.1.42",
+  "targets": [
+    "strata",
+    "verify_finite_probe_graph_test"
+  ],
+  "parallel": 1,
+  "root_source_review_sha256": "fb462bfa90748f2f581f10aa43db0ab31fe0d65bf877de8b89ea699e7a8dc411",
+  "no_execute_sha256": "cd15c66ece17fd1d64b13695ccd8e7500d972cf95495da5c97b76fc34353857d",
+  "flags": {
+    "prefill_probe": "OFF",
+    "verify_probe": "ON",
+    "global_tests": "OFF"
+  },
+  "limits": {
+    "model_or_engine_cli": false,
+    "test_binary_execution": false,
+    "device_execution": false,
+    "unchanged_retry": false,
+    "physical_gib": 12,
+    "psapi_system_commit_gib": 4
+  }
+}

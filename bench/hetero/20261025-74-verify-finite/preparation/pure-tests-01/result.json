@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "run_id": "20261025-74-verify-finite",
+  "recorded_at_utc": "2026-10-25T05:47:11.9221587Z",
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-u",
+    "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\test_prepare_verify74_model.py"
+  ],
+  "exit_code": 0,
+  "python_executable": "C:\\Python314\\python.exe",
+  "python_version": "Python 3.14.8",
+  "source_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\prepare_verify74_model.py",
+  "source_sha256": "095e7eb281b7685acab2064a8dd99569da41c26433289137ff4ca6015c27e573",
+  "test_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\test_prepare_verify74_model.py",
+  "test_sha256": "ceb06898d280149cd18b66c671f48996c53d94e1e9467eacf03760b23159591d",
+  "powershell7_path": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "powershell7_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "stdout_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\pure-tests-01\\stdout.txt",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 0,
+  "stderr_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\pure-tests-01\\stderr.txt",
+  "stderr_sha256": "bf8500c33f2020940dd93c38dc5dd51811440923a606afc71a00cb88c09f700f",
+  "stderr_bytes": 116,
+  "scope": "pure host tests with temporary prep fixture and fixed PowerShell AST/classifier only; no formal prep, model, API, GPU, compiler, WSL, or lifecycle"
+}

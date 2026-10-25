@@ -1,0 +1,201 @@
+{
+  "prepared_utc": "2026-10-25T05:57:19.698996Z",
+  "run_id": "20261025-74-verify-finite",
+  "arm": "verify74",
+  "status": "prepared_not_launched",
+  "base_h4_run": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-04-hetero04-direct-quality",
+  "base_h4_config_sha256": "fa27117900dd16bae7f5af7ced1149448fce7296f035906a726ddbc9d59082ee",
+  "engine_cpp_sha": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+  "engine_version": "0.1.42",
+  "engine_path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\strata.exe",
+  "engine_sha256": "3a76d5ededc8b00e3f02e35506b69f599c3562a731211ec683a4cebada99f088",
+  "server_python_checkout_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf",
+  "server_file_sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+  "shared_controls": {
+    "model_id": "qwen3.8-flash-next-unsloth-ud-q4_k_xl-hetero42",
+    "pack": "F:\\Strata-data\\packs\\unsloth-ud-q4_k_xl",
+    "native_model_shard_1": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "native_dense_gguf_paths": [
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+    ],
+    "resident_budget_gib": 20,
+    "max_context": 32768,
+    "kv": "int8",
+    "pool_workers": 10,
+    "spec": 4,
+    "prompt_cache": 0,
+    "adapt_swaps": 0,
+    "pcie_frac": 0,
+    "ple_io": "direct",
+    "expert_file_io": "buffered (STRATA_UNBUFFERED_LOAD=0)",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 1,
+      "seed": 42
+    },
+    "quality_prompt_manifest": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-51-worker-pool-sweep\\quality-manifest\\manifest.json",
+    "quality_prompt_manifest_sha256": "616c0685c55d8118ad32b24499a01c10021f02f408edfc570c95e7f6d646dde6",
+    "capture_actual_engine_token_ids": true,
+    "ple_gguf_path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "environment_frozen": {
+      "PATH": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin\\x64;E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1\\bin;C:\\Windows\\System32;C:\\Windows",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "STRATA_IQ_MT_MIN": "1",
+      "STRATA_GGUF_PY": "E:\\Strata-Hetero-data\\source\\llama-3cf0325\\gguf-py",
+      "STRATA_UNBUFFERED_LOAD": "0",
+      "STRATA_PREFILL_CPU_SHARE": "0",
+      "STRATA_STAGE_PIN": "0",
+      "STRATA_ROUTE_TAIL_SKIP": "0",
+      "STRATA_VERIFY_FINITE_PROBE": "1",
+      "STRATA_DIAG_ZERO_LOGITS": "1"
+    },
+    "new_v0_1_42_controls": {
+      "STRATA_PREFILL_CPU_SHARE": "0",
+      "STRATA_STAGE_PIN": "0",
+      "STRATA_ROUTE_TAIL_SKIP": "0"
+    },
+    "diagnostic_environment_delta": {
+      "STRATA_VERIFY_FINITE_PROBE": "1",
+      "STRATA_DIAG_ZERO_LOGITS": "1"
+    },
+    "diagnostic_build_option": "STRATA_VERIFY_FINITE_PROBE=ON"
+  },
+  "placement_contrast": {
+    "flag": "--ple-gguf",
+    "path": "F:\\Strata-data\\models\\unsloth-UD-Q4_K_XL\\Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "physical_device": "F: USB Realtek RTL9201",
+    "file_bytes": 49859583136,
+    "sha256": "3f342f1c1580473f1ee94ddd5b28206e8c07a70fa1a366f59d1d6c922919a6c9",
+    "copy_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-08-ple-copy\\copy-receipt.json"
+  },
+  "comparison_contract": {
+    "prompt_set_same_as_H4": true,
+    "no_performance_or_model_quality_claim_yet": true,
+    "only_runtime_setting_difference": "E74 source/binary plus verifier and zero-logits diagnostics; all other Run66 side controls are retained",
+    "new_0_1_42_defaults_disabled": {
+      "STRATA_PREFILL_CPU_SHARE": "0",
+      "STRATA_STAGE_PIN": "0",
+      "STRATA_ROUTE_TAIL_SKIP": "0"
+    },
+    "scope": "single-side verifier diagnostic; no pair comparison or quality-cause claim",
+    "run66_controls_retained_except_named_diagnostics": true,
+    "diagnostic_environment_delta": {
+      "STRATA_VERIFY_FINITE_PROBE": "1",
+      "STRATA_DIAG_ZERO_LOGITS": "1"
+    },
+    "diagnostic_build_option": "STRATA_VERIFY_FINITE_PROBE=ON",
+    "prompt_scope": [
+      "smoke_arithmetic",
+      "smoke_unicode",
+      "smoke_json_arithmetic",
+      "smoke_python_function",
+      "smoke_three_key_retrieval",
+      "long_1k"
+    ],
+    "warmups_per_prompt": 1,
+    "formal_requests_per_prompt": 3,
+    "stop_first_failed_prompt": true
+  },
+  "source_review": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\root-source-review.json",
+    "sha256": "fb462bfa90748f2f581f10aa43db0ab31fe0d65bf877de8b89ea699e7a8dc411",
+    "status": "root_source_review_pass_build_pending",
+    "source_head": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+    "source_tree": "e79dfe5adaa8b2cdb305502887fa52bf601faa7d"
+  },
+  "input_identity_receipt": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261009-11-ple-f-explicit-quality\\fresh-identities.json",
+  "launch_admission": {
+    "status": "not_run_prepared_only",
+    "must_be_fresh_at_launch": true
+  },
+  "process_receipt": null,
+  "acceptance_status": "prepared_not_launched",
+  "root_review": {
+    "reviewed_utc": "2026-10-09T04:39:55.873907+00:00",
+    "correction": "Initially prepared from upstream03; now uses the integrated H4 binary and identical frozen Python bridge bytes. Never launched."
+  },
+  "build_receipt": {
+    "source_tree": "e79dfe5adaa8b2cdb305502887fa52bf601faa7d",
+    "gpu_executed": false,
+    "engine_cli_executed": false,
+    "binary_size_bytes": 52769792,
+    "binary_sha256": "3a76d5ededc8b00e3f02e35506b69f599c3562a731211ec683a4cebada99f088",
+    "build_receipt": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\build-receipt.json",
+    "build_path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02",
+    "source_commit": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+    "compile_option": "STRATA_VERIFY_FINITE_PROBE=ON",
+    "cmake_cache_controls": {
+      "CMAKE_PROJECT_VERSION": "0.1.42",
+      "CMAKE_BUILD_TYPE": "Release",
+      "CMAKE_CUDA_ARCHITECTURES": "89",
+      "CMAKE_CUDA_COMPILER": "E:/Strata-Hetero-data/toolchains/cuda-13.3.1/bin/nvcc.exe",
+      "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+      "STRATA_ENABLE_CUDA": "ON",
+      "STRATA_ENABLE_HIP": "OFF",
+      "STRATA_HIP_GFX906": "OFF",
+      "STRATA_ENABLE_SYCL": "OFF",
+      "STRATA_BUILD_TESTS": "OFF",
+      "STRATA_NATIVE_EXPERTS": "ON",
+      "STRATA_PORTABLE": "ON",
+      "STRATA_MMQ_KQUANTS": "OFF",
+      "STRATA_Q6K_EXPERTS": "OFF",
+      "STRATA_PREFILL_MMQ": "OFF",
+      "STRATA_ORCA_Q4KS_MMQ": "OFF",
+      "STRATA_PREFILL_FINITE_PROBE": "OFF",
+      "STRATA_VERIFY_FINITE_PROBE": "ON",
+      "STRATA_ISA_FLOOR": "",
+      "STRATA_GGML_DIR": "E:/Strata-Hetero-data/source/llama-3cf0325",
+      "CUDAToolkit_ROOT": "E:\\Strata-Hetero-data\\toolchains\\cuda-13.3.1",
+      "CMAKE_MAKE_PROGRAM": "E:\\Strata-Hetero-data\\venv\\Scripts\\ninja.exe",
+      "GGML_CUDA": "OFF"
+    },
+    "build_receipt_sha256": "e0cc3af69ac82976c762acbdc8fdb287b90e4c146dd88f48d83783f8f03e740e",
+    "binary_bytes": 52804096,
+    "test_binary_sha256": "78940e65a23a3ae115042b36540268f7332e6b434bc0263ff461fafd80f0418c",
+    "test_binary_bytes": 218112,
+    "tests_built": true,
+    "tests_run": false,
+    "test_binary_executed": false,
+    "model_or_engine_cli_executed": false
+  },
+  "server_bridge": {
+    "path": "E:\\Strata-Hetero-data\\source\\hetero-0-1-42\\serve\\server.py",
+    "sha256": "9bc794cae42317dd3283c5f41d98a5c42b4053fd5c8aae8504669ade44a63ded",
+    "source_checkout_sha": "8cf0e89be5da8485cbeb6ac1b527089add25fbcf"
+  },
+  "controller_source": {
+    "launch_owned_sha256": "6967ea74e87447d66b153b218a9a336d9041628b14e52ec5a046309bcd06a679",
+    "quality_controller_sha256": "b968a9c09e68751f5d013a2b44ef556f7e6352fb60249628dd84722ebc6f6706",
+    "reviewed_base_launch_sha256": "faf61fb3c02de0074bc4148e5d91089ab727adcb102370e8d8d56e5aa7be28ec",
+    "reviewed_base_quality_sha256": "ecd2836a2888a21414a8bba2dfd4ed9a5b2a4215dcb73fca769ad1ac7c77f1ee",
+    "pre_fix_quality_controller_sha256": "63eee0ce7ea04900e444466321e0b1ef78b70bbf179fc66498821b71d8798dde",
+    "startup_watch_sha256": "d9a79815debee9dfd984dbf02aa60de6728df7295f2a95307d023b227a262995",
+    "startup_watch_fixture_sha256": "18736fc59ec05ba55221ed71b2a1cac9361a2c01b803c2dac35bd0b9f327fc7e",
+    "startup_watch_root_review_sha256": "4f19d90369c6ee6420cdeff98139868cb81a5005e9dd7b72a8fbdf23719dddc0",
+    "pre_scope_fix_launch_sha256": "6d9c743233c2158e60bb23d111894709f2c68561e8e551b769bd330c61f603d7",
+    "jsonl_tail_reader_sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d",
+    "jsonl_tail_fixture_sha256": "40f2b4eb1c6c15fa3d2d5d2213e75758e51dc53c9aeef25c220fae7991c80827",
+    "jsonl_tail_fixture_result_sha256": "e51d1bb91e0c9568c3324d85c39123491c3d593f710f496a55c5af8ed30f66c9",
+    "launch_quality_controller_sha256": "01b609826db20251886a297e1f411fce438693a23e0c07c099c7ac428c0df850"
+  },
+  "jsonl_tail_reader_sha256": "52e15e5fbe3f798efeeb91d0ad09d46fc0ac3ccd737ef7073e63f46b82984e1d",
+  "engine_size_bytes": 52804096,
+  "config_sha256": "f591ca8b0b0d5ec0c4a7b9dde24289c35a752b2f6ebcea7b1a3af7a6bca37bb0",
+  "identity_sha256": "ff856b52d4c2d0d9d27580e9bdaabc452d40e57a4530eaaf7678c728b5a4f050",
+  "diagnostic_only": true,
+  "diagnostic_environment_delta": {
+    "STRATA_VERIFY_FINITE_PROBE": "1",
+    "STRATA_DIAG_ZERO_LOGITS": "1"
+  },
+  "diagnostic_history_reference": {
+    "run_id": "20261011-66-v042-quality-pair",
+    "matrix_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\matrix.json",
+    "history_arm_id": "upstream42",
+    "history_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261011-66-v042-quality-pair\\arms\\upstream42\\quality-on\\quality\\F-quality-failure.json",
+    "history_status": "five prior short prompts passed; long_1k was first stop-failure",
+    "copied_request_outputs": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "phase": "build",
+  "reason": "resource sample stale, unknown, or below 12GiB physical/4GiB commit gate",
+  "observed_utc": "2026-10-25T05:43:48.5140495+00:00",
+  "sample": null,
+  "owned_stop": {
+    "complete": true,
+    "stopped": [
+      11076
+    ],
+    "diagnostics": []
+  }
+}

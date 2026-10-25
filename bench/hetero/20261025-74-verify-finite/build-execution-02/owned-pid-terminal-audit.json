@@ -1,0 +1,67 @@
+{
+  "schema": "strata-run74-build02-owned-process-terminal-audit-v1",
+  "observed_utc": "2026-10-25T05:57:32.0157069+00:00",
+  "records": [
+    {
+      "role": "driver",
+      "pid": 13096,
+      "expected_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "expected_created_utc": "10/25/2026 05:48:27",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "configure-cmd",
+      "pid": 11644,
+      "expected_exe": "C:\\WINDOWS\\System32\\cmd.exe",
+      "expected_created_utc": "10/25/2026 05:48:29",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "build-cmd",
+      "pid": 9288,
+      "expected_exe": "C:\\WINDOWS\\System32\\cmd.exe",
+      "expected_created_utc": "10/25/2026 05:48:39",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "resource-sampler-launcher",
+      "pid": 18076,
+      "expected_exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "expected_created_utc": "10/25/2026 05:48:28",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "resource-sampler-actual-python",
+      "pid": 23400,
+      "expected_exe": "C:\\Python314\\python.exe",
+      "expected_created_utc": "10/25/2026 05:48:28",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    }
+  ],
+  "all_original_identities_terminal": true,
+  "driver_terminal": true,
+  "phase_configure_exit": 0,
+  "phase_build_exit": 0,
+  "resource_sampler_stop_sentinel_present": true,
+  "interpretation": "All driver, configure/build phase owners, sampler launcher, and actual Python sampler identities were absent or PID-reused at audit time; each comparison uses recorded executable and creation time plus command/parent where available."
+}

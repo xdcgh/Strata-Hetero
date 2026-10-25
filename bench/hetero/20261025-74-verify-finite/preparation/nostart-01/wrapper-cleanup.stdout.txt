@@ -1,0 +1,1 @@
+{"status":"phase_wrapper_validated_no_start","side":"verify74","phase":"cleanup","script":"C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\rendered-scripts\\verify74\\cleanup.ps1","script_sha256":"1b86f77cd1fdd09c662d48a975220a3005fea92f343a2e67963876e445b0ddb4","start_performed":false,"api_called":false}

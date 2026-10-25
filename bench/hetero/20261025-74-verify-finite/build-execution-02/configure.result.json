@@ -1,0 +1,24 @@
+{
+  "phase": "configure",
+  "exit_code": 0,
+  "batch_exit_file": 0,
+  "duration_seconds": 9.839821,
+  "process": {
+    "pid": 11644,
+    "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+    "created": "2026-10-25T05:48:29.2730390Z",
+    "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\configure.cmd\"",
+    "batch": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\configure.cmd"
+  },
+  "log": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\configure.log",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\configure.cmd",
+  "last_resource": {
+    "sampled_at_utc": "2026-10-25T05:48:39.053Z",
+    "physical_total_bytes": 136963248128,
+    "physical_available_bytes": 114018623488,
+    "commit_limit_bytes": 145553182720,
+    "commit_available_bytes": 121174777856,
+    "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+    "error": null
+  }
+}

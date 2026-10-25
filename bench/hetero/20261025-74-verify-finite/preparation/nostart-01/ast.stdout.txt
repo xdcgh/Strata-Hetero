@@ -1,0 +1,5 @@
+run-phase.ps1 parse-only pass
+launch.ps1 parse-only pass
+startup-watch.ps1 parse-only pass
+quality.ps1 parse-only pass
+cleanup.ps1 parse-only pass

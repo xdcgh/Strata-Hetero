@@ -1,0 +1,78 @@
+{
+  "schema": "strata-run74-owned-process-terminal-audit-v2",
+  "observed_utc": "2026-10-25T05:46:19.4037995+00:00",
+  "driver_pid": 24444,
+  "exact_owned_processes": [
+    {
+      "role": "driver",
+      "pid": 24444,
+      "expected_exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "expected_created_utc": "10/25/2026 05:39:07",
+      "expected_command": null,
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "configure-cmd",
+      "pid": 11464,
+      "expected_exe": "C:\\WINDOWS\\System32\\cmd.exe",
+      "expected_created_utc": "10/25/2026 05:39:08",
+      "expected_command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-01\\configure.cmd\"",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "build-cmd",
+      "pid": 24404,
+      "expected_exe": "C:\\WINDOWS\\System32\\cmd.exe",
+      "expected_created_utc": "10/25/2026 05:39:23",
+      "expected_command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-01\\build.cmd\"",
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "resource-sampler-launcher",
+      "pid": 21824,
+      "expected_exe": "E:\\Strata-Hetero-data\\venv\\Scripts\\python.exe",
+      "expected_created_utc": "10/25/2026 05:39:08",
+      "expected_command": null,
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    },
+    {
+      "role": "resource-sampler-actual-python",
+      "pid": 12556,
+      "expected_exe": "C:\\Python314\\python.exe",
+      "expected_created_utc": "10/25/2026 05:39:08",
+      "expected_command": null,
+      "current_pid_exists": false,
+      "current_pid_reused": false,
+      "original_identity_active": false,
+      "current_exe": null,
+      "current_created_utc": null
+    }
+  ],
+  "all_original_owned_identities_terminal": true,
+  "resource_failure_stop_complete": true,
+  "resource_failure_stop_diagnostics": [],
+  "stop_recorded_pids": {
+    "pid": 11076,
+    "recorded_stopped_by_exact_owner": true,
+    "currently_exists": false,
+    "current_exe": null,
+    "current_created_utc": null
+  },
+  "interpretation": "PID 21824 was reused after the sampler launcher exited; matching uses PID plus executable and creation time (and command/parent when recorded). Stop receipt complete=true and recorded stopped PID(s) were checked."
+}

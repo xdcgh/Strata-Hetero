@@ -1,0 +1,8 @@
+1	'CMakeLists.txt','src/program/generate.cpp','src/prefill/prefill.cpp','src/core/expert_source.cpp','serve/server.py','include/strata/prefill/finite_probe.hpp','src/prefill/finite_probe.cu','tests/cuda/prefill_finite_probe_test.cpp'
+2	'-DSTRATA_PREFILL_FINITE_PROBE=ON'
+1	'STRATA_PREFILL_FINITE_PROBE','STRATA_ISA_FLOOR'
+1	$cacheValues.STRATA_PREFILL_FINITE_PROBE -ne 'ON'
+1	@('strata','prefill_finite_probe_test')
+1	'--target','strata','prefill_finite_probe_test'
+1	Join-Path $BuildPath 'prefill_finite_probe_test.exe'
+1	expected prefill_finite_probe_test.exe

@@ -1,0 +1,37 @@
+{
+  "schema": "strata-run74-build02-launch-v1",
+  "authorization_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\root-build02-authorization.json",
+  "authorization_sha256": "7333fe92ec7b9147fc7dd0108068ac4e24f9b66f457e6d580473d4f2dfc96ee6",
+  "driver_path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\run_cuda_build_verify74_v2.ps1",
+  "driver_sha256": "980d670041149b26212a50e8750ff9b561ae73f489d43bb72575269f58eaa40a",
+  "source_path": "E:\\Strata-Hetero-data\\source\\hetero-verify-probe-20261025",
+  "source_head": "404d05be05f1f449cce91d6883dd4a93d0dd4787",
+  "source_clean": true,
+  "source_file_hash_count": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "resource_helper_sha256": "5d0fc03363304f1fa2d7e6a8325775467b0a240122d78466078b4340395aa285",
+  "no_execute_sha256": "c5dc6a7475c7290a8f3b41eb33d07c9c5970b7361fcb551c7e880e7baddc83df",
+  "reader_tests": {
+    "status": "pass",
+    "count": 14,
+    "test_script_sha256": "4dbdea1816f266ebff7b28b8522b3ce1f520415e3a3a811ea6779b1c0c480704"
+  },
+  "build_path": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02",
+  "build_directory_absent": true,
+  "arguments": "-NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\run_cuda_build_verify74_v2.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-verify-probe-20261025 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02 -ExpectedHead 404d05be05f1f449cce91d6883dd4a93d0dd4787 -ExpectedProjectVersion 0.1.42 -RunName verify-finite-20261025-74-build02 -Execute",
+  "launcher": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "stdout": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\build-execution-02\\driver.stdout.txt",
+  "stderr": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\build-execution-02\\driver.stderr.txt",
+  "launched_at_utc": "2026-10-25T05:48:27.7835507+00:00",
+  "pid": 13096,
+  "exe": "C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "created_utc": "2026-10-25T05:48:27.8132930Z",
+  "command_line": "\"C:\\Users\\DC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -File C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\run_cuda_build_verify74_v2.ps1 -SourcePath E:\\Strata-Hetero-data\\source\\hetero-verify-probe-20261025 -BuildPath E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02 -ExpectedHead 404d05be05f1f449cce91d6883dd4a93d0dd4787 -ExpectedProjectVersion 0.1.42 -RunName verify-finite-20261025-74-build02 -Execute"
+}

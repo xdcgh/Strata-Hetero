@@ -1,0 +1,17 @@
+{
+  "schema": "strata-run74-powershell-ast-parse-v1",
+  "build_driver": {
+    "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-74-verify-finite\\preparation\\run_cuda_build_verify74.ps1",
+    "sha256": "fbc8110ea3660d308944587812960f8f7b4957d04057ffb65941f6e1ddb4b0df",
+    "parsed": true,
+    "error_count": 0,
+    "token_count": 5782,
+    "errors": []
+  },
+  "driver_executed": false,
+  "no_execute_validation": false,
+  "configure_run": false,
+  "build_run": false,
+  "tests_run": false,
+  "device_or_model_run": false
+}

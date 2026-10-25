@@ -1,0 +1,7 @@
+{
+  "pid": 11644,
+  "exe": "C:\\WINDOWS\\System32\\cmd.exe",
+  "created": "2026-10-25T05:48:29.2730390Z",
+  "command": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c call \"E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\configure.cmd\"",
+  "batch": "E:\\Strata-Hetero-data\\build\\cuda-verify-probe74-02\\configure.cmd"
+}

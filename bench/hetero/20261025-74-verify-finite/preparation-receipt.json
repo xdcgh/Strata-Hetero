@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_executed_root_review_required",
+  "run_id": "20261025-74-verify-finite",
+  "matrix_sha256": "13b579369e0be056f3d90caf2e7d8aaa87fd407ad81fe09e273b6127cb064346",
+  "preparation_sha256": "633c4d708c65f46bebab208f7eca2151749776dbfe82406f4613e7a36fcc42a0",
+  "template_bindings_sha256": "4298188142a8ac62641fdffbf6e3211040a3c635a387505ddfac631c1f976b67",
+  "controls_normalization_sha256": "03e6b568854eae9be4a8c054d08d0f218993612e56a4a0f54502634f8efa3a9e",
+  "rendered_script_count": 4,
+  "request_output_leaves_created": 0,
+  "authorization_present": false,
+  "script_or_lifecycle_execution": false,
+  "no_model_payload_read_or_hashed": true
+}
