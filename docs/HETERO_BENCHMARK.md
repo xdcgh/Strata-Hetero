@@ -2,6 +2,37 @@
 
 This report starts with a historical reference. It does not yet claim an improvement from Strata-Hetero. Current-upstream and modified-engine measurements will be added with their immutable run identities.
 
+## Model-data integrity finding on 2026-10-25
+
+Run75 traced four real failing prompt windows to layer 41/expert 446. The
+actual published CPU input is finite and byte-identical to the captured GPU
+mixed input; the non-GPU output contains 2,560 NaNs. Replaying the original
+expert bytes through the frozen native CPU code produces the same output
+bytes. Its up projection contains seven nonfinite Q4_K half headers; NaNs
+appear in up before the hidden Q8_1 quantizer. This observed failure therefore
+cannot be repaired by clamping that later quantizer.
+
+The full local fourth shard now hashes to
+`a361af99f18611dda584dfb63ff4af065b6c084e7d73a692a2a5d83fbc554095`,
+which differs from the pinned expected
+`753bda48b98ba4f1636134a90a967de1b2d3908a236c026e464777342e53510a`.
+Independent FileStream reads of the three expert projections match the
+diagnostic bytes. Size and modification time remained unchanged. The prior
+full-file hash passed on 2026-10-08; the time and physical cause of the changed
+read content are unknown. File-stat identity alone is not current integrity
+proof. See `20261025-75-route41-snapshot/cpu-stage-replay-03/` for the retained
+hash, readback and native replay receipts.
+
+Earlier NaN and RAM-mode failures remain valid observations, but their
+attribution needs review because the integrity of the shared source at each
+failure time is unresolved. They do not by themselves establish a RAM-mode,
+driver or engine-arithmetic defect. Prior bounded quality passes remain
+bounded passes of their retained outputs. No failed arm contributes an
+accepted speedup. A new copy of the exact pinned shard, fresh checks of the
+other shards and same-history direct/RAM model regressions are required
+before using the restored model for performance acceptance. The original
+abnormal file and all failed evidence are preserved.
+
 ## Historical 0.1.39 reference
 
 Source: `C:\Users\DC\Documents\ChatGPT\Strata\bench\results\2026-10-06-local-rtx4090d-ud-q4-k-xl\README.md` and its JSON/raw/resource artifacts. Checkout `6f32ec070f23ced9f50e704d854d775da52591ab`, prebuilt engine 0.1.39, Windows 26300, Core Ultra 9 285H, 127.56 GiB RAM, RTX 4090 D reporting 49,140 MiB VRAM, F USB SSD, Unsloth UD-Q4_K_XL, 32K context, INT8 KV, resident budget 71 GiB, reserve 4096 MiB, 10 CPU workers, spec=4/min_p=0.5. Actual prompt sizes and draft/suffix behavior must be matched before comparing.
