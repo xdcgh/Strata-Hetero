@@ -1,0 +1,2139 @@
+{
+  "status": "bounded_cpu_qkv_compared",
+  "pid": 23276,
+  "started_utc": "2026-10-25T05:41:02.059987+00:00",
+  "script_sha256": "cda50d080aa18e34eb21aedfed7a7fb73d40fe96c6caa4dec7001d1dbc72092c",
+  "npu_accepted": false,
+  "original_reference_replaced": false,
+  "gate_relaxed": false,
+  "encoder_run": false,
+  "memory_gates": [
+    {
+      "stage": "before-runtime",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114246615040,
+        "physical_used_bytes": 22716633088,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24435101696,
+        "commit_available_bytes": 121118081024,
+        "commit_total_pages": 5965601,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121118081024,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "before-core",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114215944192,
+        "physical_used_bytes": 22747303936,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24445284352,
+        "commit_available_bytes": 121107898368,
+        "commit_total_pages": 5968087,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121107898368,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "before-compile:cpu_vec_dot_rounding",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114237894656,
+        "physical_used_bytes": 22725353472,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24428064768,
+        "commit_available_bytes": 121125117952,
+        "commit_total_pages": 5963883,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121125117952,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:gray-96:warmup",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114191503360,
+        "physical_used_bytes": 22771744768,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24472780800,
+        "commit_available_bytes": 121080401920,
+        "commit_total_pages": 5974800,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121080401920,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:gray-96:formal-1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114185302016,
+        "physical_used_bytes": 22777946112,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24473968640,
+        "commit_available_bytes": 121079214080,
+        "commit_total_pages": 5975090,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121079214080,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:gray-96:formal-2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114183487488,
+        "physical_used_bytes": 22779760640,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24474058752,
+        "commit_available_bytes": 121079123968,
+        "commit_total_pages": 5975112,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121079123968,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:gray-96:formal-3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114182230016,
+        "physical_used_bytes": 22781018112,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24474112000,
+        "commit_available_bytes": 121079070720,
+        "commit_total_pages": 5975125,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121079070720,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:quadrants-96:warmup",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114163171328,
+        "physical_used_bytes": 22800076800,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24491184128,
+        "commit_available_bytes": 121061998592,
+        "commit_total_pages": 5979293,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121061998592,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:quadrants-96:formal-1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114160648192,
+        "physical_used_bytes": 22802599936,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24493473792,
+        "commit_available_bytes": 121059708928,
+        "commit_total_pages": 5979852,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121059708928,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:quadrants-96:formal-2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114160320512,
+        "physical_used_bytes": 22802927616,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24494100480,
+        "commit_available_bytes": 121059082240,
+        "commit_total_pages": 5980005,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121059082240,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:quadrants-96:formal-3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114160115712,
+        "physical_used_bytes": 22803132416,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24495226880,
+        "commit_available_bytes": 121057955840,
+        "commit_total_pages": 5980280,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121057955840,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:checkerboard-96:warmup",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114142650368,
+        "physical_used_bytes": 22820597760,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24513470464,
+        "commit_available_bytes": 121039712256,
+        "commit_total_pages": 5984734,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121039712256,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:checkerboard-96:formal-1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114138083328,
+        "physical_used_bytes": 22825164800,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24515706880,
+        "commit_available_bytes": 121037475840,
+        "commit_total_pages": 5985280,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121037475840,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:checkerboard-96:formal-2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114135457792,
+        "physical_used_bytes": 22827790336,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24515715072,
+        "commit_available_bytes": 121037467648,
+        "commit_total_pages": 5985282,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121037467648,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:checkerboard-96:formal-3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114134884352,
+        "physical_used_bytes": 22828363776,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24516841472,
+        "commit_available_bytes": 121036341248,
+        "commit_total_pages": 5985557,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121036341248,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:gradient-192x96:warmup",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114117124096,
+        "physical_used_bytes": 22846124032,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24536752128,
+        "commit_available_bytes": 121016430592,
+        "commit_total_pages": 5990418,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121016430592,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:gradient-192x96:formal-1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114117324800,
+        "physical_used_bytes": 22845923328,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24538996736,
+        "commit_available_bytes": 121014185984,
+        "commit_total_pages": 5990966,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121014185984,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:gradient-192x96:formal-2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114116145152,
+        "physical_used_bytes": 22847102976,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24540049408,
+        "commit_available_bytes": 121013133312,
+        "commit_total_pages": 5991223,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121013133312,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "cpu_vec_dot_rounding:gradient-192x96:formal-3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114110496768,
+        "physical_used_bytes": 22852751360,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24541855744,
+        "commit_available_bytes": 121011326976,
+        "commit_total_pages": 5991664,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121011326976,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "before-compile:graph_f32",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114109575168,
+        "physical_used_bytes": 22853672960,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24543944704,
+        "commit_available_bytes": 121009238016,
+        "commit_total_pages": 5992174,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 121009238016,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:gray-96:warmup",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114088304640,
+        "physical_used_bytes": 22874943488,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24561573888,
+        "commit_available_bytes": 120991608832,
+        "commit_total_pages": 5996478,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120991608832,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:gray-96:formal-1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114088648704,
+        "physical_used_bytes": 22874599424,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24563806208,
+        "commit_available_bytes": 120989376512,
+        "commit_total_pages": 5997023,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120989376512,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:gray-96:formal-2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114088988672,
+        "physical_used_bytes": 22874259456,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24565039104,
+        "commit_available_bytes": 120988143616,
+        "commit_total_pages": 5997324,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120988143616,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:gray-96:formal-3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114089328640,
+        "physical_used_bytes": 22873919488,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24565100544,
+        "commit_available_bytes": 120988082176,
+        "commit_total_pages": 5997339,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120988082176,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:quadrants-96:warmup",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114073026560,
+        "physical_used_bytes": 22890221568,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24574382080,
+        "commit_available_bytes": 120978800640,
+        "commit_total_pages": 5999605,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120978800640,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:quadrants-96:formal-1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114073370624,
+        "physical_used_bytes": 22889877504,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24575098880,
+        "commit_available_bytes": 120978083840,
+        "commit_total_pages": 5999780,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120978083840,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:quadrants-96:formal-2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114073833472,
+        "physical_used_bytes": 22889414656,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24575684608,
+        "commit_available_bytes": 120977498112,
+        "commit_total_pages": 5999923,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120977498112,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:quadrants-96:formal-3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114074169344,
+        "physical_used_bytes": 22889078784,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24575684608,
+        "commit_available_bytes": 120977498112,
+        "commit_total_pages": 5999923,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120977498112,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:checkerboard-96:warmup",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114075193344,
+        "physical_used_bytes": 22888054784,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24576450560,
+        "commit_available_bytes": 120976732160,
+        "commit_total_pages": 6000110,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120976732160,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:checkerboard-96:formal-1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114074632192,
+        "physical_used_bytes": 22888615936,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24576557056,
+        "commit_available_bytes": 120976625664,
+        "commit_total_pages": 6000136,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120976625664,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:checkerboard-96:formal-2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114074726400,
+        "physical_used_bytes": 22888521728,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24576634880,
+        "commit_available_bytes": 120976547840,
+        "commit_total_pages": 6000155,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120976547840,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:checkerboard-96:formal-3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114075033600,
+        "physical_used_bytes": 22888214528,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24576634880,
+        "commit_available_bytes": 120976547840,
+        "commit_total_pages": 6000155,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120976547840,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:gradient-192x96:warmup",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114067984384,
+        "physical_used_bytes": 22895263744,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24580440064,
+        "commit_available_bytes": 120972742656,
+        "commit_total_pages": 6001084,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120972742656,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:gradient-192x96:formal-1",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114066264064,
+        "physical_used_bytes": 22896984064,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24580513792,
+        "commit_available_bytes": 120972668928,
+        "commit_total_pages": 6001102,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120972668928,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:gradient-192x96:formal-2",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114066206720,
+        "physical_used_bytes": 22897041408,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24580599808,
+        "commit_available_bytes": 120972582912,
+        "commit_total_pages": 6001123,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120972582912,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "graph_f32:gradient-192x96:formal-3",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114066460672,
+        "physical_used_bytes": 22896787456,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24580599808,
+        "commit_available_bytes": 120972582912,
+        "commit_total_pages": 6001123,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120972582912,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    },
+    {
+      "stage": "complete",
+      "memory": {
+        "source": "GlobalMemoryStatusEx physical + PSAPI GetPerformanceInfo system commit",
+        "sources": {
+          "physical": "GlobalMemoryStatusEx",
+          "system_commit": "PSAPI GetPerformanceInfo",
+          "gms_pagefile_comparison": "GlobalMemoryStatusEx ullAvailPageFile/ullTotalPageFile; diagnostic only"
+        },
+        "physical_total_bytes": 136963248128,
+        "physical_available_bytes": 114066673664,
+        "physical_used_bytes": 22896574464,
+        "commit_limit_bytes": 145553182720,
+        "commit_used_bytes": 24580603904,
+        "commit_available_bytes": 120972578816,
+        "commit_total_pages": 6001124,
+        "commit_limit_pages": 35535445,
+        "commit_page_size_bytes": 4096,
+        "gms_pagefile_total_bytes": 145553182720,
+        "gms_pagefile_avail_bytes_unclassified": 120972578816,
+        "pagefile_total_bytes": null,
+        "pagefile_used_bytes": null
+      },
+      "errors": []
+    }
+  ],
+  "openvino_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "numpy_version": "2.5.3",
+  "export_receipt_sha256": "9293d413d80a89bea202d9c79c480fb3e8c07ca79e8fae740ca52cfca0ff4e01",
+  "native_receipt_sha256": "005b73df9b3182252256d89e6b71f9a3e005a1bb01d01d78fd74e952c75230fc",
+  "source_revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "columns": [
+    0,
+    1,
+    1151,
+    1152,
+    2303,
+    2304,
+    3455
+  ],
+  "geometry": {
+    "input": [
+      3,
+      1152
+    ],
+    "weights": [
+      7,
+      1152
+    ],
+    "output": [
+      3,
+      7
+    ],
+    "full_encoder_qkv_output_width": 3456
+  },
+  "claim_limit": "Seven selected output columns can change kernel dispatch; no full encoder, latency or NPU acceptance",
+  "device": {
+    "requested": "CPU",
+    "full_name": "Intel(R) Core(TM) Ultra 9 285H",
+    "settings": {
+      "INFERENCE_PRECISION_HINT": "f32",
+      "EXECUTION_MODE_HINT": "ACCURACY",
+      "INFERENCE_NUM_THREADS": 1
+    }
+  },
+  "arms": [
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "execution_devices": [
+        "CPU"
+      ],
+      "images": [
+        {
+          "fixture": "gray-96",
+          "rows": [
+            0,
+            18,
+            35
+          ],
+          "iterations": [
+            {
+              "iteration": "warmup",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gray-96-warmup.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "c6b39e4e73b49b981855d0634d2fe9a575beafa03614a7d828bc921d7e1b2a56",
+                "decoded_sha256": "562f4d29f12928e587618ecb9772af04c4c707d1c3a26b7d16fabd109f494375"
+              },
+              "vs_native": {
+                "max_abs": 5.662441253662109e-07,
+                "relative_rmse": 4.4803200477574627e-07,
+                "bit_equal_elements": 5,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 4.76837158203125e-07,
+                "relative_rmse": 3.789845930345002e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-1",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gray-96-formal-1.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "c6b39e4e73b49b981855d0634d2fe9a575beafa03614a7d828bc921d7e1b2a56",
+                "decoded_sha256": "562f4d29f12928e587618ecb9772af04c4c707d1c3a26b7d16fabd109f494375"
+              },
+              "vs_native": {
+                "max_abs": 5.662441253662109e-07,
+                "relative_rmse": 4.4803200477574627e-07,
+                "bit_equal_elements": 5,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 4.76837158203125e-07,
+                "relative_rmse": 3.789845930345002e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-2",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gray-96-formal-2.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "c6b39e4e73b49b981855d0634d2fe9a575beafa03614a7d828bc921d7e1b2a56",
+                "decoded_sha256": "562f4d29f12928e587618ecb9772af04c4c707d1c3a26b7d16fabd109f494375"
+              },
+              "vs_native": {
+                "max_abs": 5.662441253662109e-07,
+                "relative_rmse": 4.4803200477574627e-07,
+                "bit_equal_elements": 5,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 4.76837158203125e-07,
+                "relative_rmse": 3.789845930345002e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-3",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gray-96-formal-3.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "c6b39e4e73b49b981855d0634d2fe9a575beafa03614a7d828bc921d7e1b2a56",
+                "decoded_sha256": "562f4d29f12928e587618ecb9772af04c4c707d1c3a26b7d16fabd109f494375"
+              },
+              "vs_native": {
+                "max_abs": 5.662441253662109e-07,
+                "relative_rmse": 4.4803200477574627e-07,
+                "bit_equal_elements": 5,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 4.76837158203125e-07,
+                "relative_rmse": 3.789845930345002e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              }
+            }
+          ],
+          "native": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gray-96-native.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "dde6ca0555dc1f7e83c47ad8344bf03f8a8223c9a18fe5bc8b95007feaefe5af",
+            "decoded_sha256": "218792aca2b11383372b28c8a09526f790fada870e3de37696902011328acecb"
+          },
+          "source": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gray-96-source.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "5f51f4d29866420c8a959bfd60bd97ecec9755bc7050fa906e25fb7f121a29a2",
+            "decoded_sha256": "bffde0e0714089d1d59c7feab34d4e1206b2bb71f18a64fd76f3c0f48f885d6e"
+          },
+          "source_vs_native": {
+            "max_abs": 3.5762786865234375e-07,
+            "relative_rmse": 2.402451482478353e-07,
+            "bit_equal_elements": 2,
+            "elements": 21
+          },
+          "formal_hashes_identical": true
+        },
+        {
+          "fixture": "quadrants-96",
+          "rows": [
+            0,
+            18,
+            35
+          ],
+          "iterations": [
+            {
+              "iteration": "warmup",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-quadrants-96-warmup.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "2ba4ef445a61ce7c21a9c94006effe7493841d72ea642c7045d65f8991a064aa",
+                "decoded_sha256": "6fed20f827596e85301768dd0e8e404250f59b8e617a44fc6fa52710b7a81d37"
+              },
+              "vs_native": {
+                "max_abs": 7.748603820800781e-07,
+                "relative_rmse": 5.270715611607554e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 1.0132789611816406e-06,
+                "relative_rmse": 6.763437361259006e-07,
+                "bit_equal_elements": 2,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-1",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-quadrants-96-formal-1.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "2ba4ef445a61ce7c21a9c94006effe7493841d72ea642c7045d65f8991a064aa",
+                "decoded_sha256": "6fed20f827596e85301768dd0e8e404250f59b8e617a44fc6fa52710b7a81d37"
+              },
+              "vs_native": {
+                "max_abs": 7.748603820800781e-07,
+                "relative_rmse": 5.270715611607554e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 1.0132789611816406e-06,
+                "relative_rmse": 6.763437361259006e-07,
+                "bit_equal_elements": 2,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-2",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-quadrants-96-formal-2.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "2ba4ef445a61ce7c21a9c94006effe7493841d72ea642c7045d65f8991a064aa",
+                "decoded_sha256": "6fed20f827596e85301768dd0e8e404250f59b8e617a44fc6fa52710b7a81d37"
+              },
+              "vs_native": {
+                "max_abs": 7.748603820800781e-07,
+                "relative_rmse": 5.270715611607554e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 1.0132789611816406e-06,
+                "relative_rmse": 6.763437361259006e-07,
+                "bit_equal_elements": 2,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-3",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-quadrants-96-formal-3.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "2ba4ef445a61ce7c21a9c94006effe7493841d72ea642c7045d65f8991a064aa",
+                "decoded_sha256": "6fed20f827596e85301768dd0e8e404250f59b8e617a44fc6fa52710b7a81d37"
+              },
+              "vs_native": {
+                "max_abs": 7.748603820800781e-07,
+                "relative_rmse": 5.270715611607554e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 1.0132789611816406e-06,
+                "relative_rmse": 6.763437361259006e-07,
+                "bit_equal_elements": 2,
+                "elements": 21
+              }
+            }
+          ],
+          "native": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-quadrants-96-native.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "066848cbc78b5dc6a6ff56c9826d79b684011e44c5d9d12366212140d85b45d9",
+            "decoded_sha256": "7a4daa2186e40261982220ecf850d9c6b96d7f08797ed2c3f186f14f69dbbd11"
+          },
+          "source": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-quadrants-96-source.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "166266b909644290a8f689ab11fb936661a22dd9bd8530d24046e2eb85c6f446",
+            "decoded_sha256": "c816503d96d1b02b8eded163a90895507528a797a5ed623accf92acac4b6283f"
+          },
+          "source_vs_native": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_rmse": 2.326592605789883e-07,
+            "bit_equal_elements": 2,
+            "elements": 21
+          },
+          "formal_hashes_identical": true
+        },
+        {
+          "fixture": "checkerboard-96",
+          "rows": [
+            0,
+            18,
+            35
+          ],
+          "iterations": [
+            {
+              "iteration": "warmup",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-checkerboard-96-warmup.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "07ba3201d83d8b567731a440d862f67bc98689168a696b75e81b47ad894b7c43",
+                "decoded_sha256": "2d96ba00e5f9b5ab93acccdb8f181d13da93888d9b0659efba764077a97fa087"
+              },
+              "vs_native": {
+                "max_abs": 1.7881393432617188e-07,
+                "relative_rmse": 2.3975948301168546e-07,
+                "bit_equal_elements": 7,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 2.980232238769531e-07,
+                "relative_rmse": 4.318435502346424e-07,
+                "bit_equal_elements": 4,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-1",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-checkerboard-96-formal-1.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "07ba3201d83d8b567731a440d862f67bc98689168a696b75e81b47ad894b7c43",
+                "decoded_sha256": "2d96ba00e5f9b5ab93acccdb8f181d13da93888d9b0659efba764077a97fa087"
+              },
+              "vs_native": {
+                "max_abs": 1.7881393432617188e-07,
+                "relative_rmse": 2.3975948301168546e-07,
+                "bit_equal_elements": 7,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 2.980232238769531e-07,
+                "relative_rmse": 4.318435502346424e-07,
+                "bit_equal_elements": 4,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-2",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-checkerboard-96-formal-2.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "07ba3201d83d8b567731a440d862f67bc98689168a696b75e81b47ad894b7c43",
+                "decoded_sha256": "2d96ba00e5f9b5ab93acccdb8f181d13da93888d9b0659efba764077a97fa087"
+              },
+              "vs_native": {
+                "max_abs": 1.7881393432617188e-07,
+                "relative_rmse": 2.3975948301168546e-07,
+                "bit_equal_elements": 7,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 2.980232238769531e-07,
+                "relative_rmse": 4.318435502346424e-07,
+                "bit_equal_elements": 4,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-3",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-checkerboard-96-formal-3.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "07ba3201d83d8b567731a440d862f67bc98689168a696b75e81b47ad894b7c43",
+                "decoded_sha256": "2d96ba00e5f9b5ab93acccdb8f181d13da93888d9b0659efba764077a97fa087"
+              },
+              "vs_native": {
+                "max_abs": 1.7881393432617188e-07,
+                "relative_rmse": 2.3975948301168546e-07,
+                "bit_equal_elements": 7,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 2.980232238769531e-07,
+                "relative_rmse": 4.318435502346424e-07,
+                "bit_equal_elements": 4,
+                "elements": 21
+              }
+            }
+          ],
+          "native": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-checkerboard-96-native.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "220c6d8dc05152325b4bf588881d9c4e2e53a189949727687e37555ef24c6477",
+            "decoded_sha256": "053a3ea1922def885cbd944e1dc1d7d480d17ab4cbbd2e952b859233a42255f7"
+          },
+          "source": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-checkerboard-96-source.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "85c7a71495249fe78483df5e528c92ef1ab6a879b43dbe7cc7e9e4eb37aff86f",
+            "decoded_sha256": "a61bcc682f3e24d4e54219474975a2880b0b8d5eee4e6dc83ff169738744c619"
+          },
+          "source_vs_native": {
+            "max_abs": 3.5762786865234375e-07,
+            "relative_rmse": 3.995045562252658e-07,
+            "bit_equal_elements": 3,
+            "elements": 21
+          },
+          "formal_hashes_identical": true
+        },
+        {
+          "fixture": "gradient-192x96",
+          "rows": [
+            0,
+            36,
+            71
+          ],
+          "iterations": [
+            {
+              "iteration": "warmup",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gradient-192x96-warmup.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "45a25de85ac35d9ed60cfbeb22a1183fae42fae22bede55c31290cce6de7f5fc",
+                "decoded_sha256": "e93ab366c7b4ac62f804fa48d952d5dcbe066896d1f3c537826f43661836f5b9"
+              },
+              "vs_native": {
+                "max_abs": 2.384185791015625e-07,
+                "relative_rmse": 1.8501449518703225e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 1.7881393432617188e-07,
+                "relative_rmse": 1.448780803814471e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-1",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gradient-192x96-formal-1.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "45a25de85ac35d9ed60cfbeb22a1183fae42fae22bede55c31290cce6de7f5fc",
+                "decoded_sha256": "e93ab366c7b4ac62f804fa48d952d5dcbe066896d1f3c537826f43661836f5b9"
+              },
+              "vs_native": {
+                "max_abs": 2.384185791015625e-07,
+                "relative_rmse": 1.8501449518703225e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 1.7881393432617188e-07,
+                "relative_rmse": 1.448780803814471e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-2",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gradient-192x96-formal-2.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "45a25de85ac35d9ed60cfbeb22a1183fae42fae22bede55c31290cce6de7f5fc",
+                "decoded_sha256": "e93ab366c7b4ac62f804fa48d952d5dcbe066896d1f3c537826f43661836f5b9"
+              },
+              "vs_native": {
+                "max_abs": 2.384185791015625e-07,
+                "relative_rmse": 1.8501449518703225e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 1.7881393432617188e-07,
+                "relative_rmse": 1.448780803814471e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-3",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gradient-192x96-formal-3.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "45a25de85ac35d9ed60cfbeb22a1183fae42fae22bede55c31290cce6de7f5fc",
+                "decoded_sha256": "e93ab366c7b4ac62f804fa48d952d5dcbe066896d1f3c537826f43661836f5b9"
+              },
+              "vs_native": {
+                "max_abs": 2.384185791015625e-07,
+                "relative_rmse": 1.8501449518703225e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 1.7881393432617188e-07,
+                "relative_rmse": 1.448780803814471e-07,
+                "bit_equal_elements": 3,
+                "elements": 21
+              }
+            }
+          ],
+          "native": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gradient-192x96-native.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "82e90cd1352e4624e6a4c9d4aea01248d9f1de8a97a29e3447f31ce62fea9dd1",
+            "decoded_sha256": "5b3aa11d6a4706a483e4df330492bc2ff26a70b63b55d14e77f8322fbaad04d6"
+          },
+          "source": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\cpu_vec_dot_rounding-gradient-192x96-source.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "9aa715a1501dc9c6a6de5d34f93bea6c819521b39ffaf570c59197db4e6a0401",
+            "decoded_sha256": "330455ab96519cfe60526f33f61e7346f25058f94719f09fe7c75fab8273c901"
+          },
+          "source_vs_native": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_rmse": 1.7587403170960191e-07,
+            "bit_equal_elements": 2,
+            "elements": 21
+          },
+          "formal_hashes_identical": true
+        }
+      ]
+    },
+    {
+      "policy": "graph_f32",
+      "execution_devices": [
+        "CPU"
+      ],
+      "images": [
+        {
+          "fixture": "gray-96",
+          "rows": [
+            0,
+            18,
+            35
+          ],
+          "iterations": [
+            {
+              "iteration": "warmup",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gray-96-warmup.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "584fb9d62b9c050f47f57d78ea24043d8da2eaa0e9bee3987503ee6557b3c763",
+                "decoded_sha256": "477448558ec10cf316268f47677c22f415009ae862be588f93f41a28e3b2a6f0"
+              },
+              "vs_native": {
+                "max_abs": 0.002210080623626709,
+                "relative_rmse": 0.001619596724215149,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0022102296352386475,
+                "relative_rmse": 0.0016195941251392705,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-1",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gray-96-formal-1.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "584fb9d62b9c050f47f57d78ea24043d8da2eaa0e9bee3987503ee6557b3c763",
+                "decoded_sha256": "477448558ec10cf316268f47677c22f415009ae862be588f93f41a28e3b2a6f0"
+              },
+              "vs_native": {
+                "max_abs": 0.002210080623626709,
+                "relative_rmse": 0.001619596724215149,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0022102296352386475,
+                "relative_rmse": 0.0016195941251392705,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-2",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gray-96-formal-2.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "584fb9d62b9c050f47f57d78ea24043d8da2eaa0e9bee3987503ee6557b3c763",
+                "decoded_sha256": "477448558ec10cf316268f47677c22f415009ae862be588f93f41a28e3b2a6f0"
+              },
+              "vs_native": {
+                "max_abs": 0.002210080623626709,
+                "relative_rmse": 0.001619596724215149,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0022102296352386475,
+                "relative_rmse": 0.0016195941251392705,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-3",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gray-96-formal-3.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "584fb9d62b9c050f47f57d78ea24043d8da2eaa0e9bee3987503ee6557b3c763",
+                "decoded_sha256": "477448558ec10cf316268f47677c22f415009ae862be588f93f41a28e3b2a6f0"
+              },
+              "vs_native": {
+                "max_abs": 0.002210080623626709,
+                "relative_rmse": 0.001619596724215149,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0022102296352386475,
+                "relative_rmse": 0.0016195941251392705,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            }
+          ],
+          "native": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gray-96-native.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "dde6ca0555dc1f7e83c47ad8344bf03f8a8223c9a18fe5bc8b95007feaefe5af",
+            "decoded_sha256": "218792aca2b11383372b28c8a09526f790fada870e3de37696902011328acecb"
+          },
+          "source": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gray-96-source.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "5f51f4d29866420c8a959bfd60bd97ecec9755bc7050fa906e25fb7f121a29a2",
+            "decoded_sha256": "bffde0e0714089d1d59c7feab34d4e1206b2bb71f18a64fd76f3c0f48f885d6e"
+          },
+          "source_vs_native": {
+            "max_abs": 3.5762786865234375e-07,
+            "relative_rmse": 2.402451482478353e-07,
+            "bit_equal_elements": 2,
+            "elements": 21
+          },
+          "formal_hashes_identical": true
+        },
+        {
+          "fixture": "quadrants-96",
+          "rows": [
+            0,
+            18,
+            35
+          ],
+          "iterations": [
+            {
+              "iteration": "warmup",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-quadrants-96-warmup.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "4208e28d0015bd58d6e924402b4139db46f2824b5019d4ed2f2ba633535ebe8d",
+                "decoded_sha256": "5ea41da140355a2a88d0cd42a8195f5060566e903a124138f1a6977a26bfc370"
+              },
+              "vs_native": {
+                "max_abs": 0.0009302794933319092,
+                "relative_rmse": 0.0009272233104253073,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0009301602840423584,
+                "relative_rmse": 0.0009271583796250271,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-1",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-quadrants-96-formal-1.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "4208e28d0015bd58d6e924402b4139db46f2824b5019d4ed2f2ba633535ebe8d",
+                "decoded_sha256": "5ea41da140355a2a88d0cd42a8195f5060566e903a124138f1a6977a26bfc370"
+              },
+              "vs_native": {
+                "max_abs": 0.0009302794933319092,
+                "relative_rmse": 0.0009272233104253073,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0009301602840423584,
+                "relative_rmse": 0.0009271583796250271,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-2",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-quadrants-96-formal-2.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "4208e28d0015bd58d6e924402b4139db46f2824b5019d4ed2f2ba633535ebe8d",
+                "decoded_sha256": "5ea41da140355a2a88d0cd42a8195f5060566e903a124138f1a6977a26bfc370"
+              },
+              "vs_native": {
+                "max_abs": 0.0009302794933319092,
+                "relative_rmse": 0.0009272233104253073,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0009301602840423584,
+                "relative_rmse": 0.0009271583796250271,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-3",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-quadrants-96-formal-3.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "4208e28d0015bd58d6e924402b4139db46f2824b5019d4ed2f2ba633535ebe8d",
+                "decoded_sha256": "5ea41da140355a2a88d0cd42a8195f5060566e903a124138f1a6977a26bfc370"
+              },
+              "vs_native": {
+                "max_abs": 0.0009302794933319092,
+                "relative_rmse": 0.0009272233104253073,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0009301602840423584,
+                "relative_rmse": 0.0009271583796250271,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            }
+          ],
+          "native": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-quadrants-96-native.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "066848cbc78b5dc6a6ff56c9826d79b684011e44c5d9d12366212140d85b45d9",
+            "decoded_sha256": "7a4daa2186e40261982220ecf850d9c6b96d7f08797ed2c3f186f14f69dbbd11"
+          },
+          "source": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-quadrants-96-source.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "166266b909644290a8f689ab11fb936661a22dd9bd8530d24046e2eb85c6f446",
+            "decoded_sha256": "c816503d96d1b02b8eded163a90895507528a797a5ed623accf92acac4b6283f"
+          },
+          "source_vs_native": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_rmse": 2.326592605789883e-07,
+            "bit_equal_elements": 2,
+            "elements": 21
+          },
+          "formal_hashes_identical": true
+        },
+        {
+          "fixture": "checkerboard-96",
+          "rows": [
+            0,
+            18,
+            35
+          ],
+          "iterations": [
+            {
+              "iteration": "warmup",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-checkerboard-96-warmup.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "c85212270296cbaaf7813357e85a777377b41e8bdd3095ef30b6deec2c82ad8a",
+                "decoded_sha256": "9576c35101bd7511611eaae82e56fbab27bd6df93b7d96c55ea55b92cff5b495"
+              },
+              "vs_native": {
+                "max_abs": 0.0018965303897857666,
+                "relative_rmse": 0.0018516864220256423,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0018963515758514404,
+                "relative_rmse": 0.0018515780680904569,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-1",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-checkerboard-96-formal-1.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "c85212270296cbaaf7813357e85a777377b41e8bdd3095ef30b6deec2c82ad8a",
+                "decoded_sha256": "9576c35101bd7511611eaae82e56fbab27bd6df93b7d96c55ea55b92cff5b495"
+              },
+              "vs_native": {
+                "max_abs": 0.0018965303897857666,
+                "relative_rmse": 0.0018516864220256423,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0018963515758514404,
+                "relative_rmse": 0.0018515780680904569,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-2",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-checkerboard-96-formal-2.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "c85212270296cbaaf7813357e85a777377b41e8bdd3095ef30b6deec2c82ad8a",
+                "decoded_sha256": "9576c35101bd7511611eaae82e56fbab27bd6df93b7d96c55ea55b92cff5b495"
+              },
+              "vs_native": {
+                "max_abs": 0.0018965303897857666,
+                "relative_rmse": 0.0018516864220256423,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0018963515758514404,
+                "relative_rmse": 0.0018515780680904569,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-3",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-checkerboard-96-formal-3.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "c85212270296cbaaf7813357e85a777377b41e8bdd3095ef30b6deec2c82ad8a",
+                "decoded_sha256": "9576c35101bd7511611eaae82e56fbab27bd6df93b7d96c55ea55b92cff5b495"
+              },
+              "vs_native": {
+                "max_abs": 0.0018965303897857666,
+                "relative_rmse": 0.0018516864220256423,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0018963515758514404,
+                "relative_rmse": 0.0018515780680904569,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            }
+          ],
+          "native": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-checkerboard-96-native.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "220c6d8dc05152325b4bf588881d9c4e2e53a189949727687e37555ef24c6477",
+            "decoded_sha256": "053a3ea1922def885cbd944e1dc1d7d480d17ab4cbbd2e952b859233a42255f7"
+          },
+          "source": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-checkerboard-96-source.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "85c7a71495249fe78483df5e528c92ef1ab6a879b43dbe7cc7e9e4eb37aff86f",
+            "decoded_sha256": "a61bcc682f3e24d4e54219474975a2880b0b8d5eee4e6dc83ff169738744c619"
+          },
+          "source_vs_native": {
+            "max_abs": 3.5762786865234375e-07,
+            "relative_rmse": 3.995045562252658e-07,
+            "bit_equal_elements": 3,
+            "elements": 21
+          },
+          "formal_hashes_identical": true
+        },
+        {
+          "fixture": "gradient-192x96",
+          "rows": [
+            0,
+            36,
+            71
+          ],
+          "iterations": [
+            {
+              "iteration": "warmup",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gradient-192x96-warmup.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "a780dbf2bac9fc5c1af0098bb05b195b5bf912ba1408c0ec7116ca567647e59d",
+                "decoded_sha256": "206376e69b6d6832a66e00b75c0006b56993f54133837ce721e870b648aeee61"
+              },
+              "vs_native": {
+                "max_abs": 0.0014770925045013428,
+                "relative_rmse": 0.0012137823155628673,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0014771819114685059,
+                "relative_rmse": 0.0012138144171406858,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-1",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gradient-192x96-formal-1.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "a780dbf2bac9fc5c1af0098bb05b195b5bf912ba1408c0ec7116ca567647e59d",
+                "decoded_sha256": "206376e69b6d6832a66e00b75c0006b56993f54133837ce721e870b648aeee61"
+              },
+              "vs_native": {
+                "max_abs": 0.0014770925045013428,
+                "relative_rmse": 0.0012137823155628673,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0014771819114685059,
+                "relative_rmse": 0.0012138144171406858,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-2",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gradient-192x96-formal-2.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "a780dbf2bac9fc5c1af0098bb05b195b5bf912ba1408c0ec7116ca567647e59d",
+                "decoded_sha256": "206376e69b6d6832a66e00b75c0006b56993f54133837ce721e870b648aeee61"
+              },
+              "vs_native": {
+                "max_abs": 0.0014770925045013428,
+                "relative_rmse": 0.0012137823155628673,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0014771819114685059,
+                "relative_rmse": 0.0012138144171406858,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            },
+            {
+              "iteration": "formal-3",
+              "output": {
+                "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gradient-192x96-formal-3.npy",
+                "shape": [
+                  3,
+                  7
+                ],
+                "dtype": "float32",
+                "file_bytes": 212,
+                "file_sha256": "a780dbf2bac9fc5c1af0098bb05b195b5bf912ba1408c0ec7116ca567647e59d",
+                "decoded_sha256": "206376e69b6d6832a66e00b75c0006b56993f54133837ce721e870b648aeee61"
+              },
+              "vs_native": {
+                "max_abs": 0.0014770925045013428,
+                "relative_rmse": 0.0012137823155628673,
+                "bit_equal_elements": 0,
+                "elements": 21
+              },
+              "vs_source": {
+                "max_abs": 0.0014771819114685059,
+                "relative_rmse": 0.0012138144171406858,
+                "bit_equal_elements": 0,
+                "elements": 21
+              }
+            }
+          ],
+          "native": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gradient-192x96-native.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "82e90cd1352e4624e6a4c9d4aea01248d9f1de8a97a29e3447f31ce62fea9dd1",
+            "decoded_sha256": "5b3aa11d6a4706a483e4df330492bc2ff26a70b63b55d14e77f8322fbaad04d6"
+          },
+          "source": {
+            "path": "C:\\Users\\DC\\Documents\\ChatGPT\\Strata-Hetero\\bench\\hetero\\20261025-72-resume-nan\\vision-qkv-ov-cpu-01\\graph_f32-gradient-192x96-source.npy",
+            "shape": [
+              3,
+              7
+            ],
+            "dtype": "float32",
+            "file_bytes": 212,
+            "file_sha256": "9aa715a1501dc9c6a6de5d34f93bea6c819521b39ffaf570c59197db4e6a0401",
+            "decoded_sha256": "330455ab96519cfe60526f33f61e7346f25058f94719f09fe7c75fab8273c901"
+          },
+          "source_vs_native": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_rmse": 1.7587403170960191e-07,
+            "bit_equal_elements": 2,
+            "elements": 21
+          },
+          "formal_hashes_identical": true
+        }
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-25T05:41:03.614853+00:00"
+}

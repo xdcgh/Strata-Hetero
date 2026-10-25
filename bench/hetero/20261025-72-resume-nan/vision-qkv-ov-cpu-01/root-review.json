@@ -1,0 +1,36 @@
+{
+  "status": "retained_files_and_metrics_independently_verified",
+  "receipt_sha256": "5809b36ba79cdbb474bce690e6324200404ad7687e434d333718f1c3f8ffeb0f",
+  "review_script_sha256": "acd8db111cc2d6773a809b8005d90bc14785a87168157a3341ec0b9790f03cfd",
+  "unique_npy_files": 48,
+  "memory_gate_count": 37,
+  "summaries": [
+    {
+      "policy": "cpu_vec_dot_rounding",
+      "formal_groups": 12,
+      "selected_values_per_formal": 84,
+      "equal_values_per_formal": 18,
+      "max_abs": 7.748603820800781e-07,
+      "image_relative_rmse": [
+        4.4803200477574627e-07,
+        5.270715611607554e-07,
+        2.3975948301168546e-07,
+        1.8501449518703225e-07
+      ]
+    },
+    {
+      "policy": "graph_f32",
+      "formal_groups": 12,
+      "selected_values_per_formal": 84,
+      "equal_values_per_formal": 0,
+      "max_abs": 0.002210080623626709,
+      "image_relative_rmse": [
+        0.001619596724215149,
+        0.0009272233104253073,
+        0.0018516864220256425,
+        0.0012137823155628673
+      ]
+    }
+  ],
+  "claim_limit": "Tiny CPU 3x1152 by 7x1152 QKV only. No full encoder, NPU, latency or end-to-end acceptance."
+}

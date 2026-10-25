@@ -24,4 +24,21 @@ The subsequent single native-stage run passes all 20 full SVE fingerprint checks
 
 The CPU OpenVINO diagnostic then completes four arms, eight warmups and 24 formals with 264 stage outputs. Both policies still fail the original final numerical gates. All 288 retained formal arrays pass root's independent file/decoded-hash, shape and finite checks; stage comparison retains 153 negative reports. Instrumentation changes all 24 final projection fingerprints from run31, explicitly recorded; it does not replace the native oracle. Earliest sampled failures are QKV/block 0 for `graph_f32`, and layer norm/block 1 for the rounded policy. Initial patch merge, positions and first layer norm pass on all fixtures. Every owned controller/worker is terminal and all memory gates pass. Source-bound host replay is now separating propagated block-output differences from normalization arithmetic before any math change. NPU remains unrun/unaccepted for this encoder.
 
+On 2026-10-25 a bounded OpenVINO CPU replay compared seven selected first-block
+QKV columns for three rows from each of the four frozen images. It used one
+CPU thread, F32/ACCURACY, one warmup and three formal repetitions per image
+and policy. All formal hashes repeat. The rounded/BF16 activation policy has
+18 of 84 selected values equal to the native capture, maximum absolute error
+7.7486e-7 and per-image relative RMSE 1.85e-7..5.27e-7. The F32 control has
+zero equal selected values, maximum absolute error 0.00221008 and relative
+RMSE 0.000927..0.001852. This supports investigating activation rounding in
+the F32 policy's early QKV gap. Selected columns can change CPU kernel
+dispatch; these results do not repair or validate the full encoder. All 37
+memory gates pass and the owned process exits zero. Root independently
+rehashed all 48 NPY files and recomputed every comparison using a stdlib-only
+reader; see
+`bench/hetero/20261025-72-resume-nan/vision-qkv-ov-cpu-01/root-review.json`.
+The native oracle and numerical gates are unchanged. No NPU inference,
+encoder latency or end-to-end gain is established by this replay.
+
 Do not infer that the installed driver needs replacement from a preview-only dynamic-shape version threshold. The synthetic static probe actually ran; compatibility with the real encoder still needs measurement. NPU embedding, reranking, routing and MTP remain later candidates. No NPU route is enabled by default.

@@ -1,0 +1,22 @@
+{
+  "pid": 23276,
+  "pid_present": false,
+  "exact_python_processes": [],
+  "observed_utc": "2026-10-25T05:41:14.0587280Z",
+  "exit_code": 0,
+  "source_hashes": [
+    {
+      "sha256": "cda50d080aa18e34eb21aedfed7a7fb73d40fe96c6caa4dec7001d1dbc72092c",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-npu-20261025\\tools\\hetero_vision_qkv_ov_replay.py"
+    },
+    {
+      "sha256": "7fa7d1566f19d60a866ab00416b53552a466eeb182ebedb7e732e6b6bc4d0a71",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-npu-20261025\\tools\\hetero_vision_qkv_replay.py"
+    },
+    {
+      "sha256": "d744db422d2edaaac2e5235131fc6eeb4e3573db3b109ceec7eff42ef015f01d",
+      "path": "E:\\Strata-Hetero-data\\source\\hetero-npu-20261025\\tools\\hetero_vision_arithmetic.py"
+    }
+  ],
+  "receipt_sha256": "5809b36ba79cdbb474bce690e6324200404ad7687e434d333718f1c3f8ffeb0f"
+}
